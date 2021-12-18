@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="//assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Practice with Conditionals</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="//assets/main.css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163192686-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163192686-1');
+    </script>
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <h1 class="desktop"><a href="//">CS110: Winter 2022</a></h1>
+    <h2 class="desktop">Intro to Computer Programming with Python</h2>
+    <a class="mobile" href="#">
+        <i class="menu-toggle fas fa-bars"></i>
+    </a>
+    <h1 class="mobile">CS110: Winter 2022</h1>
+</header>
+
+        <nav>
+    <ul>
+        <li ><a href="//syllabus/">Syllabus</a></li>
+        <li ><a href="//" >Schedule</a></li>
+        <li class="active"><a href="//assignments/">Assignments</a></li>
+        <li ><a href="//resources/">Resources</a></li>
+        <li ><a href="//times-locations/">Calendar</a></li>
+        <li><a href="https://campuswire.com/c/G7DE56EF3/feed" target="_blank">Campuswire</a></li>
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#part-1-number-guessing-game">Part 1: Number Guessing Game</a>
+    <ol>
+      <li><a href="#hints">Hints</a></li>
+    </ol>
+  </li>
+  <li><a href="#part-2-simplify-the-vertical-circles-program-loops-preview">Part 2: Simplify the vertical circles program [loops preview]</a>
+    <ol>
+      <li><a href="#hints-1">Hints</a></li>
+    </ol>
+  </li>
+  <li><a href="#extra-challenges-drawing-with-loops">Extra Challenges: Drawing with Loops</a></li>
+  <li><a href="#hints-2">Hints</a></li>
+  <li><a href="#what-to-turn-in-same-deal-as-always">What to turn in (same deal as always)</a></li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1>
+            <a href="../assignments/">Assignments</a> > 
+            Tutorial 4: Practice with Conditionals
+        </h1>
+    
+ 
+                <p>
+    
+        Due on Wed, 10/20 @ 11:59PM.
+    
+    
+        3 Points.
+    
+    
+</p>
+
+<p><a class="nu-button" href="/fall2021/course-files/tutorials/tutorial04.zip" target="_blank">
+    Tutorial Starter Files <i class="fas fa-download"></i>
+</a></p>
+
+<p>The goal of this tutorial is to get you comfortable with if/else statements and while loops. Both of these types of statements are very powerful, so getting comfortable with them is essential (and will help you with <a href="../assignments/hw4">HW4</a>). If you have a tutorial earlier in the week, then you have not yet reviewed <strong>while loops</strong>. Here are <a href="https://docs.google.com/presentation/d/1BUOFXuJSwFgolQP_lTR_cDl9LHy3t5AjdfRsiQDF8Cw/edit?usp=sharing" target="_blank">some slides</a> to explain the rules of while loops.</p>
+
+<h2 id="part-1-number-guessing-game">Part 1: Number Guessing Game</h2>
+<p>Open the <code class="highlighter-rouge">01_number_game.py</code> file and write a program for a number guessing game. The game already does the following:</p>
+
+<ul>
+  <li>Picks a number between 1 and 100 using the random module [already done]</li>
+  <li>Prompts the user to guess a number between 1 and 100: [already done]</li>
+</ul>
+
+<p>Your job is to finish the game by implementing the following features:</p>
+<ol>
+  <li>If the number is too low, it tells the user the number is too low and that they should guess again</li>
+  <li>If the number is too high, it tells the user the number is too high and that they should guess again</li>
+  <li>If they guess the number correctly:
+    <ul>
+      <li>Tell them that they guess correctly</li>
+      <li>Tell them the number of guesses it took to guess correctly</li>
+      <li>Exit the program</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="hints">Hints</h3>
+<ol>
+  <li>You will need a variable to track the number of guesses</li>
+  <li>You will need a variable to store the user’s guess</li>
+  <li>You will need a while loop that keeps prompting the user for their guess (until they win)</li>
+  <li>You will need some combination of if, elif, and/or else statements to check whether the user’s guess is too low or too high. There are many ways to do this.</li>
+</ol>
+
+<h2 id="part-2-simplify-the-vertical-circles-program-loops-preview">Part 2: Simplify the vertical circles program [loops preview]</h2>
+<ol>
+  <li>Open <code class="highlighter-rouge">02_vertical_circles.py</code></li>
+  <li>See if you can use a while loop to recreate this functionality, where there is only one make_circle function call that is repeated within a while loop.</li>
+</ol>
+
+<p><img class="frame" style="width: 100px;" src="/fall2021/assets/images/tutorial03/vertical_circles.png" /></p>
+
+<h3 id="hints-1">Hints</h3>
+<ol>
+  <li>You will need to initialize a counter</li>
+  <li>You will need to make use of the counter to position the y-coordinate of the circle</li>
+</ol>
+
+<h2 id="extra-challenges-drawing-with-loops">Extra Challenges: Drawing with Loops</h2>
+<p>Practice creating the following shapes using a while loop. The first three shapes are recommended for everyone. The last two (spirograph ones) are optional. If you pursue the latter two, see if you can get implementation ideas here (or using some other source).</p>
+
+<p><img class="med-lg center frame" src="/fall2021/assets/images/tutorial03/shapes.png" /></p>
+
+<h2 id="hints-2">Hints</h2>
+<ol>
+  <li>Q: What do you want to repeat?
+    <ul>
+      <li>A: Calling the circle function</li>
+    </ul>
+  </li>
+  <li>Q: How long to you want to repeat?
+    <ul>
+      <li>A: until all of the circles in the picture are drawn</li>
+    </ul>
+  </li>
+  <li>What changes each time?
+    <ul>
+      <li>A: Varies (depending on the drawing)</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="what-to-turn-in-same-deal-as-always">What to turn in (same deal as always)</h2>
+<p>Please turn in your completed tutorial exercise(s) ON CANVAS by Wednesday night at midnight. To do this, first zip your entire <code class="highlighter-rouge">tutorial04</code> folder (with your edited files inside), and then upload your zip file to Canvas. Please ensure that your zip file includes <strong>YOUR CODE</strong>.  </p>
+
+
+
+            </article>  
+        </main>
+        
+            <script type="text/javascript" src="//assets/js/main.js"></script>
+    
+    <script src="https://kit.fontawesome.com/62a7c74d0d.js" crossorigin="anonymous"></script>
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="//assets/js/scrollspy.js"></script>
+    </body>
+</html>

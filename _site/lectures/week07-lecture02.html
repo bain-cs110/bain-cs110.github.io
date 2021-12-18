@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="//assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Files and Strings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="//assets/main.css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163192686-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163192686-1');
+    </script>
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <h1 class="desktop"><a href="//">CS110: Winter 2022</a></h1>
+    <h2 class="desktop">Intro to Computer Programming with Python</h2>
+    <a class="mobile" href="#">
+        <i class="menu-toggle fas fa-bars"></i>
+    </a>
+    <h1 class="mobile">CS110: Winter 2022</h1>
+</header>
+
+        <nav>
+    <ul>
+        <li ><a href="//syllabus/">Syllabus</a></li>
+        <li ><a href="//" >Schedule</a></li>
+        <li ><a href="//assignments/">Assignments</a></li>
+        <li ><a href="//resources/">Resources</a></li>
+        <li ><a href="//times-locations/">Calendar</a></li>
+        <li><a href="https://campuswire.com/c/G7DE56EF3/feed" target="_blank">Campuswire</a></li>
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#do-now">Today’s Activities</a>
+    <ol>
+      <li><a href="#code">1. Download the Exercise Files</a></li>
+      <li><a href="#slides">2. Review the Slides</a></li>
+      <li><a href="#videos">3. Watch the Lecture Video(s)</a></li>
+      <li><a href="#readings">4. Review / Study the Supplemental Materials</a></li>
+    </ol>
+  </li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1><a href="../#l18">Lessons</a> > 18. Files and Strings</h1>
+    
+ 
+                <p>Today, you will be learning to work with files –  including reading them, writing them, and appending to them. Because many file formats involve text, you will also be learning to work with some common string functions.</p>
+
+<p>One of the most important skills of a programmer is understanding how to do data manipulation across a variety of contexts and formats. Given that a vast quantity of data is stored in files, databases, etc., learning to access, manipulate, and write data in various formats for subsequent storage is a critical programming skill.</p>
+
+
+<h2 id="do-now">Today's Activities</h2>
+<p>For today, please do the following:</p>
+
+
+
+    <h3 id="code">1. Download the Exercise Files</h3> 
+    <a class="nu-button" href="//course-files/lectures/lecture18.zip" target="_blank">
+        Exercise Files <i class="fas fa-download"></i>
+    </a>
+    
+
+
+<h3 id="slides">2. Review the Slides</h3>  
+
+
+    <ol>
+    
+        <li>
+            <a href="https://docs.google.com/presentation/d/1Z0SBar2gZGqAImO-XDyRFvAUlnBNKvnVsklIRzF4F0E/edit?usp=sharing" target="_blank">Working with Files</a>
+        </li>
+    
+        <li>
+            <a href="https://docs.google.com/presentation/d/1Bf9Yrz-9h_o19arbdhbzBj-Zh_XbWrjqglymKHsUdtY/edit?usp=sharing" target="_blank">Supplementary Slides for Live Lecture</a>
+        </li>
+    
+    </ol>
+
+
+
+<h3 id="videos">3. Watch the Lecture Video(s)</h3>
+
+
+    <table class="medium module">
+        <thead>
+            <tr>
+                <th>Link</th>
+                <th>Title</th>
+                <th>Type</th>
+                <th>Duration</th>
+            </tr>
+        </thead>
+        <tbody>
+        
+        
+            
+            
+            
+            
+            
+            <tr>
+                <td>
+                    <a class="recorded" href="https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ea1ad916-4950-411f-952a-adc20157f86f" target="_blank">
+                        Video 1 <i class="fa fa-link"></i>
+                    </a>
+                </td>
+                <td>
+                    L18a: String & List Functions
+                </td>
+                <td>
+                    pre-recorded
+                </td>
+                <td>
+                    10:05
+                </td>
+            </tr>
+            
+        
+            
+            
+            
+            
+            
+            <tr>
+                <td>
+                    <a class="recorded" href="https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=72a7f020-864b-4efd-afdc-adc20157f7a4" target="_blank">
+                        Video 2 <i class="fa fa-link"></i>
+                    </a>
+                </td>
+                <td>
+                    L18b: Reading & Writing Files
+                </td>
+                <td>
+                    pre-recorded
+                </td>
+                <td>
+                    8:00
+                </td>
+            </tr>
+            
+        
+            
+            
+            
+            
+            
+            <tr>
+                <td>
+                    <a class="recorded" href="https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9829dcb3-e8f2-44ab-bee3-adc20157f6e6" target="_blank">
+                        Video 3 <i class="fa fa-link"></i>
+                    </a>
+                </td>
+                <td>
+                    L18c: Some Example Programs
+                </td>
+                <td>
+                    pre-recorded
+                </td>
+                <td>
+                    5:39
+                </td>
+            </tr>
+            
+        
+            
+            
+            
+            
+            
+            <tr>
+                <td>
+                    <a class="live" href="https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=467d0392-e8d2-495e-969a-add500f78885" target="_blank">
+                        Video 4 <i class="fa fa-link"></i>
+                    </a>
+                </td>
+                <td>
+                    Practice working with files and string functions
+                </td>
+                <td>
+                    lecture
+                </td>
+                <td>
+                    49:52
+                </td>
+            </tr>
+            
+        
+        </tbody>
+    </table>
+
+
+
+    <h3 id="readings">4. Review / Study the Supplemental Materials</h3>
+    <p>
+        Note: these readings / videos are suggested for additional context / 
+        examples, but not required.
+    </p>
+    <ol class="readings">
+
+    
+    
+        <li>
+    
+        Severance
+    
+    
+    
+        
+            Ch6: Strings.
+        
+    
+    
+    
+        <br>
+        <a href="https://www.py4e.com/html3/06-strings" target="_blank">reading</a> &bull;
+        <a href="https://www.py4e.com/lessons/strings" target="_blank">video</a> 
+    
+    
+</li> 
+    
+
+    
+    
+        <li>
+    
+        Severance
+    
+    
+    
+        
+            Ch7: Files.
+        
+    
+    
+    
+        <br>
+        <a href="https://www.py4e.com/html3/07-files" target="_blank">reading</a> &bull;
+        <a href="https://www.py4e.com/lessons/files" target="_blank">video</a> 
+    
+    
+</li> 
+    
+
+</ol>
+ 
+    
+
+
+
+
+
+
+
+
+
+
+            </article>  
+        </main>
+        
+            <script type="text/javascript" src="//assets/js/main.js"></script>
+    
+    <script src="https://kit.fontawesome.com/62a7c74d0d.js" crossorigin="anonymous"></script>
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="//assets/js/scrollspy.js"></script>
+    </body>
+</html>

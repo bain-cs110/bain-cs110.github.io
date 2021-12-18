@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="//assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Quiz Review: Expressions
+</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="//assets/main.css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163192686-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163192686-1');
+    </script>
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <h1 class="desktop"><a href="//">CS110: Winter 2022</a></h1>
+    <h2 class="desktop">Intro to Computer Programming with Python</h2>
+    <a class="mobile" href="#">
+        <i class="menu-toggle fas fa-bars"></i>
+    </a>
+    <h1 class="mobile">CS110: Winter 2022</h1>
+</header>
+
+        <nav>
+    <ul>
+        <li ><a href="//syllabus/">Syllabus</a></li>
+        <li ><a href="//" >Schedule</a></li>
+        <li ><a href="//assignments/">Assignments</a></li>
+        <li ><a href="//resources/">Resources</a></li>
+        <li ><a href="//times-locations/">Calendar</a></li>
+        <li><a href="https://campuswire.com/c/G7DE56EF3/feed" target="_blank">Campuswire</a></li>
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#exercise-1">Exercise 1</a></li>
+  <li><a href="#exercise-2">Exercise 2</a></li>
+  <li><a href="#do-now">Today’s Activities</a>
+    <ol>
+      <li><a href="#slides">1. Review the Slides</a></li>
+      <li><a href="#videos">2. Watch the Lecture Video(s)</a></li>
+    </ol>
+  </li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1><a href="../#l10">Lessons</a> > 10. Quiz Review: Expressions
+</h1>
+    
+ 
+                <p>Today in class, we will review any questions that you have about the material covered thus far. Please review the <a href="week04-lecture03">Quiz 1 study materials</a> and come with questions. We’re also going to make sure we understand how to do these two problems:</p>
+
+<h2 id="exercise-1">Exercise 1</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Given the following two lists...
+</span><span class="n">first_names</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Kim'</span><span class="p">,</span> <span class="s">'Brenda'</span><span class="p">,</span> <span class="s">'Karlo'</span><span class="p">]</span>
+<span class="n">last_names</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Jones'</span><span class="p">,</span> <span class="s">'Jauregui'</span><span class="p">,</span> <span class="s">'Imper'</span><span class="p">]</span>
+
+<span class="c1"># Write a program that combines the two lists by creating a third list,
+# where each entry is the full name of the person. You can assume that 
+# (1) first names and last names of the same person are located in the same slot of
+# their respective lists (e.g. Kim Jones, Brenda Jauregui, Karlo Imper), and
+# (2) that the lists always have three values in them.
+</span></code></pre></div></div>
+
+<!-- ### Answer (One Approach)
+
+```python
+full_names = []
+full_names.append(first_names[0] + ' ' + last_names[0])
+full_names.append(first_names[1] + ' ' + last_names[1])
+full_names.append(first_names[2] + ' ' + last_names[2])
+print(full_names)
+``` -->
+
+<h2 id="exercise-2">Exercise 2</h2>
+<p>Write a function that shifts a list of three coordinate pairs by some horizontal amount and some vertical amount. The function should return the new/updated list.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1"># here is how I would call your function...
+</span><span class="k">print</span><span class="p">(</span><span class="n">shift_coordinates</span><span class="p">([(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span> <span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">40</span><span class="p">)],</span> <span class="n">x_units</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">y_units</span><span class="o">=</span><span class="mi">200</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">shift_coordinates</span><span class="p">([(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">40</span><span class="p">),</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">)],</span> <span class="n">x_units</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">y_units</span><span class="o">=</span><span class="mi">100</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">shift_coordinates</span><span class="p">([(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">40</span><span class="p">),</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">)]))</span>
+
+<span class="c1"># ...and here's what would print to the screen...
+# [(120, 20), (130, 230), (140, 240)]
+# [(90, 140), (150, 200), (250, 300)]
+# [(40, 40), (100, 100), (200, 200)]
+</span></code></pre></div></div>
+
+<!-- ### Answer (One Approach)
+```python
+def shift_coordinates(my_list, x_units=0, y_units=0):
+    return [
+        (my_list[0][0] + x_units, my_list[0][1] + y_units),
+        (my_list[1][0] + x_units, my_list[1][1] + y_units),
+        (my_list[2][0] + x_units, my_list[2][1] + y_units)
+    ]
+``` -->
+
+
+<h2 id="do-now">Today's Activities</h2>
+<p>For today, please do the following:</p>
+
+
+
+
+<h3 id="slides">1. Review the Slides</h3>  
+
+
+    <ol>
+    
+        <li>
+            <a href="https://docs.google.com/document/d/1Htmc4lcdBydk270CZagDblVVeyXTNc51C9oRKpcXzGE/edit#" target="_blank">Google Doc from Today</a>
+        </li>
+    
+    </ol>
+
+
+
+<h3 id="videos">2. Watch the Lecture Video(s)</h3>
+
+
+    <table class="medium module">
+        <thead>
+            <tr>
+                <th>Link</th>
+                <th>Title</th>
+                <th>Type</th>
+                <th>Duration</th>
+            </tr>
+        </thead>
+        <tbody>
+        
+        
+            
+            
+            
+            
+            
+            <tr>
+                <td>
+                    <a class="live" href="https://northwestern.zoom.us/rec/share/j1tSTfNVmoCNebTYUmA29PAZxSOmhyqTfJqVXXqASLng5PLhgoJwYv0jKXnzADW8.0HnNvNx1Cmdc5O5P" target="_blank">
+                        Video 1 <i class="fa fa-link"></i>
+                    </a>
+                </td>
+                <td>
+                    Review session
+                </td>
+                <td>
+                    lecture
+                </td>
+                <td>
+                    1:28:20
+                </td>
+            </tr>
+            
+        
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+            </article>  
+        </main>
+        
+            <script type="text/javascript" src="//assets/js/main.js"></script>
+    
+    <script src="https://kit.fontawesome.com/62a7c74d0d.js" crossorigin="anonymous"></script>
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="//assets/js/scrollspy.js"></script>
+    </body>
+</html>

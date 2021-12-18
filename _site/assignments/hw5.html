@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="//assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="//assets/main.css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163192686-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163192686-1');
+    </script>
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <h1 class="desktop"><a href="//">CS110: Winter 2022</a></h1>
+    <h2 class="desktop">Intro to Computer Programming with Python</h2>
+    <a class="mobile" href="#">
+        <i class="menu-toggle fas fa-bars"></i>
+    </a>
+    <h1 class="mobile">CS110: Winter 2022</h1>
+</header>
+
+        <nav>
+    <ul>
+        <li ><a href="//syllabus/">Syllabus</a></li>
+        <li ><a href="//" >Schedule</a></li>
+        <li class="active"><a href="//assignments/">Assignments</a></li>
+        <li ><a href="//resources/">Resources</a></li>
+        <li ><a href="//times-locations/">Calendar</a></li>
+        <li><a href="https://campuswire.com/c/G7DE56EF3/feed" target="_blank">Campuswire</a></li>
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#your-tasks">Your Tasks</a></li>
+  <li><a href="#caveats">Caveats</a></li>
+  <li><a href="#extra-credit-options-up-to-2-points-total">Extra Credit Options (up to 2 points total)</a></li>
+  <li><a href="#checklist-before-you-submit">Checklist Before You Submit</a></li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1>
+            <a href="../assignments/">Assignments</a> > 
+            HW5: Tic Tac Toe
+        </h1>
+    
+ 
+                <p>
+    
+        Due on Mon, 11/22 @ 11:59PM.
+    
+    
+        8 Points.
+    
+    
+</p>
+
+<style>
+    .bash-small .highlighter-rouge {
+        width: 300px;
+        margin: auto;
+        margin-top: 10px;
+    }
+</style>
+
+<p><a class="nu-button" href="/fall2021/course-files/homework/hw05.zip" target="_blank">
+    Homework Starter Files <i class="fas fa-download"></i>
+</a></p>
+
+<blockquote>
+  <p><strong>LEARNING OBJECTIVES:</strong></p>
+  <ol>
+    <li>Practice working with loops</li>
+    <li>Practice working with sequences</li>
+    <li>Practice with logic</li>
+    <li>Practice writing more complex programs</li>
+  </ol>
+</blockquote>
+
+<p>In this assignment, you will be making a game of tic tac toe, where a player will be playing the computer (see video below).</p>
+<iframe src="https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=269492eb-30e6-4a0f-ba26-ac660037a06f&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all" width="620" height="405" style="padding: 0px; border: 1px solid #464646;" frameborder="0" allowfullscreen="" allow="autoplay"></iframe>
+
+<!-- <iframe src="https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=269492eb-30e6-4a0f-ba26-ac660037a06f&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe> -->
+
+<h2 id="your-tasks">Your Tasks</h2>
+<p>Please write a program that accomplishes the following tasks:</p>
+
+<ol class="bash-small">
+  <li>Ask the user whether they want to be x or o (and ensure your program honors their choice).</li>
+  <li>Ask the user if they want to go first (and ensure your program honors their choice)
+Prompt the user for their move (they’ll enter a number from 1-9), which corresponds to where they want to go (as displayed below):
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>          7 | 8 | 9 
+         ———————————
+          4 | 5 | 6 
+         ——————————— 
+          1 | 2 | 3 
+</code></pre></div>    </div>
+
+    <ul>
+      <li>If the user does not enter a number from 1-9, tell them their entry was invalid and that they should try again (use try/except as well as if/else).</li>
+      <li>If the user enters a valid number that is not empty, tell them that slot is already taken.</li>
+    </ul>
+  </li>
+  <li>If it’s the computer’s turn, have the computer randomly select a square, given the available choices (using the random module).</li>
+  <li>After each move, be sure to redraw the game board</li>
+  <li>If there is a win / loss / tie, print an appropriate message and terminate the game</li>
+</ol>
+
+<h2 id="caveats">Caveats</h2>
+<p>There are many solutions on the Internet for this assignment. DO NOT USE THEM. We know what they are, and can tell if you copied all or parts of them. We want you to invent your own strategy, given what you have learned. Like all things, you will get out of this assignment what you put into it.</p>
+
+<h2 id="extra-credit-options-up-to-2-points-total">Extra Credit Options (up to 2 points total)</h2>
+<p>We highly recommend that you pursue these optional enhancements, to encourage you to think about one way (of many) that ‘artificial intelligence’ might work:</p>
+<ol>
+  <li>Make your computer ‘smart’ so that the computer always selects the optimal move. To do this, consider how the computer could:
+    <ul>
+      <li>(1 point) Always block the user from winning (when possible)</li>
+      <li>(1 point) If the computer is about to win, make sure it selects the correct square!</li>
+      <li>(1 points): Other enhancements (see strategy discussion): https://www.wikihow.com/Win-at-Tic-Tac-Toe</li>
+    </ul>
+  </li>
+  <li>(1 point) Draw a line through the winning pattern on the game board.</li>
+</ol>
+
+<h2 id="checklist-before-you-submit">Checklist Before You Submit</h2>
+<p>Before you submit, make sure you’ve tested that your program does the following:</p>
+
+<ul class="checkbox-list">
+  <li>Allows the user to select whether they want to be x or o</li>
+  <li>Allows the user to indicate whether or not they want to go first</li>
+  <li>Program honors the user’s selection (1-9) and places the symbol correctly</li>
+  <li>If the user enters something other than 1-9, the program tells the user what they did wrong and re-prompts them
+    <ul>
+      <li>Note: consider using try/catch + continue (as we did in Lecture 19)</li>
+    </ul>
+  </li>
+  <li>Computer move does not overwrite a slot that is already taken</li>
+  <li>User’s move does not overwrite a slot that is already taken</li>
+  <li>If the user and / or computer wins, the program ends and tells the user which player won</li>
+  <li>If there’s a tie, the program ends and displays a “tie” message</li>
+</ul>
+
+
+
+
+            </article>  
+        </main>
+        
+            <script type="text/javascript" src="//assets/js/main.js"></script>
+    
+    <script src="https://kit.fontawesome.com/62a7c74d0d.js" crossorigin="anonymous"></script>
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="//assets/js/scrollspy.js"></script>
+    </body>
+</html>

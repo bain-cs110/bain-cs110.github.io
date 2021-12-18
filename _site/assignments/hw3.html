@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="//assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Make a Creature</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="//assets/main.css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163192686-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163192686-1');
+    </script>
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <h1 class="desktop"><a href="//">CS110: Winter 2022</a></h1>
+    <h2 class="desktop">Intro to Computer Programming with Python</h2>
+    <a class="mobile" href="#">
+        <i class="menu-toggle fas fa-bars"></i>
+    </a>
+    <h1 class="mobile">CS110: Winter 2022</h1>
+</header>
+
+        <nav>
+    <ul>
+        <li ><a href="//syllabus/">Syllabus</a></li>
+        <li ><a href="//" >Schedule</a></li>
+        <li class="active"><a href="//assignments/">Assignments</a></li>
+        <li ><a href="//resources/">Resources</a></li>
+        <li ><a href="//times-locations/">Calendar</a></li>
+        <li><a href="https://campuswire.com/c/G7DE56EF3/feed" target="_blank">Campuswire</a></li>
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#part-1-design-your-creature">Part 1: Design your creature</a></li>
+  <li><a href="#part-2-implement-your-make_creature-function">Part 2: Implement your “make_creature” function</a></li>
+  <li><a href="#what-to-submit">What to Submit</a></li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1>
+            <a href="../assignments/">Assignments</a> > 
+            HW3: Make a Creature
+        </h1>
+    
+ 
+                <p>
+    
+        Due on Thu, 10/14 @ 11:59PM.
+    
+    
+        8 Points.
+    
+    
+</p>
+
+<p><a class="nu-button" href="/fall2021/course-files/homework/hw03.zip" target="_blank">
+    Homework Starter Files <i class="fas fa-download"></i>
+</a></p>
+
+<blockquote>
+  <p><strong>LEARNING OBJECTIVES:</strong></p>
+  <ol>
+    <li>More practice working with built-in functions</li>
+    <li>Practice writing your own functions</li>
+  </ol>
+</blockquote>
+
+<p><img class="creature" src="/fall2021/assets/images/hw02/creature.png" /> In this assignment, you are going to write a program to draw a creature of your own design/choosing using <a href="" target="_blank">tkinter</a>. At the end of this assignment, someone should be able to use your function to draw your creature: anywhere on the screen at any size or color. In other words, your function needs to honor the parameters that are passed into it. If you don’t quite know what this means (it’s a confusing concept for people just learning to program), ask Sarah during class or ask your TAs during lab / office hours.</p>
+
+<h2 id="part-1-design-your-creature">Part 1: Design your creature</h2>
+<p>On paper, sketch out at least 3 VERY SIMPLE creature ideas (shoot for using between 4-8 shapes). These can be different variations of the same creature or all different ones. You can just implement the head of your creature (similar to the bear at the top) or the whole thing — the choice is up to you. Here are some links to ideas:</p>
+
+<ul>
+  <li><a href="https://images.squarespace-cdn.com/content/v1/53dd4013e4b05d8340b1c32c/1558819051622-BO3Y418I3RW2B4X2UGY4/ke17ZwdGBToddI8pDm48kJveJ6bDu4t8jo69sot7N517gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UclebCXK_qWyAU_WdFPQdIW8jKJG7706TR3OFKcgb9BQHrvtV3ieEGBkdu4ICJqedg/a-z.jpg?format=1500w" target="_blank">cute monsters</a></li>
+  <li><a href="https://www.youtube.com/watch?v=yh_A09CrT68" target="_blank">https://www.youtube.com/watch?v=yh_A09CrT68</a></li>
+  <li><a href="https://www.shutterstock.com/image-vector/ cute-animals-cartoon-illustrator-flat-design-24766713" target="_blank">https://www.shutterstock.com/image-vector/ cute-animals-cartoon-illustrator-flat-design-247667131</a></li>
+  <li><a href="https://www.pinterest.com/pin/118782508901992203/" target="_blank">https://www.pinterest.com/pin/118782508901992203/</a></li>
+  <li><a href="https://goo.gl/hKewyL" target="_blank">https://goo.gl/hKewyL</a></li>
+</ul>
+
+<p>Feel free to post simple creature drawing ideas on the course Piazza under hw3.
+From your 3 sketched ideas, select the one that you would like to use for the assignment and draw the creature bigger on a different piece of paper — ideally graph paper — and label the points that will help you to program your creature.</p>
+
+<blockquote class="blockquote-no-margin">
+  <p><strong>AGAIN:</strong> Making a simple creature (e.g using 4-8 shapes) is totally fine. You don’t need to get too detailed unless you want to! And you can always enhance your creature at a later point in time.</p>
+</blockquote>
+
+<h2 id="part-2-implement-your-make_creature-function">Part 2: Implement your “make_creature” function</h2>
+<p>Once you are satisfied with your animal concept, create a <code class="highlighter-rouge">make_creature</code> function, inside of <code class="highlighter-rouge">creature.py</code>, using any combination of shapes (points, lines, polygons, rectangles, ovals, etc.). Feel free to use the <code class="highlighter-rouge">make_circle</code> and <code class="highlighter-rouge">make_oval</code> functions that you already implemented in homework 2. Also feel free to use any of the code in <code class="highlighter-rouge">warm_up.py</code>. The spirit of this assignment is for you to get creative, given your developing knowledge of functions.</p>
+
+<p><strong>Tips</strong>:</p>
+<ol>
+  <li>Keep it simple (we recommend anywhere between 4-8 shapes)! You can always add more functionality later.</li>
+  <li>Make only one or two changes at a time and then test out those changes by running your <code class="highlighter-rouge">main.py</code> file. This makes things easier to debug.</li>
+</ol>
+
+<p>Once your function successfully draws the creature that you sketched (in Part 2), you will start adding positional and keyword parameters. There is already 1 positional parameter, canvas, used in the sample <code class="highlighter-rouge">make_creature</code> function. You will add to this:</p>
+
+<ul>
+  <li><span class="hw">ALREADY DONE FOR YOU</span>  A positional (required) parameter, <code class="highlighter-rouge">canvas</code>, which will be a reference to your canvas object from main.py.</li>
+  <li>A positional (required) parameter, <code class="highlighter-rouge">center</code>, specifying the x-y position of the center of your creature (should be a tuple).</li>
+  <li>A keyword (optional) parameter, <code class="highlighter-rouge">primary_color</code> specifying the primary color of the creature. In the case of the bear, this is the face color. Remember, optional parameters require default values.</li>
+  <li>A keyword (optional) parameter, <code class="highlighter-rouge">secondary_color</code> specifying the secondary color of the creature. In the case of the bear, this is the ear color.</li>
+  <li>A keyword (optional) parameter, <code class="highlighter-rouge">size</code>, specifying the size of the creature.</li>
+</ul>
+
+<p>When you’re done, please add at least three calls to the <code class="highlighter-rouge">make_creature</code> function in your <code class="highlighter-rouge">main.py</code> file, using different arguments. For instance, after completing the assignment, I used my make_creature function in the following way to produce the drawing below (feel free to use whatever arguments you want for your positional / keyword parameters):</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># with a function, you can make slightly different versions of your design, 
+# thereby reusing the same code over and over again
+</span>
+<span class="n">make_creature</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">92</span><span class="p">,</span> <span class="mi">115</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="mi">85</span><span class="p">,</span> <span class="n">primary_color</span><span class="o">=</span><span class="s">'#5e6976'</span><span class="p">,</span> <span class="n">secondary_color</span><span class="o">=</span><span class="s">'#1b324d'</span><span class="p">)</span>
+<span class="n">make_creature</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">487</span><span class="p">,</span> <span class="mi">110</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="mi">101</span><span class="p">,</span> <span class="n">primary_color</span><span class="o">=</span><span class="s">'#bfdc65'</span><span class="p">,</span> <span class="n">secondary_color</span><span class="o">=</span><span class="s">'#abb880'</span><span class="p">)</span>
+<span class="n">make_creature</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">454</span><span class="p">,</span> <span class="mi">423</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="mi">141</span><span class="p">,</span> <span class="n">primary_color</span><span class="o">=</span><span class="s">'#aebb83'</span><span class="p">,</span> <span class="n">secondary_color</span><span class="o">=</span><span class="s">'#227876'</span><span class="p">)</span>
+<span class="n">make_creature</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">333</span><span class="p">,</span> <span class="mi">227</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="mi">99</span><span class="p">,</span> <span class="n">primary_color</span><span class="o">=</span><span class="s">'#94ba77'</span><span class="p">,</span> <span class="n">secondary_color</span><span class="o">=</span><span class="s">'#3f5364'</span><span class="p">)</span>
+<span class="n">make_creature</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">117</span><span class="p">,</span> <span class="mi">314</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="mi">91</span><span class="p">,</span> <span class="n">primary_color</span><span class="o">=</span><span class="s">'#648d8e'</span><span class="p">,</span> <span class="n">secondary_color</span><span class="o">=</span><span class="s">'#afc272'</span><span class="p">)</span>
+<span class="n">make_creature</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">199</span><span class="p">,</span> <span class="mi">469</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="mi">122</span><span class="p">,</span> <span class="n">primary_color</span><span class="o">=</span><span class="s">'#3f5364'</span><span class="p">,</span> <span class="n">secondary_color</span><span class="o">=</span><span class="s">'#bfdc65'</span><span class="p">)</span>
+
+<span class="c1"># helper code for making a grid
+</span><span class="n">make_grid</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">screen_width</span><span class="p">,</span> <span class="n">screen_height</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img class="medium frame center" src="/fall2021/assets/images/hw03/creatures.png" /></p>
+
+<h2 id="what-to-submit">What to Submit</h2>
+<p>Before you submit, please do test your make creature function by invoking the function calls above. If your function is working correctly, all of the input parameters will be honored (i.e. the creature will be drawn at the correct position at (roughly) the specified size, with the specified colors).</p>
+
+<p>When you’re done, please create a zip file that includes the following files:</p>
+
+<ol>
+  <li>A photo / scan of your sketches (PDF or JPG)</li>
+  <li>Your helpers.py file</li>
+  <li>Your creature.py file</li>
+  <li>Your main.py file</li>
+</ol>
+
+
+
+            </article>  
+        </main>
+        
+            <script type="text/javascript" src="//assets/js/main.js"></script>
+    
+    <script src="https://kit.fontawesome.com/62a7c74d0d.js" crossorigin="anonymous"></script>
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="//assets/js/scrollspy.js"></script>
+    </body>
+</html>

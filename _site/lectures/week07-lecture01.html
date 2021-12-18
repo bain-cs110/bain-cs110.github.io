@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="//assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Working with the Terminal / Command Prompt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="//assets/main.css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163192686-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163192686-1');
+    </script>
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <h1 class="desktop"><a href="//">CS110: Winter 2022</a></h1>
+    <h2 class="desktop">Intro to Computer Programming with Python</h2>
+    <a class="mobile" href="#">
+        <i class="menu-toggle fas fa-bars"></i>
+    </a>
+    <h1 class="mobile">CS110: Winter 2022</h1>
+</header>
+
+        <nav>
+    <ul>
+        <li ><a href="//syllabus/">Syllabus</a></li>
+        <li ><a href="//" >Schedule</a></li>
+        <li ><a href="//assignments/">Assignments</a></li>
+        <li ><a href="//resources/">Resources</a></li>
+        <li ><a href="//times-locations/">Calendar</a></li>
+        <li><a href="https://campuswire.com/c/G7DE56EF3/feed" target="_blank">Campuswire</a></li>
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#do-now">Today’s Activities</a>
+    <ol>
+      <li><a href="#code">1. Download the Exercise Files</a></li>
+      <li><a href="#slides">2. Review the Slides</a></li>
+      <li><a href="#videos">3. Watch the Lecture Video(s)</a></li>
+      <li><a href="#4-review-the-command-line-cheatsheet">4. Review the Command Line Cheatsheet</a></li>
+      <li><a href="#5-if-you-have-a-windows-machine">5. If you have a Windows machine</a>
+        <ol>
+          <li><a href="#option-1-run-the-installer-again">Option 1: Run the Installer Again</a></li>
+          <li><a href="#option-2-go-to-system-preferences-and-manually-add-the-path">Option 2: Go to System Preferences and Manually Add the PATH</a>
+            <ol>
+              <li><a href="#step-1">Step 1</a></li>
+              <li><a href="#step-2">Step 2</a></li>
+              <li><a href="#step-3">Step 3</a></li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1><a href="../#l17">Lessons</a> > 17. Working with the Terminal / Command Prompt</h1>
+    
+ 
+                <p>Today in lecture, we will learn how to work with the Terminal (Mac) or Command Prompt (Windows) in order to (a) run python files and (b) install third-party python modules/packages using PIP. There are no pre-recorded videos today.</p>
+
+
+<h2 id="do-now">Today's Activities</h2>
+<p>For today, please do the following:</p>
+
+
+
+    <h3 id="code">1. Download the Exercise Files</h3> 
+    <a class="nu-button" href="//course-files/lectures/lecture17.zip" target="_blank">
+        Exercise Files <i class="fas fa-download"></i>
+    </a>
+    
+
+
+<h3 id="slides">2. Review the Slides</h3>  
+
+
+    <ol>
+    
+        <li>
+            <a href="https://docs.google.com/presentation/d/1rfBX0Kq4rbupxnnq76Cb--tsrJ2RGl1x2bFiZA7WgVM/edit?usp=sharing" target="_blank">Intro to the Command Line & PIP</a>
+        </li>
+    
+    </ol>
+
+
+
+<h3 id="videos">3. Watch the Lecture Video(s)</h3>
+
+
+    <table class="medium module">
+        <thead>
+            <tr>
+                <th>Link</th>
+                <th>Title</th>
+                <th>Type</th>
+                <th>Duration</th>
+            </tr>
+        </thead>
+        <tbody>
+        
+        
+            
+            
+            
+            
+            
+            <tr>
+                <td>
+                    <a class="live" href="https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0b852c70-cd21-4dd8-a68f-add300f6ed32" target="_blank">
+                        Video 1 <i class="fa fa-link"></i>
+                    </a>
+                </td>
+                <td>
+                    Live Lecture (Part 1)
+                </td>
+                <td>
+                    lecture
+                </td>
+                <td>
+                    37:56
+                </td>
+            </tr>
+            
+        
+            
+            
+            
+            
+            
+            <tr>
+                <td>
+                    <a class="live" href="https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=97ffb039-43c3-43a2-ba59-add301026b68" target="_blank">
+                        Video 2 <i class="fa fa-link"></i>
+                    </a>
+                </td>
+                <td>
+                    Live Lecture (Part 2)
+                </td>
+                <td>
+                    lecture
+                </td>
+                <td>
+                    9:24
+                </td>
+            </tr>
+            
+        
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+        <h3 id="4-review-the-command-line-cheatsheet">4. Review the Command Line Cheatsheet</h3>
+
+<p>For your convenience, we have made you a little cheatsheet to help you get familiar with the command line. <a href="https://tutorial.djangogirls.org/en/intro_to_command_line/" target="_blank">Django Girls</a> is a good resource. Note: you will not be tested on this or anything, but navigating the command line can be useful.</p>
+
+<table class="instructions">
+  <thead>
+    <tr>
+      <th> </th>
+      <th>DOS (Windows)</th>
+      <th>Shell (Mac / Linux)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>What directory am I in?</strong></td>
+      <td><code class="highlighter-rouge">&gt; cd</code></td>
+      <td><code class="highlighter-rouge">$ pwd</code></td>
+    </tr>
+    <tr>
+      <td><strong>Change directories</strong></td>
+      <td><code class="highlighter-rouge">&gt; cd </code></td>
+      <td><code class="highlighter-rouge">$ cd </code></td>
+    </tr>
+    <tr>
+      <td><strong>List files &amp; directories</strong></td>
+      <td><code class="highlighter-rouge">&gt; dir</code><br /> <code class="highlighter-rouge">&gt; tree  # lists subdirectories</code></td>
+      <td><code class="highlighter-rouge">$ ls</code><br /><code class="highlighter-rouge">$ ls -l</code></td>
+    </tr>
+    <tr>
+      <td><strong>Navigate to parent directory</strong></td>
+      <td><code class="highlighter-rouge">&gt; cd ..</code></td>
+      <td><code class="highlighter-rouge">$ cd  ..</code></td>
+    </tr>
+    <tr>
+      <td><strong>Navigate into child directory</strong></td>
+      <td><code class="highlighter-rouge">&gt; cd cs110</code></td>
+      <td><code class="highlighter-rouge">$ cd cs110</code></td>
+    </tr>
+    <tr>
+      <td><strong>Navigate into descendant directory</strong></td>
+      <td><code class="highlighter-rouge">&gt; cd lectures\lecture_03</code></td>
+      <td><code class="highlighter-rouge">$ cd lectures/lecture_03</code></td>
+    </tr>
+    <tr>
+      <td><strong>Navigate to sibling directory</strong></td>
+      <td><code class="highlighter-rouge">&gt; cd ..\lecture_02</code></td>
+      <td><code class="highlighter-rouge">$ cd  ../lecture_02</code></td>
+    </tr>
+    <tr>
+      <td><strong>Navigate to ancestor directory</strong></td>
+      <td><code class="highlighter-rouge">&gt; cd ..\..\</code></td>
+      <td><code class="highlighter-rouge">$ cd  ../../</code></td>
+    </tr>
+    <tr>
+      <td><strong>Navigate to home directory</strong></td>
+      <td> </td>
+      <td><code class="highlighter-rouge">$ cd</code></td>
+    </tr>
+    <tr>
+      <td><strong>Command history</strong></td>
+      <td><code class="highlighter-rouge">&gt; doskey /HISTORY</code></td>
+      <td><code class="highlighter-rouge">$ history</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Other optional commands you may find useful…</p>
+
+<table class="instructions">
+  <thead>
+    <tr>
+      <th> </th>
+      <th>DOS (Windows)</th>
+      <th>Shell (Mac / Linux)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Create a new file</strong></td>
+      <td><code class="highlighter-rouge">&gt; echo . &gt; my_file.txt</code></td>
+      <td><code class="highlighter-rouge">$ echo . &gt; my_file.txt</code><br /> <code class="highlighter-rouge">$ touch my_file.txt</code></td>
+    </tr>
+    <tr>
+      <td><strong>Append to a file</strong></td>
+      <td><code class="highlighter-rouge">&gt; echo "some text" &gt;&gt; my_file.txt</code></td>
+      <td><code class="highlighter-rouge">$ echo "some text" &gt; my_file.txt</code></td>
+    </tr>
+    <tr>
+      <td><strong>Save history to a file</strong></td>
+      <td><code class="highlighter-rouge">&gt; doskey /HISTORY &gt; my_history.txt</code></td>
+      <td><code class="highlighter-rouge">$ history &gt; my_history.txt</code></td>
+    </tr>
+    <tr>
+      <td><strong>Move a file</strong></td>
+      <td><code class="highlighter-rouge">&gt; move my_history.txt Documents/.</code></td>
+      <td><code class="highlighter-rouge">$ mv my_history.txt Documents/.</code></td>
+    </tr>
+    <tr>
+      <td><strong>Make a folder</strong></td>
+      <td><code class="highlighter-rouge">&gt; mkdir my_folder</code></td>
+      <td><code class="highlighter-rouge">$ mkdir my_folder</code></td>
+    </tr>
+    <tr>
+      <td><strong>Delete a file</strong></td>
+      <td><code class="highlighter-rouge">&gt; del my_history.txt</code></td>
+      <td><code class="highlighter-rouge">$ rm my_history.txt</code></td>
+    </tr>
+    <tr>
+      <td><strong>Delete a folder</strong></td>
+      <td><code class="highlighter-rouge">&gt; rmdir my_folder</code></td>
+      <td><code class="highlighter-rouge">$ rm -r my_folder</code></td>
+    </tr>
+  </tbody>
+</table>
+
+        
+    
+        
+        <h3 id="5-if-you-have-a-windows-machine">5. If you have a Windows machine</h3>
+<p>If you have a Windows Machine, there are (at least) two ways to ensure that python3 and PIP work when you run them from the command prompt. Note: this is an either -or- thing (e.g. you shouldn’t have to do Option 2 unless Option 1 doesn’t work).</p>
+
+<h4 id="option-1-run-the-installer-again">Option 1: Run the Installer Again</h4>
+<p>In our opinion, the easiest way to get python to work on your command prompt is to run the Python3 installer again and make sure that the checkbox at the very bottom that says Add Python 3.x to PATH is checked:</p>
+
+<p><img class="large frame" src="/fall2021/assets/images/lectures/01-command-prompt-windows-installer.png" /></p>
+
+<h4 id="option-2-go-to-system-preferences-and-manually-add-the-path">Option 2: Go to System Preferences and Manually Add the PATH</h4>
+
+<p>To go this route, you will complete three steps:</p>
+<h5 id="step-1">Step 1</h5>
+<p>Search for Edit the System Environment Variables (see below):</p>
+
+<p><img class="medium frame" src="/fall2021/assets/images/lectures/02-environment-variables.png" /></p>
+
+<h5 id="step-2">Step 2</h5>
+<p>You will then click the Environment Variables button in the Control Panel:</p>
+
+<p><img class="small frame" src="/fall2021/assets/images/lectures/03-environment-variables.png" /></p>
+
+<h5 id="step-3">Step 3</h5>
+
+<p>Finally, you will add the \Scripts folder in their Python installation to their path (see 3rd screenshot). This looks different on everyone’s machine, so you will have to make sure that this PATH corresponds to your Python3 installation. This screenshot below is pertains to Cooper’s path (one of the course TAs), but yours will look different.</p>
+
+<p><img class="medium frame" src="/fall2021/assets/images/lectures/04-environment-variables.png" /></p>
+
+<!-- #### Option 3: 
+
+One of the peer mentors suggested that you can also try running PIP by issuing this command at the command line:
+
+```python
+python3 -m pip NAME_OF_MODULE
+``` -->
+
+        
+    
+
+
+            </article>  
+        </main>
+        
+            <script type="text/javascript" src="//assets/js/main.js"></script>
+    
+    <script src="https://kit.fontawesome.com/62a7c74d0d.js" crossorigin="anonymous"></script>
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="//assets/js/scrollspy.js"></script>
+    </body>
+</html>

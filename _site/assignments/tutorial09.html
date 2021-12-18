@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="//assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Getting Started on Project 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="//assets/main.css">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163192686-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163192686-1');
+    </script>
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <h1 class="desktop"><a href="//">CS110: Winter 2022</a></h1>
+    <h2 class="desktop">Intro to Computer Programming with Python</h2>
+    <a class="mobile" href="#">
+        <i class="menu-toggle fas fa-bars"></i>
+    </a>
+    <h1 class="mobile">CS110: Winter 2022</h1>
+</header>
+
+        <nav>
+    <ul>
+        <li ><a href="//syllabus/">Syllabus</a></li>
+        <li ><a href="//" >Schedule</a></li>
+        <li class="active"><a href="//assignments/">Assignments</a></li>
+        <li ><a href="//resources/">Resources</a></li>
+        <li ><a href="//times-locations/">Calendar</a></li>
+        <li><a href="https://campuswire.com/c/G7DE56EF3/feed" target="_blank">Campuswire</a></li>
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#background">Background</a></li>
+  <li><a href="#step-1-setup">Step 1: Setup</a></li>
+  <li><a href="#step-2">Step 2</a>
+    <ol>
+      <li><a href="#option-1-yelp-option">Option 1: Yelp Option</a>
+        <ol>
+          <li><a href="#practice-outputting-dictionary-values">Practice Outputting Dictionary Values</a></li>
+          <li><a href="#practice-querying">Practice Querying</a></li>
+          <li><a href="#learning-more-about-the-yelp-module-apisyelppy">Learning more about the yelp module (apis/yelp.py)</a></li>
+        </ol>
+      </li>
+      <li><a href="#option-2-spotify-option">Option 2: Spotify Option</a>
+        <ol>
+          <li><a href="#practice-outputting-dictionary-values-1">Practice Outputting Dictionary Values</a></li>
+          <li><a href="#practice-querying-1">Practice Querying</a></li>
+          <li><a href="#learning-more-about-the-spotify-module-apisspotifypy">Learning more about the spotify module (apis/spotify.py)</a></li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li><a href="#what-to-turn-in">What to Turn In</a></li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1>
+            <a href="../assignments/">Assignments</a> > 
+            Tutorial 9: Getting Started on Project 2
+        </h1>
+    
+ 
+                <p>
+    
+        Due on Wed, 12/01 @ 11:59PM.
+    
+    
+        3 Points.
+    
+    
+</p>
+
+<h2 id="background">Background</h2>
+<p>In this week’s tutorial, you will be getting a preview of <a href="../assignments/p2">Project 2</a>. This includes:</p>
+
+<ol>
+  <li>Installing some python dependencies using PIP.</li>
+  <li>Downloading <a href="https://canvas.northwestern.edu/files/12569656/download?download_frd=1">my_token.py</a> from Canvas and save it in your <code class="highlighter-rouge">apis</code> folder. This is the course API master token. Your project won’t work without it.</li>
+  <li>Practicing using some of the modules that have been provided for you inside of the apis directory.</li>
+</ol>
+
+<p>Please complete the following steps:</p>
+
+<h2 id="step-1-setup">Step 1: Setup</h2>
+
+<p>Complete Steps A, B, C, and D in the “Setup” section of <a href="../assignments/p2#setup-please-read-carefully">Project 2</a>. Here are <a href="https://docs.google.com/presentation/d/13ysHSMh9yyGX58rbvlxJO3i1ssN9lQXCZ6mkY4Xy9Uc/edit?usp=sharing" target="_blank">some tips for getting everything set up</a>.</p>
+
+<p>If you have set everything up correctly, running the <code class="highlighter-rouge">tests/run_verification.py</code> python file will display the following output:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>test_token <span class="o">(</span>test_authentication.TestAuthentication<span class="o">)</span> ... ok
+test_get_key <span class="o">(</span>test_authentication.TestAuthentication<span class="o">)</span> ... ok
+test__issue_get_request_only_one <span class="o">(</span>test_spotify.TestSpotify<span class="o">)</span> ... 
+ok
+test_execute_business_queries_just_one_simplified <span class="o">(</span>test_yelp.TestYelp<span class="o">)</span> ... 
+ok
+test_can_import_sendgrid <span class="o">(</span>test_sendgrid.TestSendgrid<span class="o">)</span> ... ok
+test_can_import_sendgrid_api_module <span class="o">(</span>test_sendgrid.TestSendgrid<span class="o">)</span> ... ok
+
+<span class="nt">----------------------------------------------------------------------</span>
+Ran 6 tests <span class="k">in </span>5.935s <span class="o">(</span><span class="nb">time </span>will vary<span class="o">)</span>
+
+OK
+</code></pre></div></div>
+
+<h2 id="step-2">Step 2</h2>
+<p>When you’re done, complete one of the two options (either / or) listed below:</p>
+
+<h3 id="option-1-yelp-option">Option 1: Yelp Option</h3>
+<p>Create a brand new file called <code class="highlighter-rouge">tutorial09.py</code> directly inside of your <code class="highlighter-rouge">project02</code> folder (the location matters). Your directory structure should look like this:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├── apis
+├── music_finder.py
+├── restaurant_finder.py
+├── tests
+└── tutorial09.py
+</code></pre></div></div>
+
+<p>Next, paste the following code into your <code class="highlighter-rouge">tutorial09.py</code> file and run it.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">apis</span> <span class="kn">import</span> <span class="n">yelp</span>
+
+<span class="n">businesses</span> <span class="o">=</span> <span class="n">yelp</span><span class="p">.</span><span class="n">get_businesses</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">businesses</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>You should see some Evanston restaurants print to the screen (as a list of dictionaries).</p>
+
+<h4 id="practice-outputting-dictionary-values">Practice Outputting Dictionary Values</h4>
+<ol>
+  <li>Output just the <code class="highlighter-rouge">name</code> of each business to the screen</li>
+  <li>Output the <code class="highlighter-rouge">name</code>, <code class="highlighter-rouge">rating</code>, and <code class="highlighter-rouge">review_count</code> to the screen</li>
+</ol>
+
+<p><strong>TIP:</strong> You can use the string’s build-in <code class="highlighter-rouge">format</code> function to create nice columns:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">template</span> <span class="o">=</span> <span class="s">'{name:&lt;30}{rating:&gt;10}{review_count:&gt;20}'</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">'-'</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">template</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">'NAME'</span><span class="p">,</span> <span class="n">rating</span><span class="o">=</span><span class="s">'RATING'</span><span class="p">,</span> <span class="n">review_count</span><span class="o">=</span><span class="s">'REVIEW COUNT'</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'-'</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">template</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">'Giordannos Pizza'</span><span class="p">,</span> <span class="n">rating</span><span class="o">=</span><span class="mf">3.5</span><span class="p">,</span> <span class="n">review_count</span><span class="o">=</span><span class="mi">280</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">template</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">'Lou Malnati</span><span class="se">\'</span><span class="s">s Pizza'</span><span class="p">,</span> <span class="n">rating</span><span class="o">=</span><span class="mf">3.7</span><span class="p">,</span> <span class="n">review_count</span><span class="o">=</span><span class="mi">190</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'-'</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+</code></pre></div></div>
+<p>The greater than / less than signs refer to whether the output is left or right justified, and the number refers to the column width.</p>
+
+<p>There is also a helper function inside of the <a href="/fall2021/course-files/projects/project02/docs/yelp.html" target="_blank">apis.yelp</a> module that can help you output businesses to the screen, which you are welcome to modify:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">table_text</span> <span class="o">=</span> <span class="n">yelp</span><span class="p">.</span><span class="n">get_formatted_business_list_table</span><span class="p">(</span><span class="n">businesses</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">table_text</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h4 id="practice-querying">Practice Querying</h4>
+<p>When you’re done outputting the data, open the <code class="highlighter-rouge">apis/yelp.py</code> and navigate down to the <code class="highlighter-rouge">get_businesses</code> function definition. Note all of the keyword  (optional) parameters that the function accepts.</p>
+
+<p>Next, go back to your <code class="highlighter-rouge">tutorial09.py</code> file and modify the get_businesses(…) function call by:</p>
+<ol>
+  <li>Use the various keyword arguments (<code class="highlighter-rouge">price</code>, <code class="highlighter-rouge">category</code>, and/or <code class="highlighter-rouge">location</code>) to change which results get displayed.</li>
+  <li>Use the <code class="highlighter-rouge">sort_by</code> keyword argument to change the sort order.</li>
+</ol>
+
+<blockquote class="blockquote-no-margin">
+  <h4 id="learning-more-about-the-yelp-module-apisyelppy">Learning more about the yelp module (apis/yelp.py)</h4>
+  <p>You can also learn more about the yelp module by:</p>
+  <ul>
+    <li>Looking at the online documentation here: <a href="/fall2021/course-files/projects/project02/docs/yelp.html" target="_blank">/project02/docs/yelp.html</a></li>
+    <li>Running this command using python: <strong><code class="highlighter-rouge">help(apis.yelp)</code></strong></li>
+  </ul>
+</blockquote>
+
+<h3 id="option-2-spotify-option">Option 2: Spotify Option</h3>
+<p>Create a brand new file called <code class="highlighter-rouge">tutorial09.py</code> directly inside of your <code class="highlighter-rouge">project02</code> folder (the location matters). Your directory structure should look like this:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├── apis
+├── music_finder.py
+├── restaurant_finder.py
+├── tests
+└── tutorial09.py
+</code></pre></div></div>
+
+<p>Next, paste the following code into your <code class="highlighter-rouge">tutorial09.py</code> file and run it.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">apis</span> <span class="kn">import</span> <span class="n">spotify</span>
+<span class="n">artists</span> <span class="o">=</span> <span class="n">spotify</span><span class="p">.</span><span class="n">get_artists</span><span class="p">(</span><span class="s">'Beyonce'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">artists</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>You should see some search results relating to Beyonce print to the screen (as a list of dictionaries).</p>
+
+<h4 id="practice-outputting-dictionary-values-1">Practice Outputting Dictionary Values</h4>
+<ol>
+  <li>Output just the <code class="highlighter-rouge">name</code> of each artist to</li>
+  <li>Output the <code class="highlighter-rouge">name</code>, <code class="highlighter-rouge">genres</code>, and <code class="highlighter-rouge">share_url</code> to the screen</li>
+</ol>
+
+<p><strong>TIP:</strong> You can use the string’s build-in <code class="highlighter-rouge">format</code> function to create nice columns:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">template</span> <span class="o">=</span> <span class="s">'{name:&lt;30}{id:&lt;25}{genres:&lt;35}'</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">'-'</span> <span class="o">*</span> <span class="mi">90</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">template</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">'NAME'</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s">'ID'</span><span class="p">,</span> <span class="n">genres</span><span class="o">=</span><span class="s">'GENRES'</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'-'</span> <span class="o">*</span> <span class="mi">90</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">template</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">'Beyoncé'</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s">'6vWDO969PvNqNYHIOW5v0m'</span><span class="p">,</span> <span class="n">genres</span><span class="o">=</span><span class="s">'dance pop, pop, r&amp;b'</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">template</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">'Beyonce as Shine'</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s">'3mjguRNN96bC8zvaTwHoqE'</span><span class="p">,</span> <span class="n">genres</span><span class="o">=</span><span class="s">''</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'-'</span> <span class="o">*</span> <span class="mi">90</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The greater than / less than signs refer to whether the output is left or right justified, and the number refers to the column width. The code above outputs like this:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">------------------------------------------------------------------------------------------</span>
+NAME                          ID                       GENRES                             
+<span class="nt">------------------------------------------------------------------------------------------</span>
+Beyoncé                       6vWDO969PvNqNYHIOW5v0m   dance pop, pop, r&amp;b                
+Beyonce as Shine              3mjguRNN96bC8zvaTwHoqE                                      
+<span class="nt">------------------------------------------------------------------------------------------</span>
+</code></pre></div></div>
+
+<h4 id="practice-querying-1">Practice Querying</h4>
+<p>When you’re done outputting the data, open the <code class="highlighter-rouge">apis/spotify.py</code> file and navigate down to the <code class="highlighter-rouge">get_similar_tracks</code> function definition. Note all of the keyword  (optional) parameters that the function accepts.</p>
+
+<p>While each parameter is technically optional, this function needs some seed data in order to give you song recommendations. Up to 5 seed values may be provided in any combination of seed_artists, seed_tracks and seed_genres. In other words: <br /><code class="highlighter-rouge">len(artist_ids) + len(track_ids) + len(genres)</code> must be between 1 and 5.</p>
+
+<p>Next, go back to your <code class="highlighter-rouge">tutorial09.py</code> file and try invoking the <code class="highlighter-rouge">spotify.get_similar_tracks</code> function as follows:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">track_recommendations</span> <span class="o">=</span> <span class="n">spotify</span><span class="p">.</span><span class="n">get_similar_tracks</span><span class="p">(</span><span class="n">artist_ids</span><span class="o">=</span><span class="p">[</span><span class="s">'6vWDO969PvNqNYHIOW5v0m'</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">track_recommendations</span><span class="p">)</span>
+</code></pre></div></div>
+<ul>
+  <li>Try passing in different Artist IDs</li>
+  <li>Try passing in a list of genres (see the <code class="highlighter-rouge">apis.spotify.get_genres_abridged</code> function to get some valid genre categories).</li>
+</ul>
+
+<p>There is also a helper function inside of the <code class="highlighter-rouge">apis.spotify</code> module that can help you output the tracks to the screen, which you are welcome to modify:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">table_text</span> <span class="o">=</span> <span class="n">spotify</span><span class="p">.</span><span class="n">get_formatted_tracklist_table</span><span class="p">(</span><span class="n">track_recommendations</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">table_text</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>If you still have time, please experiment with some of the other built-in functions:</p>
+<ul>
+  <li>get_tracks</li>
+  <li>get_top_tracks_by_artist</li>
+  <li>get_related_artists</li>
+  <li>get_playlists</li>
+</ul>
+
+<blockquote class="blockquote-no-margin">
+  <h4 id="learning-more-about-the-spotify-module-apisspotifypy">Learning more about the spotify module (apis/spotify.py)</h4>
+  <p>You can also learn more about the yelp module by:</p>
+  <ul>
+    <li>Looking at the online documentation here: <a href="/fall2021/course-files/projects/project02/docs/spotify.html" target="_blank">/project02/docs/spotify.html</a></li>
+    <li>Running this command using python: <strong><code class="highlighter-rouge">help(apis.spotify)</code></strong></li>
+  </ul>
+</blockquote>
+
+<h2 id="what-to-turn-in">What to Turn In</h2>
+<p>Please turn in your completed tutorial exercise(s) on Canvas. To do this:</p>
+
+<ol>
+  <li>Zip your entire <code class="highlighter-rouge">project02</code> folder (with your edited files inside)</li>
+  <li>Rename your zip file to <code class="highlighter-rouge">tutorial09</code></li>
+  <li>upload your zip file to Canvas.</li>
+</ol>
+
+
+
+            </article>  
+        </main>
+        
+            <script type="text/javascript" src="//assets/js/main.js"></script>
+    
+    <script src="https://kit.fontawesome.com/62a7c74d0d.js" crossorigin="anonymous"></script>
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="//assets/js/scrollspy.js"></script>
+    </body>
+</html>
