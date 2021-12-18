@@ -23,7 +23,7 @@ def show_page():
             </body>
         </html>
     '''
-    base_url = 'https://eecs110.github.io/fall2021/assets/images/lectures/'
+    base_url = 'https://eecs110.github.io/assets/images/lectures/'
     seamus_pics = [
         'seamus.jpg',
         'seamus1.jpg',

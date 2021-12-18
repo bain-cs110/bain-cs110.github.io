@@ -16,7 +16,7 @@ draft: 0
     }
 </style>
 
-<a class="nu-button" href="/fall2021/course-files/homework/hw05.zip" target="_blank">
+<a class="nu-button" href="/course-files/homework/hw05.zip" target="_blank">
     Homework Starter Files <i class="fas fa-download"></i>
 </a> 
 

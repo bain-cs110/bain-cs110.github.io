@@ -20,7 +20,7 @@ due_date: 2021-11-10
     }
 </style>
 
-<a class="nu-button" href="/fall2021/course-files/tutorials/tutorial07.zip" target="_blank">
+<a class="nu-button" href="/course-files/tutorials/tutorial07.zip" target="_blank">
     Tutorial Starter Files <i class="fas fa-download"></i>
 </a> 
 

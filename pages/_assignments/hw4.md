@@ -10,7 +10,7 @@ draft: 0
 ---
 
 
-<a class="nu-button" href="/fall2021/course-files/homework/hw04.zip" target="_blank">
+<a class="nu-button" href="/course-files/homework/hw04.zip" target="_blank">
     Homework Starter Files <i class="fas fa-download"></i>
 </a> 
 
@@ -23,8 +23,8 @@ One of our peer mentors, Katherine, has also created a <a href="https://www.yout
 > 1. Practice working with the random module
 
 ## Part 1: Landscapes
-<img class="large frame" src="/fall2021/assets/images/hw04/bubbles.png" /> 
-<img class="large frame" src="/fall2021/assets/images/hw04/stars.png" /> 
+<img class="large frame" src="/assets/images/hw04/bubbles.png" /> 
+<img class="large frame" src="/assets/images/hw04/stars.png" /> 
 
 In `landscapes.py`, replace the code on lines 23-32 (which is repetitive) with a loop (any kind of loop you want) that makes 1,000 stars that fill the entire canvas. Hints:
 
@@ -39,7 +39,7 @@ In `landscapes.py`, replace the code on lines 23-32 (which is repetitive) with a
 ## Part 2: Animation
 <div>
     <p>Please open the cars.py file and make the following changes:</p>
-    <img class="cars" src="/fall2021/assets/images/hw04/cars.gif" /> 
+    <img class="cars" src="/assets/images/hw04/cars.gif" /> 
     <ol>
         <li>Animate the car so that it moves across the screen.</li>
         <li>If the car gets to the end of the screen, it should seamlessly be moved to the beginning of the screen.</li>

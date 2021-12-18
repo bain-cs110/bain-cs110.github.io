@@ -9,7 +9,7 @@ points: 8
 draft: 0
 ---
 
-<a class="nu-button" href="/fall2021/course-files/homework/hw02.zip" target="_blank">
+<a class="nu-button" href="/course-files/homework/hw02.zip" target="_blank">
     Homework Starter Files <i class="fas fa-download"></i>
 </a> 
 
@@ -27,12 +27,12 @@ In this assignment, you are going to get some practice writing functions using t
 To draw your shapes, you will be using an (x, y) coordinate space that has a different origin from the one you use in math class. For computer graphics, the origin is typically in the top left-hand corner (pictured below). To help you debug, I have created a function, make_grid, in the helpers.py file, that will draw gridlines for you.
 
 
-<img class="med-lg center" src="/fall2021/assets/images/hw02/grid.svg" /><br>Source: <a href="https://processing.org/tutorials/coordinatesystemandshapes" target="_blank">https://processing.org/tutorials/coordinatesystemandshapes</a>
+<img class="med-lg center" src="/assets/images/hw02/grid.svg" /><br>Source: <a href="https://processing.org/tutorials/coordinatesystemandshapes" target="_blank">https://processing.org/tutorials/coordinatesystemandshapes</a>
 
 ### TKinter sample code
 To get you started, I have created a file of samples, located in `warm_up.py`, that you can use as a reference as you learn how to draw shapes using the tkinter canvas library. Please feel free to copy and adapt code from this file to complete your assignment. When you run `warm_up.py` from IDLE (by pressing F5), you should see an image like this:
 
-<img class="med-lg center" src="/fall2021/assets/images/hw02/warmup.png" />
+<img class="med-lg center" src="/assets/images/hw02/warmup.png" />
 
 ### main.py (file you will be editing)
 In main.py, there will be some initialization code at the top of each file, which imports the Canvas and Tk modules (belonging to the tkinter module) and initializes the window and the canvas. There will also be a ‘drawing loop’ at the end of each file that will actually render your drawing. Don’t worry about any of this code for now: just take it as a given. You will understand it more in the coming weeks and months. You will add your code in between the commented lines (as specified in the figure below).
@@ -107,7 +107,7 @@ The job of the **make_bullseye** function is to draw a bullseye of 4 concentric 
 ### Testing
 When you’re done, your program should draw this image that looks similar to this one (feel free to use whatever colors you want for the bullseye):
 
-<img class="medium" src="/fall2021/assets/images/hw02/final-screenshot.png" />
+<img class="medium" src="/assets/images/hw02/final-screenshot.png" />
 
 Here is how I will call your functions:
 

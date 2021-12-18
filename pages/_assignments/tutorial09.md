@@ -84,7 +84,7 @@ print('-' * 60)
 ```
 The greater than / less than signs refer to whether the output is left or right justified, and the number refers to the column width.
 
-There is also a helper function inside of the <a href="/fall2021/course-files/projects/project02/docs/yelp.html" target="_blank">apis.yelp</a> module that can help you output businesses to the screen, which you are welcome to modify: 
+There is also a helper function inside of the <a href="/course-files/projects/project02/docs/yelp.html" target="_blank">apis.yelp</a> module that can help you output businesses to the screen, which you are welcome to modify: 
 
 ```python
 table_text = yelp.get_formatted_business_list_table(businesses)
@@ -101,7 +101,7 @@ Next, go back to your `tutorial09.py` file and modify the get_businesses(...) fu
 {:.blockquote-no-margin}
 > #### Learning more about the yelp module (apis/yelp.py)
 > You can also learn more about the yelp module by:
-> * Looking at the online documentation here: <a href="/fall2021/course-files/projects/project02/docs/yelp.html" target="_blank">/project02/docs/yelp.html</a>
+> * Looking at the online documentation here: <a href="/course-files/projects/project02/docs/yelp.html" target="_blank">/project02/docs/yelp.html</a>
 > * Running this command using python: **`help(apis.yelp)`** 
 
 ### Option 2: Spotify Option
@@ -184,7 +184,7 @@ If you still have time, please experiment with some of the other built-in functi
 {:.blockquote-no-margin}
 > #### Learning more about the spotify module (apis/spotify.py)
 > You can also learn more about the yelp module by:
-> * Looking at the online documentation here: <a href="/fall2021/course-files/projects/project02/docs/spotify.html" target="_blank">/project02/docs/spotify.html</a>
+> * Looking at the online documentation here: <a href="/course-files/projects/project02/docs/spotify.html" target="_blank">/project02/docs/spotify.html</a>
 > * Running this command using python: **`help(apis.spotify)`** 
 
 

@@ -12,7 +12,7 @@ description:
 due_date: 2021-10-06
 ---
 
-<a class="nu-button" href="/fall2021/course-files/tutorials/tutorial02.zip" target="_blank">
+<a class="nu-button" href="/course-files/tutorials/tutorial02.zip" target="_blank">
     Tutorial Starter Files <i class="fas fa-download"></i>
 </a> 
 
@@ -30,7 +30,7 @@ This tutorial is based on content that is reviewed in Lessons 1-7, and is intend
 ## Required: Square Challenge
 Please open `square_challenge.py` in IDLE, which is located in the `tutorial01` folder. Take a look at it and then run it. You should see something like this:
 
-<img class="small frame" src="/fall2021/assets/images/tutorial01/before1.png" />
+<img class="small frame" src="/assets/images/tutorial01/before1.png" />
 
 ### A. Create a "make_square" function
 In the `square_challenge.py` file, write a function called `make_square` that accepts the following arguments:
@@ -66,7 +66,7 @@ make_square(canvas, (50, 50), 50, fill_color='#8FCB9B')
 make_square(canvas, (200, 50), 50, fill_color='#8FCB9B')
 ```
 
-<img class="small frame" src="/fall2021/assets/images/tutorial01/after1.png" />
+<img class="small frame" src="/assets/images/tutorial01/after1.png" />
 
 ### C. Use your "make_square" function to create your own drawing
 
@@ -76,7 +76,7 @@ Now, alter the code above to make your own drawing (anything that you can compos
 ## More Practice (If Time): Triangle Challenge
 Please open `triangle_challenge.py` in IDLE (also located in the `tutorial01` folder). Take a look at it and then run it. You should see something like this:
 
-<img class="medium frame" src="/fall2021/assets/images/tutorial01/before2.png" />
+<img class="medium frame" src="/assets/images/tutorial01/before2.png" />
 
 ### A. Create a "make_triangle_left" function
 In the `triangle_challenge.py` file, create a function called `make_triangle_left` that draws a 45-45-90-degree right triangle, where the right angle is positioned at the bottom-left corner (as pictured above). It accepts the following arguments:
@@ -123,7 +123,7 @@ make_triangle_left(canvas, (300, 300), 100, fill_color='#8FCB9B')
 make_triangle_right(canvas, (500, 300), 100, fill_color='#8FCB9B')
 ```
 
-<img class="medium frame" src="/fall2021/assets/images/tutorial01/after2.png" />
+<img class="medium frame" src="/assets/images/tutorial01/after2.png" />
 
 ## What to Turn In
 Please turn in your completed tutorial exercise(s) ON CANVAS by Wednesday night at midnight. To do this, please zip your `tutorial02` folder (i.e. create a new tutorial02.zip file), which includes your edited files, and upload it to Canvas. Please be careful that you **don't just upload the original starter files**, but that your zip file includes **YOUR CODE**.  

@@ -74,7 +74,7 @@ footer p { margin: 40px 0px 40px 0px; text-align: center; }
 main { grid-area: main; }
 main.sticky { padding-top: 48px; }
 
-header { grid-area: top; align-items: flex-end; flex-direction: column; background: url(/fall2021/assets/images/purple-polygons.png) repeat-y; }
+header { grid-area: top; align-items: flex-end; flex-direction: column; background: url(/assets/images/purple-polygons.png) repeat-y; }
 header h1 { margin-bottom: 0px; color: white; }
 header h1 a, header h1 a:hover, header h1 a:visited, header h1 a:active { color: white; background: none; }
 header h2 { margin-top: 0px; margin-bottom: 20px; font-family: "Campton Extra Light",Tahoma,sans-serif; border-bottom: none; color: white; }

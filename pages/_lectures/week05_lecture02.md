@@ -40,5 +40,5 @@ videos:
 exercise_url: "lecture12.zip"
 ---
 
-<img class="module-image" src="/fall2021/assets/images/lectures/loops.gif" /> In this lesson, we’re going to go over while loops -- a way of allowing your program to repeat code for a specified number of iterations. Being able to repeat code blocks (also know as "looping" or "iterating") is very powerful, and will allow you to easily perform repetitive tasks in a variety of different contexts: playing songs, drawing pictures, building animations, doing data processing, and so forth. I also highly recommend that you read Chapter 5 in the Severance (Python for Everyone), for additional review.
+<img class="module-image" src="/assets/images/lectures/loops.gif" /> In this lesson, we’re going to go over while loops -- a way of allowing your program to repeat code for a specified number of iterations. Being able to repeat code blocks (also know as "looping" or "iterating") is very powerful, and will allow you to easily perform repetitive tasks in a variety of different contexts: playing songs, drawing pictures, building animations, doing data processing, and so forth. I also highly recommend that you read Chapter 5 in the Severance (Python for Everyone), for additional review.
 

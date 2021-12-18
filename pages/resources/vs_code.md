@@ -19,6 +19,6 @@ permalink: /resources/visual-studio-code/
 1. If VS Code prompts you to install some python extensions, let it (they will help you run your programs from VS Code).
 2. Make sure that the correct version of python (python 3.x) is being used to run your code. To select from the available python versions, click on the python version in the blue bar on the lower left-hand side of your screen (pictured below), and ensure the correct version of python is selected.
 
-<img class="large frame" src="/fall2021/assets/images/resources/vs-code.png" />
+<img class="large frame" src="/assets/images/resources/vs-code.png" />
 
 
