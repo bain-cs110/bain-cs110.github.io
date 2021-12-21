@@ -2,13 +2,13 @@
 layout: module
 title: Intro to Hardware and Software
 type: lecture
-description: 
+description:
     - What is hardware?
     - What is software?
     - What are some "real world" analogies?
 num: 2
-draft: 0
-due_date: 2021-09-24
+draft: 1
+due_date: 2022-01-05
 slides:
    - url: https://docs.google.com/presentation/d/1KcRLMlYpYS6onuJ9nobsA4Z3Yh-kudLvFfBjCkRqyuc/edit?usp=sharing
      title: Intro to Hardware & Software
