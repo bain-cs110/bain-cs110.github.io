@@ -1,10 +1,9 @@
 ---
 layout: assignment-two-column
-title: |
-    Installation & Introductory Exercises
+title: Installation & Introductory Exercises
 abbreviation: HW1
 type: homework
-due_date: 2022-1-14
+due_date: 2022-01-14
 ordering: 1
 draft: 0
 points: 8
