@@ -40,7 +40,7 @@ Office hours are meant to be a time where you can ask questions that you need an
 
 * I didn't understand X idea in lecture / tutorial this week. Can you explain it to me?
 * I'm having trouble finding a good place to start in this week's homework. Can you help?
-* My laptop won't won't run this code from class. What am I doing wrong?
+* My laptop won't run this code from class. What am I doing wrong?
 * My program is returning this error which I've tried to fix. What am I missing?
 * What courses should I take next after CS 110?
 * What kinds of CS-related careers and opportunities are out there?
@@ -75,7 +75,7 @@ Our Graduate TA serves as the go-to course staff member for grading discrepancie
 * Wensan Yin (wensanyin2024@u.northwestern.edu)
 * Alberta Yoo (albertayoo2021@u.northwestern.edu)
 
-Our Peer Mentors (PMs) serve as your first point of contact in the course. Each PM leads a weekly tutorial session with idea that they can closely track your learning progress throughout the quarter. They will also host office hours each week that will be open for all students. That means that there will be close to 30 office hours offered per week for our course.
+Our Peer Mentors (PMs) serve as your first point of contact in the course. Each PM leads weekly tutorial sessions with idea that they can closely track your learning progress throughout the quarter. They will also host office hours each week that will be open for all students. That means that there will be close to 30 office hours offered per week for our course.
 
 ## Course Grading Policy
 Your course grade is calculated based on 200 points as follows:
@@ -117,6 +117,8 @@ Some other logistics:
 
 There will be three cumulative assessments of your knowledge and practice of the course material administered during our assigned class time (50 minutes). There will be no Final Exam outside of these three quizzes.
 
+The quizzes will be held roughly in Week 4, Week 8, and Week 10 of the course.
+
 ### Homework Grading
 Homework will be approximately weekly and is due at 11:59pm on the specified date. You will submit your homework assignments on Canvas.
 
@@ -148,7 +150,7 @@ You will receive your assignment grades on Canvas within a week of your submissi
 
 ### Tutorial Grading
 
-Tutorials are graded on a Pass/Fail scheme. As long as you attend Tutorial and make a legitimate attempt (up to the discretion of your Peer Mentor) at completing the assignment, you will receive a Pass. We will not accept "remote" submissions of tutorials (i.e. you submit the file without attending). Additionally, you cannot simply go to Tutorial to turn in your assignment and then immediately leave. The idea of the tutorials is to provide you with opportunities to both practice your own programming skill *as well as learn to communicate with and help other programmers*. This course is meant to a be a learning community which requires the dedicated participation of all members.
+Tutorials are graded on a Pass/Fail scheme. As long as you attend Tutorial and make a legitimate attempt (up to the discretion of your Peer Mentor) at completing the assignment, you will receive a Pass. The idea of the tutorials is to provide you with opportunities to both practice your own programming skill *as well as learn to communicate with and help other programmers*. This course is meant to a be a learning community which requires the dedicated participation of all members. While attendance is only required for the first Tutorial, you must submit your tutorial by Wednesday at 11:59pm each week. No late submissions will be accepted.
 
 ### Project Grading
 

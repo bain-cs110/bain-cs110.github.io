@@ -2,13 +2,13 @@
 layout: module
 title: Introduction
 type: lecture
-num: 1
+num: 0
 draft: 0
 description:
     - Intro to the course
 due_date: 2022-01-03
 slides:
-   - url:
+   - url: https://docs.google.com/presentation/d/1s4A3-sh1h7FT6Vur0L_g1PMbtkyoFtBKWFgxHwDtM6c/edit?usp=sharing
      title: Course Logistics
 videos:
    - url:
@@ -19,7 +19,7 @@ videos:
 extras:
   - title: "Course Questionnaire"
     comments: "Please complete the pre-course questionnaire by tonight (1/03)!"
-    url:
+    url: https://forms.gle/dXkdho8zz6Z9iHH7A
     external: 1
 ---
 
