@@ -12,7 +12,7 @@ permalink: /syllabus/
 | **Lecture Time** | Monday, Wednesday, & Friday, 9:00 - 9:50am |
 | **Lecture Location** | Technological Institute - Ryan Auditorium |
 
-> Please note that this syllabus is subject to change prior to Jan 3, 2022. Additionally, due to the university's Wildcat Wellness policy, none of our course activities will be in-person prior to January 18, 2022.
+> Please note that this syllabus is subject to change prior to Jan 3, 2022. Additionally, due to the university's Wildcat Wellness policy, none of our course activities will be in-person prior to January 18, 2022. For Zoom links for the first two weeks of class, please see our Canvas page.
 
 ## About the Course
 CS 110 is meant as an introduction to the key ideas of computer programming and assumes no prior programming knowledge. In this course, we'll use the programming language Python with two goals: first, we want to give you a sense of the kinds of creative activities, both directed problem-solving and creative pursuits, that programming can support; and two, we want to introduce you to the fundamental constructs (and associated skills and techniques) of computer programming.
