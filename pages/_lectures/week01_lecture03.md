@@ -3,7 +3,7 @@ layout: module
 title: The Building Blocks
 type: lecture
 draft: 1
-num: 3
+num: 2
 description:
   - Variables, operators, data types, and built-in functions
 due_date: 2022-01-07

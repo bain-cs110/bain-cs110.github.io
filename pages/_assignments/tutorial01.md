@@ -6,10 +6,10 @@ abbreviation: Tutorial 1
 draft: 0
 points: 3
 num: 2
-description: 
+description:
     - Installing Python3 & IDLE
     - Writing your first programs
-due_date: 2021-09-29
+due_date: 2022-01-12
 ---
 
 <!-- **Reminder:** Everyone must sign up for a tutorial slot <a href="https://docs.google.com/spreadsheets/d/1twZ2NDfyu0jVgvb4SMS2Cd9KEwwcPN0BZvLg0XMJuh8/edit#gid=0" target="_blank">here</a>.  -->
@@ -20,7 +20,7 @@ In tutorial today, you will meet your peer mentor and fellow classmates, install
 Please refer to part 1 of the [hw1](hw1) for instructions on how to install Python on your computer. Feel free to go through this process *before* your tutorial, but if you get stuck, tutorial is your time to get questions answered.
 
 ## Part 2: Get Your Files Organized
-Create the folder organizational structure recommended in Video 1, [Lecture 3](../lectures/week02-lecture01). 
+Create the folder organizational structure recommended in Video 1, [Lecture 3](../lectures/week02-lecture01).
 
 ```
 cs110
@@ -39,7 +39,7 @@ cs110
 ```
 
 ## Part 3: Create `main.py` and Write Some Programs
-When you're done, open IDLE and create a new python file (go to File menu > "New File"). This should open a blank document. Then save this blank document as **`main.py`** (File menu > "Save as..."), and put it inside of your cs110 > tutorials > tutorial01 folder. 
+When you're done, open IDLE and create a new python file (go to File menu > "New File"). This should open a blank document. Then save this blank document as **`main.py`** (File menu > "Save as..."), and put it inside of your cs110 > tutorials > tutorial01 folder.
 
 You will edit this newly created `main.py` file in order to complete the following:
 

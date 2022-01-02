@@ -4,7 +4,7 @@ title: |
     Installation & Introductory Exercises
 abbreviation: HW1
 type: homework
-due_date: 2021-10-01
+due_date: 2022-1-14
 ordering: 1
 draft: 0
 points: 8
@@ -25,7 +25,7 @@ points: 8
 > ### What if I've already installed Python on my laptop?
 > Note: many people who have programmed with Python before already have Python 3.x installed. To check, search for an existing Python installation. If you already have a version of Python3 installed, move on to Part 2. It doesn't hurt to install another version of Python, but it's not necessary. If you have any questions, feel free to ask Sarah or one of the peer mentors / TAs.
 
-We will use the Python 3 programming language and **IDLE**, which is Python's Integrated Development and Learning Environment. 
+We will use the Python 3 programming language and **IDLE**, which is Python's Integrated Development and Learning Environment.
 
 Download the latest version (3.9.x) of python here: <a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a>
 
@@ -44,7 +44,7 @@ At the **&gt;&gt;&gt;** prompt, you can type any valid python command. For examp
 If you have any issues installing Python or IDLE, contact your assigned peer mentor. You are also welcome to attend any of the course office hours to get help.
 
 ## Part 2: Complete the Programming Exercises
-In the section above, you wrote a single line of python at the **&gt;&gt;&gt;** prompt. For instance: 
+In the section above, you wrote a single line of python at the **&gt;&gt;&gt;** prompt. For instance:
 
 `print("hello world!")`
 
@@ -81,26 +81,26 @@ It may seem trivial, but take some time now to organize yourself. It will save y
 ### Step 2: Complete the following exercises
 Download the [main.py](../course-files/homework/hw01/main.py) starter file and save it in your hw01 folder. To edit **main.py** using IDLE:
 
-1. Right click on the **main.py** file that you just saved in your **hw01 folder** and open it with IDLE. 
-2. You should now see some python code. Click anywhere inside that file so that your cursor is now in that window. 
+1. Right click on the **main.py** file that you just saved in your **hw01 folder** and open it with IDLE.
+2. You should now see some python code. Click anywhere inside that file so that your cursor is now in that window.
 3. Hit F5 (if you're on a MAC with a touchbar, hit the **fn** key and then **F5**). As an alternative to F5, you can also go to the Run menu and select **Run Module**. Your code will then be executed by the Python interpreter.
 
-When you're done, please complete the following 9 exercises by editing the **main.py** file using IDLE. 
+When you're done, please complete the following 9 exercises by editing the **main.py** file using IDLE.
 
 #### 1. Print a box like the one below:
 ```
 *******************
 *******************
-******************* 
-******************* 
+*******************
+*******************
 ```
 
 #### 2. Print a box like the one below:
 ```
 *******************
-*                 * 
-*                 * 
-******************* 
+*                 *
+*                 *
+*******************
 ```
 
 #### 3. Print a triangle like the one below:
@@ -111,14 +111,14 @@ When you're done, please complete the following 9 exercises by editing the **mai
 ****
 ```
 
-#### 4. Write a program that computes and prints the result of: 
+#### 4. Write a program that computes and prints the result of:
 <img src="/assets/images/hw01/equation.png" style="width: 100px;"/>
 
 (The answer is roughly 0.1017).
 
 #### 5. User input
 Ask the user to enter a number. Convert it to an int, and print out the square of the number, but use the end optional argument to print it out in a full sentence that ends in a period (e.g. “The square of 5 is 25.”).
-Sample output is shown below: 
+Sample output is shown below:
 
 ```python
 Enter a number: 5 	     # prompt the user for a number (not necessarily 5)
@@ -134,7 +134,7 @@ Enter a number: 7         # prompt the user for a number (not necessarily 7)
 ```
 
 #### 7. Math Practice
-Write a program that asks the user for a weight in kilograms and converts it to pounds. There are 2.2 pounds in a kilogram. 
+Write a program that asks the user for a weight in kilograms and converts it to pounds. There are 2.2 pounds in a kilogram.
 
 ```python
 Enter weight in kg: 5         # prompt the user for a weight in kg
@@ -142,7 +142,7 @@ Enter weight in kg: 5         # prompt the user for a weight in kg
 ```
 
 #### 8. Calculate Average
-Write a program that asks the user to enter three numbers (use three separate input statements). Create variables called total and average that hold the sum and average of the three numbers and print out the values of total and average. 
+Write a program that asks the user to enter three numbers (use three separate input statements). Create variables called total and average that hold the sum and average of the three numbers and print out the values of total and average.
 
 
 #### 9. Tip Calculator

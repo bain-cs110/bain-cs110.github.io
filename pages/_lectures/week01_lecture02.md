@@ -6,7 +6,7 @@ description:
     - What is hardware?
     - What is software?
     - What are some "real world" analogies?
-num: 2
+num: 1
 draft: 1
 due_date: 2022-01-05
 slides:

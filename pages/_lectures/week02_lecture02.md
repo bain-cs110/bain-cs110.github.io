@@ -3,7 +3,7 @@ layout: module
 title: |
     Introduction to Functions
 type: lecture
-num: 5
+num: 4
 draft: 1
 description:
     - Some useful built-in functions
@@ -14,7 +14,7 @@ slides:
     title: "Intro to Functions"
   - url: https://docs.google.com/presentation/d/1gTu61HaLxE9Qjpy2LUehqkJDzxcTnLWOynGQ6pm6ZkQ/edit?usp=sharing
     title: Live Lecture Activities
-videos: 
+videos:
   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=17fa1eb5-c0e0-4e7e-9761-adab0002bd4e
     title: "Expressions & Intro to Functions"
     duration: "15:50"
@@ -44,5 +44,5 @@ readings:
 exercise_url: "lecture05.zip"
 ---
 
-<img class="module-image" src="/assets/images/lectures/lecture_03_functions.png" /> 
+<img class="module-image" src="/assets/images/lectures/lecture_03_functions.png" />
 The next two lessons will primarily be dedicated to functions. In this lesson, we will introduce functions, including some basic terminology and why they are useful. We'll also take a look at some examples of how to use built-in functions. In the next lesson (Lesson 6), we will practice building our own functions and modules. <br><br>Next week's tutorial ([Tutorial 2](../assignments/tutorial02)) and homework ([Homework 2](../assignments/hw2)) will be based on content reviewed in this lesson and the next one. You are strongly encouraged to review the content in these lessons *before* trying the lab/homework.
