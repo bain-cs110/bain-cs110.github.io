@@ -2,8 +2,8 @@
 layout: module
 title: Creating Your Own Functions
 type: lecture
-draft: 5
-num: 6
+draft: 1
+num: 5
 description:
   - Creating your own functions
   - Defining versus invoking functions
