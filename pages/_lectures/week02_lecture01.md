@@ -7,7 +7,7 @@ draft: 1
 quiz_url: https://canvas.northwestern.edu/courses/149580/quizzes/159823
 description:
     - Lists and tuples (sequences)
-due_date: 2021-09-29
+due_date: 2022-01-10
 slides:
   - url: https://docs.google.com/presentation/d/151qAFAoG50CAQI7he1S4H63Nte8GDkmh6kkJot8-kTM/edit?usp=sharing
     title: "Lists & Tuples"
