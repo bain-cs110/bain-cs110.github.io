@@ -13,7 +13,7 @@ slides:
 videos:
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=83cedfcb-a22a-43bd-afa8-ae12010db7d2
      title: Course Logistics (Live Lecture)
-     duration: ""
+     duration: "46:36"
      live: 1
 
 extras:
