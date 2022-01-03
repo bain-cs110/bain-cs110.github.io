@@ -4,7 +4,7 @@ title: Intro to Lists & Tuples
 type: lecture
 num: 3
 draft: 1
-quiz_url: https://canvas.northwestern.edu/courses/149580/quizzes/159823
+quiz_url: https://canvas.northwestern.edu/courses/149580/quizzes/159822
 description:
     - Lists and tuples (sequences)
 due_date: 2022-01-10
