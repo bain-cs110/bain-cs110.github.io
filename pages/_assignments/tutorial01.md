@@ -12,15 +12,13 @@ description:
 due_date: 2022-01-12
 ---
 
-<!-- **Reminder:** Everyone must sign up for a tutorial slot <a href="https://docs.google.com/spreadsheets/d/1twZ2NDfyu0jVgvb4SMS2Cd9KEwwcPN0BZvLg0XMJuh8/edit#gid=0" target="_blank">here</a>.  -->
-
 In tutorial today, you will meet your peer mentor and fellow classmates, install Python3 (if you haven't already), and write a few simple programs. Attendance at your first tutorial session is **MANDATORY**.
 
 ## Part 1: Install Python (HW1, Part1)
 Please refer to part 1 of the [hw1](hw1) for instructions on how to install Python on your computer. Feel free to go through this process *before* your tutorial, but if you get stuck, tutorial is your time to get questions answered.
 
 ## Part 2: Get Your Files Organized
-Create the folder organizational structure recommended in Video 1, [Lecture 3](../lectures/week02-lecture01).
+Create the folder organizational structure recommended in class in Lecture 3 (video will be posted).
 
 ```
 cs110
