@@ -13,10 +13,10 @@ slides:
    - url: https://docs.google.com/presentation/d/1aUvJhji0iMI1tQ5Vdm40SAj4VuXveHWQ5AaVVZAVQ4k/edit?usp=sharing
      title: Conceptual Model of a Computer (Lecture Slides)
 videos:
-   - url:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3ce894f8-abb7-4733-bf78-ae1401108dad
      title: Conceptual Model of a Computer (Live Lecture)
-     duration:
-     live: 0
+     duration: "49:39"
+     live: 1
 readings:
   - title: "Ch1: Intro to Computing"
     author: "Charles Severance"
