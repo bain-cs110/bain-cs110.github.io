@@ -13,7 +13,7 @@ slides:
    - url: https://docs.google.com/presentation/d/1aUvJhji0iMI1tQ5Vdm40SAj4VuXveHWQ5AaVVZAVQ4k/edit?usp=sharing
      title: Conceptual Model of a Computer (Lecture Slides)
 videos:
-   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3ce894f8-abb7-4733-bf78-ae1401108dad
+   - url: https://northwestern.zoom.us/rec/share/23qBY0zseyVaDGJVFASBxcBUoK4gE8--TzJlUX2zS9t0-f5ey5BwGF89FVJXYd_G.B-aaj4OOF75fSzSy?startTime=1641394494000
      title: Conceptual Model of a Computer (Live Lecture)
      duration: "49:39"
      live: 1
