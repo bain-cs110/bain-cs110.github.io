@@ -5,7 +5,7 @@ type: lecture
 draft: 0
 num: 2
 description:
-  - Programs, variables, operators, and data types
+  - Programs, operators, and data types
 due_date: 2022-01-07
 slides:
   - url: https://docs.google.com/presentation/d/1Zm6VoZOKXZ4uVLgT0cfg-2pNrPgLvWdG2UtCEAm6JcU/edit?usp=sharingte

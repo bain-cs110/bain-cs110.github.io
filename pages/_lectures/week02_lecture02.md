@@ -1,13 +1,12 @@
 ---
 layout: module
 title: |
-    Introduction to Functions
+    Lists & Tuples
 type: lecture
 num: 4
 draft: 1
 description:
-    - Some useful built-in functions
-    - Parameters and arguments
+    - List, tuples, and other strange data types
 due_date: 2022-01-12
 slides:
   - url: https://docs.google.com/presentation/d/12Srk8yvpsYQQlB_U_TEaCCcHb9zqMVmmoz4KRLUbLEQ/edit?usp=sharing

@@ -1,10 +1,11 @@
 ---
 layout: module
-title: Creating Your Own Functions
+title: Zooming in on Functions
 type: lecture
 draft: 1
 num: 5
 description:
+  - Using functions
   - Creating your own functions
   - Defining versus invoking functions
 due_date: 2022-01-14

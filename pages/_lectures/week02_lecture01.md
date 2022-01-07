@@ -1,12 +1,13 @@
 ---
 layout: module
-title: Intro to Lists & Tuples
+title: Variables & Functions
 type: lecture
 num: 3
 draft: 1
 quiz_url: https://canvas.northwestern.edu/courses/149580/quizzes/159822
 description:
-    - Lists and tuples (sequences)
+    - Variables...what are they good for?
+    - Using built-in Functions
 due_date: 2022-01-10
 slides:
   - url: https://docs.google.com/presentation/d/151qAFAoG50CAQI7he1S4H63Nte8GDkmh6kkJot8-kTM/edit?usp=sharing
