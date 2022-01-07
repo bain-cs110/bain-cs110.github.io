@@ -8,11 +8,11 @@ description:
   - Programs, variables, operators, and data types
 due_date: 2022-01-07
 slides:
-  - url: https://docs.google.com/presentation/d/1Zm6VoZOKXZ4uVLgT0cfg-2pNrPgLvWdG2UtCEAm6JcU/edit?usp=sharing
+  - url: https://docs.google.com/presentation/d/1Zm6VoZOKXZ4uVLgT0cfg-2pNrPgLvWdG2UtCEAm6JcU/edit?usp=sharingte
     title: Live Lecture Activities
 videos:
-   - url:
-     duration:
+   - url: https://northwestern.zoom.us/rec/share/79aiDtUgU_zgEh1mpView8pCOw3xK275qzlwQrsiPDIDhd7dTJVFKMGkSI_5pYWN.93BwFYvdtb4PTwRX?startTime=1641567212000
+     duration: "51:05"
      title: Live Lecture
      live: 0
 
