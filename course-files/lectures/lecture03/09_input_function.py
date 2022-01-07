@@ -1,10 +1,9 @@
-# The built-in input() function prompts the user for an input, 
+# The built-in input() function prompts the user for an input,
 # and returns what the user typed as a string, that can be stored
 # in a variable. If you want to treat what the user typed as a number,
 # you need to manually convert it to the correct data type:
 
-
-# simple example: store the result of the user's input 
+# simple example: store the result of the user's input
 # in a variable named "answer"
 answer = input('How old are you? ')
 print(answer)

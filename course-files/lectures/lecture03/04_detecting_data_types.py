@@ -5,6 +5,7 @@
 print(type(2.3))
 print(type(100))
 print(type('abcd'))
+
 a = 5.7
 print(type(a))
 print(type(True))

@@ -3,45 +3,50 @@ layout: module
 title: Variables & Functions
 type: lecture
 num: 3
-draft: 1
-quiz_url: https://canvas.northwestern.edu/courses/149580/quizzes/159822
+draft: 0
 description:
     - Variables...what are they good for?
     - Using built-in Functions
 due_date: 2022-01-10
 slides:
-  - url: https://docs.google.com/presentation/d/151qAFAoG50CAQI7he1S4H63Nte8GDkmh6kkJot8-kTM/edit?usp=sharing
-    title: "Lists & Tuples"
-  - url: https://docs.google.com/presentation/d/1v4m7-XXEQmS0L_6tN-7ZH9Ggoxjq3pOb17h6MEPsKGo/edit?usp=sharing
+  - url: https://docs.google.com/presentation/d/1VEm7j3xCIXja4IraBCoTvVibk0vg3EZWZWfKYxRPykA/edit?usp=sharing
     title: Live Lecture Activities
 videos:
-  - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b052eb43-e988-4732-8651-adab0002c01c
-    title: "Lists & Tuples"
-    duration: "09:42"
-  - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4b59d3cc-dc30-4c3b-9445-adb200f764f9
-    title: "Practice working with lists and tuples"
-    duration: "48:20"
+  - url:
+    title: "Live Lecture (Zoom Recording)"
+    duration:
     live: 1
 
 
 readings:
-  - title: "Ch9: Lists"
-    author: "Severance"
-    url: https://www.py4e.com/html3/08-lists
-    video_url: https://www.py4e.com/lessons/lists
-  - title: "Ch10: Tuples"
-    author: "Severance"
-    url: https://www.py4e.com/html3/10-tuples
-    video_url: https://www.py4e.com/lessons/tuples
+  - title: "Ch1: Intro to Computing"
+    author: "Charles Severance"
+    url: https://www.py4e.com/html3/01-intro
+    video_url: https://www.py4e.com/lessons/intro
+    source: "Python for Everybody"
+  - title: "Ch2: Variables"
+    author: "Charles Severance"
+    url: https://www.py4e.com/html3/02-variables
+    source: "Python for Everybody"
 
-exercise_url: "lecture04.zip"
+exercise_url: "lecture03.zip"
 ---
-In this lesson, we are going to take a look at two new data types -- lists and tuples -- which are in the "sequence" family. These data structures allow us to group collections of data together conveniently.
+<img class="module-image" src="/assets/images/lectures/lecture_02_blocks.jpg" />Python (and all programming languages) are made up of very small "words" (like nouns and verbs) that can be composed into meaningful "sentences" (i.e. code blocks that do something useful). Today we are going to review some more of the basic building blocks of code, including data types, operators, and variables.<br><br>In addition to the lecture, there are also some sample python files that you will need to download and run (using IDLE). If, for any reason, you are having trouble installing IDLE (instructions can be found in the first part of [homework 1](../assignments/hw1)), reach out to your TA or sign-up for an office hours session.
 
-{:.blockquote-no-margin}
-> ## Note: References Have Changed Slightly
-> In the pre-recorded video, some of the slides / file references have changed from last quarter, but the content is the same.
+Please keep your files organized (as explained in hw01). I recommend a folder structure like this:
 
-During lecture, we will be going through several different examples of how you might want to use a list / tuple.
-
-<!-- TODO: add a few slides that go over some of the key functions of a tuple -->
+```
+cs110
+    |-- homework
+    │   |-- hw01
+    │   |-- hw02
+    |   ...
+    |-- lectures
+    │   -- lecture01
+    │   -- lecture02
+    │   ...
+    |-- tutorials
+        |-- tutorial01
+        |-- tutorial02
+        ...
+```

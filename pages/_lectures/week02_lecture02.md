@@ -8,6 +8,7 @@ draft: 1
 description:
     - List, tuples, and other strange data types
 due_date: 2022-01-12
+quiz_url: https://canvas.northwestern.edu/courses/149580/quizzes/159822
 slides:
   - url: https://docs.google.com/presentation/d/12Srk8yvpsYQQlB_U_TEaCCcHb9zqMVmmoz4KRLUbLEQ/edit?usp=sharing
     title: "Intro to Functions"

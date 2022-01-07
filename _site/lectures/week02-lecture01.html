@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Intro to Lists & Tuples</title>
+    <title>Variables & Functions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="/assets/main.css">
     
@@ -35,7 +35,6 @@
         <main>
             <aside>
                 <ol class="side-menu">
-  <li><a href="#note-references-have-changed-slightly">Note: References Have Changed Slightly</a></li>
   <li><a href="#do-now">Today’s Activities</a></li>
 </ol>
 
@@ -44,19 +43,27 @@
                 
 
     
-        <h1><a href="../#l3">Lessons</a> > 3. Intro to Lists & Tuples</h1>
+        <h1><a href="../#l3">Lessons</a> > 3. Variables & Functions</h1>
     
  
-                <p>In this lesson, we are going to take a look at two new data types – lists and tuples – which are in the “sequence” family. These data structures allow us to group collections of data together conveniently.</p>
+                <p><img class="module-image" src="/assets/images/lectures/lecture_02_blocks.jpg" />Python (and all programming languages) are made up of very small “words” (like nouns and verbs) that can be composed into meaningful “sentences” (i.e. code blocks that do something useful). Today we are going to review some more of the basic building blocks of code, including data types, operators, and variables.<br /><br />In addition to the lecture, there are also some sample python files that you will need to download and run (using IDLE). If, for any reason, you are having trouble installing IDLE (instructions can be found in the first part of <a href="../assignments/hw1">homework 1</a>), reach out to your TA or sign-up for an office hours session.</p>
 
-<blockquote class="blockquote-no-margin">
-  <h2 id="note-references-have-changed-slightly">Note: References Have Changed Slightly</h2>
-  <p>In the pre-recorded video, some of the slides / file references have changed from last quarter, but the content is the same.</p>
-</blockquote>
+<p>Please keep your files organized (as explained in hw01). I recommend a folder structure like this:</p>
 
-<p>During lecture, we will be going through several different examples of how you might want to use a list / tuple.</p>
-
-<!-- TODO: add a few slides that go over some of the key functions of a tuple -->
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cs110
+    |-- homework
+    │   |-- hw01
+    │   |-- hw02
+    |   ...
+    |-- lectures
+    │   -- lecture01
+    │   -- lecture02
+    │   ...
+    |-- tutorials
+        |-- tutorial01
+        |-- tutorial02
+        ...
+</code></pre></div></div>
 
 
 <h2 id="do-now">Today's Activities</h2>
@@ -65,7 +72,7 @@
 
 
     <h3 id="code">1. Download the Exercise Files</h3> 
-    <a class="nu-button" href="/course-files/lectures/lecture04.zip" target="_blank">
+    <a class="nu-button" href="/course-files/lectures/lecture03.zip" target="_blank">
         Exercise Files <i class="fas fa-download"></i>
     </a>
     
@@ -77,11 +84,7 @@
     <ol>
     
         <li>
-            <a href="https://docs.google.com/presentation/d/151qAFAoG50CAQI7he1S4H63Nte8GDkmh6kkJot8-kTM/edit?usp=sharing" target="_blank">Lists & Tuples</a>
-        </li>
-    
-        <li>
-            <a href="https://docs.google.com/presentation/d/1v4m7-XXEQmS0L_6tN-7ZH9Ggoxjq3pOb17h6MEPsKGo/edit?usp=sharing" target="_blank">Live Lecture Activities</a>
+            <a href="https://docs.google.com/presentation/d/1VEm7j3xCIXja4IraBCoTvVibk0vg3EZWZWfKYxRPykA/edit?usp=sharing" target="_blank">Live Lecture Activities</a>
         </li>
     
     </ol>
@@ -110,41 +113,18 @@
             
             <tr>
                 <td>
-                    <a class="recorded" href="https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b052eb43-e988-4732-8651-adab0002c01c" target="_blank">
+                    <a class="live" href="" target="_blank">
                         Video 1 <i class="fa fa-link"></i>
                     </a>
                 </td>
                 <td>
-                    Lists & Tuples
-                </td>
-                <td>
-                    pre-recorded
-                </td>
-                <td>
-                    09:42
-                </td>
-            </tr>
-            
-        
-            
-            
-            
-            
-            
-            <tr>
-                <td>
-                    <a class="live" href="https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4b59d3cc-dc30-4c3b-9445-adb200f764f9" target="_blank">
-                        Video 2 <i class="fa fa-link"></i>
-                    </a>
-                </td>
-                <td>
-                    Practice working with lists and tuples
+                    Live Lecture (Zoom Recording)
                 </td>
                 <td>
                     lecture
                 </td>
                 <td>
-                    48:20
+                    
                 </td>
             </tr>
             
@@ -165,19 +145,21 @@
     
         <li>
     
-        Severance
+        Charles Severance
     
     
     
         
-            Ch9: Lists.
+            Ch1: Intro to Computing.
         
     
+    
+        <em>Python for Everybody</em>
     
     
         <br>
-        <a href="https://www.py4e.com/html3/08-lists" target="_blank">reading</a> &bull;
-        <a href="https://www.py4e.com/lessons/lists" target="_blank">video</a> 
+        <a href="https://www.py4e.com/html3/01-intro" target="_blank">reading</a> &bull;
+        <a href="https://www.py4e.com/lessons/intro" target="_blank">video</a> 
     
     
 </li> 
@@ -187,19 +169,17 @@
     
         <li>
     
-        Severance
+        Charles Severance
     
     
     
         
-            Ch10: Tuples.
+            <a href="https://www.py4e.com/html3/02-variables" target="_blank">Ch2: Variables</a>.
         
     
     
+        <em>Python for Everybody</em>
     
-        <br>
-        <a href="https://www.py4e.com/html3/10-tuples" target="_blank">reading</a> &bull;
-        <a href="https://www.py4e.com/lessons/tuples" target="_blank">video</a> 
     
     
 </li> 
@@ -210,15 +190,6 @@
     
 
 
-
-    <h3 id="quiz">5. Take the Practice (Ungraded) Quiz</h3>
-    <p>
-        Note: The quiz is to help you test your own understanding 
-        of the concepts. It is not graded, and is designed to help you to see 
-        what you already know and what you should review / ask about.<br>
-        <a href="https://canvas.northwestern.edu/courses/149580/quizzes/159822" target="_blanl">https://canvas.northwestern.edu/courses/149580/quizzes/159822</a>
-    </p>
-    
 
 
 
