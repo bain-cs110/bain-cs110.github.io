@@ -8,7 +8,7 @@ description:
   - Programs, variables, operators, and data types
 due_date: 2022-01-07
 slides:
-  - url: https://docs.google.com/presentation/d/1XoHhmxBghe_x6JFufFkdXy7CvTFIivjOp-d9FoEMGZ8/edit?usp=sharing
+  - url: https://docs.google.com/presentation/d/1Zm6VoZOKXZ4uVLgT0cfg-2pNrPgLvWdG2UtCEAm6JcU/edit?usp=sharing
     title: Live Lecture Activities
 videos:
    - url:
