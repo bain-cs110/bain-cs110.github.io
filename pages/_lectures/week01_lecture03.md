@@ -22,6 +22,10 @@ readings:
      url: https://www.py4e.com/html3/01-intro
      video_url: https://www.py4e.com/lessons/intro
      source: "Python for Everybody"
+   - title: "Ch2: Variables"
+     author: "Charles Severance"
+     url: https://www.py4e.com/html3/02-variables
+     source: "Python for Everybody"
 
 extras:
   - title: "Tutorial Signups"
@@ -29,5 +33,4 @@ extras:
     url: "https://docs.google.com/spreadsheets/d/1oyDa2EXcdexd47Pv8DvzOU9A9-dQOUbdyBSjFUMFCPE/edit?usp=sharing"
     external: 1
 ---
-<img style="max-width: 300px; float: left; margin-right: 15px;" src="/assets/images/lectures/pbj.png"/>
-Today we'll finish up our discussion of what Python actually is (an interpreted programming language). We will also sign up for Tutorial sessions in class, review the course survey results, and then you'll meet your tutorial members for the first time and together, you'll write your first program!
+Today we'll finish up our discussion of what Python actually is (an interpreted programming language). We will also sign up for Tutorial sessions in class, review the course survey results, and together we'll write our first program of the class!
