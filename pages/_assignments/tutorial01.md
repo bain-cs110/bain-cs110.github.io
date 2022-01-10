@@ -41,7 +41,7 @@ When you're done, open IDLE and create a new python file (go to File menu > "New
 
 You will edit this newly created `main.py` file in order to complete the following:
 
-1. Write a program that accepts an integer (n), computes the value of n + n*n + n*n*n, and prints that value result to the screen.
+1. Write a program that accepts an integer (n), computes the value of n + (n\*n) + (n\*n\*n), and prints that value result to the screen.
 2. Write a program that creates some ascii art! To do this, pick and animal to draw from [this website](https://www.asciiart.eu/animals/) and implement it using the print statement.
 
 > ### Some Pro Tips
