@@ -8,7 +8,6 @@ draft: 0
 description:
     - List, tuples, and other strange data types
 due_date: 2022-01-12
-quiz_url: https://canvas.northwestern.edu/courses/149580/quizzes/159822
 slides:
   - url: https://docs.google.com/presentation/d/1sN6k0JJgEAn0X9RPPPeLCv__NiqRlm-z-CLdPfsC6BU/edit?usp=sharing
     title: Live Lecture Activities
