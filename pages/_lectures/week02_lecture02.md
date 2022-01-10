@@ -4,7 +4,7 @@ title: |
     Lists & Tuples
 type: lecture
 num: 4
-draft: 1
+draft: 0
 description:
     - List, tuples, and other strange data types
 due_date: 2022-01-12
