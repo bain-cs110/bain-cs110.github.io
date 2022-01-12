@@ -12,9 +12,9 @@ slides:
   - url: https://docs.google.com/presentation/d/1sN6k0JJgEAn0X9RPPPeLCv__NiqRlm-z-CLdPfsC6BU/edit?usp=sharing
     title: Live Lecture Activities
 videos:
-  - url:
+  - url: https://northwestern.zoom.us/rec/share/khfGA3NFcTe2CIVaXVJkXfUt7jZKCzkPo5NRQsTF60717Wt3ruydA-ma3pqr8YeR.FJ554fc3dx0M75hN?startTime=1641999172000
     title: "Live Lecture"
-    duration: "not yet uploaded"
+    duration: "50:00"
     live: 1
 
 readings:
