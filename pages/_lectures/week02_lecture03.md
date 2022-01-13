@@ -10,8 +10,8 @@ description:
   - Defining versus invoking functions
 due_date: 2022-01-14
 slides:
-  - url:
-    title: Live Lecture Activities (not yet live)
+  - url: https://docs.google.com/presentation/d/1Gxvu5k6vN_Gs6O2oPNWG6YCvEXHzWGLi7-zWzZAdC3E/edit?usp=sharing
+    title: Lecture Slides
 videos:
   - url:
     title: "Live Lecture"
