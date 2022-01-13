@@ -4,22 +4,28 @@ title: Practice with Functions
 type: tutorial
 abbreviation: Tutorial 2
 draft: 0
-points: 3
+points: 0
 num: 2
-description: 
+description:
     - Practice creating custom functions
     - Intro to Tkinter
-due_date: 2021-10-06
+due_date: 2022-01-19
 ---
 
 <a class="nu-button" href="/course-files/tutorials/tutorial02.zip" target="_blank">
     Tutorial Starter Files <i class="fas fa-download"></i>
-</a> 
-
-This tutorial is based on content that is reviewed in Lessons 1-7, and is intended to prepare you for [HW2](../assignments/hw2). Please download the starter files and complete the instructions outlined below. PLEASE ASK LOTS OF QUESTIONS in your tutorial section. If you've never done this before, there are a lot of little typing / logic / conceptual mistakes that **everyone** makes. Tutorial is your time to allow yourself to make all of those mistakes so that you can learn from them. 
+</a>
 
 {: .blockquote-no-margin}
-> **LEARNING OBJECTIVES:** 
+> **MLK Day:**
+> Due to the January 17 holiday, this tutorial is optional (it's worth 0 points) however we encourage everyone to still complete the tutorial as it helps you prepare for HW 2. Jan 14th after class we'll post a video here that walks you through the steps of the tutorial as a PM might. <em>Please</em> try your best to complete the tutorial BEFORE watching the video using the techniques we learned in class on Friday (Jan 14). If you do submit your file on Canvas, your PM will give you comments on your code.
+
+This tutorial is a warmup for [HW2](../assignments/hw2). Please download the starter files and complete the instructions outlined below.
+
+If you've never done this before, there are a lot of little typing / logic / conceptual mistakes that **everyone** makes. Please go to Office Hours or post on Campuswire questions that you have about defining these functions. Additionally, you should feel free to ask questions during class as well.
+
+{: .blockquote-no-margin}
+> **LEARNING OBJECTIVES:**
 > In order to prepare you for this week's homework, we wanted to use this tutorial session to go over a couple of important logistical and conceptual ideas.
 >
 > 1. Making sure that TKinter is successfully running on your machine
@@ -28,7 +34,7 @@ This tutorial is based on content that is reviewed in Lessons 1-7, and is intend
 > 1. Translating specifications into smaller steps that a computer can perform
 
 ## Required: Square Challenge
-Please open `square_challenge.py` in IDLE, which is located in the `tutorial01` folder. Take a look at it and then run it. You should see something like this:
+Please open `square_challenge.py` in IDLE, which is located in the `tutorial02` folder. Take a look at it and then run it. You should see something like this:
 
 <img class="small frame" src="/assets/images/tutorial01/before1.png" />
 
@@ -73,8 +79,8 @@ make_square(canvas, (200, 50), 50, fill_color='#8FCB9B')
 Now, alter the code above to make your own drawing (anything that you can compose with squares). Feel free to alter the colors, positions, and sizes of your squares. Here is a <a href="https://coolors.co/app" target="_blank">link to a color generator</a> (to browse different hexidecimal color codes, press the spacebar).
 
 
-## More Practice (If Time): Triangle Challenge
-Please open `triangle_challenge.py` in IDLE (also located in the `tutorial01` folder). Take a look at it and then run it. You should see something like this:
+## More Practice (if you need it): Triangle Challenge
+Please open `triangle_challenge.py` in IDLE (also located in the `tutorial02` folder). Take a look at it and then run it. You should see something like this:
 
 <img class="medium frame" src="/assets/images/tutorial01/before2.png" />
 
@@ -88,7 +94,7 @@ In the `triangle_challenge.py` file, create a function called `make_triangle_lef
 
 
 ### B. Create a "make_triangle_right" function
-Below the make_triangle_left function that you just made, create a function called `make_triangle_right` that draws a 45-45-90-degree right triangle, where the right angle is positioned at the bottom-right corner. 
+Below the make_triangle_left function that you just made, create a function called `make_triangle_right` that draws a 45-45-90-degree right triangle, where the right angle is positioned at the bottom-right corner.
 
 It accepts the following arguments:
 

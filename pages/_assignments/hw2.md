@@ -3,21 +3,20 @@ layout: assignment-two-column
 title: Intro to Tkinter
 abbreviation: HW2
 type: homework
-due_date: 2021-10-08
-ordering: 1 
+due_date: 2022-01-21
+ordering: 1
 points: 8
 draft: 0
 ---
 
 <a class="nu-button" href="/course-files/homework/hw02.zip" target="_blank">
     Homework Starter Files <i class="fas fa-download"></i>
-</a> 
+</a>
 
 {: .blockquote-no-margin}
-> **LEARNING OBJECTIVES:** 
+> **LEARNING OBJECTIVES:**
 > 1. Practice working with Python modules, including reading documentation
 > 1. Practice writing your own functions
-
 
 In this assignment, you are going to get some practice writing functions using tkinter that will ultimately enable you to create more complex shapes (like animals, trees, plants, etc.). To do this, we will be using a built-in python module: tkinter. Tkinter provides support for creating custom graphical user interfaces (GUIs). I created the buddy to the right using 5 circles, one polygon, and two lines (8 shapes total) in tkinter. Please download the homework starter files (above).
 
@@ -100,7 +99,7 @@ The job of the **make_bullseye** function is to draw a bullseye of 4 concentric 
 1. **radius (int)** : an int that specifies the radius of the circle.
 1. **distance (int)** : an int that represents how far apart each circle should be drawn.
 
-**Your job**: Your job is to use the make_circle function that you just created to draw a bullseye (with 4 concentric circles of different colors — you choose the colors). 
+**Your job**: Your job is to use the make_circle function that you just created to draw a bullseye (with 4 concentric circles of different colors — you choose the colors).
 
 **HINT**: you'll have to draw the biggest circle first, or else your big circle will overwrite (occlue) the smaller circles.
 

@@ -66,9 +66,9 @@ print(stickem_example_2)
 # ## Example 6: You can sort a list
 print('\n\nsorting...')
 list_of_strings.sort()  # sorts in place, alphabetically (mutates the list)
-print(list_of_strings)  
+print(list_of_strings)
 list_of_strings.sort(reverse=True)  # reverse sorts in place, alphabetically
-print(list_of_strings)  
+print(list_of_strings)
 # ## End Example 6
 
 
@@ -76,9 +76,9 @@ print(list_of_strings)
 
 # ## Example 7: You can add data to a list:
 print('\n\nappending...')
-print(list_of_strings)  
+print(list_of_strings)
 list_of_strings.append('rhino')  # append adds data to the end of the list
-print(list_of_strings)  
+print(list_of_strings)
 list_of_strings.append('giraffe')
 print(list_of_strings)
 # ## End Example 7
@@ -87,9 +87,9 @@ print(list_of_strings)
 
 # ## Example 8: You can remove an item from a list using its index:
 print('\n\nremoving...')
-print(list_of_strings)  
+print(list_of_strings)
 list_of_strings.pop()  # pop removes data from the end of the list
-print(list_of_strings)  
+print(list_of_strings)
 list_of_strings.pop(2) # removes the second item from the list
 print(list_of_strings)
 # ## End Example 8
@@ -100,6 +100,6 @@ print(list_of_strings)
 print('\n\nupdating data in a list...')
 list_of_strings = ['freshman', 'sophmore', 'junior', 'senior']
 print(list_of_strings)
-list_of_strings[0] = 'freshling'
+list_of_strings[0] = 'first year'
 print(list_of_strings)
 # ## End Example 9
