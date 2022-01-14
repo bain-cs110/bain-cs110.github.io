@@ -13,9 +13,9 @@ slides:
   - url: https://docs.google.com/presentation/d/1Gxvu5k6vN_Gs6O2oPNWG6YCvEXHzWGLi7-zWzZAdC3E/edit?usp=sharing
     title: Lecture Slides
 videos:
-  - url:
+  - url: https://northwestern.zoom.us/rec/share/Q3Iv0FuHJOeU6FlE4TXHv2Z6B5rnUTkHrgdObZLd21IUKZRQlnc4VAv-YEycg_Wq.6eZ84N2pvfYxlT0U?startTime=1642172192000
     title: "Live Lecture"
-    duration: "uploaded after class"
+    duration: "50:00"
     live: 1
 
 exercise_url: "lecture05.zip"

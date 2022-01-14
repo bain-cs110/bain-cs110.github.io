@@ -18,7 +18,7 @@ due_date: 2022-01-19
 
 {: .blockquote-no-margin}
 > **MLK Day:**
-> Due to the January 17 holiday, this tutorial is optional (it's worth 0 points) however we encourage everyone to still complete the tutorial as it helps you prepare for HW 2. Jan 14th after class we'll post a video here that walks you through the steps of the tutorial as a PM might. <em>Please</em> try your best to complete the tutorial BEFORE watching the video using the techniques we learned in class on Friday (Jan 14). If you do submit your file on Canvas, your PM will give you comments on your code.
+> Due to the January 17 holiday, this tutorial is optional (it's worth 0 points) however we encourage everyone to still complete the tutorial as it helps you prepare for HW 2. Jan 14th after class we'll post a video here that walks you through the steps of the tutorial as a PM might. <em>Please</em> try your best to complete the tutorial as you are watching the video rather than just watching passively. If you do submit your file on Canvas, your PM will give you comments on your code.
 
 This tutorial is a warmup for [HW2](../assignments/hw2). Please download the starter files and complete the instructions outlined below.
 
