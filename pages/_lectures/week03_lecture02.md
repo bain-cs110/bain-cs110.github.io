@@ -1,22 +1,22 @@
 ---
 layout: module
-title: "Creating Your Own Functions: Part 2"
+title: "Creating Your Own Functions"
 type: lecture
-draft: 1
+draft: 0
 num: 6
 description:
-  - More function practice
+  - Exploring and defining functions
 due_date: 2022-01-19
 slides:
 # LINK HAS BEEN UPDATED BUT NEEDS WORK
-  - url: https://docs.google.com/presentation/d/1yuP9Uj0VnkFk4Obqd-dQ54jmO293Lt7QBvUdg7T76Ek/edit?usp=sharing
-    title: "Supplementary Slides for Live Lecture"
+  - url:
+    title: "Supplementary Slides for Live Lecture (not yet live)"
 videos:
-  - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=166f8138-e1ed-4b61-b995-adb900f73b3f
-    title: "Practice writing functions (part 2)"
-    duration: "47:29"
+  - url:
+    title: "Live Lecture"
+    duration: "(posted after class)"
     live: 1
-exercise_url: "lecture07.zip"
+exercise_url: "lecture06.zip"
 ---
 
-In this lecture, we will be continuing our exploration of functions.
+In this lecture, we will be continuing our exploration of functions, namely learning to write our own!
