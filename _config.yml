@@ -34,6 +34,7 @@ theme: minima
 plugins:
   - jekyll-feed
 exclude:
+  - course-files/solutions
   - _lectures/draft
   - _assignments/draft
   - course-files/administrative

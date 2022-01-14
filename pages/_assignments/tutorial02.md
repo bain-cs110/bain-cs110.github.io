@@ -10,6 +10,12 @@ description:
     - Practice creating custom functions
     - Intro to Tkinter
 due_date: 2022-01-19
+videos:
+  - url: https://northwestern.zoom.us/rec/share/BAq_GHy1BvXSuWDszPI434i3bxXPCM33AOzRGMBL_WTJncA7fn-WYGJVaqtfe-yd.rAWN9q7UZFyTXroA
+    title: "Video Walkthrough"
+    duration: "5 segments"
+    live: 0
+
 ---
 
 <a class="nu-button" href="/course-files/tutorials/tutorial02.zip" target="_blank">
@@ -18,7 +24,13 @@ due_date: 2022-01-19
 
 {: .blockquote-no-margin}
 > **MLK Day:**
-> Due to the January 17 holiday, this tutorial is optional (it's worth 0 points) however we encourage everyone to still complete the tutorial as it helps you prepare for HW 2. Jan 14th after class we'll post a video here that walks you through the steps of the tutorial as a PM might. <em>Please</em> try your best to complete the tutorial as you are watching the video rather than just watching passively. If you do submit your file on Canvas, your PM will give you comments on your code.
+> Due to the January 17 holiday, this tutorial is optional (it's worth 0 points) however we encourage everyone to still complete the tutorial as it helps you prepare for HW 2. <em>Please</em> try your best to complete the tutorial as you are watching the video rather than just watching passively. If you do submit your file on Canvas, your PM will give you comments on your code.
+>
+> <br>
+> <a href="https://northwestern.zoom.us/rec/share/BAq_GHy1BvXSuWDszPI434i3bxXPCM33AOzRGMBL_WTJncA7fn-WYGJVaqtfe-yd.rAWN9q7UZFyTXroA">Link to Video Tutorial</a>.
+> <br>
+> <br>
+> Note, the video walkthrough is in 5 segments: Reviewing Functions, Defining Functions, Examples of Function Definitions, Writing our Own Functions, Tutorial 2 Exercise. Feel free to FFwd or skip through segments as you see fit. Tutorial solutions also are available on Canvas under the Files menu.
 
 This tutorial is a warmup for [HW2](../assignments/hw2). Please download the starter files and complete the instructions outlined below.
 
