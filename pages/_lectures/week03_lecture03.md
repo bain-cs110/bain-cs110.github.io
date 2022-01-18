@@ -5,7 +5,7 @@ type: lecture
 num: 7
 draft: 1
 due_date: 2022-01-21
-quiz_url: https://canvas.northwestern.edu/courses/149580/quizzes/159821
+quiz_url: https://canvas.northwestern.edu/courses/156943/quizzes/168354
 description:
     - Creating modules
     - Global and local variables
@@ -28,7 +28,7 @@ videos:
      duration: "49:18"
      live: 1
 
-exercise_url: "lecture08.zip"
+exercise_url: "lecture07.zip"
 readings:
   - title: "Ch12: Modules"
     author: "Heinold"

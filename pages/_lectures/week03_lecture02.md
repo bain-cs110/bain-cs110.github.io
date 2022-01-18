@@ -7,11 +7,12 @@ num: 6
 description:
   - Exploring and defining functions
 due_date: 2022-01-19
+quiz_url: https://canvas.northwestern.edu/courses/156943/quizzes/168340
 slides:
   - url: https://docs.google.com/presentation/d/1gcJozuGIwQnQqAoxLh8cvM_R9QwI4jH_KQjzrat2Itg/edit?usp=sharing
     title: "Creating your Own Functions + Tutorial 02"
-  - url:
-    title: "Supplementary Slides for Live Lecture (not yet live)"
+  - url: https://docs.google.com/presentation/d/1caorW126_b6gQNAaPNPcwaKtYNuZhXbyedf3v9ktWlc/edit?usp=sharing
+    title: "Supplementary Slides for Live Lecture"
 
 videos:
   - url: https://northwestern.zoom.us/rec/share/JImqtoa_na1aP88ASmaj-uyFGQm0dyUGEiQ3BCUT62IUp1yRGPuGZwM5llTBA8Ob.EJpTY5ZyuptJLspQ?startTime=1642181845000

@@ -4,20 +4,20 @@ title: |
     Quiz Review: Expressions
 type: lecture
 draft: 1
-num: 10
+num: 9
 description:
   - Operators & Data Types
   - Functions
   - Variables & Variable Scope
   - Lists & Tuples
   - Modules
-due_date: 2021-10-13
+due_date: 2022-01-26
 slides:
    - title: "Google Doc from Today"
      url: https://docs.google.com/document/d/1Htmc4lcdBydk270CZagDblVVeyXTNc51C9oRKpcXzGE/edit#
 videos:
   - title: "Review session"
-    url: https://northwestern.zoom.us/rec/share/j1tSTfNVmoCNebTYUmA29PAZxSOmhyqTfJqVXXqASLng5PLhgoJwYv0jKXnzADW8.0HnNvNx1Cmdc5O5P
+    url:
     live: 1
     duration: "1:28:20"
 ---
@@ -32,7 +32,7 @@ first_names = ['Kim', 'Brenda', 'Karlo']
 last_names = ['Jones', 'Jauregui', 'Imper']
 
 # Write a program that combines the two lists by creating a third list,
-# where each entry is the full name of the person. You can assume that 
+# where each entry is the full name of the person. You can assume that
 # (1) first names and last names of the same person are located in the same slot of
 # their respective lists (e.g. Kim Jones, Brenda Jauregui, Karlo Imper), and
 # (2) that the lists always have three values in them.

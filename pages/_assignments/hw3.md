@@ -3,7 +3,7 @@ layout: assignment-two-column
 title: Make a Creature
 abbreviation: HW3
 type: homework
-due_date: 2021-10-14
+due_date: 2022-01-27
 ordering: 3
 points: 8
 draft: 0
@@ -11,9 +11,9 @@ draft: 0
 
 <a class="nu-button" href="/course-files/homework/hw03.zip" target="_blank">
     Homework Starter Files <i class="fas fa-download"></i>
-</a> 
+</a>
 
-> **LEARNING OBJECTIVES:** 
+> **LEARNING OBJECTIVES:**
 > 1. More practice working with built-in functions
 > 1. Practice writing your own functions
 
@@ -29,7 +29,7 @@ On paper, sketch out at least 3 VERY SIMPLE creature ideas (shoot for using betw
 * <a href="https://goo.gl/hKewyL" target="_blank">https://goo.gl/hKewyL</a>
 
 Feel free to post simple creature drawing ideas on the course Piazza under hw3.
-From your 3 sketched ideas, select the one that you would like to use for the assignment and draw the creature bigger on a different piece of paper — ideally graph paper — and label the points that will help you to program your creature. 
+From your 3 sketched ideas, select the one that you would like to use for the assignment and draw the creature bigger on a different piece of paper — ideally graph paper — and label the points that will help you to program your creature.
 
 {: .blockquote-no-margin}
 > **AGAIN:** Making a simple creature (e.g using 4-8 shapes) is totally fine. You don’t need to get too detailed unless you want to! And you can always enhance your creature at a later point in time.
@@ -37,7 +37,7 @@ From your 3 sketched ideas, select the one that you would like to use for the as
 ## Part 2: Implement your "make_creature" function
 Once you are satisfied with your animal concept, create a `make_creature` function, inside of `creature.py`, using any combination of shapes (points, lines, polygons, rectangles, ovals, etc.). Feel free to use the `make_circle` and `make_oval` functions that you already implemented in homework 2. Also feel free to use any of the code in `warm_up.py`. The spirit of this assignment is for you to get creative, given your developing knowledge of functions.
 
-**Tips**: 
+**Tips**:
 1. Keep it simple (we recommend anywhere between 4-8 shapes)! You can always add more functionality later.
 2. Make only one or two changes at a time and then test out those changes by running your `main.py` file. This makes things easier to debug.
 
@@ -52,7 +52,7 @@ Once your function successfully draws the creature that you sketched (in Part 2)
 When you're done, please add at least three calls to the `make_creature` function in your `main.py` file, using different arguments. For instance, after completing the assignment, I used my make_creature function in the following way to produce the drawing below (feel free to use whatever arguments you want for your positional / keyword parameters):
 
 ```python
-# with a function, you can make slightly different versions of your design, 
+# with a function, you can make slightly different versions of your design,
 # thereby reusing the same code over and over again
 
 make_creature(canvas, (92, 115), size=85, primary_color='#5e6976', secondary_color='#1b324d')
