@@ -6,7 +6,7 @@ type: homework
 due_date: 2022-01-27
 ordering: 3
 points: 8
-draft: 0
+draft: 1
 ---
 
 <a class="nu-button" href="/course-files/homework/hw03.zip" target="_blank">
