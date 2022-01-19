@@ -143,10 +143,11 @@ make_bullseye(canvas, (300, 400), 10, distance=5)
 make_bullseye(canvas, (400, 400), 20, distance=10)
 ```
 
-
-
 ## 3. What to Submit
 Please zip the entire `hw02` folder and name the zip file `hw02.zip`. We will only be grading your `main.py` file, but since there are dependencies, we would like you to submit all of the files together via a zip file.
+
+## Request an Extension
+If you need to request an extension on the assignment (must be 24 hours in advance) use the <a href="https://forms.gle/PobKBdUkTpPJ3GbZ8">Extension Request form</a>.
 
 ## 4. Warning for Mac users: The TKinter bug
 {% capture my_include %}{% include tkinter_bug_mac.md %}{% endcapture %}
