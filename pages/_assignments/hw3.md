@@ -28,7 +28,7 @@ On paper, sketch out at least 3 VERY SIMPLE creature ideas (shoot for using betw
 * <a href="https://www.pinterest.com/pin/118782508901992203/" target="_blank">https://www.pinterest.com/pin/118782508901992203/</a>
 * <a href="https://goo.gl/hKewyL" target="_blank">https://goo.gl/hKewyL</a>
 
-Feel free to post simple creature drawing ideas on the course Piazza under hw3.
+Feel free to post simple creature drawing ideas on the course Campuswire under hw3.
 From your 3 sketched ideas, select the one that you would like to use for the assignment and draw the creature bigger on a different piece of paper — ideally graph paper — and label the points that will help you to program your creature.
 
 {: .blockquote-no-margin}
