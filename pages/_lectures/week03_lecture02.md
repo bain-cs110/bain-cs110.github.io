@@ -30,9 +30,9 @@ videos:
   - title: "Tutorial 2 Walkthrough"
     duration: "22:09"
     url: https://northwestern.zoom.us/rec/share/JImqtoa_na1aP88ASmaj-uyFGQm0dyUGEiQ3BCUT62IUp1yRGPuGZwM5llTBA8Ob.EJpTY5ZyuptJLspQ?startTime=1642184666000
-  - url:
+  - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7682f915-2057-4d8a-91cc-adf6016a9464
     title: "Live Lecture"
-    duration: "(posted after class)"
+    duration: "50:00"
     live: 1
 exercise_url: "lecture06.zip"
 ---
