@@ -6,7 +6,7 @@ type: homework
 due_date: 2022-01-27
 ordering: 3
 points: 8
-draft: 1
+draft: 0
 ---
 
 <a class="nu-button" href="/course-files/homework/hw03.zip" target="_blank">
@@ -78,3 +78,7 @@ When you're done, please create a zip file that includes the following files:
 1. Your helpers.py file
 1. Your creature.py file
 1. Your main.py file
+
+
+## Request an Extension
+If you need to request an extension on the assignment (must be 24 hours in advance) use the <a href="https://forms.gle/PobKBdUkTpPJ3GbZ8">Extension Request form</a>.

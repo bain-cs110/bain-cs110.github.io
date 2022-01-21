@@ -1,19 +1,27 @@
 ---
 layout: module
-title: Modules & Variable Scope (Continued)
+title: Review of Weeks 1 and 2
 type: lecture
+description:
+  - Operators & Data Types
+  - Lists & Tuples
+  - Functions
 num: 8
-draft: 1
+draft: 0
 due_date: 2022-01-24
 videos:
-  - title: "Demo: Modules & Variable Scope"
-    url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1467ae74-dbdf-46ba-81d3-adbe00f74f7c
+  - title: "Review of Weeks 1 and 2"
+    url:
     live: 1
-    duration: "47:26"
+    duration:
 slides:
-   - title: "Modules & Variable Scope"
-     url: https://docs.google.com/presentation/d/1Z1gCbHNKMKS_kSXetqpe2tTntR_MsdDmXJsqcg-7oEg/edit?usp=sharing
+   - title: "Not Yet Posted"
+     url:
 
 ---
 
-Today we're going to spend some time reviewing modules, which we haven't yet had time to talk about during lecture. No pre-recorded videos today!
+We're going to spend Monday reviewing content from Weeks 1 and 2. Make to checkout our study materials before class!
+
+## Study Materials
+* <a href="https://docs.google.com/document/d/17nc-9cYCRfjAPzvO81ZBqECWky7oQ-pyk5NLCWwjFLs/edit?usp=sharing" target="_blank">Study Guide</a>
+* Please do the <a href="https://canvas.northwestern.edu/courses/156943/quizzes" target="_blank">practice mini-quizzes</a>

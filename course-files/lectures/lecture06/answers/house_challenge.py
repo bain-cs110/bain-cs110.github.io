@@ -39,6 +39,7 @@ def make_house(canvas: Canvas, bottom_left: tuple, height: int, fill: str='#84A9
 
 
 make_house(canvas, (400, 400), 100, fill="green")
+
 make_house(canvas, (200, 400), 50, fill="yellow")
 
 ########################## YOUR CODE ABOVE THIS LINE ##############################

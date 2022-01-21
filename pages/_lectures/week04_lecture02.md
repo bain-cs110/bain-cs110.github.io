@@ -1,25 +1,23 @@
 ---
 layout: module
 title: |
-    Quiz Review: Expressions
+    Review: Week 3
 type: lecture
-draft: 1
+draft: 0
 num: 9
 description:
-  - Operators & Data Types
-  - Functions
+  - Defining Functions
   - Variables & Variable Scope
-  - Lists & Tuples
   - Modules
 due_date: 2022-01-26
 slides:
-   - title: "Google Doc from Today"
-     url: https://docs.google.com/document/d/1Htmc4lcdBydk270CZagDblVVeyXTNc51C9oRKpcXzGE/edit#
+   - title: "Not Yet Posted"
+     url:
 videos:
-  - title: "Review session"
+  - title: "Live Lecture"
     url:
     live: 1
-    duration: "1:28:20"
+    duration: ""
 ---
 
 
