@@ -18,11 +18,11 @@ due_date: 2022-01-28
 
 ## Full-Length Practice Quizzes
 * We have published 3 practice quizzes
-    * <a href="https://canvas.northwestern.edu/courses/156943/quizzes/168350" target="_blank">Practice Quiz 01a</a> (requires the Lockdown Browser) - NOT CURRENTLY ENABLED
+    * <a href="https://canvas.northwestern.edu/courses/156943/quizzes/168350" target="_blank">Practice Quiz 01a</a> (requires the Lockdown Browser)
     * <a href="https://canvas.northwestern.edu/courses/156943/quizzes/168339" target="_blank">Practice Quiz 01b</a>
     * <a href="https://canvas.northwestern.edu/courses/156943/quizzes/168342" target="_blank">Practice Quiz 01c</a>
 * A note on using the [Lockdown Browser](../resources/lockdown-browser):
-    * Practice Quiz 01a will require using the Lockdown Browser (LDB). Please practice taking the quiz with the LDB at least 1 day before the quiz to work out any bugs. This will go live by Monday.
+    * Practice Quiz 01a will require using the Lockdown Browser (LDB). Please practice taking the quiz with the LDB at least 1 day before the quiz to work out any bugs.
     * Start practicing early. You can take each practice quiz as many times as you want.
 
 ## How to Take The Actual Quiz
