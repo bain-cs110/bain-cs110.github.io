@@ -71,7 +71,7 @@ A few things to pay attention to in this file:
 
 1. This program will always draw a Frank that is the same size and positioned in the exact same place.
 1. Each "pixel" is 25 units wide / tall
-1. If you were to draw a box around this particular Frank, the top_left coordinate would be positioned at `(0, 0)`, and the bottom_right coordinate would be positioned at `(225, 250)`.
+1. If you were to draw a box around this particular Frank, the top_left coordinate would be positioned at `(0, 0)`, and the bottom_right coordinate would be positioned at `(225, 275)`.
 
 ### Task 1: Manipulating Frank's body and pants color
 Try re-assigning a different color to the `body_color` variable, and running the program (note that Frank's body color changes). When you're done, please create another variable called `pants_color`, and edit the code so that the color of Frank's pants is determined by the value stored inside the `pants_color` variable.
