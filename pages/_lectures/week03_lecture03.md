@@ -15,8 +15,8 @@ slides:
     title: "Live Lecture Slides"
 videos:
    - title: "Function, Scope, and Modules (Live)"
-     url:
-     duration: "not yet posted"
+     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c527a764-4bf0-425f-a9d4-adf6016a947b
+     duration: "50:00"
      live: 1
 
 exercise_url: "lecture07.zip"
