@@ -122,7 +122,7 @@ The quizzes will be held roughly in Week 4, Week 8, and Week 10 of the course.
 ### Homework Grading
 Homework will be approximately weekly and is due at 11:59pm on the specified date. You will submit your homework assignments on Canvas.
 
-We will still accept late homework up to 48 hours after the original due date, but with a 2 point penalty (25%). For _homework assignments only_, you may request a waiver of this penalty (via a form provided on each assignment's description page on Canvas) subject to the following rules:
+We will still accept late homework up to 48 hours after the original due date, but with up to a 2 point penalty (25%). For _homework assignments only_, you may request a waiver of this penalty (via a form provided on each assignment's description page on Canvas) subject to the following rules:
 
 1. Requests *must* be made at least 24 hours in advance of the deadline of the assignment.
 2. You may not request extensions on consecutive assignments.
