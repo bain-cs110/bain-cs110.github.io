@@ -15,9 +15,9 @@ slides:
      url: https://docs.google.com/presentation/d/13M-Y1ZJpR_XlQZRC6Lu_gmOq_3vpqWpbyl5-ghlV-Ek/edit?usp=sharing
 videos:
   - title: "Live Lecture"
-    url:
+    url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ace9dca1-7723-4593-a547-adf6016a94a6
     live: 1
-    duration: ""
+    duration: "50:00"
 exercise_url: "lecture09.zip"
 
 ---
@@ -37,7 +37,7 @@ last_names = ['Jones', 'Jauregui', 'Imper']
 # (2) that the lists always have three values in them.
 ```
 
-<!-- ### Answer (One Approach)
+### Answer (Another Approach)
 
 ```python
 full_names = []
@@ -45,7 +45,7 @@ full_names.append(first_names[0] + ' ' + last_names[0])
 full_names.append(first_names[1] + ' ' + last_names[1])
 full_names.append(first_names[2] + ' ' + last_names[2])
 print(full_names)
-``` -->
+```
 
 ## Exercise 2
 Write a function that shifts a list of three coordinate pairs by some horizontal amount and some vertical amount. The function should return the new/updated list.
