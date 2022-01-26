@@ -63,7 +63,7 @@ print(shift_coordinates([(40, 40), (100, 100), (200, 200)]))
 # [(40, 40), (100, 100), (200, 200)]
 ```
 
-<!-- ### Answer (One Approach)
+### Answer (One Approach)
 ```python
 def shift_coordinates(my_list, x_units=0, y_units=0):
     return [
@@ -71,4 +71,4 @@ def shift_coordinates(my_list, x_units=0, y_units=0):
         (my_list[1][0] + x_units, my_list[1][1] + y_units),
         (my_list[2][0] + x_units, my_list[2][1] + y_units)
     ]
-``` -->
+```
