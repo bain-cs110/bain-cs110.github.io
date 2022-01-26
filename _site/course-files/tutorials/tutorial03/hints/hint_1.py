@@ -62,26 +62,15 @@ make_square(canvas, (5*pixel, 4*pixel), pixel, fill_color=body_color)
 make_square(canvas, (6*pixel, 4*pixel), pixel, fill_color=body_color)
 
 # row 6
-make_square(canvas, (1*pixel, 4*pixel), pixel, fill_color=body_color)
-make_square(canvas, (2*pixel, 4*pixel), pixel, fill_color='gray')
-make_square(canvas, (3*pixel, 4*pixel), pixel, fill_color='gray')
-make_square(canvas, (4*pixel, 4*pixel), pixel, fill_color='gray')
-make_square(canvas, (5*pixel, 4*pixel), pixel, fill_color='gray')
-make_square(canvas, (6*pixel, 4*pixel), pixel, fill_color='gray')
-make_square(canvas, (7*pixel, 4*pixel), pixel, fill_color=body_color)
+make_square(canvas, (1*pixel, 5*pixel), pixel, fill_color=body_color)
+make_square(canvas, (2*pixel, 5*pixel), pixel, fill_color='gray')
+make_square(canvas, (3*pixel, 5*pixel), pixel, fill_color='gray')
+make_square(canvas, (4*pixel, 5*pixel), pixel, fill_color='gray')
+make_square(canvas, (5*pixel, 5*pixel), pixel, fill_color='gray')
+make_square(canvas, (6*pixel, 5*pixel), pixel, fill_color='gray')
+make_square(canvas, (7*pixel, 5*pixel), pixel, fill_color=body_color)
 
 # row 7
-make_square(canvas, (0*pixel, 5*pixel), pixel, fill_color=body_color)
-make_square(canvas, (1*pixel, 5*pixel), pixel, fill_color=body_color)
-make_square(canvas, (2*pixel, 5*pixel), pixel, fill_color=body_color)
-make_square(canvas, (3*pixel, 5*pixel), pixel, fill_color=body_color)
-make_square(canvas, (4*pixel, 5*pixel), pixel, fill_color=body_color)
-make_square(canvas, (5*pixel, 5*pixel), pixel, fill_color=body_color)
-make_square(canvas, (6*pixel, 5*pixel), pixel, fill_color=body_color)
-make_square(canvas, (7*pixel, 5*pixel), pixel, fill_color=body_color)
-make_square(canvas, (8*pixel, 5*pixel), pixel, fill_color=body_color)
-
-# row 8
 make_square(canvas, (0*pixel, 6*pixel), pixel, fill_color=body_color)
 make_square(canvas, (1*pixel, 6*pixel), pixel, fill_color=body_color)
 make_square(canvas, (2*pixel, 6*pixel), pixel, fill_color=body_color)
@@ -92,25 +81,36 @@ make_square(canvas, (6*pixel, 6*pixel), pixel, fill_color=body_color)
 make_square(canvas, (7*pixel, 6*pixel), pixel, fill_color=body_color)
 make_square(canvas, (8*pixel, 6*pixel), pixel, fill_color=body_color)
 
-# row 9
-make_square(canvas, (2*pixel, 7*pixel), pixel, fill_color=pants_color)
-make_square(canvas, (3*pixel, 7*pixel), pixel, fill_color=pants_color)
-make_square(canvas, (4*pixel, 7*pixel), pixel, fill_color=pants_color)
-make_square(canvas, (5*pixel, 7*pixel), pixel, fill_color=pants_color)
-make_square(canvas, (6*pixel, 7*pixel), pixel, fill_color=pants_color)
+# row 8
+make_square(canvas, (0*pixel, 7*pixel), pixel, fill_color=body_color)
+make_square(canvas, (1*pixel, 7*pixel), pixel, fill_color=body_color)
+make_square(canvas, (2*pixel, 7*pixel), pixel, fill_color=body_color)
+make_square(canvas, (3*pixel, 7*pixel), pixel, fill_color=body_color)
+make_square(canvas, (4*pixel, 7*pixel), pixel, fill_color=body_color)
+make_square(canvas, (5*pixel, 7*pixel), pixel, fill_color=body_color)
+make_square(canvas, (6*pixel, 7*pixel), pixel, fill_color=body_color)
+make_square(canvas, (7*pixel, 7*pixel), pixel, fill_color=body_color)
+make_square(canvas, (8*pixel, 7*pixel), pixel, fill_color=body_color)
 
-# row 10
+# row 9
 make_square(canvas, (2*pixel, 8*pixel), pixel, fill_color=pants_color)
 make_square(canvas, (3*pixel, 8*pixel), pixel, fill_color=pants_color)
 make_square(canvas, (4*pixel, 8*pixel), pixel, fill_color=pants_color)
 make_square(canvas, (5*pixel, 8*pixel), pixel, fill_color=pants_color)
 make_square(canvas, (6*pixel, 8*pixel), pixel, fill_color=pants_color)
 
+# row 10
+make_square(canvas, (2*pixel, 9*pixel), pixel, fill_color=pants_color)
+make_square(canvas, (3*pixel, 9*pixel), pixel, fill_color=pants_color)
+make_square(canvas, (4*pixel, 9*pixel), pixel, fill_color=pants_color)
+make_square(canvas, (5*pixel, 9*pixel), pixel, fill_color=pants_color)
+make_square(canvas, (6*pixel, 9*pixel), pixel, fill_color=pants_color)
+
 # row 11
-make_square(canvas, (2*pixel, 9*pixel), pixel, fill_color=body_color)
-make_square(canvas, (3*pixel, 9*pixel), pixel, fill_color=body_color)
-make_square(canvas, (5*pixel, 9*pixel), pixel, fill_color=body_color)
-make_square(canvas, (6*pixel, 9*pixel), pixel, fill_color=body_color)
+make_square(canvas, (2*pixel, 10*pixel), pixel, fill_color=body_color)
+make_square(canvas, (3*pixel, 10*pixel), pixel, fill_color=body_color)
+make_square(canvas, (5*pixel, 10*pixel), pixel, fill_color=body_color)
+make_square(canvas, (6*pixel, 10*pixel), pixel, fill_color=body_color)
 
 
 
