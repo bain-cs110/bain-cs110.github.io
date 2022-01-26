@@ -11,15 +11,16 @@ description:
   - Modules
 due_date: 2022-01-26
 slides:
-   - title: "Not Yet Posted"
-     url:
+   - title: "Quiz 1 Review"
+     url: https://docs.google.com/presentation/d/13M-Y1ZJpR_XlQZRC6Lu_gmOq_3vpqWpbyl5-ghlV-Ek/edit?usp=sharing
 videos:
   - title: "Live Lecture"
     url:
     live: 1
     duration: ""
----
+exercise_url: "lecture09.zip"
 
+---
 
 Today in class, we will review any questions that you have about the material covered thus far. Please review the [Quiz 1 study materials](week04-lecture03) and come with questions. We're also going to make sure we understand how to do these two problems:
 
