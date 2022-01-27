@@ -22,7 +22,7 @@ points: 8
 
 {: .blockquote-no-margin}
 > ### What if I've already installed Python on my laptop?
-> Note: many people who have programmed with Python before already have Python 3.x installed. To check, search for an existing Python installation. If you already have a version of Python3 installed, move on to Part 2. It doesn't hurt to install another version of Python, but it's not necessary. If you have any questions, feel free to ask Sarah or one of the peer mentors / TAs.
+> Note: many people who have programmed with Python before already have Python 3.x installed. To check, search for an existing Python installation. If you already have a version of Python3 installed, move on to Part 2. It doesn't hurt to install another version of Python, but it's not necessary. If you have any questions, feel free to ask Connor or one of the peer mentors / TAs.
 
 We will use the Python 3 programming language and **IDLE**, which is Python's Integrated Development and Learning Environment.
 
