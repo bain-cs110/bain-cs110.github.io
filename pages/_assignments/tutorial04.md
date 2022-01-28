@@ -6,14 +6,14 @@ abbreviation: Tutorial 4
 draft: 0
 points: 3
 num: 4
-due_date: 2021-10-20
+due_date: 2022-02-02
 ---
 
 <a class="nu-button" href="/course-files/tutorials/tutorial04.zip" target="_blank">
     Tutorial Starter Files <i class="fas fa-download"></i>
-</a> 
+</a>
 
-The goal of this tutorial is to get you comfortable with if/else statements and while loops. Both of these types of statements are very powerful, so getting comfortable with them is essential (and will help you with [HW4](../assignments/hw4)). If you have a tutorial earlier in the week, then you have not yet reviewed **while loops**. Here are <a href="https://docs.google.com/presentation/d/1BUOFXuJSwFgolQP_lTR_cDl9LHy3t5AjdfRsiQDF8Cw/edit?usp=sharing" target="_blank">some slides</a> to explain the rules of while loops.
+The goal of this tutorial is to get you comfortable with if/else statements and while loops. Both of these types of statements are very powerful, so getting comfortable with them is essential (and will help you with [HW4](../assignments/hw4)). If you have a tutorial earlier in the week, then you have not yet reviewed **while loops**. Here are <a href="https://docs.google.com/presentation/d/19E8Sg2PT0k2l_st0mIvJWMfa0VJ_XaoT0mfjM366pA4/edit?usp=sharing" target="_blank">some slides</a> to explain the rules of while loops.
 
 ## Part 1: Number Guessing Game
 Open the `01_number_game.py` file and write a program for a number guessing game. The game already does the following:
@@ -37,7 +37,7 @@ Your job is to finish the game by implementing the following features:
 
 
 ## Part 2: Simplify the vertical circles program [loops preview]
-1. Open `02_vertical_circles.py` 
+1. Open `02_vertical_circles.py`
 2. See if you can use a while loop to recreate this functionality, where there is only one make_circle function call that is repeated within a while loop.
 
 <img class="frame" style="width: 100px;" src="/assets/images/tutorial03/vertical_circles.png" />
