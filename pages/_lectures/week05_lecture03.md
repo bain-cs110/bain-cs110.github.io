@@ -11,7 +11,7 @@ slides:
    - title: "Lecture Slides (not yet live)"
      url:
 due_date: 2022-02-04
-quiz_url: https://canvas.northwestern.edu/courses/149580/quizzes/159814
+quiz_url: https://canvas.northwestern.edu/courses/156943/quizzes/168355
 exercise_url: "lecture12.zip"
 videos:
    - title: "Live Lecture (not yet posted)"
