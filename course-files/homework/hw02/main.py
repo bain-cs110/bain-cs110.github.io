@@ -20,40 +20,40 @@ canvas.pack()
 ########################
 # FUNCTION DEFINITIONS #
 ########################
-def make_oval(canvas: Canvas, center: tuple, radius_x: float, radius_y: float, fill: str='hotpink'):
+def make_oval(canvas: Canvas, center: tuple, radius_x: float, radius_y: float, color: str='hotpink'):
     # Exercise 1: currently, this function creates a hard-coded oval with a top-left
-    # coordinate of (100, 100), and a bottom-right coordinate of (200, 150). 
-    # 
+    # coordinate of (100, 100), and a bottom-right coordinate of (200, 150).
+    #
     # Your job is to modify the code so that:
-    # 1. the top-left (x, y) and bottom-right (x, y) coordinates are 
-    #    calculated  based on the radius_x, radius_y and center point 
+    # 1. the top-left (x, y) and bottom-right (x, y) coordinates are
+    #    calculated  based on the radius_x, radius_y and center point
     #    specified by the arguments.
-    # 2. the fill color is determined based on the fill argument.
+    # 2. the fill color is determined based on the color argument.
     canvas.create_oval(
         [
-            (100, 100), 
+            (100, 100),
             (200, 150)
         ],
         fill='hotpink')
 
 
 
-def make_circle(canvas: Canvas, center: tuple, radius: int, fill: str='hotpink'):
+def make_circle(canvas: Canvas, center: tuple, radius: int, color: str='hotpink'):
     # Exercise 2: currently, this function creates a hard-coded circle with a top-left
-    # coordinate of (300, 100), and a bottom-right coordinate of (400, 200). 
-    # 
-    # Your job is  to modify the code so that:
-    # 1.  the top-left (x, y) and bottom-right (x, y) coordinates are 
-    #     calculated based on the radius and center point specified 
-    #     by arguments.
-    # 2.  the fill color is  determined by the fill argument.
+    # coordinate of (300, 100), and a bottom-right coordinate of (400, 200).
     #
-    # HINT: complete this taks by calling (or "invoking") the 
+    # Your job is  to modify the code so that:
+    # 1.  the top-left (x, y) and bottom-right (x, y) coordinates are
+    #     calculated based on the radius and center point specified
+    #     by arguments.
+    # 2.  the fill color is  determined by the color argument.
+    #
+    # HINT: complete this taks by calling (or "invoking") the
     #       make_oval function that you just made in Exercise 1.
 
     canvas.create_oval(
         [
-            (300, 100), 
+            (300, 100),
             (400, 200)
         ],
         fill='hotpink')
@@ -70,20 +70,20 @@ def make_face(canvas: Canvas, center: tuple, width: int):
 
 
 def make_bullseye(canvas: Canvas, center: tuple, radius: int, distance: int=10):
-    # Exercise 4: use the make_circle function that you just created to 
+    # Exercise 4: use the make_circle function that you just created to
     # draw a bullseye of alternating colors (use any color of your choice).
     #
     # Please ensure that:
-    # 1. The smallest  concentric circle has a radius of `radius` 
+    # 1. The smallest  concentric circle has a radius of `radius`
     #    (value of the argument).
-    # 2. Each  additional concentric circle has a radius of `distance` units 
+    # 2. Each  additional concentric circle has a radius of `distance` units
     #    more that the previous  circle.
     #
-    # For instance, if `radius`=10 and `distance`=5, then the first circle would have a 
+    # For instance, if `radius`=10 and `distance`=5, then the first circle would have a
     # radius of 10, the second a radius of 15, the third 20, and the fourth 25.
     #
     # Hint: you'll have to draw the biggest circle first, or else your big circle will
-    # overwrite and block the smaller circles. Replace the "pass" keyword in 
+    # overwrite and block the smaller circles. Replace the "pass" keyword in
     # the function body (below) with your code.
     pass
 
@@ -99,16 +99,16 @@ make_grid(canvas, 500, 500)
 # Exercise 1: ovals:
 print('Exercise 1...')
 make_oval(canvas, (100, 100), 25, 40)
-make_oval(canvas, (200, 100), 40, 25, fill='navy')
-make_oval(canvas, (300, 100), 25, 40, fill='teal')
+make_oval(canvas, (200, 100), 40, 25, color='navy')
+make_oval(canvas, (300, 100), 25, 40, color='teal')
 make_oval(canvas, (400, 100), 40, 25)
 
 # Exercise 2: circles:
 print('Exercise 2...')
-make_circle(canvas, (100, 200), 25, fill='teal')
+make_circle(canvas, (100, 200), 25, color='teal')
 make_circle(canvas, (200, 200), 50)
-make_circle(canvas, (300, 200), 25, fill='navy')
-make_circle(canvas, (400, 200), 50, fill='teal')
+make_circle(canvas, (300, 200), 25, color='navy')
+make_circle(canvas, (400, 200), 50, color='teal')
 
 # Exercise 3: faces:
 print('Exercise 3...')
@@ -126,6 +126,6 @@ make_bullseye(canvas, (400, 400), 20, distance=10)
 
 
 
-########################## YOUR CODE ABOVE THIS LINE ############################## 
+########################## YOUR CODE ABOVE THIS LINE ##############################
 # makes sure the canvas keeps running:
 canvas.mainloop()
