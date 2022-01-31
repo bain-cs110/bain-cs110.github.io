@@ -9,8 +9,8 @@ description:
   - Booleans
 due_date: 2022-01-31
 slides:
-   - title: "Lecture Slides (not yet posted)"
-     url: ""
+   - title: "Lecture Slides"
+     url: https://docs.google.com/presentation/d/1M1jFtqmv_PDAhP2d5ybiuKyFuuK_XmDu5K6Qnwiu-hc/edit?usp=sharing
 readings:
   - title: "Ch3: Conditionals"
     author: "Severance"
