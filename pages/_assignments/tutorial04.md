@@ -47,8 +47,8 @@ Your job is to finish the game by implementing the following features:
 2. You will need to make use of the counter to position the y-coordinate of the circle
 
 
-## Extra Challenges: Drawing with Loops
-Practice creating the following shapes using a while loop. The first three shapes are recommended for everyone. The last two (spirograph ones) are optional. If you pursue the latter two, see if you can get implementation ideas here (or using some other source).
+## Extra Practice: Drawing with Loops
+Practice creating the following shapes using a while loop. While this section of the assignment is optional, we recommend everyone try the first three shapes. The last two (spirograph ones) are more challenging. If you pursue the latter two, see if you can get implementation ideas here (or using some other source).
 
 <img class="med-lg center frame" src="/assets/images/tutorial03/shapes.png" />
 
