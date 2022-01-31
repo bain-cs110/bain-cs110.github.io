@@ -21,7 +21,7 @@ readings:
     url: http://openbookproject.net/thinkcs/python/english3e/conditionals.html
 videos:
   - title: "Live Lecture (not yet posted)"
-    url:
+    url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=bd92496f-045e-4c46-8945-adf6016a94d3
     duration: "50:00"
     live: 1
 
