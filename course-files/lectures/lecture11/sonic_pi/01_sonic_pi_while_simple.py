@@ -1,10 +1,11 @@
 ##################################################################################################
 # Before you begin:
 #   1. Download and install Sonic Pi: https://sonic-pi.net/
-#   2. Install the psonic module using PIP. Run the following on the command line:
+#   2. Install the psonic module by either running
+#     a) install_python_packages.py and entering "python-sonic" when prompted
+#     b) the following on the command line (Terminal in macOS or Command Prompt in Windows):
 #      $ pip install python-sonic
-#   3. Ensure that your Sonic Pi is running
-#   
+#   3. Ensure that your Sonic Pi app is running
 #
 # Useful documentation:
 #   1. psonic documentation: # https://github.com/gkvoelkl/python-sonic
@@ -14,9 +15,9 @@
 
 import psonic
 
-# Challenge: 
+# Challenge:
 # 1. Use a while loop to repeat the drum beat below over and over again (forever)
-# 2. When you're done with part 1, edit your while loop so that the loop breaks 
+# 2. When you're done with part 1, edit your while loop so that the loop breaks
 #    after 200 drum beats
 
 psonic.sample(psonic.DRUM_BASS_HARD)

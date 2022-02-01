@@ -6,12 +6,12 @@ description:
     - How long do you want to repeat it?
     - What changes each time (optional)?
 type: lecture
-draft: 1
+draft: 0
 num: 11
 due_date: 2022-02-02
 slides:
-   - title: "Lecture Slides (not yet posted)"
-     url:
+   - title: "Lecture Slides"
+     url: https://docs.google.com/presentation/d/1NIl2Ojix1c_oE0-gtaSOZQ9wAI9Xu-ZlbMiMpWKRB8Q/edit?usp=sharing
 readings:
   - title: "Ch5: Iteration"
     author: "Severance"
