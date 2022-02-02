@@ -18,13 +18,22 @@ def make_rectangle(canvas, top_left, width, height, color="#3D9970", tag=None):
     )
 
 def get_coordinates(canvas, id):
-    # returns (x1, y1, x2, y2)
     return canvas.coords(id)
 
-def move(canvas, tag, x, y):
-    # get all of the shape ids associated with the tag:
-    ids = canvas.find_withtag(tag)
+def set_coordinates(canvas, id, coordinates):
+    canvas.coords(id, coordinates)
 
-    # update each id by the offset amount:
+def move(canvas, tag, x, y):
+    ids = canvas.find_withtag(tag)
     for id in ids:
-        canvas.move(id, x, y)
+        coords = get_coordinates(canvas, id)
+        # print(coords)
+        # update coordinates:
+        for i in range(0, len(coords)):
+            if i % 2 == 0:
+                coords[i] += x
+            else:
+                coords[i] += y
+
+        # set the coordinates:
+        set_coordinates(canvas, id, coords)

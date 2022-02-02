@@ -1,5 +1,5 @@
 # Instructions:
-# https://docs.google.com/document/d/1mqHKMTGpX6XN7r2_cQmavrnJbpS_M4owyc5FWshtwQo/edit?usp=sharing
+# https://docs.google.com/document/d/1Fj1Na3iOYbpw-XejVtvjinl6fensn1gcIrIUsOHAbBc/edit?usp=sharing
 import random
 secret_number = random.randint(1, 100)
 user_guess = None
@@ -21,4 +21,3 @@ while True:
     #  1) Tell them that they guess correctly and the number of guesses it took to guess correctly
     #  2) Exit the program (i.e. break out of the loop)
     # If they type the letter 'Q', exit the program (i.e. break out of the loop)
-
