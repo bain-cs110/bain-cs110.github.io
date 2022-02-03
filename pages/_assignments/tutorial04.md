@@ -15,6 +15,10 @@ due_date: 2022-02-02
 
 The goal of this tutorial is to get you comfortable with if/else statements and while loops. Both of these types of statements are very powerful, so getting comfortable with them is essential (and will help you with [HW4](../assignments/hw4)). If you have a tutorial earlier in the week, then you have not yet reviewed **while loops**. Here are <a href="https://docs.google.com/presentation/d/19E8Sg2PT0k2l_st0mIvJWMfa0VJ_XaoT0mfjM366pA4/edit?usp=sharing" target="_blank">some slides</a> to explain the rules of while loops.
 
+## Stuck in an infinite loop?
+
+When you write an infinite loop, like in `warmup/a_while_always_true.py`, Python will keep running the loop until it literally can't anymore. You can  cancel out of the program by going back to your Interpreter window and hitting Ctl+C or go the Shell menu at the top of the screen and select `Interrupt Execution`.
+
 ## Part 1: Number Guessing Game
 Open the `01_number_game.py` file and write a program for a number guessing game. The game already does the following:
 
@@ -59,7 +63,6 @@ Practice creating the following shapes using a while loop. While this section of
   * A: until all of the circles in the picture are drawn
 3. What changes each time?
   * A: Varies (depending on the drawing)
-
 
 ## What to turn in (same deal as always)
 Please turn in your completed tutorial exercise(s) ON CANVAS by Wednesday night at midnight. To do this, first zip your entire `tutorial04` folder (with your edited files inside), and then upload your zip file to Canvas. Please ensure that your zip file includes **YOUR CODE**.  
