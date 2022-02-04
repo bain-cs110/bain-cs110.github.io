@@ -10,8 +10,8 @@ description:
 due_date: 2022-02-04
 exercise_url: "lecture12.zip"
 videos:
-   - title: "Live Lecture (not yet posted)"
-     url:
+   - title: "Live Lecture"
+     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e0f09bc7-19e8-4d65-9e10-adf6016a94ff
      duration: "50:00"
      live: 1
 
