@@ -2,7 +2,7 @@
 layout: module
 title: "More Practice: While Loops & If Statements"
 type: lecture
-draft: 1
+draft: 0
 num: 12
 description:
   - Practice using if / elif / else
