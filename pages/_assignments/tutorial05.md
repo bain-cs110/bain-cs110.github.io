@@ -11,13 +11,13 @@ abbreviation: Tutorial 5
 points: 3
 draft: 0
 num: 5
-due_date: 2021-10-27
-    
+due_date: 2022-02-09
+
 ---
 
 <a class="nu-button" href="/course-files/tutorials/tutorial05.zip" target="_blank">
     Tutorial Starter Files <i class="fas fa-download"></i>
-</a> 
+</a>
 
 <img class="module-image" src="/assets/images/tutorial04/heart.png" />In this tutorial, you are going to design a customizable function that creates an image of **any** pixel art that can be represented as rows and columns of integers. The data structure that we will use to store these rows and columns of integers will be a "tuple of tuples" (see below). The purpose of this exercise is to help you feel a little bit more comfortable with tuples (and sequences in general), iteration, and functions. In addition to pixel art, many different kinds of entities can also be expressed using similar data formats (JPEG images, songs, DNA sequences, whatever).
 
@@ -75,7 +75,7 @@ For your first task, you will modify the "draw_row" function -- in any way you c
 > **If you get stuck**: After you've given it a shot, take a look at `hints/hint1a.py` and `hints/hint1b.py` to consider a few approaches that you might have tried (but of course, there are others).
 
 ## Step 2: Replace the repetitive draw_row function calls
-Next, you will simplify the repetitive "draw_row" function calls (pictured below) with a "for loop." 
+Next, you will simplify the repetitive "draw_row" function calls (pictured below) with a "for loop."
 
 ```python
 # first 6 rows of frank
