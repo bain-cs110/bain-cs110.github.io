@@ -17,4 +17,4 @@ videos:
 
 ---
 
-Today's lesson will be a continued discussion of While Loops and Conditionals. See [Lesson 10](week05_lecture01) and [Lesson 11](week05_lecture02) for reference materials.
+Today's lesson will be a continued discussion of While Loops and Conditionals. See [Lesson 10](week05-lecture01) and [Lesson 11](week05-lecture02) for reference materials.

@@ -1,24 +1,34 @@
 ---
-layout: lecture-two-column
-title: "Quiz 2"
+layout: module
+title: Files and Strings
 description:
-    - Quiz 2 of 3 (using the Lockdown Browser)
-type: quiz
+    - reading from and writing to files
+    - examining different file types
+type: lecture
 draft: 1
-num: 2
+num: 17
 due_date: 2022-02-16
+slides:
+   - title: "Live Lecture (Not Yet Posted)"
+     url:
+readings:
+  - title: "Ch6: Strings"
+    author: "Severance"
+    url: https://www.py4e.com/html3/06-strings
+    video_url: https://www.py4e.com/lessons/strings
+  - title: "Ch7: Files"
+    author: "Severance"
+    url: https://www.py4e.com/html3/07-files
+    video_url: https://www.py4e.com/lessons/files
+videos:
+   - title: "Live Lecture (Not Yet Posted)"
+     url:
+     duration: "50:00"
+     live: 1
+exercise_url: "lecture17.zip"
 ---
 
-## Study Materials
-Note that Quiz 2 is cummulative, and will include what we've already covered re: functions, expressions, and data types.
 
-### Review Documents
-* <a href="https://docs.google.com/document/d/1prORYwLjNb5i6hKV3nZGkswaW3eHermLwR_wBATovrQ/edit?usp=sharing" target="_blank">Study Guide</a>
-* Please do the <a href="https://canvas.northwestern.edu/courses/156943/quizzes" target="_blank">practice mini-quizzes and full-length quizzes</a>.
+Today, you will be learning to work with files --  including reading them, writing them, and appending to them. Because many file formats involve text, you will also be learning to work with some common string functions.
 
-### Practice Quiz
-The practice quizzes will be published after Monday of Week 6. Practice Quiz 2a is configured so that it only works with the Lockdown Browser. Start studying early. You can take the quiz as many times as you want to practice.
-
-### How to Take The Actual Quiz
-
-Like Quiz 1, Quiz 2 will take place in class using the Lockdown Browser.
+One of the most important skills of a programmer is understanding how to do data manipulation across a variety of contexts and formats. Given that a vast quantity of data is stored in files, databases, etc., learning to access, manipulate, and write data in various formats for subsequent storage is a critical programming skill.

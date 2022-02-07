@@ -21,7 +21,7 @@ videos:
 
 ---
 
-Today, we will be going over some various ways of interpreting input beyond the command line using event handlers. Nothing from this lecture will be on Quiz 2, but this lecture will certainly help you with [project 1](../assignments/p1) (due next Friday).
+Today, we will be going over some various ways of interpreting input beyond the command line using event handlers. Nothing from this lecture will be on Quiz 2, but this lecture will certainly help you with [project 1](../assignments/p1) (due next-next Friday).
 
 {:.blockquote-no-margin}
 > **Note:** Some of the slides in the video have references to the Spring Quarter. Ignore those.   
