@@ -13,10 +13,9 @@ canvas.pack()
 #   2. Make it move backwards (on your own)
 #   3. Make it move vertically (on your own)
 #   4. Make it move diagonally (on your own)
-#   5. If it gets to the end, of the screen, 
+#   5. If it gets to the end, of the screen,
 #      make it reverse directions  (on your own)
 #   6. Make it oscillate back and forth  (on your own)
-
 
 # make circle
 circle_id = shapes.make_circle(canvas, (0, 200), 40, color='hotpink')
@@ -31,6 +30,6 @@ while True:
 
 
 
-########################## YOUR CODE ABOVE THIS LINE ############################## 
+########################## YOUR CODE ABOVE THIS LINE ##############################
 # makes sure the canvas keeps running:
 canvas.mainloop()
