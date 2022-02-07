@@ -10,10 +10,10 @@ draft: 0
 num: 13
 due_date: 2022-02-07
 slides:
-   - title: "More Loops: For Loops & Lists (Not Yet Live)"
-     url:
+   - title: "More Loops: For Loops & Lists"
+     url: https://docs.google.com/presentation/d/1QQ6VDoDu0pmcjzv_A97JBqs0lVW5q-InqqgsBgWBHXk/edit?usp=sharing
 videos:
-   - title: "Live Lecture"
+   - title: "Live Lecture (Not Yet Posted)"
      url:
      duration: "50:00"
      live: 1
