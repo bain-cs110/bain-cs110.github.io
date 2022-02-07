@@ -3,16 +3,16 @@ layout: assignment-two-column
 title: Event Handlers
 type: tutorial
 abbreviation: Tutorial 6
-draft: 0
+draft: 1
 num: 4
 points: 3
-due_date: 2021-11-03
-    
+due_date: 2022-02-16
+
 ---
 
 <a class="nu-button" href="/course-files/tutorials/tutorial06.zip" target="_blank">
     Tutorial Starter Files <i class="fas fa-download"></i>
-</a> 
+</a>
 
 The goal of this tutorial is to get you more comfortable with event handlers, and in particular the click, drag, and keyboard event handlers. Please complete the following exercises:
 
@@ -26,14 +26,14 @@ Open `01_click_to_add_creature.py` and complete the following tasks:
 ## 2. Move your creature when you press the i, j, k, and m keys
 Open `02_move_creature_with_keyboard.py` and complete the following tasks:
 1. When the user presses the i-key, move the creature **up** 10 pixels.
-2. When the user presses the j-key, move the creature to the **left** 10 pixels. 
-3. When the user presses the k-key, move the creature to the **right** 10 pixels. 
-4. When the user presses the m-key, move the creature **down** 10 pixels. 
+2. When the user presses the j-key, move the creature to the **left** 10 pixels.
+3. When the user presses the k-key, move the creature to the **right** 10 pixels.
+4. When the user presses the m-key, move the creature **down** 10 pixels.
 
 {:.blockquote-no-margin}
 > **NOTES:**
-> 1. In order for your Canvas to listen for keyboard events, you must invoke the **`canvas.focus_set()`** method after you invoke `canvas.pack()` (at the top of your program). Without **`canvas.focus_set()`**, your keyboard events will not fire. 
-> 2. Also, the keyboard bindings for a Mac and a Windows are different. So in order for your program to work, you'll need to make sure that you learn what the correct keyboard codes are for your operating system. Do do this, simply run your program, press a key, and see which code prints to the screen. 
+> 1. In order for your Canvas to listen for keyboard events, you must invoke the **`canvas.focus_set()`** method after you invoke `canvas.pack()` (at the top of your program). Without **`canvas.focus_set()`**, your keyboard events will not fire.
+> 2. Also, the keyboard bindings for a Mac and a Windows are different. So in order for your program to work, you'll need to make sure that you learn what the correct keyboard codes are for your operating system. Do do this, simply run your program, press a key, and see which code prints to the screen.
 
 ## 3. Select which creature to move with the keyboard
 In the third exercise, you are going to use a global variable to track which creature your keyboard will control. To do this, you will combine the use of the click event handler and the keyboard event handlers.

@@ -7,7 +7,7 @@ type: lecture
 draft: 1
 num: 14
 due_date: 2022-02-09
-exercise_url: "lecture15.zip"
+exercise_url: "lecture14.zip"
 videos:
   - title: "Live Lecture (not yet posted)"
     url:
