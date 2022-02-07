@@ -13,8 +13,8 @@ slides:
    - title: "More Loops: For Loops & Lists"
      url: https://docs.google.com/presentation/d/1QQ6VDoDu0pmcjzv_A97JBqs0lVW5q-InqqgsBgWBHXk/edit?usp=sharing
 videos:
-   - title: "Live Lecture (Not Yet Posted)"
-     url:
+   - title: "Live Lecture"
+     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=be78e901-5801-44b7-baf8-adf6016a9516
      duration: "50:00"
      live: 1
 
