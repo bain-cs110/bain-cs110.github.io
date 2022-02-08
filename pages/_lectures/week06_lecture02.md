@@ -12,10 +12,10 @@ videos:
   - title: "Live Lecture (not yet posted)"
     url:
     live: 1
-    duration: "49:15"
+    duration: "50:00"
 slides:
-  - title: "Slides for Live Lecture: More Practice Problems"
-    url:
+  - title: "More Practice with Loops"
+    url: https://docs.google.com/presentation/d/179JfOzRfqLT7ekSny42p08lQvpcddUqpMbQGGz1ZjuU/edit?usp=sharing
 ---
 
 In today's lecture, we will be continuing our practice with for loops.
