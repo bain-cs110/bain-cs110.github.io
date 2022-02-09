@@ -11,13 +11,13 @@ people = [
     ['Christine Lambert DDS', '043 Wright Key Suite 737', 'Port Lisa', 'Vermont', '84484', 'Technical author'],
     ['Robert Jones', '0816 Tyler Inlet', 'Courtneyberg', 'Nevada', '05095', 'Clinical psychologist'],
     ['Lawrence Krause', '7116 Jose Garden Apt. 442', 'Amandaside', 'North Carolina', '87377', 'Pharmacist, community'],
-    ['David Kennedy', '306 Mitchell Shores', 'Port Rachel', 'South Dakota', '94249', 'Patent attorney'],
+    ['David Kennedy', '306 Mitchell Shores', 'Port Rachel', 'South Dakota', '94249', 'Editor, film/video'],
     ['Ethan Johnson', '0611 Smith Burg Apt. 670', 'East Danielle', 'Delaware', '03419', 'Surveyor, insurance'],
     ['Kevin Clark', '659 Lawrence Village Suite 220', 'Priceport', 'Mississippi', '90864', 'Planning and development surveyor'],
     ['Adam Marshall', '160 Angela Track', 'Laurenmouth', 'Arkansas', '72136', 'Market researcher'],
     ['Daniel Torres', '645 Kaitlyn Hills', 'Lake Paulside', 'Kansas', '50552', 'Plant breeder/geneticist'],
     ['Becky Payne', '391 Burns Street', 'Jordanmouth', 'Utah', '33100', 'Environmental consultant'],
-    ['Charles Bishop', '44108 Thomas Drive', 'Christopherland', 'New Jersey', '26513', 'Pathologist'],
+    ['Charles Bishop', '44108 Thomas Drive', 'Christopherland', 'New Jersey', '26513', 'Editor, film/video'],
     ['Alex Scott', '7569 Rodriguez Pine', 'Bernardville', 'South Carolina', '91675', 'Ecologist'],
     ['Heidi King DVM', '03002 Jones Locks Apt. 559', 'East Matthew', 'Montana', '16824', 'Ergonomist'],
     ['Madison Hamilton', '1384 Hunter Well Apt. 810', 'East Mark', 'Indiana', '51355', 'Sports development officer'],
@@ -39,7 +39,7 @@ people = [
     ['Thomas Miller', '1454 Scott Camp', 'South Andrew', 'Washington', '28790', 'Personal assistant'],
     ['Antonio Klein', '49232 Benjamin Glen', 'West Matthew', 'Texas', '31926', 'Naval architect'],
     ['Barbara Gonzales', '26531 Cabrera Roads', 'Tiffanyville', 'Vermont', '49919', 'Chief Technology Officer'],
-    ['Holly Howard', '0854 Osborne Rue', 'Brendastad', 'New Mexico', '95412', 'Mechanical engineer'],
+    ['Holly Howard', '0854 Osborne Rue', 'Brendastad', 'New Jersey', '95412', 'Editor, film/video'],
     ['Seth Walters', '641 Russell Estate', 'Edwardsmouth', 'Missouri', '58748', 'Tour manager'],
     ['James Delgado', '08384 Clark Road Suite 309', 'Sanchezburgh', 'Delaware', '16590', 'Academic librarian'],
     ['Gina Lewis', '748 Hayden Knoll', 'Hughesland', 'New York', '88637', 'Engineer, drilling'],
@@ -53,7 +53,7 @@ people = [
     ['Elizabeth Hanson', '6172 Harvey Orchard', 'Lake Misty', 'Mississippi', '51275', 'Conservator, furniture'],
     ['Pamela Mendez', '278 Nancy Pines Suite 981', 'Ericview', 'Oklahoma', '26001', 'Glass blower/designer'],
     ['Nicole Shelton', '79681 Eric Flat', 'Vasquezburgh', 'Missouri', '59134', 'TEFL teacher'],
-    ['Roger Perez', '805 Simon Walks Apt. 113', 'East Joseph', 'Nevada', '73988', 'Environmental education officer'],
+    ['Roger Perez', '805 Simon Walks Apt. 113', 'East Joseph', 'New Jersey', '73988', 'Editor, film/video'],
     ['Seth Black', '42090 Latoya Cliffs', 'South Amytown', 'Kansas', '93679', 'Ceramics designer'],
     ['Tyler Gentry', '976 Landry Wall Apt. 198', 'Territown', 'Oregon', '07649', 'Museum/gallery conservator'],
     ['James Larson', '89696 Monica Hills', 'Theresaport', 'Massachusetts', '22308', 'Contractor'],
@@ -61,7 +61,7 @@ people = [
     ['Roy Lopez', '558 Miller Stream Suite 182', 'Martinezland', 'Ohio', '97553', 'Scientist, clinical (histocompatibility and immunogenetics)'],
     ['Matthew Waller', '44777 Jonathan Burgs', 'Lake Garyport', 'Kansas', '38824', 'Medical laboratory scientific officer'],
     ['William Lane', '5873 Tammy Burgs', 'South John', 'Michigan', '03480', 'Water quality scientist'],
-    ['Jose Arellano', '89831 Smith Avenue Apt. 608', 'Sethport', 'Kentucky', '28720', 'Acupuncturist'],
+    ['Jose Arellano', '89831 Smith Avenue Apt. 608', 'Sethport', 'Kentucky', '28720', 'Editor, film/video'],
     ['Loretta Chavez', '50289 April Pine', 'Port Heather', 'West Virginia', '67952', 'Archivist'],
     ['Taylor Fields', '172 Green Stravenue Suite 665', 'East Christinefort', 'New Jersey', '52805', 'Naval architect'],
     ['Kenneth White', '8124 Terry Lodge', 'Johnville', 'Illinois', '72947', 'Biomedical scientist'],
@@ -72,7 +72,7 @@ people = [
     ['Bradley Miller', '54789 Duran Curve Apt. 397', 'Ashleyfort', 'Indiana', '04068', 'Psychologist, prison and probation services'],
     ['Katherine Stanton', '48870 Solis Ridges Apt. 093', 'Ginabury', 'Maine', '14504', 'Facilities manager'],
     ['Mr. Dustin Phillips', '28886 Brown Light', 'Deannafurt', 'Arizona', '75475', 'Pharmacist, community'],
-    ['Deborah Smith', '74322 Jones Common Suite 868', 'Georgeborough', 'Maine', '95149', 'Designer, blown glass/stained glass'],
+    ['Deborah Smith', '74322 Jones Common Suite 868', 'Georgeborough', 'New Jersey', '95149', 'Editor, film/video'],
     ['Jamie Martinez', '17720 Tonya Viaduct Suite 547', 'South Lauriemouth', 'Montana', '39118', 'Scientist, audiological'],
     ['Victor Ortiz', '402 Ellis Gardens', 'South Jamiemouth', 'Arkansas', '91033', 'Commercial horticulturist'],
     ['Elizabeth Lara', '3402 Billy Course', 'South Kellychester', 'New Hampshire', '93042', 'Arts administrator'],
@@ -99,7 +99,74 @@ people = [
     ['Allen Fischer', '48387 Conner Fields', 'East Alexandershire', 'California', '06913', 'Commercial horticulturist'],
     ['Rodney Horn', '2643 Carol Isle', 'Woodview', 'Oregon', '50523', 'Recycling officer'],
     ['Brandy Robertson', '254 Smith Ranch Suite 758', 'Michelleport', 'Tennessee', '50099', 'Higher education lecturer'],
-    ['Jason Graves', '91399 Booker Road Apt. 091', 'South Jessica', 'Montana', '58042', 'Producer, radio']
+    ['Jason Graves', '91399 Booker Road Apt. 091', 'South Jessica', 'Montana', '58042', 'Editor, film/video']
 ]
 
 
+### Exercise 1
+print("***** Exercise 1 *****")
+
+for person in people: # for each person (which is really a list of data)
+    print(person) # print that person (i.e. the list)
+
+### Exercise 2
+print("***** Exercise 2 *****")
+for person in people: # for each person
+    print(person[0]) # print only their name
+
+### Exercise 3
+print("***** Exercise 3 *****")
+for person in people: # for each person
+    print(person[0], person[5]) # print their NAME and their JOB
+
+### Exercise 4
+print("***** Exercise 4 *****")
+""" Function takes as input a list of people and then returns a list of zip codes
+    where those people live."""
+def get_list_of_zip_codes(list_of_people:list):
+    list_to_return = [] # Make an empty list to store zip codes in
+    for person in list_of_people: # for each person in our list
+        list_to_return.append(person[4]) # add their zip code to the list to return
+
+    return list_to_return # and finally return the list so it can be used by other stuff
+
+# Now actually invoke (call) the function with our list of people
+print(get_list_of_zip_codes(people))
+
+### Exercise 5
+print("***** Exercise 5 *****")
+def is_a_jersey_film_editor(a_person:list):
+    if a_person[5] == "Editor, film/video" and a_person[3] == "New Jersey": # check to see if that person's occupation matches the one we're looking for
+        return True # if it does, return True
+    else:
+        return False # otherwise, return False
+
+# Now actually invoke (call) the function with a test person
+print("Test both true...")
+print(is_a_jersey_film_editor(['Deborah Smith', '74322 Jones Common Suite 868', 'Georgeborough', 'New Jersey', '95149', 'Editor, film/video']))
+print("Test neither")
+print(is_a_jersey_film_editor(['Brandy Robertson', '254 Smith Ranch Suite 758', 'Michelleport', 'Tennessee', '50099', 'Higher education lecturer']))
+print("Test Jersey but not Film...")
+print(is_a_jersey_film_editor(['Taylor Fields', '172 Green Stravenue Suite 665', 'East Christinefort', 'New Jersey', '52805', 'Naval architect']))
+
+### Exercise 6
+print("***** Exercise 6 *****")
+def get_jersey_film_editors(list_of_people:list):
+    list_to_return = []
+    for person in people:
+        if is_a_jersey_film_editor(person) == True:
+            list_to_return.append(person)
+    return list_to_return
+
+print(get_jersey_film_editors(people))
+
+### Challenge
+print("***** Challenge *****")
+def filter_by_occupations_or_states(list_of_people:list, list_of_occupations:list, list_of_states:list):
+    list_to_return = []
+    for person in people:
+        if person[3] in list_of_states or person[5] in list_of_occupations:
+            list_to_return.append(person)
+    return list_to_return
+
+print(filter_by_occupations_or_states(people, ['Editor, film/video'], ['New Jersey']))
