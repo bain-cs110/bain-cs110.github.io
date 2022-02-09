@@ -4,7 +4,7 @@ title: More Practice with For Loops & Sequences
 description:
     - Practice using for loops to process data
 type: lecture
-draft: 1
+draft: 0
 num: 14
 due_date: 2022-02-09
 exercise_url: "lecture14.zip"
