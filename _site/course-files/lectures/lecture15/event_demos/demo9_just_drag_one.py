@@ -1,6 +1,6 @@
 '''
 This demo shows you how you can create a new image by clicking the screen.
-Documentation: 
+Documentation:
   * tkinter events: https://www.python-course.eu/tkinter_events_binds.php
   * Canvas: https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/canvas.html
   * Other Canvas methods: https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/canvas-methods.html
@@ -26,8 +26,8 @@ MOUSE_DRAG = '<B1-Motion>'
 RIGHT_CLICK = '<Button-2>'
 KEY_PRESS = '<Key>'
 canvas.create_text(
-    (window_width / 2, window_height / 2), 
-    text='Click circle to select it. Drag selected circle to move it.', 
+    (window_width / 2, window_height / 2),
+    text='Click circle to select it. Drag selected circle to move it.',
     font=("Purisa", 32)
 )
 
@@ -36,12 +36,12 @@ active_tag = None
 
 def select_circle(event):
     global active_tag
-    
+
     # if something is already active, deactivate it:
     if active_tag:
         utilities.update_fill_by_tag(canvas, active_tag, 'hotpink')
         active_tag = None
-    
+
     # get new active tag:
     active_tag = utilities.get_tag_from_x_y_coordinate(canvas, event.x, event.y)
     if active_tag:
@@ -52,12 +52,12 @@ def move_circle(event):
     if not active_tag:
         print('no tag selected')
         return
-    
+
     # calculate the current position of the current shape:
     width = utilities.get_width(canvas, active_tag)
     height = utilities.get_height(canvas, active_tag)
-    left = utilities.get_left(canvas, active_tag) 
-    top = utilities.get_top(canvas, active_tag) 
+    left = utilities.get_left(canvas, active_tag)
+    top = utilities.get_top(canvas, active_tag)
     current_x = left + (width / 2)
     current_y = top + (height / 2)
 
@@ -74,7 +74,7 @@ def make_circle(x, y):
     utilities.make_circle(
         canvas,
         (x, y),
-        20, 
+        20,
         color='hotpink',
         tag='circle_' + str(counter)
     )
@@ -82,13 +82,13 @@ def make_circle(x, y):
     canvas.focus_set()
 
 
-canvas.bind(MOUSE_CLICK, select_circle) 
+canvas.bind(MOUSE_CLICK, select_circle)
 canvas.bind(MOUSE_DRAG, move_circle)
 
 for i in range(50):
     make_circle(random.randint(0, window_width), random.randint(0, window_height))
 
 
-########################## YOUR CODE ABOVE THIS LINE ############################## 
+########################## YOUR CODE ABOVE THIS LINE ##############################
 # makes sure the canvas keeps running:
 canvas.mainloop()

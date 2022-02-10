@@ -13,8 +13,8 @@ MOUSE_CLICK = '<Button-1>'
 MOUSE_DRAG = '<B1-Motion>'
 
 # note that I'm assigning each creature a unique tag:
-creature.make_creature(canvas, (200, 200), size=150, tag='creature_1', fill='white')
-creature.make_creature(canvas, (400, 400), size=120, tag='creature_2')
+creature.make_creature(canvas, (200, 200), size=150, my_tag='creature_1', my_fill='white')
+creature.make_creature(canvas, (400, 400), size=120, my_tag='creature_2')
 
 
 # your job:
@@ -25,9 +25,9 @@ creature.make_creature(canvas, (400, 400), size=120, tag='creature_2')
 def add_new_creature(event):
     print(event.x, event.y)
 
-canvas.bind(MOUSE_CLICK, add_new_creature) 
+canvas.bind(MOUSE_CLICK, add_new_creature)
 
-########################## YOUR CODE ABOVE THIS LINE ############################## 
+########################## YOUR CODE ABOVE THIS LINE ##############################
 
 # makes sure the canvas keeps running:
 canvas.mainloop()

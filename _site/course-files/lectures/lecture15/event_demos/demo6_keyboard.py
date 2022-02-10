@@ -10,7 +10,6 @@ import helpers
 import utilities
 import time
 import random
-import keycodes
 
 gui = Tk()
 gui.title('Tour of options...')
@@ -45,19 +44,25 @@ def make_circle(event):
     )
 
 def move_circle(event):
-    # NOTE: Because Windows and Mac have different keycodes, use the functions
-    # from the keycode module to detect the different keys
+    # Key symbols names for Tkinter: https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/key-names.html
+    print(event)
+
     distance = 10
-    if event.keycode == keycodes.get_up_keycode():
+ 
+    # if they press up on the keyboard
+    if event.keysym == "Up":
         utilities.update_position_by_tag(canvas, tag='circle', x=0, y=-distance)
-    elif event.keycode == keycodes.get_down_keycode():
+    # otherwise if they press down on the keyboard
+    elif event.keysym == "Down":
         utilities.update_position_by_tag(canvas, tag='circle', x=0, y=distance)
-    elif event.keycode == keycodes.get_left_keycode():
+    # otherwise if they press left on the keyboard
+    elif event.keysym == "Left":
         utilities.update_position_by_tag(canvas, tag='circle', x=-distance, y=0)
-    elif event.keycode == keycodes.get_right_keycode():
+    # otherwise if they press right on the keyboard
+    elif event.keysym == "Right":
         utilities.update_position_by_tag(canvas, tag='circle', x=distance, y=0)
     else:
-        print('Keycode:', event.keycode, 'not handled by this if/elif/else statement.')
+        print('Key sym:', event.keysym, 'not handled by this if/elif/else statement.')
 
 canvas.bind(MOUSE_CLICK, make_circle) 
 canvas.bind(KEY_PRESS, move_circle)

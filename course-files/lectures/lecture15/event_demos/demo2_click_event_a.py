@@ -22,14 +22,17 @@ canvas.pack()
 ########################## YOUR CODE BELOW THIS LINE ##############################
 
 MOUSE_CLICK = '<Button-1>'
-# canvas.create_text(
-#     (300, 300), 
-#     text='Here is some text', 
-#     font=("Purisa", 32)
-# )
+
 def do_something(event):
+    print("You clicked...", MOUSE_CLICK)
+    print("And told me to run do_something when I heard that")
+    print(event)
     print(event.x, event.y)
 
+
+# Notice first we define our function called do_something
+# then we tell the canvas to listen for MOUSE_CLICKs and if
+# it hears one, do_something
 canvas.bind(MOUSE_CLICK, do_something)  # add event handler
 
 ########################## YOUR CODE ABOVE THIS LINE ############################## 

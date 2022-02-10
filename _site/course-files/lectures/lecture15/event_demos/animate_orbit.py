@@ -1,5 +1,5 @@
 '''
-Documentation: 
+Documentation:
   * tkinter events: https://www.python-course.eu/tkinter_events_binds.php
   * Canvas: https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/canvas.html
   * Other Canvas methods: https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/canvas-methods.html
@@ -15,6 +15,9 @@ gui.title('Circle')
 canvas = Canvas(gui, width=500, height=500, background='white')
 canvas.pack()
 ########################## YOUR CODE BELOW THIS LINE ##############################
+
+# Uses some basic math to calculate the (x,y) positions that would represent one
+# shape orbiting around another shape
 
 center_x = 200
 center_y = 200
@@ -36,5 +39,5 @@ while True:
     time.sleep(.01)
 
 
-########################## YOUR CODE ABOVE THIS LINE ############################## 
+########################## YOUR CODE ABOVE THIS LINE ##############################
 canvas.mainloop()

@@ -1,6 +1,6 @@
 '''
 This demo shows you how you can create a new image by clicking the screen.
-Documentation: 
+Documentation:
   * tkinter events: https://www.python-course.eu/tkinter_events_binds.php
   * Canvas: https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/canvas.html
   * Other Canvas methods: https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/canvas-methods.html
@@ -10,7 +10,6 @@ import helpers
 import utilities
 import time
 import random
-import keycodes
 
 gui = Tk()
 gui.title('Tour of options...')
@@ -27,8 +26,8 @@ MOUSE_CLICK = '<Button-1>'
 RIGHT_CLICK = '<Button-2>'
 KEY_PRESS = '<Key>'
 canvas.create_text(
-    (window_width / 2, window_height / 2), 
-    text='Click to add a circle. Right-click to select circle. Press arrow keys to move circle', 
+    (window_width / 2, window_height / 2),
+    text='Click to add a circle. Right-click to select circle. Press arrow keys to move circle',
     font=("Purisa", 32)
 )
 
@@ -37,12 +36,12 @@ active_tag = None
 
 def select_circle(event):
     global active_tag
-    
+
     # if something is already active, deactivate it:
     if active_tag:
         utilities.update_fill_by_tag(canvas, active_tag, 'hotpink')
         active_tag = None
-    
+
     # get new active tag:
     active_tag = utilities.get_tag_from_x_y_coordinate(canvas, event.x, event.y)
     if active_tag:
@@ -56,7 +55,7 @@ def make_circle(event):
     utilities.make_circle(
         canvas,
         (event.x, event.y),
-        20, 
+        20,
         color='hotpink',
         tag='circle_' + str(counter)
     )
@@ -64,18 +63,18 @@ def make_circle(event):
 
 def move_circle(event):
     distance = 10
-    if event.keycode == keycodes.get_up_keycode():
+    if event.keysym == "Up":
         utilities.update_position_by_tag(canvas, tag=active_tag, x=0, y=-distance)
-    elif event.keycode == keycodes.get_down_keycode():
+    elif event.keysym == "Down":
         utilities.update_position_by_tag(canvas, tag=active_tag, x=0, y=distance)
-    elif event.keycode == keycodes.get_left_keycode():
+    elif event.keysym == "Left":
         utilities.update_position_by_tag(canvas, tag=active_tag, x=-distance, y=0)
-    elif event.keycode == keycodes.get_right_keycode():
+    elif event.keysym == "Right":
         utilities.update_position_by_tag(canvas, tag=active_tag, x=distance, y=0)
     else:
-        print(event.keycode)
+        print("Didn't know how to deal with:", event.keysym)
 
-canvas.bind(MOUSE_CLICK, make_circle) 
+canvas.bind(MOUSE_CLICK, make_circle)
 canvas.bind(KEY_PRESS, move_circle)
 canvas.bind(RIGHT_CLICK, select_circle)
 
@@ -83,6 +82,6 @@ canvas.bind(RIGHT_CLICK, select_circle)
 # NOTE: canvas.focus_set() is critical to making the keyboard functions work:
 canvas.focus_set()
 
-########################## YOUR CODE ABOVE THIS LINE ############################## 
+########################## YOUR CODE ABOVE THIS LINE ##############################
 # makes sure the canvas keeps running:
 canvas.mainloop()

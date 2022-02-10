@@ -14,17 +14,15 @@ canvas.focus_set()
 ########################## YOUR CODE BELOW THIS LINE ##############################
 KEY_PRESS = '<Key>'
 
-
 def move_creature(event):
-    print(event.keycode)
+    print(event.keysym)
+
+creature.make_creature(canvas, (200, 200), size=150, my_tag='creature_1', my_fill='white')
 
 
-creature.make_creature(canvas, (200, 200), size=150, tag='creature_1', fill='white')
+canvas.bind(KEY_PRESS, move_creature)
 
-
-canvas.bind(KEY_PRESS, move_creature) 
-
-########################## YOUR CODE ABOVE THIS LINE ############################## 
+########################## YOUR CODE ABOVE THIS LINE ##############################
 
 # makes sure the canvas keeps running:
 canvas.mainloop()

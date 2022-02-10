@@ -66,14 +66,16 @@
     Tutorial Starter Files <i class="fas fa-download"></i>
 </a></p>
 
-<p>The goal of this tutorial is to get you more comfortable with event handlers, and in particular the click, drag, and keyboard event handlers. Please complete the following exercises:</p>
+<p>The goal of this tutorial is to get you more comfortable with event handlers which we’ll talk about in Lessons 15 and 16, and in particular the click, drag, and keyboard event handlers. The DEMO files from <a href="../lectures/week06-lecture03">Lesson 15</a> will definitely be helpful.</p>
+
+<p>Please complete the following exercises:</p>
 
 <h2 id="1-add-a-creature-when-you-click-on-the-canvas">1. Add a creature when you click on the canvas</h2>
 <p>Open <code class="highlighter-rouge">01_click_to_add_creature.py</code> and complete the following tasks:</p>
 <ol>
   <li>modify the <code class="highlighter-rouge">add_new_creature</code> function so that it adds a new creature wherever the user clicks. Make the size and color of the creature random.</li>
   <li>When you’re done, add the following line to your program right below your MOUSE_CLICK event handler:<br /><br /><strong><code class="highlighter-rouge">canvas.bind(MOUSE_DRAG, add_new_creature)</code></strong> <br /><br />Now run your program again, and notice that your <code class="highlighter-rouge">add_new_creature</code> function is invoked when you either click or drag.</li>
-  <li>Finally, replace the smiley face <code class="highlighter-rouge">make_creature</code> function with *your creature. To do this, copy your creature function (and any relevant helper functions) into <code class="highlighter-rouge">creature.py</code> and then make any necessary modifications to the <code class="highlighter-rouge">add_new_creature</code> function.</li>
+  <li>Finally, replace the smiley face <code class="highlighter-rouge">make_creature</code> function with *your creature. To do this, copy your creature function (and any relevant helper functions) into <code class="highlighter-rouge">creature.py</code> and then make any necessary modifications to the <code class="highlighter-rouge">add_new_creature</code> function (hint: you may need to change the parameter names, particularly for your optional inputs).</li>
 </ol>
 
 <h2 id="2-move-your-creature-when-you-press-the-i-j-k-and-m-keys">2. Move your creature when you press the i, j, k, and m keys</h2>
@@ -86,11 +88,8 @@
 </ol>
 
 <blockquote class="blockquote-no-margin">
-  <p><strong>NOTES:</strong></p>
-  <ol>
-    <li>In order for your Canvas to listen for keyboard events, you must invoke the <strong><code class="highlighter-rouge">canvas.focus_set()</code></strong> method after you invoke <code class="highlighter-rouge">canvas.pack()</code> (at the top of your program). Without <strong><code class="highlighter-rouge">canvas.focus_set()</code></strong>, your keyboard events will not fire.</li>
-    <li>Also, the keyboard bindings for a Mac and a Windows are different. So in order for your program to work, you’ll need to make sure that you learn what the correct keyboard codes are for your operating system. Do do this, simply run your program, press a key, and see which code prints to the screen.</li>
-  </ol>
+  <p><strong>NOTES:</strong>
+In order for your Canvas to listen for keyboard events, you must invoke the <strong><code class="highlighter-rouge">canvas.focus_set()</code></strong> method after you invoke <code class="highlighter-rouge">canvas.pack()</code> (at the top of your program). Without <strong><code class="highlighter-rouge">canvas.focus_set()</code></strong>, your keyboard events will not fire.</p>
 </blockquote>
 
 <h2 id="3-select-which-creature-to-move-with-the-keyboard">3. Select which creature to move with the keyboard</h2>

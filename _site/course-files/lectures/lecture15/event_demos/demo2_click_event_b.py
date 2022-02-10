@@ -29,16 +29,21 @@ canvas.create_text(
     text='Click anywhere add a creature', 
     font=("Purisa", 32)
 )
+
 def make_creature_from_click(event):
-    width = random.uniform(40, 150)
-    color = random.choice([
-        'white', 'yellow', 'blue', 'pink'
-    ])
+
+    # use the random module to pick a random number between 40 and 150
+    a_width = random.uniform(40, 150)
+
+    # use the random module to pick a random color from a list of colors
+    a_color = random.choice(['white', 'yellow', 'blue', 'pink'])
+
+    # create a creature at the place the person clicked with 
     helpers.make_creature(
         canvas,
         (event.x, event.y),
-        width, # random width
-        fill=color
+        a_width,
+        fill=a_color
     )
 
 canvas.bind(MOUSE_CLICK, make_creature_from_click)  # add event handler

@@ -16,9 +16,9 @@ canvas.pack()
 ########################## YOUR CODE BELOW THIS LINE ##############################
 
 # sample code to make a creature:
-helpers.make_creature(canvas, (200, 200), fill='white')
+helpers.make_creature(canvas, (200, 200), my_fill='white')
 
-########################## YOUR CODE ABOVE THIS LINE ############################## 
+########################## YOUR CODE ABOVE THIS LINE ##############################
 
 # makes sure the canvas keeps running:
 canvas.mainloop()

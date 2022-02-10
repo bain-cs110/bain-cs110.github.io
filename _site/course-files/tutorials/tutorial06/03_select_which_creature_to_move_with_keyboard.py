@@ -22,18 +22,18 @@ def select_creature(event):
 def move_creature(event):
     # update this code so that the code moves the creature who has just
     # been selected by the user.
-    print(event.keycode)
+    print(event.keysym)
     utilities.update_position_by_tag(canvas, 'creature_1', x=10, y=0)
 
 
-creature.make_creature(canvas, (150, 200), size=100, tag='creature_1')
-creature.make_creature(canvas, (350, 200), size=100, tag='creature_2')
+creature.make_creature(canvas, (150, 200), size=100, my_tag='creature_1')
+creature.make_creature(canvas, (350, 200), size=100, my_tag='creature_2')
 
 
-canvas.bind(KEY_PRESS, move_creature) 
-canvas.bind(MOUSE_CLICK, select_creature) 
+canvas.bind(KEY_PRESS, move_creature)
+canvas.bind(MOUSE_CLICK, select_creature)
 
-########################## YOUR CODE ABOVE THIS LINE ############################## 
+########################## YOUR CODE ABOVE THIS LINE ##############################
 
 # makes sure the canvas keeps running:
 canvas.mainloop()

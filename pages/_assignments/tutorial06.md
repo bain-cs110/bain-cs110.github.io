@@ -3,7 +3,7 @@ layout: assignment-two-column
 title: Event Handlers
 type: tutorial
 abbreviation: Tutorial 6
-draft: 1
+draft: 0
 num: 4
 points: 3
 due_date: 2022-02-16
@@ -14,13 +14,15 @@ due_date: 2022-02-16
     Tutorial Starter Files <i class="fas fa-download"></i>
 </a>
 
-The goal of this tutorial is to get you more comfortable with event handlers, and in particular the click, drag, and keyboard event handlers. Please complete the following exercises:
+The goal of this tutorial is to get you more comfortable with event handlers which we'll talk about in Lessons 15 and 16, and in particular the click, drag, and keyboard event handlers. The DEMO files from [Lesson 15](../lectures/week06-lecture03) will definitely be helpful.
+
+Please complete the following exercises:
 
 ## 1. Add a creature when you click on the canvas
 Open `01_click_to_add_creature.py` and complete the following tasks:
 1. modify the `add_new_creature` function so that it adds a new creature wherever the user clicks. Make the size and color of the creature random.
 2. When you're done, add the following line to your program right below your MOUSE_CLICK event handler:<br><br>**`canvas.bind(MOUSE_DRAG, add_new_creature)`** <br><br>Now run your program again, and notice that your `add_new_creature` function is invoked when you either click or drag.
-3. Finally, replace the smiley face `make_creature` function with *your creature. To do this, copy your creature function (and any relevant helper functions) into `creature.py` and then make any necessary modifications to the `add_new_creature` function.
+3. Finally, replace the smiley face `make_creature` function with *your creature. To do this, copy your creature function (and any relevant helper functions) into `creature.py` and then make any necessary modifications to the `add_new_creature` function (hint: you may need to change the parameter names, particularly for your optional inputs).
 
 
 ## 2. Move your creature when you press the i, j, k, and m keys
@@ -32,8 +34,7 @@ Open `02_move_creature_with_keyboard.py` and complete the following tasks:
 
 {:.blockquote-no-margin}
 > **NOTES:**
-> 1. In order for your Canvas to listen for keyboard events, you must invoke the **`canvas.focus_set()`** method after you invoke `canvas.pack()` (at the top of your program). Without **`canvas.focus_set()`**, your keyboard events will not fire.
-> 2. Also, the keyboard bindings for a Mac and a Windows are different. So in order for your program to work, you'll need to make sure that you learn what the correct keyboard codes are for your operating system. Do do this, simply run your program, press a key, and see which code prints to the screen.
+> In order for your Canvas to listen for keyboard events, you must invoke the **`canvas.focus_set()`** method after you invoke `canvas.pack()` (at the top of your program). Without **`canvas.focus_set()`**, your keyboard events will not fire.
 
 ## 3. Select which creature to move with the keyboard
 In the third exercise, you are going to use a global variable to track which creature your keyboard will control. To do this, you will combine the use of the click event handler and the keyboard event handlers.

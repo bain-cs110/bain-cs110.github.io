@@ -8,19 +8,18 @@ gui.title('Circle')
 canvas = Canvas(gui, width=500, height=500)
 canvas.pack()
 
-def make_rect(canvas, center, radius, color='white', tag=None, stroke_width=1, outline=None):
+def make_rect(canvas, center, radius, my_color='white', my_tag=None, stroke_width=1, outline=None):
     x, y = center
     canvas.create_rectangle(
         [ x - radius, y - radius, x + radius, y + radius ],
-        fill=color,
+        fill=my_color,
         width=stroke_width,
-        tags=tag,
+        tags=my_tag,
         outline=outline
     )
 ########################## YOUR CODE BELOW THIS LINE ##############################
 
 palette = ['#f0a202', '#f18805', '#d95d39', '#0e1428', '#7b9e89']
-
 
 # first: create all of the squares:
 for i in range(0, 100):
@@ -28,13 +27,13 @@ for i in range(0, 100):
     y = random.randint(0, 500)
     radius = random.randint(1, 30)
     fill = random.choice(palette)
-    tag_name = 'sq_' + str(i) # give each square a unique tag
-    make_rect(canvas, (x, y), radius, color=fill, tag=tag_name)
+    tag_name = 'square_' + str(i) # give each square a unique tag
+    make_rect(canvas, (x, y), radius, my_color=fill, my_tag=tag_name)
     gui.update()
     time.sleep(0.001)
 
 tags_of_squares_i_want_to_animate = [
-    'sq_97', 'sq_98', 'sq_99'
+    'square_97', 'square_98', 'square_99'
 ]
 # if you later want to animate anything:
 while True:
@@ -45,7 +44,7 @@ while True:
 
 
 
-########################## YOUR CODE ABOVE THIS LINE ############################## 
+########################## YOUR CODE ABOVE THIS LINE ##############################
 
 # makes sure the canvas keeps running:
 canvas.mainloop()

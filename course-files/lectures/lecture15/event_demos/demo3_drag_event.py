@@ -22,11 +22,13 @@ canvas.pack()
 
 ########################## YOUR CODE BELOW THIS LINE ##############################
 MOUSE_DRAG = '<B1-Motion>'
+
 canvas.create_text(
     (window_width / 2, window_height / 2), 
     text='Drag to create circles', 
     font=("Purisa", 32)
 )
+
 def make_circle(event):
     utilities.make_circle(
         canvas,
