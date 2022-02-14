@@ -13,9 +13,9 @@ slides:
      url: https://docs.google.com/presentation/d/1yDfVwWYBaWm8iWbKUJMPoliZf28SxeeZ2MV7gzujtGw/edit?usp=sharing
 exercise_url: "lecture15.zip"
 videos:
-   - title: "Live Lecture (Not Yet Posted)"
-     url:
-     duration: "50:00"
+   - title: "Live Lecture"
+     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d59f0e7b-1694-4269-938d-adf6016a956f&start=488
+     duration: "42:00"
      live: 1
 ---
 
