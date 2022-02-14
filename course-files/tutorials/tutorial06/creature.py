@@ -10,7 +10,7 @@ def make_creature(canvas, center, size=100, my_tag='creature', my_fill='lightgra
 
     # IMPORTANT that I'm tagging each of the shapes that makes up my "make_creature"
     # with the tag that the user passed in:
-    utilities.make_circle(canvas, center, radius, color=my_fill, tag=tag)
+    utilities.make_circle(canvas, center, radius, color=my_fill, tag=my_tag)
     utilities.make_oval(canvas, left_eye_pos, eye_width, eye_height, color='black', tag=my_tag)
     utilities.make_oval(canvas, right_eye_pos, eye_width, eye_height, color='black', tag=my_tag)
     utilities.make_line(canvas, [
