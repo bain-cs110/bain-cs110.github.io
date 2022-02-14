@@ -1,27 +1,22 @@
 ---
 layout: module
-title: Working with the Terminal / Command Prompt
+title: More on Events and Listeners
 description:
-    - working on the command line
+    - Animating creatures
     - introduction to PIP
 type: lecture
-draft: 1
+draft: 0
 num: 16
 due_date: 2022-02-14
 slides:
-   - title: "Intro to the Command Line & PIP"
-     url:
+   - title: "Handling User Input & Event Handlers"
+     url: https://docs.google.com/presentation/d/1yDfVwWYBaWm8iWbKUJMPoliZf28SxeeZ2MV7gzujtGw/edit?usp=sharing
+exercise_url: "lecture15.zip"
 videos:
    - title: "Live Lecture (Not Yet Posted)"
      url:
      duration: "50:00"
      live: 1
-
-include_pages:
-    - extras/command_line.md
-    - extras/windows_python_path.md
-
-exercise_url: "lecture16.zip"
 ---
 
-Today in lecture, we will learn how to work with the Terminal (Mac) or Command Prompt (Windows) in order to (a) run python files and (b) install third-party python modules/packages using PIP. There are no pre-recorded videos today.
+Today in lecture, we'll continue our discussion of Events and Handlers.
