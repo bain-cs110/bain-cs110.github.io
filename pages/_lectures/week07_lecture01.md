@@ -3,7 +3,6 @@ layout: module
 title: More on Events and Listeners
 description:
     - Animating creatures
-    - introduction to PIP
 type: lecture
 draft: 0
 num: 16

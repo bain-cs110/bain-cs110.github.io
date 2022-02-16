@@ -18,16 +18,16 @@ def show_page():
             <body>
                 <h1>{my_title}</h1>
                 <p>{quote_of_the_day}</p>
-                <img src="{seamus_url}" 
+                <img src="{pets_url}" 
                     style="border: solid {border_width}px {border_color};" />
             </body>
         </html>
     '''
-    base_url = 'https://eecs110.github.io/assets/images/lectures/'
-    seamus_pics = [
-        'seamus.jpg',
-        'seamus1.jpg',
-        'seamus2.jpg'
+    base_url = 'https://nu-cs110.github.io/assets/images/lectures/'
+    pets_pics = [
+        'pets_1.jpg',
+        'pets_2.jpg',
+        'pets_3.jpg'
     ]
     quotes = (
         '“We May Encounter Many Defeats But We Must Not Be Defeated.” – Maya Angelou',
@@ -41,7 +41,7 @@ def show_page():
     return template.format(
         my_title='Hey There, CS110!',
         quote_of_the_day=random.choice(quotes),
-        seamus_url=base_url + random.choice(seamus_pics) + '?a=b',
+        pets_url=base_url + random.choice(pets_pics) + '?a=b',
         border_width=random.randint(5, 20),
         border_color=random.choice(['hotpink', 'red', 'blue', 'orange'])
     )

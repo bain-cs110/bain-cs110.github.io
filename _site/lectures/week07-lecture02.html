@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Files and Strings</title>
+    <title>Command Line and PIP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="/assets/main.css">
     
@@ -43,12 +43,10 @@
                 
 
     
-        <h1><a href="../#l17">Lessons</a> > 17. Files and Strings</h1>
+        <h1><a href="../#l17">Lessons</a> > 17. Command Line and PIP</h1>
     
  
-                <p>Today, you will be learning to work with files –  including reading them, writing them, and appending to them. Because many file formats involve text, you will also be learning to work with some common string functions.</p>
-
-<p>One of the most important skills of a programmer is understanding how to do data manipulation across a variety of contexts and formats. Given that a vast quantity of data is stored in files, databases, etc., learning to access, manipulate, and write data in various formats for subsequent storage is a critical programming skill.</p>
+                <p>Today in lecture, we will learn how to work with the Terminal (Mac) or Command Prompt (Windows) in order to (a) run python files and (b) install third-party python modules/packages using PIP.</p>
 
 
 <h2 id="do-now">Today's Activities</h2>
@@ -69,7 +67,7 @@
     <ol>
     
         <li>
-            <a href="" target="_blank">Live Lecture (Not Yet Posted)</a>
+            <a href="https://docs.google.com/presentation/d/1irt-rNu7f6yekx5-Yn3c9syxtzWnR3XRU0Q7o1bYtBw/edit?usp=sharing" target="_blank">Intro to the Command Line</a>
         </li>
     
     </ol>
@@ -119,68 +117,167 @@
 
 
 
-    <h3 id="readings">4. Review / Study the Supplemental Materials</h3>
-    <p>
-        Note: these readings / videos are suggested for additional context / 
-        examples, but not required.
-    </p>
-    <ol class="readings">
 
-    
-    
-        <li>
-    
-        Severance
-    
-    
+
+
+
+
+
+
+
     
         
-            Ch6: Strings.
+        <h3 id="4-review-the-command-line-cheatsheet">4. Review the Command Line Cheatsheet</h3>
+
+<p>For your convenience, we have made you a little cheatsheet to help you get familiar with the command line. <a href="https://tutorial.djangogirls.org/en/intro_to_command_line/" target="_blank">Django Girls</a> is a good resource. Note: you will not be tested on this or anything, but navigating the command line can be useful.</p>
+
+<table class="instructions">
+  <thead>
+    <tr>
+      <th> </th>
+      <th>DOS (Windows)</th>
+      <th>Shell (Mac / Linux)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>What directory am I in?</strong></td>
+      <td><code class="highlighter-rouge">&gt; cd</code></td>
+      <td><code class="highlighter-rouge">$ pwd</code></td>
+    </tr>
+    <tr>
+      <td><strong>Change directories</strong></td>
+      <td><code class="highlighter-rouge">&gt; cd </code></td>
+      <td><code class="highlighter-rouge">$ cd </code></td>
+    </tr>
+    <tr>
+      <td><strong>List files &amp; directories</strong></td>
+      <td><code class="highlighter-rouge">&gt; dir</code><br /> <code class="highlighter-rouge">&gt; tree  # lists subdirectories</code></td>
+      <td><code class="highlighter-rouge">$ ls</code><br /><code class="highlighter-rouge">$ ls -l</code></td>
+    </tr>
+    <tr>
+      <td><strong>Navigate to parent directory</strong></td>
+      <td><code class="highlighter-rouge">&gt; cd ..</code></td>
+      <td><code class="highlighter-rouge">$ cd  ..</code></td>
+    </tr>
+    <tr>
+      <td><strong>Navigate into child directory</strong></td>
+      <td><code class="highlighter-rouge">&gt; cd cs110</code></td>
+      <td><code class="highlighter-rouge">$ cd cs110</code></td>
+    </tr>
+    <tr>
+      <td><strong>Navigate into descendant directory</strong></td>
+      <td><code class="highlighter-rouge">&gt; cd lectures\lecture_03</code></td>
+      <td><code class="highlighter-rouge">$ cd lectures/lecture_03</code></td>
+    </tr>
+    <tr>
+      <td><strong>Navigate to sibling directory</strong></td>
+      <td><code class="highlighter-rouge">&gt; cd ..\lecture_02</code></td>
+      <td><code class="highlighter-rouge">$ cd  ../lecture_02</code></td>
+    </tr>
+    <tr>
+      <td><strong>Navigate to ancestor directory</strong></td>
+      <td><code class="highlighter-rouge">&gt; cd ..\..\</code></td>
+      <td><code class="highlighter-rouge">$ cd  ../../</code></td>
+    </tr>
+    <tr>
+      <td><strong>Navigate to home directory</strong></td>
+      <td> </td>
+      <td><code class="highlighter-rouge">$ cd</code></td>
+    </tr>
+    <tr>
+      <td><strong>Command history</strong></td>
+      <td><code class="highlighter-rouge">&gt; doskey /HISTORY</code></td>
+      <td><code class="highlighter-rouge">$ history</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Other optional commands you may find useful…</p>
+
+<table class="instructions">
+  <thead>
+    <tr>
+      <th> </th>
+      <th>DOS (Windows)</th>
+      <th>Shell (Mac / Linux)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Create a new file</strong></td>
+      <td><code class="highlighter-rouge">&gt; echo . &gt; my_file.txt</code></td>
+      <td><code class="highlighter-rouge">$ echo . &gt; my_file.txt</code><br /> <code class="highlighter-rouge">$ touch my_file.txt</code></td>
+    </tr>
+    <tr>
+      <td><strong>Append to a file</strong></td>
+      <td><code class="highlighter-rouge">&gt; echo "some text" &gt;&gt; my_file.txt</code></td>
+      <td><code class="highlighter-rouge">$ echo "some text" &gt; my_file.txt</code></td>
+    </tr>
+    <tr>
+      <td><strong>Save history to a file</strong></td>
+      <td><code class="highlighter-rouge">&gt; doskey /HISTORY &gt; my_history.txt</code></td>
+      <td><code class="highlighter-rouge">$ history &gt; my_history.txt</code></td>
+    </tr>
+    <tr>
+      <td><strong>Move a file</strong></td>
+      <td><code class="highlighter-rouge">&gt; move my_history.txt Documents/.</code></td>
+      <td><code class="highlighter-rouge">$ mv my_history.txt Documents/.</code></td>
+    </tr>
+    <tr>
+      <td><strong>Make a folder</strong></td>
+      <td><code class="highlighter-rouge">&gt; mkdir my_folder</code></td>
+      <td><code class="highlighter-rouge">$ mkdir my_folder</code></td>
+    </tr>
+    <tr>
+      <td><strong>Delete a file</strong></td>
+      <td><code class="highlighter-rouge">&gt; del my_history.txt</code></td>
+      <td><code class="highlighter-rouge">$ rm my_history.txt</code></td>
+    </tr>
+    <tr>
+      <td><strong>Delete a folder</strong></td>
+      <td><code class="highlighter-rouge">&gt; rmdir my_folder</code></td>
+      <td><code class="highlighter-rouge">$ rm -r my_folder</code></td>
+    </tr>
+  </tbody>
+</table>
+
         
     
-    
-    
-        <br>
-        <a href="https://www.py4e.com/html3/06-strings" target="_blank">reading</a> &bull;
-        <a href="https://www.py4e.com/lessons/strings" target="_blank">video</a> 
-    
-    
-</li> 
-    
-
-    
-    
-        <li>
-    
-        Severance
-    
-    
-    
         
-            Ch7: Files.
+        <h3 id="5-if-you-have-a-windows-machine">5. If you have a Windows machine</h3>
+<p>If you have a Windows Machine, there are (at least) two ways to ensure that python3 and PIP work when you run them from the command prompt. Note: this is an either -or- thing (e.g. you shouldn’t have to do Option 2 unless Option 1 doesn’t work).</p>
+
+<h4 id="option-1-run-the-installer-again">Option 1: Run the Installer Again</h4>
+<p>In our opinion, the easiest way to get python to work on your command prompt is to run the Python3 installer again and make sure that the checkbox at the very bottom that says Add Python 3.x (the screenshots show Python 3.7 but this applies to all Python installations) to PATH is checked:</p>
+
+<p><img class="large frame" src="/assets/images/lectures/01-command-prompt-windows-installer.png" /></p>
+
+<h4 id="option-2-go-to-system-preferences-and-manually-add-the-path">Option 2: Go to System Preferences and Manually Add the PATH</h4>
+
+<p>To go this route, you will complete three steps:</p>
+<h5 id="step-1">Step 1</h5>
+<p>Search for Edit the System Environment Variables (see below):</p>
+
+<p><img class="medium frame" src="/assets/images/lectures/02-environment-variables.png" /></p>
+
+<h5 id="step-2">Step 2</h5>
+<p>You will then click the Environment Variables button in the Control Panel:</p>
+
+<p><img class="small frame" src="/assets/images/lectures/03-environment-variables.png" /></p>
+
+<h5 id="step-3">Step 3</h5>
+
+<p>Finally, you will add the \Scripts folder in their Python installation to their path (see 3rd screenshot). This looks different on everyone’s machine, so you will have to make sure that this PATH corresponds to your Python3 installation. This screenshot below is from one of the course TAs, but yours will look different.</p>
+
+<p><img class="medium frame" src="/assets/images/lectures/04-environment-variables.png" /></p>
+
+<h4 id="option-3">Option 3:</h4>
+
+<p>Alternatively, you can avoid the command line entirely by using the Python script from Lecture 17 called <code class="highlighter-rouge">install_python_packages.py</code>. Open that in IDLE and run it. It will ask for you to input the name of the package you want to download and then will take care of running the command line commands for you automatically.</p>
+
         
     
-    
-    
-        <br>
-        <a href="https://www.py4e.com/html3/07-files" target="_blank">reading</a> &bull;
-        <a href="https://www.py4e.com/lessons/files" target="_blank">video</a> 
-    
-    
-</li> 
-    
-
-</ol>
- 
-    
-
-
-
-
-
-
-
-
 
 
             </article>  

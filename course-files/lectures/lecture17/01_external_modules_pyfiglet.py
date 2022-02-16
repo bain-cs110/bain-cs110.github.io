@@ -1,7 +1,7 @@
 '''
-NOTE: This code requires a third party module called pyfiglet. 
+NOTE: This code requires a third party module called pyfiglet.
 You will need to install this module from the command line before
-this code can run. To do it, open up the Terminal (Mac) or Command 
+this code can run. To do it, open up the Terminal (Mac) or Command
 Prompt (Windows) and type the following command (from any directory):
 
 $ pip3 install pyfiglet

@@ -9,5 +9,5 @@ results = wikipedia.search(term)
 print(results)
 print(*results, sep='\n\n')
 
-page = wikipedia.page('Northwestern_University')
+page = wikipedia.page('Chicago')
 print(page.content)
