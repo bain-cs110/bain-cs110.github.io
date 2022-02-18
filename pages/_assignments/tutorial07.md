@@ -9,7 +9,7 @@ abbreviation: Tutorial 7
 draft: 0
 num: 7
 points: 3
-due_date: 2021-11-10
+due_date: 2022-2-23
 ---
 
 <style>
@@ -22,10 +22,10 @@ due_date: 2021-11-10
 
 <a class="nu-button" href="/course-files/tutorials/tutorial07.zip" target="_blank">
     Tutorial Starter Files <i class="fas fa-download"></i>
-</a> 
+</a>
 
 
-In today's tutorial, you're going to calculate some statistics for the Boston Marathon. To do this, you will open some of the files in the `boston_marathon` directory, loop through each line in the file, and perform some basic summary statistics. 
+In today's tutorial, you're going to calculate some statistics for the Boston Marathon. To do this, you will open some of the files in the `boston_marathon` directory, loop through each line in the file, and perform some basic summary statistics.
 
 Please write a program to calculate the following statistics. You can write each program as a separate file, or do all of the calculations in a single file. Up to you.
 
@@ -39,6 +39,6 @@ Please write a program to calculate the following statistics. You can write each
 3. What was the average **time** of people who completed the Boston Marathon in 2015?
     * Hint: you will have to parse the total time into a number that can be summed. So, you may want to convert all of the times to seconds.
 
-4. What was the average **time** for **Kenyan** runners who completed the Boston Marathon in 2015? 
+4. What was the average **time** for **Kenyan** runners who completed the Boston Marathon in 2015?
 
 5. ***[If Time]*** What was the average time for female runners in their 30s in 2015?

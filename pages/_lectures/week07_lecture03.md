@@ -15,7 +15,7 @@ Note that Quiz 2 is cumulative, and will include what we've already covered re: 
 ### Review Session
 * Details in <a href="https://docs.google.com/presentation/d/1irt-rNu7f6yekx5-Yn3c9syxtzWnR3XRU0Q7o1bYtBw/edit?usp=sharing">Lecture 17 slides</a>
 * <a href="https://docs.google.com/presentation/d/1C_Yplf07J8iQt4Z8xEWOi1pfbuvLDJ76TeMUnoTOAn4/edit?usp=sharing">Slides from Review Session are here</a>
-* <a href="">Review Session Recording (on Zoom; will be available shortly)</a>
+* <a href="https://northwestern.zoom.us/rec/share/EUc022mG164Sl9Qm6cEyOS5QQeFMrgipPoB3hi2Sc7kqTkpAIxwbbPvf1Jc4vIhF.S0eDXxbmSvBiEpxU?startTime=1645138837000">Review Session Recording (on Zoom)</a>
 
 ### Review Documents
 * <a href="https://docs.google.com/document/d/1prORYwLjNb5i6hKV3nZGkswaW3eHermLwR_wBATovrQ/edit?usp=sharing" target="_blank">Study Guide</a>
