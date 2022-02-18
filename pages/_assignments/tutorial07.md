@@ -9,7 +9,7 @@ abbreviation: Tutorial 7
 draft: 0
 num: 7
 points: 3
-due_date: 2022-2-23
+due_date: 2022-02-23
 ---
 
 <style>
