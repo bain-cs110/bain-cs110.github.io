@@ -35,6 +35,8 @@ Please write a program to calculate the following statistics. You can write each
 
 2. What was the average **age** of someone completing the Boston Marathon in 2015?
     * Hint: you may need to use try/except for any messy / unexpected data.
+    * For an example of try/catch, see the <a href="https://docs.google.com/presentation/d/1hwSaQzYe0EDRnbQgoGUW2tcHhwZXw-gidLDplvPIXwE/edit#slide=id.g11481ce3057_0_166">end of the lecture slides</a>
+
 
 3. What was the average **time** of people who completed the Boston Marathon in 2015?
     * Hint: you will have to parse the total time into a number that can be summed. So, you may want to convert all of the times to seconds.
