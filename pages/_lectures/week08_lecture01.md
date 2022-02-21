@@ -21,8 +21,8 @@ readings:
     url: https://www.py4e.com/html3/07-files
     video_url: https://www.py4e.com/lessons/files
 videos:
-   - title: "Live Lecture (not yet posted)"
-     url:
+   - title: "Live Lecture"
+     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d1d9a91c-5703-42aa-953a-adf6016a95b2
      duration: "50:00"
      live: 1
 exercise_url: "lecture18.zip"
