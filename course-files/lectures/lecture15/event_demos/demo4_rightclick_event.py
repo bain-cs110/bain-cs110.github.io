@@ -1,5 +1,5 @@
 '''
-Documentation: 
+Documentation:
   * tkinter events: https://www.python-course.eu/tkinter_events_binds.php
   * Canvas: https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/canvas.html
   * Other Canvas methods: https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/canvas-methods.html
@@ -23,15 +23,15 @@ canvas.pack()
 MOUSE_CLICK = '<Button-1>'
 RIGHT_CLICK = '<Button-2>'
 canvas.create_text(
-    (window_width / 2, window_height / 2), 
-    text='Click to create circle. Right-click to remove circle', 
+    (window_width / 2, window_height / 2),
+    text='Click to create circle. Right-click to remove circle',
     font=("Purisa", 32)
 )
 def make_circle(event):
     utilities.make_circle(
         canvas,
         (event.x, event.y),
-        20, 
+        20,
         color='hotpink'
     )
 
@@ -43,7 +43,7 @@ def remove_circle(event):
 canvas.bind(MOUSE_CLICK, make_circle)
 canvas.bind(RIGHT_CLICK, remove_circle)
 
-########################## YOUR CODE ABOVE THIS LINE ############################## 
+########################## YOUR CODE ABOVE THIS LINE ##############################
 
 # makes sure the canvas keeps running:
 canvas.mainloop()
