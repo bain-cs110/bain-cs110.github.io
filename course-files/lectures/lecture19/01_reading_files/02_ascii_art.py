@@ -11,23 +11,24 @@ canvas.pack()
 # helper function that draws a grid.
 make_grid(canvas, 650, 600)
 
-def make_row(canvas:Canvas, top_left:tuple, colors:list, palette, pixel:int=10):
+
+def make_row(canvas: Canvas, top_left: tuple, colors: list, palette, pixel: int = 10):
     x, y = top_left
     for num in colors:
         if num:
             color = palette[num]
-            make_square(canvas, (x, y), pixel, fill_color=color, outline_color='#000')
+            make_square(canvas, (x, y), pixel,
+                        fill_color=color, outline_color='#000')
         x += pixel
 
 
 def draw_pixel_art(
-        canvas:Canvas,
-        top_left:tuple,
-        file_name:str,
-        pixel:int=10,
-        palette=(None, '#75B9BE', 'black', 'white')
-    ):
-
+            canvas: Canvas,
+            top_left: tuple,
+            file_name: str,
+            pixel: int = 10,
+            palette=(None, '#75B9BE', 'black', 'white')
+        ):
     '''
     CHALLENGE:
     1. Open and read the file
@@ -42,11 +43,13 @@ def draw_pixel_art(
     '''
 
 
-
 # Invoke your function:
-draw_pixel_art(canvas, (120, 220), 'heart.csv', pixel=12, palette=(None, '#E0607E', 'black', 'white'))
-draw_pixel_art(canvas, (20, 20), 'flower.csv', palette=(None, 'black', '#FF0000', 'orange', 'yellow', 'white', '#5ec031'))
-draw_pixel_art(canvas, (315, 380), 'frank.csv', pixel=15, palette=(None, 'black', '#5ec031', 'white'))
+draw_pixel_art(canvas, (120, 220), 'heart.csv', pixel=12,
+               palette=(None, '#E0607E', 'black', 'white'))
+draw_pixel_art(canvas, (20, 20), 'flower.csv', palette=(
+    None, 'black', '#FF0000', 'orange', 'yellow', 'white', '#5ec031'))
+draw_pixel_art(canvas, (315, 380), 'frank.csv', pixel=15,
+               palette=(None, 'black', '#5ec031', 'white'))
 
 # draw_pixel_art(canvas, (420, 250), 'heart.csv', pixel=8)
 # draw_pixel_art(canvas, (55, 415), 'flower.csv', pixel=6, palette=(None, 'black', '#FF0000', 'orange', 'yellow', 'white', '#5ec031'))
