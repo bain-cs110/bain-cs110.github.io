@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Make a Recommendation App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    
+
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <h1 class="desktop"><a href="/">CS110: Winter 2022</a></h1>
+    <h2 class="desktop">Intro to Computer Programming with Python</h2>
+    <a class="mobile" href="#">
+        <i class="menu-toggle fas fa-bars"></i>
+    </a>
+    <h1 class="mobile">CS110: Winter 2022</h1>
+</header>
+
+        <nav>
+    <ul>
+        <li ><a href="/syllabus/">Syllabus</a></li>
+        <li ><a href="/" >Schedule</a></li>
+        <li class="active"><a href="/assignments/">Assignments</a></li>
+        <li ><a href="/times-locations/">Calendar</a></li>
+        <li><a href="https://campuswire.com/p/G09D9743D/feed" target="_blank">Campuswire</a></li>
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#project-overview">Project Overview</a></li>
+  <li><a href="#setup-please-read-carefully">Setup: Please Read Carefully</a></li>
+  <li><a href="#option-1-yelp">Option 1: Yelp!</a></li>
+  <li><a href="#option-2-spotity">Option 2: Spotity</a></li>
+  <li><a href="#what-to-turn-in">What to Turn In</a></li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1>
+            <a href="../assignments/">Assignments</a> > 
+            P2: Make a Recommendation App
+        </h1>
+    
+ 
+                <p>
+    
+        Due on Fri, 03/18 @ 11:59PM.
+    
+    
+        40 Points.
+    
+    
+</p>
+
+<p><a class="nu-button" href="/course-files/projects/project02.zip" target="_blank">
+    Project Starter Files <i class="fas fa-download"></i>
+</a></p>
+
+<h2 id="project-overview">Project Overview</h2>
+<p>For the second project, we want you to apply what you’ve learned to build a program that searches, filters, and displays data. Because much of what programmers do involves manipulating and making sense of data for many different purposes, this will likely be a skill that many of you will leverage in the future if you do any kind of data analytics. Moreover, even beyond computer programming, having a more in-depth understanding of how these systems are designed and how they interconnect with one another is relevant to all of us.</p>
+
+<h3 id="your-tasks-are-as-follows">Your tasks are as follows:</h3>
+<ol>
+  <li>Pick one of two themes: music (Spotify) or food (Yelp)</li>
+  <li>Get oriented with the relevant helper modules <a href="/course-files/projects/project02/docs/yelp.html" target="_blank">apis.yelp</a>, <a href="/course-files/projects/project02/docs/spotify.html" target="_blank">apis.spotify</a>, <a href="/course-files/projects/project02/docs/twilio.html" target="_blank">apis.twilio</a>, which will help you interact with the service providers (Yelp, Spotify, and Twilio)</li>
+  <li>Fulfill the requirements of the assignment (described below)</li>
+  <li>Earn up to 8 points extra credit by completing <strong><em>optional</em></strong> enhancements</li>
+  <li>Other logistics:
+    <ul>
+      <li>You are welcome to collaborate in groups of 2 or 3.</li>
+      <li>Please complete the setup before the Thanksgiving holiday (see below).</li>
+      <li>Please start on this assignment <strong>early</strong>: like with anything, you’ll get out of it what you put into it.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="setup-please-read-carefully">Setup: Please Read Carefully</h2>
+<p>You will need to install some dependencies and edit some files before you begin this project:</p>
+
+<h3 id="a-install-the-python-dependencies">A. Install the Python dependencies</h3>
+<p>Open your Terminal (MacOS) or Command Prompt (Windows) and execute the following commands (from any directory):</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip3 <span class="nb">install </span>sendgrid                        <span class="c"># a module to interact with Twilio</span>
+pip3 <span class="nb">install </span>requests                        <span class="c"># a module for querying internet resources</span>
+pip3 <span class="nb">install</span> <span class="nt">--upgrade</span> certifi               <span class="c"># for SSL certificates</span>
+</code></pre></div></div>
+<h3 id="b-download-the-starter-files">B. Download the starter files</h3>
+<p>Click the “Project Starter Files” button above.</p>
+
+<h3 id="c-get-the-api-access-token">C. Get the API access token</h3>
+<p>Download the <a href="https://canvas.northwestern.edu/files/12569656/download?download_frd=1">my_token.py</a> file from Canvas and save it inside of the <code class="highlighter-rouge">apis</code> folder (included in the project starter code).</p>
+
+<h3 id="d-run-the-verification-script">D. Run the verification script</h3>
+<p>Inside the <code class="highlighter-rouge">tests</code> folder, run the <code class="highlighter-rouge">run_verification.py</code> file (either in Idle or in your preferred python IDE).</p>
+
+<p>If you get a message that looks like this…</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>test_token <span class="o">(</span>test_authentication.TestAuthentication<span class="o">)</span> ... ok
+test_get_key <span class="o">(</span>test_authentication.TestAuthentication<span class="o">)</span> ... ok
+test__issue_get_request_only_one <span class="o">(</span>test_spotify.TestSpotify<span class="o">)</span> ...
+ok
+test_execute_business_queries_just_one_simplified <span class="o">(</span>test_yelp.TestYelp<span class="o">)</span> ...
+ok
+test_can_import_sendgrid <span class="o">(</span>test_sendgrid.TestSendgrid<span class="o">)</span> ... ok
+test_can_import_sendgrid_api_module <span class="o">(</span>test_sendgrid.TestSendgrid<span class="o">)</span> ... ok
+
+<span class="nt">----------------------------------------------------------------------</span>
+Ran 6 tests <span class="k">in </span>5.935s <span class="o">(</span><span class="nb">time </span>may vary<span class="o">)</span>
+
+OK
+</code></pre></div></div>
+
+<p>…then you’re ready to begin the project. Otherwise, talk to your TA and they can help you troubleshoot.</p>
+
+<p><strong>Note:</strong> If you have a Mac and encounter a security (SSL) error, please open your finder and navigate to your <code class="highlighter-rouge">Applications &gt; python3.x</code> folder (or whichever python version you have installed). Then, double-click on the <code class="highlighter-rouge">Install Certificates.command</code> file.</p>
+
+<blockquote>
+  <h3 id="important">IMPORTANT</h3>
+  <p>You will be using a number of web data services to complete this assignment, which require the use of API keys (kind of like passwords) that we pay for and manages. Please only use these keys for the course assignments. If you have other app ideas for Twitter, Spotify, Yelp, SendGrid, etc., just register for our own keys and use those. They are all free for low-volume transactions.</p>
+</blockquote>
+
+<h2 id="option-1-yelp">Option 1: Yelp!</h2>
+<p>For option 1, you are going to use the Yelp API to create a restaurant recommendation system. I have created a yelp module for you, located in the apis folder to help you. All of the <code class="highlighter-rouge">apis/yelp.py</code> functions <a href="/course-files/projects/project02/docs/yelp.html" target="_blank">have been documented here</a>. Here is a demo video of how your program should work:</p>
+
+<iframe src="https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=2fe6b4ad-9b52-4c49-8e9a-abc1011320ae&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all" width="720" height="405" style="padding: 0px; border: 1px solid #464646;" frameborder="0" allowfullscreen="" allow="autoplay"></iframe>
+
+<p>Note: this is only one way of implementing this program, and includes some extra credit features. Feel free to do it <strong><em>your way!</em></strong></p>
+
+<p>Please implement the following (5) required features of your restaurant recommendation system:</p>
+
+<h3 id="1-allow-the-user-to-select-among-the-yelp-restaurant-categories">1. Allow the user to select among the Yelp restaurant categories</h3>
+<p>You will give the user the option of selecting one or more restaurant categories that can be used to filter the restaurants. To do this you will do the following:</p>
+
+<ol>
+  <li>Present the user with some subset from the list of available categories (see <code class="highlighter-rouge">yelp.get_categories()</code> for the complete list).</li>
+  <li>Ask the user to select one or more categories and store their selections in a variable called categories (a comma-separated list of categories).</li>
+  <li>Proved the user with a way to either clear out or update their selected categories.</li>
+</ol>
+
+<h3 id="2-allow-the-user-to-set-the-sorting-criteria">2. Allow the user to set the sorting criteria</h3>
+<p>How results are ordered really matters in search. Yelp allows 4 different options for sorting results: <code class="highlighter-rouge">best_match</code>, <code class="highlighter-rouge">rating</code>, <code class="highlighter-rouge">review_count</code>, <code class="highlighter-rouge">distance</code>. Given this, the user should be able to select how they want their results to be filtered.</p>
+
+<h3 id="3-allow-user-to-view-restaurants-that-match-the-selection-criteria">3. Allow user to view restaurants that match the selection criteria</h3>
+<p>Given the user’s selected location, categories, and sorting criteria:</p>
+
+<ol>
+  <li>Retrieve the restaurants, and allow the user to specify an additional keyword before executing the search (see demo).</li>
+  <li>Print the retrieved restaurants to the screen in some coherent format (consider using a pandas dataframe for this).</li>
+</ol>
+
+<h3 id="4-allow-the-user-to-preview-an-individual-restaurant">4. Allow the user to preview an individual restaurant</h3>
+<p>Given the matched restaurants:</p>
+<ol>
+  <li>Allow the user to preview an individual restaurant</li>
+  <li>This should include (a) more detail about the restaurant, and (b) some reviews of the restaurant.</li>
+  <li>Use the <code class="highlighter-rouge">yelp.get_businesses()</code> and <code class="highlighter-rouge">yelp.get_reviews()</code> helper functions to help you.</li>
+</ol>
+
+<h3 id="5-allow-the-user-to-email-a-restaurant-recommendation">5. Allow the user to email a restaurant recommendation</h3>
+<p>After the user has previewed a restaurant, ask them if they want to email the restaurant recommendation so someone. If so, email them a link to the restaurant and some details about it. Use the <code class="highlighter-rouge">twilio.send_mail</code> function to help you.</p>
+
+<h3 id="extra-credit-options-up-to-8-points">Extra Credit Options (Up to 8 Points)</h3>
+
+<h4 id="2-points-allow-the-user-to-select-a-location">[2 Points] Allow the user to select a location</h4>
+<p>You will give the user the option of selecting a location to search (which defaults to Evanston, IL). The user should be able to update this location whenever they want. Once it is set, this location will be used to filter their restaurants (Yelp requires a location).</p>
+
+<h4 id="3-points-allow-the-user-to-set-the-price-filters">[3 Points] Allow the user to set the price filters</h4>
+<p>You will give the user the option of selecting one or more price filters. The way the filters work: <code class="highlighter-rouge">1=$</code>, <code class="highlighter-rouge">2=$$</code>, <code class="highlighter-rouge">3=$$$</code>, and <code class="highlighter-rouge">4=$$$$</code>. So, if I only wanted to see $ and $$, my price filter would be: price_filter=1,2. Given this, the user should be able to select one or more price filters, and clear out their price filters if they want.</p>
+
+<h4 id="2-points-allow-the-user-to-filter-by-restaurants-that-are-open-now">[2 Points] Allow the user to filter by restaurants that are “open now”</h4>
+<p>Enhance your program by also giving the user the option of specifying only restaurants which are currently open.</p>
+
+<h4 id="3-points-allow-the-user-to-filter-by-restaurants-that-are-hot-and-new">[3 Points] Allow the user to filter by restaurants that are “hot and new”</h4>
+<p>Enhance your program by also giving the user the option of specifying only restaurants which are “hot and new.” See the <a href="https://www.yelp.com/developers/documentation/v3/business_search" target="_blank">Yelp documentation</a> for more info</p>
+
+<h4 id="3-points-extra-credit-generate-an-html-file">[3 Points] Extra Credit: Generate an HTML file</h4>
+<p>Generate an HTML file with the table of recommended restaurants as well as some information about each one. Consider embedding images of the restaurants into the file.</p>
+
+<h4 id="5-points-extra-credit-create-a-map-of-restaurants">[5 Points] Extra Credit: Create a Map of Restaurants</h4>
+<p>Given the HTML file you’ve just generated, figure out how to create a map of all of the restaurant recommendations (using folium).</p>
+
+<h4 id="5-points-incorporate-another-information-source">[5 Points] Incorporate another information source</h4>
+<p>In addition to searching Yelp, try integrate data from Twitter (or some other source) using some of the lecture samples from Week 9. You can earn up to 5 points for each provider that you incorporate.</p>
+
+<h4 id="5-points-figure-out-how-to-attach-the-html-file-to-an-email">[5 Points] Figure out how to attach the HTML file to an email</h4>
+<p>Take a look at <a href="https://stackoverflow.com/questions/40656019/python-sendgrid-send-email-with-pdf-attachment-file" target="_blank">this article</a>.</p>
+
+<h3 id="rubric-40-possible-points">Rubric (40 Possible Points)</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Feature</th>
+            <th>Points</th>
+            <th>Scoring Guidelines</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Main Program Loop</td>
+            <td>5 points</td>
+            <td>
+                <ul>
+                    <li>Loop handles errors (incorrect inputs)</li>
+                    <li>Loop prompts the user for their input</li>
+                    <li>Loop honors user requests</li>
+                    <li>Loop does not exit unless user asks to quit</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Category selection</td>
+            <td>8 points</td>
+            <td>
+                <ul>
+                    <li>Displays the user's selected categories(s) if any</li>
+                    <li>Displays the available Yelp categories from which to choose</li>
+                    <li>Allows user to select among categories</li>
+                    <li>Allows user to clear out selected categories and start over</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Ordering/Sorting Criteria</td>
+            <td>4 points</td>
+            <td>
+                <ul>
+                    <li>Allows user to specify their preferred ordering criteria (best_match, rating, review_count, distance).</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Previewing matching restaurants</td>
+            <td>8 points</td>
+            <td>
+                <ul>
+                    <li>Results honor user’s selected location, categories, and sorting criteria</li>
+                    <li>Allows the user to specify a search keyword</li>
+                    <li>Prints restaurants to the screen in some coherent format (consider using a pandas dataframe for this).</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Previewing individual restaurant</td>
+            <td>8 points</td>
+            <td>
+                <ul>
+                    <li>Allows user to preview an individual restaurant</li>
+                    <li>Includes detail about restaurant</li>
+                    <li>Includes restaurant reviews</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Sends email</td>
+            <td>3 points</td>
+            <td>
+                <ul>
+                    <li>Successfully emails a restaurant recommendation and reviews to a user</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Code Quality</td>
+            <td>3 points</td>
+            <td>
+                <ul>
+                    <li>All functions, variables, and file_names have pneumonic names / are snake case
+                    (up to -2 points)</li>
+                    <li>Code is organized and without unused or redundant code. Please remove commented out code that isn’t running (to help our graders)
+                    (up to -3 points)</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Video</td>
+            <td>1 point</td>
+            <td>
+                <ul>
+                    <li>Your video clearly demonstrates the features you implemented.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Extra credit</td>
+            <td>Up to 8 points</td>
+            <td>
+                <ul>
+                    <li>Students completed various EC options according to the specifications above.</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="option-2-spotity">Option 2: Spotity</h2>
+<p>For option 2, you are going to use the Spotify API to create a music recommendation system. I have created a spotify module for you, located in the apis folder to help you. All of the <code class="highlighter-rouge">apis/spotify.py</code> functions <a href="/course-files/projects/project02/docs/spotify.html" target="_blank">have been documented here</a>. Here is a demo video of how your program should work:</p>
+
+<iframe src="https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=15063a75-c70c-4898-a676-abc10113201e&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all" width="720" height="405" style="padding: 0px; border: 1px solid #464646;" frameborder="0" allowfullscreen="" allow="autoplay"></iframe>
+
+<p>Note: this is only one way of implementing this program, and includes some extra credit features. Feel free to do it <strong><em>your way!</em></strong></p>
+
+<p>Please implement the following (3) required features of your restaurant recommendation system:</p>
+
+<h3 id="1-allow-the-user-to-select-one-or-more-genres-of-music">1. Allow the user to select one or more genres of music</h3>
+<p>You will give the user the option of selecting one or more genres that can be used to “seed” the Spotify song recommendations system. To do this you will do the following:</p>
+<ol>
+  <li>Present the user with a list of available genres using the <code class="highlighter-rouge">spotify.get_genres_abridged()</code> function — feel free to modify it.</li>
+  <li>Ask the user to select one or more genres and store their genre selections in a list variable called “genres”</li>
+</ol>
+
+<h3 id="2-allow-the-user-to-select-one-or-more-artists">2. Allow the user to select one or more artists</h3>
+<p>You will also give the user the option of selecting one or more artists that can also be used to “seed” the Spotify song recommendations system. To do this you will do the following:</p>
+<ol>
+  <li>Provide a way for the user to search for and display artists (use the <code class="highlighter-rouge">spotify.get_artists()</code> function)</li>
+  <li>Provide a way for the user to select the artists they’re interested in and store the corresponding artist objects in a list variable called “artists”</li>
+  <li>Allow the user to either clear out or append artists to their artists list.</li>
+</ol>
+
+<h3 id="3-generate-and-email-song-recommendations">3. Generate and email song recommendations</h3>
+<p>Given the user’s selected genres and artists:</p>
+<ol>
+  <li>Retrieve the recommended tracks using the <code class="highlighter-rouge">spotify.get_similar_tracks()</code> function.</li>
+  <li>Print the retrieved tracks to the screen in some coherent format (consider using a pandas dataframe for this).</li>
+  <li>Ask the user if they want to email the tracks to someone, and if so, send an email of the list of track recommendations. Use the <code class="highlighter-rouge">spotify.get_formatted_tracklist_table_html()</code> function to help you build a nice tracklist (see the video) that can be emailed.</li>
+</ol>
+
+<blockquote>
+  <p><strong>NOTE:</strong> The <code class="highlighter-rouge">spotify.get_similar_tracks()</code> function’s job is to get recommendations based on seed data. As documented in the docstring, the <code class="highlighter-rouge">get_similar_tracks()</code> function requires at least one of the following arguments:</p>
+  <ul>
+    <li>artist_ids (list): A list of artist ids</li>
+    <li>track_ids (list): A list of track ids [extra credit see below]</li>
+    <li>genres (genres): A list of genres</li>
+  </ul>
+
+  <p>Spotify only allows 5 seed values (in any combination). In other words:
+len(artist_ids) + len(track_ids) + len(genres) must be between 1 and 5.</p>
+</blockquote>
+
+<h3 id="extra-credit-options-up-to-8-points-1">Extra Credit Options (Up to 8 Points)</h3>
+
+<h4 id="3-points-allow-the-user-to-select-one-or-more-tracks">[3 Points] Allow the user to select one or more tracks</h4>
+<p>If you have time and need extra credit, you may enhance your program by also giving the user the option of selecting one or more tracks to “seed” the Spotify song recommendations system. To do this, you will do the following:</p>
+<ol>
+  <li>Provide a way for the user to search for and display tracks</li>
+  <li>Provide a way for the user to select the tracks they’re interested in and store the corresponding track objects in a list variable called “tracks”</li>
+  <li>Allow the user to either clear out or append tracks to their tracks list.</li>
+</ol>
+
+<h4 id="3-points-extra-credit-generate-an-html-file-1">[3 Points] Extra Credit: Generate an HTML file</h4>
+<p>Generate an HTML file with the table of recommended tracks as well as some information about the artists (and tracks) that went into seeding the playlist. Consider embedding images of artists, albums, and/or audio players into the file.</p>
+
+<h4 id="2-points-extra-credit-search-for-similar-artists">[2 Points] Extra Credit: Search for similar artists</h4>
+<p>Allow the user to discover artists who are similar to a given artist.</p>
+
+<h4 id="2-points-extra-credit-search-for-playlists-by-keyword">[2 Points] Extra Credit: Search for playlists by keyword</h4>
+<p>Allow the user to find playlists based on a keyword search.</p>
+
+<h4 id="5-points-incorporate-another-information-source-1">[5 Points] Incorporate another information source</h4>
+<p>In addition to searching Spotify, try integrate data from YouTube or Twitter as well using some of the lecture samples from Week 9. You can earn up to 5 points for each provider that you incorporate. In other words: 5 points for YouTube, 5 points for Twitter, etc.</p>
+
+<h4 id="5-points-figure-out-how-to-attach-the-html-file-to-an-email-1">[5 Points] Figure out how to attach the HTML file to an email</h4>
+<p>Take a look at this article:
+https://stackoverflow.com/questions/40656019/python-sendgrid-send-email-with-pdf-attachment-file</p>
+
+<h3 id="rubric-40-possible-points-1">Rubric (40 Possible Points)</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Feature</th>
+            <th>Points</th>
+            <th>Scoring Guidelines</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Main Program Loop</td>
+            <td>5 points</td>
+            <td><ul>
+                <li>Loop handles errors (incorrect inputs)</li>
+                <li>Loop prompts the user for their input</li>
+                <li>Loop honors user requests</li>
+                <li>Loop does not exist unless user asks to quit</li></ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Genre Selection</td>
+            <td>8 points</td>
+            <td>
+                <ul>
+                    <li>Displays the user's selected genre(s) if any</li>
+                    <li>Displays available genres</li>
+                    <li>Allows user to select among genres presented</li>
+                    <li>Allows user to clear out their selected genres and start over</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Artist Selection</td>
+            <td>12 points</td>
+            <td>
+                <ul>
+                    <li>Allows user to search for artist</li>
+                    <li>Allows user to select among artists returned from Spotify</li>
+                    <li>Allows user to clear out selected artists and start over</li>
+                    <li>Displays the names of the user's selected artists</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Generate and email recommendations</td>
+            <td>11 points</td>
+            <td><ul>
+                <li>Correctly passes arguments of correct type into the get_similar_tracks() function.</li>
+                <li>Displays recommendations to screen (including track name and artist name).</li>
+                <li>Successfully emails the recommendation list.</li></ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Code Quality</td>
+            <td>3 points</td>
+            <td><ul>
+                <li>All functions, variables, and file_names have pneumonic names / are snake case
+                (up to -2 points)</li>
+                <li>Code is organized and without unused or redundant code. Please remove commented out code that isn’t running (to help our graders)
+                (up to -3 points)</li></ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Video</td>
+            <td>1 point</td>
+            <td>
+                <ul>
+                    <li>Your video clearly demonstrates the features you implemented.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Extra credit</td>
+            <td>Up to 8 points</td>
+            <td><ul>
+                <li>Students completed various EC options according to the specifications above.</li></ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="what-to-turn-in">What to Turn In</h2>
+<ol>
+  <li>Your code as a zip file. This should include all of the files that make your code work.</li>
+  <li>Please <strong>only submit 1 set of code files per team</strong> and list who you collaborated with in the submission comments (so that when we run our code similarity checker, we don’t flag you and your collaborators). Your teammates should then just post a comment that says, “see X’s submission for the code. My collaborators were X and Y.”</li>
+  <li>A link to your video. Make sure that it’s publicly viewable – not just to @u.northwestern.edu b/c faculty don’t have access to that domain, unfortunately).</li>
+  <li>Any notes about your project and/or any extra credit options you pursued (if applicable). You can do this as a separate text file inside of your zip file or in the submission comments. If you did the extra credit, PLEASE DO NOT FORGET TO TELL USE WHAT YOU IMPLEMENTED — We want to give you credit for the effort that you put into your program.</li>
+</ol>
+
+
+
+            </article>  
+        </main>
+        
+            <script type="text/javascript" src="/assets/js/main.js"></script>
+    
+    <script src="https://kit.fontawesome.com/62a7c74d0d.js" crossorigin="anonymous"></script>
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="/assets/js/scrollspy.js"></script>
+    </body>
+</html>

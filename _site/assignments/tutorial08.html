@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Get Started with HW5</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    
+
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <h1 class="desktop"><a href="/">CS110: Winter 2022</a></h1>
+    <h2 class="desktop">Intro to Computer Programming with Python</h2>
+    <a class="mobile" href="#">
+        <i class="menu-toggle fas fa-bars"></i>
+    </a>
+    <h1 class="mobile">CS110: Winter 2022</h1>
+</header>
+
+        <nav>
+    <ul>
+        <li ><a href="/syllabus/">Syllabus</a></li>
+        <li ><a href="/" >Schedule</a></li>
+        <li class="active"><a href="/assignments/">Assignments</a></li>
+        <li ><a href="/times-locations/">Calendar</a></li>
+        <li><a href="https://campuswire.com/p/G09D9743D/feed" target="_blank">Campuswire</a></li>
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#background">Background</a></li>
+  <li><a href="#your-task">Your Task</a></li>
+  <li><a href="#what-to-turn-in-same-deal-as-always">What to turn in (same deal as always)</a></li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1>
+            <a href="../assignments/">Assignments</a> > 
+            Tutorial 8: Get Started with HW5
+        </h1>
+    
+ 
+                <p>
+    
+        Due on Wed, 03/02 @ 11:59PM.
+    
+    
+        3 Points.
+    
+    
+</p>
+
+<style>
+    .bash-small .highlighter-rouge {
+        width: 520px;
+        margin: auto;
+        margin-top: 10px;
+    }
+</style>
+
+<p><a class="nu-button" href="/course-files/tutorials/tutorial08.zip" target="_blank">
+    Tutorial Starter Files <i class="fas fa-download"></i>
+</a></p>
+
+<h2 id="background">Background</h2>
+<p>In preparation for Tic Tac Toe, we are going to help you get started by helping you to handle runtime errors. As you may recall, runtime errors typically happen when your program encounters data that was not adequately anticipated by the programmer. Examples of runtime errors include encountering (a) data with the wrong data type (e.g. a string instead of an int), or (b) data that doesn’t make sense for the given context.</p>
+
+<h3 id="error-handling-in-hw5">Error Handling in HW5</h3>
+<p>you will be creating a Tic-Tac-Toe game where a user will play a computer in a game of Tic-Tac-Toe. One critical part of engineering the game is making sure that your user enters the right input. Specifically:</p>
+
+<ol class="bash-small">
+  <li>The user must enter an integer between 1-9.</li>
+  <li>The user cannot enter a number corresponding to a slot that has already been taken. For instance, in the scenario below, if the user (represented by the symbol <code class="highlighter-rouge">o</code>) types the number <code class="highlighter-rouge">5</code>, the program should refuse the request and explain to the user why their move is illegal (because the 5-slot is already take by <code class="highlighter-rouge">x</code>).
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            |   |                7 | 8 | 9
+         ———————————            ———————————
+          x | x |                4 | 5 | 6
+         ———————————            ———————————
+            | o |                1 | 2 | 3
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="your-task">Your Task</h2>
+<p>Please make the following enhancements to the <code class="highlighter-rouge">tictactoe_starter.py</code> file (which correspond to the ability for the user to play their move):</p>
+<ol>
+  <li>If the user does not enter a number from 1-9, tell them their entry was invalid and that they should try again (use try/except as well as if/else).</li>
+  <li>If the user enters a valid number that is not empty, tell them that slot is already taken.</li>
+  <li>If the user types “Q”, terminate the program.</li>
+  <li>Keep re-prompting the user until they enter a valid number (or Q). See sample video:</li>
+</ol>
+
+<h2 id="what-to-turn-in-same-deal-as-always">What to turn in (same deal as always)</h2>
+<p>Please turn in your completed tutorial exercise(s) ON CANVAS by Wednesday night at midnight. To do this, first zip your entire <code class="highlighter-rouge">tutorial08</code> folder (with your edited files inside), and then upload your zip file to Canvas. Please ensure that your zip file includes <strong>YOUR CODE</strong>. </p>
+
+
+
+            </article>  
+        </main>
+        
+            <script type="text/javascript" src="/assets/js/main.js"></script>
+    
+    <script src="https://kit.fontawesome.com/62a7c74d0d.js" crossorigin="anonymous"></script>
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="/assets/js/scrollspy.js"></script>
+    </body>
+</html>

@@ -22,6 +22,7 @@ canvas.pack()
 
 ########################## YOUR CODE BELOW THIS LINE ##############################
 MOUSE_DRAG = '<B1-Motion>'
+MOUSE_CLICK = '<Button-1>'
 
 canvas.create_text(
     (window_width / 2, window_height / 2), 
@@ -38,6 +39,8 @@ def make_circle(event):
     )
 
 canvas.bind(MOUSE_DRAG, make_circle)
+canvas.bind(MOUSE_CLICK, make_circle)
+
 
 ########################## YOUR CODE ABOVE THIS LINE ############################## 
 
