@@ -19,8 +19,8 @@ slides:
    - title: "Error handling and Dictionaries"
      url: https://docs.google.com/presentation/d/184ToDKqS6hGK33TN6FrgYmimbHHbgmYL400VCRnXQ94/edit?usp=sharing
 videos:
-   - title: "Live Lecture (not yet posted)"
-     url:
+   - title: "Live Lecture"
+     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8c231ffc-01a6-4f0f-93af-adf6016a95e9
      duration: "50:00"
      live: 1
 
