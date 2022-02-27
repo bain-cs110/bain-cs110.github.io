@@ -3,9 +3,19 @@
 from tkinter import Canvas, Tk, messagebox
 
 import helpers
+# initialize window
+gui = Tk()
+gui.title('W0rdle')
 
 CANVAS_WIDTH = 500
 CANVAS_HEIGHT = 600
+
+canvas = Canvas(gui, width=CANVAS_WIDTH,
+                height=CANVAS_HEIGHT, background='white')
+canvas.pack()
+canvas.focus_set()
+
+########################## YOUR CODE BELOW THIS LINE ##############################
 
 CORRECT_COLOR = "#6BA965"
 PARTIAL_COLOR = "#C8B458"
@@ -15,19 +25,10 @@ DEFAULT_COLOR = "white"
 game_data = {
   "solution": "HELLO",
   "current_guess": "",
-  "previous_guesses": []
-}
+  "previous_guesses": [],
+  "word_list": []}
 
 word_list = None
-
-# initialize window
-gui = Tk()
-gui.title('W0rdle')
-canvas = Canvas(gui, width=CANVAS_WIDTH,
-                height=CANVAS_HEIGHT, background='white')
-canvas.pack()
-
-KEY_PRESS = '<Key>'
 
 
 def read_in_dictionary(file_path: str):
@@ -84,7 +85,7 @@ def render_game_board(canvas):
     # TODO: using a loop, render all of the previous guesses using the function
     #       called render_previous_guess
     for i in range(0, guess_count):
-        helpers.render_previous_guess(
+        render_previous_guess(
             canvas, previous_guesses[i], i, game_data['solution'])
 
     # TODO: using a loop, render the current guess
@@ -114,11 +115,11 @@ def handle_typing(event):
     render_game_board(canvas)
 
 
+KEY_PRESS = '<Key>'
 canvas.bind(KEY_PRESS, handle_typing)
 
-render_game_board()
+render_game_board(canvas)
 
-canvas.focus_set()
 ########################## YOUR CODE ABOVE THIS LINE ##############################
 # makes sure the canvas keeps running:
 canvas.mainloop()

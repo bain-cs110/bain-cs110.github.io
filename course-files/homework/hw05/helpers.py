@@ -1,4 +1,4 @@
-from tkinter import Canvas
+from tkinter import Canvas, messagebox
 
 CORRECT_COLOR = "#6BA965"
 PARTIAL_COLOR = "#C8B458"

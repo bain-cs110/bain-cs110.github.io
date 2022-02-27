@@ -74,31 +74,37 @@
 </a></p>
 
 <h2 id="background">Background</h2>
-<p>In preparation for Tic Tac Toe, we are going to help you get started by helping you to handle runtime errors. As you may recall, runtime errors typically happen when your program encounters data that was not adequately anticipated by the programmer. Examples of runtime errors include encountering (a) data with the wrong data type (e.g. a string instead of an int), or (b) data that doesn’t make sense for the given context.</p>
+<p>Today, we’ll be combining a number of the concepts we’ve been practicing the last few week in order to create a version of the game known as <a href="https://www.nytimes.com/games/wordle/index.html">Wordle</a>: 1. loops; 2. reading from files; 3. validating inputs; 4. working with dictionaries.</p>
 
-<h3 id="error-handling-in-hw5">Error Handling in HW5</h3>
-<p>you will be creating a Tic-Tac-Toe game where a user will play a computer in a game of Tic-Tac-Toe. One critical part of engineering the game is making sure that your user enters the right input. Specifically:</p>
+<h3 id="input-handling-in-hw-5">Input Handling in HW 5</h3>
+<p>You will be creating a Wordle-style game. If you haven’t played Wordle before, your goal is to guess a secret 5-letter word in, at most, 6 guesses. Each time you guess, you’re given some “hints” about about how correct your guess was:</p>
 
-<ol class="bash-small">
-  <li>The user must enter an integer between 1-9.</li>
-  <li>The user cannot enter a number corresponding to a slot that has already been taken. For instance, in the scenario below, if the user (represented by the symbol <code class="highlighter-rouge">o</code>) types the number <code class="highlighter-rouge">5</code>, the program should refuse the request and explain to the user why their move is illegal (because the 5-slot is already take by <code class="highlighter-rouge">x</code>).
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            |   |                7 | 8 | 9
-         ———————————            ———————————
-          x | x |                4 | 5 | 6
-         ———————————            ———————————
-            | o |                1 | 2 | 3
-</code></pre></div>    </div>
-  </li>
-</ol>
+<p><img class="medium frame" src="/assets/images/tutorials/wordle.webp" /></p>
+
+<p>We’ll be building a simpler, text-based version for the Tutorial but then using the same techniques in HW 5 to create the full version!</p>
 
 <h2 id="your-task">Your Task</h2>
-<p>Please make the following enhancements to the <code class="highlighter-rouge">tictactoe_starter.py</code> file (which correspond to the ability for the user to play their move):</p>
-<ol>
-  <li>If the user does not enter a number from 1-9, tell them their entry was invalid and that they should try again (use try/except as well as if/else).</li>
-  <li>If the user enters a valid number that is not empty, tell them that slot is already taken.</li>
-  <li>If the user types “Q”, terminate the program.</li>
-  <li>Keep re-prompting the user until they enter a valid number (or Q). See sample video:</li>
-</ol>
+<p>Please make the following enhancements to the <code class="highlighter-rouge">wordle_starter.py</code> file (each marked <code class="highlighter-rouge">TODO</code> in the <code class="highlighter-rouge">.py</code> file).</p>
+<ul>
+  <li>First, read through the file called <code class="highlighter-rouge">wordlist.txt</code> and add all the 5-letter words to the <code class="highlighter-rouge">world_list</code> key of the <code class="highlighter-rouge">game_data</code> dictionary.</li>
+  <li>Next, you’ll have to take care of validating each user guess by:
+    <ul>
+      <li>Converting their guess to lower case</li>
+      <li>Seeing if their guess is exactly 5 characters long</li>
+      <li>Checking to see if the guess is in the word list you loaded in</li>
+    </ul>
+  </li>
+  <li>If any of these tests fails, you need to ask the user to guess again (hint: use <code class="highlighter-rouge">continue</code> to go to the next iteration of the loop)</li>
+  <li>Once you’ve validated the guess, next up is to generate the <code class="highlighter-rouge">hint</code> for the user. You’ll loop through each letter of the solution and…
+    <ul>
+      <li>If the letter perfectly matches the solution, you’ll add a <code class="highlighter-rouge">$</code> to the hint</li>
+      <li>If the letter is in the solution, but isn’t in the right location, you’ll add a <code class="highlighter-rouge">-</code> to the hint</li>
+      <li>Otherwise the letter isn’t in the solution at all, so you’ll add a <code class="highlighter-rouge">*</code> to the hint</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Once you’ve completed all of your to-dos, make sure to run your program and see if it works like it should!</p>
 
 <h2 id="what-to-turn-in-same-deal-as-always">What to turn in (same deal as always)</h2>
 <p>Please turn in your completed tutorial exercise(s) ON CANVAS by Wednesday night at midnight. To do this, first zip your entire <code class="highlighter-rouge">tutorial08</code> folder (with your edited files inside), and then upload your zip file to Canvas. Please ensure that your zip file includes <strong>YOUR CODE</strong>. </p>
