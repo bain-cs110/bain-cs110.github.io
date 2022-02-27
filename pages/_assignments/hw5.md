@@ -41,19 +41,19 @@ Here's a video demo of what the finished version should look like:
 Please write a program that accomplishes the following tasks:
 
 {:.bash-small}
-1. Adapt your code from Tutorial 08 to finish the implementation of the `read_in_words` function. Make sure that your function matches teh dcoumentation for the function!
+1. Adapt your code from Tutorial 08 to finish the implementation of the `read_in_words` function. Make sure that your function matches the documentation for the function!
 
     * First it will read in all of the 5 letter words and add them to `game_data['word_list']`
     * Make sure to convert the words to UPPER CASE before adding them to the list
     * Secondly, it'll pick a random 5 letter word and save it into `game_data['solution']`
 
-1. Adapt your code from Tutorial 08 to finish the implementation to the `generate_hint` function. Make sure that you function matches the documentation at the top of the function!
+1. Adapt your code from Tutorial 08 to finish the implementation of the `generate_hint` function. Make sure that you function matches the documentation at the top of the function!
 1. Finish the `render_previous_guess` function. It needs to go through each letter of the inputted `previous_guess`, and
     * draw the correct colored square (using `helpers.color_a_grid_square`)
     * draw the letter corresponding to that square
     * make sure to review the documentation for `helpers.color_a_grid_square` in `helpers.py`.
-    * note: the coordinate it asks for is not the Canvas coordinate, but instead the coordinate on the Wordle grid which looks like the below.
-    * make sure to use the correct colors which are defined as variables near the top of the file: `CORRECT_COLOR`, `PARTIAL_COLOR`, and `WRONG_COLOR`
+    * note: the coordinate it asks for is not the Canvas coordinate, but instead the coordinate on the Wordle grid which looks like the grid below.
+    * make sure to use the right colors which are defined as variables near the top of the file: `CORRECT_COLOR`, `PARTIAL_COLOR`, and `WRONG_COLOR`
 1. Finish the `render_game_board` function by looping through the list of previous_guesses and calling the `render_previous_guess` function for each one.
 
 ```bash
