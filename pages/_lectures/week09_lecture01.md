@@ -2,6 +2,9 @@
 layout: module
 title: More on Dictionaries
 type: lecture
+description:
+    - Dictionaries
+    - And more dictionaries!
 draft: 1
 num: 21
 due_date: 2022-02-28

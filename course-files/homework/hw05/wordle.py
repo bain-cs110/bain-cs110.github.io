@@ -2,7 +2,10 @@
 
 from tkinter import Canvas, Tk, messagebox
 
+########################## CANVAS SETUP CODE ##############################
+
 import helpers
+import random
 # initialize window
 gui = Tk()
 gui.title('W0rdle')
@@ -15,7 +18,7 @@ canvas = Canvas(gui, width=CANVAS_WIDTH,
 canvas.pack()
 canvas.focus_set()
 
-########################## YOUR CODE BELOW THIS LINE ##############################
+########################## FUNCTIONS ##############################
 
 CORRECT_COLOR = "#6BA965"
 PARTIAL_COLOR = "#C8B458"
@@ -23,49 +26,90 @@ WRONG_COLOR = "#787C7E"
 DEFAULT_COLOR = "white"
 
 game_data = {
-  "solution": "HELLO",
+  "solution": "",
   "current_guess": "",
   "previous_guesses": [],
   "word_list": []}
 
-word_list = None
+
+def read_in_words(file_path: str):
+    '''
+    Function that reads in a list of words and adds them to the game_data. Then,
+    picks a random word to set as the 'solution' key in the game_data dictionary.
+
+    Parameters:
+        file_path (str): The file to be read in
+
+    Returns:
+        None
+    '''
+
+    # TODO: Loop through in the `wordlist.txt` file and append all of the 5 letter
+    # words (converted to UPPER CASE) to the 'word_list' key of the game_data dictionary.
+    my_file = open(file_path, 'r')
+    for line in my_file:
+        word = line.strip('\n')
+        if len(word) == 5:
+            game_data['word_list'].append(word.upper())
+
+    # TODO: Pick a random word as a solution
+    game_data['solution'] = random.choice(game_data['word_list'])
 
 
-def read_in_dictionary(file_path: str):
-    # TODO:
-    global word_list
-    word_list = None
-    pass
+def finalize_guess(canvas: Canvas, guess: str, hint: str):
+    '''
+    Finalizes a valid user guess.
 
+    This function does a few things:
+        1. It saves the current guess as a previous guess
+        2. It clears out the current guess
+        3. It checks to see if the guess matches the solution
+        4. It checks to see if the user has reached the max number of guesses
 
-def finalize_guess(canvas: Canvas):
-    current_guess = game_data['current_guess']
+    Parameters:
+        canvas (Canvas): The canvas being used for the game.
+        guess (str): The guess to be rendered on the screen.
+        hint (str): The evaluated hint so that we can color the blocks correctly.
 
-    game_data['current_guess'] = ""
+    Returns:
+        None
+    '''
 
-    game_data['previous_guesses'].append(current_guess)
+    # Append the inputted guess to the previous_guesses list in game_data
+    game_data['previous_guesses'].append(guess)
 
-    if current_guess == game_data['solution']:
+    # Set the current_guess key in game_data to the empty string ("")
+    if hint == "$$$$$":
         helpers.game_over(canvas, happy=True)
     elif len(game_data['previous_guesses']) == 6:
         helpers.game_over(canvas)
 
 
-def render_previous_guess(canvas: Canvas, previous_guess: str, guess_number: int, solution: str):
-    for i in range(0, 5):
-        current_letter = previous_guess[i]
+def render_previous_guess(canvas: Canvas, previous_guess: str, guess_number: int, hint: str):
+    '''
+    Renders a previous guess on the canvas.
 
-        if current_letter == solution[i]:
+    Parameters:
+        canvas (Canvas): The canvas to play the game on.
+        previous_guess (str): The previous guess to be rendered
+        guess_number (int): The number of the guess to be drawn (y-coordinate)
+        hint (str): The hint string that was generated from that guess
+
+    Outputs:
+        None. (Draws to the canvas)
+    '''
+    for i in range(0, 5):
+        if hint[i] == "$":
             helpers.color_a_grid_square(
                 canvas, CORRECT_COLOR, (i, guess_number))
 
-        elif current_letter in solution:
+        elif hint[i] == "-":
             helpers.color_a_grid_square(
                 canvas, PARTIAL_COLOR, (i, guess_number))
         else:
             helpers.color_a_grid_square(canvas, WRONG_COLOR, (i, guess_number))
 
-        helpers.draw_letter_in_grid(canvas, current_letter,
+        helpers.draw_letter_in_grid(canvas, previous_guess[i],
                                     (i, guess_number), finalized=True)
 
 
@@ -73,10 +117,6 @@ def render_game_board(canvas):
     canvas.delete("all")
 
     helpers.make_grid(canvas, CANVAS_WIDTH, CANVAS_HEIGHT)
-
-    # TODO: load in the current guess and previous guesses from the game_data
-    #       dictionary. Then calculate the current guess count (how many words
-    #       has the user tried).
 
     current_guess = game_data['current_guess']
     previous_guesses = game_data['previous_guesses']
@@ -98,28 +138,77 @@ def render_game_board(canvas):
                                     current_guess[i], (i, guess_count))
 
 
+def generate_hint(guess: str, solution: str):
+    '''
+    Generates a hint from a guess and a solution.
+
+    This should be the same as the one from the Tutorial. A hint string will
+    be 5 letters long, where each letter represents
+
+    Parameters:
+        guess (str): The guess to be evaluated
+        solution (str): The solution to be compared to
+
+    Returns:
+        hint (str): The hint for the user
+    '''
+
+    # Loop through each letter of the entry and build a hint for each
+    # letter in our guess by comparing it to our solutions
+    hint = ""
+    for i in range(0, 5):
+        if guess[i] == solution[i]:
+            hint += "$"
+        elif guess[i] in solution:
+            hint += "-"
+        else:
+            hint += "*"
+
+    return hint
+
+
+########################## EVENT LISTENERS ##############################
 def handle_typing(event):
+
+    # TODO: If the player hits BackSpace, delete the last character from the
+    # 'current_guess' key in the game_data dictionary
     if event.keysym == "BackSpace":
         game_data['current_guess'] = game_data['current_guess'][:-1]
 
-    # If the player hits return
-    elif event.keysym == "Return" and len(game_data['current_guess']) == 5:
+    # TODO: If the player hits Return...
+    elif event.keysym == "Return":
         # First check that 5 letters have been entered
-        # Also check to see if the word they entered is a valid word in our
-        # word list.
-        # If both of these conditions are met, then call finalize_guess()
-        finalize_guess(canvas)
-    elif len(game_data['current_guess']) < 5 and len(event.keysym) == 1:
-        game_data['current_guess'] += event.keysym.upper()
+        if len(game_data['current_guess']) == 5:
+            pass
+        # Next check if it's a valid word in our word list
+        elif game_data['current_guess'] not in game_data['word_list']:
+            pass
+        # If we make it past those two checks, it's a valid guess
+        else:
+            # First generate a hint, then finalize the guess
+            hint = generate_hint(
+                game_data['current_guess'], game_data['solution'])
+            finalize_guess(canvas, game_data['current_guess'], hint)
+
+    # If the player hits any other letter/number/symbol on the keyboard
+    elif len(event.keysym) == 1:
+        # TODO: If the user hasn't entered 5 letters, add the entered symbol
+        # to the current guess (make sure to convert it to upper case!)
+        if len(game_data['current_guess']) < 5:
+            game_data['current_guess'] += event.keysym.upper()
 
     render_game_board(canvas)
 
 
+# Ask the computer to listen for key presses
 KEY_PRESS = '<Key>'
 canvas.bind(KEY_PRESS, handle_typing)
 
+########################## GAME SETUP ##############################
+# Read in the wordlist and set the secret word
+read_in_words('wordlist.txt')
+# Print the solution for debugging
+print(game_data['solution'])
+# Render the game board!
 render_game_board(canvas)
-
-########################## YOUR CODE ABOVE THIS LINE ##############################
-# makes sure the canvas keeps running:
 canvas.mainloop()
