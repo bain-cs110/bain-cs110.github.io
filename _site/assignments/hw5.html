@@ -36,8 +36,6 @@
             <aside>
                 <ol class="side-menu">
   <li><a href="#your-tasks">Your Tasks</a></li>
-  <li><a href="#caveats">Caveats</a></li>
-  <li><a href="#extra-credit-options-up-to-2-points-total">Extra Credit Options (up to 2 points total)</a></li>
   <li><a href="#checklist-before-you-submit">Checklist Before You Submit</a></li>
 </ol>
 
@@ -84,67 +82,88 @@
   </ol>
 </blockquote>
 
-<p>In this assignment, you will be making a game of tic tac toe, where a player will be playing the computer (see video below).</p>
-<iframe src="https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=269492eb-30e6-4a0f-ba26-ac660037a06f&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;start=0&amp;interactivity=all" width="620" height="405" style="padding: 0px; border: 1px solid #464646;" frameborder="0" allowfullscreen="" allow="autoplay"></iframe>
+<p>In this assignment, you will be making the full version of Wordle, complete with its interface! While much of the program is already complete, your job will be to understand the existing program and functions, and use those to complete the full version of Wordle. Make sure to review <a href="./tutorial08">Tutorial 08</a>.</p>
 
-<!-- <iframe src="https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=269492eb-30e6-4a0f-ba26-ac660037a06f&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe> -->
+<p>Here’s a video demo of what the finished version should look like:</p>
+<iframe src="https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1083e1e7-9bda-4ca9-a30d-ae4901295b1c&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=true&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay"></iframe>
+
+<blockquote>
+  <p><strong>PLEASE NOTE:</strong>
+While you only have to write new code in the parts that are marked <code class="highlighter-rouge">TODO</code> in <code class="highlighter-rouge">wordle.py</code>, you’ll
+likely need to understand the other functions in <code class="highlighter-rouge">wordle.py</code> and <code class="highlighter-rouge">helpers.py</code> in order
+to know how to use them to complete the assignment. You can search for the <code class="highlighter-rouge">TODO</code> tags using the File menu then “Search” in IDLE.</p>
+</blockquote>
 
 <h2 id="your-tasks">Your Tasks</h2>
 <p>Please write a program that accomplishes the following tasks:</p>
 
 <ol class="bash-small">
-  <li>Ask the user whether they want to be x or o (and ensure your program honors their choice).</li>
-  <li>Ask the user if they want to go first (and ensure your program honors their choice)
-Prompt the user for their move (they’ll enter a number from 1-9), which corresponds to where they want to go (as displayed below):
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>          7 | 8 | 9
-         ———————————
-          4 | 5 | 6
-         ———————————
-          1 | 2 | 3
-</code></pre></div>    </div>
+  <li>
+    <p>Adapt your code from Tutorial 08 to finish the implementation of the <code class="highlighter-rouge">read_in_words</code> function. Make sure that your function matches teh dcoumentation for the function!</p>
 
     <ul>
-      <li>If the user does not enter a number from 1-9, tell them their entry was invalid and that they should try again (use try/except as well as if/else).</li>
-      <li>If the user enters a valid number that is not empty, tell them that slot is already taken.</li>
+      <li>First it will read in all of the 5 letter words and add them to <code class="highlighter-rouge">game_data['word_list']</code></li>
+      <li>Make sure to convert the words to UPPER CASE before adding them to the list</li>
+      <li>Secondly, it’ll pick a random 5 letter word and save it into <code class="highlighter-rouge">game_data['solution']</code></li>
     </ul>
   </li>
-  <li>If it’s the computer’s turn, have the computer randomly select a square, given the available choices (using the random module).</li>
-  <li>After each move, be sure to redraw the game board</li>
-  <li>If there is a win / loss / tie, print an appropriate message and terminate the game</li>
-</ol>
-
-<h2 id="caveats">Caveats</h2>
-<p>There are many solutions on the Internet for this assignment. DO NOT USE THEM. We know what they are, and can tell if you copied all or parts of them. We want you to invent your own strategy, given what you have learned. Like all things, you will get out of this assignment what you put into it.</p>
-
-<h2 id="extra-credit-options-up-to-2-points-total">Extra Credit Options (up to 2 points total)</h2>
-<p>We highly recommend that you pursue these optional enhancements, to encourage you to think about one way (of many) that ‘artificial intelligence’ might work:</p>
-<ol>
-  <li>Make your computer ‘smart’ so that the computer always selects the optimal move. To do this, consider how the computer could:
+  <li>Adapt your code from Tutorial 08 to finish the implementation to the <code class="highlighter-rouge">generate_hint</code> function. Make sure that you function matches the documentation at the top of the function!</li>
+  <li>Finish the <code class="highlighter-rouge">render_previous_guess</code> function. It needs to go through each letter of the inputted <code class="highlighter-rouge">previous_guess</code>, and
     <ul>
-      <li>(1 point) Always block the user from winning (when possible)</li>
-      <li>(1 point) If the computer is about to win, make sure it selects the correct square!</li>
-      <li>(1 points): Other enhancements (see strategy discussion): https://www.wikihow.com/Win-at-Tic-Tac-Toe</li>
+      <li>draw the correct colored square (using <code class="highlighter-rouge">helpers.color_a_grid_square</code>)</li>
+      <li>draw the letter corresponding to that square</li>
+      <li>make sure to review the documentation for <code class="highlighter-rouge">helpers.color_a_grid_square</code> in <code class="highlighter-rouge">helpers.py</code>.</li>
+      <li>note: the coordinate it asks for is not the Canvas coordinate, but instead the coordinate on the Wordle grid which looks like the below.</li>
+      <li>make sure to use the correct colors which are defined as variables near the top of the file: <code class="highlighter-rouge">CORRECT_COLOR</code>, <code class="highlighter-rouge">PARTIAL_COLOR</code>, and <code class="highlighter-rouge">WRONG_COLOR</code></li>
     </ul>
   </li>
-  <li>(1 point) Draw a line through the winning pattern on the game board.</li>
+  <li>Finish the <code class="highlighter-rouge">render_game_board</code> function by looping through the list of previous_guesses and calling the <code class="highlighter-rouge">render_previous_guess</code> function for each one.</li>
 </ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            ———————————––––––––––––––––––––––––––––
+             <span class="o">(</span>0,0<span class="o">)</span> | <span class="o">(</span>1,0<span class="o">)</span> | <span class="o">(</span>2,0<span class="o">)</span> | <span class="o">(</span>3,0<span class="o">)</span> | <span class="o">(</span>4,0<span class="o">)</span>
+            ———————————––––––––––––––––––––––––––––
+             <span class="o">(</span>0,1<span class="o">)</span> | <span class="o">(</span>1,1<span class="o">)</span> | <span class="o">(</span>2,1<span class="o">)</span> | <span class="o">(</span>3,1<span class="o">)</span> | <span class="o">(</span>4,1<span class="o">)</span>
+            ———————————––––––––––––––––––––––––––––
+             <span class="o">(</span>0,2<span class="o">)</span> | <span class="o">(</span>1,2<span class="o">)</span> | <span class="o">(</span>2,2<span class="o">)</span> | <span class="o">(</span>3,2<span class="o">)</span> | <span class="o">(</span>4,2<span class="o">)</span>
+            ———————————––––––––––––––––––––––––––––
+             <span class="o">(</span>0,3<span class="o">)</span> | <span class="o">(</span>1,3<span class="o">)</span> | <span class="o">(</span>2,3<span class="o">)</span> | <span class="o">(</span>3,3<span class="o">)</span> | <span class="o">(</span>4,3<span class="o">)</span>
+            ———————————––––––––––––––––––––––––––––
+             <span class="o">(</span>0,4<span class="o">)</span> | <span class="o">(</span>1,4<span class="o">)</span> | <span class="o">(</span>2,4<span class="o">)</span> | <span class="o">(</span>3,4<span class="o">)</span> | <span class="o">(</span>4,4<span class="o">)</span>
+            ———————————––––––––––––––––––––––––––––
+             <span class="o">(</span>0,5<span class="o">)</span> | <span class="o">(</span>1,5<span class="o">)</span> | <span class="o">(</span>2,5<span class="o">)</span> | <span class="o">(</span>3,5<span class="o">)</span> | <span class="o">(</span>4,5<span class="o">)</span>
+            ———————————––––––––––––––––––––––––––––
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>IF YOU GET STUCK:</strong></p>
+  <ol>
+    <li>Make sure that you carefully read what error pops up. It will tell you where and what to look for.</li>
+    <li>Use print statements to diagnose the state of the game. For instance, to check whether your generated hint is correct, before you <code class="highlighter-rouge">return hint</code>, add a new line that says <code class="highlighter-rouge">print(hint)</code> which will allow you to see the hint generated in the Interpreter window.</li>
+    <li>Make sure to read the documentation for each function!</li>
+  </ol>
+</blockquote>
 
 <h2 id="checklist-before-you-submit">Checklist Before You Submit</h2>
 <p>Before you submit, make sure you’ve tested that your program does the following:</p>
 
 <ul class="checkbox-list">
-  <li>Allows the user to select whether they want to be x or o</li>
-  <li>Allows the user to indicate whether or not they want to go first</li>
-  <li>Program honors the user’s selection (1-9) and places the symbol correctly</li>
-  <li>If the user enters something other than 1-9, the program tells the user what they did wrong and re-prompts them
+  <li>Reads in a list of 5-letter words from the <code class="highlighter-rouge">word_list.txt</code> file</li>
+  <li>Only allows the user to enter 5 letter words (otherwise resets when they hit ENTER)</li>
+  <li>If a user hits ENTER and hasn’t entered 5 words don’t accept it as a guess</li>
+  <li>If a user hits ENTER and has entered an INVALID word don’t accept it as a guess</li>
+  <li>After each guess, W0RDLE responds with the correct hint and moves to the next line</li>
+  <li>Guesses that are currently be entered are black text on a white (<code class="highlighter-rouge">DEFAULT_COLOR</code>) background</li>
+  <li>Previous guesses are rendered in black text</li>
+  <li>The squares for letters in a previous guess are colored thusly:
     <ul>
-      <li>Note: consider using try/catch + continue (as we did in Lecture 19)</li>
+      <li>Completely correct letters will have a green (<code class="highlighter-rouge">CORRECT_COLOR</code>) background</li>
+      <li>Partially correct letters will have a yellow (<code class="highlighter-rouge">PARTIAL_COLOR</code>) background</li>
+      <li>Letters that don’t appear will have a grey (<code class="highlighter-rouge">WRONG_COLOR</code>) background</li>
     </ul>
   </li>
-  <li>Computer move does not overwrite a slot that is already taken</li>
-  <li>User’s move does not overwrite a slot that is already taken</li>
-  <li>If the user and / or computer wins, the program ends and tells the user which player won</li>
-  <li>If there’s a tie, the program ends and displays a “tie” message</li>
+  <li>The user can only make 6 valid guesses</li>
+  <li>If the user guesses correctly, they should see a popup message</li>
 </ul>
 
 

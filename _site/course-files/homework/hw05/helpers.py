@@ -8,6 +8,17 @@ KEY_PRESS = "<Key>"
 
 
 def make_grid(canvas, w, h):
+    '''
+    Makes a grid on a canvas.
+
+    Parameters:
+        canvas (Canvas): The canvas object to draw on.
+        w (int): The width of the canvas
+        h (int): The height of the canvas
+
+    Returns:
+        None. (Draws to the canvas)
+    '''
     interval = 100
 
     # Delete old grid if it exists:
@@ -22,6 +33,18 @@ def make_grid(canvas, w, h):
 
 
 def draw_letter_in_grid(canvas: Canvas, letter: str, grid_coord: tuple, finalized: bool = False):
+    '''
+    Draws letters on a canvas in a particular grid coordinate.
+
+    Parameters:
+        canvas (Canvas): The canvas object to draw on.
+        letter (str): The letter we wish to draw on the canvas
+        grid_coord (tuple): An x,y coordinate that says where to draw the letter
+        finalized (bool): If true, then this is a previous guess (otherwise current guess)
+
+    Returns:
+        None. (Draws to the canvas)
+    '''
     text_color = "black"
     if finalized:
         text_color = "white"
@@ -37,12 +60,33 @@ def draw_letter_in_grid(canvas: Canvas, letter: str, grid_coord: tuple, finalize
 
 
 def game_over(canvas, happy: bool = False):
+    '''
+    Ends the game.
+
+    Parameters:
+        canvas (Canvas): The canvas object to draw on.
+        happy (bool): If this is true, that means the user has won!
+
+    Returns:
+        None. (Draws to the canvas using popup; has sideeffects)
+    '''
     if happy:
         messagebox.showinfo("Congratulations",  "You've won!")
     canvas.bind(KEY_PRESS, None)
 
 
 def color_a_grid_square(canvas: Canvas, color: str, grid_coord: tuple):
+    '''
+    Colors a particular grid square on the canvas.
+
+    Parameters:
+        canvas (Canvas): The canvas object to draw on.
+        color (str): The color to draw the square in
+        grid_coord (tuple): The x,y coordinate of the square we wish to draw
+
+    Returns:
+        None. (Draws to the canvas)
+    '''
     top_left = (grid_coord[0] * 100, grid_coord[1] * 100)
     bottom_right = (top_left[0] + 100, top_left[1] + 100)
     canvas.create_rectangle(

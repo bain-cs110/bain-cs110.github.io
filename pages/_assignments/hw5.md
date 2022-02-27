@@ -27,21 +27,55 @@ draft: 1
 > 1. Practice with logic
 > 1. Practice writing more complex programs
 
-In this assignment, you will be making a the full version of Wordle, complete with its interface!
+In this assignment, you will be making the full version of Wordle, complete with its interface! While much of the program is already complete, your job will be to understand the existing program and functions, and use those to complete the full version of Wordle. Make sure to review [Tutorial 08](./tutorial08).
+
+Here's a video demo of what the finished version should look like:
+<iframe src="https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1083e1e7-9bda-4ca9-a30d-ae4901295b1c&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+> **PLEASE NOTE:**
+> While you only have to write new code in the parts that are marked `TODO` in `wordle.py`, you'll
+> likely need to understand the other functions in `wordle.py` and `helpers.py` in order
+> to know how to use them to complete the assignment. You can search for the `TODO` tags using the File menu then "Search" in IDLE.
 
 ## Your Tasks
 Please write a program that accomplishes the following tasks:
 
 {:.bash-small}
-1. Ask the user whether they want to be x or o (and ensure your program honors their choice).
-1. Ask the user if they want to go first (and ensure your program honors their choice)
-Prompt the user for their move (they’ll enter a number from 1-9), which corresponds to where they want to go (as displayed below):
-   * If the user does not enter a number from 1-9, tell them their entry was invalid and that they should try again (use try/except as well as if/else).
-   * If the user enters a valid number that is not empty, tell them that slot is already taken.
-1. If it’s the computer’s turn, have the computer randomly select a square, given the available choices (using the random module).
-1. After each move, be sure to redraw the game board
-1. If there is a win / loss / tie, print an appropriate message and terminate the game
+1. Adapt your code from Tutorial 08 to finish the implementation of the `read_in_words` function. Make sure that your function matches teh dcoumentation for the function!
 
+    * First it will read in all of the 5 letter words and add them to `game_data['word_list']`
+    * Make sure to convert the words to UPPER CASE before adding them to the list
+    * Secondly, it'll pick a random 5 letter word and save it into `game_data['solution']`
+
+1. Adapt your code from Tutorial 08 to finish the implementation to the `generate_hint` function. Make sure that you function matches the documentation at the top of the function!
+1. Finish the `render_previous_guess` function. It needs to go through each letter of the inputted `previous_guess`, and
+    * draw the correct colored square (using `helpers.color_a_grid_square`)
+    * draw the letter corresponding to that square
+    * make sure to review the documentation for `helpers.color_a_grid_square` in `helpers.py`.
+    * note: the coordinate it asks for is not the Canvas coordinate, but instead the coordinate on the Wordle grid which looks like the below.
+    * make sure to use the correct colors which are defined as variables near the top of the file: `CORRECT_COLOR`, `PARTIAL_COLOR`, and `WRONG_COLOR`
+1. Finish the `render_game_board` function by looping through the list of previous_guesses and calling the `render_previous_guess` function for each one.
+
+```bash
+            ———————————––––––––––––––––––––––––––––
+             (0,0) | (1,0) | (2,0) | (3,0) | (4,0)
+            ———————————––––––––––––––––––––––––––––
+             (0,1) | (1,1) | (2,1) | (3,1) | (4,1)
+            ———————————––––––––––––––––––––––––––––
+             (0,2) | (1,2) | (2,2) | (3,2) | (4,2)
+            ———————————––––––––––––––––––––––––––––
+             (0,3) | (1,3) | (2,3) | (3,3) | (4,3)
+            ———————————––––––––––––––––––––––––––––
+             (0,4) | (1,4) | (2,4) | (3,4) | (4,4)
+            ———————————––––––––––––––––––––––––––––
+             (0,5) | (1,5) | (2,5) | (3,5) | (4,5)
+            ———————————––––––––––––––––––––––––––––
+```
+
+> **IF YOU GET STUCK:**
+> 1. Make sure that you carefully read what error pops up. It will tell you where and what to look for.
+> 2. Use print statements to diagnose the state of the game. For instance, to check whether your generated hint is correct, before you `return hint`, add a new line that says `print(hint)` which will allow you to see the hint generated in the Interpreter window.
+> 3. Make sure to read the documentation for each function!
 
 ## Checklist Before You Submit
 Before you submit, make sure you’ve tested that your program does the following:
