@@ -1,6 +1,6 @@
 ---
 layout: assignment-two-column
-title: Building Wordle
+title: Building W0rdle
 abbreviation: HW5
 type: homework
 files: course-files/assignments/hw05.zip
@@ -27,7 +27,7 @@ draft: 0
 > 1. Practice with logic
 > 1. Practice writing more complex programs
 
-In this assignment, you will be making the full version of Wordle, complete with its interface! While much of the program is already complete, your job will be to understand the existing program and functions, and use those to complete the full version of Wordle. Make sure to review [Tutorial 08](./tutorial08).
+In this assignment, you will be making the full version of Wordle (we'll be calling it W0rdle), complete with its interface! While much of the program is already complete, your job will be to understand the existing program and functions, and use those to complete the full version of W0rdle. Make sure to review [Tutorial 08](./tutorial08).
 
 Here's a video demo of what the finished version should look like:
 <iframe src="https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1083e1e7-9bda-4ca9-a30d-ae4901295b1c&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
@@ -52,7 +52,7 @@ Please write a program that accomplishes the following tasks:
     * draw the correct colored square (using `helpers.color_a_grid_square`)
     * draw the letter corresponding to that square
     * make sure to review the documentation for `helpers.color_a_grid_square` in `helpers.py`.
-    * note: the coordinate it asks for is not the Canvas coordinate, but instead the coordinate on the Wordle grid which looks like the grid below.
+    * note: the coordinate it asks for is not the Canvas coordinate, but instead the coordinate on the W0rdle grid which looks like the grid below.
     * make sure to use the right colors which are defined as variables near the top of the file: `CORRECT_COLOR`, `PARTIAL_COLOR`, and `WRONG_COLOR`
 1. Finish the `render_game_board` function by looping through the list of previous_guesses and calling the `render_previous_guess` function for each one.
 
@@ -82,8 +82,8 @@ Before you submit, make sure you’ve tested that your program does the followin
 
 {:.checkbox-list}
 * Reads in a list of 5-letter words from the `word_list.txt` file
-* Only allows the user to enter 5 letter words (otherwise resets when they hit ENTER)
-* If a user hits ENTER and hasn't entered 5 words don't accept it as a guess
+* Only allows the user to enter 5 letter words
+* If a user hits ENTER and hasn't entered 5 letters don't accept it as a guess
 * If a user hits ENTER and has entered an INVALID word don't accept it as a guess
 * After each guess, W0RDLE responds with the correct hint and moves to the next line
 * Guesses that are currently be entered are black text on a white (`DEFAULT_COLOR`) background
