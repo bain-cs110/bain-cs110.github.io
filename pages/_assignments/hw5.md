@@ -85,8 +85,9 @@ Before you submit, make sure you’ve tested that your program does the followin
 * Only allows the user to enter 5 letter words
 * If a user hits ENTER and hasn't entered 5 letters don't accept it as a guess
 * If a user hits ENTER and has entered an INVALID word don't accept it as a guess
+* You do not need to worry about the case where the user enters the same word multiple times
 * After each guess, W0RDLE responds with the correct hint and moves to the next line
-* Guesses that are currently be entered are black text on a white (`DEFAULT_COLOR`) background
+* Guesses currently being entered are black text on a white (`DEFAULT_COLOR`) background
 * Previous guesses are rendered in black text
 * The squares for letters in a previous guess are colored thusly:
     * Completely correct letters will have a green (`CORRECT_COLOR`) background
