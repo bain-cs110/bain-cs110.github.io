@@ -34,7 +34,7 @@ Here's a video demo of what the finished version should look like:
 
 > **PLEASE NOTE:**
 > While you only have to write new code in the parts that are marked `TODO` in `wordle.py`, you'll
-> likely need to understand the other functions in `wordle.py` and `helpers.py` in order
+> need to understand the other functions in `wordle.py` and `helpers.py` in order
 > to know how to use them to complete the assignment. You can search for the `TODO` tags using the File menu then "Search" in IDLE.
 
 ## Your Tasks
