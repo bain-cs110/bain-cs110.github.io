@@ -50,7 +50,7 @@ Please write a program that accomplishes the following tasks:
 1. Adapt your code from Tutorial 08 to finish the implementation of the `generate_hint` function. Make sure that you function matches the documentation at the top of the function!
 1. Finish the `render_previous_guess` function. It needs to go through each letter of the inputted `previous_guess`, and
     * draw the correct colored square (using `helpers.color_a_grid_square`)
-    * draw the letter corresponding to that square
+    * draw the letter corresponding to that square (using `helpers.draw_letter_in_grid`)
     * make sure to review the documentation for `helpers.color_a_grid_square` in `helpers.py`.
     * note: the coordinate it asks for is not the Canvas coordinate, but instead the coordinate on the W0rdle grid which looks like the grid below.
     * make sure to use the right colors which are defined as variables near the top of the file: `CORRECT_COLOR`, `PARTIAL_COLOR`, and `WRONG_COLOR`
