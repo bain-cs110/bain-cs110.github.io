@@ -5,18 +5,18 @@ type: lecture
 description:
     - Dictionaries
     - And more dictionaries!
-draft: 1
+draft: 0
 num: 21
 due_date: 2022-02-28
-exercise_url: "lecture22.zip"
+exercise_url: "lecture21.zip"
 slides:
-   - url:
-     title: "Practice Working With  Lists of Dictionaries"
+   - url: https://docs.google.com/presentation/d/14BSXvZIVhvFhmzK8tKUBdyqgP6LavWBLxrEos8PwAHI/edit?usp=sharing
+     title: "Dictionaries and their Applications"
 videos:
-   - title: "Spotify Data Activity"
+   - title: "Live Lecture"
      url:
      live: 1
      duration: "49:35"
 ---
 
-Today we will continue practicing how to work with dictionary data representations and lists of dictionaries using Spotify's <a href="https://developer.spotify.com/documentation/web-api/reference/#/operations/search" target="_blank">REST API</a>.
+Today we're continuing our discussion of dictionaries. The dictionary - another way (in addition to lists and tuples) of storing, representing, and analyzing collections of related data. As a programmer, you will encounter dictionaries all of the time. We'll go over some common scenarios and take a look at many different kinds of dictionaries.
