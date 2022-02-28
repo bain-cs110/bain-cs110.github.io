@@ -1,11 +1,14 @@
 ---
 layout: module
-title:   TBD
+title:   Downloading Files from the Web
+description:
+    - Downloading data using APIs
+    - Complex Data Storage in Dictionaries
 type: lecture
 draft: 1
 num: 22
 due_date: 2022-03-02
-exercise_url: "lecture23.zip"
+exercise_url: "lecture22.zip"
 slides:
    - url:
      title: "Downloading and Creating Data-Driven Files"
