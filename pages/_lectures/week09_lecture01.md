@@ -14,7 +14,7 @@ slides:
      title: "Dictionaries and their Applications"
 videos:
    - title: "Live Lecture"
-     url:
+     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d91db0cf-f053-49bc-b096-adf6016a9609
      live: 1
      duration: "49:35"
 ---
