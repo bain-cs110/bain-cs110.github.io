@@ -1,10 +1,10 @@
 ---
 layout: module
-title: TBD
+title: Dictionary Practice and Intro to P2
 type: lecture
 draft: 1
 num: 24
-exercise_url: "lecture25.zip"
+exercise_url: "lecture24.zip"
 due_date: 2022-03-07
 videos:
     - url:
@@ -12,8 +12,6 @@ videos:
       duration: "48:47"
       live: 1
 ---
-
-This lecture will be a continuation of [Lecture 24](week09-lecture03). We're going to do a few more dictionary practice problems.
 
 ## Please complete the following challenges:
 1. Write a program that counts the number of trees in each condition (good, fair, etc.).

@@ -1,9 +1,10 @@
 ---
 layout: module
-title: TBD
+title: More on APIs and P2
 type: lecture
 draft: 1
 num: 25
+exercise_url: "lecture25.zip"
 due_date: 2022-03-09
 videos:
    - url:
@@ -11,9 +12,6 @@ videos:
      duration: "57:18"
      live: 1
 ---
-
-Today we will be going over the Project 2 scope and looking at some examples. The class is virtual. Zoom link here: <a href="https://northwestern.zoom.us/j/92512948058" target="_blank">https://northwestern.zoom.us/j/92512948058</a>.
-
 ## Agenda
 1. Get the project 2 files and dependencies installed on your computer.
 2. Practice using three of the modules that we have designed to help you with project 2 (located inside of the `apis` folder):
