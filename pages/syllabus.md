@@ -109,7 +109,7 @@ Some other logistics:
 > ### The course is specifically designed to be academically equitable to all students when it comes to assessment:
 > * Your lowest quiz score is dropped (best 2 of 3)
 > * Your lowest homework score is dropped (best 5 of 6)
-> * Your 7 best tutorial scores are kept (best 7 of 9)
+> * Your 6 best tutorial scores are kept (best 6 of 8; Tutorial 2 is ignored)
 >
 > This leniency is provided to accommodate the myriad situations that students encounter over the life cycle of the class (e.g. student org travel, sickness, etc.). **This built-in leniency means that there will be no other exceptions to the course syllabus without prior authorization from the Dean of Students at Northwestern.**
 
