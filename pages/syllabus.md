@@ -81,7 +81,7 @@ Our Peer Mentors (PMs) serve as your first point of contact in the course. Each 
 Your course grade is calculated based on 200 points as follows:
 
 {:.medium}
-| **6 Tutorials** (of 8 - excluding Tutorial 2) | 7 x 3.333 Points (lowest scores dropped) | 20 Points | 10% |
+| **6 Tutorials** (of 8 - excluding Tutorial 2) | 6 x 3.333 Points (lowest scores dropped) | 20 Points | 10% |
 | **5 Homeworks** (of 6) | 5 x 8 Points (lowest score dropped) | 40 Points | 20% |
 | **2 Projects** | 2 x 40 Points | 80 Points | 40% |
 | **2 Quizzes** (of 3) | 2 x 30 Points (lowest score dropped) | 60 Points | 30% |
