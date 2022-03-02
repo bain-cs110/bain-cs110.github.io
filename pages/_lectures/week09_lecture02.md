@@ -1,22 +1,22 @@
 ---
 layout: module
-title:   Downloading Files from the Web
+title:   Dictionaries for Representation and Downloading Files from the Web
 description:
     - Downloading data using APIs
     - Complex Data Storage in Dictionaries
 type: lecture
-draft: 1
+draft: 0
 num: 22
 due_date: 2022-03-02
 exercise_url: "lecture22.zip"
 slides:
-   - url:
-     title: "Downloading and Creating Data-Driven Files"
+   - url: https://docs.google.com/presentation/d/1EiXKqEeJex2Ut8EB2nKcBT-TedLSCThDdifU9yWwDzk/edit?usp=sharing
+     title: "Lecture Slides"
 videos:
-   - title: "Downloading and Creating Data-Driven Files"
+   - title: "Live Lecture (not yet live)"
      url:
      live: 1
-     duration: "48:41"
+     duration: "50:00"
 ---
 
-Today we will finish the activities from [Lecture 22](week09-lecture01).
+Today we'll continue our work with dictionaries, but also expand our repertoire of skills to include Downloading files from the internet as well as using API Endpoints to query data from servers like Twitter, YouTube, Spotify, and more.
