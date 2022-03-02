@@ -95,3 +95,6 @@ Before you submit, make sure you’ve tested that your program does the followin
     * Letters that don't appear will have a grey (`WRONG_COLOR`) background
 * The user can only make 6 valid guesses
 * If the user guesses correctly, they should see a popup message
+
+## Request an Extension
+If you need to request an extension on the assignment (must be 24 hours in advance) use the <a href="https://forms.gle/PobKBdUkTpPJ3GbZ8">Extension Request form</a>.
