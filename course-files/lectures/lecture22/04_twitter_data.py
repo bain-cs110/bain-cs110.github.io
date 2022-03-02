@@ -20,15 +20,17 @@ url = function_url + parameter_name + search_term
 
 # First ask Python to call the function on the endpoint using our URL
 response = urllib.request.urlopen(url, context=context)
-print_data_and_type("Response", response)
+#print_data_and_type("Response", response)
 
 # Ask Python to read the special file we've gotten back
-#raw_data = response.read()
+raw_data = response.read()
 #print_data_and_type("Raw Data", raw_data)
 
 # Ask python to convert that file into a string
-#decoded_data = raw_data.decode()
+decoded_data = raw_data.decode()
 #print_data_and_type("Decoded Data", decoded_data)
 
 # Ask Python to turn that string into a list of dictionaries
-#statuses = json.loads(decoded_data)
+statuses = json.loads(decoded_data)
+
+# print(statuses)
