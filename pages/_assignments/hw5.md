@@ -88,7 +88,7 @@ Before you submit, make sure you’ve tested that your program does the followin
 * You do not need to worry about the case where the user enters the same word multiple times
 * After each guess, W0RDLE responds with the correct hint and moves to the next line
 * Guesses currently being entered are black text on a white (`DEFAULT_COLOR`) background
-* Previous guesses are rendered in black text
+* Previous guesses are rendered in white text
 * The squares for letters in a previous guess are colored thusly:
     * Completely correct letters will have a green (`CORRECT_COLOR`) background
     * Partially correct letters will have a yellow (`PARTIAL_COLOR`) background
