@@ -1,10 +1,11 @@
+import unittest
+from apis import twilio
 import helpers
 helpers.modify_system_path()
 
 
-from apis import twilio
-import unittest
 # import time
+
 
 class TestSendgrid(unittest.TestCase):
 
@@ -16,7 +17,9 @@ class TestSendgrid(unittest.TestCase):
         self.assertNotEqual(str(Mail).find('Mail'), -1)
 
     def test_can_import_sendgrid_api_module(self, *args, **kwargs):
-        self.assertNotEqual(str(twilio.send_mail).find('function send_mail'), -1)
+        self.assertNotEqual(
+            str(twilio.send_mail).find('function send_mail'), -1)
+
 
 if __name__ == '__main__':
     unittest.main()

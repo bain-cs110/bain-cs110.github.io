@@ -14,14 +14,14 @@ due_date: 2022-03-09
 In this week's tutorial, you will be getting a preview of [Project 2](../assignments/p2). This includes:
 
 1. Installing some python dependencies using PIP.
-2. Downloading <a href="https://canvas.northwestern.edu/files/12569656/download?download_frd=1">my_token.py</a> from Canvas and save it in your `apis` folder. This is the course API master token. Your project won't work without it.
+2. Downloading <a href="https://canvas.northwestern.edu/files/12798477/download?download_frd=1">my_token.py</a> from Canvas and save it in your `apis` folder. This is the course API master token. Your project won't work without it.
 3. Practicing using some of the modules that have been provided for you inside of the apis directory.
 
 Please complete the following steps:
 
 ## Step 1: Setup
 
-Complete Steps A, B, C, and D in the "Setup" section of [Project 2](../assignments/p2#setup-please-read-carefully). Here are <a href="https://docs.google.com/presentation/d/13ysHSMh9yyGX58rbvlxJO3i1ssN9lQXCZ6mkY4Xy9Uc/edit?usp=sharing" target="_blank">some tips for getting everything set up</a>.
+Complete Steps A, B, C, and D in the "Setup" section of [Project 2](../assignments/p2#setup-please-read-carefully).
 
 If you have set everything up correctly, running the `tests/run_verification.py` python file will display the following output:
 

@@ -38,7 +38,7 @@ Please complete Parts 1-3 of Project 2, which involves asking the user for their
 | **3 Points** | Prints restaurants to the screen in some coherent format (consider using a pandas dataframe for this). |
 
 ## Option 2: Spotify
-Please complete Part 1 & 2  of Project 2, which involves asking the user for their genre and artist preferences.
+Please complete Part 1 & 2 of Project 2, which involves asking the user for their genre and artist preferences.
 
 {:.blockquote-no-margin}
 > Ultimately this information will be used to seed the Spotify recommendation service, but actually getting song recommendations is not necessary for **HW6.**
@@ -62,4 +62,4 @@ Please complete Part 1 & 2  of Project 2, which involves asking the user for the
 
 ## What to Turn In
 * Your code as a zip file. This should include all of the files that make your code work.
-* Please **only submit 1 set of code files per team** and list who you collaborated with in the submission comments (so that when we run our code similarity checker, we don’t flag you and your collaborators). Your teammates should then just post a comment that says, "see X's submission for the code. My collaborators were X and Y."
+* Please **only submit 1 set of code files per team** and list who you collaborated with (and which tutorial they're assigned to) in the submission comments. Your teammates should then just post a comment that says, "see X's (Olivier's Wed 3pm Tutorial) submission for the code. My collaborators were X (in Poom's Tues 10am Tutorial) and Y (Amy's Wed 11am Tutorial)."

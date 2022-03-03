@@ -1,10 +1,10 @@
+from apis import yelp
+import time
+from unittest.mock import MagicMock
+import unittest
 import helpers
 helpers.modify_system_path()
 
-import unittest
-from unittest.mock import MagicMock
-import time
-from apis import yelp
 
 class TestYelp(unittest.TestCase):
 
@@ -29,15 +29,16 @@ class TestYelp(unittest.TestCase):
         ]
         super(TestYelp, self).__init__(*args, **kwargs)
 
-
     def test_get_categories(self):
         goal_url = 'https://api.yelp.com/v3/businesses/search?location=Berkeley%2C+CA&limit=10&categories=vietnamese,thai'
-        url = yelp._generate_business_search_url(location='Berkeley, CA', categories='vietnamese,thai')
+        url = yelp._generate_business_search_url(
+            location='Berkeley, CA', categories='vietnamese,thai')
         self.assertEqual(url, goal_url)
 
     def test_get_categories_fail(self):
         with self.assertRaises(Exception) as cm:
-            yelp._generate_business_search_url(location='Berkeley, CA', categories='vietnamese,thai,awesomepizza,pho')
+            yelp._generate_business_search_url(
+                location='Berkeley, CA', categories='vietnamese,thai,awesomepizza,pho')
         self.assertEqual(
             '"awesomepizza" is not a valid category because it isn\'t in the yelp.get_categories() list. Please make sure that the following categories are valid (with a comma separating each of them): vietnamese,thai,awesomepizza,pho',
             str(cm.exception)
@@ -58,7 +59,8 @@ class TestYelp(unittest.TestCase):
 
     def test_yelp_generate_business_search_url_limit(self):
         goal_url = 'https://api.yelp.com/v3/businesses/search?location=Berkeley%2C+CA&limit=5'
-        url = yelp._generate_business_search_url(location='Berkeley, CA', limit=5)
+        url = yelp._generate_business_search_url(
+            location='Berkeley, CA', limit=5)
         self.assertEqual(url, goal_url)
 
         goal_url = 'https://api.yelp.com/v3/businesses/search?location=Evanston%2C+IL&limit=8'
@@ -67,7 +69,8 @@ class TestYelp(unittest.TestCase):
 
     def test_yelp_generate_business_search_url_term(self):
         goal_url = 'https://api.yelp.com/v3/businesses/search?location=Berkeley%2C+CA&limit=10&term=italian'
-        url = yelp._generate_business_search_url(location='Berkeley, CA', term='italian')
+        url = yelp._generate_business_search_url(
+            location='Berkeley, CA', term='italian')
         self.assertEqual(url, goal_url)
 
         goal_url = 'https://api.yelp.com/v3/businesses/search?location=Evanston%2C+IL&limit=8&term=chinese'
@@ -76,7 +79,8 @@ class TestYelp(unittest.TestCase):
 
     def test_yelp_generate_business_search_url_categories(self):
         goal_url = 'https://api.yelp.com/v3/businesses/search?location=Evanston%2C+IL&limit=8&term=chinese&categories=thai,vietnamese'
-        url = yelp._generate_business_search_url(limit=8, term='chinese', categories='thai,vietnamese')
+        url = yelp._generate_business_search_url(
+            limit=8, term='chinese', categories='thai,vietnamese')
         self.assertEqual(url, goal_url)
 
     def test_yelp_generate_business_search_url_categories_error(self):
@@ -91,25 +95,31 @@ class TestYelp(unittest.TestCase):
         self.assertEqual(url, goal_url)
 
         goal_url = 'https://api.yelp.com/v3/businesses/search?location=Evanston%2C+IL&limit=10&term=italian&sort_by=best_match'
-        url = yelp._generate_business_search_url(term='italian', sort_by='best_match')
+        url = yelp._generate_business_search_url(
+            term='italian', sort_by='best_match')
         self.assertEqual(url, goal_url)
 
         goal_url = 'https://api.yelp.com/v3/businesses/search?location=Evanston%2C+IL&limit=10&term=italian&sort_by=rating'
-        url = yelp._generate_business_search_url(term='italian', sort_by='rating')
+        url = yelp._generate_business_search_url(
+            term='italian', sort_by='rating')
         self.assertEqual(url, goal_url)
 
         goal_url = 'https://api.yelp.com/v3/businesses/search?location=Evanston%2C+IL&limit=10&term=italian&sort_by=distance'
-        url = yelp._generate_business_search_url(term='italian', sort_by='distance')
+        url = yelp._generate_business_search_url(
+            term='italian', sort_by='distance')
         self.assertEqual(url, goal_url)
 
         goal_url = 'https://api.yelp.com/v3/businesses/search?location=Evanston%2C+IL&limit=10&term=italian&sort_by=review_count'
-        url = yelp._generate_business_search_url(term='italian', sort_by='review_count')
+        url = yelp._generate_business_search_url(
+            term='italian', sort_by='review_count')
         self.assertEqual(url, goal_url)
 
         with self.assertRaises(Exception) as cm:
-            url = yelp._generate_business_search_url(term='italian', sort_by='price')
+            url = yelp._generate_business_search_url(
+                term='italian', sort_by='price')
         self.assertIn(
-            "price not in ['best_match', 'rating', 'review_count', 'distance']", str(cm.exception)
+            "price not in ['best_match', 'rating', 'review_count', 'distance']", str(
+                cm.exception)
         )
 
     def test_yelp_generate_business_search_url_price_fail(self):
@@ -130,7 +140,8 @@ class TestYelp(unittest.TestCase):
 
     def test_yelp_generate_business_search_url_price_success(self):
         goal_url = 'https://api.yelp.com/v3/businesses/search?location=Evanston%2C+IL&limit=10&term=italian&price=1,2,3,4'
-        url = yelp._generate_business_search_url(term='italian', price='3,2,4,1')
+        url = yelp._generate_business_search_url(
+            term='italian', price='3,2,4,1')
         self.assertEqual(url, goal_url)
 
         goal_url = 'https://api.yelp.com/v3/businesses/search?location=Evanston%2C+IL&limit=10&term=italian&price=1'
@@ -158,7 +169,8 @@ class TestYelp(unittest.TestCase):
         self.assertEqual(url, goal_url)
 
         goal_url = 'https://api.yelp.com/v3/businesses/search?location=Evanston%2C+IL&limit=10&term=italian'
-        url = yelp._generate_business_search_url(term='italian', open_now=False)
+        url = yelp._generate_business_search_url(
+            term='italian', open_now=False)
         self.assertEqual(url, goal_url)
 
         url = yelp._generate_business_search_url(term='italian', open_now=0)
@@ -198,7 +210,8 @@ class TestYelp(unittest.TestCase):
         for kwargs in self.valid_argument_list:
             results = yelp.get_businesses(simplify=False, **kwargs)
             self.assertEqual(type(results), dict)
-            self.assertEqual(list(results.keys()), ['businesses', 'total', 'region'])
+            self.assertEqual(list(results.keys()), [
+                             'businesses', 'total', 'region'])
             time.sleep(1.0)
 
     def test_execute_review_query_simplified(self):
@@ -229,11 +242,15 @@ class TestYelp(unittest.TestCase):
     def test_get_formatted_business_table(self):
         business = yelp.get_businesses()[0]
         reviews = yelp.get_reviews(business['id'])
-        table_text = yelp.get_formatted_business_table(business, reviews, to_html=False)
-        table_html = yelp.get_formatted_business_table(business, reviews, to_html=True)
-        self.assertIn('------------------------------------------------------------------------\nKABUL HOUSE', table_text)
+        table_text = yelp.get_formatted_business_table(
+            business, reviews, to_html=False)
+        table_html = yelp.get_formatted_business_table(
+            business, reviews, to_html=True)
+        self.assertIn(
+            '------------------------------------------------------------------------\nKABUL HOUSE', table_text)
 
-        self.assertIn('<h1>KABUL HOUSE</h1><table style="border-collapse: collapse; border: solid 1px #CCC;width:700px;">', table_html)
+        self.assertIn(
+            '<h1>KABUL HOUSE</h1><table style="border-collapse: collapse; border: solid 1px #CCC;width:700px;">', table_html)
         time.sleep(1.0)
 
 
