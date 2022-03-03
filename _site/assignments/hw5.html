@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Building Wordle</title>
+    <title>Building W0rdle</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="/assets/main.css">
     
@@ -37,6 +37,7 @@
                 <ol class="side-menu">
   <li><a href="#your-tasks">Your Tasks</a></li>
   <li><a href="#checklist-before-you-submit">Checklist Before You Submit</a></li>
+  <li><a href="#request-an-extension">Request an Extension</a></li>
 </ol>
 
             </aside>
@@ -46,7 +47,7 @@
     
         <h1>
             <a href="../assignments/">Assignments</a> > 
-            HW5: Building Wordle
+            HW5: Building W0rdle
         </h1>
     
  
@@ -82,7 +83,7 @@
   </ol>
 </blockquote>
 
-<p>In this assignment, you will be making the full version of Wordle, complete with its interface! While much of the program is already complete, your job will be to understand the existing program and functions, and use those to complete the full version of Wordle. Make sure to review <a href="./tutorial08">Tutorial 08</a>.</p>
+<p>In this assignment, you will be making the full version of Wordle (we’ll be calling it W0rdle), complete with its interface! While much of the program is already complete, your job will be to understand the existing program and functions, and use those to complete the full version of W0rdle. Make sure to review <a href="./tutorial08">Tutorial 08</a>.</p>
 
 <p>Here’s a video demo of what the finished version should look like:</p>
 <iframe src="https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1083e1e7-9bda-4ca9-a30d-ae4901295b1c&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=true&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay"></iframe>
@@ -90,7 +91,7 @@
 <blockquote>
   <p><strong>PLEASE NOTE:</strong>
 While you only have to write new code in the parts that are marked <code class="highlighter-rouge">TODO</code> in <code class="highlighter-rouge">wordle.py</code>, you’ll
-likely need to understand the other functions in <code class="highlighter-rouge">wordle.py</code> and <code class="highlighter-rouge">helpers.py</code> in order
+need to understand the other functions in <code class="highlighter-rouge">wordle.py</code> and <code class="highlighter-rouge">helpers.py</code> in order
 to know how to use them to complete the assignment. You can search for the <code class="highlighter-rouge">TODO</code> tags using the File menu then “Search” in IDLE.</p>
 </blockquote>
 
@@ -99,7 +100,7 @@ to know how to use them to complete the assignment. You can search for the <code
 
 <ol class="bash-small">
   <li>
-    <p>Adapt your code from Tutorial 08 to finish the implementation of the <code class="highlighter-rouge">read_in_words</code> function. Make sure that your function matches teh dcoumentation for the function!</p>
+    <p>Adapt your code from Tutorial 08 to finish the implementation of the <code class="highlighter-rouge">read_in_words</code> function. Make sure that your function matches the documentation for the function!</p>
 
     <ul>
       <li>First it will read in all of the 5 letter words and add them to <code class="highlighter-rouge">game_data['word_list']</code></li>
@@ -107,14 +108,14 @@ to know how to use them to complete the assignment. You can search for the <code
       <li>Secondly, it’ll pick a random 5 letter word and save it into <code class="highlighter-rouge">game_data['solution']</code></li>
     </ul>
   </li>
-  <li>Adapt your code from Tutorial 08 to finish the implementation to the <code class="highlighter-rouge">generate_hint</code> function. Make sure that you function matches the documentation at the top of the function!</li>
+  <li>Adapt your code from Tutorial 08 to finish the implementation of the <code class="highlighter-rouge">generate_hint</code> function. Make sure that you function matches the documentation at the top of the function!</li>
   <li>Finish the <code class="highlighter-rouge">render_previous_guess</code> function. It needs to go through each letter of the inputted <code class="highlighter-rouge">previous_guess</code>, and
     <ul>
       <li>draw the correct colored square (using <code class="highlighter-rouge">helpers.color_a_grid_square</code>)</li>
-      <li>draw the letter corresponding to that square</li>
+      <li>draw the letter corresponding to that square (using <code class="highlighter-rouge">helpers.draw_letter_in_grid</code>)</li>
       <li>make sure to review the documentation for <code class="highlighter-rouge">helpers.color_a_grid_square</code> in <code class="highlighter-rouge">helpers.py</code>.</li>
-      <li>note: the coordinate it asks for is not the Canvas coordinate, but instead the coordinate on the Wordle grid which looks like the below.</li>
-      <li>make sure to use the correct colors which are defined as variables near the top of the file: <code class="highlighter-rouge">CORRECT_COLOR</code>, <code class="highlighter-rouge">PARTIAL_COLOR</code>, and <code class="highlighter-rouge">WRONG_COLOR</code></li>
+      <li>note: the coordinate it asks for is not the Canvas coordinate, but instead the coordinate on the W0rdle grid which looks like the grid below.</li>
+      <li>make sure to use the right colors which are defined as variables near the top of the file: <code class="highlighter-rouge">CORRECT_COLOR</code>, <code class="highlighter-rouge">PARTIAL_COLOR</code>, and <code class="highlighter-rouge">WRONG_COLOR</code></li>
     </ul>
   </li>
   <li>Finish the <code class="highlighter-rouge">render_game_board</code> function by looping through the list of previous_guesses and calling the <code class="highlighter-rouge">render_previous_guess</code> function for each one.</li>
@@ -149,12 +150,13 @@ to know how to use them to complete the assignment. You can search for the <code
 
 <ul class="checkbox-list">
   <li>Reads in a list of 5-letter words from the <code class="highlighter-rouge">word_list.txt</code> file</li>
-  <li>Only allows the user to enter 5 letter words (otherwise resets when they hit ENTER)</li>
-  <li>If a user hits ENTER and hasn’t entered 5 words don’t accept it as a guess</li>
+  <li>Only allows the user to enter 5 letter words</li>
+  <li>If a user hits ENTER and hasn’t entered 5 letters don’t accept it as a guess</li>
   <li>If a user hits ENTER and has entered an INVALID word don’t accept it as a guess</li>
+  <li>You do not need to worry about the case where the user enters the same word multiple times</li>
   <li>After each guess, W0RDLE responds with the correct hint and moves to the next line</li>
-  <li>Guesses that are currently be entered are black text on a white (<code class="highlighter-rouge">DEFAULT_COLOR</code>) background</li>
-  <li>Previous guesses are rendered in black text</li>
+  <li>Guesses currently being entered are black text on a white (<code class="highlighter-rouge">DEFAULT_COLOR</code>) background</li>
+  <li>Previous guesses are rendered in white text</li>
   <li>The squares for letters in a previous guess are colored thusly:
     <ul>
       <li>Completely correct letters will have a green (<code class="highlighter-rouge">CORRECT_COLOR</code>) background</li>
@@ -165,6 +167,9 @@ to know how to use them to complete the assignment. You can search for the <code
   <li>The user can only make 6 valid guesses</li>
   <li>If the user guesses correctly, they should see a popup message</li>
 </ul>
+
+<h2 id="request-an-extension">Request an Extension</h2>
+<p>If you need to request an extension on the assignment (must be 24 hours in advance) use the <a href="https://forms.gle/PobKBdUkTpPJ3GbZ8">Extension Request form</a>.</p>
 
 
 

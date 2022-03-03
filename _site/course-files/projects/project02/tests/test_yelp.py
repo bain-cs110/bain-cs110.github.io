@@ -34,7 +34,7 @@ class TestYelp(unittest.TestCase):
         goal_url = 'https://api.yelp.com/v3/businesses/search?location=Berkeley%2C+CA&limit=10&categories=vietnamese,thai'
         url = yelp._generate_business_search_url(location='Berkeley, CA', categories='vietnamese,thai')
         self.assertEqual(url, goal_url)
-    
+
     def test_get_categories_fail(self):
         with self.assertRaises(Exception) as cm:
             yelp._generate_business_search_url(location='Berkeley, CA', categories='vietnamese,thai,awesomepizza,pho')
@@ -136,7 +136,7 @@ class TestYelp(unittest.TestCase):
         goal_url = 'https://api.yelp.com/v3/businesses/search?location=Evanston%2C+IL&limit=10&term=italian&price=1'
         url = yelp._generate_business_search_url(term='italian', price=1)
         self.assertEqual(url, goal_url)
-        
+
         goal_url = 'https://api.yelp.com/v3/businesses/search?location=Evanston%2C+IL&limit=10&term=italian&price=2'
         url = yelp._generate_business_search_url(term='italian', price=2)
         self.assertEqual(url, goal_url)
@@ -160,7 +160,7 @@ class TestYelp(unittest.TestCase):
         goal_url = 'https://api.yelp.com/v3/businesses/search?location=Evanston%2C+IL&limit=10&term=italian'
         url = yelp._generate_business_search_url(term='italian', open_now=False)
         self.assertEqual(url, goal_url)
-    
+
         url = yelp._generate_business_search_url(term='italian', open_now=0)
         self.assertEqual(url, goal_url)
 
@@ -205,13 +205,13 @@ class TestYelp(unittest.TestCase):
         reviews = yelp.get_reviews('0b6AU869xq6KXdK3NtVJnw')
         self.assertEqual(type(reviews), list)
         self.assertEqual(
-            list(reviews[0].keys()), 
+            list(reviews[0].keys()),
             ['id', 'rating', 'text', 'time_created', 'url']
         )
         time.sleep(1.0)
 
     def test_execute_review_query_error(self):
-        with self.assertRaises(Exception) as cm: 
+        with self.assertRaises(Exception) as cm:
             yelp.get_reviews('XXX', simplify=False)
         error_message = 'This URL is invalid: https://api.yelp.com/v3/businesses/XXX/reviews'
         self.assertIn(error_message, str(cm.exception))
@@ -221,7 +221,7 @@ class TestYelp(unittest.TestCase):
         reviews = yelp.get_reviews('0b6AU869xq6KXdK3NtVJnw', simplify=False)
         self.assertEqual(type(reviews), dict)
         self.assertEqual(
-            list(reviews['reviews'][0].keys()), 
+            list(reviews['reviews'][0].keys()),
             ['id', 'url', 'text', 'rating', 'time_created', 'user']
         )
         time.sleep(1.0)
@@ -231,10 +231,8 @@ class TestYelp(unittest.TestCase):
         reviews = yelp.get_reviews(business['id'])
         table_text = yelp.get_formatted_business_table(business, reviews, to_html=False)
         table_html = yelp.get_formatted_business_table(business, reviews, to_html=True)
-        # print(table_text)
-        # print(table_html)
         self.assertIn('------------------------------------------------------------------------\nKABUL HOUSE', table_text)
-        
+
         self.assertIn('<h1>KABUL HOUSE</h1><table style="border-collapse: collapse; border: solid 1px #CCC;width:700px;">', table_html)
         time.sleep(1.0)
 

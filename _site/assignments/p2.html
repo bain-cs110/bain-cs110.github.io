@@ -79,7 +79,7 @@
   <li>Other logistics:
     <ul>
       <li>You are welcome to collaborate in groups of 2 or 3.</li>
-      <li>Please complete the setup before the Thanksgiving holiday (see below).</li>
+      <li>Please complete the setup AS SOON AS POSSIBLE (see below; it takes no time at all).</li>
       <li>Please start on this assignment <strong>early</strong>: like with anything, you’ll get out of it what you put into it.</li>
     </ul>
   </li>
@@ -89,19 +89,29 @@
 <p>You will need to install some dependencies and edit some files before you begin this project:</p>
 
 <h3 id="a-install-the-python-dependencies">A. Install the Python dependencies</h3>
-<p>Open your Terminal (MacOS) or Command Prompt (Windows) and execute the following commands (from any directory):</p>
+
+<p>If you have your Python installation setup as per <a href="../lectures/week07-lecture02">Lecture 17</a> you’ll need to use <code class="highlighter-rouge">pip</code> to install three packages: <code class="highlighter-rouge">sendgrid</code>, <code class="highlighter-rouge">requests</code>, and then to upgrade <code class="highlighter-rouge">certifi</code>. If <code class="highlighter-rouge">pip3</code> doesn’t work on your computer (and you made sure to follow the directions in Lecture 17), then try replacing <code class="highlighter-rouge">pip3</code> with <code class="highlighter-rouge">pip</code>.</p>
+
+<p>Open your Terminal (MacOS) or Command Prompt (Windows) and execute the following commands (from any directory)</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip3 <span class="nb">install </span>sendgrid                        <span class="c"># a module to interact with Twilio</span>
 pip3 <span class="nb">install </span>requests                        <span class="c"># a module for querying internet resources</span>
 pip3 <span class="nb">install</span> <span class="nt">--upgrade</span> certifi               <span class="c"># for SSL certificates</span>
 </code></pre></div></div>
+
+<p>If you can’t get that working you have two options: a) post on Campuswire/go to Prof. Bain’s OH! b) you can use our backup program which is in the <code class="highlighter-rouge">p2.zip</code> file you’ll download. Instructions to run that are in Part B (right below).</p>
+
 <h3 id="b-download-the-starter-files">B. Download the starter files</h3>
 <p>Click the “Project Starter Files” button above.</p>
 
+<p>If in Part A you couldn’t use <code class="highlighter-rouge">pip</code> to install the three required packages, then this is where we’ll use the <code class="highlighter-rouge">install_python_packages.py</code> Python program to install and upgrade those modules. Open that file in IDLE (it’s in the <code class="highlighter-rouge">zip</code> file you downloaded) and then run it. You’ll be presented with 6 options, each with a number associated with them. To intsall <code class="highlighter-rouge">sendgrid</code> and <code class="highlighter-rouge">requests</code>, you’ll first enter option <code class="highlighter-rouge">0</code>, then when the program asks which package you want to install, you’ll enter the name of the package you want to install. It’ll install it and then go back to the menu. Then pick <code class="highlighter-rouge">0</code> again and install the second module. Finally, you’ll enter option <code class="highlighter-rouge">1</code> to upgrade <code class="highlighter-rouge">certifi</code>.</p>
+
+<p>If you run into any issues on this part, you’ll need to post on Campuswire or come to OH. If the program prints out any errors (it won’t necessarily be in red text so make sure to read what it outputs), feel free to copy and paste it into your post so we can diagnose.</p>
+
 <h3 id="c-get-the-api-access-token">C. Get the API access token</h3>
-<p>Download the <a href="https://canvas.northwestern.edu/files/12569656/download?download_frd=1">my_token.py</a> file from Canvas and save it inside of the <code class="highlighter-rouge">apis</code> folder (included in the project starter code).</p>
+<p>Download the <a href="https://canvas.northwestern.edu/files/12798477/download?download_frd=1">my_token.py</a> file from Canvas and save it inside of the <code class="highlighter-rouge">apis</code> folder (included in the project starter code).</p>
 
 <h3 id="d-run-the-verification-script">D. Run the verification script</h3>
-<p>Inside the <code class="highlighter-rouge">tests</code> folder, run the <code class="highlighter-rouge">run_verification.py</code> file (either in Idle or in your preferred python IDE).</p>
+<p>Inside the <code class="highlighter-rouge">tests</code> folder, open the <code class="highlighter-rouge">run_verification.py</code> file and run it.</p>
 
 <p>If you get a message that looks like this…</p>
 
@@ -126,7 +136,7 @@ OK
 
 <blockquote>
   <h3 id="important">IMPORTANT</h3>
-  <p>You will be using a number of web data services to complete this assignment, which require the use of API keys (kind of like passwords) that we pay for and manages. Please only use these keys for the course assignments. If you have other app ideas for Twitter, Spotify, Yelp, SendGrid, etc., just register for our own keys and use those. They are all free for low-volume transactions.</p>
+  <p>You will be using a number of web data services to complete this assignment, which require the use of API keys (kind of like passwords) that we pay for and manage. Please only use these keys for the course assignments. If you have other app ideas for Twitter, Spotify, Yelp, SendGrid, etc., just register for our own keys and use those. They are all free for low-volume transactions.</p>
 </blockquote>
 
 <h2 id="option-1-yelp">Option 1: Yelp!</h2>
@@ -183,17 +193,8 @@ OK
 <h4 id="3-points-allow-the-user-to-filter-by-restaurants-that-are-hot-and-new">[3 Points] Allow the user to filter by restaurants that are “hot and new”</h4>
 <p>Enhance your program by also giving the user the option of specifying only restaurants which are “hot and new.” See the <a href="https://www.yelp.com/developers/documentation/v3/business_search" target="_blank">Yelp documentation</a> for more info</p>
 
-<h4 id="3-points-extra-credit-generate-an-html-file">[3 Points] Extra Credit: Generate an HTML file</h4>
-<p>Generate an HTML file with the table of recommended restaurants as well as some information about each one. Consider embedding images of the restaurants into the file.</p>
-
-<h4 id="5-points-extra-credit-create-a-map-of-restaurants">[5 Points] Extra Credit: Create a Map of Restaurants</h4>
-<p>Given the HTML file you’ve just generated, figure out how to create a map of all of the restaurant recommendations (using folium).</p>
-
 <h4 id="5-points-incorporate-another-information-source">[5 Points] Incorporate another information source</h4>
-<p>In addition to searching Yelp, try integrate data from Twitter (or some other source) using some of the lecture samples from Week 9. You can earn up to 5 points for each provider that you incorporate.</p>
-
-<h4 id="5-points-figure-out-how-to-attach-the-html-file-to-an-email">[5 Points] Figure out how to attach the HTML file to an email</h4>
-<p>Take a look at <a href="https://stackoverflow.com/questions/40656019/python-sendgrid-send-email-with-pdf-attachment-file" target="_blank">this article</a>.</p>
+<p>In addition to searching Yelp, try integrate data from Twitter (or some other source) using some of the lecture samples from Week 9/10. You can earn up to 5 points for each provider that you incorporate.</p>
 
 <h3 id="rubric-40-possible-points">Rubric (40 Possible Points)</h3>
 <table>
@@ -356,21 +357,17 @@ len(artist_ids) + len(track_ids) + len(genres) must be between 1 and 5.</p>
   <li>Allow the user to either clear out or append tracks to their tracks list.</li>
 </ol>
 
-<h4 id="3-points-extra-credit-generate-an-html-file-1">[3 Points] Extra Credit: Generate an HTML file</h4>
-<p>Generate an HTML file with the table of recommended tracks as well as some information about the artists (and tracks) that went into seeding the playlist. Consider embedding images of artists, albums, and/or audio players into the file.</p>
-
 <h4 id="2-points-extra-credit-search-for-similar-artists">[2 Points] Extra Credit: Search for similar artists</h4>
 <p>Allow the user to discover artists who are similar to a given artist.</p>
 
 <h4 id="2-points-extra-credit-search-for-playlists-by-keyword">[2 Points] Extra Credit: Search for playlists by keyword</h4>
 <p>Allow the user to find playlists based on a keyword search.</p>
 
+<h4 id="5-points-extra-credit-allow-the-user-to-download-a-preview-of-a-song">[5 Points] Extra Credit: Allow the user to download a preview of a song</h4>
+<p>Allow the user to download an mp3 file of the song preview of at least one of their recommendations.</p>
+
 <h4 id="5-points-incorporate-another-information-source-1">[5 Points] Incorporate another information source</h4>
 <p>In addition to searching Spotify, try integrate data from YouTube or Twitter as well using some of the lecture samples from Week 9. You can earn up to 5 points for each provider that you incorporate. In other words: 5 points for YouTube, 5 points for Twitter, etc.</p>
-
-<h4 id="5-points-figure-out-how-to-attach-the-html-file-to-an-email-1">[5 Points] Figure out how to attach the HTML file to an email</h4>
-<p>Take a look at this article:
-https://stackoverflow.com/questions/40656019/python-sendgrid-send-email-with-pdf-attachment-file</p>
 
 <h3 id="rubric-40-possible-points-1">Rubric (40 Possible Points)</h3>
 <table>

@@ -12,7 +12,6 @@ class TestSendgrid(unittest.TestCase):
         super(TestSendgrid, self).__init__(*args, **kwargs)
 
     def test_can_import_sendgrid(self, *args, **kwargs):
-        # from sendgrid import SendGridAPIClient
         from sendgrid.helpers.mail import Mail
         self.assertNotEqual(str(Mail).find('Mail'), -1)
 
@@ -21,5 +20,3 @@ class TestSendgrid(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
-

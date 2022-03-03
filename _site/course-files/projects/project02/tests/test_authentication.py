@@ -19,18 +19,5 @@ class TestAuthentication(unittest.TestCase):
         self.assertEqual(len(spotify_key), 144)
         time.sleep(1.0)
 
-    # def test_malformed_query_yields_errors(self):
-    #     with self.assertRaises(Exception) as cm:
-    #         authentication.get_token('https://www.apitutor.org/yelp/ke')
-    #     self.assertIn(
-    #         'This URL is invalid: https://www.apitutor.org/yelp/ke', str(cm.exception)
-    #     )
-    #     time.sleep(1.0)
-    #     with self.assertRaises(Exception) as cm:
-    #         authentication.get_token('https://www.apitutor.org/spotify/ke')
-    #     self.assertIn(
-    #         'This URL is invalid: https://www.apitutor.org/spotify/ke', str(cm.exception)
-    #     )
-
 if __name__ == '__main__':
     unittest.main()

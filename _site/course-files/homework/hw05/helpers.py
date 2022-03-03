@@ -72,7 +72,7 @@ def game_over(canvas, happy: bool = False):
     '''
     if happy:
         messagebox.showinfo("Congratulations",  "You've won!")
-    canvas.bind(KEY_PRESS, None)
+    canvas.unbind(KEY_PRESS)
 
 
 def color_a_grid_square(canvas: Canvas, color: str, grid_coord: tuple):
