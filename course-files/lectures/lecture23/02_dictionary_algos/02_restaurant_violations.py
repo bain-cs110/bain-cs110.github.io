@@ -2,14 +2,16 @@
 # for the City of Evanston and counts the number of violations that have occurred
 # for each restaurant code. The, print out the restaurant code and the number of violations
 
-# VS Code Hack:
-import sys
-import os
-from csv import reader
-dir_path = os.path.dirname(sys.argv[0])
-file_path = os.path.join(dir_path, 'Food_Establishment_Violations.csv')
-# End VS Code Hack:
+import csv
+
+file_path = "Food_Establishment_Violations.csv"
+
 
 f = open(file_path, 'r', encoding='utf8', errors='ignore')
-for row in reader(f):
+
+## Instead of writing our own program to deal with each line, we use the
+## csv library and the reader function to convert each row to a list!
+for row in csv.reader(f):
+    print(type(row))
     print(row)
+    break

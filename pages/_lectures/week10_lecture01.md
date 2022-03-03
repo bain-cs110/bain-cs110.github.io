@@ -1,6 +1,6 @@
 ---
 layout: module
-title: Dictionary Practice and Intro to P2
+title: APIs and P2
 type: lecture
 draft: 1
 num: 24
