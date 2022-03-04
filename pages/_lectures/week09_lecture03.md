@@ -13,9 +13,9 @@ slides:
    - title: "Using Dictionaries for Data Analysis"
      url: https://docs.google.com/presentation/d/1Hlrlla7mdHE4icIsesRqh4roNGtb2fn3xk6f5ZGp3ms/edit?usp=sharing
 videos:
-   - title: "Live Lecture (not yet posted)"
-     url:
-     duration: "48:11"
+   - title: "Live Lecture"
+     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a36461f1-2672-4404-9c82-adf6016a963d
+     duration: "50:00"
      live: 1
 ---
 
