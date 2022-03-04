@@ -5,7 +5,7 @@ abbreviation: HW6
 type: homework
 due_date: 2022-03-11
 points: 8
-draft: 1
+draft: 0
 ---
 
 In this assignment, you will be completing 20 points of your [Project 2](p2), to get a solid start. Your grade will be calculated by dividing your total score (20 possible points) by 2.5 (so that it scales to 8 possible points).
