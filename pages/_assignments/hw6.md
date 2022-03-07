@@ -63,3 +63,6 @@ Please complete Part 1 & 2 of Project 2, which involves asking the user for thei
 ## What to Turn In
 * Your code as a zip file. This should include all of the files that make your code work.
 * Please **only submit 1 set of code files per team** and list who you collaborated with (and which tutorial they're assigned to) in the submission comments. Your teammates should then just post a comment that says, "see X's (Olivier's Wed 3pm Tutorial) submission for the code. My collaborators were X (in Poom's Tues 10am Tutorial) and Y (Amy's Wed 11am Tutorial)."
+
+## Request an Extension
+If you need to request an extension on the assignment (must be 24 hours in advance) use the <a href="https://forms.gle/PobKBdUkTpPJ3GbZ8">Extension Request form</a>. Remember, requests must be made 24 hours in advance and if you requested an extension for HW 5, you are not eligible for an extension for HW 6.
