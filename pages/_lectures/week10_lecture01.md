@@ -9,7 +9,7 @@ slides:
    - title: "Using Dictionaries for Data Analysis (from last time)"
      url: https://docs.google.com/presentation/d/1Hlrlla7mdHE4icIsesRqh4roNGtb2fn3xk6f5ZGp3ms/edit?usp=sharing
 videos:
-   - title: "Live Lecture (Not Yet Posted)
+   - title: "Live Lecture (Not Yet Posted)"
      duration: "50:00"
      live: 1
 ---

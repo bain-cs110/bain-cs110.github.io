@@ -71,15 +71,15 @@
 <p>Please complete the following exercises:</p>
 
 <h2 id="1-add-a-creature-when-you-click-on-the-canvas">1. Add a creature when you click on the canvas</h2>
-<p>Open <code class="highlighter-rouge">01_click_to_add_creature.py</code> and complete the following tasks:</p>
+<p>Open <code class="language-plaintext highlighter-rouge">01_click_to_add_creature.py</code> and complete the following tasks:</p>
 <ol>
-  <li>modify the <code class="highlighter-rouge">add_new_creature</code> function so that it adds a new creature wherever the user clicks. Make the size and color of the creature random.</li>
-  <li>When you’re done, add the following line to your program right below your MOUSE_CLICK event handler:<br /><br /><strong><code class="highlighter-rouge">canvas.bind(MOUSE_DRAG, add_new_creature)</code></strong> <br /><br />Now run your program again, and notice that your <code class="highlighter-rouge">add_new_creature</code> function is invoked when you either click or drag.</li>
-  <li>Finally, replace the smiley face <code class="highlighter-rouge">make_creature</code> function with *your creature. To do this, copy your creature function (and any relevant helper functions) into <code class="highlighter-rouge">creature.py</code> and then make any necessary modifications to the <code class="highlighter-rouge">add_new_creature</code> function (hint: you may need to change the parameter names, particularly for your optional inputs).</li>
+  <li>modify the <code class="language-plaintext highlighter-rouge">add_new_creature</code> function so that it adds a new creature wherever the user clicks. Make the size and color of the creature random.</li>
+  <li>When you’re done, add the following line to your program right below your MOUSE_CLICK event handler:<br /><br /><strong><code class="language-plaintext highlighter-rouge">canvas.bind(MOUSE_DRAG, add_new_creature)</code></strong> <br /><br />Now run your program again, and notice that your <code class="language-plaintext highlighter-rouge">add_new_creature</code> function is invoked when you either click or drag.</li>
+  <li>Finally, replace the smiley face <code class="language-plaintext highlighter-rouge">make_creature</code> function with *your creature. To do this, copy your creature function (and any relevant helper functions) into <code class="language-plaintext highlighter-rouge">creature.py</code> and then make any necessary modifications to the <code class="language-plaintext highlighter-rouge">add_new_creature</code> function (hint: you may need to change the parameter names, particularly for your optional inputs).</li>
 </ol>
 
 <h2 id="2-move-your-creature-when-you-press-the-i-j-k-and-m-keys">2. Move your creature when you press the i, j, k, and m keys</h2>
-<p>Open <code class="highlighter-rouge">02_move_creature_with_keyboard.py</code> and complete the following tasks:</p>
+<p>Open <code class="language-plaintext highlighter-rouge">02_move_creature_with_keyboard.py</code> and complete the following tasks:</p>
 <ol>
   <li>When the user presses the i-key, move the creature <strong>up</strong> 10 pixels.</li>
   <li>When the user presses the j-key, move the creature to the <strong>left</strong> 10 pixels.</li>
@@ -89,24 +89,24 @@
 
 <blockquote class="blockquote-no-margin">
   <p><strong>NOTES:</strong>
-In order for your Canvas to listen for keyboard events, you must invoke the <strong><code class="highlighter-rouge">canvas.focus_set()</code></strong> method after you invoke <code class="highlighter-rouge">canvas.pack()</code> (at the top of your program). Without <strong><code class="highlighter-rouge">canvas.focus_set()</code></strong>, your keyboard events will not fire.</p>
+In order for your Canvas to listen for keyboard events, you must invoke the <strong><code class="language-plaintext highlighter-rouge">canvas.focus_set()</code></strong> method after you invoke <code class="language-plaintext highlighter-rouge">canvas.pack()</code> (at the top of your program). Without <strong><code class="language-plaintext highlighter-rouge">canvas.focus_set()</code></strong>, your keyboard events will not fire.</p>
 </blockquote>
 
 <h2 id="3-select-which-creature-to-move-with-the-keyboard">3. Select which creature to move with the keyboard</h2>
 <p>In the third exercise, you are going to use a global variable to track which creature your keyboard will control. To do this, you will combine the use of the click event handler and the keyboard event handlers.</p>
 
-<p>Open <code class="highlighter-rouge">03_select_which_creature_to_move_with_keyboard.py</code> and do the following:</p>
+<p>Open <code class="language-plaintext highlighter-rouge">03_select_which_creature_to_move_with_keyboard.py</code> and do the following:</p>
 
 <ol>
-  <li>Replace your <code class="highlighter-rouge">move_creature</code> function with the solution you came up with in exercise #2.</li>
-  <li>Create a global variable called <strong><code class="highlighter-rouge">active_tag</code></strong> and initialize it to ‘creature_1’.</li>
-  <li>Update your <code class="highlighter-rouge">move_creature</code> functionality so that instead of always moving ‘creature_1’, you reference the <strong><code class="highlighter-rouge">active_tag</code></strong> variable instead.</li>
-  <li>Modify the <strong><code class="highlighter-rouge">select_creature</code></strong> function so that it sets the <strong><code class="highlighter-rouge">active_tag</code></strong> variable based on creature on which the user clicks. Hint: use the <strong><code class="highlighter-rouge">global</code></strong> keyword.</li>
+  <li>Replace your <code class="language-plaintext highlighter-rouge">move_creature</code> function with the solution you came up with in exercise #2.</li>
+  <li>Create a global variable called <strong><code class="language-plaintext highlighter-rouge">active_tag</code></strong> and initialize it to ‘creature_1’.</li>
+  <li>Update your <code class="language-plaintext highlighter-rouge">move_creature</code> functionality so that instead of always moving ‘creature_1’, you reference the <strong><code class="language-plaintext highlighter-rouge">active_tag</code></strong> variable instead.</li>
+  <li>Modify the <strong><code class="language-plaintext highlighter-rouge">select_creature</code></strong> function so that it sets the <strong><code class="language-plaintext highlighter-rouge">active_tag</code></strong> variable based on creature on which the user clicks. Hint: use the <strong><code class="language-plaintext highlighter-rouge">global</code></strong> keyword.</li>
   <li>Test your code by making sure that when you click on a different creature, the keyboard moves the correct one.</li>
 </ol>
 
 <h2 id="what-to-turn-in-same-deal-as-always">What to turn in (same deal as always)</h2>
-<p>Please turn in your completed tutorial exercise(s) ON CANVAS by Wednesday night at midnight. To do this, first zip your entire <code class="highlighter-rouge">tutorial06</code> folder (with your edited files inside), and then upload your zip file to Canvas. Please ensure that your zip file includes <strong>YOUR CODE</strong>.  </p>
+<p>Please turn in your completed tutorial exercise(s) ON CANVAS by Wednesday night at midnight. To do this, first zip your entire <code class="language-plaintext highlighter-rouge">tutorial06</code> folder (with your edited files inside), and then upload your zip file to Canvas. Please ensure that your zip file includes <strong>YOUR CODE</strong>.  </p>
 
 
 

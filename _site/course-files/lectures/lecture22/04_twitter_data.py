@@ -3,15 +3,18 @@ import json
 import ssl
 import pprint
 
-def print_data_and_type(description:str, data):
+
+def print_data_and_type(description: str, data):
     print('{} ({}):\n{}\n'.format(description, type(data), data))
+
 
 # Necessary for accessing data via https protocol
 context = ssl._create_unverified_context()
 # Think of it like a handshake saying "I am not a robot"
 
 search_term = "Northwestern University"
-search_term = search_term.replace(' ', '+') # Ever notice URLs don't have spaces?
+# Ever notice URLs don't have spaces?
+search_term = search_term.replace(' ', '+')
 
 function_url = 'https://www.apitutor.org/twitter/simple/1.1/search/tweets.json'
 parameter_name = '?q='
@@ -33,4 +36,4 @@ decoded_data = raw_data.decode()
 # Ask Python to turn that string into a list of dictionaries
 statuses = json.loads(decoded_data)
 
-# print(statuses)
+print(statuses[0])

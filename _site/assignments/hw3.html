@@ -95,25 +95,25 @@ From your 3 sketched ideas, select the one that you would like to use for the as
 </blockquote>
 
 <h2 id="part-2-implement-your-make_creature-function">Part 2: Implement your “make_creature” function</h2>
-<p>Once you are satisfied with your animal concept, create a <code class="highlighter-rouge">make_creature</code> function, inside of <code class="highlighter-rouge">creature.py</code>, using any combination of shapes (points, lines, polygons, rectangles, ovals, etc.). Feel free to use the <code class="highlighter-rouge">make_circle</code> and <code class="highlighter-rouge">make_oval</code> functions that you already implemented in homework 2. Also feel free to use any of the code in <code class="highlighter-rouge">warm_up.py</code>. The spirit of this assignment is for you to get creative, given your developing knowledge of functions.</p>
+<p>Once you are satisfied with your animal concept, create a <code class="language-plaintext highlighter-rouge">make_creature</code> function, inside of <code class="language-plaintext highlighter-rouge">creature.py</code>, using any combination of shapes (points, lines, polygons, rectangles, ovals, etc.). Feel free to use the <code class="language-plaintext highlighter-rouge">make_circle</code> and <code class="language-plaintext highlighter-rouge">make_oval</code> functions that you already implemented in homework 2. Also feel free to use any of the code in <code class="language-plaintext highlighter-rouge">warm_up.py</code>. The spirit of this assignment is for you to get creative, given your developing knowledge of functions.</p>
 
 <p><strong>Tips</strong>:</p>
 <ol>
   <li>Keep it simple (we recommend anywhere between 4-8 shapes)! You can always add more functionality later.</li>
-  <li>Make only one or two changes at a time and then test out those changes by running your <code class="highlighter-rouge">main.py</code> file. This makes things easier to debug.</li>
+  <li>Make only one or two changes at a time and then test out those changes by running your <code class="language-plaintext highlighter-rouge">main.py</code> file. This makes things easier to debug.</li>
 </ol>
 
-<p>Once your function successfully draws the creature that you sketched (in Part 2), you will start adding positional and keyword parameters. There is already 1 positional parameter, canvas, used in the sample <code class="highlighter-rouge">make_creature</code> function. You will add to this:</p>
+<p>Once your function successfully draws the creature that you sketched (in Part 2), you will start adding positional and keyword parameters. There is already 1 positional parameter, canvas, used in the sample <code class="language-plaintext highlighter-rouge">make_creature</code> function. You will add to this:</p>
 
 <ul>
-  <li><span class="hw">ALREADY DONE FOR YOU</span>  A positional (required) parameter, <code class="highlighter-rouge">canvas</code>, which will be a reference to your canvas object from main.py.</li>
-  <li>A positional (required) parameter, <code class="highlighter-rouge">center</code>, specifying the x-y position of the center of your creature (should be a tuple).</li>
-  <li>A keyword (optional) parameter, <code class="highlighter-rouge">primary_color</code> specifying the primary color of the creature. In the case of the bear, this is the face color. Remember, optional parameters require default values.</li>
-  <li>A keyword (optional) parameter, <code class="highlighter-rouge">secondary_color</code> specifying the secondary color of the creature. In the case of the bear, this is the ear color.</li>
-  <li>A keyword (optional) parameter, <code class="highlighter-rouge">size</code>, specifying the size of the creature.</li>
+  <li><span class="hw">ALREADY DONE FOR YOU</span>  A positional (required) parameter, <code class="language-plaintext highlighter-rouge">canvas</code>, which will be a reference to your canvas object from main.py.</li>
+  <li>A positional (required) parameter, <code class="language-plaintext highlighter-rouge">center</code>, specifying the x-y position of the center of your creature (should be a tuple).</li>
+  <li>A keyword (optional) parameter, <code class="language-plaintext highlighter-rouge">primary_color</code> specifying the primary color of the creature. In the case of the bear, this is the face color. Remember, optional parameters require default values.</li>
+  <li>A keyword (optional) parameter, <code class="language-plaintext highlighter-rouge">secondary_color</code> specifying the secondary color of the creature. In the case of the bear, this is the ear color.</li>
+  <li>A keyword (optional) parameter, <code class="language-plaintext highlighter-rouge">size</code>, specifying the size of the creature.</li>
 </ul>
 
-<p>When you’re done, please add at least three calls to the <code class="highlighter-rouge">make_creature</code> function in your <code class="highlighter-rouge">main.py</code> file, using different arguments. For instance, after completing the assignment, I used my make_creature function in the following way to produce the drawing below (feel free to use whatever arguments you want for your positional / keyword parameters):</p>
+<p>When you’re done, please add at least three calls to the <code class="language-plaintext highlighter-rouge">make_creature</code> function in your <code class="language-plaintext highlighter-rouge">main.py</code> file, using different arguments. For instance, after completing the assignment, I used my make_creature function in the following way to produce the drawing below (feel free to use whatever arguments you want for your positional / keyword parameters):</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># with a function, you can make slightly different versions of your design,
 # thereby reusing the same code over and over again

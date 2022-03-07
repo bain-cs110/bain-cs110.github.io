@@ -90,9 +90,9 @@
 
 <blockquote>
   <p><strong>PLEASE NOTE:</strong>
-While you only have to write new code in the parts that are marked <code class="highlighter-rouge">TODO</code> in <code class="highlighter-rouge">wordle.py</code>, you’ll
-need to understand the other functions in <code class="highlighter-rouge">wordle.py</code> and <code class="highlighter-rouge">helpers.py</code> in order
-to know how to use them to complete the assignment. You can search for the <code class="highlighter-rouge">TODO</code> tags using the File menu then “Search” in IDLE.</p>
+While you only have to write new code in the parts that are marked <code class="language-plaintext highlighter-rouge">TODO</code> in <code class="language-plaintext highlighter-rouge">wordle.py</code>, you’ll
+need to understand the other functions in <code class="language-plaintext highlighter-rouge">wordle.py</code> and <code class="language-plaintext highlighter-rouge">helpers.py</code> in order
+to know how to use them to complete the assignment. You can search for the <code class="language-plaintext highlighter-rouge">TODO</code> tags using the File menu then “Search” in IDLE.</p>
 </blockquote>
 
 <h2 id="your-tasks">Your Tasks</h2>
@@ -100,25 +100,25 @@ to know how to use them to complete the assignment. You can search for the <code
 
 <ol class="bash-small">
   <li>
-    <p>Adapt your code from Tutorial 08 to finish the implementation of the <code class="highlighter-rouge">read_in_words</code> function. Make sure that your function matches the documentation for the function!</p>
+    <p>Adapt your code from Tutorial 08 to finish the implementation of the <code class="language-plaintext highlighter-rouge">read_in_words</code> function. Make sure that your function matches the documentation for the function!</p>
 
     <ul>
-      <li>First it will read in all of the 5 letter words and add them to <code class="highlighter-rouge">game_data['word_list']</code></li>
+      <li>First it will read in all of the 5 letter words and add them to <code class="language-plaintext highlighter-rouge">game_data['word_list']</code></li>
       <li>Make sure to convert the words to UPPER CASE before adding them to the list</li>
-      <li>Secondly, it’ll pick a random 5 letter word and save it into <code class="highlighter-rouge">game_data['solution']</code></li>
+      <li>Secondly, it’ll pick a random 5 letter word and save it into <code class="language-plaintext highlighter-rouge">game_data['solution']</code></li>
     </ul>
   </li>
-  <li>Adapt your code from Tutorial 08 to finish the implementation of the <code class="highlighter-rouge">generate_hint</code> function. Make sure that you function matches the documentation at the top of the function!</li>
-  <li>Finish the <code class="highlighter-rouge">render_previous_guess</code> function. It needs to go through each letter of the inputted <code class="highlighter-rouge">previous_guess</code>, and
+  <li>Adapt your code from Tutorial 08 to finish the implementation of the <code class="language-plaintext highlighter-rouge">generate_hint</code> function. Make sure that you function matches the documentation at the top of the function!</li>
+  <li>Finish the <code class="language-plaintext highlighter-rouge">render_previous_guess</code> function. It needs to go through each letter of the inputted <code class="language-plaintext highlighter-rouge">previous_guess</code>, and
     <ul>
-      <li>draw the correct colored square (using <code class="highlighter-rouge">helpers.color_a_grid_square</code>)</li>
-      <li>draw the letter corresponding to that square (using <code class="highlighter-rouge">helpers.draw_letter_in_grid</code>)</li>
-      <li>make sure to review the documentation for <code class="highlighter-rouge">helpers.color_a_grid_square</code> in <code class="highlighter-rouge">helpers.py</code>.</li>
+      <li>draw the correct colored square (using <code class="language-plaintext highlighter-rouge">helpers.color_a_grid_square</code>)</li>
+      <li>draw the letter corresponding to that square (using <code class="language-plaintext highlighter-rouge">helpers.draw_letter_in_grid</code>)</li>
+      <li>make sure to review the documentation for <code class="language-plaintext highlighter-rouge">helpers.color_a_grid_square</code> in <code class="language-plaintext highlighter-rouge">helpers.py</code>.</li>
       <li>note: the coordinate it asks for is not the Canvas coordinate, but instead the coordinate on the W0rdle grid which looks like the grid below.</li>
-      <li>make sure to use the right colors which are defined as variables near the top of the file: <code class="highlighter-rouge">CORRECT_COLOR</code>, <code class="highlighter-rouge">PARTIAL_COLOR</code>, and <code class="highlighter-rouge">WRONG_COLOR</code></li>
+      <li>make sure to use the right colors which are defined as variables near the top of the file: <code class="language-plaintext highlighter-rouge">CORRECT_COLOR</code>, <code class="language-plaintext highlighter-rouge">PARTIAL_COLOR</code>, and <code class="language-plaintext highlighter-rouge">WRONG_COLOR</code></li>
     </ul>
   </li>
-  <li>Finish the <code class="highlighter-rouge">render_game_board</code> function by looping through the list of previous_guesses and calling the <code class="highlighter-rouge">render_previous_guess</code> function for each one.</li>
+  <li>Finish the <code class="language-plaintext highlighter-rouge">render_game_board</code> function by looping through the list of previous_guesses and calling the <code class="language-plaintext highlighter-rouge">render_previous_guess</code> function for each one.</li>
 </ol>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>            ———————————––––––––––––––––––––––––––––
@@ -140,7 +140,7 @@ to know how to use them to complete the assignment. You can search for the <code
   <p><strong>IF YOU GET STUCK:</strong></p>
   <ol>
     <li>Make sure that you carefully read what error pops up. It will tell you where and what to look for.</li>
-    <li>Use print statements to diagnose the state of the game. For instance, to check whether your generated hint is correct, before you <code class="highlighter-rouge">return hint</code>, add a new line that says <code class="highlighter-rouge">print(hint)</code> which will allow you to see the hint generated in the Interpreter window.</li>
+    <li>Use print statements to diagnose the state of the game. For instance, to check whether your generated hint is correct, before you <code class="language-plaintext highlighter-rouge">return hint</code>, add a new line that says <code class="language-plaintext highlighter-rouge">print(hint)</code> which will allow you to see the hint generated in the Interpreter window.</li>
     <li>Make sure to read the documentation for each function!</li>
   </ol>
 </blockquote>
@@ -149,19 +149,19 @@ to know how to use them to complete the assignment. You can search for the <code
 <p>Before you submit, make sure you’ve tested that your program does the following:</p>
 
 <ul class="checkbox-list">
-  <li>Reads in a list of 5-letter words from the <code class="highlighter-rouge">word_list.txt</code> file</li>
+  <li>Reads in a list of 5-letter words from the <code class="language-plaintext highlighter-rouge">word_list.txt</code> file</li>
   <li>Only allows the user to enter 5 letter words</li>
   <li>If a user hits ENTER and hasn’t entered 5 letters don’t accept it as a guess</li>
   <li>If a user hits ENTER and has entered an INVALID word don’t accept it as a guess</li>
   <li>You do not need to worry about the case where the user enters the same word multiple times</li>
   <li>After each guess, W0RDLE responds with the correct hint and moves to the next line</li>
-  <li>Guesses currently being entered are black text on a white (<code class="highlighter-rouge">DEFAULT_COLOR</code>) background</li>
+  <li>Guesses currently being entered are black text on a white (<code class="language-plaintext highlighter-rouge">DEFAULT_COLOR</code>) background</li>
   <li>Previous guesses are rendered in white text</li>
   <li>The squares for letters in a previous guess are colored thusly:
     <ul>
-      <li>Completely correct letters will have a green (<code class="highlighter-rouge">CORRECT_COLOR</code>) background</li>
-      <li>Partially correct letters will have a yellow (<code class="highlighter-rouge">PARTIAL_COLOR</code>) background</li>
-      <li>Letters that don’t appear will have a grey (<code class="highlighter-rouge">WRONG_COLOR</code>) background</li>
+      <li>Completely correct letters will have a green (<code class="language-plaintext highlighter-rouge">CORRECT_COLOR</code>) background</li>
+      <li>Partially correct letters will have a yellow (<code class="language-plaintext highlighter-rouge">PARTIAL_COLOR</code>) background</li>
+      <li>Letters that don’t appear will have a grey (<code class="language-plaintext highlighter-rouge">WRONG_COLOR</code>) background</li>
     </ul>
   </li>
   <li>The user can only make 6 valid guesses</li>

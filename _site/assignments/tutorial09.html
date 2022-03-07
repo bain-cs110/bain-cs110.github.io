@@ -67,7 +67,7 @@
 
 <ol>
   <li>Installing some python dependencies using PIP.</li>
-  <li>Downloading <a href="https://canvas.northwestern.edu/files/12569656/download?download_frd=1">my_token.py</a> from Canvas and save it in your <code class="highlighter-rouge">apis</code> folder. This is the course API master token. Your project won’t work without it.</li>
+  <li>Downloading <a href="https://canvas.northwestern.edu/files/12798477/download?download_frd=1">my_token.py</a> from Canvas and save it in your <code class="language-plaintext highlighter-rouge">apis</code> folder. This is the course API master token. Your project won’t work without it.</li>
   <li>Practicing using some of the modules that have been provided for you inside of the apis directory.</li>
 </ol>
 
@@ -75,9 +75,9 @@
 
 <h2 id="step-1-setup">Step 1: Setup</h2>
 
-<p>Complete Steps A, B, C, and D in the “Setup” section of <a href="../assignments/p2#setup-please-read-carefully">Project 2</a>. Here are <a href="https://docs.google.com/presentation/d/13ysHSMh9yyGX58rbvlxJO3i1ssN9lQXCZ6mkY4Xy9Uc/edit?usp=sharing" target="_blank">some tips for getting everything set up</a>.</p>
+<p>Complete Steps A, B, C, and D in the “Setup” section of <a href="../assignments/p2#setup-please-read-carefully">Project 2</a>.</p>
 
-<p>If you have set everything up correctly, running the <code class="highlighter-rouge">tests/run_verification.py</code> python file will display the following output:</p>
+<p>If you have set everything up correctly, running the <code class="language-plaintext highlighter-rouge">tests/run_verification.py</code> python file will display the following output:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>test_token <span class="o">(</span>test_authentication.TestAuthentication<span class="o">)</span> ... ok
 test_get_key <span class="o">(</span>test_authentication.TestAuthentication<span class="o">)</span> ... ok
@@ -98,7 +98,7 @@ OK
 <p>When you’re done, complete one of the two options (either / or) listed below:</p>
 
 <h3 id="option-1-yelp-option">Option 1: Yelp Option</h3>
-<p>Create a brand new file called <code class="highlighter-rouge">tutorial09.py</code> directly inside of your <code class="highlighter-rouge">project02</code> folder (the location matters). Your directory structure should look like this:</p>
+<p>Create a brand new file called <code class="language-plaintext highlighter-rouge">tutorial09.py</code> directly inside of your <code class="language-plaintext highlighter-rouge">project02</code> folder (the location matters). Your directory structure should look like this:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├── apis
 ├── music_finder.py
@@ -107,7 +107,7 @@ OK
 └── tutorial09.py
 </code></pre></div></div>
 
-<p>Next, paste the following code into your <code class="highlighter-rouge">tutorial09.py</code> file and run it.</p>
+<p>Next, paste the following code into your <code class="language-plaintext highlighter-rouge">tutorial09.py</code> file and run it.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">apis</span> <span class="kn">import</span> <span class="n">yelp</span>
 
@@ -119,11 +119,11 @@ OK
 
 <h4 id="practice-outputting-dictionary-values">Practice Outputting Dictionary Values</h4>
 <ol>
-  <li>Output just the <code class="highlighter-rouge">name</code> of each business to the screen</li>
-  <li>Output the <code class="highlighter-rouge">name</code>, <code class="highlighter-rouge">rating</code>, and <code class="highlighter-rouge">review_count</code> to the screen</li>
+  <li>Output just the <code class="language-plaintext highlighter-rouge">name</code> of each business to the screen</li>
+  <li>Output the <code class="language-plaintext highlighter-rouge">name</code>, <code class="language-plaintext highlighter-rouge">rating</code>, and <code class="language-plaintext highlighter-rouge">review_count</code> to the screen</li>
 </ol>
 
-<p><strong>TIP:</strong> You can use the string’s build-in <code class="highlighter-rouge">format</code> function to create nice columns:</p>
+<p><strong>TIP:</strong> You can use the string’s build-in <code class="language-plaintext highlighter-rouge">format</code> function to create nice columns:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">template</span> <span class="o">=</span> <span class="s">'{name:&lt;30}{rating:&gt;10}{review_count:&gt;20}'</span>
 
@@ -143,12 +143,12 @@ OK
 </code></pre></div></div>
 
 <h4 id="practice-querying">Practice Querying</h4>
-<p>When you’re done outputting the data, open the <code class="highlighter-rouge">apis/yelp.py</code> and navigate down to the <code class="highlighter-rouge">get_businesses</code> function definition. Note all of the keyword  (optional) parameters that the function accepts.</p>
+<p>When you’re done outputting the data, open the <code class="language-plaintext highlighter-rouge">apis/yelp.py</code> and navigate down to the <code class="language-plaintext highlighter-rouge">get_businesses</code> function definition. Note all of the keyword  (optional) parameters that the function accepts.</p>
 
-<p>Next, go back to your <code class="highlighter-rouge">tutorial09.py</code> file and modify the get_businesses(…) function call by:</p>
+<p>Next, go back to your <code class="language-plaintext highlighter-rouge">tutorial09.py</code> file and modify the get_businesses(…) function call by:</p>
 <ol>
-  <li>Use the various keyword arguments (<code class="highlighter-rouge">price</code>, <code class="highlighter-rouge">category</code>, and/or <code class="highlighter-rouge">location</code>) to change which results get displayed.</li>
-  <li>Use the <code class="highlighter-rouge">sort_by</code> keyword argument to change the sort order.</li>
+  <li>Use the various keyword arguments (<code class="language-plaintext highlighter-rouge">price</code>, <code class="language-plaintext highlighter-rouge">category</code>, and/or <code class="language-plaintext highlighter-rouge">location</code>) to change which results get displayed.</li>
+  <li>Use the <code class="language-plaintext highlighter-rouge">sort_by</code> keyword argument to change the sort order.</li>
 </ol>
 
 <blockquote class="blockquote-no-margin">
@@ -156,12 +156,12 @@ OK
   <p>You can also learn more about the yelp module by:</p>
   <ul>
     <li>Looking at the online documentation here: <a href="/course-files/projects/project02/docs/yelp.html" target="_blank">/project02/docs/yelp.html</a></li>
-    <li>Running this command using python: <strong><code class="highlighter-rouge">help(apis.yelp)</code></strong></li>
+    <li>Running this command using python: <strong><code class="language-plaintext highlighter-rouge">help(apis.yelp)</code></strong></li>
   </ul>
 </blockquote>
 
 <h3 id="option-2-spotify-option">Option 2: Spotify Option</h3>
-<p>Create a brand new file called <code class="highlighter-rouge">tutorial09.py</code> directly inside of your <code class="highlighter-rouge">project02</code> folder (the location matters). Your directory structure should look like this:</p>
+<p>Create a brand new file called <code class="language-plaintext highlighter-rouge">tutorial09.py</code> directly inside of your <code class="language-plaintext highlighter-rouge">project02</code> folder (the location matters). Your directory structure should look like this:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├── apis
 ├── music_finder.py
@@ -170,7 +170,7 @@ OK
 └── tutorial09.py
 </code></pre></div></div>
 
-<p>Next, paste the following code into your <code class="highlighter-rouge">tutorial09.py</code> file and run it.</p>
+<p>Next, paste the following code into your <code class="language-plaintext highlighter-rouge">tutorial09.py</code> file and run it.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">apis</span> <span class="kn">import</span> <span class="n">spotify</span>
 <span class="n">artists</span> <span class="o">=</span> <span class="n">spotify</span><span class="p">.</span><span class="n">get_artists</span><span class="p">(</span><span class="s">'Beyonce'</span><span class="p">)</span>
@@ -181,11 +181,11 @@ OK
 
 <h4 id="practice-outputting-dictionary-values-1">Practice Outputting Dictionary Values</h4>
 <ol>
-  <li>Output just the <code class="highlighter-rouge">name</code> of each artist to</li>
-  <li>Output the <code class="highlighter-rouge">name</code>, <code class="highlighter-rouge">genres</code>, and <code class="highlighter-rouge">share_url</code> to the screen</li>
+  <li>Output just the <code class="language-plaintext highlighter-rouge">name</code> of each artist to</li>
+  <li>Output the <code class="language-plaintext highlighter-rouge">name</code>, <code class="language-plaintext highlighter-rouge">genres</code>, and <code class="language-plaintext highlighter-rouge">share_url</code> to the screen</li>
 </ol>
 
-<p><strong>TIP:</strong> You can use the string’s build-in <code class="highlighter-rouge">format</code> function to create nice columns:</p>
+<p><strong>TIP:</strong> You can use the string’s build-in <code class="language-plaintext highlighter-rouge">format</code> function to create nice columns:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">template</span> <span class="o">=</span> <span class="s">'{name:&lt;30}{id:&lt;25}{genres:&lt;35}'</span>
 
@@ -208,21 +208,21 @@ Beyonce as Shine              3mjguRNN96bC8zvaTwHoqE
 </code></pre></div></div>
 
 <h4 id="practice-querying-1">Practice Querying</h4>
-<p>When you’re done outputting the data, open the <code class="highlighter-rouge">apis/spotify.py</code> file and navigate down to the <code class="highlighter-rouge">get_similar_tracks</code> function definition. Note all of the keyword  (optional) parameters that the function accepts.</p>
+<p>When you’re done outputting the data, open the <code class="language-plaintext highlighter-rouge">apis/spotify.py</code> file and navigate down to the <code class="language-plaintext highlighter-rouge">get_similar_tracks</code> function definition. Note all of the keyword  (optional) parameters that the function accepts.</p>
 
-<p>While each parameter is technically optional, this function needs some seed data in order to give you song recommendations. Up to 5 seed values may be provided in any combination of seed_artists, seed_tracks and seed_genres. In other words: <br /><code class="highlighter-rouge">len(artist_ids) + len(track_ids) + len(genres)</code> must be between 1 and 5.</p>
+<p>While each parameter is technically optional, this function needs some seed data in order to give you song recommendations. Up to 5 seed values may be provided in any combination of seed_artists, seed_tracks and seed_genres. In other words: <br /><code class="language-plaintext highlighter-rouge">len(artist_ids) + len(track_ids) + len(genres)</code> must be between 1 and 5.</p>
 
-<p>Next, go back to your <code class="highlighter-rouge">tutorial09.py</code> file and try invoking the <code class="highlighter-rouge">spotify.get_similar_tracks</code> function as follows:</p>
+<p>Next, go back to your <code class="language-plaintext highlighter-rouge">tutorial09.py</code> file and try invoking the <code class="language-plaintext highlighter-rouge">spotify.get_similar_tracks</code> function as follows:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">track_recommendations</span> <span class="o">=</span> <span class="n">spotify</span><span class="p">.</span><span class="n">get_similar_tracks</span><span class="p">(</span><span class="n">artist_ids</span><span class="o">=</span><span class="p">[</span><span class="s">'6vWDO969PvNqNYHIOW5v0m'</span><span class="p">])</span>
 <span class="k">print</span><span class="p">(</span><span class="n">track_recommendations</span><span class="p">)</span>
 </code></pre></div></div>
 <ul>
   <li>Try passing in different Artist IDs</li>
-  <li>Try passing in a list of genres (see the <code class="highlighter-rouge">apis.spotify.get_genres_abridged</code> function to get some valid genre categories).</li>
+  <li>Try passing in a list of genres (see the <code class="language-plaintext highlighter-rouge">apis.spotify.get_genres_abridged</code> function to get some valid genre categories).</li>
 </ul>
 
-<p>There is also a helper function inside of the <code class="highlighter-rouge">apis.spotify</code> module that can help you output the tracks to the screen, which you are welcome to modify:</p>
+<p>There is also a helper function inside of the <code class="language-plaintext highlighter-rouge">apis.spotify</code> module that can help you output the tracks to the screen, which you are welcome to modify:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">table_text</span> <span class="o">=</span> <span class="n">spotify</span><span class="p">.</span><span class="n">get_formatted_tracklist_table</span><span class="p">(</span><span class="n">track_recommendations</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">table_text</span><span class="p">)</span>
@@ -241,7 +241,7 @@ Beyonce as Shine              3mjguRNN96bC8zvaTwHoqE
   <p>You can also learn more about the yelp module by:</p>
   <ul>
     <li>Looking at the online documentation here: <a href="/course-files/projects/project02/docs/spotify.html" target="_blank">/project02/docs/spotify.html</a></li>
-    <li>Running this command using python: <strong><code class="highlighter-rouge">help(apis.spotify)</code></strong></li>
+    <li>Running this command using python: <strong><code class="language-plaintext highlighter-rouge">help(apis.spotify)</code></strong></li>
   </ul>
 </blockquote>
 
@@ -249,8 +249,8 @@ Beyonce as Shine              3mjguRNN96bC8zvaTwHoqE
 <p>Please turn in your completed tutorial exercise(s) on Canvas. To do this:</p>
 
 <ol>
-  <li>Zip your entire <code class="highlighter-rouge">project02</code> folder (with your edited files inside)</li>
-  <li>Rename your zip file to <code class="highlighter-rouge">tutorial09</code></li>
+  <li>Zip your entire <code class="language-plaintext highlighter-rouge">project02</code> folder (with your edited files inside)</li>
+  <li>Rename your zip file to <code class="language-plaintext highlighter-rouge">tutorial09</code></li>
   <li>upload your zip file to Canvas.</li>
 </ol>
 

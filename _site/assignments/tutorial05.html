@@ -110,7 +110,7 @@
 </code></pre></div></div>
 
 <h2 id="step-1-update-the-draw_row-function">Step 1: Update the “draw_row” function</h2>
-<p>Open <code class="highlighter-rouge">starter.py</code> and take a look at it. Then run it using IDLE (or a code editor of your choice). You should see the first 6 rows of pixels for each
+<p>Open <code class="language-plaintext highlighter-rouge">starter.py</code> and take a look at it. Then run it using IDLE (or a code editor of your choice). You should see the first 6 rows of pixels for each
 pixel art object (Frank and the heart). However, everything is being drawn
 as a grey square. In other words, the color distinctions aren’t being honored (see image below).</p>
 
@@ -121,7 +121,7 @@ as a grey square. In other words, the color distinctions aren’t being honored 
 <p><img class="small frame" src="/assets/images/tutorial04/partial.png" /></p>
 
 <blockquote class="blockquote-no-margin">
-  <p><strong>If you get stuck</strong>: After you’ve given it a shot, take a look at <code class="highlighter-rouge">hints/hint1a.py</code> and <code class="highlighter-rouge">hints/hint1b.py</code> to consider a few approaches that you might have tried (but of course, there are others).</p>
+  <p><strong>If you get stuck</strong>: After you’ve given it a shot, take a look at <code class="language-plaintext highlighter-rouge">hints/hint1a.py</code> and <code class="language-plaintext highlighter-rouge">hints/hint1b.py</code> to consider a few approaches that you might have tried (but of course, there are others).</p>
 </blockquote>
 
 <h2 id="step-2-replace-the-repetitive-draw_row-function-calls">Step 2: Replace the repetitive draw_row function calls</h2>
@@ -139,16 +139,16 @@ as a grey square. In other words, the color distinctions aren’t being honored 
 <span class="n">draw_row</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">heart</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">270</span><span class="p">),</span> <span class="n">pixel</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 <span class="p">...</span>
 </code></pre></div></div>
-<p>You will use 2 “for loops” – one for <code class="highlighter-rouge">frank</code> and one for the <code class="highlighter-rouge">heart</code>. When you’re done, the entirety of Frank and the heart should be drawn (see image below).</p>
+<p>You will use 2 “for loops” – one for <code class="language-plaintext highlighter-rouge">frank</code> and one for the <code class="language-plaintext highlighter-rouge">heart</code>. When you’re done, the entirety of Frank and the heart should be drawn (see image below).</p>
 
 <p><img class="small frame" src="/assets/images/tutorial04/step2.png" /></p>
 
 <blockquote class="blockquote-no-margin">
-  <p><strong>If you get stuck</strong>: After you’ve given it a shot, take a look at <code class="highlighter-rouge">hints/hint2.py</code> to get a sense of how you might use a for loop to complete this task. Frank has been done for you. You try doing the heart.</p>
+  <p><strong>If you get stuck</strong>: After you’ve given it a shot, take a look at <code class="language-plaintext highlighter-rouge">hints/hint2.py</code> to get a sense of how you might use a for loop to complete this task. Frank has been done for you. You try doing the heart.</p>
 </blockquote>
 
 <h2 id="step-3-create-a-draw_pixel_art-function">Step 3: Create a draw_pixel_art function</h2>
-<p>Now, create a <code class="highlighter-rouge">draw_pixel_art</code> function, with a function definition that looks like this:</p>
+<p>Now, create a <code class="language-plaintext highlighter-rouge">draw_pixel_art</code> function, with a function definition that looks like this:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">draw_pixel_art</span><span class="p">(</span><span class="n">canvas</span><span class="p">:</span><span class="n">Canvas</span><span class="p">,</span> <span class="n">top_left</span><span class="p">:</span><span class="nb">tuple</span><span class="p">,</span> <span class="n">grid</span><span class="p">:</span><span class="nb">tuple</span><span class="p">,</span> <span class="n">pixel</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
     <span class="c1"># your function body here
@@ -173,7 +173,7 @@ as a grey square. In other words, the color distinctions aren’t being honored 
 <p>Note that the (x,y) position refers to the top-left corner of where the pixel art will be drawn.</p>
 
 <blockquote class="blockquote-no-margin">
-  <p><strong>If you get stuck</strong>: After you’ve given it a shot, take a look at <code class="highlighter-rouge">hints/hint3.py</code> to get a sense of how you might implement your <code class="highlighter-rouge">draw_pixel_art</code> function body.</p>
+  <p><strong>If you get stuck</strong>: After you’ve given it a shot, take a look at <code class="language-plaintext highlighter-rouge">hints/hint3.py</code> to get a sense of how you might implement your <code class="language-plaintext highlighter-rouge">draw_pixel_art</code> function body.</p>
 </blockquote>
 
 <h2 id="step-4-enhancements">Step 4: Enhancements</h2>
@@ -186,7 +186,7 @@ as a grey square. In other words, the color distinctions aren’t being honored 
 <p><img class="medium frame" src="/assets/images/tutorial04/hearts.png" /></p>
 
 <h2 id="what-to-turn-in-same-deal-as-always">What to turn in (same deal as always)</h2>
-<p>Please turn in your completed tutorial exercise(s) ON CANVAS by Wednesday night at midnight. To do this, first zip your entire <code class="highlighter-rouge">tutorial05</code> folder (with your edited files inside), and then upload your zip file to Canvas. Please ensure that your zip file includes <strong>YOUR CODE</strong>.  </p>
+<p>Please turn in your completed tutorial exercise(s) ON CANVAS by Wednesday night at midnight. To do this, first zip your entire <code class="language-plaintext highlighter-rouge">tutorial05</code> folder (with your edited files inside), and then upload your zip file to Canvas. Please ensure that your zip file includes <strong>YOUR CODE</strong>.  </p>
 
 
 
