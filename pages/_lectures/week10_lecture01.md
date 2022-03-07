@@ -6,8 +6,8 @@ draft: 0
 num: 24
 due_date: 2022-03-07
 slides:
-   - title: "Using Dictionaries for Data Analysis (from last time)"
-     url: https://docs.google.com/presentation/d/1Hlrlla7mdHE4icIsesRqh4roNGtb2fn3xk6f5ZGp3ms/edit?usp=sharing
+   - title: "Using Dictionaries for Data Analysis (continued)"
+     url: https://docs.google.com/presentation/d/1hQtmMpJgofYlXDZF5Nv_FAq90BnMGA6wf5xznfK8J8s/edit?usp=sharing
 videos:
    - title: "Live Lecture (Not Yet Posted)"
      duration: "50:00"
