@@ -3,6 +3,7 @@ layout: module
 title: APIs and P2 (Yelp)
 type: lecture
 draft: 0
+num: 25
 due_date: 2022-03-09
 videos:
    - title: "Live Lecture (not yet posted)"
