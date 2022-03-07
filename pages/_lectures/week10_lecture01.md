@@ -1,19 +1,23 @@
 ---
 layout: module
-title: APIs and P2
+title: Dictionary Counting and P2 (Spotify)
 type: lecture
-draft: 1
+draft: 0
 num: 24
-exercise_url: "lecture24.zip"
 due_date: 2022-03-07
+slides:
+   - title: "Using Dictionaries for Data Analysis (from last time)"
+     url: https://docs.google.com/presentation/d/1Hlrlla7mdHE4icIsesRqh4roNGtb2fn3xk6f5ZGp3ms/edit?usp=sharing
 videos:
-    - url:
-      title: More practice with the dictionary tallying algorithm
-      duration: "48:47"
-      live: 1
+   - title: "Live Lecture (Not Yet Posted)
+     duration: "50:00"
+     live: 1
 ---
 
-## Please complete the following challenges:
-1. Write a program that counts the number of trees in each condition (good, fair, etc.).
-2. Write a program that counts the number of trees belonging to each species.
-3. Write a program to make a map of all the trees in Evanston by installing and using using the `folium` module.
+## Agenda
+1. The counting algorithm for dictionaries.
+2. Get the project 2 files and dependencies installed on your computer.
+3. Practice using three of the modules that we have designed to help you with project 2 (located inside of the `apis` folder):
+  * <a href="/course-files/projects/project02/docs/twilio.html" target="_blank">twilio</a>
+  * <a href="/course-files/projects/project02/docs/yelp.html" target="_blank">yelp</a>
+  * <a href="/course-files/projects/project02/docs/spotify.html" target="_blank">spotify</a>
