@@ -13,6 +13,14 @@ videos:
      url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6df3f938-23d3-4f6e-864f-adf6016a9655
      duration: "50:00"
      live: 1
+  - title: "Twilio Demo (Fixed from Lecture)"
+    url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ab872f06-a6a0-4bbe-ba7b-ae51010bcf2d
+    duration: "3:00"
+    live: 0
+  - title: "Spotify Demo (Fixed from Lecture)"
+    url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9cbb636e-fbe2-4e7b-afee-ae51010f77bf
+    duration: "3:00"
+    live: 0
 ---
 
 ## **NOTE**
