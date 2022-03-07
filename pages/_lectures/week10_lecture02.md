@@ -4,19 +4,19 @@ title: APIs and P2 (Yelp)
 type: lecture
 draft: 0
 due_date: 2022-03-09
-=videos:
+videos:
    - title: "Live Lecture (not yet posted)"
-     url:
+     url: ""
      duration: "50:00"
      live: 1
-  - title: "Twilio Demo (Fixed from Lecture)"
-    url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ab872f06-a6a0-4bbe-ba7b-ae51010bcf2d
-    duration: "3:00"
-    live: 0
-  - title: "Spotify Demo (Fixed from Lecture)"
-    url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9cbb636e-fbe2-4e7b-afee-ae51010f77bf
-    duration: "3:00"
-    live: 0
+   - title: "Twilio Demo (Fixed from Lecture)"
+     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ab872f06-a6a0-4bbe-ba7b-ae51010bcf2d
+     duration: "3:00"
+     live: 0
+   - title: "Spotify Demo (Fixed from Lecture)"
+     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9cbb636e-fbe2-4e7b-afee-ae51010f77bf
+     duration: "3:00"
+     live: 0
 ---
 ## Agenda
 1. Practice using three of the modules that we have designed to help you with project 2 (located inside of the `apis` folder):
