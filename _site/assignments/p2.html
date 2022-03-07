@@ -90,7 +90,7 @@
 
 <h3 id="a-install-the-python-dependencies">A. Install the Python dependencies</h3>
 
-<p>If you have your Python installation setup as per <a href="../lectures/week07-lecture02">Lecture 17</a> you’ll need to use <code class="language-plaintext highlighter-rouge">pip</code> to install three packages: <code class="language-plaintext highlighter-rouge">sendgrid</code>, <code class="language-plaintext highlighter-rouge">requests</code>, and then to upgrade <code class="language-plaintext highlighter-rouge">certifi</code>. If <code class="language-plaintext highlighter-rouge">pip3</code> doesn’t work on your computer (and you made sure to follow the directions in Lecture 17), then try replacing <code class="language-plaintext highlighter-rouge">pip3</code> with <code class="language-plaintext highlighter-rouge">pip</code>.</p>
+<p>If you have your Python installation setup as per <a href="../lectures/week07-lecture02">Lecture 17</a> you’ll need to use <code class="language-plaintext highlighter-rouge">pip</code> to install three packages: <code class="language-plaintext highlighter-rouge">sendgrid</code>, <code class="language-plaintext highlighter-rouge">requests</code>, and then to upgrade <code class="language-plaintext highlighter-rouge">certifi</code>. If <code class="language-plaintext highlighter-rouge">pip3</code> doesn’t work on your computer (and you made sure to follow the directions in Lecture 17), then try replacing <code class="language-plaintext highlighter-rouge">pip3</code> with <code class="language-plaintext highlighter-rouge">pip</code>. (If you’re on Windows, you might also try <code class="language-plaintext highlighter-rouge">py -m pip install requests</code> and the same syntax to install the other libraries).</p>
 
 <p>Open your Terminal (MacOS) or Command Prompt (Windows) and execute the following commands (from any directory)</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip3 <span class="nb">install </span>sendgrid                        <span class="c"># a module to interact with Twilio</span>
@@ -165,7 +165,7 @@ OK
 
 <ol>
   <li>Retrieve the restaurants, and allow the user to specify an additional keyword before executing the search (see demo).</li>
-  <li>Print the retrieved restaurants to the screen in some coherent format (consider using a pandas dataframe for this).</li>
+  <li>Print the retrieved restaurants to the screen in some coherent format.</li>
 </ol>
 
 <h3 id="4-allow-the-user-to-preview-an-individual-restaurant">4. Allow the user to preview an individual restaurant</h3>
@@ -249,7 +249,7 @@ OK
                 <ul>
                     <li>Results honor user’s selected location, categories, and sorting criteria</li>
                     <li>Allows the user to specify a search keyword</li>
-                    <li>Prints restaurants to the screen in some coherent format (consider using a pandas dataframe for this).</li>
+                    <li>Prints restaurants to the screen in some coherent format.</li>
                 </ul>
             </td>
         </tr>
@@ -334,7 +334,7 @@ OK
 <p>Given the user’s selected genres and artists:</p>
 <ol>
   <li>Retrieve the recommended tracks using the <code class="language-plaintext highlighter-rouge">spotify.get_similar_tracks()</code> function.</li>
-  <li>Print the retrieved tracks to the screen in some coherent format (consider using a pandas dataframe for this).</li>
+  <li>Print the retrieved tracks to the screen in some coherent format.</li>
   <li>Ask the user if they want to email the tracks to someone, and if so, send an email of the list of track recommendations. Use the <code class="language-plaintext highlighter-rouge">spotify.get_formatted_tracklist_table_html()</code> function to help you build a nice tracklist (see the video) that can be emailed.</li>
 </ol>
 

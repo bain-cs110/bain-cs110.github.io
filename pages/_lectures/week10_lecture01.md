@@ -9,10 +9,14 @@ slides:
    - title: "Using Dictionaries for Data Analysis (continued)"
      url: https://docs.google.com/presentation/d/1hQtmMpJgofYlXDZF5Nv_FAq90BnMGA6wf5xznfK8J8s/edit?usp=sharing
 videos:
-   - title: "Live Lecture (Not Yet Posted)"
+   - title: "Live Lecture"
+     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6df3f938-23d3-4f6e-864f-adf6016a9655
      duration: "50:00"
      live: 1
 ---
+
+## **NOTE**
+PLEASE DO NOT NAME A FILE IN YOUR P2 FOLDER `email.py` LIKE WE DO IN LECTURE. That's why there's that problem we have at the end! Name it something like `test_email.py` and you won't have any issue. [More details on CampusWire](https://campuswire.com/c/G09D9743D/feed/397).
 
 ## Agenda
 1. The counting algorithm for dictionaries.
