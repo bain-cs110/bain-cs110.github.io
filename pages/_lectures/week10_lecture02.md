@@ -6,8 +6,8 @@ draft: 0
 num: 25
 due_date: 2022-03-09
 videos:
-   - title: "Live Lecture (not yet posted)"
-     url: ""
+   - title: "Live Lecture"
+     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=05fd38f0-031f-4144-879e-adf6016a966f
      duration: "50:00"
      live: 1
    - title: "Twilio Demo (Fixed from Lecture)"
