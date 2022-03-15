@@ -14,6 +14,7 @@ Settings / Browse Options
 ---------------------------------------------------------------------
     ''')
 
+
 def handle_category_selection():
     print('Handle category selection here')
     # 1. Allow user to select one or more categories using the
