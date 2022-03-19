@@ -4,6 +4,7 @@ import argparse
 import sys
 from excluded import EXCLUDED
 
+
 def exclude(filename):
     import re
     from builtins import any
@@ -17,7 +18,8 @@ def exclude(filename):
             continue
     return False
 
-def zipfolder(foldername, target_dir):         
+
+def zipfolder(foldername, target_dir):
     zipobj = zipfile.ZipFile(foldername + '.zip', 'w', zipfile.ZIP_DEFLATED)
     rootlen = len(target_dir) + 1
     for base, dirs, files in os.walk(target_dir):
@@ -28,6 +30,7 @@ def zipfolder(foldername, target_dir):
                     full_path_to_file, full_path_to_file[rootlen:])
             else:
                 print('exclude:', full_path_to_file)
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -47,9 +50,9 @@ def main():
     dirnames = [
         dir + fname for fname in dirnames if fname not in filenames
     ]
-    
+
     print(
-        'About to make zip files for the following directories:', 
+        'About to make zip files for the following directories:',
         dirnames
     )
 
@@ -63,8 +66,9 @@ def main():
             zipfolder(dirname, dirname)
     else:
         print('Cancelled.')
-    
+
     sys.exit()
+
 
 if __name__ == '__main__':
     main()

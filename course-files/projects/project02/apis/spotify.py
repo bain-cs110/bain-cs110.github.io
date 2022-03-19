@@ -32,7 +32,7 @@ def get_genres():
 
 def get_genres_abridged():
     '''
-    Returns a short, hard-coded list of genres (strings). Note that all of the strings in the list must be valid Spotify genreas.
+    Returns a short, hard-coded list of genres (strings). Note that all of the strings in the list must be valid Spotify genres.
     '''
     return [
         "alternative", "ambient", "blues",
@@ -70,7 +70,6 @@ def get_top_tracks_by_artist(artist_id: str, simplify: bool = True):
     '''
     url = 'https://api.spotify.com/v1/artists/' + \
         artist_id + '/top-tracks?country=us'
-    # print(url)
     data = _issue_get_request(url)
     if not simplify:
         return data
@@ -87,7 +86,6 @@ def get_tracks_by_playlist(playlist_id: str, simplify: bool = True):
     Returns a list of tracks.
     '''
     url = 'https://api.spotify.com/v1/playlists/' + playlist_id + '/tracks'
-    # print(url)
     data = _issue_get_request(url)
     if not simplify:
         return data
@@ -108,7 +106,6 @@ def get_related_artists(artist_id: str, simplify: bool = True):
     Returns a list of artists.
     '''
     url = 'https://api.spotify.com/v1/artists/' + artist_id + '/related-artists'
-    # print(url)
     data = _issue_get_request(url)
     if not simplify:
         return data
@@ -224,11 +221,11 @@ def get_similar_tracks(artist_ids: list = [], track_ids: list = [], genres: list
 # Some formatting utilities #
 #############################
 
-def get_track_player_html(track_id: int):
+def get_track_player_html(track_id: str):
     '''
     Creates the HTML tags for a Spotify player.
 
-    * track_id (int): [Required] The id of a track.
+    * track_id (str): [Required] The id of a track.
 
     Returns an HTML iFrame  (str) corresponding to a Spotify player for the track.
     '''
@@ -238,11 +235,11 @@ def get_track_player_html(track_id: int):
     '''.format(track_id=track_id)
 
 
-def get_playlist_player_html(playlist_id: int, width: int = 400, height: int = 280):
+def get_playlist_player_html(playlist_id: str, width: int = 400, height: int = 280):
     '''
     Generates an Spotify playlist player.
 
-    * playlist_id (int): [Required] The Spotify playlist id.
+    * playlist_id (str): [Required] The Spotify playlist id.
     * width (int): The width of the player.
     * height (int): The height of the player.
 
@@ -255,11 +252,11 @@ def get_playlist_player_html(playlist_id: int, width: int = 400, height: int = 2
     </iframe>'''.format(playlist_id=playlist_id, width=width, height=height)
 
 
-def get_album_player_html(album_id: int, width: int = 300, height: int = 380):
+def get_album_player_html(album_id: str, width: int = 300, height: int = 380):
     '''
     Generates an Spotify album player.
 
-    * album_id (int): [Required] The Spotify album id.
+    * album_id (str): [Required] The Spotify album id.
     * width (int): The width of the player.
     * height (int): The height of the player.
 
@@ -310,7 +307,7 @@ def get_formatted_artist_table_html(artists: list):
     Makes a nice formatted HTML table of artists. Good for writing to an
     HTML file or for sending in an email.
 
-    * tracks(list): [Required] A list of artists.
+    * artists(list): [Required] A list of artists.
 
     Returns an HTML table as a string
     '''
