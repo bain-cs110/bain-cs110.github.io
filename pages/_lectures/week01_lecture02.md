@@ -3,12 +3,12 @@ layout: module
 title: Intro to Hardware and Software
 type: lecture
 description:
-    - What is hardware?
-    - What is software?
+    - What is computer?
     - What are some "real world" analogies?
+    - How do we translate our thinking so the computer can understand?
 num: 1
-draft: 0
-due_date: 2022-01-05
+draft: 1
+due_date: 2022-03-30
 slides:
    - url: https://docs.google.com/presentation/d/1aUvJhji0iMI1tQ5Vdm40SAj4VuXveHWQ5AaVVZAVQ4k/edit?usp=sharing
      title: Conceptual Model of a Computer (Lecture Slides)

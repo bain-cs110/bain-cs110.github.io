@@ -7,7 +7,7 @@ body { margin: 0; font-family: 'Akkurat Pro Regular'; color: #342f2e; box-sizing
 
 section, div, aside { box-sizing: border-box; }
 
-section a, section a:hover, section a:visited, section a:active, article a, article a:hover, article a:visited, article a:active { text-decoration: none; color: #444; border-bottom: solid #846dac 1px; }
+section a, section a:hover, section a:visited, section a:active, article a, article a:hover, article a:visited, article a:active { text-decoration: none; color: #444; border-bottom: solid #934B66 1px; }
 section a:hover, article a:hover { background: #f6f6f6; }
 section p, section li, article p, article li { font-size: 16px; color: #5c5962; line-height: 1.7em; margin-top: 5px; }
 
@@ -19,11 +19,11 @@ li { line-height: 1.5em; }
 
 ol.spaced li, ul.spaced li { line-height: 1.5em; margin-bottom: 5px; }
 
-h1, h2, h3, h4, h5 { font-family: "Campton Book",Tahoma,sans-serif; color: #4e2a84; font-weight: 600; }
-h1 a, h1 a:hover, h1 a:visited, h1 a:active, h2 a, h2 a:hover, h2 a:visited, h2 a:active, h3 a, h3 a:hover, h3 a:visited, h3 a:active, h4 a, h4 a:hover, h4 a:visited, h4 a:active, h5 a, h5 a:hover, h5 a:visited, h5 a:active { text-decoration: none; color: #4e2a84; border-bottom: none !important; }
+h1, h2, h3, h4, h5 { font-family: "Campton Book",Tahoma,sans-serif; color: #691D40; font-weight: 600; }
+h1 a, h1 a:hover, h1 a:visited, h1 a:active, h2 a, h2 a:hover, h2 a:visited, h2 a:active, h3 a, h3 a:hover, h3 a:visited, h3 a:active, h4 a, h4 a:hover, h4 a:visited, h4 a:active, h5 a, h5 a:hover, h5 a:visited, h5 a:active { text-decoration: none; color: #691D40; border-bottom: none !important; }
 
 h1 { font-weight: 400; }
-h1 a, h1 a:visited { color: #4e2a84; text-decoration: none; padding-left: 5px; padding-right: 5px; margin-left: -5px; }
+h1 a, h1 a:visited { color: #691D40; text-decoration: none; padding-left: 5px; padding-right: 5px; margin-left: -5px; }
 h1 a:hover { background: #EEE; border-radius: 5px; }
 h1 span { display: inline-block; border-radius: 4px; color: white; }
 h1 span.hw { background: #684a98; }
@@ -84,7 +84,7 @@ nav { background: #F6F6F6; grid-area: menu; }
 nav.sticky { position: fixed; top: 0; width: 100%; }
 nav ul { display: flex; flex-direction: row; padding: 0px; margin: 0px; }
 nav ul li { border-bottom: solid 3px transparent; list-style: none; padding: 10px 5px; }
-nav ul li.active { border-bottom: solid 3px #4e2a84; }
+nav ul li.active { border-bottom: solid 3px #691D40; }
 nav ul li a { padding: 5px 8px; }
 nav ul li a, nav ul li a:visited, nav ul li:active { text-decoration: none; color: #444; }
 nav ul li:hover, nav ul li:active { background: #F9F9F9; border-bottom: solid 3px #999; }
@@ -151,7 +151,7 @@ table.medium.module td:nth-child(2) { max-width: 320px; }
 .assignments .lab, .assignments .lab:hover, .lectures .lab, .lectures .lab:hover, .assignment .lab, .assignment .lab:hover, .reference .lab, .reference .lab:hover, .lecture .lab, .lecture .lab:hover, .readings .lab, .readings .lab:hover, .link-menu .lab, .link-menu .lab:hover, .two-column article .lab, .two-column article .lab:hover, .syllabus .lab, .syllabus .lab:hover, .schedule .lab, .schedule .lab:hover { background: #009c7b; font-weight: 600; }
 .assignments .ec, .assignments .ec:hover, .lectures .ec, .lectures .ec:hover, .assignment .ec, .assignment .ec:hover, .reference .ec, .reference .ec:hover, .lecture .ec, .lecture .ec:hover, .readings .ec, .readings .ec:hover, .link-menu .ec, .link-menu .ec:hover, .two-column article .ec, .two-column article .ec:hover, .syllabus .ec, .syllabus .ec:hover, .schedule .ec, .schedule .ec:hover { background: rgba(104, 74, 152, 0.5); font-weight: 600; }
 .assignments .live, .lectures .live, .assignment .live, .reference .live, .lecture .live, .readings .live, .link-menu .live, .two-column article .live, .syllabus .live, .schedule .live { background: #F46036; }
-.assignments .recorded, .lectures .recorded, .assignment .recorded, .reference .recorded, .lecture .recorded, .readings .recorded, .link-menu .recorded, .two-column article .recorded, .syllabus .recorded, .schedule .recorded { background: #846dac; }
+.assignments .recorded, .lectures .recorded, .assignment .recorded, .reference .recorded, .lecture .recorded, .readings .recorded, .link-menu .recorded, .two-column article .recorded, .syllabus .recorded, .schedule .recorded { background: #934B66; }
 .assignments ul, .lectures ul, .assignment ul, .reference ul, .lecture ul, .readings ul, .link-menu ul, .two-column article ul, .syllabus ul, .schedule ul { margin-top: 0px; }
 
 .readings h3 { font-size: 1em; font-weight: 500; }
@@ -222,7 +222,7 @@ blockquote.quote.slim:before { font-size: 3em; }
 .two-column aside .side-menu a { font-size: 1.05em; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; padding-right: 20px !important; }
 .two-column aside .side-menu a:hover { background: #EEE; }
 .two-column aside .side-menu > li a { display: block; padding-top: 5px; }
-.two-column aside .side-menu > li a.active { background: #846dac; color: white; }
+.two-column aside .side-menu > li a.active { background: #934B66; color: white; }
 .two-column aside .side-menu > li > a:first-child { padding: 4px 0px 3px 10px; font-weight: 500; }
 .two-column aside .side-menu > li ol { margin-top: 0px; margin-bottom: 10px; }
 .two-column aside .side-menu > li ol li a { color: #444; font-size: 0.9em; padding-left: 20px; }
@@ -467,7 +467,7 @@ img.cars { float: right; max-width: 40%; margin: 0px 0px 0px 10px; border-top: s
 .highlighter-rouge { margin-bottom: 20px; }
 
 .nu-button, .nu-button:visited, .nu-button:active { background: #684a98; border: none; color: #fff !important; margin: 20px .5em 20px 0; padding: .8em 1em .7em 1em; align-self: flex-start; text-transform: uppercase; transition: 0.3s ease; text-decoration: none; }
-.nu-button:hover, .nu-button:visited:hover, .nu-button:active:hover { background: #846dac; border: none; }
+.nu-button:hover, .nu-button:visited:hover, .nu-button:active:hover { background: #934B66; border: none; }
 .nu-button i, .nu-button:visited i, .nu-button:active i { margin-left: 5px; }
 
 table.instructions td, table.instructions th { font-size: 1em; }
@@ -493,7 +493,7 @@ table.instructions td, table.instructions th { font-size: 1em; }
   .one-column footer, .one-column header, .two-column footer, .two-column header { border: none; }
   .one-column header, .one-column nav, .two-column header, .two-column nav { top: 0px; z-index: 500; position: fixed; width: 100%; }
   .one-column header .fa-bars, .one-column nav .fa-bars, .two-column header .fa-bars, .two-column nav .fa-bars { color: white; }
-  .one-column header, .two-column header { height: 65px; flex-direction: row; background: #4e2a84 !important; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.22), 0 1px 2px rgba(0, 0, 0, 0.34); color: white; padding-top: 8px; align-items: flex-start; justify-content: flex-start; }
+  .one-column header, .two-column header { height: 65px; flex-direction: row; background: #691D40 !important; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.22), 0 1px 2px rgba(0, 0, 0, 0.34); color: white; padding-top: 8px; align-items: flex-start; justify-content: flex-start; }
   .one-column header i, .two-column header i { font-size: 24px; }
   .one-column header a, .two-column header a { padding: 10px; margin: 5px; text-decoration: none; color: white; }
   .one-column header h1, .two-column header h1 { font-size: 1.3em; }
@@ -501,9 +501,9 @@ table.instructions td, table.instructions th { font-size: 1em; }
   .one-column nav.sticky, .two-column nav.sticky { height: auto; top: 65px; }
   .one-column nav ul, .two-column nav ul { flex-direction: column; width: 100%; padding: 0px; margin: 0px; box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
   .one-column nav ul li, .two-column nav ul li { border-bottom: solid 1px #EEE; margin-top: 0px; }
-  .one-column nav ul li.active, .two-column nav ul li.active { border-bottom: solid 1px #EEE; background: #846dac; }
+  .one-column nav ul li.active, .two-column nav ul li.active { border-bottom: solid 1px #EEE; background: #934B66; }
   .one-column nav ul li.active a, .two-column nav ul li.active a { color: white; }
-  .one-column nav ul li.active:hover, .one-column nav ul li.active:active, .two-column nav ul li.active:hover, .two-column nav ul li.active:active { background: #846dac; }
+  .one-column nav ul li.active:hover, .one-column nav ul li.active:active, .two-column nav ul li.active:hover, .two-column nav ul li.active:active { background: #934B66; }
   .one-column nav ul li a, .two-column nav ul li a { display: flex; padding: 10px 18px; }
   .one-column nav ul li:hover, .one-column nav ul li:active, .two-column nav ul li:hover, .two-column nav ul li:active { border-bottom: solid 1px #EEE; background: #E9E9E9; }
   .assignments section, .people section { width: 100%; height: 200px; }

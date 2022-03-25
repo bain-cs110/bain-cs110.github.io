@@ -1,7 +1,7 @@
+import unittest
 import helpers
 helpers.modify_system_path()
 
-import unittest
 from tests.test_authentication import TestAuthentication
 from tests.test_spotify import TestSpotify
 from tests.test_yelp import TestYelp
@@ -16,6 +16,7 @@ if __name__ == '__main__':
         TestSpotify('test__issue_get_request_only_one'),
         TestYelp('test_execute_business_queries_just_one_simplified'),
         TestSendgrid('test_can_import_sendgrid'),
-        TestSendgrid('test_can_import_sendgrid_api_module')
+        TestSendgrid('test_can_import_sendgrid_api_module'),
+        TestSendgrid('test_can_send_email')
     ])
     unittest.TextTestRunner(verbosity=2).run(suite)
