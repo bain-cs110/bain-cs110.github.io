@@ -25,7 +25,7 @@ section, div, aside {
 section a, section a:hover, section a:visited, section a:active, article a, article a:hover, article a:visited, article a:active {
   text-decoration: none;
   color: #444;
-  border-bottom: solid #846dac 1px;
+  border-bottom: solid #934B66 1px;
 }
 
 section a:hover, article a:hover {
@@ -60,13 +60,13 @@ ol.spaced li, ul.spaced li {
 
 h1, h2, h3, h4, h5 {
   font-family: "Campton Book",Tahoma,sans-serif;
-  color: #4e2a84;
+  color: #691D40;
   font-weight: 600;
 }
 
 h1 a, h1 a:hover, h1 a:visited, h1 a:active, h2 a, h2 a:hover, h2 a:visited, h2 a:active, h3 a, h3 a:hover, h3 a:visited, h3 a:active, h4 a, h4 a:hover, h4 a:visited, h4 a:active, h5 a, h5 a:hover, h5 a:visited, h5 a:active {
   text-decoration: none;
-  color: #4e2a84;
+  color: #691D40;
   border-bottom: none !important;
 }
 
@@ -75,7 +75,7 @@ h1 {
 }
 
 h1 a, h1 a:visited {
-  color: #4e2a84;
+  color: #691D40;
   text-decoration: none;
   padding-left: 5px;
   padding-right: 5px;
@@ -304,7 +304,7 @@ nav ul li {
 }
 
 nav ul li.active {
-  border-bottom: solid 3px #4e2a84;
+  border-bottom: solid 3px #691D40;
 }
 
 nav ul li a {
@@ -659,7 +659,7 @@ table.medium.module td:nth-child(2) {
 }
 
 .assignments .recorded, .lectures .recorded, .assignment .recorded, .reference .recorded, .lecture .recorded, .readings .recorded, .link-menu .recorded, .two-column article .recorded, .syllabus .recorded, .schedule .recorded {
-  background: #846dac;
+  background: #934B66;
 }
 
 .assignments ul, .lectures ul, .assignment ul, .reference ul, .lecture ul, .readings ul, .link-menu ul, .two-column article ul, .syllabus ul, .schedule ul {
@@ -1009,7 +1009,7 @@ blockquote.quote.slim:before {
 }
 
 .two-column aside .side-menu > li a.active {
-  background: #846dac;
+  background: #934B66;
   color: white;
 }
 
@@ -1521,7 +1521,7 @@ img.cars {
 }
 
 .nu-button:hover, .nu-button:visited:hover, .nu-button:active:hover {
-  background: #846dac;
+  background: #934B66;
   border: none;
 }
 
@@ -1640,7 +1640,7 @@ table.instructions td, table.instructions th {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    background: #4e2a84 !important;
+    background: #691D40 !important;
     -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.22), 0 1px 2px rgba(0, 0, 0, 0.34);
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.22), 0 1px 2px rgba(0, 0, 0, 0.34);
     color: white;
@@ -1691,13 +1691,13 @@ table.instructions td, table.instructions th {
   }
   .one-column nav ul li.active, .two-column nav ul li.active {
     border-bottom: solid 1px #EEE;
-    background: #846dac;
+    background: #934B66;
   }
   .one-column nav ul li.active a, .two-column nav ul li.active a {
     color: white;
   }
   .one-column nav ul li.active:hover, .one-column nav ul li.active:active, .two-column nav ul li.active:hover, .two-column nav ul li.active:active {
-    background: #846dac;
+    background: #934B66;
   }
   .one-column nav ul li a, .two-column nav ul li a {
     display: -webkit-box;

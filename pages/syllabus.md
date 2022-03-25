@@ -5,14 +5,14 @@ permalink: /syllabus/
 ---
 
 |--|--|
-| **Term** | Winter, 2022 |
+| **Term** | Spring, 2022 |
 | **Course** | CS 110: Intro to Computer Programming with Python |
 | **Prerequisites** | None |
 | **Instructor** | Prof. Connor Bain |
-| **Lecture Time** | Monday, Wednesday, & Friday, 9:00 - 9:50am |
-| **Lecture Location** | Technological Institute - Ryan Auditorium |
+| **Lecture Time** | Monday, Wednesday, & Friday, 10:00 - 10:50am |
+| **Lecture Location** | Lutkin Auditorium |
 
-> Please note that this syllabus is subject to change prior to Jan 3, 2022. Additionally, due to the university's Wildcat Wellness policy, none of our course activities will be in-person prior to January 18, 2022. For Zoom links for the first two weeks of class, please see our Canvas page.
+> Please note that this syllabus is subject to change prior to Mar 29, 2022.
 
 ## About the Course
 CS 110 is meant as an introduction to the key ideas of computer programming and assumes no prior programming knowledge. In this course, we'll use the programming language Python with two goals: first, we want to give you a sense of the kinds of creative activities, both directed problem-solving and creative pursuits, that programming can support; and two, we want to introduce you to the fundamental constructs (and associated skills and techniques) of computer programming.
@@ -54,26 +54,9 @@ This is a very large class and in order to better support each of your learning 
 * Prof. Connor Bain (connor.bain@northwestern.edu)
 
 ### Graduate Teaching Assistant
-* Ammar Gilani (ammargilani2024@u.northwestern.edu)
-
 Our Graduate TA serves as the go-to course staff member for grading discrepancies, Canvas Issues, and other logistical questions about the class.
 
 ### Peer Mentors
-* Amy Chen (amychen2024@u.northwestern.edu)
-* Olivier Gabison (OlivierGabison2022@u.northwestern.edu)
-* Ben Geduld (bengeduld2023@u.northwestern.edu)
-* Camila Grisanti (camilagrisanti2022@u.northwestern.edu)
-* Cindy Kang (cindykang2023@u.northwestern.edu)
-* Kelvin Lao (Kelvinlao2023@u.northwestern.edu)
-* Erick Mungai (mbugushmungai2024@u.northwestern.edu)
-* Mason Naung (masonnaung2023@u.northwestern.edu)
-* Poom Sombutboon (poomsombutboon2022@u.northwestern.edu)
-* Lilli Torres (lillitorres2024@u.northwestern.edu)
-* Andre Tsai (andretsai2024@u.northwestern.edu)
-* Eraj Uzoqov (erajuzoqov2024@u.northwestern.edu)
-* Eddie Woo (eddiewoo2023@u.northwestern.edu)
-* Wensan Yin (wensanyin2024@u.northwestern.edu)
-* Alberta Yoo (albertayoo2021@u.northwestern.edu)
 
 Our Peer Mentors (PMs) serve as your first point of contact in the course. Each PM leads weekly tutorial sessions with idea that they can closely track your learning progress throughout the quarter. They will also host office hours each week that will be open for all students. That means that there will be close to 30 office hours offered per week for our course.
 
@@ -81,7 +64,7 @@ Our Peer Mentors (PMs) serve as your first point of contact in the course. Each 
 Your course grade is calculated based on 200 points as follows:
 
 {:.medium}
-| **6 Tutorials** (of 8 - excluding Tutorial 2) | 6 x 3.333 Points (lowest scores dropped) | 20 Points | 10% |
+| **6 Tutorials** (of 9) | 7 x 3 Points (lowest scores dropped) | 20 Points | 10% |
 | **5 Homeworks** (of 6) | 5 x 8 Points (lowest score dropped) | 40 Points | 20% |
 | **2 Projects** | 2 x 40 Points | 80 Points | 40% |
 | **2 Quizzes** (of 3) | 2 x 30 Points (lowest score dropped) | 60 Points | 30% |
@@ -109,7 +92,7 @@ Some other logistics:
 > ### The course is specifically designed to be academically equitable to all students when it comes to assessment:
 > * Your lowest quiz score is dropped (best 2 of 3)
 > * Your lowest homework score is dropped (best 5 of 6)
-> * Your 6 best tutorial scores are kept (best 6 of 8; Tutorial 2 is ignored)
+> * Your 7 best tutorial scores are kept (best 7 of 9)
 >
 > This leniency is provided to accommodate the myriad situations that students encounter over the life cycle of the class (e.g. student org travel, sickness, etc.). **This built-in leniency means that there will be no other exceptions to the course syllabus without prior authorization from the Dean of Students at Northwestern.**
 
@@ -117,7 +100,7 @@ Some other logistics:
 
 There will be three cumulative assessments of your knowledge and practice of the course material administered during our assigned class time (50 minutes). There will be no Final Exam outside of these three quizzes.
 
-The quizzes will be held roughly in Week 4, Week 8, and Week 10 of the course.
+The three quizzes will be held in Week 4, Week 7, and Week 10 of the course.
 
 ### Homework Grading
 Homework will be approximately weekly and is due at 11:59pm on the specified date. You will submit your homework assignments on Canvas.

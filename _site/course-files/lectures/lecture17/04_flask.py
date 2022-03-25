@@ -18,12 +18,12 @@ def show_page():
             <body>
                 <h1>{my_title}</h1>
                 <p>{quote_of_the_day}</p>
-                <img src="{pets_url}" 
+                <img src="{pets_url}"
                     style="border: solid {border_width}px {border_color};" />
             </body>
         </html>
     '''
-    base_url = 'https://nu-cs110.github.io/assets/images/lectures/'
+    base_url = 'https://bain-cs110.github.io/assets/images/lectures/'
     pets_pics = [
         'pets_1.jpg',
         'pets_2.jpg',

@@ -27,7 +27,8 @@
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">try:
-    import authentication, utilities
+    import authentication
+    import utilities
     utilities.modify_system_path()
 except:
     pass
@@ -36,15 +37,16 @@ from apis import authentication
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 
-def send_mail(from_email:str, to_emails:list, subject:str, html_content:str):
-    &#39;&#39;&#39;
-    Uses the SendGrid API to send an email.  
 
-    * from_email(str):          [Required] The sender&#39;s email.  
-    * to_emails(list or str):   [Required] A list or of recipient emails, string is fine for one recipient.  
-    * subject(str):             [Required] The subject of the email.   
-    * html_content(str):        [Required] Text or HTML to be included in the body of the email.  
-    
+def send_mail(from_email: str, to_emails: list, subject: str, html_content: str):
+    &#39;&#39;&#39;
+    Uses the SendGrid API to send an email.
+
+    * from_email(str):          [Required] The sender&#39;s email.
+    * to_emails(list or str):   [Required] A list of recipient emails, string is fine for one recipient.
+    * subject(str):             [Required] The subject of the email.
+    * html_content(str):        [Required] Text or HTML to be included in the body of the email.
+
     Returns True if the email was successfully sent, False otherwise.
     &#39;&#39;&#39;
     message = Mail(
@@ -55,7 +57,8 @@ def send_mail(from_email:str, to_emails:list, subject:str, html_content:str):
     )
 
     try:
-        token = authentication.get_token(&#39;https://www.apitutor.org/sendgrid/key&#39;)
+        token = authentication.get_token(
+            &#39;https://www.apitutor.org/sendgrid/key&#39;)
         sg = SendGridAPIClient(token)
         sg.send(message)
         print(&#39;Email sent. You may need to check your spam folder.&#39;)
@@ -76,36 +79,31 @@ def send_mail(from_email:str, to_emails:list, subject:str, html_content:str):
 <span>def <span class="ident">send_mail</span></span>(<span>from_email: str, to_emails: list, subject: str, html_content: str)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Uses the SendGrid API to send an email.
-</p>
+<div class="desc"><p>Uses the SendGrid API to send an email.</p>
 <ul>
 <li>from_email(str):
-[Required] The sender's email.
-</li>
+[Required] The sender's email.</li>
 <li>to_emails(list or str):
-[Required] A list or of recipient emails, string is fine for one recipient.
-</li>
+[Required] A list of recipient emails, string is fine for one recipient.</li>
 <li>subject(str):
-[Required] The subject of the email.
-</li>
+[Required] The subject of the email.</li>
 <li>html_content(str):
-[Required] Text or HTML to be included in the body of the email.
-</li>
+[Required] Text or HTML to be included in the body of the email.</li>
 </ul>
 <p>Returns True if the email was successfully sent, False otherwise.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">def send_mail(from_email:str, to_emails:list, subject:str, html_content:str):
+<pre><code class="python">def send_mail(from_email: str, to_emails: list, subject: str, html_content: str):
     &#39;&#39;&#39;
-    Uses the SendGrid API to send an email.  
+    Uses the SendGrid API to send an email.
 
-    * from_email(str):          [Required] The sender&#39;s email.  
-    * to_emails(list or str):   [Required] A list or of recipient emails, string is fine for one recipient.  
-    * subject(str):             [Required] The subject of the email.   
-    * html_content(str):        [Required] Text or HTML to be included in the body of the email.  
-    
+    * from_email(str):          [Required] The sender&#39;s email.
+    * to_emails(list or str):   [Required] A list of recipient emails, string is fine for one recipient.
+    * subject(str):             [Required] The subject of the email.
+    * html_content(str):        [Required] Text or HTML to be included in the body of the email.
+
     Returns True if the email was successfully sent, False otherwise.
     &#39;&#39;&#39;
     message = Mail(
@@ -116,7 +114,8 @@ def send_mail(from_email:str, to_emails:list, subject:str, html_content:str):
     )
 
     try:
-        token = authentication.get_token(&#39;https://www.apitutor.org/sendgrid/key&#39;)
+        token = authentication.get_token(
+            &#39;https://www.apitutor.org/sendgrid/key&#39;)
         sg = SendGridAPIClient(token)
         sg.send(message)
         print(&#39;Email sent. You may need to check your spam folder.&#39;)

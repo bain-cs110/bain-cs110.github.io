@@ -3,10 +3,10 @@ layout: module
 title: Introduction
 type: lecture
 num: 0
-draft: 0
+draft: 1
 description:
     - Intro to the course
-due_date: 2022-01-03
+due_date: 2022-03-29
 slides:
    - url: https://docs.google.com/presentation/d/1s4A3-sh1h7FT6Vur0L_g1PMbtkyoFtBKWFgxHwDtM6c/edit?usp=sharing
      title: Course Logistics

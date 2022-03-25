@@ -2,11 +2,11 @@
 layout: module
 title: Writing Programs
 type: lecture
-draft: 0
+draft: 1
 num: 2
 description:
   - Programs, operators, and data types
-due_date: 2022-01-07
+due_date: 2022-04-01
 slides:
   - url: https://docs.google.com/presentation/d/1Zm6VoZOKXZ4uVLgT0cfg-2pNrPgLvWdG2UtCEAm6JcU/edit?usp=sharingte
     title: Live Lecture Activities
