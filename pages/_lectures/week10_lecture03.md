@@ -2,9 +2,9 @@
 layout: two-column
 title:  Quiz 3
 type: quiz
-draft: 0
+draft: 1
 num: 3
-due_date: 2022-03-11
+due_date: 2022-06-03
 
 ---
 If you have already taken Quiz 1 and Quiz 2 and are satisfied with your grade, Quiz 3 is optional (given that you can drop your lowest quiz score).
