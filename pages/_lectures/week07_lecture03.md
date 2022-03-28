@@ -1,12 +1,12 @@
 ---
 layout: lecture-two-column
-title: "Quiz 2"
+title: "Tentative Quiz 2"
 description:
     - Quiz 2 of 3 (using the Lockdown Browser)
 type: quiz
-draft: 0
+draft: 1
 num: 2
-due_date: 2022-02-18
+due_date: 2022-05-13
 ---
 
 ## Study Materials
