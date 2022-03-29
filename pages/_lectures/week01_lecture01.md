@@ -11,8 +11,8 @@ slides:
    - url: https://docs.google.com/presentation/d/1-ozmbA9DvWkivo_kHBisUX0X76Wu0pmwa_ab6uT7Res/edit?usp=sharing
      title: Course Logistics
 videos:
-   - url:
-     title: Course Logistics (Not Yet Posted)
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1523131f-f26e-41c2-81d5-ae670037b0dd
+     title: Course Logistics
      duration: "50:00"
      live: 1
 
