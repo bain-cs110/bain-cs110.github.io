@@ -13,7 +13,7 @@ slides:
 videos:
    - url:
      title: Course Logistics (Not Yet Posted)
-     duration: "46:36"
+     duration: "50:00"
      live: 1
 
 extras:
