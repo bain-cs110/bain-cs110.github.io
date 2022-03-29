@@ -158,7 +158,7 @@ Campuswire is a Question-and-Answer site like Piazza that allows students to ask
 Additionally, we will use Campuswire as a way of allowing students to ask questions during lectures if you do not feel comfortable asking aloud. To facilitate this, we will use the #lecture chat channel.
 
 {:.blockquote-no-margin}
-> To register for the course Campuswire (you will only have to do this once), please click this link: <a href="https://campuswire.com/p/G09D9743D" target="_blank">https://campuswire.com/p/G09D9743D</a> and use the following join code: **6357**.
+> To register for the course Campuswire (you will only have to do this once), please click this link: <a href="https://campuswire.com/p/G7C57BC09" target="_blank">https://campuswire.com/p/G7C57BC09</a> and use the following join code: **0013**.
 
 Some guidelines for using Campuswire:
 * Before you post a question, please do a quick search to make sure that one of your classmates hasn’t already asked the same question
