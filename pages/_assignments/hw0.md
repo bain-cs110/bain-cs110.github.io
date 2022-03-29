@@ -10,7 +10,7 @@ points: 0
 ---
 
 ## Tutorial Sign-Ups
-As described in the syllabus, this course involves weekly small-group tutorial sessions where you will will work in small groups and a member of the teaching staff. Tutorials beginning in Week 2 (starting on 4/04). Tutorial sessions will be run synchronously (live) by your assigned peer mentors. During each tutorial session, you will work through an exercise together with your peer mentor, to advance your understanding of targeted programming concepts. Tutorial submissions count for 10% of your grade.
+As described in the syllabus, this course involves weekly small-group tutorial sessions where you will will work in small groups and a member of the teaching staff. Tutorials begin in Week 2 (starting on 4/04). Tutorial sessions will be run synchronously (live) by your assigned peer mentors. During each tutorial session, you will work through an exercise together with your peer mentor, to advance your understanding of targeted programming concepts. Tutorial submissions count for 10% of your grade.
 
 Please sign-up for a tutorial using <a class="lab" href="" target="_blank">THE SIGN-UP SHEET <i class="fa fa-link" aria-hidden="true"></i></a>. This spreadsheet will be made *available* during lecture on Wednesday and then editable on Friday (i.e. this link won't work until later this week).
 
