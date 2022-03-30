@@ -3,9 +3,9 @@ layout: assignment-two-column
 title: Installation & Introductory Exercises
 abbreviation: HW1
 type: homework
-due_date: 2022-01-14
+due_date: 2022-04-08
 ordering: 1
-draft: 0
+draft: 1
 points: 8
 ---
 
@@ -26,11 +26,11 @@ points: 8
 
 We will use the Python 3 programming language and **IDLE**, which is Python's Integrated Development and Learning Environment.
 
-Download the latest version (3.9.x) of python here: <a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a>. If you're on a Mac, use the "Universal2" installer. If you're on a Windows machine, pick the "Windows installer (64 bit)" version.
+Download the latest version (3.10.x) of python here: <a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a>. If you're on a Mac, use the "Universal2" installer. If you're on a Windows machine, pick the "Windows installer (64 bit)" version.
 
-After going through the installation process, navigate to the folder on your machine where Python was installed. For me, on a Mac, my IDLE was saved to Applications > Python 3.9 (or you can also search for it). For Windows users, it will likely be in a folder inside of Program Files (which you can also search for).
+After going through the installation process, navigate to the folder on your machine where Python was installed. For me, on a Mac, my IDLE was saved to Applications > Python 3.10 (or you can also search for it). For Windows users, it will likely be in a folder inside of Program Files (which you can also search for).
 
-Inside, the Python 3.9 folder, you'll find a file called **IDLE** - this is the IDLE executable. Double click on that file to run it. You should then see something like this:
+Inside, the Python 3.10 folder, you'll find a file called **IDLE** - this is the IDLE executable. Double click on that file to run it. You should then see something like this:
 
 <img class="screenshot" src="/assets/images/hw01/idle1.png" />
 
@@ -40,10 +40,12 @@ At the **&gt;&gt;&gt;** prompt, you can type any valid python command. For examp
 
 <img class="screenshot" src="/assets/images/hw01/idle2.png" />
 
-If you have any issues installing Python or IDLE, contact your assigned peer mentor. You are also welcome to attend any of the course office hours to get help.
+This is called the *Interpreter Window.*
+
+If you have any issues installing Python or IDLE, contact your assigned peer mentor or post on Campuswire. You are also welcome to attend any of the course office hours to get help.
 
 ## Part 2: Complete the Programming Exercises
-In the section above, you wrote a single line of python at the **&gt;&gt;&gt;** prompt. For instance:
+In the section above, you can write a single line of python at the **&gt;&gt;&gt;** prompt. For instance:
 
 `print("hello world!")`
 
@@ -141,7 +143,7 @@ Enter weight in kg: 5         # prompt the user for a weight in kg
 ```
 
 #### 8. Calculate Average
-Write a program that asks the user to enter three numbers (use three separate input statements). Create variables called total and average that hold the sum and average of the three numbers and print out the values of total and average.
+Write a program that asks the user to enter three numbers (use three separate input statements). Create variables called _total_ and _average_ that hold the sum and average of the three numbers and print out the values of total and average.
 
 
 #### 9. Tip Calculator
@@ -149,7 +151,9 @@ Write a tip calculator. Ask the user for the price of the meal and the percent t
 
 
 ## What to Submit
-Please submit your `main.py` file that includes code that successfully implements the nine exercises listed above (which come from the Heinold book). Before each exercise, use comments (or keep the existing ones) to indicate the number of the exercise that your code corresponds to.
+Please submit a ZIP file that includes code that successfully implements the exercises above. If you've never made a ZIP file before, please make sure to review the lecture from Friday, April 1 or watch this walk-through for Mac computers or [this walkthrough for Windows computers]()
+
+Before each exercise, use comments (or keep the existing ones) to indicate the number of the exercise that your code corresponds to.
 
 ## Request an Extension
 If you need to request an extension on the assignment (must be 24 hours in advance) use the <a href="https://forms.gle/PobKBdUkTpPJ3GbZ8">Extension Request form</a>.
