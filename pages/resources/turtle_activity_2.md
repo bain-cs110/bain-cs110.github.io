@@ -14,7 +14,7 @@ Our favorite turtle is back on board! You've got all the same buttons at your di
 * HEADING (what direction am i facing?)
 * WHAT_IS_AHEAD (what is ahead of me?)
 
-Each of these monitors shows the current <em>value</em>of a <strong>variable</strong> for your turtle-buddy. Just like an object in the real world has properties (e.g. color, texture, hardness, etc.), computational objects have these properties too!
+Each of these monitors shows the current <em>value</em> of a <strong>variable</strong> for your turtle-buddy. Just like an object in the real world has properties (e.g. color, texture, hardness, etc.), computational objects have these properties too!
 
 <strong>Variables</strong> are very important to understand because they can have an effect on the outcome of commands. For instance, does the FORWARD button always do the same thing? Or does it depend on what the value of HEADING is for the turtle?
 
