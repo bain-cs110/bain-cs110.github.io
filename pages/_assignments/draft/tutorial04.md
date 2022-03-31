@@ -9,7 +9,7 @@ num: 4
 due_date: 2022-02-02
 ---
 
-<a class="nu-button" href="/course-files/tutorials/tutorial04.zip" target="_blank">
+<a class="nu-button" href="/course-files/tutorials/tutorial04_template.zip" target="_blank">
     Tutorial Starter Files <i class="fas fa-download"></i>
 </a>
 
