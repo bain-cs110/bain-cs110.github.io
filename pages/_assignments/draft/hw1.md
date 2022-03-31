@@ -18,34 +18,9 @@ points: 8
     }
 </style>
 
-## Part 1: Install Python and IDLE
-
-{: .blockquote-no-margin}
-> ### What if I've already installed Python on my laptop?
-> Note: many people who have programmed with Python before already have Python 3.x installed. To check, search for an existing Python installation. If you already have a version of Python3 installed, move on to Part 2. It doesn't hurt to install another version of Python, but it's not necessary. If you have any questions, feel free to ask Connor or one of the peer mentors / TAs.
-
-We will use the Python 3 programming language and **IDLE**, which is Python's Integrated Development and Learning Environment.
-
-Download the latest version (3.10.x) of python here: <a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a>. If you're on a Mac, use the "Universal2" installer. If you're on a Windows machine, pick the "Windows installer (64 bit)" version.
-
-After going through the installation process, navigate to the folder on your machine where Python was installed. For me, on a Mac, my IDLE was saved to Applications > Python 3.10 (or you can also search for it). For Windows users, it will likely be in a folder inside of Program Files (which you can also search for).
-
-Inside, the Python 3.10 folder, you'll find a file called **IDLE** - this is the IDLE executable. Double click on that file to run it. You should then see something like this:
-
-<img class="screenshot" src="/assets/images/hw01/idle1.png" />
-
-I recommend keeping IDLE in your dock (on a Mac) or making a Desktop Shortcut to IDLE (on Windows).
-
-At the **&gt;&gt;&gt;** prompt, you can type any valid python command. For example, type `print("hello world!")` and hit enter. You should see something like this:
-
 <img class="screenshot" src="/assets/images/hw01/idle2.png" />
 
-This is called the *Interpreter Window.*
-
-If you have any issues installing Python or IDLE, contact your assigned peer mentor or post on Campuswire. You are also welcome to attend any of the course office hours to get help.
-
-## Part 2: Complete the Programming Exercises
-In the section above, you can write a single line of python at the **&gt;&gt;&gt;** prompt. For instance:
+In the Interpreter window above, you can write a single line of python at the **&gt;&gt;&gt;** prompt. For instance:
 
 `print("hello world!")`
 
