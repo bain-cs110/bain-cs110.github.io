@@ -1,13 +1,15 @@
 ---
 layout: module
 title: |
-    Lists & Tuples
+    More on Functions
 type: lecture
 num: 4
-draft: 0
+draft: 1
 description:
-    - List, tuples, and other strange data types
-due_date: 2022-01-12
+    - Using functions
+    - Creating your own functions
+    - Defining versus invoking functions
+due_date: 2022-04-06
 quiz_url: https://canvas.northwestern.edu/courses/156943/quizzes/168347
 slides:
   - url: https://docs.google.com/presentation/d/1sN6k0JJgEAn0X9RPPPeLCv__NiqRlm-z-CLdPfsC6BU/edit?usp=sharing
