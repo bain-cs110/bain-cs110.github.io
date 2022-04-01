@@ -3,11 +3,11 @@ layout: module
 title: Variables & Functions
 type: lecture
 num: 3
-draft: 0
+draft: 1
 description:
     - Variables...what are they good for?
     - Using built-in Functions
-due_date: 2022-01-10
+due_date: 2022-04-04
 slides:
   - url: https://docs.google.com/presentation/d/1VEm7j3xCIXja4IraBCoTvVibk0vg3EZWZWfKYxRPykA/edit?usp=sharing
     title: Live Lecture Activities
@@ -16,7 +16,6 @@ videos:
     title: "Live Lecture (Zoom Recording)"
     duration: "50:00"
     live: 1
-
 
 readings:
   - title: "Ch1: Intro to Computing"
