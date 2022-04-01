@@ -31,9 +31,13 @@ However, in this class, you'll be writing larger programs that are saved as file
 > This assumes that you have already successfully completed and submitted [Tutorial 1](tutorial01). If you have not done so yet, please go do that first.
 
 ### Step 1: Download the Template Files
-Download the [template files](../course-files/homework/hw01_template.zip) starter file and save it in your hw01 folder. *Make sure to extract it so that you can see the individual files (and on a Winwdows PC) you don't see that pink thing at the top of the Explorer.* We've demoed this in class a few times, but for PC users, remember there's a video walkthrough from [Lecture 02](/lectures/week01_lecture03).
+Download the starter files by clicking on the big button below and extract it in your homeworks folder (inside your cs110 folder). *Make sure to extract it so that you can see the individual files (and on a Winwdows PC) you don't see that pink thing at the top of the Explorer.* We've demoed this in class a few times, but for PC users, remember there's a video walkthrough from [Lecture 02](/lectures/week01_lecture03).
 
-Move the resulting folder into your homework folder.
+<a class="nu-button" href="/course-files/homework/hw01.zip" target="_blank">
+    Homework Starter Files <i class="fas fa-download"></i>
+</a>
+
+After doing this, you should have your `cs110` folder, inside of it you'll have a folder called `homeworks`, and inside that folder you'll have a brand new folder called `hw01` with three files inside of it.
 
 ### Step 2: More Turtle Programming
 We'll first focus on programming our turtles in the `turtle_programs.py` file.
