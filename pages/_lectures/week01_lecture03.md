@@ -11,9 +11,13 @@ slides:
   - url: https://docs.google.com/presentation/d/1WqD-m0pSKUymYiH0t1mRCOheXkfuQBuv1zJRSYzh1Lo/edit?usp=sharing
     title: Writing Programs
 videos:
-   - url:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=64721adf-75b1-4185-ad7a-ae670037b139
      duration: "50:00"
-     title: "Live Lecture (Not Yet Posted)"
+     title: "Live Lecture"
+     live: 1
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7c22b141-00de-4da8-a2f2-ae6a012d917d
+     duration: "2:00"
+     title: "Using ZIP Files on a Windows Computer"
      live: 0
 
 exercise_url: "lecture02.zip"
