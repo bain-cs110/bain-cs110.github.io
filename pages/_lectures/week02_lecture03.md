@@ -1,14 +1,12 @@
 ---
 layout: module
-title: Zooming in on Functions
+title: Lists and Tuples
 type: lecture
-draft: 0
+draft: 1
 num: 5
 description:
-  - Using functions
-  - Creating your own functions
-  - Defining versus invoking functions
-due_date: 2022-01-14
+  - And other strange data types
+due_date: 2022-04-08
 slides:
   - url: https://docs.google.com/presentation/d/1Gxvu5k6vN_Gs6O2oPNWG6YCvEXHzWGLi7-zWzZAdC3E/edit?usp=sharing
     title: Lecture Slides
