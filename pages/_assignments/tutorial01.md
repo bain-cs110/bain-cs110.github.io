@@ -3,7 +3,7 @@ layout: assignment-two-column
 title: Get Python Running
 type: tutorial
 abbreviation: Tutorial 1
-draft: 1
+draft: 0
 points: 3
 num: 2
 description:
