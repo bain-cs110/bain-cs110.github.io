@@ -20,7 +20,7 @@ In tutorial today, you will meet your peer mentor and fellow classmates, install
 
 {: .blockquote-no-margin}
 > ### Need help unzipping files on a Windows computer?
-> Checkout the [Lecture 2](/lectures/week01-lecture03) for a video walkthrough
+> Checkout the [Lecture 2 page](/lectures/week01-lecture03) for a video walkthrough
 
 ## Part 1: Install Python
 
@@ -59,21 +59,23 @@ cs110
     │   -- lecture02
     │   ...
     |-- tutorials
-        |-- tutorial01
-        |-- tutorial02
         ...
 ```
 
 ## Part 3: Create two Python files and Write Some Programs
-When you're done, open IDLE and create a new python file (go to File menu > "New File"). This should open a blank document. Then save this blank document as **`grade_calculator.py`** (File menu > "Save as..."), and put it inside of your `cs110 > tutorials > tutorial01` folder.
+When you're done, open IDLE and create a new python file (go to File menu > "New File"). This should open a blank document. Then save this blank document as **`grade_calculator.py`** (File menu > "Save as..."), and put it inside of your `cs110 > tutorials > tutorial01` folder (You'll need to make that `tutorial01` folder just like you did with the three top-level folders).
 
 In this newly created `grade_calculator.py` file, you're going to write a program to calculate your grade in our class (see the [syllabus](../syllabus) for how your grade is calculated):
 
 * First ask the user to input four values (hint: use the `input` function):
-  * Prompt: `"Please input the number of total points you received on quizzes "`; store this in a variable called `quizzes`
-  * Prompt: `"Please input the number of total points you received on tutorials "`; store this in a variable called `tutorials`
-  * Prompt: `"Please input the number of total points you received on homeworks "`; store this in a variable called `homeworks`
-  * Prompt: `"Please input the number of total points you received on projects "`; store this in a variable called `projects`
+  * Prompt: `"Please input the number of total points you received on quizzes "`
+    * store this in a variable called `quizzes`
+  * Prompt: `"Please input the number of total points you received on tutorials "`
+    * store this in a variable called `tutorials`
+  * Prompt: `"Please input the number of total points you received on homeworks "`
+    * store this in a variable called `homeworks`
+  * Prompt: `"Please input the number of total points you received on projects "`
+    * store this in a variable called `projects`
 * Next, use these inputs to calculate and then `print` the user's final grade in the class
 
 Now create another new file (put it in that same folder) but call this one **`turtorial.py`** (it's a pun). In that new file:
