@@ -18,6 +18,10 @@ In tutorial today, you will meet your peer mentor and fellow classmates, install
 > ### What if I've already installed Python on my laptop?
 > Note: many people who have programmed with Python before already have Python 3.x installed. To check, search for an existing Python installation. If you already have a version of Python3 installed, move on to Part 2. It doesn't hurt to install another version of Python, but it's not necessary. If you have any questions, feel free to ask Connor or one of the peer mentors / TAs.
 
+{: .blockquote-no-margin}
+> ### Need help unzipping files on a Windows computer?
+> Checkout the [Lecture 2](/lectures/week01-lecture03) for a video walkthrough
+
 ## Part 1: Install Python
 
 We will use the Python 3 programming language and **IDLE**, which is Python's Integrated Development and Learning Environment.
