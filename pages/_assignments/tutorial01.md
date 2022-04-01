@@ -18,15 +18,11 @@ In tutorial today, you will meet your peer mentor and fellow classmates, install
 > ### What if I've already installed Python on my laptop?
 > Note: many people who have programmed with Python before already have Python 3.x installed. To check, search for an existing Python installation. If you already have a version of Python3 installed, move on to Part 2. It doesn't hurt to install another version of Python, but it's not necessary. If you have any questions, feel free to ask Connor or one of the peer mentors / TAs.
 
-{: .blockquote-no-margin}
-> ### Need help unzipping files on a Windows computer?
-> Checkout the [Lecture 2 page](/lectures/week01-lecture03) for a video walkthrough
-
 ## Part 1: Install Python
 
 We will use the Python 3 programming language and **IDLE**, which is Python's Integrated Development and Learning Environment.
 
-Download the latest version (3.10.x) of python here: <a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a>. If you're on a Mac, use the "Universal2" installer. If you're on a Windows machine, pick the "Windows installer (64 bit)" version.
+Download the latest version (3.10.x) of python here: <a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a>. You should be able to just click the big yellow "Download" button, but if it asks you which version you'd like to download: if you're on a Mac, use the "Universal2" installer; if you're on a Windows machine, pick the "Windows installer (64 bit)" version. Once it downloads, you'll need to launch the file you downloaded.
 
 > ### Important Note for Windows Users
 > Make sure that the checkbox at the very bottom that says Add Python 3.x (the screenshots show Python 3.7 but this applies to all Python installations) to PATH is checked: <img class="large frame" src="/assets/images/lectures/01-command-prompt-windows-installer.png" />
