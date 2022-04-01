@@ -22,7 +22,7 @@ def exclude(filename):
 def zipfolder(foldername, target_dir):
     if "lecture" not in foldername:
         zipobj = zipfile.ZipFile(foldername + '_template.zip', 'w', zipfile.ZIP_DEFLATED)
-    else:
+    if "lecture" not in foldername:
         zipobj = zipfile.ZipFile(foldername + '.zip', 'w', zipfile.ZIP_DEFLATED)
     rootlen = len(target_dir) + 1
     for base, dirs, files in os.walk(target_dir):
@@ -30,10 +30,9 @@ def zipfolder(foldername, target_dir):
             full_path_to_file = os.path.join(base, file)
             if not exclude(full_path_to_file):
                 zipobj.write(
-                    full_path_to_file, full_path_to_file[rootlen:])
+                    full_path_to_file, foldername.split("/")[-1] + "/" + full_path_to_file[rootlen:])
             else:
                 print('exclude:', full_path_to_file)
-
 
 def main():
     parser = argparse.ArgumentParser()
@@ -67,6 +66,8 @@ def main():
     if go_ahead.upper() == 'Y':
         for dirname in dirnames:
             zipfolder(dirname, dirname)
+            if "lecture" not in dirname:
+                os.rename(dirname + ".zip", dirname + "_template.zip")
     else:
         print('Cancelled.')
 

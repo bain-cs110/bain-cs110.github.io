@@ -106,4 +106,4 @@ For Mac users, you're going to right-click (or Control-Click - that is, hold dow
 
 For Windows users, you're going to right-click (or Control-Click - that is, hold down the Control button and then click on the folder) on your tutorial01 folder, select the `Send to` option in that menu, and then click on `Compressed (zipped) folder`. This will create a ZIP file in that same folder that you can then upload to Canvas. [Click here for a video walkthrough](https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=57c749ea-3207-4f67-ba79-ae69016172d9).
 
-Once you've created the ZIP file, upload that to the Canvas assignment for Tutorial 1. Congrats! You've finished Tutorial 1.
+Once you've created the ZIP file, upload that to the Canvas assignment for Tutorial 1. MAKE SURE YOU DON'T SUBMIT THE ONE NAMED `_template` as that doesn't contain any of your work! Congrats; you've finished Tutorial 1.
