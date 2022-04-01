@@ -33,7 +33,7 @@ However, in this class, you'll be writing larger programs that are saved as file
 ### Step 1: Download the Template Files
 Download the [template files](../course-files/homework/hw01_template.zip) starter file and save it in your hw01 folder. *Make sure to extract it so that you can see the individual files (and on a Winwdows PC) you don't see that pink thing at the top of the Explorer.* We've demoed this in class a few times, but for PC users, remember there's a video walkthrough from [Lecture 02](/lectures/week01_lecture03).
 
-Move the resulting folder into your homework folder.
+Move the resulting folder into your homework folder and **now rename the folder *hw01* rather than *hw01_template* so you know for a fact that's the one you're working on!**
 
 ### Step 2: More Turtle Programming
 We'll first focus on programming our turtles in the `turtle_programs.py` file.
