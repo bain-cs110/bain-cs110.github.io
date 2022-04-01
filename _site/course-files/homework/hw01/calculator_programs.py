@@ -1,9 +1,5 @@
-'''
-Here is some starter code. I will do the first part of the first exercise for you:
-'''
-
 # Exercise 1:
-print('*******************')
+
 
 # Exercise 2:
 
@@ -12,18 +8,6 @@ print('*******************')
 
 
 # Exercise 4:
-
-
-# Exercise 5:
-
-
-# Exercise 6:
-
-
-# Exercise 7:
-
-
-# Exercise 8:
-
-
-# Exercise 9:
+# Hint: to find the length in number of letters of a string, we can use the len function
+#       like so: len("hello"). If we wanted to find the number of characters in a string
+#       that's stored in a variable, we'd instead use the variable's name: len(variable)
