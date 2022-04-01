@@ -33,7 +33,7 @@ However, in this class, you'll be writing larger programs that are saved as file
 ### Step 1: Download the Template Files
 Download the [template files](../course-files/homework/hw01_template.zip) starter file and save it in your hw01 folder. *Make sure to extract it so that you can see the individual files (and on a Winwdows PC) you don't see that pink thing at the top of the Explorer.* We've demoed this in class a few times, but for PC users, remember there's a video walkthrough from [Lecture 02](/lectures/week01_lecture03).
 
-Move the resulting folder into your homework folder and **now rename the folder *hw01* rather than *hw01_template* so you know for a fact that's the one you're working on!**
+Move the resulting folder into your homework folder.
 
 ### Step 2: More Turtle Programming
 We'll first focus on programming our turtles in the `turtle_programs.py` file.
@@ -94,6 +94,7 @@ There are 34 letters in that word.   # output the result
 ```
 
 ## What to Submit
-Please submit a *single* ZIP file of your entire `hw01` folder. Make sure that folder has both your `calculator_programs.py` file as well as your `turtle_programs.py` file before you ZIP it (Note: there will be a third file called `MyTurtle.py` that you shouldn't mess with - just leave it be and submit it as part of your ZIP). For more on how to make ZIP files, make sure to review [Tutorial 1](/tutorials/tutorial01)
+Please submit a *single* ZIP file of your entire `hw01` folder. Make sure that folder has both your `calculator_programs.py` file as well as your `turtle_programs.py` file before you ZIP it (Note: there will be a third file called `MyTurtle.py` that you shouldn't mess with - just leave it be and submit it as part of your ZIP). For more on how to make ZIP files, make sure to review [Tutorial 1](/tutorials/tutorial01). MAKE SURE YOU DON'T SUBMIT THE ONE NAMED `_template` as that doesn't contain any of your work!
+
 ## Request an Extension
 If you need to request an extension on the assignment (must be 24 hours in advance) use the <a href="https://forms.gle/PobKBdUkTpPJ3GbZ8">Extension Request form</a>.
