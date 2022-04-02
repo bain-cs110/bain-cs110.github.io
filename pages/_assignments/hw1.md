@@ -31,7 +31,7 @@ However, in this class, you'll be writing larger programs that are saved as file
 > This assumes that you have already successfully completed and submitted [Tutorial 1](tutorial01). If you have not done so yet, please go do that first.
 
 ### Step 1: Download the Template Files
-Download the starter files by clicking on the big button below and extract it in your homeworks folder (inside your cs110 folder). *Make sure to extract it so that you can see the individual files (and on a Winwdows PC) you don't see that pink thing at the top of the Explorer.* We've demoed this in class a few times, but for PC users, remember there's a video walkthrough from [Lecture 02](/lectures/week01_lecture03).
+Download the starter files by clicking on the big button below and extract it in your homeworks folder (inside your cs110 folder). *Make sure to extract it so that you can see the individual files (and on a Winwdows PC) you don't see that pink thing at the top of the Explorer.* We've demoed this in class a few times, but for PC users, remember there's a video walkthrough from [Lecture 02](/lectures/week01-lecture03).
 
 <a class="nu-button" href="/course-files/homework/hw01_template.zip" target="_blank">
     Homework Starter Files <i class="fas fa-download"></i>
