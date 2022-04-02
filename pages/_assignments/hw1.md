@@ -28,7 +28,7 @@ However, in this class, you'll be writing larger programs that are saved as file
 
 {: .blockquote-no-margin}
 > ### Please complete Tutorial 1 First!
-> This assumes that you have already successfully completed and submitted [Tutorial 1](tutorial01). If you have not done so yet, please go do that first.
+> This assumes that you have already successfully completed and submitted [Tutorial 1](/assignments/tutorial01). If you have not done so yet, please go do that first.
 
 ### Step 1: Download the Template Files
 Download the starter files by clicking on the big button below and extract it in your homeworks folder (inside your cs110 folder). *Make sure to extract it so that you can see the individual files (and on a Winwdows PC) you don't see that pink thing at the top of the Explorer.* We've demoed this in class a few times, but for PC users, remember there's a video walkthrough from [Lecture 02](/lectures/week01-lecture03).
@@ -98,7 +98,7 @@ There are 34 letters in that word.   # output the result
 ```
 
 ## What to Submit
-Please submit a *single* ZIP file of your entire `hw01` folder. Make sure that folder has both your `calculator_programs.py` file as well as your `turtle_programs.py` file before you ZIP it (Note: there will be a third file called `MyTurtle.py` that you shouldn't mess with - just leave it be and submit it as part of your ZIP). For more on how to make ZIP files, make sure to review [Tutorial 1](/tutorials/tutorial01). MAKE SURE YOU DON'T SUBMIT THE ONE NAMED `_template` as that doesn't contain any of your work!
+Please submit a *single* ZIP file of your entire `hw01` folder. Make sure that folder has both your `calculator_programs.py` file as well as your `turtle_programs.py` file before you ZIP it (Note: there will be a third file called `MyTurtle.py` that you shouldn't mess with - just leave it be and submit it as part of your ZIP). For more on how to make ZIP files, make sure to review [Tutorial 1](/assignments/tutorial01). MAKE SURE YOU DON'T SUBMIT THE ONE NAMED `_template` as that doesn't contain any of your work!
 
 ## Request an Extension
 If you need to request an extension on the assignment (must be 24 hours in advance) use the <a href="https://forms.gle/PobKBdUkTpPJ3GbZ8">Extension Request form</a>.
