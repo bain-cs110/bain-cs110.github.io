@@ -31,13 +31,16 @@ However, in this class, you'll be writing larger programs that are saved as file
 > This assumes that you have already successfully completed and submitted [Tutorial 1](/assignments/tutorial01). If you have not done so yet, please go do that first.
 
 ### Step 1: Download the Template Files
-Download the starter files by clicking on the big button below and extract it in your homeworks folder (inside your cs110 folder). *Make sure to extract it so that you can see the individual files (and on a Winwdows PC) you don't see that pink thing at the top of the Explorer.* We've demoed this in class a few times, but for PC users, remember there's a video walkthrough from [Lecture 02](/lectures/week01-lecture03).
+Download the starter files by clicking on the big button below and extract it in your homeworks folder (inside your cs110 folder). *Make sure to extract it so that you can see the extracted folder (and on a Winwdows PC) you don't see that pink thing at the top of the Explorer.* We saw this in class on Friday but will also do it this coming Monday and Wednesday. For PC users, remember there's a video walkthrough from [Lecture 02](/lectures/week01-lecture03).
 
 <a class="nu-button" href="/course-files/homework/hw01_template.zip" target="_blank">
     Homework Starter Files <i class="fas fa-download"></i>
 </a>
 
-After doing this, you should have your `cs110` folder, inside of it you'll have a folder called `homeworks`, and inside that folder you'll have a brand new folder called `hw01` with three files inside of it.
+After doing this, you should have your `cs110` folder, inside of it you'll have a folder called `homeworks`, and inside that folder you'll have a brand new folder called `hw01` with three files inside of it:
+* `MyTurtle.py` (this needs to be in the folder, but you won't be editing it)
+* `turtle_programs.py`
+* `calculator_programs.py`
 
 ### Step 2: More Turtle Programming
 We'll first focus on programming our turtles in the `turtle_programs.py` file.
@@ -45,7 +48,7 @@ To edit **turtle_programs.py** using IDLE:
 
 1. Right click on the **turtle_programs.py** file that you just saved in your **hw01 folder** and open it with IDLE.
 2. You should now see some python code. Click anywhere inside that file so that your cursor is now in that window.
-3. Hit F5 (if you're on a MAC with a touchbar, hit the **fn** key and then **F5**). As an alternative to F5, you can also go to the Run menu and select **Run Module**. Your code will then be executed by the Python interpreter.
+3. Hit F5 (if you're on a Mac, hit the **fn** key and then **F5**). As an alternative to F5, you can also go to the Run menu and select **Run Module**. Your code will then be executed by the Python interpreter.
 
 When you're done, please complete the following exercises by editing the **turtle_programs.py** file using IDLE:
 
@@ -53,7 +56,7 @@ When you're done, please complete the following exercises by editing the **turtl
 
 #### 2. Teach `turtle_2` to draw a green rectangle
 
-#### 3. Teach `turtle_3` to draw a red equilateral triangle (3 equal lengthed sides)
+#### 3. Teach `turtle_3` to draw a red equilateral triangle (3 equal length sides)
 
 #### 4. Teach `turtle_4` to draw a house (a square with an equilateral triangle on top)
 
