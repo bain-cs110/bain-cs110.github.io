@@ -63,10 +63,10 @@ When you're done, open IDLE and create a new python file (go to File menu > "New
 
 In this newly created `grade_calculator.py` file, you're going to write a program to calculate your grade in our class (see the [syllabus](../syllabus) for how your grade is calculated):
 
-* First ask the user to input four values (hint: use the `input` function):
+* First ask the user to input four values (hint: use the `input` function - see the supplement video for [Lecture 03](/lectures/week02-lecture01) for more help on `input`):
   * Prompt: `"Please input the number of total points you received on quizzes "`
     * store this in a variable called `quizzes`
-    * Here's what this looks like in Python:
+    * We'll do the first one for you in Python. Copy and paste the below into your file:
     ```python
     quizzes = input("Please input the number of total points you received on quizzes ")
     ```
@@ -76,15 +76,16 @@ In this newly created `grade_calculator.py` file, you're going to write a progra
     * store this in a variable called `homeworks`
   * Prompt: `"Please input the number of total points you received on projects "`
     * store this in a variable called `projects`
-* Next, convert each variable to an integer
-  * Here's what this looks like in Python for one of the 4 variables
+* Next, convert each variable to an integer (it's important to note that the `input` function always gives us back `string`-type data. If we want to calculate a number from those inputs...we have to convert it!
+  * Here's what this looks like in Python for the `quizzes` variable:
   ```python
-  quizzes = int(quizzes)
+  quizzes = int(quizzes) # convert the quizzes string into an int and then update the variable
   ```
+  * You can copy and paste that one...and use it as a template for the other 3 variables!
 * Use the variables to calculate user's final grade in the class (either out of 100) and store it in a variable called `total` (Hint: it'll look something like this `total = (quizzes + ...) / 200`)
 * Make sure to print the final score!
 
-If you're having trouble, ask questions or use the `lecture03/03_text_programming.py` example as a template.
+If you're having trouble, ask questions or use the `lecture03/03_text_programming.py` example as a template. Confused about how to use the input function? Checkout the helper video on `input` posted on the [Lecture 3][/lectures/week02-lecture01] page.
 
 Now create another new file (put it in that same folder) but call this one **`turtorial.py`** (it's a pun). In that new file:
 
