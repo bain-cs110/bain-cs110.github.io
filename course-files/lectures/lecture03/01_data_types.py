@@ -1,19 +1,19 @@
 # --------------------------------------------------------------------------------
-# ## Example 5: Converting between data types
+# ## Detecting data types
 # --------------------------------------------------------------------------------
 
+print(type(2.3))
+print(type(100))
+print(type('abcd'))
+print(type(0))
+
+# --------------------------------------------------------------------------------
+# ## Converting between data types
+# --------------------------------------------------------------------------------
 print(float('2.3'))  # converts a string to a float
 print(str(2))
 print(int('2'))
 
 # print(int('2.5'))  # this will throw an error. Give it a try.
 
-print(str(['3', '2']))
-
-print(int(True))
-
 print(int(0))
-
-print(bool(None))
-
-print(bool('Hey there!'))  # any non-zero or non-null value converts to true

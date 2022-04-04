@@ -5,15 +5,16 @@ type: lecture
 num: 3
 draft: 1
 description:
+    - Constants (Data) and their Types
     - Variables...what are they good for?
     - Using built-in Functions
 due_date: 2022-04-04
 slides:
-  - url: https://docs.google.com/presentation/d/1VEm7j3xCIXja4IraBCoTvVibk0vg3EZWZWfKYxRPykA/edit?usp=sharing
-    title: Live Lecture Activities
+  - url: https://docs.google.com/presentation/d/15YImb1UdZWLO6WECl-9h4CQJ73AZrB_GpuYQfb6ncO4/edit?usp=sharing
+    title: Writing Programs (Part 2)
 videos:
-  - url: https://northwestern.zoom.us/rec/share/2GAqa0CXB2gjtWeWQxPU3ndrUkxhGDQCHD17SRnk8z0Wp7HfFwQCa09WtlolXG-L.YQ8G3pFZev3sPTw4?startTime=1641826622000
-    title: "Live Lecture (Zoom Recording)"
+  - url:
+    title: "Live Lecture (Not Yet Posted)"
     duration: "50:00"
     live: 1
 
@@ -30,9 +31,11 @@ readings:
 
 exercise_url: "lecture03.zip"
 ---
-<img class="module-image" src="/assets/images/lectures/lecture_02_blocks.jpg" />Python (and all programming languages) are made up of very small "words" (like nouns and verbs) that can be composed into meaningful "sentences" (i.e. code blocks that do something useful). Today we are going to review some more of the basic building blocks of code, including data types, operators, and variables.<br><br>In addition to the lecture, there are also some sample python files that you will need to download and run (using IDLE). If, for any reason, you are having trouble installing IDLE (instructions can be found in the first part of [homework 1](../assignments/hw1)), reach out to your TA or sign-up for an office hours session.
+<img class="module-image" src="/assets/images/lectures/lecture_02_blocks.jpg" />Python (and all programming languages) are made up of very small "words" (like nouns and verbs) that can be composed into meaningful "sentences" (i.e. code blocks that do something useful). Today we are going to review some more of the basic building blocks of code, including data types, operators, and variables.<br><br>
 
-Please keep your files organized (as explained in hw01). I recommend a folder structure like this:
+In addition to the lecture, there are also some sample python files that you will need to download and run (using IDLE). If, for any reason, you are having trouble installing IDLE (instructions can be found in the first part of [homework 1](../assignments/tutorial01)), reach out to your TA or sign-up for an office hours session.
+
+Please keep your files organized (as explained in tutorial 1). I recommend a folder structure like this:
 
 ```
 cs110
