@@ -13,11 +13,15 @@ slides:
   - url: https://docs.google.com/presentation/d/15YImb1UdZWLO6WECl-9h4CQJ73AZrB_GpuYQfb6ncO4/edit?usp=sharing
     title: Writing Programs (Part 2)
 videos:
-  - url:
-    title: "Live Lecture (Not Yet Posted)"
+  - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=72779b8f-443c-4023-9bd4-ae670037b154
+    title: "Live Lecture"
     duration: "50:00"
     live: 1
-
+  - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=49e59acd-6339-4aca-af16-ae6d01145705
+    title: "More on the Input Function"
+    duration: "6:00"
+    live: 1
+    
 readings:
   - title: "Ch1: Intro to Computing"
     author: "Charles Severance"
