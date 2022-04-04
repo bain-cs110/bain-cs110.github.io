@@ -28,10 +28,6 @@ readings:
      url: https://www.py4e.com/html3/01-intro
      video_url: https://www.py4e.com/lessons/intro
      source: "Python for Everybody"
-   - title: "Ch2: Variables"
-     author: "Charles Severance"
-     url: https://www.py4e.com/html3/02-variables
-     source: "Python for Everybody"
 
 extras:
   - title: "Tutorial Signups"

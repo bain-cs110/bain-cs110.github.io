@@ -1,7 +1,6 @@
 ---
 layout: module
-title: |
-    More on Functions
+title: More on Functions; Complex Data Types
 type: lecture
 num: 4
 draft: 1
