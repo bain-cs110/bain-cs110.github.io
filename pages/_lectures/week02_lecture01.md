@@ -3,7 +3,7 @@ layout: module
 title: Variables & Functions
 type: lecture
 num: 3
-draft: 1
+draft: 0
 description:
     - Constants (Data) and their Types
     - Variables...what are they good for?
