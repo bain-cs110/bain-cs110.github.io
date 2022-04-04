@@ -29,5 +29,11 @@ from turtle import *
 my_turtle = Turtle()
 
 ### Let's draw a green square!
+my_turtle.pencolor("green")
 my_turtle.forward(100)
 my_turtle.left(90)
+my_turtle.forward(100)
+my_turtle.left(90)
+my_turtle.forward(100)
+my_turtle.left(90)
+my_turtle.forward(100)
