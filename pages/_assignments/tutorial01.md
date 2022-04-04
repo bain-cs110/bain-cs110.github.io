@@ -85,7 +85,7 @@ In this newly created `grade_calculator.py` file, you're going to write a progra
 * Use the variables to calculate user's final grade in the class (either out of 100) and store it in a variable called `total` (Hint: it'll look something like this `total = (quizzes + ...) / 200`)
 * Make sure to print the final score!
 
-If you're having trouble, ask questions or use the `lecture03/03_text_programming.py` example as a template. Confused about how to use the input function? Checkout the helper video on `input` posted on the [Lecture 3][/lectures/week02-lecture01] page.
+If you're having trouble, ask questions or use the `lecture03/03_text_programming.py` example as a template. Confused about how to use the input function? Checkout the helper video on `input` posted on the [Lecture 3](/lectures/week02-lecture01) page.
 
 Now create another new file (put it in that same folder) but call this one **`turtorial.py`** (it's a pun). In that new file:
 
