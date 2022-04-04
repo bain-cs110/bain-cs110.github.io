@@ -20,17 +20,19 @@ def exclude(filename):
 
 
 def zipfolder(foldername, target_dir):
-    if "lecture" not in foldername:
-        zipobj = zipfile.ZipFile(foldername + '_template.zip', 'w', zipfile.ZIP_DEFLATED)
-    if "lecture" not in foldername:
-        zipobj = zipfile.ZipFile(foldername + '.zip', 'w', zipfile.ZIP_DEFLATED)
+
+    zipname = foldername + '.zip'
+
+    zipobj = zipfile.ZipFile(zipname, 'w', zipfile.ZIP_DEFLATED)
+
     rootlen = len(target_dir) + 1
     for base, dirs, files in os.walk(target_dir):
         for file in files:
             full_path_to_file = os.path.join(base, file)
             if not exclude(full_path_to_file):
+                #print(full_path_to_file)
                 zipobj.write(
-                    full_path_to_file, foldername.split("/")[-1] + "/" + full_path_to_file[rootlen:])
+                    full_path_to_file, zipname.split("/")[-1].split(".")[0] + "/" + full_path_to_file[rootlen:])
             else:
                 print('exclude:', full_path_to_file)
 
