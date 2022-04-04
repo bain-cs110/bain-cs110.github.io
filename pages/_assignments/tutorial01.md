@@ -87,6 +87,10 @@ In this newly created `grade_calculator.py` file, you're going to write a progra
 
 If you're having trouble, ask questions or use the `lecture03/03_text_programming.py` example as a template. Confused about how to use the input function? Checkout the helper video on `input` posted on the [Lecture 3](/lectures/week02-lecture01) page.
 
+{: .blockquote-no-margin}
+> ### Only complete the below Turtle activity if you have time remaining in your tutorial!
+> Depending on how big your tutorial is, whether or not you've installed Python before your Tutorial time, etc., it's possible at this point you've run out of time during your tutorial. If that's the case, you don't need to submit the next part of this assignment (just skip to Part 4).
+
 Now create another new file (put it in that same folder) but call this one **`turtorial.py`** (it's a pun). In that new file:
 
 * Copy and paste the below code into your new file:
