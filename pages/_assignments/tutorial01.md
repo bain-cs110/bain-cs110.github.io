@@ -66,16 +66,25 @@ In this newly created `grade_calculator.py` file, you're going to write a progra
 * First ask the user to input four values (hint: use the `input` function):
   * Prompt: `"Please input the number of total points you received on quizzes "`
     * store this in a variable called `quizzes`
-    * This will look like this: `quizzes = input("Please input the number of total points you received on quizzes ")`
+    * Here's what this looks like in Python:
+    ```python
+    quizzes = input("Please input the number of total points you received on quizzes ")
+    ```
   * Prompt: `"Please input the number of total points you received on tutorials "`
     * store this in a variable called `tutorials`
   * Prompt: `"Please input the number of total points you received on homeworks "`
     * store this in a variable called `homeworks`
   * Prompt: `"Please input the number of total points you received on projects "`
     * store this in a variable called `projects`
-* Next, convert each variable to an integer (e.g. `quizzes = int(quizzes)`)
+* Next, convert each variable to an integer
+  * Here's what this looks like in Python for one of the 4 variables
+  ```python
+  quizzes = int(quizzes)
+  ```
 * Use the variables to calculate user's final grade in the class (either out of 100) and store it in a variable called `total` (Hint: it'll look something like this `total = (quizzes + ...) / 200`)
 * Make sure to print the final score!
+
+If you're having trouble, ask questions or use the `lecture03/03_text_programming.py` example as a template.
 
 Now create another new file (put it in that same folder) but call this one **`turtorial.py`** (it's a pun). In that new file:
 
