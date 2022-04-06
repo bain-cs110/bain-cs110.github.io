@@ -14,11 +14,36 @@ from MyTurtle import *
 
 # If we want turtle_0 to change the color of its pen:
 # turtle_0.pencolor("green")
-
-# If we want to make a new turtle at a specific x, y coordinate, we use the optional
-# arguments to the MyTurtle Function like so:
-# turtle_0 = MyTurtle(x = 100, y = 100)
-# (If you leave those out, it will default to 0, 0)
-
 #####################################################################
+
+### Exercise 1 - Draw a Square using turtle_1
 turtle_1 = MyTurtle(x = -300, y = 200)
+
+# Your code goes here
+
+### Exercise 2 - Draw a Green Rectangle using turtle_2
+turtle_2 = MyTurtle(x = -150, y = 200)
+
+# Your code goes here
+
+### Exercise 3 - Draw a red Equilateral Traingle using turtle_3
+turtle_3 = MyTurtle(x = 0, y = 200)
+
+# Your code goes here
+
+### Exercise 4 - Draw a House! using turtle_4
+# Hint: Combine what you know from exercises 1 and 3!
+turtle_4 = MyTurtle()
+
+# your code goes here
+
+
+# P.S. You can't just paste the two solutions together. Think about which direction
+# your turtle is facing when it stops and starts drawing! It might help to play out
+# the turtle's motion yourself!
+
+### Optional Bonus - Draw something fun!
+
+turtle_5 = MyTurtle(x = 300, y = -300)
+# Some ideas: a snowflake, a heptagon, a 2-D cube!
+# Or, you could add windows or doors to your house
