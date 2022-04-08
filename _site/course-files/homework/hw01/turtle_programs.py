@@ -47,5 +47,3 @@ turtle_4 = MyTurtle()
 turtle_5 = MyTurtle(x = 300, y = -300)
 # Some ideas: a snowflake, a heptagon, a 2-D cube!
 # Or, you could add windows or doors to your house
-
-
