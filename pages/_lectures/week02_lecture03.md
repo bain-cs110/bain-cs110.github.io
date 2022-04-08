@@ -12,8 +12,8 @@ slides:
   - url: https://docs.google.com/presentation/d/1Z4E9qXQjftpvCKbwV8kRWvVJ0ZUTz4i8E-vmn4Pgujw/edit?usp=sharing
     title: Writing Functions
 videos:
-  - url:
-    title: "Live Lecture (Not Yet Posted)"
+  - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=785cd7dc-c862-404f-8f9c-ae670037b187
+    title: "Live Lecture"
     duration: "50:00"
     live: 1
 
