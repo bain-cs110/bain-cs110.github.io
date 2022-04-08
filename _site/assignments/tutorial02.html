@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Practice with Functions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    
+
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <h1 class="desktop"><a href="/">CS110 (Bain): Spring 2022</a></h1>
+    <h2 class="desktop">Intro to Computer Programming with Python</h2>
+    <a class="mobile" href="#">
+        <i class="menu-toggle fas fa-bars"></i>
+    </a>
+    <h1 class="mobile">CS110 (Bain): Spring 2022</h1>
+</header>
+
+        <nav>
+    <ul>
+        <li ><a href="/syllabus/">Syllabus</a></li>
+        <li ><a href="/" >Schedule</a></li>
+        <li class="active"><a href="/assignments/">Assignments</a></li>
+        <li><a href="https://campuswire.com/p/G7C57BC09" target="_blank">Campuswire</a></li>
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#required-square-challenge">Required: Square Challenge</a></li>
+  <li><a href="#more-practice-if-you-need-it-triangle-challenge">More Practice (if you need it): Triangle Challenge</a></li>
+  <li><a href="#what-to-turn-in">What to Turn In</a></li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1>
+            <a href="../assignments/">Assignments</a> > 
+            Tutorial 2: Practice with Functions
+        </h1>
+    
+ 
+                <p>
+    
+        Due on Wed, 04/13 @ 11:59PM.
+    
+    
+        0 Points.
+    
+    
+</p>
+
+<p><a class="nu-button" href="/course-files/tutorials/tutorial02_template.zip" target="_blank">
+    Tutorial Starter Files <i class="fas fa-download"></i>
+</a></p>
+
+<p>This tutorial is a warmup for <a href=".">HW2 (not yet live)</a>. Please download the starter files and complete the instructions outlined below.</p>
+
+<p>If you’ve never done this before, there are a lot of little typing / logic / conceptual mistakes that <strong>everyone</strong> makes. Please go to Office Hours or post on Campuswire questions that you have about defining these functions. Additionally, you should feel free to ask questions during class as well.</p>
+
+<blockquote class="blockquote-no-margin">
+  <p><strong>LEARNING OBJECTIVES:</strong>
+In order to prepare you for this week’s homework, we wanted to use this tutorial session to go over a couple of important logistical and conceptual ideas.</p>
+
+  <ol>
+    <li>Making sure that TKinter is successfully running on your machine</li>
+    <li>Creating functions</li>
+    <li>Working with parameters &amp; arguments</li>
+    <li>Translating specifications into smaller steps that a computer can perform</li>
+  </ol>
+</blockquote>
+
+<h2 id="required-square-challenge">Required: Square Challenge</h2>
+<p>Please open <code class="language-plaintext highlighter-rouge">square_challenge.py</code> in IDLE, which is located in the <code class="language-plaintext highlighter-rouge">tutorial02</code> folder. Take a look at it and then run it. You should see something like this:</p>
+
+<p><img class="small frame" src="/assets/images/tutorial01/before1.png" /></p>
+
+<h3 id="a-create-a-make_square-function">A. Create a “make_square” function</h3>
+<p>In the <code class="language-plaintext highlighter-rouge">square_challenge.py</code> file, write a function called <code class="language-plaintext highlighter-rouge">make_square</code> that accepts the following arguments:</p>
+
+<ol>
+  <li><strong>canvas</strong> <em>(Canvas)</em>: a tkinter Canvas object where you want the square to be drawn.</li>
+  <li><strong>top_left</strong> <em>(tuple)</em>: a tuple – an point, an (x, y) coordinate – that defines the top-left position of the square. The first element in the tuple refers to the x-coordinate and the second element in the tuple refers to the y-coordinate.</li>
+  <li><strong>width</strong> <em>(int)</em>: an int that specifies the width (and also height) of the square.</li>
+  <li><strong>fill_color</strong> <em>(str, optional)</em>: a string that represents the color of the square, defaults to blue: <code class="language-plaintext highlighter-rouge">"blue"</code>.</li>
+</ol>
+
+<p>In other words, if we invoked your <code class="language-plaintext highlighter-rouge">make_square</code> function as follows…</p>
+
+<p><code class="language-plaintext highlighter-rouge">make_square(canvas, (100, 100), 100, fill_color='blue')</code></p>
+
+<p>…your function would draw a 100x100 blue square with its top-left coordinate at position (100, 100), as pictured above.</p>
+<blockquote>
+  <p><strong>Note on Tuples:</strong>
+We’ll be talking about what a <code class="language-plaintext highlighter-rouge">tuple</code> is during Monday’s lecture. However, the idea is simple: just like an (x,y) coordinate a tuple is a way of storing multiple pieces of data (namely two integers representing an x and a y coordinate) inside of a single variable. The way we define a tuple is by starting with a left-parenthesis, adding as many “elements” as we’d like, each separated by a comma, and then ending with a right-parenthesis.
+<br /> <br />
+For example <code class="language-plaintext highlighter-rouge">my_coordinate = (1,2)</code> is a single variable that contains two different integers in it. If we then want to access for instance, the x-coordinate of that <code class="language-plaintext highlighter-rouge">my_coordinate</code> variable, we have to use some extra notation:<br /><br />
+<code class="language-plaintext highlighter-rouge">x_coordinate = my_coordinate[0]</code><br /></p>
+
+  <p><code class="language-plaintext highlighter-rouge">y_coordinate = my_coordinate[1]</code>
+<br /><br />
+Though there’s more to it…that’s enough to get you started if you want to work on the Tutorial before Monday.</p>
+</blockquote>
+
+<h3 id="b-use-your-make_square-function-to-create-the-drawing-pictured-below">B. Use your “make_square” function to create the drawing pictured below</h3>
+<p>When you’ve finished with your <code class="language-plaintext highlighter-rouge">make_square</code> function, create the pattern pictured below by calling your function with the following arguments (below). Copy the following code and pasting it <strong><em>below</em></strong> your function definition, but <strong><em>above</em></strong> the helpers.make_grid(…) function:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># center blue block
+</span><span class="n">make_square</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># dark green blocks
+</span><span class="n">make_square</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">100</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s">'#5B9279'</span><span class="p">)</span>
+<span class="n">make_square</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">100</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s">'#5B9279'</span><span class="p">)</span>
+<span class="n">make_square</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="mi">100</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s">'#5B9279'</span><span class="p">)</span>
+<span class="n">make_square</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="mi">100</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s">'#5B9279'</span><span class="p">)</span>
+
+<span class="c1"># light green blocks
+</span><span class="n">make_square</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="mi">50</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s">'#8FCB9B'</span><span class="p">)</span>
+<span class="n">make_square</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="mi">50</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s">'#8FCB9B'</span><span class="p">)</span>
+<span class="n">make_square</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="mi">50</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s">'#8FCB9B'</span><span class="p">)</span>
+<span class="n">make_square</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="mi">50</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s">'#8FCB9B'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img class="small frame" src="/assets/images/tutorial01/after1.png" /></p>
+
+<p>Note, those weird colors (e.g. <code class="language-plaintext highlighter-rouge">'#8FCB9B'</code>) are called “hex codes” and are colors reprsented in a symbol system called “hexidecimal” (think of it like the Dewey Decimal system but for colors.) Here is a <a href="https://coolors.co/app" target="_blank">link to a color generator</a> (to browse different hexidecimal color codes, press the spacebar). You can also use regular color names like <code class="language-plaintext highlighter-rouge">"green"</code>, <code class="language-plaintext highlighter-rouge">"blue"</code>, <code class="language-plaintext highlighter-rouge">"red"</code>, etc. (make sure they’re strings though!).</p>
+
+<h3 id="c-use-your-make_square-function-to-create-your-own-drawing">C. Use your “make_square” function to create your own drawing</h3>
+
+<p>Now, alter the code above to make your own drawing (anything that you can compose with squares). Feel free to alter the colors, positions, and sizes of your squares.</p>
+
+<h2 id="more-practice-if-you-need-it-triangle-challenge">More Practice (if you need it): Triangle Challenge</h2>
+<p>Please open <code class="language-plaintext highlighter-rouge">triangle_challenge.py</code> in IDLE (also located in the <code class="language-plaintext highlighter-rouge">tutorial02</code> folder). Take a look at it and then run it. You should see something like this:</p>
+
+<p><img class="medium frame" src="/assets/images/tutorial01/before2.png" /></p>
+
+<h3 id="a-create-a-make_triangle_left-function">A. Create a “make_triangle_left” function</h3>
+<p>In the <code class="language-plaintext highlighter-rouge">triangle_challenge.py</code> file, create a function called <code class="language-plaintext highlighter-rouge">make_triangle_left</code> that draws a 45-45-90-degree right triangle, where the right angle is positioned at the bottom-left corner (as pictured above). It accepts the following arguments:</p>
+
+<ol>
+  <li><strong>canvas</strong> <em>(Canvas)</em>: a tkinter Canvas object where you want the triangle to be drawn.</li>
+  <li><strong>bottom_left</strong> <em>(tuple)</em>: a tuple – an point, an (x, y) coordinate – that defines the bottom-left position of the triangle. The first element in the tuple refers to the x-coordinate and the second element in the tuple refers to the y-coordinate.</li>
+  <li><strong>height</strong> <em>(int)</em>: an int that specifies the height / length of the triangle.</li>
+  <li><strong>fill_color</strong> <em>(str, optional)</em>: a string that represents the color of the triangle, defaults to a light blue: <code class="language-plaintext highlighter-rouge">#84A9C0</code>.</li>
+</ol>
+
+<h3 id="b-create-a-make_triangle_right-function">B. Create a “make_triangle_right” function</h3>
+<p>Below the make_triangle_left function that you just made, create a function called <code class="language-plaintext highlighter-rouge">make_triangle_right</code> that draws a 45-45-90-degree right triangle, where the right angle is positioned at the bottom-right corner.</p>
+
+<p>It accepts the following arguments:</p>
+
+<ol>
+  <li><strong>canvas</strong> <em>(Canvas)</em>: a tkinter Canvas object where you want the triangle to be drawn.</li>
+  <li><strong>bottom_right</strong> <em>(tuple)</em>: a tuple – an point, an (x, y) coordinate – that defines the bottom-left position of the triangle. The first element in the tuple refers to the x-coordinate and the second element in the tuple refers to the y-coordinate.</li>
+  <li><strong>height</strong> <em>(int)</em>: an int that specifies the height / length of the triangle.</li>
+  <li><strong>fill_color</strong> <em>(str, optional)</em>: a string that represents the color of the triangle, defaults to a light blue: <code class="language-plaintext highlighter-rouge">#84A9C0</code>.</li>
+</ol>
+
+<h3 id="c-use-your-make_triangle_left-and-make_triangle_right-functions-to-create-a-drawing">C. Use your “make_triangle_left” and “make_triangle_right” functions to create a drawing</h3>
+<p>When you’ve finished making your <code class="language-plaintext highlighter-rouge">make_triangle_left</code> and <code class="language-plaintext highlighter-rouge">make_triangle_right</code> functions, invoke these functions to create the pattern pictured below by copying the following code and pasting it <strong><em>below</em></strong> your function definition, but <strong><em>above</em></strong> the helpers.make_grid(…) function:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># row 1
+</span><span class="n">make_triangle_right</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="mi">100</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s">'#5B9279'</span><span class="p">)</span>
+<span class="n">make_triangle_left</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="mi">100</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s">'#5B9279'</span><span class="p">)</span>
+<span class="n">make_triangle_right</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="mi">100</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s">'#5B9279'</span><span class="p">)</span>
+<span class="n">make_triangle_left</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="mi">100</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s">'#5B9279'</span><span class="p">)</span>
+<span class="n">make_triangle_right</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="mi">100</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s">'#5B9279'</span><span class="p">)</span>
+
+<span class="c1"># row 2
+</span><span class="n">make_triangle_left</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">make_triangle_right</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">make_triangle_left</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">make_triangle_right</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">make_triangle_left</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># row 3
+</span><span class="n">make_triangle_right</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">300</span><span class="p">),</span> <span class="mi">100</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s">'#8FCB9B'</span><span class="p">)</span>
+<span class="n">make_triangle_left</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">300</span><span class="p">),</span> <span class="mi">100</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s">'#8FCB9B'</span><span class="p">)</span>
+<span class="n">make_triangle_right</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">),</span> <span class="mi">100</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s">'#8FCB9B'</span><span class="p">)</span>
+<span class="n">make_triangle_left</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">),</span> <span class="mi">100</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s">'#8FCB9B'</span><span class="p">)</span>
+<span class="n">make_triangle_right</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">300</span><span class="p">),</span> <span class="mi">100</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s">'#8FCB9B'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img class="medium frame" src="/assets/images/tutorial01/after2.png" /></p>
+
+<h2 id="what-to-turn-in">What to Turn In</h2>
+<p>Please turn in your completed tutorial exercise(s) ON CANVAS by Wednesday night at midnight. To do this, please zip your <code class="language-plaintext highlighter-rouge">tutorial02</code> folder (i.e. create a new tutorial02.zip file), which includes your edited files, and upload it to Canvas. Please be careful that you <strong>don’t just upload the original starter files</strong>, but that your zip file includes <strong>YOUR CODE</strong>.  </p>
+
+
+
+            </article>  
+        </main>
+        
+            <script type="text/javascript" src="/assets/js/main.js"></script>
+    
+    <script src="https://kit.fontawesome.com/62a7c74d0d.js" crossorigin="anonymous"></script>
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="/assets/js/scrollspy.js"></script>
+    </body>
+</html>
