@@ -115,11 +115,15 @@
 <p>In this newly created <code class="language-plaintext highlighter-rouge">grade_calculator.py</code> file, you’re going to write a program to calculate your grade in our class (see the <a href="../syllabus">syllabus</a> for how your grade is calculated):</p>
 
 <ul>
-  <li>First ask the user to input four values (hint: use the <code class="language-plaintext highlighter-rouge">input</code> function):
+  <li>First ask the user to input four values (hint: use the <code class="language-plaintext highlighter-rouge">input</code> function - see the supplement video for <a href="/lectures/week02-lecture01">Lecture 03</a> for more help on <code class="language-plaintext highlighter-rouge">input</code>):
     <ul>
       <li>Prompt: <code class="language-plaintext highlighter-rouge">"Please input the number of total points you received on quizzes "</code>
         <ul>
           <li>store this in a variable called <code class="language-plaintext highlighter-rouge">quizzes</code></li>
+          <li>We’ll do the first one for you in Python. Copy and paste the below into your file:
+            <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">quizzes</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Please input the number of total points you received on quizzes "</span><span class="p">)</span>
+</code></pre></div>            </div>
+          </li>
         </ul>
       </li>
       <li>Prompt: <code class="language-plaintext highlighter-rouge">"Please input the number of total points you received on tutorials "</code>
@@ -139,8 +143,25 @@
       </li>
     </ul>
   </li>
-  <li>Next, use these inputs to calculate and then <code class="language-plaintext highlighter-rouge">print</code> the user’s final grade in the class</li>
+  <li>Next, convert each variable to an integer (it’s important to note that the <code class="language-plaintext highlighter-rouge">input</code> function always gives us back <code class="language-plaintext highlighter-rouge">string</code>-type data. If we want to calculate a number from those inputs…we have to convert it!
+    <ul>
+      <li>Here’s what this looks like in Python for the <code class="language-plaintext highlighter-rouge">quizzes</code> variable:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">quizzes</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">quizzes</span><span class="p">)</span> <span class="c1"># convert the quizzes string into an int and then update the variable
+</span></code></pre></div>        </div>
+      </li>
+      <li>You can copy and paste that one…and use it as a template for the other 3 variables!</li>
+    </ul>
+  </li>
+  <li>Use the variables to calculate user’s final grade in the class (either out of 100) and store it in a variable called <code class="language-plaintext highlighter-rouge">total</code> (Hint: it’ll look something like this <code class="language-plaintext highlighter-rouge">total = (quizzes + ...) / 200</code>)</li>
+  <li>Make sure to print the final score!</li>
 </ul>
+
+<p>If you’re having trouble, ask questions or use the <code class="language-plaintext highlighter-rouge">lecture03/03_text_programming.py</code> example as a template. Confused about how to use the input function? Checkout the helper video on <code class="language-plaintext highlighter-rouge">input</code> posted on the <a href="/lectures/week02-lecture01">Lecture 3</a> page.</p>
+
+<blockquote class="blockquote-no-margin">
+  <h3 id="only-complete-the-below-turtle-activity-if-you-have-time-remaining-in-your-tutorial">Only complete the below Turtle activity if you have time remaining in your tutorial!</h3>
+  <p>Depending on how big your tutorial is, whether or not you’ve installed Python before your Tutorial time, etc., it’s possible at this point you’ve run out of time during your tutorial. If that’s the case, you don’t need to submit the next part of this assignment (just skip to Part 4).</p>
+</blockquote>
 
 <p>Now create another new file (put it in that same folder) but call this one <strong><code class="language-plaintext highlighter-rouge">turtorial.py</code></strong> (it’s a pun). In that new file:</p>
 
@@ -157,7 +178,7 @@ my_turtle.forward(100)
 my_turtle.left(90)
 </code></pre></div></div>
 <ul>
-  <li>Modify the program so that your turtle draws a square</li>
+  <li>Modify the program so that your turtle draws a square of any color</li>
 </ul>
 
 <blockquote>

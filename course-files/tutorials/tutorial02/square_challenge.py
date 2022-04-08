@@ -8,6 +8,12 @@ canvas.pack()
 
 ########################## YOUR CODE BELOW THIS LINE ##############################
 
+
+### YOUR FUNCTION CODE WILL GO RIGHT HERE
+
+# Here's a reminder of how Tkinter draws rectangles. What your goal is to create a function
+# that will use this code...but allow you to specifically create squares by inputting a
+# series of specific inputs described on the assignment page.
 canvas.create_rectangle([
         (100, 100),  # top_left
         (200, 200)  # bottom_right
@@ -18,5 +24,5 @@ canvas.create_rectangle([
 # helper function that draws a grid.
 helpers.make_grid(canvas, 300, 300)
 
-########################## YOUR CODE ABOVE THIS LINE ############################## 
+########################## YOUR CODE ABOVE THIS LINE ##############################
 canvas.mainloop()
