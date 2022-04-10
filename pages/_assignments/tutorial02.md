@@ -16,7 +16,7 @@ due_date: 2022-04-13
     Tutorial Starter Files <i class="fas fa-download"></i>
 </a>
 
-This tutorial is a warmup for [HW2 (not yet live)](.). Please download the starter files and complete the instructions outlined below.
+This tutorial is a warmup for HW 2. Please download the starter files and complete the instructions outlined below.
 
 If you've never done this before, there are a lot of little typing / logic / conceptual mistakes that **everyone** makes. Please go to Office Hours or post on Campuswire questions that you have about defining these functions. Additionally, you should feel free to ask questions during class as well.
 
