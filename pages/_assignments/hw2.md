@@ -127,19 +127,20 @@ make_circle(canvas, (200, 200), 50)
 make_circle(canvas, (300, 200), 25, fill='navy')
 make_circle(canvas, (400, 200), 50, fill='teal')
 
-# Exercise 3: faces:
+# Exercise 3: bullseye:
 print('Exercise 3...')
-make_face(canvas, (100, 300), 40)
-make_face(canvas, (200, 300), 60)
-make_face(canvas, (300, 300), 80)
-make_face(canvas, (400, 300), 100)
+make_bullseye(canvas, (100, 300), 5, distance=5)
+make_bullseye(canvas, (200, 300), 5, distance=10)
+make_bullseye(canvas, (300, 300), 10, distance=5)
+make_bullseye(canvas, (400, 300), 20, distance=10)
 
-# Exercise 4: bullseye:
+# Exercise 4: face:
 print('Exercise 4...')
-make_bullseye(canvas, (100, 400), 5, distance=5)
-make_bullseye(canvas, (200, 400), 5, distance=10)
-make_bullseye(canvas, (300, 400), 10, distance=5)
-make_bullseye(canvas, (400, 400), 20, distance=10)
+make_face(canvas, (100, 400), 40)
+make_face(canvas, (200, 400), 60)
+make_face(canvas, (300, 400), 80)
+make_face(canvas, (400, 400), 100)
+
 ```
 
 ## 3. What to Submit
