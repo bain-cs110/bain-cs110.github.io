@@ -6,7 +6,7 @@ type: homework
 due_date: 2022-04-15
 ordering: 1
 points: 8
-draft: 1
+draft: 0
 ---
 
 <a class="nu-button" href="/course-files/homework/hw02_template.zip" target="_blank">
