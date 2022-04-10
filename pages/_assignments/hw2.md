@@ -65,7 +65,7 @@ The job of the **make_oval** function is to draw an oval to the canvas, centered
 1. **center (tuple)**: a tuple that defines the center point, an (x, y) coordinate, where the first element in the tuple refers to the x-coordinate and the second element  in the tuple refers to the y-coordinate.
 1. **radius_x (int)**: an int that specifies the radius of the oval in the x-direction.
 1. **radius_y (int)**: an int that specifies the radius of the oval in the y-direction.
-1. **fill (str, optional)**: a string that represents the color of the oval, defaults to hot pink.
+1. **fill_color (str, optional)**: a string that represents the color of the oval, defaults to hot pink.
 
 **Your job**: Currently, the create_oval function draws a hard-coded oval with a top-left coordinate of (100, 100), and a bottom-right coordinate of (200, 150) — which effectively draws it at a centerpoint of (150, 125), with an x-radius of 50 and a y-radius of 25. Your job is  to modify the code so that the top-left (x, y) and bottom-right (x, y) coordinates are calculated based on the radius_x, radius_y and center point specified by the arguments;  and that the fill color is  determined by the fill argument.
 
@@ -75,22 +75,13 @@ The job of the **make_circle** function is to draw a circle to the canvas, cente
 1. **canvas (Canvas)**: a tkinter Canvas object where you want the circle to be drawn.
 1. **center (tuple)**: a tuple that defines the center point, an (x, y) coordinate, where the first element in the tuple refers to the x-coordinate and the second element  in the tuple refers to the y-coordinate.
 1. **radius (int)**: an int that specifies the radius of the circle.
-1. **fill (str, optional)**: a string that represents the color of the circle, defaults to hot pink.
+1. **fill_color (str, optional)**: a string that represents the color of the circle, defaults to hot pink.
 
 **Your job**: Currently, this function creates a hard-coded circle with a top-left coordinate of (300, 100), and a bottom-right coordinate of (400, 200) — which effectively draws it at a centerpoint of (350, 150), with a radius of 50. Your job is to modify the code so that the top-left (x, y) and bottom-right (x, y), and fill color are determined by the arguments passed into the function.
 
 **HINT**: you may do this by calling the make_oval function that you just made in exercise 1.
 
-### 3. Modify the make_face function
-The job of the **make_face** function is to draw a face (i.e. a circle) with two eyes (i.e. ovals) to the canvas, according to the center point and width specified by the arguments. The function accepts the following arguments:
-
-1. **canvas (Canvas)**: a Canvas object where you want the oval to be drawn.
-1. **center (tuple)**: a tuple that defines the center point, where the first element in the tuple refers to the x-coordinate and the second element in the tuple refers to the y-coordinate.
-1. **width (int)**: an int that specifies the width of the face.
-
-**Your job**: Your job is to use the make_circle and make_oval functions that you've just created to draw a face. The face should be a circle, and it should have 2 oval eyes (see screenshot below). The eyes should scale with the width of the face.
-
-### 4. Modify the make_bullseye function
+### 3. Modify the make_bullseye function
 The job of the **make_bullseye** function is to draw a bullseye of 4 concentric circles to the canvas, centered at center. The smallest concentric circle will have a radius of `radius` (value of the argument), and each additional concentric circle will have a radius of `distance` units more than the previous circle. For instance, if `radius`=10 and `distance`=5, then the first circle has a radius of 10, the second a radius of 15, the third 20, and the fourth 25. The function accepts the following arguments:
 
 1. **canvas(Canvas)** : a Canvas object where you want the oval to be drawn.
@@ -100,7 +91,18 @@ The job of the **make_bullseye** function is to draw a bullseye of 4 concentric 
 
 **Your job**: Your job is to use the make_circle function that you just created to draw a bullseye (with 4 concentric circles of different colors — you choose the colors).
 
-**HINT**: you'll have to draw the biggest circle first, or else your big circle will overwrite (occlue) the smaller circles.
+**HINT**: you'll have to draw the biggest circle first, or else your big circle will overwrite (occlude) the smaller circles.
+
+### 4. Modify the make_face function
+The job of the **make_face** function is to draw a face (i.e. a circle) with two eyes (i.e. ovals) to the canvas, according to the center point and width specified by the arguments. The function accepts the following arguments:
+
+1. **canvas (Canvas)**: a Canvas object where you want the oval to be drawn.
+1. **center (tuple)**: a tuple that defines the center point, where the first element in the tuple refers to the x-coordinate and the second element in the tuple refers to the y-coordinate.
+1. **width (int)**: an int that specifies the width of the face.
+1. **eye_color (string, optional)**: a string that specifies the color of the eyes that defaults to `"#000000"`
+1. **face_color (string, optional)**: a string that specifies the color of the face that defaults to `"#FFFFFF"`
+
+**Your job**: Your job is to use the make_circle and make_oval functions that you've just created to draw a face. The face should be a circle, and it should have 2 oval eyes (see screenshot below). The eyes should scale with the width of the face.
 
 ### Testing
 When you’re done, your program should draw this image that looks similar to this one (feel free to use whatever colors you want for the bullseye):
@@ -116,16 +118,16 @@ Here is how I will call your functions:
 # Exercise 1: ovals:
 print('Exercise 1...')
 make_oval(canvas, (100, 100), 25, 40)
-make_oval(canvas, (200, 100), 40, 25, fill='navy')
-make_oval(canvas, (300, 100), 25, 40, fill='teal')
+make_oval(canvas, (200, 100), 40, 25, fill_color='navy')
+make_oval(canvas, (300, 100), 25, 40, fill_color='teal')
 make_oval(canvas, (400, 100), 40, 25)
 
 # Exercise 2: circles:
 print('Exercise 2...')
-make_circle(canvas, (100, 200), 25, fill='teal')
+make_circle(canvas, (100, 200), 25, fill_color='teal')
 make_circle(canvas, (200, 200), 50)
-make_circle(canvas, (300, 200), 25, fill='navy')
-make_circle(canvas, (400, 200), 50, fill='teal')
+make_circle(canvas, (300, 200), 25, fill_color='navy')
+make_circle(canvas, (400, 200), 50, fill_color='teal')
 
 # Exercise 3: bullseye:
 print('Exercise 3...')
@@ -136,11 +138,10 @@ make_bullseye(canvas, (400, 300), 20, distance=10)
 
 # Exercise 4: face:
 print('Exercise 4...')
-make_face(canvas, (100, 400), 40)
-make_face(canvas, (200, 400), 60)
+make_face(canvas, (100, 400), 40, eye_color="black", face_color="yellow")
+make_face(canvas, (200, 400), 60, face_color="yellow", eye_color="black")
 make_face(canvas, (300, 400), 80)
 make_face(canvas, (400, 400), 100)
-
 ```
 
 ## 3. What to Submit
