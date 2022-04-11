@@ -14,13 +14,13 @@ canvas.pack()
 # Your tasks: modify the function bodies of the following 4 function definitions:
 #  1. make_oval (Exercise 1)
 #  2. make_circle (Exercise 2)
-#  3. make_face (Exercise 3)
-#  4. make_bullseye (Exercise 4)
+#  3. make_bullseye (Exercise 3)
+#  4. make_face (Exercise 4)
 
 ########################
 # FUNCTION DEFINITIONS #
 ########################
-def make_oval(canvas: Canvas, center: tuple, radius_x: float, radius_y: float, color: str='hotpink'):
+def make_oval(canvas: Canvas, center: tuple, radius_x: float, radius_y: float, fill_color: str='hotpink'):
     # Exercise 1: currently, this function creates a hard-coded oval with a top-left
     # coordinate of (100, 100), and a bottom-right coordinate of (200, 150).
     #
@@ -38,7 +38,7 @@ def make_oval(canvas: Canvas, center: tuple, radius_x: float, radius_y: float, c
 
 
 
-def make_circle(canvas: Canvas, center: tuple, radius: int, color: str='hotpink'):
+def make_circle(canvas: Canvas, center: tuple, radius: int, fill_color: str='hotpink'):
     # Exercise 2: currently, this function creates a hard-coded circle with a top-left
     # coordinate of (300, 100), and a bottom-right coordinate of (400, 200).
     #
@@ -59,70 +59,17 @@ def make_circle(canvas: Canvas, center: tuple, radius: int, color: str='hotpink'
         fill='hotpink')
 
 
-def make_face(canvas: Canvas, center: tuple, width: int):
-    # Exercise 3: use the make_circle and make_oval functions that you've just
-    # created to draw a face. The face should be a circle, and it should have 2
-    # oval eyes. The eyes should scale with the width of the face. Replace the
-    # "pass" keyword in the function body (below) with your code.
-    pass
+## your make_bullseye fuction will go here
 
+## your make_face function will go here
 
+## SEE THE ASSIGNMENT DESCRIPTION FOR TEST SHAPES!
 
-
-def make_bullseye(canvas: Canvas, center: tuple, radius: int, distance: int=10):
-    # Exercise 4: use the make_circle function that you just created to
-    # draw a bullseye of alternating colors (use any color of your choice).
-    #
-    # Please ensure that:
-    # 1. The smallest  concentric circle has a radius of `radius`
-    #    (value of the argument).
-    # 2. Each  additional concentric circle has a radius of `distance` units
-    #    more that the previous  circle.
-    #
-    # For instance, if `radius`=10 and `distance`=5, then the first circle would have a
-    # radius of 10, the second a radius of 15, the third 20, and the fourth 25.
-    #
-    # Hint: you'll have to draw the biggest circle first, or else your big circle will
-    # overwrite and block the smaller circles. Replace the "pass" keyword in
-    # the function body (below) with your code.
-    pass
-
-
-
-#####################################
-# HOW I WANT TO CALL YOUR FUNCTIONS #
 #####################################
 
 # for measuring (optional):
 make_grid(canvas, 500, 500)
 
-# Exercise 1: ovals:
-print('Exercise 1...')
-make_oval(canvas, (100, 100), 25, 40)
-make_oval(canvas, (200, 100), 40, 25, color='navy')
-make_oval(canvas, (300, 100), 25, 40, color='teal')
-make_oval(canvas, (400, 100), 40, 25)
-
-# Exercise 2: circles:
-print('Exercise 2...')
-make_circle(canvas, (100, 200), 25, color='teal')
-make_circle(canvas, (200, 200), 50)
-make_circle(canvas, (300, 200), 25, color='navy')
-make_circle(canvas, (400, 200), 50, color='teal')
-
-# Exercise 3: faces:
-print('Exercise 3...')
-make_face(canvas, (100, 300), 40)
-make_face(canvas, (200, 300), 60)
-make_face(canvas, (300, 300), 80)
-make_face(canvas, (400, 300), 100)
-
-# Exercise 4: bullseye:
-print('Exercise 4...')
-make_bullseye(canvas, (100, 400), 5, distance=5)
-make_bullseye(canvas, (200, 400), 5, distance=10)
-make_bullseye(canvas, (300, 400), 10, distance=5)
-make_bullseye(canvas, (400, 400), 20, distance=10)
 
 
 
