@@ -29,6 +29,11 @@ If you've never done this before, there are a lot of little typing / logic / con
 > 1. Working with parameters & arguments
 > 1. Translating specifications into smaller steps that a computer can perform
 
+## Coordinate system
+To draw your shapes, you will be using an (x, y) coordinate space that has a different origin from the one you use in math class. For computer graphics, the origin is typically in the top left-hand corner (pictured below). To help you debug, I have created a function, make_grid, in the helpers.py file, that will draw gridlines for you.
+
+<img class="med-lg center" src="/assets/images/hw02/grid.svg" /><br>Source: <a href="https://processing.org/tutorials/coordinatesystemandshapes" target="_blank">https://processing.org/tutorials/coordinatesystemandshapes</a>
+
 ## Required: Square Challenge
 Please open `square_challenge.py` in IDLE, which is located in the `tutorial02` folder. Take a look at it and then run it. You should see something like this:
 
@@ -47,6 +52,12 @@ In other words, if we invoked your `make_square` function as follows...
 `make_square(canvas, (100, 100), 100, fill_color='blue')`
 
 ...your function would draw a 100x100 blue square with its top-left coordinate at position (100, 100), as pictured above.
+
+To do this, you're going to create a function that accepts the above inputs and then uses them with the `create_rectangle` [function provided by TKinter](https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/create_rectangle.html) to draw a square (an example of which is in the template file). Here's a few of the challenge's you'll need to address.
+* The `create_rectangle` function draws rectangles not squares. What is the only difference between rectangles and squares?
+* The `create_rectangle` function takes as its first two parameters, two (x,y) coordinate pairs - one for the top left of the rectangle and the other for the bottom right of the rectangle. Your `make_square` function only accepts a single (x,y) coordinate as a parameter - the top left. Your job will be to make your program take the top left coordinate and side length provided to your function to calculate the bottom right coordinate you'll use with the `create_rectangle` function
+* Once you've got that working, all that's left is to make sure your `fill_color` argument gets passed as the correct optional parameter to `create_rectangle`. Make sure to pay careful attention to variable names here. Your function will have its color argument stored in the variable `fill_color`. The parameter name for the `create_rectangle` function that controls the color of the rectangle is listed in the documentation)
+
 > **Note on Tuples:**
 > We'll be talking about what a `tuple` is during Monday's lecture. However, the idea is simple: just like an (x,y) coordinate a tuple is a way of storing multiple pieces of data (namely two integers representing an x and a y coordinate) inside of a single variable. The way we define a tuple is by starting with a left-parenthesis, adding as many "elements" as we'd like, each separated by a comma, and then ending with a right-parenthesis.
 > <br> <br>
@@ -85,20 +96,20 @@ Note, those weird colors (e.g. `'#8FCB9B'`) are called "hex codes" and are color
 
 Now, alter the code above to make your own drawing (anything that you can compose with squares). Feel free to alter the colors, positions, and sizes of your squares.
 
-
-## More Practice (if you need it): Triangle Challenge
+## More Practice (if you need it): Triangle Challenge (Highly Recommended)
 Please open `triangle_challenge.py` in IDLE (also located in the `tutorial02` folder). Take a look at it and then run it. You should see something like this:
 
 <img class="medium frame" src="/assets/images/tutorial01/before2.png" />
+
+This challenge asks you to do the same thing as the first challenge, but instead of designing a function `make_square` using TKinter's `create_rectangle`, you'll design `make_triangle_left` and `make_triangle_right` to use TKinter's `create_polygon` function. Here, instead of calculating just one extra coordinate point...you'll have to calculate two more coordinates and use all three coordinates as input to the `create_polygon` function.
 
 ### A. Create a "make_triangle_left" function
 In the `triangle_challenge.py` file, create a function called `make_triangle_left` that draws a 45-45-90-degree right triangle, where the right angle is positioned at the bottom-left corner (as pictured above). It accepts the following arguments:
 
 1. **canvas** *(Canvas)*: a tkinter Canvas object where you want the triangle to be drawn.
-1. **bottom_left** *(tuple)*: a tuple -- an point, an (x, y) coordinate -- that defines the bottom-left position of the triangle. The first element in the tuple refers to the x-coordinate and the second element in the tuple refers to the y-coordinate.
+1. **bottom_left** *(tuple)*: a tuple -- an (x, y) coordinate -- that defines the bottom-left position of the triangle. The first element in the tuple refers to the x-coordinate and the second element in the tuple refers to the y-coordinate.
 1. **height** *(int)*: an int that specifies the height / length of the triangle.
 1. **fill_color** *(str, optional)*: a string that represents the color of the triangle, defaults to a light blue: `#84A9C0`.
-
 
 ### B. Create a "make_triangle_right" function
 Below the make_triangle_left function that you just made, create a function called `make_triangle_right` that draws a 45-45-90-degree right triangle, where the right angle is positioned at the bottom-right corner.
