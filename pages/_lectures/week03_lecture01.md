@@ -13,8 +13,8 @@ slides:
   - url: https://docs.google.com/presentation/d/1NLUgf085z7hw390flel7pK5dcQ-ATo8bfJWf2ZECArM/edit?usp=sharing
     title: "Writing Flexible Functions"
 
-videos: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aca8c4f6-9629-4d35-b48b-ae670037b1a2
-  - url:
+videos:
+  - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aca8c4f6-9629-4d35-b48b-ae670037b1a2
     title: "Live Lecture (Not Yet Posted)"
     duration: "50:00"
     live: 1
