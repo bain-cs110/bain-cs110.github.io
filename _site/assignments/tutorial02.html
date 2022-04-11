@@ -34,8 +34,9 @@
         <main>
             <aside>
                 <ol class="side-menu">
+  <li><a href="#coordinate-system">Coordinate system</a></li>
   <li><a href="#required-square-challenge">Required: Square Challenge</a></li>
-  <li><a href="#more-practice-if-you-need-it-triangle-challenge">More Practice (if you need it): Triangle Challenge</a></li>
+  <li><a href="#more-practice-if-you-need-it-triangle-challenge-highly-recommended">More Practice (if you need it): Triangle Challenge (Highly Recommended)</a></li>
   <li><a href="#what-to-turn-in">What to Turn In</a></li>
 </ol>
 
@@ -55,7 +56,7 @@
         Due on Wed, 04/13 @ 11:59PM.
     
     
-        0 Points.
+        3 Points.
     
     
 </p>
@@ -64,7 +65,7 @@
     Tutorial Starter Files <i class="fas fa-download"></i>
 </a></p>
 
-<p>This tutorial is a warmup for <a href=".">HW2 (not yet live)</a>. Please download the starter files and complete the instructions outlined below.</p>
+<p>This tutorial is a warmup for HW 2. Please download the starter files and complete the instructions outlined below.</p>
 
 <p>If you’ve never done this before, there are a lot of little typing / logic / conceptual mistakes that <strong>everyone</strong> makes. Please go to Office Hours or post on Campuswire questions that you have about defining these functions. Additionally, you should feel free to ask questions during class as well.</p>
 
@@ -79,6 +80,11 @@ In order to prepare you for this week’s homework, we wanted to use this tutori
     <li>Translating specifications into smaller steps that a computer can perform</li>
   </ol>
 </blockquote>
+
+<h2 id="coordinate-system">Coordinate system</h2>
+<p>To draw your shapes, you will be using an (x, y) coordinate space that has a different origin from the one you use in math class. For computer graphics, the origin is typically in the top left-hand corner (pictured below). To help you debug, I have created a function, make_grid, in the helpers.py file, that will draw gridlines for you.</p>
+
+<p><img class="med-lg center" src="/assets/images/hw02/grid.svg" /><br />Source: <a href="https://processing.org/tutorials/coordinatesystemandshapes" target="_blank">https://processing.org/tutorials/coordinatesystemandshapes</a></p>
 
 <h2 id="required-square-challenge">Required: Square Challenge</h2>
 <p>Please open <code class="language-plaintext highlighter-rouge">square_challenge.py</code> in IDLE, which is located in the <code class="language-plaintext highlighter-rouge">tutorial02</code> folder. Take a look at it and then run it. You should see something like this:</p>
@@ -100,6 +106,14 @@ In order to prepare you for this week’s homework, we wanted to use this tutori
 <p><code class="language-plaintext highlighter-rouge">make_square(canvas, (100, 100), 100, fill_color='blue')</code></p>
 
 <p>…your function would draw a 100x100 blue square with its top-left coordinate at position (100, 100), as pictured above.</p>
+
+<p>To do this, you’re going to create a function that accepts the above inputs and then uses them with the <code class="language-plaintext highlighter-rouge">create_rectangle</code> <a href="https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/create_rectangle.html">function provided by TKinter</a> to draw a square (an example of which is in the template file). Here’s a few of the challenge’s you’ll need to address.</p>
+<ul>
+  <li>The <code class="language-plaintext highlighter-rouge">create_rectangle</code> function draws rectangles not squares. What is the only difference between rectangles and squares?</li>
+  <li>The <code class="language-plaintext highlighter-rouge">create_rectangle</code> function takes as its first two parameters, two (x,y) coordinate pairs - one for the top left of the rectangle and the other for the bottom right of the rectangle. Your <code class="language-plaintext highlighter-rouge">make_square</code> function only accepts a single (x,y) coordinate as a parameter - the top left. Your job will be to make your program take the top left coordinate and side length provided to your function to calculate the bottom right coordinate you’ll use with the <code class="language-plaintext highlighter-rouge">create_rectangle</code> function</li>
+  <li>Once you’ve got that working, all that’s left is to make sure your <code class="language-plaintext highlighter-rouge">fill_color</code> argument gets passed as the correct optional parameter to <code class="language-plaintext highlighter-rouge">create_rectangle</code>. Make sure to pay careful attention to variable names here. Your function will have its color argument stored in the variable <code class="language-plaintext highlighter-rouge">fill_color</code>. The parameter name for the <code class="language-plaintext highlighter-rouge">create_rectangle</code> function that controls the color of the rectangle is listed in the documentation)</li>
+</ul>
+
 <blockquote>
   <p><strong>Note on Tuples:</strong>
 We’ll be talking about what a <code class="language-plaintext highlighter-rouge">tuple</code> is during Monday’s lecture. However, the idea is simple: just like an (x,y) coordinate a tuple is a way of storing multiple pieces of data (namely two integers representing an x and a y coordinate) inside of a single variable. The way we define a tuple is by starting with a left-parenthesis, adding as many “elements” as we’d like, each separated by a comma, and then ending with a right-parenthesis.
@@ -139,17 +153,19 @@ Though there’s more to it…that’s enough to get you started if you want to 
 
 <p>Now, alter the code above to make your own drawing (anything that you can compose with squares). Feel free to alter the colors, positions, and sizes of your squares.</p>
 
-<h2 id="more-practice-if-you-need-it-triangle-challenge">More Practice (if you need it): Triangle Challenge</h2>
+<h2 id="more-practice-if-you-need-it-triangle-challenge-highly-recommended">More Practice (if you need it): Triangle Challenge (Highly Recommended)</h2>
 <p>Please open <code class="language-plaintext highlighter-rouge">triangle_challenge.py</code> in IDLE (also located in the <code class="language-plaintext highlighter-rouge">tutorial02</code> folder). Take a look at it and then run it. You should see something like this:</p>
 
 <p><img class="medium frame" src="/assets/images/tutorial01/before2.png" /></p>
+
+<p>This challenge asks you to do the same thing as the first challenge, but instead of designing a function <code class="language-plaintext highlighter-rouge">make_square</code> using TKinter’s <code class="language-plaintext highlighter-rouge">create_rectangle</code>, you’ll design <code class="language-plaintext highlighter-rouge">make_triangle_left</code> and <code class="language-plaintext highlighter-rouge">make_triangle_right</code> to use TKinter’s <code class="language-plaintext highlighter-rouge">create_polygon</code> function. Here, instead of calculating just one extra coordinate point…you’ll have to calculate two more coordinates and use all three coordinates as input to the <code class="language-plaintext highlighter-rouge">create_polygon</code> function.</p>
 
 <h3 id="a-create-a-make_triangle_left-function">A. Create a “make_triangle_left” function</h3>
 <p>In the <code class="language-plaintext highlighter-rouge">triangle_challenge.py</code> file, create a function called <code class="language-plaintext highlighter-rouge">make_triangle_left</code> that draws a 45-45-90-degree right triangle, where the right angle is positioned at the bottom-left corner (as pictured above). It accepts the following arguments:</p>
 
 <ol>
   <li><strong>canvas</strong> <em>(Canvas)</em>: a tkinter Canvas object where you want the triangle to be drawn.</li>
-  <li><strong>bottom_left</strong> <em>(tuple)</em>: a tuple – an point, an (x, y) coordinate – that defines the bottom-left position of the triangle. The first element in the tuple refers to the x-coordinate and the second element in the tuple refers to the y-coordinate.</li>
+  <li><strong>bottom_left</strong> <em>(tuple)</em>: a tuple – an (x, y) coordinate – that defines the bottom-left position of the triangle. The first element in the tuple refers to the x-coordinate and the second element in the tuple refers to the y-coordinate.</li>
   <li><strong>height</strong> <em>(int)</em>: an int that specifies the height / length of the triangle.</li>
   <li><strong>fill_color</strong> <em>(str, optional)</em>: a string that represents the color of the triangle, defaults to a light blue: <code class="language-plaintext highlighter-rouge">#84A9C0</code>.</li>
 </ol>
