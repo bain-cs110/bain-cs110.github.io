@@ -1,6 +1,6 @@
 ---
 layout: two-column
-title:  Quiz 3
+title:  Quiz 3 (In-Person)
 type: quiz
 draft: 1
 num: 3

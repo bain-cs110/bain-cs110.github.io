@@ -1,6 +1,6 @@
 ---
 layout: lecture-two-column
-title: "Tentative Quiz 1"
+title: "Quiz 1 (In-Person)"
 type: quiz
 description:
     - Quiz 1 of 3 (using the Lockdown Browser)
