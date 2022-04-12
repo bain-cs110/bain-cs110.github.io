@@ -1,14 +1,12 @@
 list_of_strings = ['freshman', 'sophomore', 'junior', 'senior']
 list_of_ints = [12, 24, 36, 48, 60]
-list_of_booleans = [True, True, False]
 list_of_tuples = [(20, 20), (20, 40), (40, 40), (40, 20)]
-list_of_mixed_data_types = ['a', 123, (40, 40), False]
+list_of_mixed_data_types = ['a', 123, (40, 40), 34.5]
 
 # ## Example 1: Items of a list can be of any type
 print('\n\nlists of different types...')
 print(list_of_strings)
 print(list_of_ints)
-print(list_of_booleans)
 print(list_of_tuples)
 print(list_of_mixed_data_types)
 # ## End Example 1
@@ -18,7 +16,6 @@ print(list_of_mixed_data_types)
 print('\n\ncalculating length of a list...')
 print(len(list_of_strings))
 print(len(list_of_ints))
-print(len(list_of_booleans))
 print(len(list_of_tuples))
 print(len(list_of_mixed_data_types))
 # ## End Example 2
@@ -35,6 +32,11 @@ print(first_word)
 print(second_word)
 print(third_word)
 print(fourth_word)
+
+## You can also do this backwards....
+last_word = list_of_strings[-1]
+penultimate_word = list_of_strings[-2]
+# etc...
 # ## End Example 3
 
 
@@ -81,11 +83,11 @@ list_of_strings.append('rhino')  # append adds data to the end of the list
 print(list_of_strings)
 list_of_strings.append('giraffe')
 print(list_of_strings)
-# ## End Example 7
+
+## End Example 7
 
 
-
-# ## Example 8: You can remove an item from a list using its index:
+## Example 8:  You can remove an item from a list using its index:
 print('\n\nremoving...')
 print(list_of_strings)
 list_of_strings.pop()  # pop removes data from the end of the list
@@ -93,7 +95,6 @@ print(list_of_strings)
 list_of_strings.pop(2) # removes the second item from the list
 print(list_of_strings)
 # ## End Example 8
-
 
 
 # ## Example 9: You can update data in a list:
