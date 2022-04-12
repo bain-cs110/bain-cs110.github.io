@@ -1,40 +1,24 @@
 ---
 layout: module
-title: "More practice on writing functions"
+title: "Practicing with Lists and Functions"
 type: lecture
-draft: 1
+draft: 0
 num: 6
 description:
-  - Exploring and defining functions
+  - Writing functions
+  - More list abilities
+  - Using these things to do something in TKinter
 due_date: 2022-04-13
-quiz_url: https://canvas.northwestern.edu/courses/156943/quizzes/168340
 slides:
-  - url: https://docs.google.com/presentation/d/1gcJozuGIwQnQqAoxLh8cvM_R9QwI4jH_KQjzrat2Itg/edit?usp=sharing
-    title: "Creating your Own Functions + Tutorial 02"
-  - url: https://docs.google.com/presentation/d/1caorW126_b6gQNAaPNPcwaKtYNuZhXbyedf3v9ktWlc/edit?usp=sharing
-    title: "Supplementary Slides for Live Lecture"
+  - url: https://docs.google.com/presentation/d/1F92Sc2ak-DRDfQa4rCPQY8nPIqD4mBoV_EzFfOxOz4g/edit?usp=sharing
+    title: "Practicing with Functions and Lists"
 
 videos:
-  - url: https://northwestern.zoom.us/rec/share/JImqtoa_na1aP88ASmaj-uyFGQm0dyUGEiQ3BCUT62IUp1yRGPuGZwM5llTBA8Ob.EJpTY5ZyuptJLspQ?startTime=1642181845000
-    title: "Function Review"
-    duration: "11:21"
-  - url: https://northwestern.zoom.us/rec/share/JImqtoa_na1aP88ASmaj-uyFGQm0dyUGEiQ3BCUT62IUp1yRGPuGZwM5llTBA8Ob.EJpTY5ZyuptJLspQ?startTime=1642182543000
-    title: "Defining a Function"
-    duration: "7:13"
-  - url: https://northwestern.zoom.us/rec/share/JImqtoa_na1aP88ASmaj-uyFGQm0dyUGEiQ3BCUT62IUp1yRGPuGZwM5llTBA8Ob.EJpTY5ZyuptJLspQ?startTime=1642182999000
-    title: "Function Definition Examples"
-    duration: "10:22"
-  - url: https://northwestern.zoom.us/rec/share/JImqtoa_na1aP88ASmaj-uyFGQm0dyUGEiQ3BCUT62IUp1yRGPuGZwM5llTBA8Ob.EJpTY5ZyuptJLspQ?startTime=1642183635000
-    duration: "10:55"
-    title: "Writing a Function"
-  - title: "Tutorial 2 Walkthrough"
-    duration: "22:09"
-    url: https://northwestern.zoom.us/rec/share/JImqtoa_na1aP88ASmaj-uyFGQm0dyUGEiQ3BCUT62IUp1yRGPuGZwM5llTBA8Ob.EJpTY5ZyuptJLspQ?startTime=1642184666000
   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7682f915-2057-4d8a-91cc-adf6016a9464
-    title: "Live Lecture"
+    title: "Live Lecture (Not Yet Posted)"
     duration: "50:00"
     live: 1
-exercise_url: "lecture06.zip"
+exercise_url: "lecture07.zip"
 ---
 
-In this lecture, we will be continuing our exploration of functions, namely learning to write our own! Please watch the lecture videos below before class (these are the ones that walk you through Tutorial 02). In class, we'll spend time reviewing how to define a function and then spend time actually writing functions.
+Today we'll be continuing to talk about the intricacies of writing our own functions as well as using Lists and Tuples. We'll be spending the majority of class time working together to actually program some functions–gradually making them more and more flexible as we go. Remember that the key idea of a function is to write a flexible program that can, for instance, not just draw a single square at a single point on our canvas, but can draw ANY size square and ANY color by just changing the inputs we give to the function.
