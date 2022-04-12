@@ -2,7 +2,7 @@
 layout: module
 title: "Scope and Modules"
 type: lecture
-num: 7
+num: 8
 draft: 1
 due_date: 2022-04-15
 description:
