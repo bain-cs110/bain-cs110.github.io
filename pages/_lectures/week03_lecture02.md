@@ -3,7 +3,7 @@ layout: module
 title: "Practicing with Lists and Functions"
 type: lecture
 draft: 0
-num: 6
+num: 7
 description:
   - Writing functions
   - More list abilities
