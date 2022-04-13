@@ -14,7 +14,7 @@ slides:
     title: "Practicing with Functions and Lists"
 
 videos:
-  - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7682f915-2057-4d8a-91cc-adf6016a9464
+  - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=398c2221-4c26-4f55-a4c0-ae670037b1ba
     title: "Live Lecture (Not Yet Posted)"
     duration: "50:00"
     live: 1
