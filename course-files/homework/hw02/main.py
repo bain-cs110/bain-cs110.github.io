@@ -10,6 +10,9 @@ gui.title('Shapes')
 canvas = Canvas(gui, width=500, height=500, background='white')
 canvas.pack()
 ########################## YOUR CODE BELOW THIS LINE ##############################
+# for measuring (optional):
+make_grid(canvas, 500, 500)
+
 
 # Your tasks: modify the function bodies of the following 4 function definitions:
 #  1. make_oval (Exercise 1)
@@ -64,13 +67,6 @@ def make_circle(canvas: Canvas, center: tuple, radius: int, fill_color: str='hot
 ## your make_face function will go here
 
 ## SEE THE ASSIGNMENT DESCRIPTION FOR TEST SHAPES!
-
-#####################################
-
-# for measuring (optional):
-make_grid(canvas, 500, 500)
-
-
 
 
 ########################## YOUR CODE ABOVE THIS LINE ##############################
