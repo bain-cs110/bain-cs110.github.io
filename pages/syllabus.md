@@ -45,7 +45,7 @@ Office hours are meant to be a time where you can ask questions that you need an
 * What courses should I take next after CS 110?
 * What kinds of CS-related careers and opportunities are out there?
 
-Office hours and locations / Zoom links are posted <a href="{{site.baseurl}}/times-locations/">here</a>. Some office hours will be in person. Others will be virtual. See the course calendar for details.
+Office hours and locations / Zoom links are posted on the shared Google Sheet that we used to signup for tutorials. It's also linked on our Canvas home page. Some office hours will be in person. Others will be virtual.
 
 ## Course Staff
 This is a very large class and in order to better support each of your learning goals, we have 17 course staff members.
