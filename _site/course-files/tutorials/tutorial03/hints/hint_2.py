@@ -9,7 +9,7 @@ canvas.pack()
 make_grid(canvas, 600, 600)
 
 # HINT 2:
-# How could you alter this program so that frank can easily be
+# How could you alter this program so that Mario can easily be
 # drawn *anywhere on the screen?
 #
 # Answer: you can always offset the x and y position of each "make_square"
@@ -20,103 +20,48 @@ make_grid(canvas, 600, 600)
 # value of your y coordinate as shown below.
 #
 # Now, how could you convert the program below to a function so that you
-# could create multiple frankensteins drawn at different sizes, colors, and 
+# could create multiple Marios drawn at different sizes, colors, and
 # position?
 
-# frankenstein anchored at position (x, y)
+# Mario anchored at position (x, y)
 pixel = 20
 top_left = (100, 50)
-body_color = '#5ec031'
-pants_color = 'hotpink'
+clothes = 'red'
+overalls = 'blue'
+
 x = top_left[0]
 y = top_left[1]
 
+# row 0 - Instead of using hard-coded x-coordinates, we can calculate each
+# x-coordinate by multiplying whatever column we're in by the pixel size
+# blank, pixel (0,0)
+# blank, pixel (1,0)
+# blank, pixel (2,0)
+make_square(canvas, (x + 3*pixel, y), pixel, fill_color=clothes)  # pixel (3, 0)
+make_square(canvas, (x + 4*pixel, y), pixel, fill_color=clothes)  # pixel (4, 0)
+make_square(canvas, (x + 5*pixel, y), pixel, fill_color=clothes)  # pixel (5, 0)
+make_square(canvas, (x + 6*pixel, y), pixel, fill_color=clothes)  # pixel (6, 0)
+make_square(canvas, (x + 7*pixel, y), pixel, fill_color=clothes)  # pixel (7, 0)
+make_square(canvas, (x + 8*pixel, y), pixel, fill_color=clothes)  # pixel (8, 0)
+
+y = pixel + y # Move down one row in our drawing
+# and update y so we don't have to add pixel * row_num each time
+
 # row 1
-make_square(canvas, (x + 2*pixel, y), pixel, fill_color='black')
-make_square(canvas, (x + 3*pixel, y), pixel, fill_color='black')
-make_square(canvas, (x + 4*pixel, y), pixel, fill_color='black')
-make_square(canvas, (x + 5*pixel, y), pixel, fill_color='black')
-make_square(canvas, (x + 6*pixel, y), pixel, fill_color='black')
+# blank, pixel (0,1)
+# blank, pixel (1,1)
+make_square(canvas, (x + 2*pixel, y), pixel, fill_color=clothes)  # pixel (2, 1)
+make_square(canvas, (x + 3*pixel, y), pixel, fill_color=clothes)  # pixel (3, 1)
+make_square(canvas, (x + 4*pixel, y), pixel, fill_color=clothes)  # pixel (4, 1)
+make_square(canvas, (x + 5*pixel, y), pixel, fill_color=clothes)  # pixel (5, 1)
+make_square(canvas, (x + 6*pixel, y), pixel, fill_color=clothes)  # pixel (6, 1)
+make_square(canvas, (x + 7*pixel, y), pixel, fill_color=clothes)  # pixel (7, 1)
+make_square(canvas, (x + 8*pixel, y), pixel, fill_color=clothes)  # pixel (8, 1)
+make_square(canvas, (x + 9*pixel, y), pixel, fill_color=clothes)  # pixel (9, 1)
+make_square(canvas, (x + 10*pixel,y), pixel, fill_color=clothes)  # pixel (10, 1)
+make_square(canvas, (x + 11*pixel,y), pixel, fill_color=clothes)  # pixel (11, 1)
 
-# row 2
-make_square(canvas, (x + 2*pixel, y + pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 3*pixel, y + pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 4*pixel, y + pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 5*pixel, y + pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 6*pixel, y + pixel), pixel, fill_color=body_color)
+## Now it's up to you to apply this to the next rows! ##
 
-# row 3
-make_square(canvas, (x + 2*pixel, y + 2*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 3*pixel, y + 2*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 4*pixel, y + 2*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 5*pixel, y + 2*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 6*pixel, y + 2*pixel), pixel, fill_color=body_color)
-
-# row 4
-make_square(canvas, (x + 2*pixel, y + 3*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 3*pixel, y + 3*pixel), pixel, fill_color='black')
-make_square(canvas, (x + 4*pixel, y + 3*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 5*pixel, y + 3*pixel), pixel, fill_color='black')
-make_square(canvas, (x + 6*pixel, y + 3*pixel), pixel, fill_color=body_color)
-
-# row 5
-make_square(canvas, (x + 2*pixel, y + 4*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 3*pixel, y + 4*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 4*pixel, y + 4*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 5*pixel, y + 4*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 6*pixel, y + 4*pixel), pixel, fill_color=body_color)
-
-# row 6
-make_square(canvas, (x + 1*pixel, y + 5*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 2*pixel, y + 5*pixel), pixel, fill_color='gray')
-make_square(canvas, (x + 3*pixel, y + 5*pixel), pixel, fill_color='gray')
-make_square(canvas, (x + 4*pixel, y + 5*pixel), pixel, fill_color='gray')
-make_square(canvas, (x + 5*pixel, y + 5*pixel), pixel, fill_color='gray')
-make_square(canvas, (x + 6*pixel, y + 5*pixel), pixel, fill_color='gray')
-make_square(canvas, (x + 7*pixel, y + 5*pixel), pixel, fill_color=body_color)
-
-# row 7
-make_square(canvas, (x + 0*pixel, y + 6*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 1*pixel, y + 6*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 2*pixel, y + 6*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 3*pixel, y + 6*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 4*pixel, y + 6*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 5*pixel, y + 6*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 6*pixel, y + 6*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 7*pixel, y + 6*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 8*pixel, y + 6*pixel), pixel, fill_color=body_color)
-
-# row 8
-make_square(canvas, (x + 0*pixel, y + 7*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 1*pixel, y + 7*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 2*pixel, y + 7*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 3*pixel, y + 7*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 4*pixel, y + 7*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 5*pixel, y + 7*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 6*pixel, y + 7*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 7*pixel, y + 7*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 8*pixel, y + 7*pixel), pixel, fill_color=body_color)
-
-# row 9
-make_square(canvas, (x + 2*pixel, y + 8*pixel), pixel, fill_color=pants_color)
-make_square(canvas, (x + 3*pixel, y + 8*pixel), pixel, fill_color=pants_color)
-make_square(canvas, (x + 4*pixel, y + 8*pixel), pixel, fill_color=pants_color)
-make_square(canvas, (x + 5*pixel, y + 8*pixel), pixel, fill_color=pants_color)
-make_square(canvas, (x + 6*pixel, y + 8*pixel), pixel, fill_color=pants_color)
-
-# row 10
-make_square(canvas, (x + 2*pixel, y + 9*pixel), pixel, fill_color=pants_color)
-make_square(canvas, (x + 3*pixel, y + 9*pixel), pixel, fill_color=pants_color)
-make_square(canvas, (x + 4*pixel, y + 9*pixel), pixel, fill_color=pants_color)
-make_square(canvas, (x + 5*pixel, y + 9*pixel), pixel, fill_color=pants_color)
-make_square(canvas, (x + 6*pixel, y + 9*pixel), pixel, fill_color=pants_color)
-
-# row 11
-make_square(canvas, (x + 2*pixel, y + 10*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 3*pixel, y + 10*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 5*pixel, y + 10*pixel), pixel, fill_color=body_color)
-make_square(canvas, (x + 6*pixel, y + 10*pixel), pixel, fill_color=body_color)
-
-
-########################## YOUR CODE ABOVE THIS LINE ############################## 
+########################## YOUR CODE ABOVE THIS LINE ##############################
 canvas.mainloop()

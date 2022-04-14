@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Review
+</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    
+
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <h1 class="desktop"><a href="/">CS110 (Bain): Spring 2022</a></h1>
+    <h2 class="desktop">Intro to Computer Programming with Python</h2>
+    <a class="mobile" href="#">
+        <i class="menu-toggle fas fa-bars"></i>
+    </a>
+    <h1 class="mobile">CS110 (Bain): Spring 2022</h1>
+</header>
+
+        <nav>
+    <ul>
+        <li ><a href="/syllabus/">Syllabus</a></li>
+        <li ><a href="/" >Schedule</a></li>
+        <li ><a href="/assignments/">Assignments</a></li>
+        <li><a href="https://campuswire.com/p/G7C57BC09" target="_blank">Campuswire</a></li>
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#exercise-1">Exercise 1</a></li>
+  <li><a href="#exercise-2">Exercise 2</a></li>
+  <li><a href="#do-now">Today’s Activities</a></li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1><a href="../#l9">Lessons</a> > 9. Review
+</h1>
+    
+ 
+                <p>Today in class, we will review any questions that you have about the material covered thus far. Please review the <a href="week04-lecture03">Quiz 1 study materials</a> and come with questions. We’re also going to make sure we understand how to do these two problems:</p>
+
+<h2 id="exercise-1">Exercise 1</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Given the following two lists...
+</span><span class="n">first_names</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Kim'</span><span class="p">,</span> <span class="s">'Brenda'</span><span class="p">,</span> <span class="s">'Karlo'</span><span class="p">]</span>
+<span class="n">last_names</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Jones'</span><span class="p">,</span> <span class="s">'Jauregui'</span><span class="p">,</span> <span class="s">'Imper'</span><span class="p">]</span>
+
+<span class="c1"># Write a program that combines the two lists by creating a third list,
+# where each entry is the full name of the person. You can assume that
+# (1) first names and last names of the same person are located in the same slot of
+# their respective lists (e.g. Kim Jones, Brenda Jauregui, Karlo Imper), and
+# (2) that the lists always have three values in them.
+</span></code></pre></div></div>
+
+<h3 id="answer-another-approach">Answer (Another Approach)</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">full_names</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">full_names</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">first_names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">' '</span> <span class="o">+</span> <span class="n">last_names</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">full_names</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">first_names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s">' '</span> <span class="o">+</span> <span class="n">last_names</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">full_names</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">first_names</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="s">' '</span> <span class="o">+</span> <span class="n">last_names</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">full_names</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="exercise-2">Exercise 2</h2>
+<p>Write a function that shifts a list of three coordinate pairs by some horizontal amount and some vertical amount. The function should return the new/updated list.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1"># here is how I would call your function...
+</span><span class="k">print</span><span class="p">(</span><span class="n">shift_coordinates</span><span class="p">([(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span> <span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">40</span><span class="p">)],</span> <span class="n">x_units</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">y_units</span><span class="o">=</span><span class="mi">200</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">shift_coordinates</span><span class="p">([(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">40</span><span class="p">),</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">)],</span> <span class="n">x_units</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">y_units</span><span class="o">=</span><span class="mi">100</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">shift_coordinates</span><span class="p">([(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">40</span><span class="p">),</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">)]))</span>
+
+<span class="c1"># ...and here's what would print to the screen...
+# [(120, 20), (130, 230), (140, 240)]
+# [(90, 140), (150, 200), (250, 300)]
+# [(40, 40), (100, 100), (200, 200)]
+</span></code></pre></div></div>
+
+<h3 id="answer-one-approach">Answer (One Approach)</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">shift_coordinates</span><span class="p">(</span><span class="n">my_list</span><span class="p">,</span> <span class="n">x_units</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y_units</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span>
+        <span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">x_units</span><span class="p">,</span> <span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">y_units</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">x_units</span><span class="p">,</span> <span class="n">my_list</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">y_units</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">x_units</span><span class="p">,</span> <span class="n">my_list</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">y_units</span><span class="p">)</span>
+    <span class="p">]</span>
+</code></pre></div></div>
+
+
+<h2 id="do-now">Today's Activities</h2>
+<p>For today, please do the following:</p>
+
+
+
+    <h3 id="code">1. Download the Exercise Files</h3> 
+    <a class="nu-button" href="/course-files/lectures/lecture09.zip" target="_blank">
+        Exercise Files <i class="fas fa-download"></i>
+    </a>
+    
+
+
+<h3 id="slides">2. Review the Slides</h3>  
+
+
+    <ol>
+    
+        <li>
+            <a href="https://docs.google.com/presentation/d/13M-Y1ZJpR_XlQZRC6Lu_gmOq_3vpqWpbyl5-ghlV-Ek/edit?usp=sharing" target="_blank">Quiz 1 Review</a>
+        </li>
+    
+    </ol>
+
+
+
+<h3 id="videos">3. Watch the Lecture Video(s)</h3>
+
+
+    <table class="medium module">
+        <thead>
+            <tr>
+                <th>Link</th>
+                <th>Title</th>
+                <th>Type</th>
+                <th>Duration</th>
+            </tr>
+        </thead>
+        <tbody>
+        
+        
+            
+            
+            
+            
+            
+            <tr>
+                <td>
+                    <a class="live" href="https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ace9dca1-7723-4593-a547-adf6016a94a6" target="_blank">
+                        Video 1 <i class="fa fa-link"></i>
+                    </a>
+                </td>
+                <td>
+                    Live Lecture
+                </td>
+                <td>
+                    lecture
+                </td>
+                <td>
+                    50:00
+                </td>
+            </tr>
+            
+        
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+            </article>  
+        </main>
+        
+            <script type="text/javascript" src="/assets/js/main.js"></script>
+    
+    <script src="https://kit.fontawesome.com/62a7c74d0d.js" crossorigin="anonymous"></script>
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="/assets/js/scrollspy.js"></script>
+    </body>
+</html>

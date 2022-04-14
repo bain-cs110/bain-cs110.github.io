@@ -1,15 +1,14 @@
 ---
 layout: module
-title: Modules, Scope & Review
+title: Variable Scope & More on Modules
 type: lecture
 description:
-  - Modules & Scope
-  - Operators & Data Types
-  - Lists & Tuples
-  - Functions
-num: 8
-draft: 0
-due_date: 2022-01-24
+  - Modules
+  - Scope
+  - Starting to Review
+num: 9
+draft: 1
+due_date: 2022-04-18
 videos:
   - title: "Live Lecture"
     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6ad3bbcf-a0e4-4c1f-8add-adf6016a9491
