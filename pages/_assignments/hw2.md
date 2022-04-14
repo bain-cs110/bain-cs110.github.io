@@ -85,7 +85,7 @@ The job of the **make_circle** function is to draw a circle to the canvas, cente
 The job of the **make_bullseye** function is to draw a bullseye of 4 concentric circles to the canvas, centered at center. The smallest concentric circle will have a radius of `radius` (value of the argument), and each additional concentric circle will have a radius of `distance` units more than the previous circle. For instance, if `radius`=10 and `distance`=5, then the first circle has a radius of 10, the second a radius of 15, the third 20, and the fourth 25. The function accepts the following arguments:
 
 1. **canvas(Canvas)** : a Canvas object where you want the oval to be drawn.
-1. **center (tuple)** : a tuple that defines the center point, where the first element in the tuple refers to the y-coordinate.
+1. **center (tuple)** : a tuple that defines the center point.
 1. **radius (int)** : an int that specifies the radius of the circle.
 1. **distance (int)** : an int that represents how far apart each circle should be drawn.
 
