@@ -125,9 +125,9 @@ make_mario(canvas, (420, 10), pixel=15)
 <img class="medium frame" src="/assets/images/tutorials/marios.png" />
 
 ## Optional Challenges
-1. Create a helper function called `make_row` to further simplify your make_mario function. Then, rather than repeating almost identical code for each row created, you will simply invoke `make_row` 11 times (once for each row).
+1. Create a helper function called `make_row` to further simplify your `make_mario` function. Then, rather than repeating almost identical code for each row created, you will simply invoke `make_row` 15 times (once for each row).
 2. Create a second pixel art function that draws a different image. Google "pixel art simple" to get ideas.
-3. The pixel argument is kind of awkward. Arguably a better function design would allow the calling function to specify the width of Mario (as opposed to the individual pixels that comprise him). Therefore, modify the function header so that it requires a `width` (int) parameter instead of a `pixel` parameter. This change means that you will need to derive the appropriate size of the pixel based on the width and the number of columns needed to generate Mario (which is 16). When you're done, update each of the function calls at the bottom of the file so that they pass in a width argument.
+3. The pixel argument is kind of awkward. Arguably a better function design would allow the calling function to specify the width of Mario (as opposed to the individual pixels that comprise him). Therefore, modify the function header so that it requires a `width` (int) parameter instead of a `pixel` parameter. This change means that you will need to derive the appropriate size of the pixel based on the width and the number of columns needed to generate Mario (which is 13). When you're done, update each of the function calls at the bottom of the file so that they pass in a width argument.
 
 ## What to Turn In
 Please turn in your completed tutorial exercise(s) on Canvas by Wednesday night at midnight. To do this, first zip your entire `tutorial03` folder (with your edited files inside), and then upload your zip file to Canvas. Please ensure that your zip file includes **YOUR CODE**. You can double check by downloading the file once it has successfully submitted to Canvas, and confirming your work is in that ZIP file.
