@@ -1,15 +1,15 @@
 ---
 layout: module
 title: |
-    Review: Week 3
+    Review
 type: lecture
-draft: 0
+draft: 1
 num: 9
 description:
   - Defining Functions
   - Variables & Variable Scope
   - Modules
-due_date: 2022-01-26
+due_date: 2022-04-20
 slides:
    - title: "Quiz 1 Review"
      url: https://docs.google.com/presentation/d/13M-Y1ZJpR_XlQZRC6Lu_gmOq_3vpqWpbyl5-ghlV-Ek/edit?usp=sharing

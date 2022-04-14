@@ -1,22 +1,25 @@
 ---
 layout: module
-title: "Scope and Modules"
+title: "Reporters & Modules"
 type: lecture
 num: 8
 draft: 1
 due_date: 2022-04-15
 description:
-    - More defining functions
+    - Talk about Quiz 1
+    - More on defining functions
+    - Using Lists/Tuples
+    - Defining functions that report back values
 slides:
-  - url: https://docs.google.com/presentation/d/1VE7mxWvqCgXJesMZZ8WjKS1L1gG3Yx8KwsopeO5nSlE/edit?usp=sharing
+  - url:
     title: "Live Lecture Slides"
 videos:
-   - title: "Function, Scope, and Modules (Live)"
-     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c527a764-4bf0-425f-a9d4-adf6016a947b
+   - title: "Live Lecture (Not Yet Posted)"
+     url:
      duration: "50:00"
      live: 1
 
-exercise_url: "lecture07.zip"
+exercise_url: "lecture08.zip"
 
 ---
 
