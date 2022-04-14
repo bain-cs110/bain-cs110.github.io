@@ -98,7 +98,7 @@ The job of the **make_face** function is to draw a face (i.e. a circle) with two
 
 1. **canvas (Canvas)**: a Canvas object where you want the oval to be drawn.
 1. **center (tuple)**: a tuple that defines the center point, where the first element in the tuple refers to the x-coordinate and the second element in the tuple refers to the y-coordinate.
-1. **width (int)**: an int that specifies the width of the face.
+1. **width (int)**: an int that specifies the size of the face. (Remember, your `make_circle` function takes as input a `radius` but this parameter specifies the whole width of the face.)
 1. **eye_color (string, optional)**: a string that specifies the color of the eyes that defaults to `"#000000"`
 1. **face_color (string, optional)**: a string that specifies the color of the face that defaults to `"#FFFFFF"`
 
