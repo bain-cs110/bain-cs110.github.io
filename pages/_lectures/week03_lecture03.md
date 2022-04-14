@@ -1,6 +1,6 @@
 ---
 layout: module
-title: "Reporters & Modules"
+title: "Writing Reporters"
 type: lecture
 num: 8
 draft: 1
