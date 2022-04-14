@@ -15,7 +15,7 @@ print(get_square_area(13))
 
 ## Example 2
 def get_house_area(height:int):
-    square_part = height * height
+    square_part = get_square_area(height)
     roof = 1 / 2 * (height / 2) * height
     return square_part + roof
 
@@ -28,10 +28,10 @@ print(get_house_area(12))
 ## Example 3
 def get_4_house_areas(list_of_heights:list):
     list_of_areas = []
-    list_of_areas.append(get_house_area(list_of_areas[0]))
-    list_of_areas.append(get_house_area(list_of_areas[1]))
-    list_of_areas.append(get_house_area(list_of_areas[2]))
-    list_of_areas.append(get_house_area(list_of_areas[3]))
+    list_of_areas.append(get_house_area(list_of_heights[0]))
+    list_of_areas.append(get_house_area(list_of_heights[1]))
+    list_of_areas.append(get_house_area(list_of_heights[2]))
+    list_of_areas.append(get_house_area(list_of_heights[3]))
 
     return list_of_areas
 
