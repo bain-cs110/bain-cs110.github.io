@@ -14,8 +14,8 @@ slides:
   - url: https://docs.google.com/presentation/d/17XWzcc8mkgD6FTk7_EgmtAMtQeE-OlffqN7HHaEh3rc/edit?usp=sharing
     title: "Writing Reporters"
 videos:
-   - title: "Live Lecture (Not Yet Posted)"
-     url:
+   - title: "Live Lecture"
+     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c53bb4b7-779a-489a-966d-ae670037b1d2
      duration: "50:00"
      live: 1
 
