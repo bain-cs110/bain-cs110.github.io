@@ -10,8 +10,8 @@ num: 9
 draft: 0
 due_date: 2022-04-18
 videos:
-  - title: "Live Lecture (Not Yet Posted)"
-    url:
+  - title: "Live Lecture"
+    url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=40134bd3-f628-46bf-b3b1-ae670037b1ec
     live: 1
     duration: 50:00
 
