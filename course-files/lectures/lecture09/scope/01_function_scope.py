@@ -5,10 +5,8 @@
 ##############################################################
 
 def demo_1(name):
-     greeting = 'Welcome, ' + name
+    greeting = 'Welcome, ' + name
 
 demo_1('Jimmy')
 # un-comment the line below to see the error:
 # print(greeting)  # the variable greeting is undefined outside of the demo_1 function
-
-
