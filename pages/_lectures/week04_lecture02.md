@@ -4,7 +4,7 @@ title: |
     Review
 type: lecture
 draft: 1
-num: 9
+num: 10
 description:
   - Defining Functions
   - Variables & Variable Scope
