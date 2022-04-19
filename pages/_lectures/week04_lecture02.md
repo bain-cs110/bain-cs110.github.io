@@ -6,20 +6,18 @@ type: lecture
 draft: 1
 num: 10
 description:
-  - Defining Functions
-  - Variables & Variable Scope
-  - Modules
+  - More on Scope
+  - Review for Q1
 due_date: 2022-04-20
 slides:
    - title: "Quiz 1 Review"
-     url: https://docs.google.com/presentation/d/13M-Y1ZJpR_XlQZRC6Lu_gmOq_3vpqWpbyl5-ghlV-Ek/edit?usp=sharing
+     url: https://docs.google.com/presentation/d/1GTg2jypc-u101Wn_BNgsBqB0NznNDOXO07uX_TD3SWM/edit?usp=sharing
 videos:
-  - title: "Live Lecture"
-    url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ace9dca1-7723-4593-a547-adf6016a94a6
+  - title: "Live Lecture (Not Yet Posted)"
+    url:
     live: 1
     duration: "50:00"
-exercise_url: "lecture09.zip"
-
+exercise_url: "lecture10.zip"
 ---
 
 Today in class, we will review any questions that you have about the material covered thus far. Please review the [Quiz 1 study materials](week04-lecture03) and come with questions. We're also going to make sure we understand how to do these two problems:
@@ -37,16 +35,6 @@ last_names = ['Jones', 'Jauregui', 'Imper']
 # (2) that the lists always have three values in them.
 ```
 
-### Answer (Another Approach)
-
-```python
-full_names = []
-full_names.append(first_names[0] + ' ' + last_names[0])
-full_names.append(first_names[1] + ' ' + last_names[1])
-full_names.append(first_names[2] + ' ' + last_names[2])
-print(full_names)
-```
-
 ## Exercise 2
 Write a function that shifts a list of three coordinate pairs by some horizontal amount and some vertical amount. The function should return the new/updated list.
 
@@ -61,14 +49,4 @@ print(shift_coordinates([(40, 40), (100, 100), (200, 200)]))
 # [(120, 20), (130, 230), (140, 240)]
 # [(90, 140), (150, 200), (250, 300)]
 # [(40, 40), (100, 100), (200, 200)]
-```
-
-### Answer (One Approach)
-```python
-def shift_coordinates(my_list, x_units=0, y_units=0):
-    return [
-        (my_list[0][0] + x_units, my_list[0][1] + y_units),
-        (my_list[1][0] + x_units, my_list[1][1] + y_units),
-        (my_list[2][0] + x_units, my_list[2][1] + y_units)
-    ]
 ```
