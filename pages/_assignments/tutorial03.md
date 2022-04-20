@@ -90,7 +90,7 @@ Try re-assigning a different color to the `clothes` variable, and running the pr
 ### Task 2: Customize Mario's size
 Next, modify the code to make it easier to customize Mario's ***size*** (i.e. the size of each pixel). As the program currently stands, each pixel is hardcoded to 25 pixels. But what if you wanted to draw a mini-Mario, or a really big Mario? You would have to update every x and y value.
 
-To make this process more efficient, create another variable called `pixel` and assign the value `20` (int) to it. Then, figure out a way to use the `pixel` variable to make Mario's size customizable. If you get stuck, see `hints/hint_1.py`. That said, don't just copy this code...think about why it works (and ask questions). It only helps you with the first few rows and it only shows you how to rewrite the x-coordinates. Think about how you can also apply this same process to the y-coordinates! (Hint: look at the "pixel coordinates" for each row. See a pattern?)
+To make this process more efficient, create another variable called `pixel` and assign the value `25` (int) to it. Then, figure out a way to use the `pixel` variable to make Mario's size customizable. If you get stuck, see `hints/hint_1.py`. That said, don't just copy this code...think about why it works (and ask questions). It only helps you with the first few rows and it only shows you how to rewrite the x-coordinates. Think about how you can also apply this same process to the y-coordinates! (Hint: look at the "pixel coordinates" for each row. See a pattern?)
 
 ### Task 3: Customize Mario's position
 Next, modify the code to make it easier to customize Mario's ***position***. Note that the top-left corner of the Mario pixel map is positioned at `(0, 0)`. In other words, the is an implicit offset of `(0, 0)`. But you wanted to change this offset to, say, `(100, 50)`, then you would have to manually add 100 to the value of every x-coordinate and 50 to the value of every y-coordinate.
@@ -110,7 +110,11 @@ In other words, if I invoked your `make_mario` function as follows...
 
 `make_mario(canvas, (180, 220), pixel=20, clothes='#75B9BE')`
 
-...your function would draw a Mario with blue-ish clothes, with its top-left coordinate at position (180, 220), with a "pixel" size of 20, wearing blue overalls. After you're done making your function, please uncomment the `make_mario` function calls at the bottom of your `your_task.py` file to test your code. If it works, you should see something similar to the image shown below.
+...your function would draw a Mario with blue-ish clothes, with its top-left coordinate at position (180, 220), with a "pixel" size of 20, wearing blue overalls.
+
+HINT: When making your drawing code part of your 
+
+After you're done making your function, please uncomment the `make_mario` function calls at the bottom of your `your_task.py` file to test your code. If it works, you should see something similar to the image shown below.
 
 ```python
 # After you're done making your "make_mario" function, invoke it as follows:
