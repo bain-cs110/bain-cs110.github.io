@@ -3,7 +3,7 @@ layout: module
 title: |
     Review
 type: lecture
-draft: 1
+draft: 0
 num: 10
 description:
   - More on Scope
