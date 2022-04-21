@@ -79,7 +79,7 @@ The job of the **make_circle** function is to draw a circle to the canvas, cente
 
 **Your job**: Currently, this function creates a hard-coded circle with a top-left coordinate of (300, 100), and a bottom-right coordinate of (400, 200) — which effectively draws it at a centerpoint of (350, 150), with a radius of 50. Your job is to modify the code so that the top-left (x, y) and bottom-right (x, y), and fill color are determined by the arguments passed into the function.
 
-**HINT**: you may do this by calling the make_oval function that you just made in exercise 1.
+**HINT**: you should do this by calling the make_oval function that you just made in exercise 1.
 
 ### 3. Modify the make_bullseye function
 The job of the **make_bullseye** function is to draw a bullseye of 4 concentric circles to the canvas, centered at center. The smallest concentric circle will have a radius of `radius` (value of the argument), and each additional concentric circle will have a radius of `distance` units more than the previous circle. For instance, if `radius`=10 and `distance`=5, then the first circle has a radius of 10, the second a radius of 15, the third 20, and the fourth 25. The function accepts the following arguments:
