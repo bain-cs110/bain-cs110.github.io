@@ -15,6 +15,13 @@ make_creature(canvas)
 make_grid(canvas, 550, 550)
 
 
+make_creature(canvas)
+
+make_creature(canvas)
+
+make_creature(canvas)
+
+
 ########################## YOUR CODE ABOVE THIS LINE ############################## 
 # makes sure the canvas keeps running:
 canvas.mainloop()
