@@ -50,16 +50,16 @@ y = pixel + y # Move down one row in our drawing
 # row 1
 # blank, pixel (0,1)
 # blank, pixel (1,1)
-make_square(canvas, (x + 2*pixel, y), pixel, fill_color=clothes)  # pixel (2, 1)
-make_square(canvas, (x + 3*pixel, y), pixel, fill_color=clothes)  # pixel (3, 1)
-make_square(canvas, (x + 4*pixel, y), pixel, fill_color=clothes)  # pixel (4, 1)
-make_square(canvas, (x + 5*pixel, y), pixel, fill_color=clothes)  # pixel (5, 1)
-make_square(canvas, (x + 6*pixel, y), pixel, fill_color=clothes)  # pixel (6, 1)
-make_square(canvas, (x + 7*pixel, y), pixel, fill_color=clothes)  # pixel (7, 1)
-make_square(canvas, (x + 8*pixel, y), pixel, fill_color=clothes)  # pixel (8, 1)
-make_square(canvas, (x + 9*pixel, y), pixel, fill_color=clothes)  # pixel (9, 1)
-make_square(canvas, (x + 10*pixel,y), pixel, fill_color=clothes)  # pixel (10, 1)
-make_square(canvas, (x + 11*pixel,y), pixel, fill_color=clothes)  # pixel (11, 1)
+make_square(canvas, (x + 2*pixel, y + 1*pixel), pixel, fill_color=clothes)  # pixel (2, 1)
+make_square(canvas, (x + 3*pixel, y + 1*pixel), pixel, fill_color=clothes)  # pixel (3, 1)
+make_square(canvas, (x + 4*pixel, y + 1*pixel), pixel, fill_color=clothes)  # pixel (4, 1)
+make_square(canvas, (x + 5*pixel, y + 1*pixel), pixel, fill_color=clothes)  # pixel (5, 1)
+make_square(canvas, (x + 6*pixel, y + 1*pixel), pixel, fill_color=clothes)  # pixel (6, 1)
+make_square(canvas, (x + 7*pixel, y + 1*pixel), pixel, fill_color=clothes)  # pixel (7, 1)
+make_square(canvas, (x + 8*pixel, y + 1*pixel), pixel, fill_color=clothes)  # pixel (8, 1)
+make_square(canvas, (x + 9*pixel, y + 1*pixel), pixel, fill_color=clothes)  # pixel (9, 1)
+make_square(canvas, (x + 10*pixel, y + 1*pixel), pixel, fill_color=clothes)  # pixel (10, 1)
+make_square(canvas, (x + 11*pixel, y + 1*pixel), pixel, fill_color=clothes)  # pixel (11, 1)
 
 ## Now it's up to you to apply this to the next rows! ##
 

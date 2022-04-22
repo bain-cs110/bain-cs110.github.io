@@ -141,7 +141,7 @@
 <h3 id="task-2-customize-marios-size">Task 2: Customize Mario’s size</h3>
 <p>Next, modify the code to make it easier to customize Mario’s <strong><em>size</em></strong> (i.e. the size of each pixel). As the program currently stands, each pixel is hardcoded to 25 pixels. But what if you wanted to draw a mini-Mario, or a really big Mario? You would have to update every x and y value.</p>
 
-<p>To make this process more efficient, create another variable called <code class="language-plaintext highlighter-rouge">pixel</code> and assign the value <code class="language-plaintext highlighter-rouge">20</code> (int) to it. Then, figure out a way to use the <code class="language-plaintext highlighter-rouge">pixel</code> variable to make Mario’s size customizable. If you get stuck, see <code class="language-plaintext highlighter-rouge">hints/hint_1.py</code>. That said, don’t just copy this code…think about why it works (and ask questions). It only helps you with the first few rows and it only shows you how to rewrite the x-coordinates. Think about how you can also apply this same process to the y-coordinates! (Hint: look at the “pixel coordinates” for each row. See a pattern?)</p>
+<p>To make this process more efficient, create another variable called <code class="language-plaintext highlighter-rouge">pixel</code> and assign the value <code class="language-plaintext highlighter-rouge">25</code> (int) to it. Then, figure out a way to use the <code class="language-plaintext highlighter-rouge">pixel</code> variable to make Mario’s size customizable. If you get stuck, see <code class="language-plaintext highlighter-rouge">hints/hint_1.py</code>. That said, don’t just copy this code…think about why it works (and ask questions). It only helps you with the first few rows and it only shows you how to rewrite the x-coordinates. Think about how you can also apply this same process to the y-coordinates! (Hint: look at the “pixel coordinates” for each row. See a pattern?)</p>
 
 <h3 id="task-3-customize-marios-position">Task 3: Customize Mario’s position</h3>
 <p>Next, modify the code to make it easier to customize Mario’s <strong><em>position</em></strong>. Note that the top-left corner of the Mario pixel map is positioned at <code class="language-plaintext highlighter-rouge">(0, 0)</code>. In other words, the is an implicit offset of <code class="language-plaintext highlighter-rouge">(0, 0)</code>. But you wanted to change this offset to, say, <code class="language-plaintext highlighter-rouge">(100, 50)</code>, then you would have to manually add 100 to the value of every x-coordinate and 50 to the value of every y-coordinate.</p>
@@ -163,7 +163,11 @@
 
 <p><code class="language-plaintext highlighter-rouge">make_mario(canvas, (180, 220), pixel=20, clothes='#75B9BE')</code></p>
 
-<p>…your function would draw a Mario with blue-ish clothes, with its top-left coordinate at position (180, 220), with a “pixel” size of 20, wearing blue overalls. After you’re done making your function, please uncomment the <code class="language-plaintext highlighter-rouge">make_mario</code> function calls at the bottom of your <code class="language-plaintext highlighter-rouge">your_task.py</code> file to test your code. If it works, you should see something similar to the image shown below.</p>
+<p>…your function would draw a Mario with blue-ish clothes, with its top-left coordinate at position (180, 220), with a “pixel” size of 20, wearing blue overalls.</p>
+
+<p>HINT: When making your drawing code part of your</p>
+
+<p>After you’re done making your function, please uncomment the <code class="language-plaintext highlighter-rouge">make_mario</code> function calls at the bottom of your <code class="language-plaintext highlighter-rouge">your_task.py</code> file to test your code. If it works, you should see something similar to the image shown below.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># After you're done making your "make_mario" function, invoke it as follows:
 </span><span class="n">make_mario</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
@@ -178,9 +182,9 @@
 
 <h2 id="optional-challenges">Optional Challenges</h2>
 <ol>
-  <li>Create a helper function called <code class="language-plaintext highlighter-rouge">make_row</code> to further simplify your make_mario function. Then, rather than repeating almost identical code for each row created, you will simply invoke <code class="language-plaintext highlighter-rouge">make_row</code> 11 times (once for each row).</li>
+  <li>Create a helper function called <code class="language-plaintext highlighter-rouge">make_row</code> to further simplify your <code class="language-plaintext highlighter-rouge">make_mario</code> function. Then, rather than repeating almost identical code for each row created, you will simply invoke <code class="language-plaintext highlighter-rouge">make_row</code> 15 times (once for each row).</li>
   <li>Create a second pixel art function that draws a different image. Google “pixel art simple” to get ideas.</li>
-  <li>The pixel argument is kind of awkward. Arguably a better function design would allow the calling function to specify the width of Mario (as opposed to the individual pixels that comprise him). Therefore, modify the function header so that it requires a <code class="language-plaintext highlighter-rouge">width</code> (int) parameter instead of a <code class="language-plaintext highlighter-rouge">pixel</code> parameter. This change means that you will need to derive the appropriate size of the pixel based on the width and the number of columns needed to generate Mario (which is 16). When you’re done, update each of the function calls at the bottom of the file so that they pass in a width argument.</li>
+  <li>The pixel argument is kind of awkward. Arguably a better function design would allow the calling function to specify the width of Mario (as opposed to the individual pixels that comprise him). Therefore, modify the function header so that it requires a <code class="language-plaintext highlighter-rouge">width</code> (int) parameter instead of a <code class="language-plaintext highlighter-rouge">pixel</code> parameter. This change means that you will need to derive the appropriate size of the pixel based on the width and the number of columns needed to generate Mario (which is 13). When you’re done, update each of the function calls at the bottom of the file so that they pass in a width argument.</li>
 </ol>
 
 <h2 id="what-to-turn-in">What to Turn In</h2>

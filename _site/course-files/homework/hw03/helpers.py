@@ -3,17 +3,6 @@ from tkinter import Canvas, Tk
 Documentation: http://effbot.org/tkinterbook/canvas.htm
 Color Picker: https://coolors.co/
 '''
-
-def make_oval(canvas: Canvas, center: tuple, width: int, height: int, color: str='hotpink'):
-    top_left = (center[0] - width, center[1] - height)
-    bottom_right = (center[0] + width, center[1] + height)
-    canvas.create_oval([top_left, bottom_right], fill=color)
-
-
-def make_circle(canvas: Canvas, center: tuple, radius: int, color: str='hotpink'):
-    make_oval(canvas, center, radius, radius, color=color)
-
-
 def make_grid(canvas, w, h):
     interval = 100
 
