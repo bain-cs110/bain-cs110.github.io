@@ -28,8 +28,8 @@ readings:
     source: "ThinkCS"
     url: http://openbookproject.net/thinkcs/python/english3e/iteration.html
 videos:
-  - title: "Live Lecture (not yet posted)"
-    url:
+  - title: "Live Lecture"
+    url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=81bef6e6-876c-44bb-bd4a-ae670037b239
     duration: "50:00"
     live: 1
 
