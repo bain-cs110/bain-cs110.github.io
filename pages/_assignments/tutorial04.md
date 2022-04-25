@@ -143,7 +143,7 @@ Note that the (x,y) position refers to the top-left corner of where the pixel ar
 > **If you get stuck**: After you've given it a shot, take a look at `hints/hint3.py` to get a sense of how you might implement your `draw_pixel_art` function body.
 
 ## Step 5: Revisiting Mario
-Now, take the below `mario` variable (you'll need to copy and paste it into your file near the `goomba` and `smiley`) and write a function call to `draw_pixel_art` that will recreate our Mario design from [Tutorial 2](tutorial02).
+Now, take the below `mario` variable (you'll need to copy and paste it into your file near the `goomba` and `smiley`) and write a function call to `draw_pixel_art` that will recreate our Mario design from [Tutorial 3](tutorial03).
 
 ```python
 # mario
@@ -165,6 +165,19 @@ mario = [
     (3, 3, 3, 3, 3, 0, 0, 3, 3, 3, 3, 3, 0, 0)
 ]
 ```
+
+Hint: you'll need to use more colors for mario than you did for the goomba. Here's the many different colors we used for Mario in tutorial 3.
+
+```python
+# mario
+clothes = 'red'
+accessories = 'saddle brown'
+tone = 'bisque3'
+features = 'black'
+overalls = "blue"
+buttons = "gold"
+```
+
 
 <img class="medium frame" src="/assets/images/tutorial04/final.png" />
 
