@@ -178,7 +178,6 @@ overalls = "blue"
 buttons = "gold"
 ```
 
-
 <img class="medium frame" src="/assets/images/tutorial04/final.png" />
 
 Check that out. You just wrote a function that can draw ANY PIXEL ART IN THE ENTIRE WORLD. No matter the size or colors. Pretty sweet for an hour's worth of work. For loops allow us to quickly go through lots of data and apply the same set of basic operations to each item.
