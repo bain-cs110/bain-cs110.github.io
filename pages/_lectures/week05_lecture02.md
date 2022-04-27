@@ -6,12 +6,12 @@ description:
     - How long do you want to repeat it?
     - What changes each time (optional)?
 type: lecture
-draft: 1
+draft: 0
 num: 12
 due_date: 2022-04-27
 slides:
    - title: "Lecture Slides"
-     url: https://docs.google.com/presentation/d/1NIl2Ojix1c_oE0-gtaSOZQ9wAI9Xu-ZlbMiMpWKRB8Q/edit?usp=sharing
+     url: https://docs.google.com/presentation/d/1eB6yFYnpYiIQTwNJQd23Cj4XaAN1_9YC8vWaLTAKtug/edit?usp=sharing
 readings:
   - title: "Ch5: Iteration"
     author: "Severance"
@@ -21,8 +21,8 @@ readings:
     source: "ThinkCS"
     url: http://openbookproject.net/thinkcs/python/english3e/iteration.html
 videos:
-   - title: "Live Lecture"
-     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e0fecfd0-6439-4ddd-9a73-adf6016a94e9
+   - title: "Live Lecture (not Yet Posted)"
+     url:
      duration: "50:00"
      live: 1
 
