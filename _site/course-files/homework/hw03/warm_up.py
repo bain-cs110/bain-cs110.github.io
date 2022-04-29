@@ -10,8 +10,8 @@ canvas.pack()
 
 # make a label:
 canvas.create_text(
-    (210, 210), 
-    text="Hello world!", 
+    (210, 210),
+    text="Hello world!",
     font=("Purisa", 32),
     anchor='nw'  # align to "northwest" corner
 )
@@ -37,7 +37,7 @@ canvas.create_line(
 
 # make an arc:
 canvas.create_line(
-    [ (350, 50),  (430, 50),  (450, 200) ],  # list of x-y pairs
+    [ (350, 50),  (275, 150),  (450, 200) ],  # list of x-y pairs
     width=5,
     fill='#0074D9',
     splinesteps=15,
@@ -46,36 +46,36 @@ canvas.create_line(
 # make line that looks like an arc:
 canvas.create_arc(
         [
-            (150, 50), 
-            (350, 350)
+            (100, 50),
+            (300, 350)
         ],
         width=5,
         style='arc',
         outline='#0074D9'
     )
 
-# make a dashed line: 
+# make a dashed line:
 canvas.create_line(
-    [ (10, 100),  (210, 0),  (420, 100),  (630, 10) ], 
-    fill="#3D9970", 
-    dash=(4, 4), 
+    [ (10, 100),  (210, 0),  (420, 100),  (630, 10) ],
+    fill="#3D9970",
+    dash=(4, 4),
     width=3)
 
 # make a curvy line:
 canvas.create_line(
     [
-        (0,   100), 
-        (50,  150), 
-        (100, 100), 
-        (150, 150), 
-        (200, 100), 
-        (250, 150), 
-        (300, 100), 
-        (350, 150), 
+        (0,   100),
+        (50,  150),
+        (100, 100),
+        (150, 150),
+        (200, 100),
+        (250, 150),
+        (300, 100),
+        (350, 150),
         (400, 100)
-    ], 
+    ],
     splinesteps=20,
-    width=3, 
+    width=3,
     smooth=True)
 
 # make a rectangle
@@ -85,5 +85,5 @@ canvas.create_rectangle(
 
 helpers.make_grid(canvas, 700, 350)
 
-########################## YOUR CODE ABOVE THIS LINE ############################## 
+########################## YOUR CODE ABOVE THIS LINE ##############################
 canvas.mainloop()
