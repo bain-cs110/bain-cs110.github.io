@@ -1,6 +1,6 @@
 ---
 layout: module
-title: "More Practice: Loops and Conditional"
+title: "More Practice: Loops and Conditionals"
 type: lecture
 draft: 1
 num: 13

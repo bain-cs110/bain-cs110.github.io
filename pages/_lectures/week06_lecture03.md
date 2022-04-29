@@ -6,9 +6,9 @@ description:
     - Expanding your I/O repertoire
     - Click, drag, and keyboard events
 type: lecture
-draft: 0
-num: 15
-due_date: 2022-02-11
+draft: 1
+num: 16
+due_date: 2022-05-06
 slides:
    - title: "Handling User Input & Event Handlers"
      url: https://docs.google.com/presentation/d/1yDfVwWYBaWm8iWbKUJMPoliZf28SxeeZ2MV7gzujtGw/edit?usp=sharing
