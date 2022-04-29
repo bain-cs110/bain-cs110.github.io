@@ -1,12 +1,12 @@
 ---
 layout: module
-title: More Practice with For Loops & Sequences
+title: Loops to Process Data
 description:
     - Practice using for loops to process data
 type: lecture
-draft: 0
-num: 14
-due_date: 2022-02-09
+draft: 1
+num: 15
+due_date: 2022-05-04
 exercise_url: "lecture14.zip"
 videos:
   - title: "Live Lecture"
