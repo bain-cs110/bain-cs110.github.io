@@ -5,3 +5,8 @@ numbers = [
 
 # Challenge: using a for loop, break out of the loop if you
 # get to a number that equals 67
+
+for num in numbers:
+    if num == 67:
+        break
+    print(num)
