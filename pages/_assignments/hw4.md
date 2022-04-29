@@ -1,16 +1,15 @@
 ---
 layout: assignment-two-column
-title: Animations & Landscapes
+title: Animations, Landscapes, and Data Processing
 abbreviation: HW4
 type: homework
-files: course-files/assignments/hw04.zip
-due_date: 2022-02-11
+due_date: 2022-05-06
 points: 8
-draft: 0
+draft: 1
 ---
 
 
-<a class="nu-button" href="/course-files/homework/hw04.zip" target="_blank">
+<a class="nu-button" href="/course-files/homework/hw04_template.zip" target="_blank">
     Homework Starter Files <i class="fas fa-download"></i>
 </a>
 

@@ -1,14 +1,12 @@
 ---
 layout: module
-title: More Loops
+title: Using Loops to Draw/Animate
 description:
-    - Animation and While Loops
-    - Intro to for loops syntax
-    - Using for loops with lists and sequences
+    - More Data and Loops
 type: lecture
-draft: 0
-num: 13
-due_date: 2022-02-07
+draft: 1
+num: 14
+due_date: 2022-05-02
 slides:
    - title: "More Loops: For Loops & Lists"
      url: https://docs.google.com/presentation/d/1QQ6VDoDu0pmcjzv_A97JBqs0lVW5q-InqqgsBgWBHXk/edit?usp=sharing

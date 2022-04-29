@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Animations, Landscapes, and Data Processing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    
+
+    </head>
+    <body class="two-column">
+        <!-- banner -->
+<header>
+    <h1 class="desktop"><a href="/">CS110 (Bain): Spring 2022</a></h1>
+    <h2 class="desktop">Intro to Computer Programming with Python</h2>
+    <a class="mobile" href="#">
+        <i class="menu-toggle fas fa-bars"></i>
+    </a>
+    <h1 class="mobile">CS110 (Bain): Spring 2022</h1>
+</header>
+
+        <nav>
+    <ul>
+        <li ><a href="/syllabus/">Syllabus</a></li>
+        <li ><a href="/" >Schedule</a></li>
+        <li class="active"><a href="/assignments/">Assignments</a></li>
+        <li><a href="https://campuswire.com/p/G7C57BC09" target="_blank">Campuswire</a></li>
+    </ul>
+</nav>
+
+        <main>
+            <aside>
+                <ol class="side-menu">
+  <li><a href="#part-1-landscapes">Part 1: Landscapes</a></li>
+  <li><a href="#part-2-animation">Part 2: Animation</a></li>
+  <li><a href="#what-to-submit">What to Submit</a></li>
+  <li><a href="#request-an-extension">Request an Extension</a></li>
+</ol>
+
+            </aside>
+            <article>
+                
+
+    
+        <h1>
+            <a href="../assignments/">Assignments</a> > 
+            HW4: Animations, Landscapes, and Data Processing
+        </h1>
+    
+ 
+                <p>
+    
+        Due on Fri, 05/06 @ 11:59PM.
+    
+    
+        8 Points.
+    
+    
+</p>
+
+<p><a class="nu-button" href="/course-files/homework/hw04_template.zip" target="_blank">
+    Homework Starter Files <i class="fas fa-download"></i>
+</a></p>
+
+<p>In this homework assignment, you’ll be moving from making “static” pictures like in HW2 and HW3, to making live animations!</p>
+
+<blockquote class="blockquote-no-margin">
+  <p><strong>LEARNING OBJECTIVES:</strong></p>
+  <ol>
+    <li>Practice working with loops</li>
+    <li>Practice working with if statements</li>
+    <li>Practice working with the random module</li>
+  </ol>
+</blockquote>
+
+<p>A peer mentor from a previous year, Katherine, has created a helpful <a href="https://www.youtube.com/watch?v=RftT-A5vzH8&amp;feature=youtu.be" target="_blank">how to get started video</a> to get you oriented with the assignment.</p>
+
+<h2 id="part-1-landscapes">Part 1: Landscapes</h2>
+<p><img class="large frame" src="/assets/images/hw04/bubbles.png" />
+<img class="large frame" src="/assets/images/hw04/stars.png" /></p>
+
+<p>In <code class="language-plaintext highlighter-rouge">landscapes.py</code>, replace the code on lines 23-32 (which is repetitive) with a loop (any kind of loop you want) that makes 1,000 stars that fill the entire canvas. Hints:</p>
+
+<ol>
+  <li>Use a loop</li>
+  <li>Use the random module, and in particular the <a href="https://docs.python.org/3/library/random.html#random.uniform">random.uniform</a> function to give each star (or bubble if you choose) a random (x, y) position (given the dimensions of the screen) and a random width (so that it renders stars of different sizes).</li>
+</ol>
+
+<h3 id="optional-enhancements">Optional enhancements</h3>
+<ol>
+  <li>Draw a constellation (Orion’s Belt, Big Dipper, etc.)</li>
+  <li>Make your stars twinkle</li>
+  <li>Animate your bubbles</li>
+</ol>
+
+<h2 id="part-2-animation">Part 2: Animation</h2>
+<div>
+    <p>Please open the cars.py file and make the following changes:</p>
+    <img class="cars" src="/assets/images/hw04/cars.gif" />
+    <ol>
+        <li>Animate the car so that it moves across the screen.</li>
+        <li>If the car gets to the end of the screen, it should seamlessly be moved to the beginning of the screen.</li>
+        <li>Create a second car using the helpers.make_car function. Be sure to give your new car a unique tag.</li>
+        <li>Make the second car move in the opposite direction, and also loop back around when it gets to the end of the screen (see the animated gif).</li>
+    </ol>
+</div>
+
+<h3 id="optional-enhancements-1">Optional enhancements</h3>
+<p>The more you practice, the better you’ll get!</p>
+
+<ol>
+  <li>Make the cars accelerate over time (start off slow and gradually move faster)</li>
+  <li>Add your creature to your animation:
+    <ul>
+      <li>Inside <code class="language-plaintext highlighter-rouge">helpers.py</code>:
+        <ul>
+          <li>Add your <code class="language-plaintext highlighter-rouge">make_creature</code> function definition (adapt from Homework 3).</li>
+          <li>Modify your <code class="language-plaintext highlighter-rouge">make_creature</code> function so that each constituent shape of your creature gets assigned a tag (study the <code class="language-plaintext highlighter-rouge">make_car</code> function and do the same thing).</li>
+        </ul>
+      </li>
+      <li>In <code class="language-plaintext highlighter-rouge">cars.py</code>: animate your creature</li>
+    </ul>
+  </li>
+  <li>Use loops and the random module to make many moving cars.</li>
+</ol>
+
+<h2 id="what-to-submit">What to Submit</h2>
+<p>When you’re done with the assignment, please submit a zip file called <code class="language-plaintext highlighter-rouge">hw04.zip</code> that contains the files below named exactly as they appear:</p>
+<ol>
+  <li>helpers.py</li>
+  <li>cars.py</li>
+  <li>landscape.py</li>
+</ol>
+
+<blockquote>
+  <p><strong>IMPORTANT</strong>: YOU MUST TURN IN THE FILES — BOTH THE  ZIP FILE AND THE PYTHON FILES — NAMED EXACTLY AS SPECIFIED ABOVE.</p>
+</blockquote>
+
+<h2 id="request-an-extension">Request an Extension</h2>
+<p>If you need to request an extension on the assignment (must be 24 hours in advance) use the <a href="https://forms.gle/PobKBdUkTpPJ3GbZ8">Extension Request form</a>.</p>
+
+
+
+            </article>  
+        </main>
+        
+            <script type="text/javascript" src="/assets/js/main.js"></script>
+    
+    <script src="https://kit.fontawesome.com/62a7c74d0d.js" crossorigin="anonymous"></script>
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="/assets/js/scrollspy.js"></script>
+    </body>
+</html>
