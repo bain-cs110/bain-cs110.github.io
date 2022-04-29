@@ -80,6 +80,7 @@ Once you've successfully implemented the conditional, you should see Mario smoot
 
 Your last task is to make a SECOND mario also animate across the screen below the first. See if you can shift it slightly (like the below video) so that the mario on the top always wins the race! (Hint: DO NOT USE A SECOND WHILE LOOP. All of your code will be inside of your single while loop)
 
+<iframe src="https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=0fd80643-2426-470c-9b43-ae86000a910e&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ## What to turn in (same deal as always)
 Please turn in your completed tutorial exercise(s) ON CANVAS by Wednesday night at midnight. To do this, first zip your entire `tutorial05` folder (with your edited files inside), and then upload your zip file to Canvas. Please ensure that your zip file includes **YOUR CODE**.  
