@@ -110,9 +110,9 @@
 </thead>
 <tbody>
   <tr>
-    <td><img src="/assets/images/tutorials/mario_0.png" width="330" /></td>
-    <td><img src="/assets/images/tutorials/mario_1.png" width="330" /></td>
-    <td><img src="/assets/images/tutorials/mario_2.png" width="330" /></td>
+    <td><img src="/assets/images/tutorials/mario_0.png" width="250" /></td>
+    <td><img src="/assets/images/tutorials/mario_1.png" width="250" /></td>
+    <td><img src="/assets/images/tutorials/mario_2.png" width="250" /></td>
   </tr>
 </tbody>
 </table>
@@ -144,6 +144,11 @@
 <p>Put your existing drawing code inside of a new infinite <code class="language-plaintext highlighter-rouge">while</code> loop and rearrange it so it looks like the above steps. Try running your animation.</p>
 
 <p>WOW. A whole lot of nothing. Well, that’s because we never asked Python to actually draw a different mario each time! It’s always drawing the same exact mario in the same exact position. Using the “counting” technique in class, teach Python how to count the number of iterations of your loop. Then use this <code class="language-plaintext highlighter-rouge">counter</code> to update the x-position of your Mario each iteration (hint: the default pixel size is 15, so maybe your mario should move 15 pixels each iteration).</p>
+
+<blockquote class="blockquote-no-margin">
+  <p><strong>Stuck?</strong>
+Checkout the <code class="language-plaintext highlighter-rouge">hint.py</code> file included in the download. (Note: we added the hint Monday morning so if you downloaded before then you can <a href="https://canvas.northwestern.edu/courses/165750/files/folder/tutorial%20solutions?preview=13847406">download it individually here</a>)</p>
+</blockquote>
 
 <p>How cool is THAT!? Mario is racing across the screen; but more like an ice skater than the track and field star he actually is. To make this a little more “animation” like, we want to draw 3 different versions of Mario rather than just the same version of mario shifted a bit each time. Remember those other mario versions from Step 1? What we want to do is draw <code class="language-plaintext highlighter-rouge">mario_0</code>, then <code class="language-plaintext highlighter-rouge">mario_1</code>, then <code class="language-plaintext highlighter-rouge">mario_2</code>, then <code class="language-plaintext highlighter-rouge">mario_0</code>, then … To do this, use an <code class="language-plaintext highlighter-rouge">if-elseif-else</code> conditional along with counter so that the mario version we draw changes each iteration (hint: <code class="language-plaintext highlighter-rouge">counter % 3</code> will cycle between the values of 0, 1, and 2).</p>
 

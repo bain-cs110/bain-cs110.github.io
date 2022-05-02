@@ -57,9 +57,9 @@ Modify the function call to `draw_pixel_art` to draw these other two alternate d
 </thead>
 <tbody>
   <tr>
-    <td><img src="/assets/images/tutorials/mario_0.png" width="330"></td>
-    <td><img src="/assets/images/tutorials/mario_1.png" width="330"></td>
-    <td><img src="/assets/images/tutorials/mario_2.png" width="330"></td>
+    <td><img src="/assets/images/tutorials/mario_0.png" width="250"></td>
+    <td><img src="/assets/images/tutorials/mario_1.png" width="250"></td>
+    <td><img src="/assets/images/tutorials/mario_2.png" width="250"></td>
   </tr>
 </tbody>
 </table>
@@ -89,6 +89,11 @@ Now, your job is to move this code into an "infinite" `while` loop. So in each i
 Put your existing drawing code inside of a new infinite `while` loop and rearrange it so it looks like the above steps. Try running your animation.
 
 WOW. A whole lot of nothing. Well, that's because we never asked Python to actually draw a different mario each time! It's always drawing the same exact mario in the same exact position. Using the "counting" technique in class, teach Python how to count the number of iterations of your loop. Then use this `counter` to update the x-position of your Mario each iteration (hint: the default pixel size is 15, so maybe your mario should move 15 pixels each iteration).
+
+
+{: .blockquote-no-margin}
+> **Stuck?**
+> Checkout the `hint.py` file included in the download. (Note: we added the hint Monday morning so if you downloaded before then you can [download it individually here](https://canvas.northwestern.edu/courses/165750/files/folder/tutorial%20solutions?preview=13847406))
 
 How cool is THAT!? Mario is racing across the screen; but more like an ice skater than the track and field star he actually is. To make this a little more "animation" like, we want to draw 3 different versions of Mario rather than just the same version of mario shifted a bit each time. Remember those other mario versions from Step 1? What we want to do is draw `mario_0`, then `mario_1`, then `mario_2`, then `mario_0`, then ... To do this, use an `if-elseif-else` conditional along with counter so that the mario version we draw changes each iteration (hint: `counter % 3` will cycle between the values of 0, 1, and 2).
 
