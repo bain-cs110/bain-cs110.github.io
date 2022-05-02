@@ -4,3 +4,8 @@ numbers = [
 ]
 
 # Challenge: skip over all of the numbers that equal 67
+
+for num in numbers:
+    if num == 67:
+        continue
+    print(num)

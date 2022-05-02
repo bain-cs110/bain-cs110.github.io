@@ -3,9 +3,10 @@ numbers = [
     70, 69, 67, 76, 79, 81, 77, 79, 76, 72, 74, 71
 ]
 
-# Challenge: skip over all of numbers that equal 67
+# Challenge: using a for loop, break out of the loop if you
+# get to a number that equals 67
+
 for num in numbers:
     if num == 67:
-        print('skipping...', num)
-        continue
+        break
     print(num)
