@@ -13,7 +13,7 @@ slides:
      url: https://docs.google.com/presentation/d/1YbnB0G10RxxN3nNuSJfiEPC_qKTyFC-b2P9ade1DY4M/edit?usp=sharing
 videos:
    - title: "Live Lecture"
-     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=be78e901-5801-44b7-baf8-adf6016a9516
+     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ee404dbe-9434-4cc9-8012-ae670037b283
      duration: "50:00"
      live: 1
 
