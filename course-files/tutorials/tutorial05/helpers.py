@@ -77,14 +77,30 @@ def draw_pixel_art(canvas:Canvas, top_left:tuple, artwork:list, palette:list, pi
         #  amount so that the next row won't draw on top of the first one:
         y += pixel
 
-def make_square(canvas: Canvas, top_left: tuple, width: int, fill_color: str='#84A9C0', outline_color='#DDD', tag=""):
+def make_square(canvas: Canvas, top_left: tuple, width: int, fill_color: str='#84A9C0', outline_color='#DDD', tag=None):
     canvas.create_rectangle([
             top_left,  # top_left
             (top_left[0] + width, top_left[1] + width)  # bottom_right
         ],
         fill=fill_color,
         outline=outline_color,
-        tag=tag
+        tags=tag
+    )
+
+def make_circle(canvas, center, radius, fill_color='white', tag=None, stroke_width=2, outline="white"):
+    make_oval(
+        canvas, center, radius, radius, color=fill_color, tag=tag,
+        stroke_width=stroke_width, outline=outline
+    )
+
+def make_oval(canvas, center, radius_x, radius_y, color='#FF4136', tag=None, stroke_width=1, outline=None):
+    x, y = center
+    return canvas.create_oval(
+        [ x - radius_x, y - radius_y, x + radius_x, y + radius_y ],
+        fill=color,
+        width=stroke_width,
+        tags=tag,
+        outline=outline
     )
 
 def make_grid(c, w, h):
