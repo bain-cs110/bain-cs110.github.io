@@ -47,6 +47,22 @@ The main difference in this program is that instead of having just one Mario pix
 
 Modify the function call to `draw_pixel_art` to draw these other two alternate designs (try one at a time).
 
+<table>
+<thead>
+  <tr>
+    <th>mario_0</th>
+    <th>mario_1</th>
+    <th>mario_2</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><img src="/assets/images/tutorials/mario_0.png" width="330"></td>
+    <td><img src="/assets/images/tutorials/mario_1.png" width="330"></td>
+    <td><img src="/assets/images/tutorials/mario_2.png" width="330"></td>
+  </tr>
+</tbody>
+</table>
 
 ### Step 2 - Learning how to deal with Time
 There are two new skills we need in order to animate Mario. The first one is we need to learn how to control `Time` and the second is we need to know how to erase the Canvas.
