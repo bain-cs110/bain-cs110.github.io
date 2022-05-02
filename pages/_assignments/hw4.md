@@ -13,7 +13,7 @@ draft: 0
     Homework Starter Files <i class="fas fa-download"></i>
 </a>
 
-In this homework assignment, you'll be moving from making "static" pictures like in HW2 and HW3, to making live animations! Make sure to complete [Tutorial 5](tutorial05) before attempting this homework
+In this homework assignment, you'll be moving from making "static" pictures like in HW2 and HW3, to making live animations! Make sure to complete [Tutorial 5](tutorial05) before attempting this homework. Once you've finished Tutorial 5, you'll see how the `utilities.update_position` function makes our work a little easier by getting rid of some of the steps of animation.
 
 {: .blockquote-no-margin}
 > **LEARNING OBJECTIVES:**
