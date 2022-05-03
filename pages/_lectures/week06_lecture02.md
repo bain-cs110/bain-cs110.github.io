@@ -4,18 +4,18 @@ title: Loops to Process Data
 description:
     - Practice using for loops to process data
 type: lecture
-draft: 1
+draft: 0
 num: 15
 due_date: 2022-05-04
-exercise_url: "lecture14.zip"
+exercise_url: "lecture15.zip"
 videos:
-  - title: "Live Lecture"
-    url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=396f61f2-75c0-4641-8cb9-adf6016a952c&start=133
+  - title: "Not Yet Posted"
+    url:
     live: 1
     duration: "50:00"
 slides:
-  - title: "More Practice with Loops"
-    url: https://docs.google.com/presentation/d/179JfOzRfqLT7ekSny42p08lQvpcddUqpMbQGGz1ZjuU/edit?usp=sharing
+  - title: "Using Loops to Do Stuff"
+    url: https://docs.google.com/presentation/d/19aLLAfPoq1QXVDSl76bsXAu7EwYfE4O82YhWGkD02R4/edit?usp=sharing
 ---
 
 In today's lecture, we will be continuing our practice with for loops.
