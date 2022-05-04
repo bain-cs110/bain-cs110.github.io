@@ -9,8 +9,8 @@ num: 15
 due_date: 2022-05-04
 exercise_url: "lecture15.zip"
 videos:
-  - title: "Not Yet Posted"
-    url:
+  - title: "Live Lecture"
+    url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=14659594-0d4b-4d7b-b2f5-ae670037b29f
     live: 1
     duration: "50:00"
 slides:
