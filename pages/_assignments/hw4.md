@@ -23,10 +23,10 @@ In this homework assignment, you'll be moving from making "static" pictures like
 
 ## Part 1: Landscapes
 
-In `main.py`, replace the code on lines 18-21 (which is repetitive) with a loop (any kind of loop you want) that makes at least 30 clouds the top portion of the screen. Hints:
+In `main.py`, replace the code on lines 18-21 (which is repetitive) with a loop (any kind of loop you want) that makes at least 10 to 30 clouds the top portion of the screen. Hints:
 
 1. Use a loop
-1. Use the random module, and in particular the [random.randint](https://docs.python.org/3/library/random.html#random.randint) function to give each cloud a random (x, y) position (given the dimensions of the screen).
+1. Use the random module, and in particular the [random.randint](https://docs.python.org/3/library/random.html#random.randint) function to give each cloud a random (x, y) position (given the dimensions of the screen). (Remember, you need to import the module in order to use it just like we imported the time module in the tutorial this week.)
 
 ### Optional enhancements
 1. Modify make_cloud to make more realistic clouds
