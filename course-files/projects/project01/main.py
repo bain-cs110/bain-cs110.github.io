@@ -1,9 +1,10 @@
 from tkinter import Canvas, Tk
-import helpers
 import utilities
-import helpers
 import time
 import random
+
+import creature
+import landscape
 
 gui = Tk()
 gui.title('My Terrarium')
@@ -18,14 +19,14 @@ canvas.pack()
 ########################## YOUR CODE BELOW THIS LINE ##############################
 
 # sample code to make a creature:
-helpers.make_creature(canvas, (200, 200), my_fill='white', my_tag="test")
+creature.make_creature(canvas, (200, 200), my_fill='white', my_tag="test")
 
 print(utilities.get_center(canvas, "test"))
 
 def click_handle(event):
-    helpers.make_creature(canvas, (100, 100), my_fill='white', my_tag="test")
+    creature.make_creature(canvas, (100, 100), my_fill='white', my_tag="test")
 
-canvas.bind('<b-Button-1>', click_handle)
+canvas.bind('<Button-1>', click_handle)
 
 ########################## YOUR CODE ABOVE THIS LINE ##############################
 
