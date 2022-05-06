@@ -2,19 +2,20 @@
 layout: module
 title: More on Events and Listeners
 description:
-    - Animating creatures
+    - Looking at some common events
+    - Writing handlers
 type: lecture
-draft: 1
+draft: 0
 num: 17
 due_date: 2022-05-09
 slides:
    - title: "Handling User Input & Event Handlers"
-     url: https://docs.google.com/presentation/d/1yDfVwWYBaWm8iWbKUJMPoliZf28SxeeZ2MV7gzujtGw/edit?usp=sharing
-exercise_url: "lecture15.zip"
+     url: https://docs.google.com/presentation/d/1JTBrA_CYVSJywDAAiCbULS3lXfqEaeUOaM1ildGyzQ8/edit?usp=sharing
+exercise_url: "lecture17.zip"
 videos:
-   - title: "Live Lecture"
-     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d59f0e7b-1694-4269-938d-adf6016a956f&start=488
-     duration: "42:00"
+   - title: "Live Lecture (Not Yet Posted)"
+     url:
+     duration: ""
      live: 1
 ---
 
