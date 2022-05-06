@@ -23,6 +23,8 @@ Open `01_mouse_events.py` and complete the following tasks:
 1. modify the `add_new_goomba` function so that it adds a new Goomba wherever the user clicks. Make the size of the Goomba random as its drawn. Also come up with a way of tracking how many Goomba have been created so that each Goomba can have a unique tag.
 2. When you're done, add the following line to your program right below your MOUSE_CLICK event handler:<br><br>**`canvas.bind(MOUSE_DRAG, add_new_goomba)`** <br><br>Now run your program again, and notice that your `add_new_goomba` function is invoked when you either click or drag.
 
+<iframe src="https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=888fa5b6-5f40-4179-85d6-ae8d012d0320&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
 ## 2. Dealing with Keyboard Events
 Open `02_keyboard_events.py` and complete the following tasks:
 1. When the user presses the w-key, move the creature **up** 10 pixels.
@@ -43,6 +45,8 @@ Inside `02_keyboard_events.py` do the following:
 3. Update your `move_mario` functionality so that instead of always moving ``'mario_0'``, you reference the **`active_tag`** variable instead.
 4. Modify the **`select_mario`** function so that it sets the **`active_tag`** variable based on mario on which the user clicks. Hint: use the **`global`** keyword.
 5. Test your code by making sure that when you click on a different creature, the keyboard moves the correct one.
+
+<iframe src="https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=7cc80c3b-4bb7-412e-9a5d-ae8d012d079f&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 ## 4. (Optional) Get Started on P1
 In [Project 1](p1), you'll be doing this same sort of thing but with YOUR custom creature rather than our pre-made Mario and Goombas. If you still have time in your tutorial-hour I highly recommend trying to repeat Parts 1 - 3 but this time replacing all of the "mario" and "goomba" parts of your program with your custom `creature.py` from HW 3.
