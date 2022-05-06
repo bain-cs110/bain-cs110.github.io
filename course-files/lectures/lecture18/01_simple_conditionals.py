@@ -18,6 +18,13 @@ print(result, type(result))
 result = "bad" == "hello" or 5 >= 3
 print(result, type(result))
 
+# Example of OR Logical Operator
+result = "a" in ["a", "b", "c"]
+print(result, type(result))
+
+result = "a" in "abc"
+print(result, type(result))
+
 # Example of If-else
 testing = 123
 if testing == 123:
