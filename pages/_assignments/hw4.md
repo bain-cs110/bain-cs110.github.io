@@ -15,6 +15,8 @@ draft: 0
 
 In this homework assignment, you'll be moving from making "static" pictures like in HW2 and HW3, to making live animations! Make sure to complete [Tutorial 5](tutorial05) before attempting this homework. Once you've finished Tutorial 5, you'll see how the `utilities.update_position` function makes our work a little easier by getting rid of some of the steps of animation.
 
+Note there are a number of functions in `utilities.py` that you *can* use but you only *have* to use `update_position` to complete this assignment (though `get_left` and `get_right` might be useful depending on your approach to part 2). You _should not_ use any function that starts with an underscore. These are called "private functions" and are ONLY meant for use within that one particular file.
+
 {: .blockquote-no-margin}
 > **LEARNING OBJECTIVES:**
 > 1. Practice working with loops
