@@ -20,7 +20,7 @@ Please complete the following exercises:
 
 ## 1. Dealing with Mouse Events
 Open `01_mouse_events.py` and complete the following tasks:
-1. modify the `add_new_goomba` function so that it adds a new Goomba wherever the user clicks. Make the size of the Goomba random as its drawn. Also come up with a way of tracking how many Goomba have been created so that each Goomba can have a unique tag.
+1. modify the `add_new_goomba` function so that it adds a new Goomba wherever the user clicks. Make the size of the Goomba random as its drawn. Optional: come up with a way of tracking how many Goomba have been created so that each Goomba can have a unique tag.
 2. When you're done, add the following line to your program right below your MOUSE_CLICK event handler:<br><br>**`canvas.bind(MOUSE_DRAG, add_new_goomba)`** <br><br>Now run your program again, and notice that your `add_new_goomba` function is invoked when you either click or drag.
 
 <iframe src="https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=888fa5b6-5f40-4179-85d6-ae8d012d0320&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
