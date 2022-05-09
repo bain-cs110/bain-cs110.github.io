@@ -27,10 +27,10 @@ Open `01_mouse_events.py` and complete the following tasks:
 
 ## 2. Dealing with Keyboard Events
 Open `02_keyboard_events.py` and complete the following tasks:
-1. When the user presses the w-key, move the creature **up** 10 pixels.
-2. When the user presses the a-key, move the creature to the **left** 10 pixels.
-3. When the user presses the d-key, move the creature to the **right** 10 pixels.
-4. When the user presses the s-key, move the creature **down** 10 pixels.
+1. When the user presses the w-key, move one of the marios **up** 10 pixels.
+2. When the user presses the a-key, move one of the marios **left** 10 pixels.
+3. When the user presses the d-key, move one of the marios **right** 10 pixels.
+4. When the user presses the s-key, move one of the marios **down** 10 pixels.
 
 {:.blockquote-no-margin}
 > **NOTES:**
