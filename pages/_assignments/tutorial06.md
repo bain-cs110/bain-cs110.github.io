@@ -14,7 +14,7 @@ due_date: 2022-05-11
     Tutorial Starter Files <i class="fas fa-download"></i>
 </a>
 
-The goal of this tutorial is to get you more comfortable with event handlers.
+The goal of this tutorial is to get you more comfortable with event handlers. The demo files for [Lecture 17](../lectures/week07-lecture01) might be helpful in completing this exercise!
 
 Please complete the following exercises:
 
