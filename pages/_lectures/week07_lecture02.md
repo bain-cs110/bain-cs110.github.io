@@ -20,11 +20,11 @@ videos:
      duration: "9:49"
      live: 0
    - title: "Data Filter Exercise Warmup"
-     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=916d47c7-b0c3-445a-b39c-ae92010487ad
+     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f58879fb-8252-4f51-a6c5-ae920101a040
      duration: "4:59"
      live: 0
    - title: "Data Filter Exercise 4"
-     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a7675eb9-4249-446f-8e25-ae92010672ca
+     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=916d47c7-b0c3-445a-b39c-ae92010487ad
      duration: "5:49"
      live: 0
    - title: "Data Filter Exercise 5"
