@@ -5,9 +5,9 @@ description:
     - Working with files
     - Error handling
 type: lecture
-draft: 0
-num: 19
-due_date: 2022-02-23
+draft: 1
+num: 20
+due_date: 2022-05-18
 slides:
    - title: "More Files & Strings + Error Handling"
      url: https://docs.google.com/presentation/d/1XdQOCd81akoTLg8iiBYfKDv4-TqZuVvh_7SE971alT4/edit?usp=sharing

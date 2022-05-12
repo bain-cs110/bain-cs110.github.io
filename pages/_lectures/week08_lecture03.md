@@ -1,13 +1,13 @@
 ---
 layout: module
-title: Error handling Practice and Dictionaries
+title: Funday Friday - PIP
 description:
-    - Error handling
-    - Dictionaries
+    - PIP
+    - 3rd Party Modules
 type: lecture
-draft: 0
-num: 20
-due_date: 2022-02-25
+draft: 1
+num: 21
+due_date: 2022-05-20
 
 readings:
   - title: "Ch9: Dictionaries"
