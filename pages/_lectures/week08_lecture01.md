@@ -5,9 +5,9 @@ description:
     - reading from and writing to files
     - examining different file types
 type: lecture
-draft: 0
-num: 18
-due_date: 2022-02-21
+draft: 1
+num: 19
+due_date: 2022-05-16
 slides:
    - title: "Working with Files"
      url: https://docs.google.com/presentation/d/1hwSaQzYe0EDRnbQgoGUW2tcHhwZXw-gidLDplvPIXwE/edit?usp=sharing
