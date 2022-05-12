@@ -66,7 +66,7 @@ def make_poly_circle(canvas, center, radius, fill_color='#FF4136', tag=None, str
         center,
         radius,
         radius,
-        color=fill_color,
+        fill_color=fill_color,
         tag=tag,
         stroke_width=stroke_width,
         outline=outline)
