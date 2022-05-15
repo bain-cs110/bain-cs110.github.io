@@ -14,13 +14,16 @@ canvas.pack()
 # you loop through each line of the file, you:
 # 1. Converts the line (a string) into to a tuple of floats
 # 2. Appends each tuple to the point_list
-# 3. Uses the point_list as an argument to 
+# 3. Uses the point_list as an argument to
 #    the canvas.create_polygon function
 
 
 
+# Working in an IDE other than IDLE? Then you'll have to first get the appropriate
+# file path: f = open(utilities.get_file_path('florida.csv'))
+
 point_list = []
-f = open(utilities.get_file_path('florida.csv'))
+f = open('florida.csv')
 for line in f.readlines():
     print(line)
 
