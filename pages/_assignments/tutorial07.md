@@ -24,7 +24,7 @@ due_date: 2022-05-18
     Tutorial Starter Files <i class="fas fa-download"></i>
 </a>
 
-In today's tutorial, you're going to calculate some statistics for the Boston Marathon in 2015 (the last marathon to release all of its finisher data in this format). To do this, you will open some of the files in the `boston_marathon` directory, loop through each line in the file, and perform some basic summary statistics.
+In today's tutorial, you're going to calculate some statistics for the Boston Marathon in 2015 (the last marathon to release all of its finisher data in this format). To do this, open up the `marathon_results_2015.csv` file, loop through each line, and perform some basic summary statistics.
 
 Please write a program to calculate the following statistics. You can write each program as a separate file, or do all of the calculations in a single file. Up to you.
 
