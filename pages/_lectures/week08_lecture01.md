@@ -21,6 +21,13 @@ readings:
     author: "Severance"
     url: https://www.py4e.com/html3/07-files
     video_url: https://www.py4e.com/lessons/files
+
+videos:
+   - title: "Live Lecture (Zoom)"
+     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d6a8d5ca-30f4-4396-b653-ae97010db414
+     duration: "50:00"
+     live: 1
+
 ---
 
 Today, you will be learning to work with errors & files --  including reading them, writing them, and appending to them. Because many file formats involve text, you will also be learning to work with some common string functions.
