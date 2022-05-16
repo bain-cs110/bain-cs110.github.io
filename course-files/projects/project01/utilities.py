@@ -205,10 +205,10 @@ def make_car(canvas, top_left=(0, 0), fill_color="#3D9970", my_tag=None):
     functions that are available in this module
     '''
     x, y = top_left
-    make_rectangle(canvas, (x + 50, y), 100, 40, fill_color=fill_color, my_tag=my_tag)
-    make_rectangle(canvas, (x, y + 30), 200, 45, fill_color=fill_color, my_tag=my_tag)
-    make_circle(canvas, (x + 50, y + 80), 20, fill_color='black', my_tag=my_tag)
-    make_circle(canvas, (x + 150, y + 80), 20, fill_color='black', my_tag=my_tag)
+    make_rectangle(canvas, (x + 50, y), 100, 40, fill_color=fill_color, tag=my_tag)
+    make_rectangle(canvas, (x, y + 30), 200, 45, fill_color=fill_color, tag=my_tag)
+    make_circle(canvas, (x + 50, y + 80), 20, fill_color='black', tag=my_tag)
+    make_circle(canvas, (x + 150, y + 80), 20, fill_color='black', tag=my_tag)
 
 def make_star(canvas, center, diameter, my_tag=""):
     '''
