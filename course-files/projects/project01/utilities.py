@@ -301,6 +301,7 @@ def delete_by_tag(canvas, tag):
     for id in ids:
         canvas.delete(id)
 
+
 def flip(canvas, tag):
     center = get_center(canvas, tag)
     width = get_width(canvas, tag)
@@ -311,11 +312,17 @@ def flip(canvas, tag):
         counter = 0
         for num in shape_coords:
             if counter % 2 == 0:
-                flipped_coordinates.append(-num + center + width/2 )
+                if num < center:
+                    flipped_coordinates.append(num + 2 * (center - num))
+                elif num > center:
+                    flipped_coordinates.append(num - 2 * (num - center))
+                else:
+                    flipped_coordinates.append(num)
             else:
                 flipped_coordinates.append(num)
             counter += 1
         _set_coordinates(canvas, shape_id, flipped_coordinates)
+
 
 def make_grid(c, w, h):
     interval = 100
