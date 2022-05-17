@@ -3,7 +3,7 @@ from tkinter import Canvas
 import os
 import random
 import math
-    
+
 _cache = []
 def _get_coordinates(canvas, id):
     return canvas.coords(id)
@@ -64,13 +64,13 @@ def make_oval(canvas, center, radius_x, radius_y, color='#FF4136', tag=None, str
 
 def make_poly_circle(canvas, center, radius, color='#FF4136', tag=None, stroke_width=1, outline=None):
     make_poly_oval(
-        canvas, 
-        center, 
-        radius, 
-        radius, 
-        color=color, 
-        tag=tag, 
-        stroke_width=stroke_width, 
+        canvas,
+        center,
+        radius,
+        radius,
+        color=color,
+        tag=tag,
+        stroke_width=stroke_width,
         outline=outline)
 
 def make_poly_oval(canvas, center, radius_x, radius_y, color='#FF4136', tag=None, stroke_width=1, outline=None):
@@ -118,10 +118,10 @@ def rotate(canvas, tag, degrees=5, origin=None):
         left = get_left(canvas, tag)
         right = get_right(canvas, tag)
         origin = (right - left, bottom - top)
-    
+
     degrees = math.radians(degrees)
     ox, oy = origin
-        
+
     shape_ids = canvas.find_withtag(tag)
     for id in shape_ids:
         coords = _get_coordinates(canvas, id)
@@ -138,16 +138,16 @@ def rotate(canvas, tag, degrees=5, origin=None):
 def make_rectangle(canvas, top_left, width, height, color="#3D9970", tag=None):
     x, y = top_left
     return canvas.create_rectangle(
-        [(x, y), (x + width, y + height)], 
-        fill=color, 
+        [(x, y), (x + width, y + height)],
+        fill=color,
         width=0,
         tags=tag
     )
 
 def make_line(canvas, coordinates, curvy=False, width=2, tag=None):
     canvas.create_line(
-        coordinates, 
-        width=width, 
+        coordinates,
+        width=width,
         smooth=curvy,
         tag=tag)
 
@@ -216,7 +216,7 @@ def make_star(canvas, center, diameter, **kwargs):
         diameter / 2,
         stroke_width=0,
         outline='white',
-        color='white', 
+        color='white',
         **kwargs
     )
 
@@ -231,12 +231,12 @@ def make_bubble(canvas, center, diameter, outline='white', stroke_width=1, **kwa
         diameter / 2,
         stroke_width=stroke_width,
         outline=outline,
-        color=None, 
+        color=None,
         **kwargs
     )
 
 def make_image(
-        canvas, image_path, position=(200, 200), rotation=None, 
+        canvas, image_path, position=(200, 200), rotation=None,
         size=None, anchor='nw', **kwargs):
     # 1. create PIL image and apply any image transformations:
     dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -246,11 +246,11 @@ def make_image(
         pil_image.thumbnail(size)  # note: modifies original image
     if rotation:
         pil_image = pil_image.rotate(rotation)  # note: returns a copy
-    
+
     # 2. convert to tkinter-compatible image format:
     tkinter_image = ImageTk.PhotoImage(pil_image)
     _cache.append(tkinter_image)  # workaround for known tkinter bug: http://effbot.org/pyfaq/why-do-my-tkinter-images-not-appear.htm
-    
+
     # 3. draw image on canvas:
     canvas.create_image(*position, image=tkinter_image, anchor=anchor, **kwargs)
 
@@ -292,7 +292,12 @@ def flip(canvas, tag):
         counter = 0
         for num in shape_coords:
             if counter % 2 == 0:
-                flipped_coordinates.append(-num + center[0] + width/2 )
+                if num < center[0]:
+                    flipped_coordinates.append(num + 2 * (center[0] - num))
+                elif num > center[0]:
+                    flipped_coordinates.append(num - 2 * (num - center[0]))
+                else:
+                    flipped_coordinates.append(num)
             else:
                 flipped_coordinates.append(num)
             counter += 1
@@ -328,7 +333,7 @@ def make_grid(c,w,h):
             c.create_oval(
                 x - offset,
                 y - offset,
-                x + offset, 
+                x + offset,
                 y + offset,
                 fill='black'
             )
