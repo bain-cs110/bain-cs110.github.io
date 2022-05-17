@@ -305,7 +305,7 @@ def flip(canvas, tag):
         counter = 0
         for num in shape_coords:
             if counter % 2 == 0:
-                flipped_coordinates.append(-num + center[0] + width/2 )
+                flipped_coordinates.append(-num + center + width/2 )
             else:
                 flipped_coordinates.append(num)
             counter += 1
