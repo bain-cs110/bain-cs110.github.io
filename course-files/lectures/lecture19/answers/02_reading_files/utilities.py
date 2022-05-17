@@ -1,5 +1,3 @@
-from PIL import Image, ImageTk
-from tkinter import Canvas
 import os
 import random
 import math
@@ -46,34 +44,34 @@ def _get_coordinates_by_dimension(canvas, tag, dimension='x'):
                 coords.append(shape_coords[i])
     return coords
 
-def make_circle(canvas, center, radius, color='#FF4136', tag=None, stroke_width=2, outline=None):
+def make_circle(canvas, center, radius, fill_color='#FF4136', tag=None, stroke_width=2, outline=None):
     make_oval(
-        canvas, center, radius, radius, color=color, tag=tag,
+        canvas, center, radius, radius, fill_color=fill_color, tag=tag,
         stroke_width=stroke_width, outline=outline
     )
 
-def make_oval(canvas, center, radius_x, radius_y, color='#FF4136', tag=None, stroke_width=1, outline=None):
+def make_oval(canvas, center, radius_x, radius_y, fill_color='#FF4136', tag=None, stroke_width=1, outline=None):
     x, y = center
     return canvas.create_oval(
         [ x - radius_x, y - radius_y, x + radius_x, y + radius_y ],
-        fill=color,
+        fill=fill_color,
         width=stroke_width,
         tags=tag,
         outline=outline
     )
 
-def make_poly_circle(canvas, center, radius, color='#FF4136', tag=None, stroke_width=1, outline=None):
+def make_poly_circle(canvas, center, radius, fill_color='#FF4136', tag=None, stroke_width=1, outline=None):
     make_poly_oval(
         canvas,
         center,
         radius,
         radius,
-        color=color,
+        fill_color=fill_color,
         tag=tag,
         stroke_width=stroke_width,
         outline=outline)
 
-def make_poly_oval(canvas, center, radius_x, radius_y, color='#FF4136', tag=None, stroke_width=1, outline=None):
+def make_poly_oval(canvas, center, radius_x, radius_y, fill_color='#FF4136', tag=None, stroke_width=1, outline=None):
     x, y = center
     x0, y0, x1, y1 = (x - radius_x, y - radius_y, x + radius_x, y + radius_y)
 
@@ -101,7 +99,7 @@ def make_poly_oval(canvas, center, radius_x, radius_y, color='#FF4136', tag=None
 
     return canvas.create_polygon(
         point_list,
-        fill=color,
+        fill=fill_color,
         width=stroke_width,
         tags=tag,
         outline=outline,
@@ -135,11 +133,21 @@ def rotate(canvas, tag, degrees=5, origin=None):
         # set the coordinates:
         _set_coordinates(canvas, id, coords)
 
-def make_rectangle(canvas, top_left, width, height, color="#3D9970", tag=None):
+def make_square(canvas, top_left, width, fill_color="#3D9970", tag=None, outline=None):
+    x, y = top_left
+    return canvas.create_rectangle(
+        [(x, y), (x + width, y + width)],
+        fill=fill_color,
+        width=0,
+        tags=tag,
+        outline=outline
+    )
+
+def make_rectangle(canvas, top_left, width, height, fill_color="#3D9970", tag=None):
     x, y = top_left
     return canvas.create_rectangle(
         [(x, y), (x + width, y + height)],
-        fill=color,
+        fill=fill_color,
         width=0,
         tags=tag
     )
@@ -182,6 +190,9 @@ def get_width(canvas, tag):
     x_coords = _get_x_coordinates(canvas, tag)
     return max(*x_coords) - min(*x_coords)
 
+def get_center(canvas, tag):
+    return get_width(canvas, tag) / 2 + get_left(canvas, tag)
+
 def get_height(canvas, tag):
     '''
     returns the height of the shape group
@@ -189,23 +200,24 @@ def get_height(canvas, tag):
     y_coords = _get_y_coordinates(canvas, tag)
     return max(*y_coords) - min(*y_coords)
 
-def get_center(canvas, tag):
-    x = get_width(canvas, tag) / 2 + get_left(canvas, tag)
-    y = get_height(canvas, tag) / 2 + get_top(canvas, tag)
-    return (x, y)
+def make_cloud(canvas, center, my_tag=""):
+    for i in range(random.randint(0,10)):
+        x_offset = random.randint(-40,40)
+        y_offset = random.randint(0,20)
+        make_circle(canvas, (center[0] + x_offset, center[1] + y_offset), random.randint(10,50), tag=my_tag)
 
-def make_car(canvas, top_left=(0, 0), color="#3D9970", tag=None):
+def make_car(canvas, top_left=(0, 0), fill_color="#3D9970", my_tag=None):
     '''
     demo function that show you how to draw a car, given the convenience
     functions that are available in this module
     '''
     x, y = top_left
-    make_rectangle(canvas, (x + 50, y), 100, 40, color=color, tag=tag)
-    make_rectangle(canvas, (x, y + 30), 200, 45, color=color, tag=tag)
-    make_circle(canvas, (x + 50, y + 80), 20, color='black', tag=tag)
-    make_circle(canvas, (x + 150, y + 80), 20, color='black', tag=tag)
+    make_rectangle(canvas, (x + 50, y), 100, 40, fill_color=fill_color, tag=my_tag)
+    make_rectangle(canvas, (x, y + 30), 200, 45, fill_color=fill_color, tag=my_tag)
+    make_circle(canvas, (x + 50, y + 80), 20, fill_color='black', tag=my_tag)
+    make_circle(canvas, (x + 150, y + 80), 20, fill_color='black', tag=my_tag)
 
-def make_star(canvas, center, diameter, **kwargs):
+def make_star(canvas, center, diameter, my_tag=""):
     '''
     demo function that show you how to draw a star, given the convenience
     functions that are available in this module
@@ -217,7 +229,7 @@ def make_star(canvas, center, diameter, **kwargs):
         stroke_width=0,
         outline='white',
         color='white',
-        **kwargs
+        tags=my_tag
     )
 
 def make_bubble(canvas, center, diameter, outline='white', stroke_width=1, **kwargs):
@@ -237,13 +249,21 @@ def make_bubble(canvas, center, diameter, outline='white', stroke_width=1, **kwa
 
 def make_image(
         canvas, image_path, position=(200, 200), rotation=None,
-        size=None, anchor='nw', **kwargs):
+        scale=None, anchor='nw', **kwargs):
+    # import PIL libraries
+    from PIL import Image, ImageTk
+
     # 1. create PIL image and apply any image transformations:
     dir_path = os.path.dirname(os.path.realpath(__file__))
     image_path = os.path.join(dir_path, image_path)
     pil_image = Image.open(image_path)
-    if size:
-        pil_image.thumbnail(size)  # note: modifies original image
+    print(scale)
+    if scale:
+        size = (
+            round(pil_image.size[0] * scale),
+            round(pil_image.size[1] * scale)
+        )
+        pil_image = pil_image.resize(size)
     if rotation:
         pil_image = pil_image.rotate(rotation)  # note: returns a copy
 
@@ -282,6 +302,7 @@ def delete_by_tag(canvas, tag):
     for id in ids:
         canvas.delete(id)
 
+
 def flip(canvas, tag):
     center = get_center(canvas, tag)
     width = get_width(canvas, tag)
@@ -292,10 +313,10 @@ def flip(canvas, tag):
         counter = 0
         for num in shape_coords:
             if counter % 2 == 0:
-                if num < center[0]:
-                    flipped_coordinates.append(num + 2 * (center[0] - num))
-                elif num > center[0]:
-                    flipped_coordinates.append(num - 2 * (num - center[0]))
+                if num < center:
+                    flipped_coordinates.append(num + 2 * (center - num))
+                elif num > center:
+                    flipped_coordinates.append(num - 2 * (num - center))
                 else:
                     flipped_coordinates.append(num)
             else:
@@ -303,55 +324,35 @@ def flip(canvas, tag):
             counter += 1
         _set_coordinates(canvas, shape_id, flipped_coordinates)
 
-def make_square(canvas: Canvas, top_left: tuple,width: int,fill_color: str='#84A9C0',outline_color='#DDD'):
-    canvas.create_rectangle([
-            (top_left, # top_left
-            top_left[0] + width,top_left[1] + width)  # bottom_right
-        ],
-        fill=fill_color,
-        outline=outline_color
-    )
 
-
-def make_grid(c,w,h):
+def make_grid(c, w, h):
     interval = 100
 
     # Delete old grid if it exists:
     c.delete('grid_line')
     # Creates all vertical lines at intevals of 100
-    for i in range(0,w,interval):
-        c.create_line(i,0,i,h,tag='grid_line')
+    for i in range(0, w, interval):
+        c.create_line(i, 0, i, h, tag='grid_line')
 
-    # Creates all horizontal lines at intevals of 100
-    for i in range(0,h,interval):
-        c.create_line(0,i,w,i,tag='grid_line')
+        # Creates all horizontal lines at intevals of 100
+        for i in range(0, h, interval):
+            c.create_line(0, i, w, i, tag='grid_line')
 
-    # Creates axis labels
-    offset = 2
-    for y in range(0,h,interval):
-        for x in range(0,w,interval):
-            c.create_oval(
-                x - offset,
-                y - offset,
-                x + offset,
-                y + offset,
-                fill='black'
-            )
-            c.create_text(
-                x + offset,
-                y + offset,
-                text="({0},{1})".format(x,y),
-                anchor="nw",
-                font=("Purisa",8)
-            )
-
-
-def get_file_path(
-    file_name, subdirectory=None):
-    import os
-    import sys
-    dir_path = os.path.dirname(sys.argv[0])
-    if subdirectory:
-        return os.path.join(dir_path, subdirectory, file_name)
-    else:
-        return os.path.join(dir_path, file_name)
+            # Creates axis labels
+            offset = 2
+            for y in range(0, h, interval):
+                for x in range(0, w, interval):
+                    c.create_oval(
+                    x - offset,
+                    y - offset,
+                    x + offset,
+                    y + offset,
+                    fill='black'
+                    )
+                    c.create_text(
+                    x + offset,
+                    y + offset,
+                    text="({0}, {1})".format(x, y),
+                    anchor="nw",
+                    font=("Purisa", 8)
+                    )
