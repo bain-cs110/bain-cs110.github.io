@@ -199,6 +199,12 @@ def get_height(canvas, tag):
     y_coords = _get_y_coordinates(canvas, tag)
     return max(*y_coords) - min(*y_coords)
 
+def make_cloud(canvas, center, my_tag=""):
+    for i in range(random.randint(0,10)):
+        x_offset = random.randint(-40,40)
+        y_offset = random.randint(0,20)
+        make_circle(canvas, (center[0] + x_offset, center[1] + y_offset), random.randint(10,50), tag=my_tag)
+
 def make_car(canvas, top_left=(0, 0), fill_color="#3D9970", my_tag=None):
     '''
     demo function that show you how to draw a car, given the convenience
