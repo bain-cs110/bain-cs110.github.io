@@ -14,7 +14,7 @@ f = open(utilities.get_file_path('florida.csv'))
 for line in f.readlines():
     line = line.replace('\n', '')
     items = line.split(',')
-    x = float(items[0])
+    x = float(items[0]) + 500
     y = float(items[1])
     point_list.append((x, y))
 
