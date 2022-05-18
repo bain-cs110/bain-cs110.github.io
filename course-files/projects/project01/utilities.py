@@ -227,11 +227,11 @@ def make_star(canvas, center, diameter, my_tag=""):
         diameter / 2,
         stroke_width=0,
         outline='white',
-        color='white',
-        tags=my_tag
+        fill_color='white',
+        tag=my_tag
     )
 
-def make_bubble(canvas, center, diameter, outline='white', stroke_width=1, **kwargs):
+def make_bubble(canvas, center, diameter, outline='white', stroke_width=1, my_tag="", **kwargs):
     '''
     demo function that show you how to draw a bubble, given the convenience
     functions that are available in this module
@@ -242,7 +242,8 @@ def make_bubble(canvas, center, diameter, outline='white', stroke_width=1, **kwa
         diameter / 2,
         stroke_width=stroke_width,
         outline=outline,
-        color=None,
+        fill_color=None,
+        tag=my_tag,
         **kwargs
     )
 

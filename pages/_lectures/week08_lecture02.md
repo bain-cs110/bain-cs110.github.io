@@ -12,8 +12,8 @@ slides:
    - title: "More Files & Strings + Error Handling"
      url: https://docs.google.com/presentation/d/1a-aaCMkJHoUCWhr13NcV2JfcRI-GBzO2ioigZOIOAMQ/edit?usp=sharing
 videos:
-   - title: "Live Lecture (Not Yet Posted)"
-     url:
+   - title: "Live Lecture"
+     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ddd44c2a-68ae-4f7d-9221-ae99011934b7
      duration: "50:00"
      live: 1
 exercise_url: "lecture20.zip"
