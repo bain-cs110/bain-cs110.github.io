@@ -13,8 +13,8 @@ slides:
    - title: "More on Files and PIP"
      url: https://docs.google.com/presentation/d/15XAr08rDseSESFXNYiJ2HGYtTuylH0ceMpIUK4CON74/edit?usp=sharing
 videos:
-   - title: "Live Lecture (not yet posted)"
-     url:
+   - title: "Live Lecture"
+     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d093d2ec-3038-4c1f-9b6b-ae670037b36a
      duration: "50:00"
      live: 1
 
