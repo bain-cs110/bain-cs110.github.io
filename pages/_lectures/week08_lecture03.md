@@ -1,12 +1,29 @@
 ---
 layout: module
-title: Funday Friday - PIP
+title: More on Files and Funday Friday - PIP
 description:
     - PIP
     - 3rd Party Modules
 type: lecture
-draft: 1
+draft: 0
 num: 21
 due_date: 2022-05-20
+
+slides:
+   - title: "More on Files and PIP"
+     url: https://docs.google.com/presentation/d/15XAr08rDseSESFXNYiJ2HGYtTuylH0ceMpIUK4CON74/edit?usp=sharing
+videos:
+   - title: "Live Lecture (not yet posted)"
+     url:
+     duration: "50:00"
+     live: 1
+
+exercise_url: "lecture21.zip"
+include_pages:
+    - extras/command_line.md
+    - extras/windows_python_path.md
 ---
-Pre-release; details not finalized
+
+We'll keep talking about error handling and then have some fun with some third party libraries using PIP!
+
+We'll also talk a little bit about the "command line" that works behind the scenes to make your computer work.
