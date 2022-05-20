@@ -19,7 +19,7 @@ canvas.pack()
 ########################## YOUR CODE BELOW THIS LINE ##############################
 
 # sample code to make a creature:
-creature.make_creature(canvas, (200, 200), my_fill='white', my_tag="test")
+creature.make_creature(canvas, (400, 400), my_fill='white', my_tag="test")
 
 print(utilities.get_center(canvas, "test"))
 
