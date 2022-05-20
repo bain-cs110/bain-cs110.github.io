@@ -199,16 +199,22 @@ def get_height(canvas, tag):
     y_coords = _get_y_coordinates(canvas, tag)
     return max(*y_coords) - min(*y_coords)
 
+def make_cloud(canvas, center, my_tag=""):
+    for i in range(random.randint(0,10)):
+        x_offset = random.randint(-40,40)
+        y_offset = random.randint(0,20)
+        make_circle(canvas, (center[0] + x_offset, center[1] + y_offset), random.randint(10,50), tag=my_tag)
+
 def make_car(canvas, top_left=(0, 0), fill_color="#3D9970", my_tag=None):
     '''
     demo function that show you how to draw a car, given the convenience
     functions that are available in this module
     '''
     x, y = top_left
-    make_rectangle(canvas, (x + 50, y), 100, 40, fill_color=fill_color, my_tag=my_tag)
-    make_rectangle(canvas, (x, y + 30), 200, 45, fill_color=fill_color, my_tag=my_tag)
-    make_circle(canvas, (x + 50, y + 80), 20, fill_color='black', my_tag=my_tag)
-    make_circle(canvas, (x + 150, y + 80), 20, fill_color='black', my_tag=my_tag)
+    make_rectangle(canvas, (x + 50, y), 100, 40, fill_color=fill_color, tag=my_tag)
+    make_rectangle(canvas, (x, y + 30), 200, 45, fill_color=fill_color, tag=my_tag)
+    make_circle(canvas, (x + 50, y + 80), 20, fill_color='black', tag=my_tag)
+    make_circle(canvas, (x + 150, y + 80), 20, fill_color='black', tag=my_tag)
 
 def make_star(canvas, center, diameter, my_tag=""):
     '''
@@ -221,11 +227,11 @@ def make_star(canvas, center, diameter, my_tag=""):
         diameter / 2,
         stroke_width=0,
         outline='white',
-        color='white',
-        tags=my_tag
+        fill_color='white',
+        tag=my_tag
     )
 
-def make_bubble(canvas, center, diameter, outline='white', stroke_width=1, **kwargs):
+def make_bubble(canvas, center, diameter, outline='white', stroke_width=1, my_tag="", **kwargs):
     '''
     demo function that show you how to draw a bubble, given the convenience
     functions that are available in this module
@@ -236,7 +242,8 @@ def make_bubble(canvas, center, diameter, outline='white', stroke_width=1, **kwa
         diameter / 2,
         stroke_width=stroke_width,
         outline=outline,
-        color=None,
+        fill_color=None,
+        tag=my_tag,
         **kwargs
     )
 
@@ -295,6 +302,7 @@ def delete_by_tag(canvas, tag):
     for id in ids:
         canvas.delete(id)
 
+
 def flip(canvas, tag):
     center = get_center(canvas, tag)
     width = get_width(canvas, tag)
@@ -305,11 +313,17 @@ def flip(canvas, tag):
         counter = 0
         for num in shape_coords:
             if counter % 2 == 0:
-                flipped_coordinates.append(-num + center[0] + width/2 )
+                if num < center:
+                    flipped_coordinates.append(num + 2 * (center - num))
+                elif num > center:
+                    flipped_coordinates.append(num - 2 * (num - center))
+                else:
+                    flipped_coordinates.append(num)
             else:
                 flipped_coordinates.append(num)
             counter += 1
         _set_coordinates(canvas, shape_id, flipped_coordinates)
+
 
 def make_grid(c, w, h):
     interval = 100

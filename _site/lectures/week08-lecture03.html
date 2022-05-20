@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Funday Friday - PIP</title>
+    <title>More on Files and Funday Friday - PIP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="/assets/main.css">
     
@@ -42,10 +42,12 @@
                 
 
     
-        <h1><a href="../#l21">Lessons</a> > 21. Funday Friday - PIP</h1>
+        <h1><a href="../#l21">Lessons</a> > 21. More on Files and Funday Friday - PIP</h1>
     
  
-                <p>We’ll keep talking about error handling and then introduce the last major data type that we’ll see in this class. The dictionary - another way (in addition to lists and tuples) of storing, representing, and analyzing collections of related data. As a programmer, you will encounter dictionaries all of the time. We’ll go over some common scenarios and take a look at many different kinds of dictionaries.</p>
+                <p>We’ll keep talking about error handling and then have some fun with some third party libraries using PIP!</p>
+
+<p>We’ll also talk a little bit about the “command line” that works behind the scenes to make your computer work.</p>
 
 
 <h2 id="do-now">Today's Activities</h2>
@@ -54,7 +56,7 @@
 
 
     <h3 id="code">1. Download the Exercise Files</h3> 
-    <a class="nu-button" href="/course-files/lectures/lecture20.zip" target="_blank">
+    <a class="nu-button" href="/course-files/lectures/lecture21.zip" target="_blank">
         Exercise Files <i class="fas fa-download"></i>
     </a>
     
@@ -66,7 +68,7 @@
     <ol>
     
         <li>
-            <a href="https://docs.google.com/presentation/d/184ToDKqS6hGK33TN6FrgYmimbHHbgmYL400VCRnXQ94/edit?usp=sharing" target="_blank">Error handling and Dictionaries</a>
+            <a href="https://docs.google.com/presentation/d/15XAr08rDseSESFXNYiJ2HGYtTuylH0ceMpIUK4CON74/edit?usp=sharing" target="_blank">More on Files and PIP</a>
         </li>
     
     </ol>
@@ -95,12 +97,12 @@
             
             <tr>
                 <td>
-                    <a class="live" href="https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8c231ffc-01a6-4f0f-93af-adf6016a95e9" target="_blank">
+                    <a class="live" href="" target="_blank">
                         Video 1 <i class="fa fa-link"></i>
                     </a>
                 </td>
                 <td>
-                    Live Lecture
+                    Live Lecture (not yet posted)
                 </td>
                 <td>
                     lecture
@@ -116,46 +118,167 @@
 
 
 
-    <h3 id="readings">4. Review / Study the Supplemental Materials</h3>
-    <p>
-        Note: these readings / videos are suggested for additional context / 
-        examples, but not required.
-    </p>
-    <ol class="readings">
 
-    
-    
-        <li>
-    
-        Severance
-    
-    
+
+
+
+
+
+
+
     
         
-            Ch9: Dictionaries.
+        <h3 id="4-review-the-command-line-cheatsheet">4. Review the Command Line Cheatsheet</h3>
+
+<p>For your convenience, we have made you a little cheatsheet to help you get familiar with the command line. <a href="https://tutorial.djangogirls.org/en/intro_to_command_line/" target="_blank">Django Girls</a> is a good resource. Note: you will not be tested on this or anything, but navigating the command line can be useful.  DO NOT ENTER THE <code class="language-plaintext highlighter-rouge">&gt;</code> or <code class="language-plaintext highlighter-rouge">$</code> symbols! Those are there automatically in Command Prompt and Terminal respectively.</p>
+
+<table class="instructions">
+  <thead>
+    <tr>
+      <th> </th>
+      <th>DOS (Windows)</th>
+      <th>Shell (Mac / Linux)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>What directory am I in?</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">&gt; cd</code></td>
+      <td><code class="language-plaintext highlighter-rouge">$ pwd</code></td>
+    </tr>
+    <tr>
+      <td><strong>Change directories</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">&gt; cd </code></td>
+      <td><code class="language-plaintext highlighter-rouge">$ cd </code></td>
+    </tr>
+    <tr>
+      <td><strong>List files &amp; directories</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">&gt; dir</code><br /> <code class="language-plaintext highlighter-rouge">&gt; tree  # lists subdirectories</code></td>
+      <td><code class="language-plaintext highlighter-rouge">$ ls</code><br /><code class="language-plaintext highlighter-rouge">$ ls -l</code></td>
+    </tr>
+    <tr>
+      <td><strong>Navigate to parent directory</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">&gt; cd ..</code></td>
+      <td><code class="language-plaintext highlighter-rouge">$ cd  ..</code></td>
+    </tr>
+    <tr>
+      <td><strong>Navigate into child directory</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">&gt; cd cs110</code></td>
+      <td><code class="language-plaintext highlighter-rouge">$ cd cs110</code></td>
+    </tr>
+    <tr>
+      <td><strong>Navigate into descendant directory</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">&gt; cd lectures\lecture_03</code></td>
+      <td><code class="language-plaintext highlighter-rouge">$ cd lectures/lecture_03</code></td>
+    </tr>
+    <tr>
+      <td><strong>Navigate to sibling directory</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">&gt; cd ..\lecture_02</code></td>
+      <td><code class="language-plaintext highlighter-rouge">$ cd  ../lecture_02</code></td>
+    </tr>
+    <tr>
+      <td><strong>Navigate to ancestor directory</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">&gt; cd ..\..\</code></td>
+      <td><code class="language-plaintext highlighter-rouge">$ cd  ../../</code></td>
+    </tr>
+    <tr>
+      <td><strong>Navigate to home directory</strong></td>
+      <td> </td>
+      <td><code class="language-plaintext highlighter-rouge">$ cd</code></td>
+    </tr>
+    <tr>
+      <td><strong>Command history</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">&gt; doskey /HISTORY</code></td>
+      <td><code class="language-plaintext highlighter-rouge">$ history</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Other optional commands you may find useful…</p>
+
+<table class="instructions">
+  <thead>
+    <tr>
+      <th> </th>
+      <th>DOS (Windows)</th>
+      <th>Shell (Mac / Linux)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Create a new file</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">&gt; echo . &gt; my_file.txt</code></td>
+      <td><code class="language-plaintext highlighter-rouge">$ echo . &gt; my_file.txt</code><br /> <code class="language-plaintext highlighter-rouge">$ touch my_file.txt</code></td>
+    </tr>
+    <tr>
+      <td><strong>Append to a file</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">&gt; echo "some text" &gt;&gt; my_file.txt</code></td>
+      <td><code class="language-plaintext highlighter-rouge">$ echo "some text" &gt; my_file.txt</code></td>
+    </tr>
+    <tr>
+      <td><strong>Save history to a file</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">&gt; doskey /HISTORY &gt; my_history.txt</code></td>
+      <td><code class="language-plaintext highlighter-rouge">$ history &gt; my_history.txt</code></td>
+    </tr>
+    <tr>
+      <td><strong>Move a file</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">&gt; move my_history.txt Documents/.</code></td>
+      <td><code class="language-plaintext highlighter-rouge">$ mv my_history.txt Documents/.</code></td>
+    </tr>
+    <tr>
+      <td><strong>Make a folder</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">&gt; mkdir my_folder</code></td>
+      <td><code class="language-plaintext highlighter-rouge">$ mkdir my_folder</code></td>
+    </tr>
+    <tr>
+      <td><strong>Delete a file</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">&gt; del my_history.txt</code></td>
+      <td><code class="language-plaintext highlighter-rouge">$ rm my_history.txt</code></td>
+    </tr>
+    <tr>
+      <td><strong>Delete a folder</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">&gt; rmdir my_folder</code></td>
+      <td><code class="language-plaintext highlighter-rouge">$ rm -r my_folder</code></td>
+    </tr>
+  </tbody>
+</table>
+
         
     
+        
+        <h3 id="5-if-you-have-a-windows-machine">5. If you have a Windows machine</h3>
+<p>If you have a Windows Machine, there are (at least) two ways to ensure that python3 and PIP work when you run them from the command prompt. Note: this is an either -or- thing (e.g. you shouldn’t have to do Option 2 unless Option 1 doesn’t work).</p>
+
+<h4 id="option-1-run-the-installer-again">Option 1: Run the Installer Again</h4>
+<p>In our opinion, the easiest way to get python to work on your command prompt is to run the Python3 installer again and make sure that the checkbox at the very bottom that says Add Python 3.x (the screenshots show Python 3.7 but this applies to all Python installations) to PATH is checked:</p>
+
+<p><img class="large frame" src="/assets/images/lectures/01-command-prompt-windows-installer.png" /></p>
+
+<h4 id="option-2-go-to-system-preferences-and-manually-add-the-path">Option 2: Go to System Preferences and Manually Add the PATH</h4>
+
+<p>To go this route, you will complete three steps:</p>
+<h5 id="step-1">Step 1</h5>
+<p>Search for Edit the System Environment Variables (see below):</p>
+
+<p><img class="medium frame" src="/assets/images/lectures/02-environment-variables.png" /></p>
+
+<h5 id="step-2">Step 2</h5>
+<p>You will then click the Environment Variables button in the Control Panel:</p>
+
+<p><img class="small frame" src="/assets/images/lectures/03-environment-variables.png" /></p>
+
+<h5 id="step-3">Step 3</h5>
+
+<p>Finally, you will add the \Scripts folder in their Python installation to their path (see 3rd screenshot). This looks different on everyone’s machine, so you will have to make sure that this PATH corresponds to your Python3 installation. This screenshot below is from one of the course TAs, but yours will look different.</p>
+
+<p><img class="medium frame" src="/assets/images/lectures/04-environment-variables.png" /></p>
+
+<h4 id="option-3">Option 3:</h4>
+
+<p>Alternatively, you can avoid the command line entirely by using the Python script from Lecture 17 called <code class="language-plaintext highlighter-rouge">install_python_packages.py</code>. Open that in IDLE and run it. It will ask for you to input the name of the package you want to download and then will take care of running the command line commands for you automatically.</p>
+
+        
     
-    
-        <br>
-        <a href="https://www.py4e.com/html3/09-dictionaries" target="_blank">reading</a> &bull;
-        <a href="https://www.py4e.com/lessons/dictionary" target="_blank">video</a> 
-    
-    
-</li> 
-    
-
-</ol>
- 
-    
-
-
-
-
-
-
-
-
 
 
             </article>  

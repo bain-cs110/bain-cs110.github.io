@@ -18,8 +18,8 @@ def make_creature(canvas, center, size=100, my_tag='creature', my_fill='lightgra
     # parameter to your make_shape function headers AND in the call to any canvas.create_shape methods. see
     # utilities.py for some examples of those
     utilities.make_circle(canvas, center, radius, fill_color=my_fill, tag=my_tag)
-    utilities.make_oval(canvas, left_eye_pos, eye_width, eye_height, fill_color='black', tag=my_tag)
-    utilities.make_oval(canvas, right_eye_pos, eye_width, eye_height, fill_color='black', tag=my_tag)
+    utilities.make_oval(canvas, left_eye_pos, eye_width, eye_height, fill_color='green', tag=my_tag)
+    utilities.make_oval(canvas, right_eye_pos, eye_width, eye_height, fill_color='red', tag=my_tag)
     utilities.make_line(canvas, [
         (center[0] - radius / 2, center[1] + radius / 3),
         (center[0], center[1] + radius / 1.2),
