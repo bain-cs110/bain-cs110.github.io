@@ -3,8 +3,7 @@ layout: assignment-two-column
 title: Building W0rdle
 abbreviation: HW5
 type: homework
-files: course-files/assignments/hw05.zip
-due_date: 2022-03-04
+due_date: 2022-05-27
 points: 8
 draft: 0
 ---
@@ -16,7 +15,7 @@ draft: 0
     }
 </style>
 
-<a class="nu-button" href="/course-files/homework/hw05.zip" target="_blank">
+<a class="nu-button" href="/course-files/homework/hw05_template.zip" target="_blank">
     Homework Starter Files <i class="fas fa-download"></i>
 </a>
 

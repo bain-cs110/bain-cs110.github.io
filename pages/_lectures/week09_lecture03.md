@@ -5,16 +5,16 @@ description:
     - The "counting algorithm"
     - The "grouping algorithm"
 type: lecture
-draft: 0
-num: 23
-due_date: 2022-03-04
+draft: 1
+num: 24
+due_date: 2022-05-27
 exercise_url: "lecture23.zip"
 slides:
    - title: "Using Dictionaries for Data Analysis"
-     url: https://docs.google.com/presentation/d/1Hlrlla7mdHE4icIsesRqh4roNGtb2fn3xk6f5ZGp3ms/edit?usp=sharing
+     url:
 videos:
-   - title: "Live Lecture"
-     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a36461f1-2672-4404-9c82-adf6016a963d
+   - title: "Live Lecture (Not Yet Posted)"
+     url:
      duration: "50:00"
      live: 1
 ---

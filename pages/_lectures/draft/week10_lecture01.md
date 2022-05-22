@@ -1,10 +1,10 @@
 ---
 layout: module
-title: Dictionary Counting and P2 (Spotify)
+title: No Class (Memorial Day)
 type: lecture
 draft: 0
-num: 24
-due_date: 2022-03-07
+num: 25
+due_date: 2022-05-30
 slides:
    - title: "Using Dictionaries for Data Analysis (continued)"
      url: https://docs.google.com/presentation/d/1hQtmMpJgofYlXDZF5Nv_FAq90BnMGA6wf5xznfK8J8s/edit?usp=sharing
