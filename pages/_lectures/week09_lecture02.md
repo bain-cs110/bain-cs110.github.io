@@ -5,16 +5,16 @@ description:
     - Downloading data using APIs
     - Complex Data Storage in Dictionaries
 type: lecture
-draft: 0
-num: 22
-due_date: 2022-03-02
+draft: 1
+num: 23
+due_date: 2022-05-25
 exercise_url: "lecture22.zip"
 slides:
-   - url: https://docs.google.com/presentation/d/1EiXKqEeJex2Ut8EB2nKcBT-TedLSCThDdifU9yWwDzk/edit?usp=sharing
+   - url: 
      title: "Lecture Slides"
 videos:
-   - title: "Live Lecture"
-     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e873dccf-6665-4ce1-9e58-adf6016a9622
+   - title: "Live Lecture (Not Yet Posted)"
+     url:
      live: 1
      duration: "50:00"
 ---
