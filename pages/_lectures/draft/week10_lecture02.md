@@ -1,10 +1,10 @@
 ---
 layout: module
-title: APIs and P2 (Yelp)
+title: APIs and P2
 type: lecture
-draft: 0
-num: 25
-due_date: 2022-03-09
+draft: 1
+num: 26
+due_date: 2022-06-01
 videos:
    - title: "Live Lecture"
      url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=05fd38f0-031f-4144-879e-adf6016a966f
