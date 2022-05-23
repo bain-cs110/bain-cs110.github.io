@@ -35,6 +35,31 @@ You will be creating a Wordle-style game. If you haven't played Wordle before, y
 
 We'll be building a simpler, text-based version for the Tutorial but then using the same techniques in HW 5 to create the full version!
 
+## Note on using the `range` Function
+While working on the two wordle assignments, there will often be a time where it might be convenient to use a list of numbers to iterate through each letter of a guess and compare it to the secret word. Like anything in programming, there are lots of ways to do this. You could for instance, do:
+
+```python
+i = 0
+while i < 6:
+  print(secret_word[i], guess[i])
+  i++
+```
+
+Alternatively, you can use the `range` function to emulate the same thing with a for loop:
+
+```python
+for i in range(0, 6):
+  print(secret_word[i], guess[i])
+
+# which is equivalent to
+for i in [0, 1, 2, 3, 4, 5]:
+  print(secret_word[i], guess[i])
+```
+
+When only given two inputs, `range` interprets them as a "from" and a "up to" constraint and assumes you want to count "by" one. That is, `range(0,6)` gives us back the list `[0, 1, 2, 3, 4, 5]`.
+
+Both ways are totally fine, so use whatever way is most convenient for you.
+
 ## Your Task
 Please make the following enhancements to the `wordle_starter.py` file (each marked `TODO` in the `.py` file).
 * First, read through the file called `wordlist.txt` and add all the 5-letter words to the `world_list` key of the `game_data` dictionary.
