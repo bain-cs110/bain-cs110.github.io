@@ -4,6 +4,14 @@ import ssl
 import pprint
 
 
+
+### TASKS:
+# 1. Turn this into a function where the only argument is the search term to search for and it
+#    returns a list of all the tweets it gets back.
+# 2. Use the function a couple of times with different searches.
+# 3. Print out the top result for each search
+# 4. Print out the different keys for each search
+
 def print_data_and_type(description: str, data):
     print('{} ({}):\n{}\n'.format(description, type(data), data))
 

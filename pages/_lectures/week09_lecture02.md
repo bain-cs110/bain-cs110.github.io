@@ -1,16 +1,21 @@
 ---
 layout: module
-title:   Dictionaries for Representation and Downloading Files from the Web
+title: Dictionaries for Representation and Getting Info from the Web
 description:
     - Downloading data using APIs
     - Complex Data Storage in Dictionaries
 type: lecture
-draft: 1
+draft: 0
 num: 23
 due_date: 2022-05-25
-exercise_url: "lecture22.zip"
+exercise_url: "lecture23.zip"
+readings:
+  - title: "Ch9: Dictionaries"
+    author: "Severance"
+    url: https://www.py4e.com/html3/09-dictionaries
+    video_url: https://www.py4e.com/lessons/dictionary
 slides:
-   - url: 
+   - url: https://docs.google.com/presentation/d/1ne4AVesMzeWljHw8C5ixjJKXuLGH6Z5gke_REoGpGNc/edit?usp=sharing
      title: "Lecture Slides"
 videos:
    - title: "Live Lecture (Not Yet Posted)"
@@ -19,4 +24,4 @@ videos:
      duration: "50:00"
 ---
 
-Today we'll continue our work with dictionaries, but also expand our repertoire of skills to include Downloading files from the internet as well as using API Endpoints to query data from servers like Twitter, YouTube, Spotify, and more.
+Today we'll continue our work with dictionaries, but also expand our repertoire of skills to include getting info from the internet using API Endpoints to query data from servers like Twitter, YouTube, Spotify, and more.
