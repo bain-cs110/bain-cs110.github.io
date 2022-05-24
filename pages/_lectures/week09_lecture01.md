@@ -13,8 +13,8 @@ slides:
    - url: https://docs.google.com/presentation/d/17EyQbM7t1jYiMNWJqqYRkcN-gngYlphEGOq1ZPQnBCk/edit?usp=sharing
      title: "Dictionaries and their Applications"
 videos:
-   - title: "Live Lecture (Not Yet Posted)"
-     url:
+   - title: "Live Lecture"
+     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d093d2ec-3038-4c1f-9b6b-ae670037b36a
      live: 1
      duration: "49:35"
 ---

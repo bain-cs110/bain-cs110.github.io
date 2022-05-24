@@ -35,6 +35,7 @@
             <aside>
                 <ol class="side-menu">
   <li><a href="#background">Background</a></li>
+  <li><a href="#note-on-using-the-range-function">Note on using the <code class="language-plaintext highlighter-rouge">range</code> Function</a></li>
   <li><a href="#your-task">Your Task</a></li>
   <li><a href="#what-to-turn-in-same-deal-as-always">What to turn in (same deal as always)</a></li>
 </ol>
@@ -81,6 +82,29 @@
 <p><img class="medium frame" src="/assets/images/tutorials/wordle.webp" /></p>
 
 <p>We’ll be building a simpler, text-based version for the Tutorial but then using the same techniques in HW 5 to create the full version!</p>
+
+<h2 id="note-on-using-the-range-function">Note on using the <code class="language-plaintext highlighter-rouge">range</code> Function</h2>
+<p>While working on the two wordle assignments, there will often be a time where it might be convenient to use a list of numbers to iterate through each letter of a guess and compare it to the secret word. Like anything in programming, there are lots of ways to do this. You could for instance, do:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">secret_word</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">guess</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+  <span class="n">i</span><span class="o">++</span>
+</code></pre></div></div>
+
+<p>Alternatively, you can use the <code class="language-plaintext highlighter-rouge">range</code> function to emulate the same thing with a for loop:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">secret_word</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">guess</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+<span class="c1"># which is equivalent to
+</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">secret_word</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">guess</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>When only given two inputs, <code class="language-plaintext highlighter-rouge">range</code> interprets them as a “from” and a “up to” constraint and assumes you want to count “by” one. That is, <code class="language-plaintext highlighter-rouge">range(0,6)</code> gives us back the list <code class="language-plaintext highlighter-rouge">[0, 1, 2, 3, 4, 5]</code>.</p>
+
+<p>Both ways are totally fine, so use whatever way is most convenient for you.</p>
 
 <h2 id="your-task">Your Task</h2>
 <p>Please make the following enhancements to the <code class="language-plaintext highlighter-rouge">wordle_starter.py</code> file (each marked <code class="language-plaintext highlighter-rouge">TODO</code> in the <code class="language-plaintext highlighter-rouge">.py</code> file).</p>

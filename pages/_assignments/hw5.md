@@ -29,7 +29,8 @@ draft: 0
 In this assignment, you will be making the full version of Wordle (we'll be calling it W0rdle), complete with its interface! While much of the program is already complete, your job will be to understand the existing program and functions, and use those to complete the full version of W0rdle. Make sure to review [Tutorial 08](./tutorial08).
 
 Here's a video demo of what the finished version should look like:
-<iframe src="https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1083e1e7-9bda-4ca9-a30d-ae4901295b1c&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+<iframe src="https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=3c9cabe9-90d1-4ea8-b394-ae9f01730650&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
 > **PLEASE NOTE:**
 > While you only have to write new code in the parts that are marked `TODO` in `wordle.py`, you'll

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Completing P2 Part 1</title>
+    <title>P2 Getting Started</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="/assets/main.css">
     
@@ -33,7 +33,12 @@
 
         <main>
             <aside>
-                
+                <ol class="side-menu">
+  <li><a href="#option-1-yelp">Option 1: Yelp</a></li>
+  <li><a href="#option-2-spotify">Option 2: Spotify</a></li>
+  <li><a href="#what-to-turn-in">What to Turn In</a></li>
+  <li><a href="#request-an-extension">Request an Extension</a></li>
+</ol>
 
             </aside>
             <article>
@@ -42,7 +47,7 @@
     
         <h1>
             <a href="../assignments/">Assignments</a> > 
-            HW6: Completing P2 Part 1
+            HW6: P2 Getting Started
         </h1>
     
  
@@ -56,7 +61,141 @@
     
 </p>
 
-<p>To be posted.</p>
+<p>In this assignment, you will be completing 20 points of your <a href="p2">Project 2</a>, to get a solid start. Your grade will be calculated by dividing your total score (20 possible points) by 2.5 (so that it scales to 8 possible points).</p>
+
+<h2 id="option-1-yelp">Option 1: Yelp</h2>
+<p>Please complete Parts 1-3 of Project 2, which involves asking the user for their (1) restaurant category and (2) sort preferences, and then (3) displaying any matching restaurants to the screen (with an optional keyword filter).</p>
+
+<blockquote class="blockquote-no-margin">
+  <p>Ultimately, your program will allow your user to browse through matching restaurants, and email a restaurant selection to a friend, but that’s not required for HW6.</p>
+</blockquote>
+
+<h3 id="you-will-be-graded-as-follows">You will be graded as follows…</h3>
+
+<h4 id="category-selection-8-points">Category Selection (8 Points)</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>2 Points</strong></td>
+      <td>Displays the user’s selected categories(s) if any</td>
+    </tr>
+    <tr>
+      <td><strong>2 Points</strong></td>
+      <td>Displays the available Yelp categories from which to choose</td>
+    </tr>
+    <tr>
+      <td><strong>2 Points</strong></td>
+      <td>Allows user to select among categories</td>
+    </tr>
+    <tr>
+      <td><strong>2 Points</strong></td>
+      <td>Allows user to clear out selected categories and start over</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="ordering--sorting-criteria-4-points">Ordering / Sorting Criteria (4 Points)</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>1 Point</strong></td>
+      <td>Displays the user’s current sort preference</td>
+    </tr>
+    <tr>
+      <td><strong>1 Point</strong></td>
+      <td>Displays possible sorting criteria</td>
+    </tr>
+    <tr>
+      <td><strong>2 Points</strong></td>
+      <td>Allows user to specify their preferred ordering criteria (best_match, rating, review_count, distance)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="previewing-matching-restaurants-8-points">Previewing matching restaurants (8 Points)</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>2 Points</strong></td>
+      <td>Allows the user to specify a search keyword</td>
+    </tr>
+    <tr>
+      <td><strong>3 Points</strong></td>
+      <td>Results honor user’s selected location, categories, and sorting criteria</td>
+    </tr>
+    <tr>
+      <td><strong>3 Points</strong></td>
+      <td>Prints restaurants to the screen in some coherent format (consider using a pandas dataframe for this).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="option-2-spotify">Option 2: Spotify</h2>
+<p>Please complete Part 1 &amp; 2 of Project 2, which involves asking the user for their genre and artist preferences.</p>
+
+<blockquote class="blockquote-no-margin">
+  <p>Ultimately this information will be used to seed the Spotify recommendation service, but actually getting song recommendations is not necessary for <strong>HW6.</strong></p>
+</blockquote>
+
+<h3 id="you-will-be-graded-as-follows-1">You will be graded as follows…</h3>
+
+<h4 id="genre-selection-8-points">Genre Selection (8 Points)</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>2 Points</strong></td>
+      <td>Displays the user’s selected genre(s) if any</td>
+    </tr>
+    <tr>
+      <td><strong>2 Points</strong></td>
+      <td>Displays available genres</td>
+    </tr>
+    <tr>
+      <td><strong>2 Points</strong></td>
+      <td>Allows user to select among genres presented</td>
+    </tr>
+    <tr>
+      <td><strong>2 Points</strong></td>
+      <td>Allows user to clear out their selected genres and start over</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="artist-selection-12-points">Artist Selection (12 Points)</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>3 Points</strong></td>
+      <td>Displays the names of the user’s selected artist(s) if any</td>
+    </tr>
+    <tr>
+      <td><strong>3 Points</strong></td>
+      <td>Allows user to search for artist</td>
+    </tr>
+    <tr>
+      <td><strong>3 Points</strong></td>
+      <td>Allows user to select among artists returned from Spotify</td>
+    </tr>
+    <tr>
+      <td><strong>3 Points</strong></td>
+      <td>Allows user to clear out selected artists and start over</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="what-to-turn-in">What to Turn In</h2>
+<ul>
+  <li>Your code as a zip file. This should include all of the files that make your code work.</li>
+  <li>Please <strong>only submit 1 set of code files per team</strong> and list who you collaborated with (and which tutorial they’re assigned to) in the submission comments: <code class="language-plaintext highlighter-rouge">My collaborators were X (in Raquel's Tues 10am Tutorial) and Y (Mercy's Wed 11am Tutorial).</code> Your teammates should then just post a comment that says, <code class="language-plaintext highlighter-rouge">see X's (Nicole's Wed 3pm Tutorial)</code> submission for the code. If you do not do this, you and your teammates may not receive credit for your submission.</li>
+</ul>
+
+<h2 id="request-an-extension">Request an Extension</h2>
+<p>If you need to request an extension on the assignment (must be 24 hours in advance) use the <a href="https://forms.gle/PobKBdUkTpPJ3GbZ8">Extension Request form</a>. Remember, requests must be made 24 hours in advance and if you requested an extension for HW 5, you are not eligible for an extension for HW 6.</p>
 
 
 
