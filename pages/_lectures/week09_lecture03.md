@@ -3,15 +3,14 @@ layout: module
 title: Dictionary Algorithms
 description:
     - The "counting algorithm"
-    - The "grouping algorithm"
 type: lecture
-draft: 1
+draft: 0
 num: 24
 due_date: 2022-05-27
-exercise_url: "lecture23.zip"
+exercise_url: "lecture24.zip"
 slides:
-   - title: "Using Dictionaries for Data Analysis"
-     url:
+   - title: "Counting Using Dictionaries"
+     url: https://docs.google.com/presentation/d/1jmOU3JcsSZ-kXXu_NY-TaOTn8tmBCDJwE0p8OMzGI3o/edit?usp=sharing
 videos:
    - title: "Live Lecture (Not Yet Posted)"
      url:
@@ -19,4 +18,4 @@ videos:
      live: 1
 ---
 
-We'll continue our work with APIs and dictionaries. Specifically, we'll be getting data from internet services like Twitter and Spotify and analyzing the results using dictionary algorithms.
+We'll continue our work with APIs and dictionaries and we'll use dictionary algorithms to do some data analysis!
