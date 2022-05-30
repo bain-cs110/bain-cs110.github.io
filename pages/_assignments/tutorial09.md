@@ -10,6 +10,25 @@ due_date: 2022-06-01
 
 ---
 
+{:.blockquote-no-margin}
+> #### Video Walk Through (Optional)
+> Depending on your comfort level, these videos may go by too quickly or too slowly for you. Feel
+> free to pause and speed-up as you see fit. The first video goes through step 1 - Setup. The 2nd
+> and 3rd videos cover the Yelp and Spotify sections respectively. While there's no need to watch/work
+> through both, this would be a great chance to get extra practice working with dictionary data.
+
+<iframe src="https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=d32c7312-9141-4b4b-b7cf-aea50072962b&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+<iframe src="https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=cdca875c-0e6c-4b57-8e6b-aea5007295f1&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+<iframe src="https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=089795c9-6252-42b1-baef-aea5007295c0&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+> While the videos walk through the basics of using each library, we HIGHLY encourage you to spend
+> some time using the various function each API provides as this will greatly reduce the amount of
+> time you have to spend doing this same thing when you sit down to actually complete the project.
+
+
+
 ## Background
 In this week's tutorial, you will be getting a preview of [Project 2](../assignments/p2). This includes:
 
