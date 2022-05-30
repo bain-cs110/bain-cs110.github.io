@@ -92,12 +92,12 @@ apis<wbr>.yelp    </h1>
 <span class="kn">import</span> <span class="nn">textwrap</span>
 
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s1">&#39;get_businesses&#39;</span><span class="p">,</span> <span class="s1">&#39;get_categories&#39;</span><span class="p">,</span> 
-    <span class="s1">&#39;get_formatted_business_list_table&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;get_businesses&#39;</span><span class="p">,</span> <span class="s1">&#39;get_categories&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;get_formatted_business_list_table&#39;</span><span class="p">,</span>
     <span class="s1">&#39;get_formatted_business_table&#39;</span><span class="p">,</span> <span class="s1">&#39;get_reviews&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;_generate_business_search_url&#39;</span><span class="p">,</span> <span class="s1">&#39;_get_business_display_html&#39;</span><span class="p">,</span> 
-    <span class="s1">&#39;_get_business_display_text&#39;</span><span class="p">,</span> <span class="s1">&#39;_get_reviews_display_html&#39;</span><span class="p">,</span> 
-    <span class="s1">&#39;_get_reviews_display_text&#39;</span><span class="p">,</span> <span class="s1">&#39;_issue_get_request&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;_generate_business_search_url&#39;</span><span class="p">,</span> <span class="s1">&#39;_get_business_display_html&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;_get_business_display_text&#39;</span><span class="p">,</span> <span class="s1">&#39;_get_reviews_display_html&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;_get_reviews_display_text&#39;</span><span class="p">,</span> <span class="s1">&#39;_issue_get_request&#39;</span><span class="p">,</span>
     <span class="s1">&#39;_simplify_businesses&#39;</span><span class="p">,</span> <span class="s1">&#39;_simplify_comments&#39;</span>
 <span class="p">]</span>
 <span class="k">def</span> <span class="nf">get_categories</span><span class="p">():</span>
@@ -121,8 +121,8 @@ apis<wbr>.yelp    </h1>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Private function. Retrieves data from any Yelp endpoint using the authentication key.</span>
 
-<span class="sd">    * url (str): [Required] The API Endpoint + query parameters.  </span>
-<span class="sd">    </span>
+<span class="sd">    * url (str): [Required] The API Endpoint + query parameters.</span>
+
 <span class="sd">    Returns whatever Yelp&#39;s API endpoint gives back.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">token</span> <span class="o">=</span> <span class="n">authentication</span><span class="o">.</span><span class="n">get_token</span><span class="p">(</span><span class="s1">&#39;https://www.apitutor.org/yelp/key&#39;</span><span class="p">)</span>
@@ -131,15 +131,15 @@ apis<wbr>.yelp    </h1>
     <span class="p">}</span>
     <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">verify</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-       
+
 
 <span class="k">def</span> <span class="nf">_simplify_businesses</span><span class="p">(</span><span class="n">data</span><span class="p">:</span><span class="nb">list</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Private function. Simplifies Yelp businesses.</span>
 
 <span class="sd">    * data (list): The original data list returned by the Yelp API</span>
-<span class="sd">    </span>
-<span class="sd">    Returns a simpler data structure for the (complex) data </span>
+
+<span class="sd">    Returns a simpler data structure for the (complex) data</span>
 <span class="sd">    returned by Yelp. Only shows some of the most common</span>
 <span class="sd">    data fields.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -170,8 +170,8 @@ apis<wbr>.yelp    </h1>
 <span class="sd">    Private function that simplifies Yelp&#39;s comments data structure.</span>
 
 <span class="sd">    * data (list): The original data list returned by the Yelp API</span>
-<span class="sd">    </span>
-<span class="sd">    Returns a simpler data structure for the (complex) data </span>
+
+<span class="sd">    Returns a simpler data structure for the (complex) data</span>
 <span class="sd">    returned by Yelp. Only shows some of the most common</span>
 <span class="sd">    data fields.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -188,19 +188,19 @@ apis<wbr>.yelp    </h1>
     <span class="k">return</span> <span class="n">simplified</span>
 
 
-<span class="k">def</span> <span class="nf">_generate_business_search_url</span><span class="p">(</span><span class="n">location</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="s1">&#39;Evanston, IL&#39;</span><span class="p">,</span> <span class="n">limit</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">term</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">categories</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sort_by</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">price</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">open_now</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">_generate_business_search_url</span><span class="p">(</span><span class="n">location</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="s1">&#39;Evanston, IL&#39;</span><span class="p">,</span> <span class="n">limit</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">term</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">categories</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sort_by</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">price</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">open_now</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="c1"># https://www.yelp.com/developers/documentation/v3/business_search</span>
     <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    Private function. Creates the URL that will be issued to the Yelp API:  </span>
+<span class="sd">    Private function. Creates the URL that will be issued to the Yelp API:</span>
 
-<span class="sd">    * location (str):   Location of the search  </span>
-<span class="sd">    * limit (int):      An integer indicating how many records to return. Max of 50.  </span>
-<span class="sd">    * term (str):       A search term  </span>
-<span class="sd">    * categories (str): One or more comma-delimited categories to filter by.  </span>
-<span class="sd">    * sort_by (str):    How to order search results. </span>
-<span class="sd">        * Options are: best_match, rating, review_count, distance  </span>
-<span class="sd">    * price (str):      How expensive 1, 2, 3, 4 or comma-delimited string, e.g.: 1,2  </span>
-<span class="sd">    * open_now (str):   Set to &#39;true&#39; if you only want the open restaurants  </span>
+<span class="sd">    * location (str):   Location of the search</span>
+<span class="sd">    * limit (int):      An integer indicating how many records to return. Max of 50.</span>
+<span class="sd">    * term (str):       A search term</span>
+<span class="sd">    * categories (str): One or more comma-delimited categories to filter by.</span>
+<span class="sd">    * sort_by (str):    How to order search results.</span>
+<span class="sd">        * Options are: best_match, rating, review_count, distance</span>
+<span class="sd">    * price (str):      How expensive 1, 2, 3, 4 or comma-delimited string, e.g.: 1,2</span>
+<span class="sd">    * open_now (str):   Set to &#39;true&#39; if you only want the open restaurants</span>
 
 <span class="sd">    Returns a url (string).</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -232,37 +232,37 @@ apis<wbr>.yelp    </h1>
         <span class="n">prices</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
         <span class="n">url</span> <span class="o">+=</span> <span class="s1">&#39;&amp;price=&#39;</span> <span class="o">+</span> <span class="n">prices</span>  <span class="c1">#1, 2, 3, 4 -or- 1,2 (for more than one)</span>
     <span class="k">if</span> <span class="n">open_now</span><span class="p">:</span>
-        <span class="n">url</span> <span class="o">+=</span> <span class="s1">&#39;&amp;open_now=true&#39;</span> 
+        <span class="n">url</span> <span class="o">+=</span> <span class="s1">&#39;&amp;open_now=true&#39;</span>
     <span class="k">return</span> <span class="n">url</span>
 
-<span class="k">def</span> <span class="nf">get_businesses</span><span class="p">(</span><span class="n">location</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="s1">&#39;Evanston, IL&#39;</span><span class="p">,</span> <span class="n">limit</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">term</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">categories</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sort_by</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">price</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">open_now</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">simplify</span><span class="p">:</span><span class="nb">bool</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">get_businesses</span><span class="p">(</span><span class="n">location</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="s1">&#39;Evanston, IL&#39;</span><span class="p">,</span> <span class="n">limit</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">term</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">categories</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sort_by</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">price</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">open_now</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">simplify</span><span class="p">:</span><span class="nb">bool</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Searches for Yelp businesses based on various search criteria. Parameters:</span>
-<span class="sd">    </span>
-<span class="sd">    * location (str):   Location of the search  </span>
-<span class="sd">    * limit (int):      An integer indicating how many records to return. Max of 50.  </span>
-<span class="sd">    * term (str):       A search term  </span>
-<span class="sd">    * categories (str): One or more comma-delimited categories to filter by.  </span>
-<span class="sd">    * sort_by (str):    How to order search results. Options are:   </span>
-<span class="sd">                        best_match, rating, review_count, distance  </span>
-<span class="sd">    * price (str):      How expensive 1, 2, 3, 4 or comma-delimited list, e.g.: 1,2  </span>
-<span class="sd">    * open_now (str):   Set to &#39;true&#39; if you only want the open restaurants  </span>
-<span class="sd">    * simplify (bool):  Indicates whether you want to simplify the data that is returned.  </span>
+
+<span class="sd">    * location (str):   Location of the search</span>
+<span class="sd">    * limit (int):      An integer indicating how many records to return. Max of 50.</span>
+<span class="sd">    * term (str):       A search term</span>
+<span class="sd">    * categories (str): One or more comma-delimited categories to filter by.</span>
+<span class="sd">    * sort_by (str):    How to order search results. Options are:</span>
+<span class="sd">                        best_match, rating, review_count, distance</span>
+<span class="sd">    * price (str):      How expensive 1, 2, 3, 4 or comma-delimited list, e.g.: 1,2</span>
+<span class="sd">    * open_now (str):   Set to &#39;true&#39; if you only want the open restaurants</span>
+<span class="sd">    * simplify (bool):  Indicates whether you want to simplify the data that is returned.</span>
 
 <span class="sd">    Returns a list of businesses matching your search / ordering / limit criteria.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
 
     <span class="c1"># generate the URL query string based on the arguments passed in by the user</span>
     <span class="n">url</span> <span class="o">=</span> <span class="n">_generate_business_search_url</span><span class="p">(</span>
-        <span class="n">location</span><span class="o">=</span><span class="n">location</span><span class="p">,</span> 
-        <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="p">,</span> 
-        <span class="n">term</span><span class="o">=</span><span class="n">term</span><span class="p">,</span> 
-        <span class="n">categories</span><span class="o">=</span><span class="n">categories</span><span class="p">,</span> 
-        <span class="n">sort_by</span><span class="o">=</span><span class="n">sort_by</span><span class="p">,</span> 
-        <span class="n">price</span><span class="o">=</span><span class="n">price</span><span class="p">,</span> 
+        <span class="n">location</span><span class="o">=</span><span class="n">location</span><span class="p">,</span>
+        <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="p">,</span>
+        <span class="n">term</span><span class="o">=</span><span class="n">term</span><span class="p">,</span>
+        <span class="n">categories</span><span class="o">=</span><span class="n">categories</span><span class="p">,</span>
+        <span class="n">sort_by</span><span class="o">=</span><span class="n">sort_by</span><span class="p">,</span>
+        <span class="n">price</span><span class="o">=</span><span class="n">price</span><span class="p">,</span>
         <span class="n">open_now</span><span class="o">=</span><span class="n">open_now</span>
     <span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>       
+    <span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 
     <span class="n">data</span> <span class="o">=</span> <span class="n">_issue_get_request</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">simplify</span><span class="p">:</span>
@@ -273,13 +273,13 @@ apis<wbr>.yelp    </h1>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Generates a tabular representation of a list of businesses to be displayed in the terminal.</span>
 
-<span class="sd">    * businesses (list): A list of simplified dictionaries (where each dictionary represents a business).  </span>
-<span class="sd">    </span>
+<span class="sd">    * businesses (list): A list of simplified dictionaries (where each dictionary represents a business).</span>
+
 <span class="sd">    Returns a string representation of a table.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
     <span class="n">template</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{0:2}</span><span class="s1"> | </span><span class="si">{1:22.22}</span><span class="s1"> | </span><span class="si">{2:&lt;30.30}</span><span class="s1"> | </span><span class="si">{3:&lt;6}</span><span class="s1"> | </span><span class="si">{4:&lt;10}</span><span class="se">\n</span><span class="s1">&#39;</span>
-    
+
     <span class="c1"># header section:</span>
     <span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="mi">85</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
     <span class="n">text</span> <span class="o">+=</span> <span class="n">template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
@@ -292,7 +292,7 @@ apis<wbr>.yelp    </h1>
     <span class="k">for</span> <span class="n">business</span> <span class="ow">in</span> <span class="n">businesses</span><span class="p">:</span>
         <span class="n">text</span> <span class="o">+=</span> <span class="n">template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
             <span class="n">counter</span><span class="p">,</span>
-            <span class="n">business</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">),</span> 
+            <span class="n">business</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">),</span>
             <span class="n">business</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;display_address&#39;</span><span class="p">),</span>
             <span class="n">business</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;rating&#39;</span><span class="p">),</span>
             <span class="n">business</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;review_count&#39;</span><span class="p">)</span>
@@ -306,10 +306,10 @@ apis<wbr>.yelp    </h1>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Retrieves a list of Yelp reviews for a particular business. Parameters:</span>
 
-<span class="sd">    * business_id (str): [Required] A character string corresponding to the business id.  </span>
+<span class="sd">    * business_id (str): [Required] A character string corresponding to the business id.</span>
 <span class="sd">        * Example: 0b6AU869xq6KXdK3NtVJnw</span>
-<span class="sd">    * simplify (bool):   Indicates whether you want to simplify the data that is returned.  </span>
-<span class="sd">    </span>
+<span class="sd">    * simplify (bool):   Indicates whether you want to simplify the data that is returned.</span>
+
 <span class="sd">    Returns a list of reviews.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="c1"># https://www.yelp.com/developers/documentation/v3/business_reviews</span>
@@ -323,7 +323,7 @@ apis<wbr>.yelp    </h1>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Private function. Generates a tabular representation of a business to be displayed in the terminal.</span>
 
-<span class="sd">    * business (dict): A simplified dictionary representing a business.  </span>
+<span class="sd">    * business (dict): A simplified dictionary representing a business.</span>
 
 <span class="sd">    Returns a string representation of a table.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -348,7 +348,7 @@ apis<wbr>.yelp    </h1>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Private function. Generates a tabular representation of business reviews to be displayed in the terminal.</span>
 
-<span class="sd">    * reviews (list of dictionaries): A list of simplified Yelp reviews (where each review is represented as a dictionary).  </span>
+<span class="sd">    * reviews (list of dictionaries): A list of simplified Yelp reviews (where each review is represented as a dictionary).</span>
 
 <span class="sd">    Returns a string representation of a table.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -366,7 +366,7 @@ apis<wbr>.yelp    </h1>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Private function. Generates an HTML representation of a business.</span>
 
-<span class="sd">    * business (dict): A simplified dictionary representing a business.  </span>
+<span class="sd">    * business (dict): A simplified dictionary representing a business.</span>
 
 <span class="sd">    Returns an HTML table (string).</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -388,7 +388,7 @@ apis<wbr>.yelp    </h1>
 <span class="s1">                &lt;th </span><span class="si">{css}</span><span class="s1">&gt;</span><span class="si">{key}</span><span class="s1">:&lt;/th&gt;</span>
 <span class="s1">                &lt;td </span><span class="si">{css}</span><span class="s1">&gt;</span><span class="si">{value}</span><span class="s1">&lt;/td&gt;</span>
 <span class="s1">            &lt;/tr&gt;&#39;&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">css</span><span class="o">=</span><span class="n">cell_css</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
-    
+
     <span class="n">table_css</span> <span class="o">=</span> <span class="s1">&#39;style=&quot;width:100%;border:solid 1px #CCC;border-collapse:collapse;margin-bottom:10px;&quot;&#39;</span>
     <span class="k">return</span> <span class="s1">&#39;&#39;&#39;</span>
 <span class="s1">        &lt;table </span><span class="si">{css}</span><span class="s1">&gt;</span>
@@ -400,7 +400,7 @@ apis<wbr>.yelp    </h1>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Private function. Generates an HTML representation of business reviews.</span>
 
-<span class="sd">    * reviews (list of dictionaries): A list of simplified Yelp reviews (where each review is represented as a dictionary).  </span>
+<span class="sd">    * reviews (list of dictionaries): A list of simplified Yelp reviews (where each review is represented as a dictionary).</span>
 
 <span class="sd">    Returns an HTML table (string) of reviews.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -429,22 +429,22 @@ apis<wbr>.yelp    </h1>
 <span class="s1">        &lt;/tr&gt;</span>
 <span class="s1">        </span><span class="si">{rows}</span><span class="s1"></span>
 <span class="s1">    &lt;/table&gt;&#39;&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
-        <span class="n">table_css</span><span class="o">=</span><span class="n">table_css</span><span class="p">,</span> 
-        <span class="n">cell_css</span><span class="o">=</span><span class="n">cell_css</span><span class="p">,</span> 
+        <span class="n">table_css</span><span class="o">=</span><span class="n">table_css</span><span class="p">,</span>
+        <span class="n">cell_css</span><span class="o">=</span><span class="n">cell_css</span><span class="p">,</span>
         <span class="n">rows</span><span class="o">=</span><span class="n">review_rows</span>
     <span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">get_formatted_business_table</span><span class="p">(</span><span class="n">business</span><span class="p">:</span><span class="nb">dict</span><span class="p">,</span> <span class="n">reviews</span><span class="p">:</span><span class="nb">list</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">to_html</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    Makes a formatted HTML table of a business and corresponding review. Good for writing to an </span>
+<span class="sd">    Makes a formatted HTML table of a business and corresponding review. Good for writing to an</span>
 <span class="sd">    HTML file or for sending in an email.</span>
 
-<span class="sd">    * business(dict): [Required] A dictionary that represents a business.  </span>
+<span class="sd">    * business(dict): [Required] A dictionary that represents a business.</span>
 <span class="sd">    * reviews(list): List of reviews that correspond to the business</span>
-<span class="sd">    * to_html(bool): Whether you want to return an HTML representation (for email) </span>
-<span class="sd">                     or a string representation (to print to the screen).  </span>
+<span class="sd">    * to_html(bool): Whether you want to return an HTML representation (for email)</span>
+<span class="sd">                     or a string representation (to print to the screen).</span>
 
-<span class="sd">    Returns either a text or HTML representation of a business + reviews. </span>
+<span class="sd">    Returns either a text or HTML representation of a business + reviews.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">business</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A business is required.&#39;</span><span class="p">)</span>
@@ -476,7 +476,7 @@ apis<wbr>.yelp    </h1>
     term: str = None,
     categories: str = None,
     sort_by: str = None,
-    price: int = None,
+    price: str = None,
     open_now: str = None,
     simplify: bool = True
 )</span>:
@@ -484,34 +484,34 @@ apis<wbr>.yelp    </h1>
 
             <details>
             <summary>View Source</summary>
-            <div class="pdoc-code codehilite"><pre><span></span><span class="k">def</span> <span class="nf">get_businesses</span><span class="p">(</span><span class="n">location</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="s1">&#39;Evanston, IL&#39;</span><span class="p">,</span> <span class="n">limit</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">term</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">categories</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sort_by</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">price</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">open_now</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">simplify</span><span class="p">:</span><span class="nb">bool</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span class="k">def</span> <span class="nf">get_businesses</span><span class="p">(</span><span class="n">location</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="s1">&#39;Evanston, IL&#39;</span><span class="p">,</span> <span class="n">limit</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">term</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">categories</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sort_by</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">price</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">open_now</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">simplify</span><span class="p">:</span><span class="nb">bool</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Searches for Yelp businesses based on various search criteria. Parameters:</span>
-<span class="sd">    </span>
-<span class="sd">    * location (str):   Location of the search  </span>
-<span class="sd">    * limit (int):      An integer indicating how many records to return. Max of 50.  </span>
-<span class="sd">    * term (str):       A search term  </span>
-<span class="sd">    * categories (str): One or more comma-delimited categories to filter by.  </span>
-<span class="sd">    * sort_by (str):    How to order search results. Options are:   </span>
-<span class="sd">                        best_match, rating, review_count, distance  </span>
-<span class="sd">    * price (str):      How expensive 1, 2, 3, 4 or comma-delimited list, e.g.: 1,2  </span>
-<span class="sd">    * open_now (str):   Set to &#39;true&#39; if you only want the open restaurants  </span>
-<span class="sd">    * simplify (bool):  Indicates whether you want to simplify the data that is returned.  </span>
+
+<span class="sd">    * location (str):   Location of the search</span>
+<span class="sd">    * limit (int):      An integer indicating how many records to return. Max of 50.</span>
+<span class="sd">    * term (str):       A search term</span>
+<span class="sd">    * categories (str): One or more comma-delimited categories to filter by.</span>
+<span class="sd">    * sort_by (str):    How to order search results. Options are:</span>
+<span class="sd">                        best_match, rating, review_count, distance</span>
+<span class="sd">    * price (str):      How expensive 1, 2, 3, 4 or comma-delimited list, e.g.: 1,2</span>
+<span class="sd">    * open_now (str):   Set to &#39;true&#39; if you only want the open restaurants</span>
+<span class="sd">    * simplify (bool):  Indicates whether you want to simplify the data that is returned.</span>
 
 <span class="sd">    Returns a list of businesses matching your search / ordering / limit criteria.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
 
     <span class="c1"># generate the URL query string based on the arguments passed in by the user</span>
     <span class="n">url</span> <span class="o">=</span> <span class="n">_generate_business_search_url</span><span class="p">(</span>
-        <span class="n">location</span><span class="o">=</span><span class="n">location</span><span class="p">,</span> 
-        <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="p">,</span> 
-        <span class="n">term</span><span class="o">=</span><span class="n">term</span><span class="p">,</span> 
-        <span class="n">categories</span><span class="o">=</span><span class="n">categories</span><span class="p">,</span> 
-        <span class="n">sort_by</span><span class="o">=</span><span class="n">sort_by</span><span class="p">,</span> 
-        <span class="n">price</span><span class="o">=</span><span class="n">price</span><span class="p">,</span> 
+        <span class="n">location</span><span class="o">=</span><span class="n">location</span><span class="p">,</span>
+        <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="p">,</span>
+        <span class="n">term</span><span class="o">=</span><span class="n">term</span><span class="p">,</span>
+        <span class="n">categories</span><span class="o">=</span><span class="n">categories</span><span class="p">,</span>
+        <span class="n">sort_by</span><span class="o">=</span><span class="n">sort_by</span><span class="p">,</span>
+        <span class="n">price</span><span class="o">=</span><span class="n">price</span><span class="p">,</span>
         <span class="n">open_now</span><span class="o">=</span><span class="n">open_now</span>
     <span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>       
+    <span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 
     <span class="n">data</span> <span class="o">=</span> <span class="n">_issue_get_request</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">simplify</span><span class="p">:</span>
@@ -524,15 +524,15 @@ apis<wbr>.yelp    </h1>
             <div class="docstring"><p>Searches for Yelp businesses based on various search criteria. Parameters:</p>
 
 <ul>
-<li>location (str):   Location of the search  </li>
-<li>limit (int):      An integer indicating how many records to return. Max of 50.  </li>
-<li>term (str):       A search term  </li>
-<li>categories (str): One or more comma-delimited categories to filter by.  </li>
-<li>sort_by (str):    How to order search results. Options are: <br />
-                best_match, rating, review_count, distance  </li>
-<li>price (str):      How expensive 1, 2, 3, 4 or comma-delimited list, e.g.: 1,2  </li>
-<li>open_now (str):   Set to 'true' if you only want the open restaurants  </li>
-<li>simplify (bool):  Indicates whether you want to simplify the data that is returned.  </li>
+<li>location (str):   Location of the search</li>
+<li>limit (int):      An integer indicating how many records to return. Max of 50.</li>
+<li>term (str):       A search term</li>
+<li>categories (str): One or more comma-delimited categories to filter by.</li>
+<li>sort_by (str):    How to order search results. Options are:
+                best_match, rating, review_count, distance</li>
+<li>price (str):      How expensive 1, 2, 3, 4 or comma-delimited list, e.g.: 1,2</li>
+<li>open_now (str):   Set to 'true' if you only want the open restaurants</li>
+<li>simplify (bool):  Indicates whether you want to simplify the data that is returned.</li>
 </ul>
 
 <p>Returns a list of businesses matching your search / ordering / limit criteria.</p>
@@ -588,13 +588,13 @@ apis<wbr>.yelp    </h1>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Generates a tabular representation of a list of businesses to be displayed in the terminal.</span>
 
-<span class="sd">    * businesses (list): A list of simplified dictionaries (where each dictionary represents a business).  </span>
-<span class="sd">    </span>
+<span class="sd">    * businesses (list): A list of simplified dictionaries (where each dictionary represents a business).</span>
+
 <span class="sd">    Returns a string representation of a table.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
     <span class="n">template</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{0:2}</span><span class="s1"> | </span><span class="si">{1:22.22}</span><span class="s1"> | </span><span class="si">{2:&lt;30.30}</span><span class="s1"> | </span><span class="si">{3:&lt;6}</span><span class="s1"> | </span><span class="si">{4:&lt;10}</span><span class="se">\n</span><span class="s1">&#39;</span>
-    
+
     <span class="c1"># header section:</span>
     <span class="n">text</span> <span class="o">+=</span> <span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="mi">85</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
     <span class="n">text</span> <span class="o">+=</span> <span class="n">template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
@@ -607,7 +607,7 @@ apis<wbr>.yelp    </h1>
     <span class="k">for</span> <span class="n">business</span> <span class="ow">in</span> <span class="n">businesses</span><span class="p">:</span>
         <span class="n">text</span> <span class="o">+=</span> <span class="n">template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
             <span class="n">counter</span><span class="p">,</span>
-            <span class="n">business</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">),</span> 
+            <span class="n">business</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">),</span>
             <span class="n">business</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;display_address&#39;</span><span class="p">),</span>
             <span class="n">business</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;rating&#39;</span><span class="p">),</span>
             <span class="n">business</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;review_count&#39;</span><span class="p">)</span>
@@ -622,7 +622,7 @@ apis<wbr>.yelp    </h1>
             <div class="docstring"><p>Generates a tabular representation of a list of businesses to be displayed in the terminal.</p>
 
 <ul>
-<li>businesses (list): A list of simplified dictionaries (where each dictionary represents a business).  </li>
+<li>businesses (list): A list of simplified dictionaries (where each dictionary represents a business).</li>
 </ul>
 
 <p>Returns a string representation of a table.</p>
@@ -642,15 +642,15 @@ apis<wbr>.yelp    </h1>
             <summary>View Source</summary>
             <div class="pdoc-code codehilite"><pre><span></span><span class="k">def</span> <span class="nf">get_formatted_business_table</span><span class="p">(</span><span class="n">business</span><span class="p">:</span><span class="nb">dict</span><span class="p">,</span> <span class="n">reviews</span><span class="p">:</span><span class="nb">list</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">to_html</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    Makes a formatted HTML table of a business and corresponding review. Good for writing to an </span>
+<span class="sd">    Makes a formatted HTML table of a business and corresponding review. Good for writing to an</span>
 <span class="sd">    HTML file or for sending in an email.</span>
 
-<span class="sd">    * business(dict): [Required] A dictionary that represents a business.  </span>
+<span class="sd">    * business(dict): [Required] A dictionary that represents a business.</span>
 <span class="sd">    * reviews(list): List of reviews that correspond to the business</span>
-<span class="sd">    * to_html(bool): Whether you want to return an HTML representation (for email) </span>
-<span class="sd">                     or a string representation (to print to the screen).  </span>
+<span class="sd">    * to_html(bool): Whether you want to return an HTML representation (for email)</span>
+<span class="sd">                     or a string representation (to print to the screen).</span>
 
-<span class="sd">    Returns either a text or HTML representation of a business + reviews. </span>
+<span class="sd">    Returns either a text or HTML representation of a business + reviews.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">business</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A business is required.&#39;</span><span class="p">)</span>
@@ -670,14 +670,14 @@ apis<wbr>.yelp    </h1>
 
         </details>
 
-            <div class="docstring"><p>Makes a formatted HTML table of a business and corresponding review. Good for writing to an 
+            <div class="docstring"><p>Makes a formatted HTML table of a business and corresponding review. Good for writing to an
 HTML file or for sending in an email.</p>
 
 <ul>
-<li>business(dict): [Required] A dictionary that represents a business.  </li>
+<li>business(dict): [Required] A dictionary that represents a business.</li>
 <li>reviews(list): List of reviews that correspond to the business</li>
-<li>to_html(bool): Whether you want to return an HTML representation (for email) 
-             or a string representation (to print to the screen).  </li>
+<li>to_html(bool): Whether you want to return an HTML representation (for email)
+             or a string representation (to print to the screen).</li>
 </ul>
 
 <p>Returns either a text or HTML representation of a business + reviews.</p>
@@ -699,10 +699,10 @@ HTML file or for sending in an email.</p>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Retrieves a list of Yelp reviews for a particular business. Parameters:</span>
 
-<span class="sd">    * business_id (str): [Required] A character string corresponding to the business id.  </span>
+<span class="sd">    * business_id (str): [Required] A character string corresponding to the business id.</span>
 <span class="sd">        * Example: 0b6AU869xq6KXdK3NtVJnw</span>
-<span class="sd">    * simplify (bool):   Indicates whether you want to simplify the data that is returned.  </span>
-<span class="sd">    </span>
+<span class="sd">    * simplify (bool):   Indicates whether you want to simplify the data that is returned.</span>
+
 <span class="sd">    Returns a list of reviews.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="c1"># https://www.yelp.com/developers/documentation/v3/business_reviews</span>
@@ -718,11 +718,11 @@ HTML file or for sending in an email.</p>
             <div class="docstring"><p>Retrieves a list of Yelp reviews for a particular business. Parameters:</p>
 
 <ul>
-<li>business_id (str): [Required] A character string corresponding to the business id. <br />
+<li>business_id (str): [Required] A character string corresponding to the business id.
 <ul>
 <li>Example: 0b6AU869xq6KXdK3NtVJnw</li>
 </ul></li>
-<li>simplify (bool):   Indicates whether you want to simplify the data that is returned.  </li>
+<li>simplify (bool):   Indicates whether you want to simplify the data that is returned.</li>
 </ul>
 
 <p>Returns a list of reviews.</p>
@@ -741,26 +741,26 @@ HTML file or for sending in an email.</p>
     term: str = None,
     categories: str = None,
     sort_by: str = None,
-    price: int = None,
+    price: str = None,
     open_now: str = None
 )</span>:
     </div>
 
             <details>
             <summary>View Source</summary>
-            <div class="pdoc-code codehilite"><pre><span></span><span class="k">def</span> <span class="nf">_generate_business_search_url</span><span class="p">(</span><span class="n">location</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="s1">&#39;Evanston, IL&#39;</span><span class="p">,</span> <span class="n">limit</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">term</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">categories</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sort_by</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">price</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">open_now</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span class="k">def</span> <span class="nf">_generate_business_search_url</span><span class="p">(</span><span class="n">location</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="s1">&#39;Evanston, IL&#39;</span><span class="p">,</span> <span class="n">limit</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">term</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">categories</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sort_by</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">price</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">open_now</span><span class="p">:</span><span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="c1"># https://www.yelp.com/developers/documentation/v3/business_search</span>
     <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    Private function. Creates the URL that will be issued to the Yelp API:  </span>
+<span class="sd">    Private function. Creates the URL that will be issued to the Yelp API:</span>
 
-<span class="sd">    * location (str):   Location of the search  </span>
-<span class="sd">    * limit (int):      An integer indicating how many records to return. Max of 50.  </span>
-<span class="sd">    * term (str):       A search term  </span>
-<span class="sd">    * categories (str): One or more comma-delimited categories to filter by.  </span>
-<span class="sd">    * sort_by (str):    How to order search results. </span>
-<span class="sd">        * Options are: best_match, rating, review_count, distance  </span>
-<span class="sd">    * price (str):      How expensive 1, 2, 3, 4 or comma-delimited string, e.g.: 1,2  </span>
-<span class="sd">    * open_now (str):   Set to &#39;true&#39; if you only want the open restaurants  </span>
+<span class="sd">    * location (str):   Location of the search</span>
+<span class="sd">    * limit (int):      An integer indicating how many records to return. Max of 50.</span>
+<span class="sd">    * term (str):       A search term</span>
+<span class="sd">    * categories (str): One or more comma-delimited categories to filter by.</span>
+<span class="sd">    * sort_by (str):    How to order search results.</span>
+<span class="sd">        * Options are: best_match, rating, review_count, distance</span>
+<span class="sd">    * price (str):      How expensive 1, 2, 3, 4 or comma-delimited string, e.g.: 1,2</span>
+<span class="sd">    * open_now (str):   Set to &#39;true&#39; if you only want the open restaurants</span>
 
 <span class="sd">    Returns a url (string).</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -792,25 +792,25 @@ HTML file or for sending in an email.</p>
         <span class="n">prices</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
         <span class="n">url</span> <span class="o">+=</span> <span class="s1">&#39;&amp;price=&#39;</span> <span class="o">+</span> <span class="n">prices</span>  <span class="c1">#1, 2, 3, 4 -or- 1,2 (for more than one)</span>
     <span class="k">if</span> <span class="n">open_now</span><span class="p">:</span>
-        <span class="n">url</span> <span class="o">+=</span> <span class="s1">&#39;&amp;open_now=true&#39;</span> 
+        <span class="n">url</span> <span class="o">+=</span> <span class="s1">&#39;&amp;open_now=true&#39;</span>
     <span class="k">return</span> <span class="n">url</span>
 </pre></div>
 
         </details>
 
-            <div class="docstring"><p>Private function. Creates the URL that will be issued to the Yelp API:  </p>
+            <div class="docstring"><p>Private function. Creates the URL that will be issued to the Yelp API:</p>
 
 <ul>
-<li>location (str):   Location of the search  </li>
-<li>limit (int):      An integer indicating how many records to return. Max of 50.  </li>
-<li>term (str):       A search term  </li>
-<li>categories (str): One or more comma-delimited categories to filter by.  </li>
-<li>sort_by (str):    How to order search results. 
+<li>location (str):   Location of the search</li>
+<li>limit (int):      An integer indicating how many records to return. Max of 50.</li>
+<li>term (str):       A search term</li>
+<li>categories (str): One or more comma-delimited categories to filter by.</li>
+<li>sort_by (str):    How to order search results.
 <ul>
-<li>Options are: best_match, rating, review_count, distance  </li>
+<li>Options are: best_match, rating, review_count, distance</li>
 </ul></li>
-<li>price (str):      How expensive 1, 2, 3, 4 or comma-delimited string, e.g.: 1,2  </li>
-<li>open_now (str):   Set to 'true' if you only want the open restaurants  </li>
+<li>price (str):      How expensive 1, 2, 3, 4 or comma-delimited string, e.g.: 1,2</li>
+<li>open_now (str):   Set to 'true' if you only want the open restaurants</li>
 </ul>
 
 <p>Returns a url (string).</p>
@@ -832,7 +832,7 @@ HTML file or for sending in an email.</p>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Private function. Generates an HTML representation of a business.</span>
 
-<span class="sd">    * business (dict): A simplified dictionary representing a business.  </span>
+<span class="sd">    * business (dict): A simplified dictionary representing a business.</span>
 
 <span class="sd">    Returns an HTML table (string).</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -854,7 +854,7 @@ HTML file or for sending in an email.</p>
 <span class="s1">                &lt;th </span><span class="si">{css}</span><span class="s1">&gt;</span><span class="si">{key}</span><span class="s1">:&lt;/th&gt;</span>
 <span class="s1">                &lt;td </span><span class="si">{css}</span><span class="s1">&gt;</span><span class="si">{value}</span><span class="s1">&lt;/td&gt;</span>
 <span class="s1">            &lt;/tr&gt;&#39;&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">css</span><span class="o">=</span><span class="n">cell_css</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
-    
+
     <span class="n">table_css</span> <span class="o">=</span> <span class="s1">&#39;style=&quot;width:100%;border:solid 1px #CCC;border-collapse:collapse;margin-bottom:10px;&quot;&#39;</span>
     <span class="k">return</span> <span class="s1">&#39;&#39;&#39;</span>
 <span class="s1">        &lt;table </span><span class="si">{css}</span><span class="s1">&gt;</span>
@@ -867,7 +867,7 @@ HTML file or for sending in an email.</p>
             <div class="docstring"><p>Private function. Generates an HTML representation of a business.</p>
 
 <ul>
-<li>business (dict): A simplified dictionary representing a business.  </li>
+<li>business (dict): A simplified dictionary representing a business.</li>
 </ul>
 
 <p>Returns an HTML table (string).</p>
@@ -889,7 +889,7 @@ HTML file or for sending in an email.</p>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Private function. Generates a tabular representation of a business to be displayed in the terminal.</span>
 
-<span class="sd">    * business (dict): A simplified dictionary representing a business.  </span>
+<span class="sd">    * business (dict): A simplified dictionary representing a business.</span>
 
 <span class="sd">    Returns a string representation of a table.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -916,7 +916,7 @@ HTML file or for sending in an email.</p>
             <div class="docstring"><p>Private function. Generates a tabular representation of a business to be displayed in the terminal.</p>
 
 <ul>
-<li>business (dict): A simplified dictionary representing a business.  </li>
+<li>business (dict): A simplified dictionary representing a business.</li>
 </ul>
 
 <p>Returns a string representation of a table.</p>
@@ -938,7 +938,7 @@ HTML file or for sending in an email.</p>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Private function. Generates an HTML representation of business reviews.</span>
 
-<span class="sd">    * reviews (list of dictionaries): A list of simplified Yelp reviews (where each review is represented as a dictionary).  </span>
+<span class="sd">    * reviews (list of dictionaries): A list of simplified Yelp reviews (where each review is represented as a dictionary).</span>
 
 <span class="sd">    Returns an HTML table (string) of reviews.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -967,8 +967,8 @@ HTML file or for sending in an email.</p>
 <span class="s1">        &lt;/tr&gt;</span>
 <span class="s1">        </span><span class="si">{rows}</span><span class="s1"></span>
 <span class="s1">    &lt;/table&gt;&#39;&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
-        <span class="n">table_css</span><span class="o">=</span><span class="n">table_css</span><span class="p">,</span> 
-        <span class="n">cell_css</span><span class="o">=</span><span class="n">cell_css</span><span class="p">,</span> 
+        <span class="n">table_css</span><span class="o">=</span><span class="n">table_css</span><span class="p">,</span>
+        <span class="n">cell_css</span><span class="o">=</span><span class="n">cell_css</span><span class="p">,</span>
         <span class="n">rows</span><span class="o">=</span><span class="n">review_rows</span>
     <span class="p">)</span>
 </pre></div>
@@ -978,7 +978,7 @@ HTML file or for sending in an email.</p>
             <div class="docstring"><p>Private function. Generates an HTML representation of business reviews.</p>
 
 <ul>
-<li>reviews (list of dictionaries): A list of simplified Yelp reviews (where each review is represented as a dictionary).  </li>
+<li>reviews (list of dictionaries): A list of simplified Yelp reviews (where each review is represented as a dictionary).</li>
 </ul>
 
 <p>Returns an HTML table (string) of reviews.</p>
@@ -1000,7 +1000,7 @@ HTML file or for sending in an email.</p>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Private function. Generates a tabular representation of business reviews to be displayed in the terminal.</span>
 
-<span class="sd">    * reviews (list of dictionaries): A list of simplified Yelp reviews (where each review is represented as a dictionary).  </span>
+<span class="sd">    * reviews (list of dictionaries): A list of simplified Yelp reviews (where each review is represented as a dictionary).</span>
 
 <span class="sd">    Returns a string representation of a table.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -1020,7 +1020,7 @@ HTML file or for sending in an email.</p>
             <div class="docstring"><p>Private function. Generates a tabular representation of business reviews to be displayed in the terminal.</p>
 
 <ul>
-<li>reviews (list of dictionaries): A list of simplified Yelp reviews (where each review is represented as a dictionary).  </li>
+<li>reviews (list of dictionaries): A list of simplified Yelp reviews (where each review is represented as a dictionary).</li>
 </ul>
 
 <p>Returns a string representation of a table.</p>
@@ -1042,8 +1042,8 @@ HTML file or for sending in an email.</p>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Private function. Retrieves data from any Yelp endpoint using the authentication key.</span>
 
-<span class="sd">    * url (str): [Required] The API Endpoint + query parameters.  </span>
-<span class="sd">    </span>
+<span class="sd">    * url (str): [Required] The API Endpoint + query parameters.</span>
+
 <span class="sd">    Returns whatever Yelp&#39;s API endpoint gives back.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">token</span> <span class="o">=</span> <span class="n">authentication</span><span class="o">.</span><span class="n">get_token</span><span class="p">(</span><span class="s1">&#39;https://www.apitutor.org/yelp/key&#39;</span><span class="p">)</span>
@@ -1059,7 +1059,7 @@ HTML file or for sending in an email.</p>
             <div class="docstring"><p>Private function. Retrieves data from any Yelp endpoint using the authentication key.</p>
 
 <ul>
-<li>url (str): [Required] The API Endpoint + query parameters.  </li>
+<li>url (str): [Required] The API Endpoint + query parameters.</li>
 </ul>
 
 <p>Returns whatever Yelp's API endpoint gives back.</p>
@@ -1082,8 +1082,8 @@ HTML file or for sending in an email.</p>
 <span class="sd">    Private function. Simplifies Yelp businesses.</span>
 
 <span class="sd">    * data (list): The original data list returned by the Yelp API</span>
-<span class="sd">    </span>
-<span class="sd">    Returns a simpler data structure for the (complex) data </span>
+
+<span class="sd">    Returns a simpler data structure for the (complex) data</span>
 <span class="sd">    returned by Yelp. Only shows some of the most common</span>
 <span class="sd">    data fields.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -1118,7 +1118,7 @@ HTML file or for sending in an email.</p>
 <li>data (list): The original data list returned by the Yelp API</li>
 </ul>
 
-<p>Returns a simpler data structure for the (complex) data 
+<p>Returns a simpler data structure for the (complex) data
 returned by Yelp. Only shows some of the most common
 data fields.</p>
 </div>
@@ -1140,8 +1140,8 @@ data fields.</p>
 <span class="sd">    Private function that simplifies Yelp&#39;s comments data structure.</span>
 
 <span class="sd">    * data (list): The original data list returned by the Yelp API</span>
-<span class="sd">    </span>
-<span class="sd">    Returns a simpler data structure for the (complex) data </span>
+
+<span class="sd">    Returns a simpler data structure for the (complex) data</span>
 <span class="sd">    returned by Yelp. Only shows some of the most common</span>
 <span class="sd">    data fields.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -1166,7 +1166,7 @@ data fields.</p>
 <li>data (list): The original data list returned by the Yelp API</li>
 </ul>
 
-<p>Returns a simpler data structure for the (complex) data 
+<p>Returns a simpler data structure for the (complex) data
 returned by Yelp. Only shows some of the most common
 data fields.</p>
 </div>
