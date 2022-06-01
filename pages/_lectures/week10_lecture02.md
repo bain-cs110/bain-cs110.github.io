@@ -9,8 +9,8 @@ slides:
    - title: "Practice for P2"
      url: https://docs.google.com/presentation/d/1RMaBsrdcgfc7EnMHd4UvM3umnscRwZNP3WgrEUAaGS8/edit?usp=sharing
 videos:
-   - title: "Live Lecture (Not Yet Posted)"
-     url:
+   - title: "Live Lecture"
+     url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5f184f9b-0e87-4d8b-b3e9-ae670037b3f6
      duration: "50:00"
      live: 1
 ---
