@@ -32,7 +32,7 @@ readings:
 extras:
   - title: "Tutorial Signups"
     comments: "You MUST sign up for a tutorial session. The first week's tutorial is mandatory attendance."
-    url: https://docs.google.com/spreadsheets/d/1wANRjI2fi6UewfL_dQ2TcmNsc6WCMZQ2LowA5XyTA1o/edit#gid=1984089197&range=A1
+    url: https://docs.google.com/spreadsheets/d/1wANRjI2fi6UewfL_dQ2TcmNsc6WCMZQ2LowA5XyTA1o/edit?usp=sharing
     external: 1
 ---
 Today I'll demonstrate setting up Python and getting ready for our first programming assignments.. We will also sign up for Tutorial sessions in class and review the course survey results.
