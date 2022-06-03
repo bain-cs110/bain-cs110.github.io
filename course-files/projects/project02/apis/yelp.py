@@ -161,7 +161,9 @@ def get_businesses(location:str='Evanston, IL', limit:int=10, term:str=None, cat
     * term (str):       A search term
     * categories (str): One or more comma-delimited categories to filter by.
     * sort_by (str):    How to order search results. Options are:
-                        best_match, rating, review_count, distance
+                        best_match, rating, review_count, distance. Note that the
+                        rating option will be weighted by the number of reviews each
+                        restaurant has.
     * price (str):      How expensive 1, 2, 3, 4 or comma-delimited list, e.g.: 1,2
     * open_now (str):   Set to 'true' if you only want the open restaurants
     * simplify (bool):  Indicates whether you want to simplify the data that is returned.
@@ -179,7 +181,7 @@ def get_businesses(location:str='Evanston, IL', limit:int=10, term:str=None, cat
         price=price,
         open_now=open_now
     )
-    print(url)
+    print("DEBUG:", url)
 
     data = _issue_get_request(url)
     if not simplify:

@@ -244,7 +244,9 @@ apis<wbr>.yelp    </h1>
 <span class="sd">    * term (str):       A search term</span>
 <span class="sd">    * categories (str): One or more comma-delimited categories to filter by.</span>
 <span class="sd">    * sort_by (str):    How to order search results. Options are:</span>
-<span class="sd">                        best_match, rating, review_count, distance</span>
+<span class="sd">                        best_match, rating, review_count, distance. Note that the</span>
+<span class="sd">                        rating option will be weighted by the number of reviews each</span>
+<span class="sd">                        restaurant has.</span>
 <span class="sd">    * price (str):      How expensive 1, 2, 3, 4 or comma-delimited list, e.g.: 1,2</span>
 <span class="sd">    * open_now (str):   Set to &#39;true&#39; if you only want the open restaurants</span>
 <span class="sd">    * simplify (bool):  Indicates whether you want to simplify the data that is returned.</span>
@@ -262,7 +264,7 @@ apis<wbr>.yelp    </h1>
         <span class="n">price</span><span class="o">=</span><span class="n">price</span><span class="p">,</span>
         <span class="n">open_now</span><span class="o">=</span><span class="n">open_now</span>
     <span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DEBUG:&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
 
     <span class="n">data</span> <span class="o">=</span> <span class="n">_issue_get_request</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">simplify</span><span class="p">:</span>
@@ -493,7 +495,9 @@ apis<wbr>.yelp    </h1>
 <span class="sd">    * term (str):       A search term</span>
 <span class="sd">    * categories (str): One or more comma-delimited categories to filter by.</span>
 <span class="sd">    * sort_by (str):    How to order search results. Options are:</span>
-<span class="sd">                        best_match, rating, review_count, distance</span>
+<span class="sd">                        best_match, rating, review_count, distance. Note that the</span>
+<span class="sd">                        rating option will be weighted by the number of reviews each</span>
+<span class="sd">                        restaurant has.</span>
 <span class="sd">    * price (str):      How expensive 1, 2, 3, 4 or comma-delimited list, e.g.: 1,2</span>
 <span class="sd">    * open_now (str):   Set to &#39;true&#39; if you only want the open restaurants</span>
 <span class="sd">    * simplify (bool):  Indicates whether you want to simplify the data that is returned.</span>
@@ -511,7 +515,7 @@ apis<wbr>.yelp    </h1>
         <span class="n">price</span><span class="o">=</span><span class="n">price</span><span class="p">,</span>
         <span class="n">open_now</span><span class="o">=</span><span class="n">open_now</span>
     <span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DEBUG:&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
 
     <span class="n">data</span> <span class="o">=</span> <span class="n">_issue_get_request</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">simplify</span><span class="p">:</span>
@@ -529,7 +533,9 @@ apis<wbr>.yelp    </h1>
 <li>term (str):       A search term</li>
 <li>categories (str): One or more comma-delimited categories to filter by.</li>
 <li>sort_by (str):    How to order search results. Options are:
-                best_match, rating, review_count, distance</li>
+                best_match, rating, review_count, distance. Note that the
+                rating option will be weighted by the number of reviews each
+                restaurant has.</li>
 <li>price (str):      How expensive 1, 2, 3, 4 or comma-delimited list, e.g.: 1,2</li>
 <li>open_now (str):   Set to 'true' if you only want the open restaurants</li>
 <li>simplify (bool):  Indicates whether you want to simplify the data that is returned.</li>

@@ -313,7 +313,7 @@ apis<wbr>.spotify    </h1>
         <span class="n">params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;seed_genres=&#39;</span> <span class="o">+</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">genres</span><span class="p">))</span>
 
     <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://api.spotify.com/v1/recommendations?&#39;</span> <span class="o">+</span> <span class="s1">&#39;&amp;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DEBUG:&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">_issue_get_request</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">simplify</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">data</span>
@@ -1380,7 +1380,7 @@ Returns a list of strings representing the genres.</p>
         <span class="n">params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;seed_genres=&#39;</span> <span class="o">+</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">genres</span><span class="p">))</span>
 
     <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://api.spotify.com/v1/recommendations?&#39;</span> <span class="o">+</span> <span class="s1">&#39;&amp;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DEBUG:&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">_issue_get_request</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">simplify</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">data</span>
