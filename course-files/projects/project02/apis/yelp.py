@@ -11,15 +11,11 @@ import textwrap
 __all__ = [
     'get_businesses', 'get_categories',
     'get_formatted_business_list_table',
-    'get_formatted_business_table', 'get_reviews',
-    '_generate_business_search_url', '_get_business_display_html',
-    '_get_business_display_text', '_get_reviews_display_html',
-    '_get_reviews_display_text', '_issue_get_request',
-    '_simplify_businesses', '_simplify_comments'
+    'get_formatted_business_table', 'get_reviews'
 ]
 def get_categories():
     """
-    Returns a list of valid yelp categories (feel free to modify this list).
+    Returns a list of valid yelp categories which are strings.
     """
     # feel free to modify this as you like. just make sure that
     # the category is a valid Yelp category:
@@ -156,19 +152,20 @@ def get_businesses(location:str='Evanston, IL', limit:int=10, term:str=None, cat
     '''
     Searches for Yelp businesses based on various search criteria. Parameters:
 
-    * location (str):   Location of the search
-    * limit (int):      An integer indicating how many records to return. Max of 50.
-    * term (str):       A search term
-    * categories (str): One or more comma-delimited categories to filter by.
-    * sort_by (str):    How to order search results. Options are:
+    * `location` (str`):   Location of the search
+    * `limit` (`int`):      An integer indicating how many records to return. Max of 50.
+    * `term` (`str`):       A search term
+    * `categories` (`str`): One or more comma-delimited categories to filter by.
+    * `sort_by` (`str`):    How to order search results. Options are:
                         best_match, rating, review_count, distance. Note that the
                         rating option will be weighted by the number of reviews each
                         restaurant has.
-    * price (str):      How expensive 1, 2, 3, 4 or comma-delimited list, e.g.: 1,2
-    * open_now (str):   Set to 'true' if you only want the open restaurants
-    * simplify (bool):  Indicates whether you want to simplify the data that is returned.
+    * `price` (`str`):      How expensive 1, 2, 3, 4 or comma-delimited list, e.g.: 1,2
+    * `open_now` (`str`):   Set to 'true' if you only want the open restaurants
+    * `simplify` (`bool`):  Indicates whether you want to simplify the data that is returned. Non-simplified data
+                            will return a list of dictionaries.
 
-    Returns a list of businesses matching your search / ordering / limit criteria.
+    Returns a `list` of businesses matching your search / ordering / limit criteria.
     '''
 
     # generate the URL query string based on the arguments passed in by the user
@@ -192,9 +189,9 @@ def get_formatted_business_list_table(businesses:list):
     '''
     Generates a tabular representation of a list of businesses to be displayed in the terminal.
 
-    * businesses (list): A list of simplified dictionaries (where each dictionary represents a business).
+    * `businesses` (`list`): A list of simplified dictionaries (where each dictionary represents a business).
 
-    Returns a string representation of a table.
+    Returns a `string` representation of a table.
     '''
     text = ''
     template = '{0:2} | {1:22.22} | {2:<30.30} | {3:<6} | {4:<10}\n'
@@ -225,11 +222,11 @@ def get_reviews(business_id:str, simplify:bool=True):
     '''
     Retrieves a list of Yelp reviews for a particular business. Parameters:
 
-    * business_id (str): [Required] A character string corresponding to the business id.
+    * `business_id` (`str`): [Required] A character string corresponding to the business id.
         * Example: 0b6AU869xq6KXdK3NtVJnw
-    * simplify (bool):   Indicates whether you want to simplify the data that is returned.
+    * `simplify` (`bool`):   Indicates whether you want to simplify the data that is returned.
 
-    Returns a list of reviews.
+    Returns a `list` of reviews.
     '''
     # https://www.yelp.com/developers/documentation/v3/business_reviews
     url = 'https://api.yelp.com/v3/businesses/' + business_id + '/reviews'
@@ -358,9 +355,9 @@ def get_formatted_business_table(business:dict, reviews:list=None, to_html=True)
     Makes a formatted HTML table of a business and corresponding review. Good for writing to an
     HTML file or for sending in an email.
 
-    * business(dict): [Required] A dictionary that represents a business.
-    * reviews(list): List of reviews that correspond to the business
-    * to_html(bool): Whether you want to return an HTML representation (for email)
+    * `business` (`dict`): [Required] A dictionary that represents a business.
+    * `reviews` (`list`): List of reviews that correspond to the business
+    * `to_html` (`bool`): Whether you want to return an HTML representation (for email)
                      or a string representation (to print to the screen).
 
     Returns either a text or HTML representation of a business + reviews.
