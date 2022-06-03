@@ -44,21 +44,31 @@ def _get_coordinates_by_dimension(canvas, tag, dimension='x'):
                 coords.append(shape_coords[i])
     return coords
 
-def make_circle(canvas, center, radius, fill_color='#FF4136', tag=None, stroke_width=2, outline=None):
-    make_oval(
+def make_circle(canvas, center, radius, fill_color='blue', tag=None, stroke_width=2, outline=None):
+    '''
+    Draws a circle on a specified canvas with a particular center and radius.
+
+    * `canvas` (`Canvas`):          [Required] The sender's email.
+    * `center` (`tuple`):   [Required] A list or of recipient emails, string is fine for one recipient.
+    * `radius` (`float` or `int`): [Required] The subject of the email.
+    * `fill_color` (`str`):       Color name or hex code to fill the object with.
+    * `tag` (`str`): The tag with which to name the object being drawn.
+    '''
+    make_poly_circle(
         canvas, center, radius, radius, fill_color=fill_color, tag=tag,
         stroke_width=stroke_width, outline=outline
     )
 
 def make_oval(canvas, center, radius_x, radius_y, fill_color='#FF4136', tag=None, stroke_width=1, outline=None):
-    x, y = center
-    return canvas.create_oval(
-        [ x - radius_x, y - radius_y, x + radius_x, y + radius_y ],
-        fill=fill_color,
-        width=stroke_width,
-        tags=tag,
-        outline=outline
-    )
+    make_poly_oval(
+        canvas,
+        center,
+        radius_x,
+        radius_y,
+        fill_color=fill_color,
+        tag=tag,
+        stroke_width=stroke_width,
+        outline=outline)
 
 def make_poly_circle(canvas, center, radius, fill_color='#FF4136', tag=None, stroke_width=1, outline=None):
     make_poly_oval(
