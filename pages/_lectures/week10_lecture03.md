@@ -11,7 +11,7 @@ If you have already taken Quiz 1 and Quiz 2 and are satisfied with your grade, Q
 
 ## PLEASE READ CAREFULLY
 * Quiz 3 will be administered using the Lockdown Browser
-* It will take place **during regularly scheduled class time in Tech Auditorium**.
+* It will take place **during regularly scheduled class time in our usual room**.
 * If you are registered with ANU and have been given extended time, I will reach out to you separately.
 
 ## Study Materials
