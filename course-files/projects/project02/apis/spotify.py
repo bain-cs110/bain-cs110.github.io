@@ -209,7 +209,7 @@ def get_similar_tracks(artist_ids: list = [], track_ids: list = [], genres: list
         params.append('seed_genres=' + ','.join(genres))
 
     url = 'https://api.spotify.com/v1/recommendations?' + '&'.join(params)
-    print(url)
+    print("DEBUG:", url)
     data = _issue_get_request(url)
     if not simplify:
         return data
