@@ -2,6 +2,13 @@ import os
 import random
 import math
 
+__all__ = [
+    "make_circle", "make_oval", "make_square", "make_rectangle", "make_line",
+    "make_car", "make_cloud", "make_grid", "make_image", "get_top", "get_left",
+    "get_right", "get_left", "get_center", "get_bottom", "get_tag_from_x_y_coordinate",
+    "update_position_by_tag", "update_fill_by_tag", "delete_by_tag", "flip", "rotate"
+]
+
 _cache = []
 def _get_coordinates(canvas, id):
     return canvas.coords(id)
@@ -46,13 +53,16 @@ def _get_coordinates_by_dimension(canvas, tag, dimension='x'):
 
 def make_circle(canvas, center, radius, fill_color='blue', tag=None, stroke_width=2, outline=None):
     '''
-    Draws a circle on a specified canvas with a particular center and radius.
+    Draws a circle on a specified canvas with a particular center and radius. It does not use the `create_oval`
+    function so that it can be rotated by the `rotate` function.
 
-    * `canvas` (`Canvas`):          [Required] The sender's email.
-    * `center` (`tuple`):   [Required] A list or of recipient emails, string is fine for one recipient.
-    * `radius` (`float` or `int`): [Required] The subject of the email.
-    * `fill_color` (`str`):       Color name or hex code to fill the object with.
+    * `canvas` (`Canvas`): [Required] The `Canvas` to draw on.
+    * `center` (`tuple`): [Required] A `(x,y)` coorindate marking the center of the shape.
+    * `radius` (`float` or `int`): [Required] The radius of the shape.
+    * `fill_color` (`str`): Color name or hex code to fill the object with.
     * `tag` (`str`): The tag with which to name the object being drawn.
+    * `stroke_width` (`int`): How wide to draw the outline of the shape.
+    * `outline` (`str`): Color name or hex code used to outline the shape.
     '''
     make_poly_circle(
         canvas, center, radius, radius, fill_color=fill_color, tag=tag,
@@ -60,6 +70,19 @@ def make_circle(canvas, center, radius, fill_color='blue', tag=None, stroke_widt
     )
 
 def make_oval(canvas, center, radius_x, radius_y, fill_color='#FF4136', tag=None, stroke_width=1, outline=None):
+    '''
+    Draws a circle on a specified canvas with a particular center and radius. It does not use the `create_oval`
+    function so that it can be rotated by the `rotate` function.
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` to draw on.
+    * `center` (`tuple`): [Required] A `(x,y)` coorindate marking the center of the shape.
+    * `radius_x` (`float` or `int`): [Required] The radius of the shape in the x-axis.
+    * `radius_y` (`float` or `int`): [Required] The radius of the shape in the y-axis.
+    * `fill_color` (`str`): Color name or hex code to fill the object with.
+    * `tag` (`str`): The tag with which to name the object being drawn.
+    * `stroke_width` (`int`): How wide to draw the outline of the shape.
+    * `outline` (`str`): Color name or hex code used to outline the shape.
+    '''
     make_poly_oval(
         canvas,
         center,
@@ -117,8 +140,15 @@ def make_poly_oval(canvas, center, radius_x, radius_y, fill_color='#FF4136', tag
     )
 
 def rotate(canvas, tag, degrees=5, origin=None):
-    # NOTE: This rotate function only works on POLYGONS
-    # DOES NOT WORK ON circles or ovals
+    '''
+    Rotates any polygons with a given tag around a point on a given canvas. Note that this does
+    not work with circles or ovals generated using the `create_oval`/`create_circle` functions.
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` to draw on.
+    * `tag` (`str`): The tag of the object to animate.
+    * `degrees` (`int`): How far, in degrees, you would like to rotate the object.
+    * `origin` (`tuple`): A coordinate about which to rotate.
+    '''
     if origin is None:
         # calculate reasonable origin
         top = get_top(canvas, tag)
@@ -143,16 +173,41 @@ def rotate(canvas, tag, degrees=5, origin=None):
         # set the coordinates:
         _set_coordinates(canvas, id, coords)
 
-def make_square(canvas, top_left, width, fill_color="#3D9970", tag=None):
+
+def make_square(canvas, top_left, width, fill_color="green", tag=None, stroke_width=1, outline=None):
+    '''
+    Draws a square on a specified canvas with a particular `top_left` coordinate.
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` to draw on.
+    * `top_left` (`tuple`): [Required] A `(x,y)` coorindate marking the top left corner of the shape.
+    * `width` (`float` or `int`): [Required] The width of the shape.
+    * `fill_color` (`str`): Color name or hex code to fill the object with.
+    * `tag` (`str`): The tag with which to name the object being drawn.
+    * `stroke_width` (`int`): How wide to draw the outline of the shape.
+    * `outline` (`str`): Color name or hex code used to outline the shape.
+    '''
     x, y = top_left
     return canvas.create_rectangle(
         [(x, y), (x + width, y + width)],
         fill=fill_color,
-        width=0,
-        tags=tag
+        tags=tag,
+        stroke_width=stroke_width,
+        outline=outline
     )
 
-def make_rectangle(canvas, top_left, width, height, fill_color="#3D9970", tag=None):
+def make_rectangle(canvas, top_left, width, height, fill_color="black", tag=None, stroke_width=1, outline=None):
+    '''
+    Draws a square on a specified canvas with a particular `top_left` coordinate.
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` to draw on.
+    * `top_left` (`tuple`): [Required] A `(x,y)` coorindate marking the top left corner of the shape.
+    * `width` (`float` or `int`): [Required] The width of the shape.
+    * `height` (`float` or `int`): [Required] The height of the shape.
+    * `fill_color` (`str`): Color name or hex code to fill the object with.
+    * `tag` (`str`): The tag with which to name the object being drawn.
+    * `stroke_width` (`int`): How wide to draw the outline of the shape.
+    * `outline` (`str`): Color name or hex code used to outline the shape.
+    '''
     x, y = top_left
     return canvas.create_rectangle(
         [(x, y), (x + width, y + height)],
@@ -161,55 +216,100 @@ def make_rectangle(canvas, top_left, width, height, fill_color="#3D9970", tag=No
         tags=tag
     )
 
-def make_line(canvas, coordinates, curvy=False, width=2, tag=None):
+def make_line(canvas, coordinates, curvy=False, fill_color="grey", width=2, tag=None, dash=None):
+    '''
+    Draws a line on a specified canvas between a list of coordinates.
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` to draw on.
+    * `coordinates` (`list`): [Required] A list of coordinates with which to draw the line.
+    * `smooth` (`bool`): Whether or not to curve the line through the specified coordinates.
+    * `width` (`float` or `int`): The width of the line.
+    * `fill_color` (`str`): Color name or hex code to fill the object with.
+    * `tag` (`str`): The tag with which to name the object being drawn.
+    * `dash` (`tuple`): Read more about the `dash` argument [here](https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/dash-patterns.html).
+    '''
     canvas.create_line(
         coordinates,
         width=width,
         smooth=curvy,
-        tag=tag)
+        fill=fill_color,
+        tag=tag,
+        dash=None)
 
 def get_left(canvas, tag):
     '''
-    returns the left boundary of the shape group
+    Returns the left-most x-coordinate of an object with the given tag.
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` to look at.
+    * `tag` (`str`): [Required] The tag of the object to lookup.
     '''
     return min(*_get_x_coordinates(canvas, tag))
 
 def get_right(canvas, tag):
     '''
-    returns the right boundary of the shape group
+    Returns the right-most x-coordinate of an object with the given tag.
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` to look at.
+    * `tag` (`str`): [Required] The tag of the object to lookup.
     '''
     return max(*_get_x_coordinates(canvas, tag))
 
 def get_top(canvas, tag):
     '''
-    returns the top boundary of the shape group
+    Returns the top-most y-coordinate of an object with the given tag.
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` to look at.
+    * `tag` (`str`): [Required] The tag of the object to lookup.
     '''
     return min(*_get_y_coordinates(canvas, tag))
 
 def get_bottom(canvas, tag):
     '''
-    returns the bottom boundary of the shape group
+    Returns the bottom-most y-coordinate of an object with the given tag.
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` to look at.
+    * `tag` (`str`): [Required] The tag of the object to lookup.
     '''
     return max(*_get_y_coordinates(canvas, tag))
 
 def get_width(canvas, tag):
     '''
-    returns the width of the shape group
+    Returns the width of an object with the given tag.
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` to look at.
+    * `tag` (`str`): [Required] The tag of the object to lookup.
     '''
     x_coords = _get_x_coordinates(canvas, tag)
     return max(*x_coords) - min(*x_coords)
 
 def get_center(canvas, tag):
+    '''
+    Returns the center x-coordinate of an object with the given tag.
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` to look at.
+    * `tag` (`str`): [Required] The tag of the object to lookup.
+    '''
+
     return get_width(canvas, tag) / 2 + get_left(canvas, tag)
 
 def get_height(canvas, tag):
     '''
-    returns the height of the shape group
+    Returns the height of an object with the given tag.
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` to look at.
+    * `tag` (`str`): [Required] The tag of the object to lookup.
     '''
     y_coords = _get_y_coordinates(canvas, tag)
     return max(*y_coords) - min(*y_coords)
 
 def make_cloud(canvas, center, my_tag=""):
+    '''
+    Draws a weird looking cloud on a given `Canvas`
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` to drawn on.
+    * `center` (`tuple`): [Required] A coordinate to center the cloud on.
+    * `my_tag` (`str`): The tag to assign to the cloud.
+    '''
     for i in range(random.randint(0,10)):
         x_offset = random.randint(-40,40)
         y_offset = random.randint(0,20)
@@ -217,8 +317,13 @@ def make_cloud(canvas, center, my_tag=""):
 
 def make_car(canvas, top_left=(0, 0), fill_color="#3D9970", my_tag=None):
     '''
-    demo function that show you how to draw a car, given the convenience
-    functions that are available in this module
+    Draws a cool car.
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` to drawn on.
+    * `top_left` (`tuple`): A coordinate at which to draw the car.
+    * `fill_color` (`str`): Color name or hex code to fill the object with.
+    * `my_tag` (`str`): The tag to assign to the car.
+
     '''
     x, y = top_left
     make_rectangle(canvas, (x + 50, y), 100, 40, fill_color=fill_color, tag=my_tag)
@@ -226,42 +331,21 @@ def make_car(canvas, top_left=(0, 0), fill_color="#3D9970", my_tag=None):
     make_circle(canvas, (x + 50, y + 80), 20, fill_color='black', tag=my_tag)
     make_circle(canvas, (x + 150, y + 80), 20, fill_color='black', tag=my_tag)
 
-def make_star(canvas, center, diameter, my_tag=""):
-    '''
-    demo function that show you how to draw a star, given the convenience
-    functions that are available in this module
-    '''
-    make_circle(
-        canvas,
-        center,
-        diameter / 2,
-        stroke_width=0,
-        outline='white',
-        fill_color='white',
-        tag=my_tag
-    )
-
-def make_bubble(canvas, center, diameter, outline='white', stroke_width=1, my_tag="", **kwargs):
-    '''
-    demo function that show you how to draw a bubble, given the convenience
-    functions that are available in this module
-    '''
-    make_circle(
-        canvas,
-        center,
-        diameter / 2,
-        stroke_width=stroke_width,
-        outline=outline,
-        fill_color=None,
-        tag=my_tag,
-        **kwargs
-    )
-
 def make_image(
         canvas, image_path, position=(200, 200), rotation=None,
-        scale=None, anchor='nw', **kwargs):
+        scale=None, **kwargs):
+    '''
+    Draws a given image on the screen. NOTE: Requires the `pillow` package to be installed.
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` to drawn on.
+    * `image_path` (`str`): [Required] Location of the image file on your computer.
+    * `position` (`tuple`): A coordinate at which to render the image.
+    * `rotation` (`int`): A number of degrees to rotate the given image.
+    * `scale` (`int`): A scaling factor to multiply the image size by.
+    '''
     # import PIL libraries
     from PIL import Image, ImageTk
+    anchor='nw'
 
     # 1. create PIL image and apply any image transformations:
     dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -285,6 +369,13 @@ def make_image(
     canvas.create_image(*position, image=tkinter_image, anchor=anchor, **kwargs)
 
 def get_tag_from_x_y_coordinate(canvas, x, y):
+    '''
+    Tries to return a tag of an object at the given coordinates.
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` to drawn on.
+    * `x` (`int`): An x-coordinate.
+    * `y` (`int`): A y-coordinate.
+    '''
     try:
         shape_id = canvas.find_closest(x, y) # get the top shape
         if shape_id:
@@ -298,22 +389,49 @@ def get_tag_from_x_y_coordinate(canvas, x, y):
         return None
 
 def update_position_by_tag(canvas, tag, x=2, y=0):
+    '''
+    Move a given tagged object on a particular canvas.
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` to drawn on.
+    * `tag` (`str`): [Required] The tag of the object to move.
+    * `x` (`int`): A number of pixels to move in the x direction.
+    * `y` (`int`): A number of pixels to move in the x direction.
+    '''
     ids = canvas.find_withtag(tag)
     for id in ids:
         _update_position_by_id(canvas, id, x, y)
 
 def update_fill_by_tag(canvas, tag, color):
+    '''
+    Change the fill color of a tagged object.
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` to drawn on.
+    * `tag` (`str`): [Required] The tag of the object to re-fill.
+    * `color` (`str`): [Required] A color name or hex code to re-fill with.
+    '''
     ids = canvas.find_withtag(tag)
     for id in ids:
         canvas.itemconfig(id, fill=color)
 
 def delete_by_tag(canvas, tag):
+    '''
+    Delete a given tagged object on a particular canvas.
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` to drawn on.
+    * `tag` (`str`): [Required] The tag of the object to delete.
+    '''
     ids = canvas.find_withtag(tag)
     for id in ids:
         canvas.delete(id)
 
 
 def flip(canvas, tag):
+    '''
+    Flip a given tagged object on a particular canvas.
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` to drawn on.
+    * `tag` (`str`): [Required] The tag of the object to flip.
+    '''
     center = get_center(canvas, tag)
     width = get_width(canvas, tag)
     shape_ids = canvas.find_withtag(tag)
@@ -335,31 +453,38 @@ def flip(canvas, tag):
         _set_coordinates(canvas, shape_id, flipped_coordinates)
 
 
-def make_grid(c, w, h):
+def make_grid(canvas, width, height):
+    '''
+    Draw a grid on a given canvas.
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` to drawn on.
+    * `width` (`int`): [Required] Width of the grid to draw.
+    * `height` (`int`): [Required] Height of the grid to draw.
+    '''
     interval = 100
 
     # Delete old grid if it exists:
-    c.delete('grid_line')
+    canvas.delete('grid_line')
     # Creates all vertical lines at intevals of 100
-    for i in range(0, w, interval):
-        c.create_line(i, 0, i, h, tag='grid_line')
+    for i in range(0, width, interval):
+        canvas.create_line(i, 0, i, height, tag='grid_line')
 
         # Creates all horizontal lines at intevals of 100
-        for i in range(0, h, interval):
-            c.create_line(0, i, w, i, tag='grid_line')
+        for i in range(0, height, interval):
+            canvas.create_line(0, i, width, i, tag='grid_line')
 
             # Creates axis labels
             offset = 2
-            for y in range(0, h, interval):
-                for x in range(0, w, interval):
-                    c.create_oval(
+            for y in range(0, height, interval):
+                for x in range(0, width, interval):
+                    canvas.create_oval(
                     x - offset,
                     y - offset,
                     x + offset,
                     y + offset,
                     fill='black'
                     )
-                    c.create_text(
+                    canvas.create_text(
                     x + offset,
                     y + offset,
                     text="({0}, {1})".format(x, y),
