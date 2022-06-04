@@ -70,6 +70,8 @@ Your course grade is calculated based on 200 points as follows:
 | **2 Quizzes** (of 3) | 2 x 30 Points (lowest score dropped) | 60 Points | 30% |
 | | | **200 Points** | **100%** |
 
+> Note, the tutorials are actually each worth approximately 2.85714 points on the total course grade (of 200 points). To calculate your tutorial points, you can add your 7 highest Tutorial scores, divide by 21, and multiply by 20.
+
 Final grades are assigned on a fixed scale which is set by the registrar's office:
 
 {:.medium}
