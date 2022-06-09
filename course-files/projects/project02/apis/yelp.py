@@ -69,12 +69,11 @@ def _simplify_businesses(data:list):
             'coordinates': item['coordinates'],
             'review_count': item['review_count'],
             'share_url': item['url'].split('?')[0],
-            'categories': ', '.join(list(map(get_alias, item['categories'])))
+            'categories': ', '.join(list(map(get_alias, item['categories']))),
+            'price': item.get('price'),
+            'display_phone': item.get('display_phone'),
+            'transactions': item.get('transactions')
         }
-        try:
-            business['price'] = item['price']
-        except:
-            pass
         simplified.append(business)
     return simplified
 
@@ -101,7 +100,7 @@ def _simplify_comments(data:list):
     return simplified
 
 
-def _generate_business_search_url(location:str='Evanston, IL', limit:int=10, term:str=None, categories:str=None, sort_by:str=None, price:str=None, open_now:str=None):
+def _generate_business_search_url(location:str='Evanston, IL', limit:int=10, term:str=None, categories:str=None, sort_by:str=None, price:str=None, open_now:str=None, attributes:str=None):
     # https://www.yelp.com/developers/documentation/v3/business_search
     '''
     Private function. Creates the URL that will be issued to the Yelp API:
@@ -114,6 +113,7 @@ def _generate_business_search_url(location:str='Evanston, IL', limit:int=10, ter
         * Options are: best_match, rating, review_count, distance
     * price (str):      How expensive 1, 2, 3, 4 or comma-delimited string, e.g.: 1,2
     * open_now (str):   Set to 'true' if you only want the open restaurants
+    * `attributes` (`list`): A list of any one ore more of the following filters: `hot_and_new`, `reservation`, `gender_neutral_restrooms`, `open_to_all`, `wheelchair_accessible`
 
     Returns a url (string).
     '''
@@ -128,10 +128,18 @@ def _generate_business_search_url(location:str='Evanston, IL', limit:int=10, ter
             if token not in all_categories:
                 raise Exception('"' + token + '" is not a valid category because it isn\'t in the yelp.get_categories() list. Please make sure that the following categories are valid (with a comma separating each of them): ' + categories)
         url += '&categories=' + categories
+
+    if attributes:
+        for attribute in attributes:
+            if attribute not in ['hot_and_new', 'reservation', 'gender_neutral_restrooms', 'open_to_all', 'wheelchair_accessible']:
+                raise Exception(attribute + " not in ['hot_and_new', 'reservation', 'gender_neutral_restrooms', 'open_to_all', 'wheelchair_accessible']")
+        url += '&attributes=' + ",".join(attributes)
+
     if sort_by:
         if sort_by not in ['best_match', 'rating', 'review_count', 'distance']:
             raise Exception(sort_by + " not in ['best_match', 'rating', 'review_count', 'distance']")
         url += '&sort_by=' + sort_by
+
     if price:
         prices = []
         price = str(price)
@@ -144,15 +152,17 @@ def _generate_business_search_url(location:str='Evanston, IL', limit:int=10, ter
         prices = sorted(prices)
         prices = ','.join(prices)
         url += '&price=' + prices  #1, 2, 3, 4 -or- 1,2 (for more than one)
+
     if open_now:
         url += '&open_now=true'
+
     return url
 
-def get_businesses(location:str='Evanston, IL', limit:int=10, term:str=None, categories:str=None, sort_by:str=None, price:str=None, open_now:str=None, simplify:bool=True):
+def get_businesses(location:str='Evanston, IL', limit:int=10, term:str=None, categories:str=None, sort_by:str=None, price:str=None, open_now:str=None, attributes:list=None, simplify:bool=True):
     '''
     Searches for Yelp businesses based on various search criteria. Parameters:
 
-    * `location` (str`):   Location of the search
+    * `location` (`str`):   Location of the search
     * `limit` (`int`):      An integer indicating how many records to return. Max of 50.
     * `term` (`str`):       A search term
     * `categories` (`str`): One or more comma-delimited categories to filter by.
@@ -162,9 +172,9 @@ def get_businesses(location:str='Evanston, IL', limit:int=10, term:str=None, cat
                         restaurant has.
     * `price` (`str`):      How expensive 1, 2, 3, 4 or comma-delimited list, e.g.: 1,2
     * `open_now` (`str`):   Set to 'true' if you only want the open restaurants
+    * `attributes` (`list`): A list of any one ore more of the following filters: `hot_and_new`, `reservation`, `gender_neutral_restrooms`, `open_to_all`, `wheelchair_accessible`
     * `simplify` (`bool`):  Indicates whether you want to simplify the data that is returned. Non-simplified data
                             will return a list of dictionaries.
-
     Returns a `list` of businesses matching your search / ordering / limit criteria.
     '''
 
@@ -176,7 +186,8 @@ def get_businesses(location:str='Evanston, IL', limit:int=10, term:str=None, cat
         categories=categories,
         sort_by=sort_by,
         price=price,
-        open_now=open_now
+        open_now=open_now,
+        attributes=attributes
     )
     print("DEBUG:", url)
 
