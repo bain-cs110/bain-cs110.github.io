@@ -60,14 +60,14 @@ apis<wbr>.twilio    </h1>
 </span><span id="L-10"><a href="#L-10"><span class="linenos">10</span></a><span class="kn">from</span> <span class="nn">sendgrid.helpers.mail</span> <span class="kn">import</span> <span class="n">Mail</span>
 </span><span id="L-11"><a href="#L-11"><span class="linenos">11</span></a>
 </span><span id="L-12"><a href="#L-12"><span class="linenos">12</span></a>
-</span><span id="L-13"><a href="#L-13"><span class="linenos">13</span></a><span class="k">def</span> <span class="nf">send_mail</span><span class="p">(</span><span class="n">from_email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">to_emails</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">subject</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">html_content</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+</span><span id="L-13"><a href="#L-13"><span class="linenos">13</span></a><span class="k">def</span> <span class="nf">send_mail</span><span class="p">(</span><span class="n">from_email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">to_emails</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">subject</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
 </span><span id="L-14"><a href="#L-14"><span class="linenos">14</span></a>    <span class="sd">&#39;&#39;&#39;</span>
 </span><span id="L-15"><a href="#L-15"><span class="linenos">15</span></a><span class="sd">    Uses the SendGrid API to send an email.</span>
 </span><span id="L-16"><a href="#L-16"><span class="linenos">16</span></a>
 </span><span id="L-17"><a href="#L-17"><span class="linenos">17</span></a><span class="sd">    * `from_email` (`str`):          [Required] The sender&#39;s email.</span>
 </span><span id="L-18"><a href="#L-18"><span class="linenos">18</span></a><span class="sd">    * `to_emails` (`list` or `str`):   [Required] A list of recipient emails, string is fine for one recipient.</span>
 </span><span id="L-19"><a href="#L-19"><span class="linenos">19</span></a><span class="sd">    * `subject` (`str`):             [Required] The subject of the email.</span>
-</span><span id="L-20"><a href="#L-20"><span class="linenos">20</span></a><span class="sd">    * `html_content` (`str`):        [Required] Text or HTML to be included in the body of the email.</span>
+</span><span id="L-20"><a href="#L-20"><span class="linenos">20</span></a><span class="sd">    * `content` (`str`):        [Required] Text or HTML to be included in the body of the email.</span>
 </span><span id="L-21"><a href="#L-21"><span class="linenos">21</span></a>
 </span><span id="L-22"><a href="#L-22"><span class="linenos">22</span></a><span class="sd">    Returns `True` if the email was successfully sent, `False` otherwise.</span>
 </span><span id="L-23"><a href="#L-23"><span class="linenos">23</span></a><span class="sd">    &#39;&#39;&#39;</span>
@@ -75,7 +75,7 @@ apis<wbr>.twilio    </h1>
 </span><span id="L-25"><a href="#L-25"><span class="linenos">25</span></a>        <span class="n">from_email</span><span class="o">=</span><span class="n">from_email</span><span class="p">,</span>
 </span><span id="L-26"><a href="#L-26"><span class="linenos">26</span></a>        <span class="n">to_emails</span><span class="o">=</span><span class="n">to_emails</span><span class="p">,</span>
 </span><span id="L-27"><a href="#L-27"><span class="linenos">27</span></a>        <span class="n">subject</span><span class="o">=</span><span class="n">subject</span><span class="p">,</span>
-</span><span id="L-28"><a href="#L-28"><span class="linenos">28</span></a>        <span class="n">html_content</span><span class="o">=</span><span class="n">html_content</span>
+</span><span id="L-28"><a href="#L-28"><span class="linenos">28</span></a>        <span class="n">html_content</span><span class="o">=</span><span class="n">content</span>
 </span><span id="L-29"><a href="#L-29"><span class="linenos">29</span></a>    <span class="p">)</span>
 </span><span id="L-30"><a href="#L-30"><span class="linenos">30</span></a>
 </span><span id="L-31"><a href="#L-31"><span class="linenos">31</span></a>    <span class="k">try</span><span class="p">:</span>
@@ -97,20 +97,20 @@ apis<wbr>.twilio    </h1>
 <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">send_mail</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">from_email</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="n">to_emails</span><span class="p">:</span> <span class="nb">list</span>, </span><span class="param"><span class="n">subject</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="n">html_content</span><span class="p">:</span> <span class="nb">str</span></span>)</span>
+        <span class="name">send_mail</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">from_email</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="n">to_emails</span><span class="p">:</span> <span class="nb">list</span>, </span><span class="param"><span class="n">subject</span><span class="p">:</span> <span class="nb">str</span>, </span><span class="param"><span class="n">content</span><span class="p">:</span> <span class="nb">str</span></span>)</span>
 
                 <label class="view-source-button" for="send_mail-view-source"><span>View Source</span></label>
 
     </div>
     <a class="headerlink" href="#send_mail"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="send_mail-14"><a href="#send_mail-14"><span class="linenos">14</span></a><span class="k">def</span> <span class="nf">send_mail</span><span class="p">(</span><span class="n">from_email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">to_emails</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">subject</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">html_content</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="send_mail-14"><a href="#send_mail-14"><span class="linenos">14</span></a><span class="k">def</span> <span class="nf">send_mail</span><span class="p">(</span><span class="n">from_email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">to_emails</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">subject</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
 </span><span id="send_mail-15"><a href="#send_mail-15"><span class="linenos">15</span></a>    <span class="sd">&#39;&#39;&#39;</span>
 </span><span id="send_mail-16"><a href="#send_mail-16"><span class="linenos">16</span></a><span class="sd">    Uses the SendGrid API to send an email.</span>
 </span><span id="send_mail-17"><a href="#send_mail-17"><span class="linenos">17</span></a>
 </span><span id="send_mail-18"><a href="#send_mail-18"><span class="linenos">18</span></a><span class="sd">    * `from_email` (`str`):          [Required] The sender&#39;s email.</span>
 </span><span id="send_mail-19"><a href="#send_mail-19"><span class="linenos">19</span></a><span class="sd">    * `to_emails` (`list` or `str`):   [Required] A list of recipient emails, string is fine for one recipient.</span>
 </span><span id="send_mail-20"><a href="#send_mail-20"><span class="linenos">20</span></a><span class="sd">    * `subject` (`str`):             [Required] The subject of the email.</span>
-</span><span id="send_mail-21"><a href="#send_mail-21"><span class="linenos">21</span></a><span class="sd">    * `html_content` (`str`):        [Required] Text or HTML to be included in the body of the email.</span>
+</span><span id="send_mail-21"><a href="#send_mail-21"><span class="linenos">21</span></a><span class="sd">    * `content` (`str`):        [Required] Text or HTML to be included in the body of the email.</span>
 </span><span id="send_mail-22"><a href="#send_mail-22"><span class="linenos">22</span></a>
 </span><span id="send_mail-23"><a href="#send_mail-23"><span class="linenos">23</span></a><span class="sd">    Returns `True` if the email was successfully sent, `False` otherwise.</span>
 </span><span id="send_mail-24"><a href="#send_mail-24"><span class="linenos">24</span></a><span class="sd">    &#39;&#39;&#39;</span>
@@ -118,7 +118,7 @@ apis<wbr>.twilio    </h1>
 </span><span id="send_mail-26"><a href="#send_mail-26"><span class="linenos">26</span></a>        <span class="n">from_email</span><span class="o">=</span><span class="n">from_email</span><span class="p">,</span>
 </span><span id="send_mail-27"><a href="#send_mail-27"><span class="linenos">27</span></a>        <span class="n">to_emails</span><span class="o">=</span><span class="n">to_emails</span><span class="p">,</span>
 </span><span id="send_mail-28"><a href="#send_mail-28"><span class="linenos">28</span></a>        <span class="n">subject</span><span class="o">=</span><span class="n">subject</span><span class="p">,</span>
-</span><span id="send_mail-29"><a href="#send_mail-29"><span class="linenos">29</span></a>        <span class="n">html_content</span><span class="o">=</span><span class="n">html_content</span>
+</span><span id="send_mail-29"><a href="#send_mail-29"><span class="linenos">29</span></a>        <span class="n">html_content</span><span class="o">=</span><span class="n">content</span>
 </span><span id="send_mail-30"><a href="#send_mail-30"><span class="linenos">30</span></a>    <span class="p">)</span>
 </span><span id="send_mail-31"><a href="#send_mail-31"><span class="linenos">31</span></a>
 </span><span id="send_mail-32"><a href="#send_mail-32"><span class="linenos">32</span></a>    <span class="k">try</span><span class="p">:</span>
@@ -140,7 +140,7 @@ apis<wbr>.twilio    </h1>
 <li><code>from_email</code> (<code>str</code>):          [Required] The sender's email.</li>
 <li><code>to_emails</code> (<code>list</code> or <code>str</code>):   [Required] A list of recipient emails, string is fine for one recipient.</li>
 <li><code>subject</code> (<code>str</code>):             [Required] The subject of the email.</li>
-<li><code>html_content</code> (<code>str</code>):        [Required] Text or HTML to be included in the body of the email.</li>
+<li><code>content</code> (<code>str</code>):        [Required] Text or HTML to be included in the body of the email.</li>
 </ul>
 
 <p>Returns <code>True</code> if the email was successfully sent, <code>False</code> otherwise.</p>
