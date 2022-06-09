@@ -10,14 +10,14 @@ from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 
 
-def send_mail(from_email: str, to_emails: list, subject: str, html_content: str):
+def send_mail(from_email: str, to_emails: list, subject: str, content: str):
     '''
     Uses the SendGrid API to send an email.
 
     * `from_email` (`str`):          [Required] The sender's email.
     * `to_emails` (`list` or `str`):   [Required] A list of recipient emails, string is fine for one recipient.
     * `subject` (`str`):             [Required] The subject of the email.
-    * `html_content` (`str`):        [Required] Text or HTML to be included in the body of the email.
+    * `content` (`str`):        [Required] Text or HTML to be included in the body of the email.
 
     Returns `True` if the email was successfully sent, `False` otherwise.
     '''
@@ -25,7 +25,7 @@ def send_mail(from_email: str, to_emails: list, subject: str, html_content: str)
         from_email=from_email,
         to_emails=to_emails,
         subject=subject,
-        html_content=html_content
+        html_content=content
     )
 
     try:
