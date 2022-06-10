@@ -100,12 +100,12 @@ def _simplify_comments(data:list):
     return simplified
 
 
-def _generate_business_search_url(location:str='Evanston, IL', limit:int=10, term:str=None, categories:str=None, sort_by:str=None, price:str=None, open_now:str=None, attributes:str=None):
+def _generate_business_search_url(location:str, limit:int=10, term:str=None, categories:str=None, sort_by:str=None, price:str=None, open_now:str=None, attributes:str=None):
     # https://www.yelp.com/developers/documentation/v3/business_search
     '''
     Private function. Creates the URL that will be issued to the Yelp API:
 
-    * location (str):   Location of the search
+    * location (str):   [Required] Location of the search
     * limit (int):      An integer indicating how many records to return. Max of 50.
     * term (str):       A search term
     * categories (str): One or more comma-delimited categories to filter by.
@@ -158,11 +158,11 @@ def _generate_business_search_url(location:str='Evanston, IL', limit:int=10, ter
 
     return url
 
-def get_businesses(location:str='Evanston, IL', limit:int=10, term:str=None, categories:str=None, sort_by:str=None, price:str=None, open_now:str=None, attributes:list=None, simplify:bool=True):
+def get_businesses(location:str, limit:int=10, term:str=None, categories:str=None, sort_by:str=None, price:str=None, open_now:str=None, attributes:list=None, simplify:bool=True):
     '''
     Searches for Yelp businesses based on various search criteria. Parameters:
 
-    * `location` (`str`):   Location of the search
+    * `location` (`str`):   [Required] Location to search.
     * `limit` (`int`):      An integer indicating how many records to return. Max of 50.
     * `term` (`str`):       A search term
     * `categories` (`str`): One or more comma-delimited categories to filter by.
@@ -180,7 +180,7 @@ def get_businesses(location:str='Evanston, IL', limit:int=10, term:str=None, cat
 
     # generate the URL query string based on the arguments passed in by the user
     url = _generate_business_search_url(
-        location=location,
+        location,
         limit=limit,
         term=term,
         categories=categories,
