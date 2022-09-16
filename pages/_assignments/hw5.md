@@ -25,6 +25,7 @@ draft: 0
 > 1. Practice working with sequences
 > 1. Practice with logic
 > 1. Practice writing more complex programs
+> 1. Practice working with and completing existing programs
 
 In this assignment, you will be making the full version of Wordle (we'll be calling it W0rdle), complete with its interface! While much of the program is already complete, your job will be to understand the existing program and functions, and use those to complete the full version of W0rdle. Make sure to review [Tutorial 08](./tutorial08).
 
