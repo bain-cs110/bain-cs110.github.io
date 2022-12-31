@@ -1,9 +1,11 @@
 ---
 layout: two-column
 ---
-
-<p>
-    {% if page.due_date %}
+<a href="{{ page.url }}" target="_blank">Open this page in a new window.</a>
+<br>
+<br>
+<!-- <p>
+    <!--{% if page.due_date %}
         Due on {{ page.due_date  | date: "%a, %m/%d" }} @ 11:59PM.
     {% endif %}
     {% if page.points %}
@@ -12,7 +14,6 @@ layout: two-column
     {% if page.credits %}
         <br>Credit: {{page.credits}}
     {% endif %}
-</p>
 
+</p>  -->
 {{ content }}
-

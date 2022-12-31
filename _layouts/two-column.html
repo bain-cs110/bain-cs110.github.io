@@ -4,17 +4,19 @@
         {% include head.html %}
     </head>
     <body class="two-column">
-        {% include header.html %}
-        {% include navigation.html %}
-        <main>
-            <aside>
+        <div class="wrapper">
+
+            <div class="sidebar">
                 {% include toc.html html=content class='side-menu' ordered=true %}
-            </aside>
-            <article>
-                {% include page_title.html %} 
+            </div>
+
+          <article>
+            <div class="main">
+                <!--{% include page_title.html %}-->
                 {{ content }}
-            </article>  
-        </main>
+            </div>
+</article>
+      </div>
         {{ page.additional_html }}
         {% include scripts.html %}
         <script type="text/javascript" src="{{site.baseurl}}/assets/js/scrollspy.js"></script>

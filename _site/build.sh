@@ -1,15 +1,14 @@
 # zip everything:
-python3 course-files/build/zip_it.py course-files/homework
+python3 course-files/build/zip_it.py course-files/exercises
 python3 course-files/build/zip_it.py course-files/lectures
 python3 course-files/build/zip_it.py course-files/tutorials
+python3 course-files/build/zip_it.py course-files/extra-practice
 
-# Build the Project 2 docs
-pdoc course-files/projects/project02/apis/yelp.py -o course-files/projects/project02/docs
-pdoc course-files/projects/project02/apis/spotify.py -o course-files/projects/project02/docs
-pdoc course-files/projects/project02/apis/twilio.py -o course-files/projects/project02/docs
-pdoc course-files/projects/project02/apis/authentication.py -o course-files/projects/project02/docs
+python3 course-files/build/zip_it.py ../bain-cs110/tutorial_solutions
+python3 course-files/build/zip_it.py ../bain-cs110/exercise_solutions
 
-python3 course-files/build/zip_it.py course-files/projects
+
+
 
 # build indexes:
 # python build_navigator.py ../.

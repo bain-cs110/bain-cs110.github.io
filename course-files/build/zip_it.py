@@ -69,7 +69,12 @@ def main():
         for dirname in dirnames:
             zipfolder(dirname, dirname)
             if "lecture" not in dirname:
-                os.rename(dirname + ".zip", dirname + "_template.zip")
+                if "solutions" in dirname:
+                    os.rename(dirname + ".zip", dirname + ".zip")
+                elif "practice" in dirname:
+                    os.rename(dirname + ".zip", dirname + "_practice.zip")
+                else:
+                    os.rename(dirname + ".zip", dirname + "_template.zip")
     else:
         print('Cancelled.')
 

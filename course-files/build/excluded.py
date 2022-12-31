@@ -15,7 +15,6 @@ EXCLUDED = [
     'index.md',
     'drafts',
     '_drafts',
-    'solutions',
     'cpd.db',
     'build',
     '.pyc',
@@ -25,5 +24,6 @@ EXCLUDED = [
     # 'images',
     '_site',
     '.vscode',
+    '.rkt~'
     #'lecture24.*.csv'
 ]
