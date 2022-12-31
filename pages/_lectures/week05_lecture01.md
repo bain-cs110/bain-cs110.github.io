@@ -1,8 +1,9 @@
 ---
-layout: lecture-two-column
-title: Quiz 1
-type: quiz
+layout: module
+title: " "
+description:
+type: lecture
 draft: 1
-num: 1
+num: 11
 due_date: 2023-01-30
 ---
