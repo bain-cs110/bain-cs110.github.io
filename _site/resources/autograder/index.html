@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Autograder and Submission FAQ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    
+
+    </head>
+    <body class="one-column">
+        <div class="container">
+            <main>
+                <h2 id="how-does-auto-grading-work">How does auto-grading work?</h2>
+<p>The exercises will describe a set of definitions (typically functions) you need to write and what each function should do. We will prepare a set of ​<code class="language-plaintext highlighter-rouge">check-expect​</code>s to see if those functions run in the same way as required by the exercise. If the functions you write pass the tests we have prepared, you will receive full credit.</p>
+
+<p>For example, if the homework specifies:</p>
+
+<div class="language-racket highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">;; Write a procedure add that takes two numbers and returns their sum.</span>
+<span class="c1">;; add : number number -&gt; number</span>
+<span class="p">(</span><span class="k">define</span> <span class="nv">add</span>
+  <span class="p">(</span><span class="k">lambda</span> <span class="p">(</span><span class="nf">number1</span> <span class="nv">number2</span><span class="p">)</span> <span class="s">"fill me in"</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>We might run your homework and test it with these <code class="language-plaintext highlighter-rouge">check-expect</code>s:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(check-expect (add 0 0) 0)
+(check-expect (add 514 217) 731)
+</code></pre></div></div>
+
+<p>The set of ​<code class="language-plaintext highlighter-rouge">check-expect</code>​s that I’m using will not be disclosed beforehand. This is because you need to be considering whether or not your program works the way you designed it to work!</p>
+
+<h2 id="when-do-i-get-the-autograder-feedback">When do I get the Autograder feedback?</h2>
+
+<p>You’ll get it after the final deadline for the assignment via Canvas. This usually means 48ish hours after the regular deadline.</p>
+
+<h2 id="why-cant-i-see-the-results-of-my-code-when-i-put-them-inside-of-defines">Why can’t I see the results of my code when I put them inside of <code class="language-plaintext highlighter-rouge">define</code>s</h2>
+
+<p>Remember, <code class="language-plaintext highlighter-rouge">define</code> is a special form that asks Racket to associate a particular <em>name</em> with a particular <em>value</em>. <strong>Computers don’t do anything you don’t ask them to.</strong> <code class="language-plaintext highlighter-rouge">define</code> does not say to output anything; it just says associate these two things.</p>
+
+<p>If you want to display whatever is stored in your variable you created using <code class="language-plaintext highlighter-rouge">define</code>, then you either need to ask that object to be displayed as part of your program:</p>
+
+<div class="language-racket highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="k">define</span> <span class="nv">a-cool-circle</span> <span class="p">(</span><span class="nf">circle</span> <span class="mi">100</span> <span class="s">"outline"</span> <span class="s">"blue"</span><span class="p">))</span>
+<span class="nv">a-cool-circle</span>
+</code></pre></div></div>
+
+<p>or alternatively, once you’ve <code class="language-plaintext highlighter-rouge">RUN</code> your definitions file, you can ask Racket to lookup the value of that variable in the Interactions Window (or REPL):</p>
+
+<pre><code class="language-Racket">&gt; a-cool-circle
+</code></pre>
+
+<blockquote>
+  <p>Note, we don’t use parentheses around the name here because it is NOT a function. It is a piece of data. It doesn’t need to be “called.”</p>
+</blockquote>
+
+<h2 id="make-sure-your-submission-runs-without-syntax-or-runtime-errors">Make sure your submission runs without syntax or runtime errors!</h2>
+
+<p>The auto-grader needs to ​run​ the file in order to grade it.</p>
+<ul>
+  <li>If the file has ​any​ syntax error (missing or extra parens, wrong λ syntax), the auto-grader won’t be able to open it.</li>
+  <li>If there’s ​any​ error showing up in Interaction Window when you click <code class="language-plaintext highlighter-rouge">Run</code> the auto-grader won’t be able to run your file.</li>
+</ul>
+
+<p>In either situation, the auto-grader would not be able to assign partial credits. <a href="https://canvas.northwestern.edu/courses/178849/modules/items/2427333">See this page for more about checking errors in DrRacket</a>.</p>
+
+<h2 id="follow-question-descriptions-literally">Follow question descriptions literally</h2>
+<p>Your code should follow the Exercise literally. More specifically,</p>
+<ul>
+  <li>Function names (including ‘-‘ and ‘/’) must be spelled exactly the same as in descriptions. If the Exercise description asks for an image definition named <code class="language-plaintext highlighter-rouge">flag-of-chicago​</code>, you cannot change it to <code class="language-plaintext highlighter-rouge">​flag_of_chicago​</code> or <code class="language-plaintext highlighter-rouge">flag-of-Chicago​</code>.</li>
+  <li>The order of arguments should follow the literal order in Exercise descriptions.
+    <ul>
+      <li><em>Example.</em> Implement​ <code class="language-plaintext highlighter-rouge">​iterated-any​</code>, that takes an arbitrary <code class="language-plaintext highlighter-rouge">combiner</code> function, a <code class="language-plaintext highlighter-rouge">generator</code> function, and a number of iterations, and produces…</li>
+      <li>You should write a function with those three arguments <code class="language-plaintext highlighter-rouge">(lambda (combiner generator iteration-number)...)</code>, where <code class="language-plaintext highlighter-rouge">​combiner​</code> is the combiner procedure, <code class="language-plaintext highlighter-rouge">​generator​</code> is the generator procedure and <code class="language-plaintext highlighter-rouge">​iteration-number​</code> is the number of iterations.</li>
+    </ul>
+  </li>
+  <li>Data type and the shape of values should match problem descriptions. If the homework description asks you to write a function that returns a list of album​s where an <code class="language-plaintext highlighter-rouge">album</code> is defined as <code class="language-plaintext highlighter-rouge">(define-struct album (title artist genre))</code>, you should not return a list of just album titles.
+    <ul>
+      <li>Example. If the homework description asks you to write a function that returns a list of paths, you should not return a list of strings.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="if-i-pass-all-check-expects-in-the-starter-code-will-i-receive-full-credit-is-my-code-correct">If I pass all ​check-expect​s in the starter code, will I receive full credit? Is my code correct?</h2>
+<p>No. We use our own set of <code class="language-plaintext highlighter-rouge">​check-expect</code>​s to grade submissions, not the provided ones in the starter code. However, a correct solution will have to pass all given <code class="language-plaintext highlighter-rouge">​check-expect</code>​s. Therefore any test failure indicates that there are some bugs in your solution.</p>
+
+<h2 id="do-i-need-to-upload-supplementary-files-iterated-imagesrkt-remove_duplicatesrkt-etc">Do I need to upload supplementary files iterated-images.rkt​, ​remove_duplicates.rkt​ etc?</h2>
+
+<p><strong>Upload only your work</strong>. We will have the supplementary files ready when grading.</p>
+
+<h2 id="testing-your-code">Testing Your Code</h2>
+<p>How do I test my submission?</p>
+<ol>
+  <li>Download your submission from Canvas.</li>
+  <li>Put the supplementary file like <code class="language-plaintext highlighter-rouge">​iterated-images.rkt​</code> or <code class="language-plaintext highlighter-rouge">remove_duplicates.rkt​</code> in the same directory. Directly use the ones from the provided ZIP file.</li>
+  <li>Open your submission. Click <code class="language-plaintext highlighter-rouge">Run</code> in DrRacket.</li>
+  <li>Ensure that there’s no error and the code passes all tests.</li>
+</ol>
+
+<h2 id="do-i-need-to-pass-all-the-included-tests">Do I need to pass all the included tests?</h2>
+<p>Yes. Of course, you can submit code that does not pass all tests. You will receive credit for all correct problems. However, the provided tests in the starter code at least check whether there are misspellings in function definitions. Therefore failing a test may indicate that there is a typo or that the code is not fully correct.</p>
+
+<h2 id="writing-your-own-tests">Writing Your Own Tests</h2>
+<p>You should always write new <code class="language-plaintext highlighter-rouge">check-expect</code>s although we do not grade them. Directly write <code class="language-plaintext highlighter-rouge">check-expect​</code>s against the problem descriptions and make sure to follow all given instructions. As an example, if the homework specifies <em>“Write a function longer-than that takes a string, a number and returns if the length of the string is larger than the given number”</em></p>
+<div class="language-racket highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">;; longer-than : number string -&gt; boolean</span>
+<span class="p">(</span><span class="k">define</span> <span class="nv">longer-than</span>
+<span class="p">(</span><span class="k">lambda</span> <span class="p">(</span><span class="nf">x1</span> <span class="nv">x2</span><span class="p">)</span> <span class="s">"Fill me in"</span><span class="p">))</span>
+</code></pre></div></div>
+<p>You should first write ​check-expect​s like the following examples before attempting to finish <code class="language-plaintext highlighter-rouge">longer-than</code>​:</p>
+<div class="language-racket highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nf">check-expect</span> <span class="p">(</span><span class="nf">longer-than</span> <span class="s">"hello"</span> <span class="mi">3</span><span class="p">)</span> <span class="no">#false</span><span class="p">)</span>
+<span class="p">(</span><span class="nf">check-expect</span> <span class="p">(</span><span class="nf">longer-than</span> <span class="s">"abc"</span> <span class="mi">5</span><span class="p">)</span> <span class="no">#true</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Here are two non-examples which do not follow the given instruction.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(check-expect (longer-than 99 "cs111") #false) ;; the argument order is wrong
+(check-expect (longer-than "hello" 5) #true)   ;; the spec is ‘&gt;’ rather than ‘&gt;=’
+</code></pre></div></div>
+
+<h2 id="can-i-change-the-name-of-the-supplementary-file-or-the-require-line-importing-the-supplementary-file-in-the-starter-code">Can I change the name of the supplementary file or the ​require line importing the supplementary file in the starter code?</h2>
+<p>Don’t change it.</p>
+
+<h2 id="can-i-add-new-require-lines">Can I add new ​require​ lines?</h2>
+<p>We have included necessary ​<code class="language-plaintext highlighter-rouge">(require ...)</code>​ lines in the starter code, so there should be no need to add or remove any ​<code class="language-plaintext highlighter-rouge">(require ...)</code>​ lines. In general, you can (only) include <code class="language-plaintext highlighter-rouge">2htdp</code> teachpacks (all of form ​<code class="language-plaintext highlighter-rouge">(require 2htdp/...)​</code>) and the supplementary file from the same week. Don’t add any additional library outside this scope, even if it is the supplementary file from previous exercises.</p>
+
+<p>Sometimes, we might provide those require statements commented out; for instance if we recommend testing your programs with them but they aren’t required to complete the assignment. In those cases, it’s okay to use them to TEST your code, but you shouldn’t use those functions within your own function definitions.</p>
+
+<h2 id="what-part-of-starter-code-can-i-change">What part of starter code can I change?</h2>
+<p>You can replace ​”fill me in”​ with your work and write any new definitions. Other than that, you ​should not​ modify, delete or comment out existing definitions. You ​must not​ change provided struct definitions.</p>
+
+<h2 id="how-to-save-my-definitions">How to save my definitions?</h2>
+<p>When you hit <code class="language-plaintext highlighter-rouge">control-s</code> (Windows) or <code class="language-plaintext highlighter-rouge">command-s</code> (Mac), the changes to definitions will be saved. You can also choose File -&gt; Save Definitions.</p>
+
+<p>Caution: ​never ​use items in File -&gt; Save Other unless you are very certain about what’s happening. The files produced by “Save Interactions” or “Save Definitions as Text…” either don’t contain your code or are broken.</p>
+
+            </main>      
+        </div>
+            <script type="text/javascript" src="/assets/js/main.js"></script>
+    
+    <script src="https://kit.fontawesome.com/62a7c74d0d.js" crossorigin="anonymous"></script>
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+    </body>
+</html>

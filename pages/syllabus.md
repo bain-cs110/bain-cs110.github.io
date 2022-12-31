@@ -1,18 +1,20 @@
 ---
-layout: two-column
+layout: assignment-two-column
 title: Syllabus
 permalink: /syllabus/
 ---
 
-|--|--|
-| **Term** | Spring, 2022 |
-| **Course** | CS 110: Intro to Computer Programming with Python |
-| **Prerequisites** | None |
-| **Instructor** | Prof. Connor Bain |
-| **Lecture Time** | Monday, Wednesday, & Friday, 10:00 - 10:50am |
-| **Lecture Location** | Lutkin Auditorium |
 
-> Please note that this syllabus is subject to change prior to Mar 29, 2022.
+|--|--|
+| **Term** | Winter 2023 |
+| **Course** | COMP_SCI 110: Intro to Computer Programming |
+| **Prerequisites** | None |
+| **Instructor** | Prof. Connor Bain (connor.bain@northwestern.edu) |
+| **Lecture Time** | Section 1/2. Monday, Wednesday, & Friday, 10:00 - 10:50am |
+| **Lecture Location** | [Tech Auditorium](https://www.mccormick.northwestern.edu/contact/tech-room-finder-map.php?id=L165&room-floor=1&room-id=1055&room-ingress=) |
+| **Required Materials** | _Zero Cost Course_ – (All course materials are open educational resources) |
+
+> Please note that this syllabus is subject to change prior to Jan 3, 2022.
 
 ## About the Course
 CS 110 is meant as an introduction to the key ideas of computer programming and assumes no prior programming knowledge. In this course, we'll use the programming language Python with two goals: first, we want to give you a sense of the kinds of creative activities, both directed problem-solving and creative pursuits, that programming can support; and two, we want to introduce you to the fundamental constructs (and associated skills and techniques) of computer programming.
@@ -28,13 +30,13 @@ Taking this course means committing — for 10 weeks — to attending lectures, 
 ### Lectures
 Lectures will be both synchronous and asynchronous. During our scheduled class time, we will focus on things we cannot do when we are not together: mainly doing practice problems together and answering questions about course content. All in-class lectures will be recorded. We will also use some pre-recorded videos, which cover specific course material that we will then go straight to practicing during lectures. When we assign a pre-recorded lecture, students *must* watch the video before coming to lecture. Organizationally, some topics/modules span multiple lectures (see the [course schedule](../)).
 
-### Tutorial Sessions
-The best way to learn how to program is by writing lots of programs. To facilitate this, and to provide a more close-knit learning setting within the context of our larger class, you will each take part in weekly tutorial sessions with one of our Peer Mentors (PMs). These 1-hour sessions will start the second week of class and you will sign up for a particular Tutorial Session at the end of Week 1.
+### Tutorial Sessions / Study Groups
+The best way to learn how to program is by writing lots of programs. To facilitate this, and to provide a more close-knit learning setting within the context of our larger class, you will each take part in weekly tutorial sessions with one of our Peer Mentors (PMs). You will sign up for a Tutorial Group at the end of the first week of class and then, each Wednesday of the quarter, you'll come to class and complete a tutorial with that group and the guidance of a PM/TA.
 
 By completing the tutorials, you will become familiar with the types of strategies you might use to approach problems (which will be closely related to the homework / projects), push you to write lots of programs, and help you assess what you know and don't know so that you can know when to ask for more help in lecture or in office hours.
 
 ### Office Hours
-Office hours are a crucial component of this course. We have 16 TAs/peer mentors whose job is to help you to be successful in the course and find your own power as current and future programmers. That said, it's up to you to take the initiative and cultivate a weekly / bi-weekly practice of going to office hours that works for you and your schedule. This looks different for everyone: some people go to 1-2 office hours sessions per week and finish their homework with a TA or peer mentor nearby (if needed). Other students never go to office hours (though this is rare, as the homeworks and projects are challenging). Also, different people connect with different TAs/peer mentors, so do shop around to find a person with whom you work well.
+Office hours are a crucial component of this course. We have a huge team of TAs/peer mentors whose job is to help you to be successful in the course and find your own power as current and future programmers. That said, it's up to you to take the initiative and cultivate a weekly / bi-weekly practice of going to office hours that works for you and your schedule. This looks different for everyone: some people go to 1-2 office hours sessions per week and finish their homework with a TA or peer mentor nearby (if needed). Other students never go to office hours (though this is rare, as the homeworks and projects are challenging). Also, different people connect with different TAs/peer mentors, so do shop around to find a person with whom you work well.
 
 Office hours are meant to be a time where you can ask questions that you need answered. That being said, we ask that you come to office hours *having already thought about* the assignment or issue you have been having. Please try your best to come to office hours prepared to ask questions like:
 
@@ -48,29 +50,26 @@ Office hours are meant to be a time where you can ask questions that you need an
 Office hours and locations / Zoom links are posted on the shared Google Sheet that we used to signup for tutorials. It's also linked on our Canvas home page. Some office hours will be in person. Others will be virtual.
 
 ## Course Staff
-This is a very large class and in order to better support each of your learning goals, we have 17 course staff members.
+This is a very large class and in order to better support each of your learning goals, we have a huge course staff.
 
 ### Instructor
 * Prof. Connor Bain (connor.bain@northwestern.edu)
 
-### Graduate Teaching Assistant
-Our Graduate TA serves as the go-to course staff member for grading discrepancies, Canvas Issues, and other logistical questions about the class.
+### Peer Mentors and Graduate TAs
 
-### Peer Mentors
-
-Our Peer Mentors (PMs) serve as your first point of contact in the course. Each PM leads weekly tutorial sessions with idea that they can closely track your learning progress throughout the quarter. They will also host office hours each week that will be open for all students. That means that there will be close to 30 office hours offered per week for our course.
+Our Peer Mentors (PMs) and TAs serve as your first point of contact in the course. Each PM/TA is assigned to two Study Groups.
 
 ## Course Grading Policy
-Your course grade is calculated based on 200 points as follows:
+Your course grade is calculated as follows:
 
 {:.medium}
-| **7 Tutorials** (of 9) | 7 x 3 Points (lowest scores dropped) | 20 Points | 10% |
-| **5 Homeworks** (of 6) | 5 x 8 Points (lowest score dropped) | 40 Points | 20% |
-| **2 Projects** | 2 x 40 Points | 80 Points | 40% |
-| **2 Quizzes** (of 3) | 2 x 30 Points (lowest score dropped) | 60 Points | 30% |
-| | | **200 Points** | **100%** |
+| **Tutorials**     | 15% |
+| **Mini-Quizzes**  | 5%  |
+| **Homeworks**     | 20% |
+| **2 Projects**    | 30% |
+| **3 Quizzes**     | 35% |
 
-> Note, the tutorials are actually each worth approximately 2.85714 points on the total course grade (of 200 points). To calculate your tutorial points, you can add your 7 highest Tutorial scores, divide by 21, and multiply by 20.
+> There will be approximately 1 tutorial, 1 mini-quiz, and 1 assignment (either homework exercise or project) due per week.
 
 Final grades are assigned on a fixed scale which is set by the registrar's office:
 
@@ -86,41 +85,24 @@ Final grades are assigned on a fixed scale which is set by the registrar's offic
 
 (*) Note that The Graduate School does not recognize D letter grades meaning if you are enrolled in the class as a graduate student, the range for the F grade is 0-69.99.
 
-Some other logistics:
-
-1. Final course grades will not be rounded or curved.
-1. We will not use the registrar's final exam time for this class.
-
-> ### The course is specifically designed to be academically equitable to all students when it comes to assessment:
-> * Your lowest quiz score is dropped (best 2 of 3)
-> * Your lowest homework score is dropped (best 5 of 6)
-> * Your 7 best tutorial scores are kept (best 7 of 9)
->
-> This leniency is provided to accommodate the myriad situations that students encounter over the life cycle of the class (e.g. student org travel, sickness, etc.). **This built-in leniency means that there will be no other exceptions to the course syllabus without prior authorization from the Dean of Students at Northwestern.**
+* Final course grades will not be rounded or curved.
+* We will not use the registrar's final exam time for this class.
 
 ### Quizzes
 
 There will be three cumulative assessments of your knowledge and practice of the course material administered during our assigned class time (50 minutes). There will be no Final Exam outside of these three quizzes.
 
-The three quizzes will be held in Week 4, Week 7, and Week 10 of the course.
+The three quizzes will be held in Week 5 (Wednesday, February 1), Week 8 (Wednesday, Feb 22), and Week 10 (Friday, March 10th) of the course.
+
+> **Note**: because this class is offered by the Computer Science department which is housed in the McCormick School of Engineering, we will still have class during Weinberg's Reading Week.
+
+### Mini-Quizzes
+These will be short quizzes for each module of the course that serve as a check of your attendance and/or asynchronous participation in the course. For those that complete the Mini-Quiz in class, you will receive full credit for your attendance and full participation. If you choose to complete the Mini-Quiz remotely, you will need to complete the Canvas version of the quiz within 48 hours of your scheduled class time.
 
 ### Homework Grading
 Homework will be approximately weekly and is due at 11:59pm on the specified date. You will submit your homework assignments on Canvas.
 
-We will still accept late homework up to 48 hours after the original due date, but with up to a 2 point penalty (25%). For _homework assignments only_, you may request a waiver of this penalty (via a form provided at the bottom of each assignment page) subject to the following rules:
-
-1. Requests *must* be made at least 24 hours in advance of the deadline of the assignment.
-2. You may not request extensions on consecutive assignments.
-
-There will be no exceptions to this policy. Once you are granted an extension, it cannot be voided unless it is more than 24 hours from the assignment deadline. If you find yourself needing extra time on assignments every week, please reach out to Prof. Bain.
-
-Homework is graded on the following scale:
-
-|--|--|
-| **No submission / little understanding** | 0 Points | Little to no understanding/effort demonstrated |
-| **Check minus** | 3 Points | Some effort made, but significant features are missing or not working |
-| **Check** | 6 Points | Mostly working, but some errors or issues were found |
-| **Check Plus**| 8 Points | Working exactly as it should |
+We will still accept late homework up to 48 hours after the original due date, with a 10% deduction per 24 hour period.
 
 We do not accept resubmissions of assignments. This means it is up to you to verify that:
 1. You have submitted the correct file.
@@ -129,13 +111,23 @@ We do not accept resubmissions of assignments. This means it is up to you to ver
 
 If you are submitting a partially complete assignment, please include a file (or a Canvas comment) that explains which parts of the assignment you completed and which parts you did not. If you were having a specific problem with completing that part of the assignment (other than "ran out of time"), make sure to describe what you tried and why you were unable to fix it.
 
-If you submit an assignment that requires the grader to make any sort of change in order to successfully run your program, you will receive a deduction from your score.
+If your program does not run, you will not receive full credit no matter how small the error.
 
 You will receive your assignment grades on Canvas within a week of your submission. On occasion, your grader may make an error on an assignment. If you have any grading questions/concerns, please comment on the assignment in Canvas within 1 week of the grades being released. Please do not email course staff about grade discrepancies.
 
 ### Tutorial Grading
 
-Tutorials are graded on a Pass/Fail scheme. As long as you attend Tutorial and make a legitimate attempt (up to the discretion of your Peer Mentor) at completing the assignment, you will receive a Pass. The idea of the tutorials is to provide you with opportunities to both practice your own programming skill *as well as learn to communicate with and help other programmers*. This course is meant to a be a learning community which requires the dedicated participation of all members. While attendance is only required for the first Tutorial, you must submit your tutorial by Wednesday at 11:59pm each week. No late submissions will be accepted.
+The idea of the Tutorials is to provide you with opportunities to both practice your own programming skill *as well as learn to communicate with and help other programmers*. As such, these Tutorials will be held on Wednesdays (with one exception) during our scheduled class time during the quarter.
+
+These will start the second week of class and you will sign up for a particular Tutorial group at the end of Week 1.
+
+By completing the tutorials, you will become familiar with the types of strategies you might use to approach problems , push you to write lots of programs, and help you assess what you know and don't know so that you can know when to ask for more help in lecture or in office hours.
+
+This course is meant to a be a learning community which requires the dedicated participation of all members. Attendance is required for the first Tutorial, but you may choose to submit future tutorials remotely.
+
+If you attend the Tutorial session in-person and make a legitimate attempt (up to the discretion of your Peer Mentor) at completing the assignment, you will receive full-credit. If you choose not to attend in-person, then your assignment will be reviewed for completion _and accuracy_ meaning you may nor may not receive full credit.
+
+We will not accept late tutorial submissions.
 
 ### Project Grading
 
@@ -144,6 +136,39 @@ There are two larger programming assignments in the course which we will refer t
 Late submissions of Projects *will not be accepted*.
 
 The second project will be due at the start of the university's assigned final exam block for this course.
+
+## Grading Equity Policies
+
+> The course is specifically designed to be academically equitable to all students when it comes to assessment and has two special policies related to grading: 1. An _emergency erasure policy_; 2. A _deliberate extension policy_.
+
+These two policies are provided to accommodate the myriad situations that students encounter over the life cycle of the class (e.g. student org travel, sickness, etc.). **This built-in leniency means that there will be no other exceptions to the course syllabus without prior authorization from the Dean of Students at Northwestern. I cannot offer any other leniency, make-up assignments, extensions, etc., outside these policies.**
+
+### Deliberate Extension Policy
+
+The _deliberate extension policy_ applies ONLY to **Exercises** and is meant to accommodate students who may have a particular week during the quarter where they are unable to complete the assigned Exercise on-time. Students may apply (using a Google Form included at the bottom of each assignment) and receive a waiver of the late penalty on assignments:
+
+* Students **must** request the extension via the form at least 24 hours in advance of the Exercise deadline.
+* Students **may not** request extensions on consecutive assignments.
+
+The policy is _deliberate_ in that you, as a student, must actively consider at least 24 hours in advance of the deadline that you will need extra time to complete this assignment. We do not allow consecutive extensions. If you find yourself needing extra time on consecutive assignments, this is a good sign that you need to reach out to someone on the Course Staff for help.
+
+There will be no exceptions to this policy. Once you are granted an extension, it cannot be voided.
+
+No assignments are accepted after 48 hours. This policy does not extend the final due date, it only waives the late penalty.
+
+### Emergency Grade Erasure Policy
+
+The _emergency grade erasure policy_ acknowledges that often times life situations occur that make it impossible to keep up in a course. **_Do not_ use this a planning or scheduling device.** This is specifically meant to take care of emergencies that happen in your life during the quarter.
+
+* Your lowest quiz score (including 0s) is dropped (best 2 of 3)
+* Your lowest tutorial score (including 0s) is dropped
+  * _You may not drop the final tutorial score_ (in Week 10).
+* Your lowest **homework** score (including 0s) is dropped.
+* You may NOT drop mini-quiz or project scores.
+
+If you _choose_ to drop an assignment early in the quarter only to find yourself in an emergency situation later in the quarter, you will need to reach out to your Dean of Students in order to arrange for flexibility across all of your coursework.
+
+This policy will be automatically applied at the end of the quarter for all students. No action is required on your part.
 
 ## Course Materials and Resources
 
@@ -160,14 +185,7 @@ Campuswire is a Question-and-Answer site like Piazza that allows students to ask
 Additionally, we will use Campuswire as a way of allowing students to ask questions during lectures if you do not feel comfortable asking aloud. To facilitate this, we will use the #lecture chat channel.
 
 {:.blockquote-no-margin}
-> To register for the course Campuswire (you will only have to do this once), please click this link: <a href="https://campuswire.com/p/G7C57BC09" target="_blank">https://campuswire.com/p/G7C57BC09</a> and use the following join code: **0013**.
-
-Some guidelines for using Campuswire:
-* Before you post a question, please do a quick search to make sure that one of your classmates hasn’t already asked the same question
-* Campuswire gives you the option of posting anonymously (to your classmates) so that you don’t feel intimidated in asking your questions
-* As a general rule, *do not post ANY code* that would be part of an answer to an assignment question
-* Please use Campuswire for assignment questions that would benefit the class as a whole. Any assignment questions emailed directly to any member of the course staff will be forwarded to Campuswire
-* If you have a question about code that requires you to show someone your code, you may submit a private post (just to the course staff) with your code. That said, PM office hours are usually more efficient
+> To register for the course Campuswire (you will only have to do this once), please use the link on Canvas.
 
 ### Other Questions
 For any other issues that you think are not appropriate for the peer mentors or graduate TA, please talk to Prof. Bain. This might include things like concerns about your progress in the course, questions about content from lectures, personal matters related to your participation in the course, larger grade concerns, advice about future courses, majors, and internships, etc.
