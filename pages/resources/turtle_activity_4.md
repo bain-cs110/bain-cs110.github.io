@@ -22,19 +22,15 @@ There are a few main changes to this simulation:
 <iframe frameborder="0" height="650" scrolling="no" src="https://ct-stem.s3.amazonaws.com/uploads/bainco/2020/07/01/drawing_turtle_2020-07-01-11-13-32-984014.html" width="1200">Something has gone wrong. Please reload the page.</iframe>
 
 ## Activities
-Write a program that results in your turtle drawing an <em>equilateral</em> triangle (equal angles and equal side
+1. Write a program that results in your turtle drawing an <em>equilateral</em> triangle (equal angles and equal side
 lengths). Explain how your program works.
 
-Now modify your program so that it draws a square. Explain your modifications.</p>
+2. Now modify your program so that it draws a square.
 
-Now try modifying your program to draw a regular (all sides are equal length) pentagon. Is there a pattern between your solutions for a regular triangle, regular square, and regular pentagon? Explain.
+3. Now try modifying your program to draw a regular (all sides are equal length) pentagon. Is there a pattern between your solutions for a regular triangle, regular square, and regular pentagon? Explain.
 
-This process of looking for patterns among tasks is very common in programming. In this case, we might be able to <strong>abstract</strong> our programs into a single program that can draw <em>any</em> regular polygon with a given number of sides <em>n</em>.
+4. This process of looking for patterns among tasks is very common in programming. In this case, we might be able to <strong>abstract</strong> our programs into a single program that can draw <em>any</em> regular polygon with a given number of sides <em>n</em>. Say you want to draw a regular polygon with <em>n</em> sides. While we know we'll need to have at least <em>n</em> forward commands, how might we express the turn angle of our turtle in terms of <em>n</em>? (Hint: Think back to your geometry days. Maybe the term <em>interior angle</em> reminds you of something?)
 
-Say you want to draw a regular polygon with <em>n</em> sides. While we know we'll need to have at least <em>n</em> forward commands, how might we express the turn angle of our turtle in terms of <em>n</em>?
-
-(Hint: Think back to your geometry days. Maybe the term <em>interior angle</em> reminds you of something?)
-
-Spend some time experimenting. See what sort of designs you can have your turtle buddy draw! If you're not feeling particularly creative, try recreating this program:
+5. Spend some time experimenting. See what sort of designs you can have your turtle buddy draw! If you're not feeling particularly creative, try recreating this program:
 
 <img height="456" src="https://ct-stem.s3.amazonaws.com/uploads/bainco/2020/07/01/screen%20shot%202020-07-01%20at%2012.04.25%20pm_2020-07-01-11-48-33-232370.png" width="210">

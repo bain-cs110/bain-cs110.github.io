@@ -18,4 +18,4 @@ If your turtle hits the lava, it'll let you know and go back to its starting pos
 
 Note: If you try to stop your program while it is executing by clicking the RUN PROGRAM button, your turtle will likely get confused. If this happens to you, make sure to click the CLEAR TURTLE BRAIN button before trying again.
 
-[Next turtle activity...](/resources/turtle-activity-3)
+[Next turtle activity...](/resources/turtle-activity-4)
