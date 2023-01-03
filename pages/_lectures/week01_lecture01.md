@@ -4,7 +4,7 @@ title: What is Programming?
 type: lecture
 description:
 num: 0
-draft: 1
+draft: 0
 canvas_id: wednesday-lecture-0-what-is-programming-september-21
 due_date: 2023-01-03
 slides:
