@@ -5,8 +5,13 @@ type: lecture
 description:
 num: 0
 draft: 0
-canvas_id: wednesday-lecture-0-what-is-programming-september-21
+canvas_id: tuesday-lecture-0-what-is-programming-january-3
 due_date: 2023-01-03
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=aec352b7-fbf4-42c8-b9eb-af5f014cfb14
+     title: "Live Lecture"
+     duration: "50:00"
+     live: 1
 slides:
    - url: https://docs.google.com/presentation/d/1-ozmbA9DvWkivo_kHBisUX0X76Wu0pmwa_ab6uT7Res/edit?usp=sharing
      title: "What is programming?"
