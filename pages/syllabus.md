@@ -27,10 +27,19 @@ Taking this course means committing — for 10 weeks — to attending lectures, 
 
 ## Course Format
 
-### Lectures
-Lectures will be both synchronous and asynchronous. During our scheduled class time, we will focus on things we cannot do when we are not together: mainly doing practice problems together and answering questions about course content. All in-class lectures will be recorded. We will also use some pre-recorded videos, which cover specific course material that we will then go straight to practicing during lectures. When we assign a pre-recorded lecture, students *must* watch the video before coming to lecture. Organizationally, some topics/modules span multiple lectures (see the [course schedule](../)).
+While some of our reserved class periods will be used for **interactive lectures** where new concepts will be introduced, other days will be reserved for in-depth **tutorials** where students will be expected to review course materials (recorded lecture videos, slides, and notes) **before** the class period and during class we will work in small groups to complete an in-depth programming assignment.
 
-### Tutorial Sessions / Study Groups
+The rough schedule of the course will be (there are some exceptions):
+
+* Mondays - Lecture Day
+* Wednesdays - Tutorial Day
+* Fridays - Practice Day
+
+For lecture days, we'll have interactive lectures where we introduce a new topic and focus on building a core understanding. For Tutorial days, you'll work in your tutorial groups to complete an assignment during class time. On Practice+ days, we'll do a little more practice along with previewing the next components of the course.
+
+When we assign a pre-recorded lecture, students *must* watch the video before coming to lecture. Organizationally, some topics/modules span multiple lectures.
+
+### Tutorial / Study Groups
 The best way to learn how to program is by writing lots of programs. To facilitate this, and to provide a more close-knit learning setting within the context of our larger class, you will each take part in weekly tutorial sessions with one of our Peer Mentors (PMs). You will sign up for a Tutorial Group at the end of the first week of class and then, each Wednesday of the quarter, you'll come to class and complete a tutorial with that group and the guidance of a PM/TA.
 
 By completing the tutorials, you will become familiar with the types of strategies you might use to approach problems (which will be closely related to the homework / projects), push you to write lots of programs, and help you assess what you know and don't know so that you can know when to ask for more help in lecture or in office hours.
@@ -50,14 +59,35 @@ Office hours are meant to be a time where you can ask questions that you need an
 Office hours and locations / Zoom links are posted on the shared Google Sheet that we used to signup for tutorials. It's also linked on our Canvas home page. Some office hours will be in person. Others will be virtual.
 
 ## Course Staff
-This is a very large class and in order to better support each of your learning goals, we have a huge course staff.
+This is a very large class and in order to better support each of your learning goals, we have a huge course staff. Our Peer Mentors (PMs) and TAs serve as your first point of contact in the course and you'll each be assigned to a PM/TA throughout the quarter.
 
 ### Instructor
 * Prof. Connor Bain (connor.bain@northwestern.edu)
 
-### Peer Mentors and Graduate TAs
+### Graduate Teaching Assitants (TAs)
+* Ammar Gilani
+* Maryam Hedayati
 
-Our Peer Mentors (PMs) and TAs serve as your first point of contact in the course. Each PM/TA is assigned to two Study Groups.
+### Undergraduate Peer Mentors (PMs)
+
+* Angeli Mittal
+* Zoryah Gray
+* Si Woo Park
+* Amira Mohamed
+* Jamie Lee
+* Defne Deda
+* Naomi Wu
+* Ugonna Akali
+* Natan Gamliel
+* Sharat Dhananjaya
+* Ana de Souza
+* Victor Chen
+* Lily Ryan
+* Julia Chu
+* Lucas Saidenberg
+* Andres Rojas
+* Randy Truong
+* Lucy Joseph
 
 ## Course Grading Policy
 Your course grade is calculated as follows:
@@ -65,9 +95,9 @@ Your course grade is calculated as follows:
 {:.medium}
 | **Tutorials**     | 15% |
 | **Mini-Quizzes**  | 5%  |
-| **Homeworks**     | 20% |
-| **2 Projects**    | 30% |
-| **3 Quizzes**     | 35% |
+| **Homeworks**     | 25% |
+| **2 Projects**    | 25% |
+| **3 Quizzes**     | 30% |
 
 > There will be approximately 1 tutorial, 1 mini-quiz, and 1 assignment (either homework exercise or project) due per week.
 
@@ -117,15 +147,15 @@ You will receive your assignment grades on Canvas within a week of your submissi
 
 ### Tutorial Grading
 
-The idea of the Tutorials is to provide you with opportunities to both practice your own programming skill *as well as learn to communicate with and help other programmers*. As such, these Tutorials will be held on Wednesdays (with one exception) during our scheduled class time during the quarter.
+The idea of the Tutorials is to provide you with opportunities to both practice your own programming skill *as well as learn to communicate with and help other programmers*. As such, these Tutorials will be held on Wednesdays during our scheduled class time during the quarter.
 
 These will start the second week of class and you will sign up for a particular Tutorial group at the end of Week 1.
 
-By completing the tutorials, you will become familiar with the types of strategies you might use to approach problems , push you to write lots of programs, and help you assess what you know and don't know so that you can know when to ask for more help in lecture or in office hours.
+By completing the tutorials, you will become familiar with the types of strategies you might use to approach problems, write lots of programs, and assess what you know and don't know so that you can know when to ask for more help in lecture or in office hours.
 
 This course is meant to a be a learning community which requires the dedicated participation of all members. Attendance is required for the first Tutorial, but you may choose to submit future tutorials remotely.
 
-If you attend the Tutorial session in-person and make a legitimate attempt (up to the discretion of your Peer Mentor) at completing the assignment, you will receive full-credit. If you choose not to attend in-person, then your assignment will be reviewed for completion _and accuracy_ meaning you may nor may not receive full credit.
+If you attend the Tutorial session in-person, work diligently, and make a legitimate attempt (up to the discretion of your Peer Mentor) at completing the assignment, you will receive full-credit. If you choose not to attend in-person, then your assignment will be reviewed for completion _and accuracy_ meaning you may nor may not receive full credit.
 
 We will not accept late tutorial submissions.
 
@@ -135,7 +165,7 @@ There are two larger programming assignments in the course which we will refer t
 
 Late submissions of Projects *will not be accepted*.
 
-The second project will be due at the start of the university's assigned final exam block for this course.
+The second project will be due at the start of the university's assigned final exam block for this course which is **Thursday, March 16th at 3pm.**
 
 ## Grading Equity Policies
 
@@ -145,7 +175,7 @@ These two policies are provided to accommodate the myriad situations that studen
 
 ### Deliberate Extension Policy
 
-The _deliberate extension policy_ applies ONLY to **Exercises** and is meant to accommodate students who may have a particular week during the quarter where they are unable to complete the assigned Exercise on-time. Students may apply (using a Google Form included at the bottom of each assignment) and receive a waiver of the late penalty on assignments:
+The _deliberate extension policy_ applies ONLY to **Homeworks** and is meant to accommodate students who may have a particular week during the quarter where they are unable to complete the assigned Exercise on-time. Students may apply (using a Google Form included at the bottom of each assignment) and receive a waiver of the late penalty on assignments:
 
 * Students **must** request the extension via the form at least 24 hours in advance of the Exercise deadline.
 * Students **may not** request extensions on consecutive assignments.
@@ -160,9 +190,9 @@ No assignments are accepted after 48 hours. This policy does not extend the fina
 
 The _emergency grade erasure policy_ acknowledges that often times life situations occur that make it impossible to keep up in a course. **_Do not_ use this a planning or scheduling device.** This is specifically meant to take care of emergencies that happen in your life during the quarter.
 
-* Your lowest quiz score (including 0s) is dropped (best 2 of 3)
+* Your lowest quiz score (including 0s) is dropped (we keep the best 2 of 3)
 * Your lowest tutorial score (including 0s) is dropped
-  * _You may not drop the final tutorial score_ (in Week 10).
+  * _You may not drop the final tutorial_ (in Week 10).
 * Your lowest **homework** score (including 0s) is dropped.
 * You may NOT drop mini-quiz or project scores.
 

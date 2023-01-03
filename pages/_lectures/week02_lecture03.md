@@ -1,6 +1,6 @@
 ---
 layout: module
-title: " "
+title: "Abstraction"
 type: lecture
 description:
 draft: 1
