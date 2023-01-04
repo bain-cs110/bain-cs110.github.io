@@ -23,7 +23,7 @@ A key part of this class is your Tutorial Team (up to 8 people; no exceptions) w
 There are several ways of finding a Tutorial Team in our class:
 
 1. **EVERYONE** is expected to fill out our Tutorial Team survey (linked below) regardless of whether or not you have Teammates in mind already.
-2. If you already have teammates in mind, go ahead and sign up for your group in Canvas. [Instructions are located here](https://community.canvaslms.com/t5/Student-Guide/How-do-I-join-a-group-as-a-student/ta-p/468). We may add students to your pre-formed team depending on the survey results.
+2. If you already have teammates in mind, go ahead and sign up for your group in Canvas. <a href="https://community.canvaslms.com/t5/Student-Guide/How-do-I-join-a-group-as-a-student/ta-p/468" target="_blank">Instructions are located here</a>. We may add students to your pre-formed team depending on the survey results.
 3. If you'd like to find teammates on your own, you can do so by posting in the `#imaginary-student-groups` chat room on Campuswire (if you haven't signed up for Campuswire, make sure to do so via the registration link on Canvas). If you find some people with similar interests, go ahead and sign up for the team on Canvas using the instructions above.
 4. If you'd like to be assigned to a Team, just fill out the Team Survey and we'll assign you a Team before the second Wednesday of class.
 
