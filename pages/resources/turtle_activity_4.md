@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Turtle Activity 4x
+title: Turtle Activity 4
 permalink: /resources/turtle-activity-4/
 ---
 Now that you're experts, lets put your skills to some creative use. We have our delightful turtle buddy and some simple ways of controlling its movement. We also now know how to chain these movements (or commands) together into <strong>programs</strong>. But programs don't need to always be about completing some sort of task. What if we used our turtle buddy to create art? Computers are great at performing the same simple tasks repeatedly at amazing speed. Here, we're going to use a slightly modified version of our previous activity that focuses on drawing designs based off of your turtle buddy's movements.
@@ -17,15 +17,15 @@ There are a few main changes to this simulation:
 
 5. TO MOVE, has been replaced by TO DRAW. Unlike TO MOVE that only gets executed by your turtle buddy once, TO DRAW will be repeatedly executed by your turtle until you click the DRAW button once more to stop it.
 
-<You control the movement of your turtle just as before, by connecting movement blocks to each other and then, once satisfied, hitting the DRAW button (note: remember, once you've clicked the DRAW button, your turtle will keep following your program until you click DRAW again).
+You control the movement of your turtle just as before, by connecting movement blocks to each other and then, once satisfied, hitting the DRAW button (note: remember, once you've clicked the DRAW button, your turtle will keep following your program until you click DRAW again).
 
 <iframe frameborder="0" height="650" scrolling="no" src="https://ct-stem.s3.amazonaws.com/uploads/bainco/2020/07/01/drawing_turtle_2020-07-01-11-13-32-984014.html" width="1200">Something has gone wrong. Please reload the page.</iframe>
 
 ## Activities
-1. Write a program that results in your turtle drawing an <em>equilateral</em> triangle (equal angles and equal side
-lengths). Explain how your program works.
+1. Write a program that results in your turtle drawing a square.
 
-2. Now modify your program so that it draws a square.
+2. Now modify your program so that it draws an <em>equilateral</em> triangle (equal angles and equal side
+lengths). Explain how your program works.
 
 3. Now try modifying your program to draw a regular (all sides are equal length) pentagon. Is there a pattern between your solutions for a regular triangle, regular square, and regular pentagon? Explain.
 
