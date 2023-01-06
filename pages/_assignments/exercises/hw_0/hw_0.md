@@ -127,11 +127,11 @@ This means that you must _carefully_ read each assignment description and follow
 
 For this assignment, you will upload your `homework_0.py` file to the assignment on Canvas. DO NOT UPLOAD ANY OTHER FILES. Once you've submitted your file to Canvas, you're done!
 
-[Need help submitting a file to Canvas? See this video.](https://community.canvaslms.com/t5/Student-Guide/How-do-I-upload-a-file-as-an-assignment-submission-in-Canvas/ta-p/274)
+<a href="https://community.canvaslms.com/t5/Student-Guide/How-do-I-upload-a-file-as-an-assignment-submission-in-Canvas/ta-p/274" target="_blank">Need help submitting a file to Canvas? See this video.</a>
 
-> **Note**: You will not receive feedback from the autograder on your assignment until AFTER the final due date (which is the "open till date on Canvas").
+> **Note**: You will not receive feedback from the autograder on your assignment until AFTER the final due date (which is the "available until date on Canvas").
 
 * * *
 
 ## Requesting an extension
-If you need to request an extension on this assignment use the <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqyOhXfPiVuHh5AF5AIcoGEeTnMaq7o2P6yJzujFkQyXXSOA/viewform?usp=sf_link">Extension Request form</a>. Please see the Syllabus for requirements. Your extension is automatically accepted if you meet the conditions. You will see your due date on Canvas update 24 hours prior to the original deadline.
+If you need to request an extension on this assignment use the <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeqyOhXfPiVuHh5AF5AIcoGEeTnMaq7o2P6yJzujFkQyXXSOA/viewform?usp=sf_link">Extension Request form</a>. Please see the Syllabus for requirements. Your extension is automatically accepted if you meet the conditions. You will see your due date on Canvas update 24 hours prior to the original deadline.
