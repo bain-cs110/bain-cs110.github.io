@@ -8,8 +8,8 @@ canvas_id: friday-lecture-2-writing-programs-january-6
 description:
 due_date: 2023-01-06
 videos:
-   - url: 
-     title: "Live Lecture (Not Yet Posted)"
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=27788781-7138-4471-8461-af5f014cfb96
+     title: "Live Lecture"
      duration: "50:00"
      live: 1
 slides:
