@@ -12,6 +12,7 @@ term_start_date: "2023-01-02"
 url: "bain-cs110.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username:
+canvas_id: 185071
 campuswire_url: https://campuswire.com/p/GB09BA912
 canvas_url: https://canvas.northwestern.edu/courses/185071
 timezone: "America/Chicago"

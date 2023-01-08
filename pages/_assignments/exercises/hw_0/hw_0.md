@@ -7,7 +7,7 @@ due_date: 2023-01-09
 ordering: 1
 draft: 0
 points: 100
-canvas_id:
+canvas_id: 1180650
 ---
 
 This assignment is super easy and super short. We'll basically complete the whole thing in class on Friday.
