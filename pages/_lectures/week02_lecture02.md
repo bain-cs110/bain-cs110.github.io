@@ -6,6 +6,7 @@ num: 4
 draft: 0
 exercise_url: "lecture04.zip"
 description:
+canvas_id: wednesday-lecture-4-pre-recorded-using-functions-january-11
 due_date: 2023-01-11
 videos:
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=19165232-5c3d-4481-af09-af85002d2dbd

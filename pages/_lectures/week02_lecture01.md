@@ -6,6 +6,7 @@ num: 3
 draft: 0
 description:
 due_date: 2023-01-09
+canvas_id: monday-lecture-3-data-types-operators-and-variables-january-9
 exercise_url: lecture03.zip
 videos:
    - url: 
