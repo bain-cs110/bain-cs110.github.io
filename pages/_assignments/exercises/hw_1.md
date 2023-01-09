@@ -38,7 +38,7 @@ First create a new folder in your CS 110 folder, inside the `homeworks` folder c
 
 Then download the starter file by clicking on the big button below.
 
-<a download class="nu-button" href="/course-files/homework/hw01_template.py" target="_blank">
+<a download class="nu-button" href="/course-files/homeworks/hw01_template.py" target="_blank">
     Homework Starter Files <i class="fas fa-download"></i>
 </a>
 
