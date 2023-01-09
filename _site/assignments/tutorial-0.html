@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Writing Our Own Programs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    
+
+    </head>
+    <body class="two-column">
+        <div class="wrapper">
+
+            <div class="sidebar">
+                <ol class="side-menu">
+  <li><a href="#part-0-meet-your-group">Part 0: Meet Your Group!</a></li>
+  <li><a href="#part-1-get-your-files-organized">Part 1: Get Your Files Organized</a></li>
+  <li><a href="#part-2-create-two-python-files-and-write-some-programs">Part 2: Create two Python files and Write Some Programs</a>
+    <ol>
+      <li><a href="#storing-data-in-variables">Storing Data in Variables</a></li>
+      <li><a href="#accessing-data-in-variables">Accessing Data in Variables</a></li>
+      <li><a href="#using-the-print-function">Using the <code class="language-plaintext highlighter-rouge">print</code> Function</a></li>
+      <li><a href="#using-the-input-function">Using the <code class="language-plaintext highlighter-rouge">input</code> Function</a></li>
+    </ol>
+  </li>
+  <li><a href="#part-3-turtle-time">Part 3: Turtle Time!</a>
+    <ol>
+      <li><a href="#some-pro-tips">Some Pro Tips</a></li>
+    </ol>
+  </li>
+  <li><a href="#getting-credit-for-your-work">Getting Credit for your Work</a></li>
+</ol>
+
+            </div>
+
+          <article>
+            <div class="main">
+                <!--
+
+    
+        <h1>
+            <a href="../assignments/">Assignments</a> > 
+            Tutorial 0: Writing Our Own Programs
+        </h1>
+    
+-->
+                <a href="/assignments/tutorial-0" target="_blank">Open this page in a new window.</a>
+<br>
+<br>
+<!-- <p>
+    <!--
+        Due on Wed, 01/11 @ 11:59PM.
+    
+    
+        100 Points.
+    
+    
+
+</p>  -->
+<p>In tutorial today, you will meet your assigned peer mentor and fellow classmates and write a few simple programs. Attendance at the first tutorial session is <strong>MANDATORY</strong>. There is nothing to submit for this tutorial. You will simply show your PM your completed work and they will mark you as present.</p>
+
+<p>Our objectives for this assignment are:</p>
+
+<ol>
+  <li>Storing data in variables</li>
+  <li>Doing basic math in Python</li>
+  <li>Understanding data types</li>
+  <li>Calling basic functions</li>
+</ol>
+
+<hr />
+<h2 id="part-0-meet-your-group">Part 0: Meet Your Group!</h2>
+
+<p>A first step to building any community is to introduce yourselves!</p>
+
+<p>Once in your group, figure out who has the earliest birthday (i.e. January 1st is the earliest possible birthday). This person will go first and introduce themselves with the following:</p>
+<ul>
+  <li>Name</li>
+  <li>Major</li>
+  <li>Year in School</li>
+  <li>Favorite Breakfast Cereal (or other delightful breakfast delicacy)</li>
+</ul>
+
+<blockquote>
+  <p>Note, your group will have a Peer Mentor or TA assigned to it and they will come introduce themselves as well! They’ll be easy to identify as they’ll all be carrying rubber ducks (for real). Because PMs are assigned to multiple groups, they may not be present for all the intros and might ask you to quickly go around and say names again.</p>
+</blockquote>
+
+<p>Once you’ve all had a chance to introduce yourselves, you can get started on your tutorial!</p>
+
+<hr />
+
+<h2 id="part-1-get-your-files-organized">Part 1: Get Your Files Organized</h2>
+<p>Create the folder organizational structure recommended in class during Monday’s Lecture.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cs110
+    |-- homework
+    │   |-- hw00
+    │   |-- hw01
+    |   ...
+    |-- lectures
+    |   -- lecture00
+    │   -- lecture01
+    │   -- lecture02
+    │   ...
+    |-- tutorials
+        ...
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="part-2-create-two-python-files-and-write-some-programs">Part 2: Create two Python files and Write Some Programs</h2>
+<p>When you’re done, open IDLE and create a new python file (go to File menu &gt; “New File”). This should open a blank document. Then save this blank document as <strong><code class="language-plaintext highlighter-rouge">grade_calculator.py</code></strong> (File menu &gt; “Save as…”), and put it inside of your <code class="language-plaintext highlighter-rouge">cs110 &gt; tutorials &gt; tutorial00</code> folder (You’ll need to make that <code class="language-plaintext highlighter-rouge">tutorial00</code> folder just like you did with the three top-level folders).</p>
+
+<p>In this newly created <code class="language-plaintext highlighter-rouge">grade_calculator.py</code> file, you’re going to write a program to calculate your grade in our class:</p>
+
+<h3 id="storing-data-in-variables">Storing Data in Variables</h3>
+
+<ul>
+  <li>First create a new variable called <code class="language-plaintext highlighter-rouge">miniquizzes</code> and store in it the number <code class="language-plaintext highlighter-rouge">100</code>
+    <ul>
+      <li>We’ll help you on this first one in Python. Copy and paste the below into your file:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">miniquizzes</span> <span class="o">=</span> <span class="mi">100</span>
+</code></pre></div>        </div>
+        <p>In plain English this says: “Please <strong>assign</strong> the value <code class="language-plaintext highlighter-rouge">100</code> to the variable named <code class="language-plaintext highlighter-rouge">miniquizzes</code>”.</p>
+      </li>
+    </ul>
+  </li>
+  <li>Next, create a new variable called <code class="language-plaintext highlighter-rouge">projects</code> and store in it the number <code class="language-plaintext highlighter-rouge">95</code>.</li>
+  <li>Next, create a new variable called <code class="language-plaintext highlighter-rouge">homeworks</code> and store in it the number <code class="language-plaintext highlighter-rouge">95</code>.</li>
+  <li>Next, create a new variable called <code class="language-plaintext highlighter-rouge">tutorials</code> and store in it the number <code class="language-plaintext highlighter-rouge">100</code>.</li>
+  <li>Finally, create a new variable called <code class="language-plaintext highlighter-rouge">quizzes</code> and store in it the number <code class="language-plaintext highlighter-rouge">90</code>.</li>
+</ul>
+
+<p>Make sure to run your program by going to the <code class="language-plaintext highlighter-rouge">Run</code> menu at the top of the screen and selecting <code class="language-plaintext highlighter-rouge">Run Module...</code>. If you don’t see any red error text, that means your program successfully ran! Since we haven’t asked Python to actually output anything yet (we’ve only asked it to remember some numbers) we won’t see any output.</p>
+
+<h3 id="accessing-data-in-variables">Accessing Data in Variables</h3>
+
+<p>Accessing data stored in a variable is as easy as using the name of the variable in another line of our program. Python will then see this name and lookup what value you’ve asked it to remember is stored inside that container.</p>
+
+<p>Now let’s actually calculate the course average for these 5 inputs. Recall from our syllabus that your grade is broken down in the following categories.</p>
+
+<table class="medium">
+  <tbody>
+    <tr>
+      <td><strong>Tutorials</strong></td>
+      <td>15%</td>
+    </tr>
+    <tr>
+      <td><strong>Mini-Quizzes</strong></td>
+      <td>5%</td>
+    </tr>
+    <tr>
+      <td><strong>Homeworks</strong></td>
+      <td>25%</td>
+    </tr>
+    <tr>
+      <td><strong>2 Projects</strong></td>
+      <td>25%</td>
+    </tr>
+    <tr>
+      <td><strong>3 Quizzes</strong></td>
+      <td>30%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>When you see a weighted average like this, it means that different assignments are <em>weighted</em> by their respective percentages (i.e. a category with a higher weight means it constitutes a larger part of your final grade). To calculate the final weighted average, we take the decimal form of the weight for each category and multiply that weight by the average for that category, after doing that for each category, we add up all of those calculations and that gives us our final grade.</p>
+
+<p>For example, to calculate the part of your grade determined by the tutorials, we would take the tutorial weight in decimal form (<code class="language-plaintext highlighter-rouge">15% -&gt; 0.15</code>) and multiply it by the overall tutorial score. Then you’d repeat this process for each different assignment cateogry. Imagine you got a <code class="language-plaintext highlighter-rouge">100</code> for all 5 categories, that would mean your final grade would be calculated by saying:</p>
+
+<p><strong>Grade Calculation Equation</strong>
+<code class="language-plaintext highlighter-rouge">(0.15 * 100) + (0.05 * 100) + (0.25 * 100) + (0.25 * 100) + (0.3 * 100)</code></p>
+
+<p>However, we need to use the grades that are stored in the variables we created earlier. For example, the overall tutorial score is scored in the variable <code class="language-plaintext highlighter-rouge">tutorials</code>. To access the actual value of that variable, we simply use its name (<code class="language-plaintext highlighter-rouge">tutorials</code>) in place of an actual number. For instance, to calculate the part of your grade determined by the tutorials, in Python we’d say:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="mf">0.15</span> <span class="o">*</span> <span class="n">tutorials</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>That says multiply <code class="language-plaintext highlighter-rouge">0.15</code> with whatever value is stored in the variable <code class="language-plaintext highlighter-rouge">tutorials</code>. When you go to run your file, Python will then lookup whatever number is stored in that container and use it for the calcuation.</p>
+
+<ul>
+  <li>Use this example to modify the <strong>Grade Calculation Equation</strong> above so that is uses the variables you created earlier rather than values of <code class="language-plaintext highlighter-rouge">100</code>.</li>
+  <li>Store the result of this calculation in a variable called <code class="language-plaintext highlighter-rouge">grade</code></li>
+  <li>Run your program! (if you run into an error (i.e. red text or a popup saying it can’t run) raise your hand to ask for help!)</li>
+</ul>
+
+<h3 id="using-the-print-function">Using the <code class="language-plaintext highlighter-rouge">print</code> Function</h3>
+
+<p>Well that was a let down…nothing got outputted!</p>
+
+<p>Remember: <em>computers don’t do anything we don’t ask of them.</em> Because we didn’t ask Python to output the value of <code class="language-plaintext highlighter-rouge">grade</code>, when we run our program…it doesn’t output the result of the calculation.</p>
+
+<p>Add a new line to your program that calls the <code class="language-plaintext highlighter-rouge">print</code> function with an input of the variable <code class="language-plaintext highlighter-rouge">grade</code>. Now try running your program again. If everything is correct with your calculator, you should see <code class="language-plaintext highlighter-rouge">94.5</code> printed out in the Interprter (<code class="language-plaintext highlighter-rouge">&gt;&gt;&gt;</code>) Window since we’ve asked our program to output the value stored in that variable.</p>
+
+<h3 id="using-the-input-function">Using the <code class="language-plaintext highlighter-rouge">input</code> Function</h3>
+
+<p>What we’ve done now is essentially asked the computer to remember the average of our scores across these 5 different types of assignments and then calcuate the resulting course average. Now, these variables are currently “set in stone” or <em>hardcoded</em> to be particular numbers. In other words, every time we run this program, it will <em>always</em> use those exact same numbers for the grade calculation. While that’s fine when calculating our grade, what if we wanted to be able to send our program to a friend in the class so they could calculate their grade without modifying the code?</p>
+
+<p>Using the <code class="language-plaintext highlighter-rouge">input</code> function, we can tell Python to ask the person running the program to input a number by typing it in the keyboard. The <code class="language-plaintext highlighter-rouge">input</code> function takes a <code class="language-plaintext highlighter-rouge">string</code> as an argument which represents the <em>prompt</em> Python shows the user and returns a <code class="language-plaintext highlighter-rouge">string</code> of whatever the person typed in.</p>
+
+<ul>
+  <li>Modify the <code class="language-plaintext highlighter-rouge">quizzes</code> variable so that instead of being <em>assigned</em> the value of 90, it is instead assigned the value of running the below <code class="language-plaintext highlighter-rouge">input</code> function call:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">input("Please enter your quiz average:")</code></li>
+    </ul>
+  </li>
+  <li>Now try running your program.</li>
+</ul>
+
+<p>Did it work? No? Uh oh. Let’s think about why by using the error we got as a clue:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s">"/Users/username/Desktop/tutorial0/grade_calculator.py"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">7</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+    <span class="n">grade</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.15</span> <span class="o">*</span> <span class="n">tutorials</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mf">0.05</span> <span class="o">*</span> <span class="n">miniquizzes</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mf">0.25</span> <span class="o">*</span> <span class="n">homeworks</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mf">0.25</span> <span class="o">*</span> <span class="n">projects</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mf">0.3</span> <span class="o">*</span> <span class="n">quizzes</span><span class="p">)</span>
+<span class="nb">TypeError</span><span class="p">:</span> <span class="n">can</span><span class="s">'t multiply sequence by non-int of type '</span><span class="nb">float</span><span class="s">'
+</span></code></pre></div></div>
+
+<p>This error says it occurs on the line where we calculate the final <code class="language-plaintext highlighter-rouge">grade</code> and that it says it’s a <code class="language-plaintext highlighter-rouge">TypeError</code>. In other words, Python says you asked me to multiply the value stored in this variable…but it’s not a number! Why might that be? Well remember that the <code class="language-plaintext highlighter-rouge">input</code> function <strong>returns</strong> a <code class="language-plaintext highlighter-rouge">str</code> or <code class="language-plaintext highlighter-rouge">string</code>. But the <code class="language-plaintext highlighter-rouge">*</code> operator only knows how to deal with numbers! That means we need to convert or <strong>cast</strong> the value we get back from <code class="language-plaintext highlighter-rouge">input</code> from a <code class="language-plaintext highlighter-rouge">str</code> to an <code class="language-plaintext highlighter-rouge">int</code> (or integer).</p>
+
+<p>To convert the <code class="language-plaintext highlighter-rouge">quizzes</code> variable to an integer we need to use the <code class="language-plaintext highlighter-rouge">int</code> function which accepts any input and will try its best to return an <code class="language-plaintext highlighter-rouge">int</code> (integer) from that input.</p>
+
+<p>There’s two (easy) ways you can implement this in your program.</p>
+
+<ol>
+  <li>You could add a new line after the line that says <code class="language-plaintext highlighter-rouge">quizzes = ...</code> that says <code class="language-plaintext highlighter-rouge">quizzes = int(quizzes)</code> – in other words, you’d ask Python to replace the existing <code class="language-plaintext highlighter-rouge">quizzes</code> variable with the result of converting whatever is currently in the <code class="language-plaintext highlighter-rouge">quizzes</code> variable to an <code class="language-plaintext highlighter-rouge">int</code>.</li>
+  <li>You could change the calculation of <code class="language-plaintext highlighter-rouge">grade</code> to use <code class="language-plaintext highlighter-rouge">int(quizzes)</code> rather than just <code class="language-plaintext highlighter-rouge">quizzes</code> – this essentially tells Python to not modify the original variable but to instead just convert the value for the purposes of the calculation.</li>
+</ol>
+
+<p>Pick an approach and implement in your program. Finally Run your program again and make sure you get the expected output given your input! In fact…run it twice with two different numeric inputs (note, it will only work with whole numbers) and make sure you get two different final grades!</p>
+
+<hr />
+
+<h2 id="part-3-turtle-time">Part 3: Turtle Time!</h2>
+
+<p>This time, rather than starting from scratch, we’re going to give you a template to work in. Click the big purple button below to download the file <code class="language-plaintext highlighter-rouge">turtorial.py</code>. Move that downloaded file into your <code class="language-plaintext highlighter-rouge">tutorial0</code> folder.</p>
+
+<p><a download="" class="nu-button" href="/course-files/tutorials/tutorial00/turtorial.py" target="_blank">
+    Tutorial Starter File <i class="fas fa-download"></i>
+</a></p>
+
+<ul>
+  <li>Once you’ve moved it, open it up in IDLE</li>
+  <li>Modify the program so that your turtle draws a square.</li>
+  <li>Modify the program so that after drawing a square the turtle…
+    <ul>
+      <li>first changes its pen color to <code class="language-plaintext highlighter-rouge">"cyan"</code></li>
+      <li>then draws a rectangle (i.e. a shape with non-equal sides)</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <h3 id="some-pro-tips">Some Pro Tips</h3>
+  <ul>
+    <li>Always save your python file before running it so that the interpreter “sees” your changes.</li>
+    <li>In order for your interpreter to recognize your file as a Python file, you must give it the <strong><code class="language-plaintext highlighter-rouge">.py</code></strong> file extension (e.g. <strong><code class="language-plaintext highlighter-rouge">my_program.py</code></strong>).</li>
+    <li>Don’t forget to name all of your programs “snake case” (all lower case, underscores to separate words).</li>
+    <li>If your code doesn’t run, practice reading and trying to understand (often by Googling) what the interpreter is telling you. If you see red error text, the computer is trying to tell you where the problem is.</li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h2 id="getting-credit-for-your-work">Getting Credit for your Work</h2>
+
+<p>Because attendance is required, there is no formal submission for this tutorial on Canvas. Instead, you will show your completed program to a PM/TA and they will mark your assignment as complete.</p>
+
+<p>In future weeks, you may choose to submit the tutorial assignment remotely by 11:59pm. If you choose to submit remotely your tutorial will be autograded for completeness in accuracy.</p>
+
+
+            </div>
+</article>
+      </div>
+        
+            <script type="text/javascript" src="/assets/js/main.js"></script>
+    
+    <script src="https://kit.fontawesome.com/62a7c74d0d.js" crossorigin="anonymous"></script>
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="/assets/js/scrollspy.js"></script>
+    </body>
+</html>
