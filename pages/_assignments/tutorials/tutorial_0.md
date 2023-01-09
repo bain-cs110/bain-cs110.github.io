@@ -164,6 +164,7 @@ This time, rather than starting from scratch, we're going to give you a template
 * Modify the program so that after drawing a square the turtle...
   * first changes its pen color to `"cyan"`
   * then draws a rectangle (i.e. a shape with non-equal sides)
+* Finally, depending on how much time is left, make a SUPER COOL design. What sorts of shapes are easy to draw? What sorts of shapes are difficult to draw?
 
 > ### Some Pro Tips
 > * Always save your python file before running it so that the interpreter "sees" your changes.
