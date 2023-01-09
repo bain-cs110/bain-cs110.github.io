@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Introductory Exercises</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    
+
+    </head>
+    <body class="two-column">
+        <div class="wrapper">
+
+            <div class="sidebar">
+                <ol class="side-menu">
+  <li><a href="#part-0-download-the-template-file">Part 0: Download the Template File</a></li>
+  <li><a href="#part-1-more-turtle-programming">Part 1: More Turtle Programming</a></li>
+  <li><a href="#part-2-some-calculator-programs">Part 2: Some Calculator Programs</a></li>
+  <li><a href="#turning-it-in">Turning it in</a></li>
+  <li><a href="#requesting-an-extension">Requesting an extension</a></li>
+</ol>
+
+            </div>
+
+          <article>
+            <div class="main">
+                <!--
+
+    
+        <h1>
+            <a href="../assignments/">Assignments</a> > 
+            HW1: Introductory Exercises
+        </h1>
+    
+-->
+                <a href="/assignments/hw-1" target="_blank">Open this page in a new window.</a>
+<br>
+<br>
+<!-- <p>
+    <!--
+        Due on Mon, 01/16 @ 11:59PM.
+    
+    
+        100 Points.
+    
+    
+
+</p>  -->
+<style>
+    .screenshot {
+        width: 100%;
+        border: solid 1px #ccc;
+        padding: 6px;
+        border-radius: 5px;
+    }
+</style>
+
+<p>This week’s assignment is focused on writing simple programs just like the tutorial. It does not ask you to write any functions of your own (which is the focus of our Friday lecture this week).</p>
+
+<p>By the end of this assignment you should be able to:</p>
+
+<ol>
+  <li>Store data in variables</li>
+  <li>Identify a data type</li>
+  <li>Doing basic math in Python</li>
+  <li>Use the <code class="language-plaintext highlighter-rouge">input</code> function</li>
+  <li>Use the <code class="language-plaintext highlighter-rouge">print</code> function</li>
+  <li>Call some basic turtle functions</li>
+</ol>
+
+<hr />
+
+<h2 id="part-0-download-the-template-file">Part 0: Download the Template File</h2>
+
+<p>First create a new folder in your CS 110 folder, inside the <code class="language-plaintext highlighter-rouge">homeworks</code> folder called <code class="language-plaintext highlighter-rouge">hw01</code> (or some variation).</p>
+
+<p>Then download the starter file by clicking on the big button below.</p>
+
+<p><a download="" class="nu-button" href="/course-files/homework/hw01_template.py" target="_blank">
+    Homework Starter Files <i class="fas fa-download"></i>
+</a></p>
+
+<p>Move the downloaded file into your new <code class="language-plaintext highlighter-rouge">hw01</code> folder <strong>and rename it <code class="language-plaintext highlighter-rouge">homework_01.py</code> so you don’t accidentally get it confused with any other versions</strong>.</p>
+
+<hr />
+
+<h2 id="part-1-more-turtle-programming">Part 1: More Turtle Programming</h2>
+
+<ol>
+  <li>Right click on the <strong>homework_01.py</strong> file that you just saved in your <strong>hw01 folder</strong> and open it with IDLE.</li>
+  <li>You should now see some python code. Click anywhere inside that file so that your cursor is now in that window.</li>
+  <li>Hit F5 (if you’re on a Mac, hit the <strong>fn</strong> key and then <strong>F5</strong>). As an alternative to F5, you can also go to the Run menu and select <strong>Run Module</strong>. Your code will then be executed by the Python interpreter. Right now, it doesn’t do much.</li>
+</ol>
+
+<p>Please complete the following exercises by editing the <strong>homework_01.py</strong> file using IDLE:</p>
+
+<ol>
+  <li>Teach <code class="language-plaintext highlighter-rouge">turtle_1</code> to draw a square</li>
+  <li>Teach <code class="language-plaintext highlighter-rouge">turtle_2</code> to draw a green rectangle</li>
+  <li>Teach <code class="language-plaintext highlighter-rouge">turtle_3</code> to draw a red equilateral triangle (3 equal length sides)</li>
+  <li>Teach <code class="language-plaintext highlighter-rouge">turtle_4</code> to draw a house (a square with an equilateral triangle on top)
+    <blockquote>
+      <p>Hint: You can’t just paste the two solutions together. Think about which direction your turtle is facing when it stops and starts drawing! It might help to play out the turtle’s motion yourself!</p>
+    </blockquote>
+  </li>
+  <li>(Optional) Teach <code class="language-plaintext highlighter-rouge">turtle_5</code> to draw something interesting!</li>
+</ol>
+
+<blockquote>
+  <p>Hint: Don’t forget about the turtle function cheatsheet from Leture 4!</p>
+</blockquote>
+
+<p>After completing all 4 exercises, your screen should look something like this (your shapes might be different sizes and colors):</p>
+
+<p><img src="/assets/images/hw01/turtles.png" style="width: 33%;" class="screenshot" /></p>
+
+<h2 id="part-2-some-calculator-programs">Part 2: Some Calculator Programs</h2>
+<p>Next we’ll focus on some numerical programming toward the bottom of the <code class="language-plaintext highlighter-rouge">homework_01.py</code> file.</p>
+
+<h4 id="1-write-a-program-that-computes-and-prints-the-result-of">1. Write a program that computes and prints the result of:</h4>
+
+<p><img src="/assets/images/hw01/equation.png" style="width: 10%" class="screenshot" /></p>
+
+<p>(The answer is roughly 0.1017).</p>
+
+<h4 id="2-user-input-of-strings">2. User input of <code class="language-plaintext highlighter-rouge">string</code>s</h4>
+<p>Write a program to ask the user to enter their name. Then print a message that says “hello” to them. For example, this is what you would see if you used my name:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Enter</span> <span class="n">a</span> <span class="n">name</span><span class="p">:</span><span class="n">Connor</span> 	   <span class="c1"># prompt the user for a name (not necessarily Connor)
+</span><span class="n">Hello</span> <span class="n">there</span><span class="p">,</span> <span class="n">Connor</span>        <span class="c1"># output a sentence that says hello!
+</span></code></pre></div></div>
+
+<h4 id="3-user-input-of-numbers">3. User input of numbers</h4>
+<p>Write a program that asks the user for a weight in kilograms and converts it to pounds. There are 2.2 pounds in a kilogram. You only need to worry about whole number weight entries. This is what it should look like:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Enter</span> <span class="n">weight</span> <span class="ow">in</span> <span class="n">kg</span><span class="p">:</span> <span class="mi">5</span>         <span class="c1"># prompt the user for a weight in kg
+</span><span class="mi">5</span> <span class="n">kilograms</span> <span class="ow">is</span> <span class="mf">11.0</span> <span class="n">pounds</span><span class="p">.</span>   <span class="c1"># output the result
+</span></code></pre></div></div>
+
+<h4 id="4-calculate-the-length-of-an-inputted-string">4. Calculate the length of an inputted string</h4>
+<p>Write a program that asks the user to input a word and then tell the user how many letters are in that word. For example:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Enter</span> <span class="n">a</span> <span class="n">word</span><span class="p">:</span> <span class="n">supercalifragilisticexpialidocious</span> <span class="c1"># prompt the user for a word
+</span><span class="n">There</span> <span class="n">are</span> <span class="mi">34</span> <span class="n">letters</span> <span class="ow">in</span> <span class="n">that</span> <span class="n">word</span><span class="p">.</span>   <span class="c1"># output the result
+</span></code></pre></div></div>
+
+<hr />
+
+<h2 id="turning-it-in">Turning it in</h2>
+
+<p>Most of the Exercises in this class will be graded via an autograder – a program, written in Python, that will run your program and test it to see if it meets all the expectations of the assignment.</p>
+
+<p>This means that you must <em>carefully</em> read each assignment description and follow it exactly. If your assignment does not satisfy the requirements in any way (even if you think it’s small and inconsequential) you will receive points off (or in the worst case, not receive any points at all). For this assignment, you should make sure your turtle drawing looks like the one featured above and that the math calculations produce the expected output as specified.</p>
+
+<p>For this assignment, you will upload your <code class="language-plaintext highlighter-rouge">homework_01.py</code> file to the assignment on Canvas. DO NOT UPLOAD ANY OTHER FILES. Once you’ve submitted your file to Canvas, you’re done! You do not need to add your <code class="language-plaintext highlighter-rouge">netid</code> to the file like we did alast week.</p>
+
+<p><a href="https://community.canvaslms.com/t5/Student-Guide/How-do-I-upload-a-file-as-an-assignment-submission-in-Canvas/ta-p/274" target="_blank">Need help submitting a file to Canvas? See this video.</a></p>
+
+<blockquote>
+  <p><strong>Note</strong>: You will not receive feedback from the autograder on your assignment until AFTER the final due date (which is the “available until date on Canvas”).</p>
+</blockquote>
+
+<hr />
+
+<h2 id="requesting-an-extension">Requesting an extension</h2>
+<p>If you need to request an extension on this assignment use the <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeqyOhXfPiVuHh5AF5AIcoGEeTnMaq7o2P6yJzujFkQyXXSOA/viewform?usp=sf_link">Extension Request form</a>. Please see the Syllabus for requirements. Your extension is automatically accepted if you meet the conditions. You will see your due date on Canvas update 24 hours prior to the original deadline.</p>
+
+
+            </div>
+</article>
+      </div>
+        
+            <script type="text/javascript" src="/assets/js/main.js"></script>
+    
+    <script src="https://kit.fontawesome.com/62a7c74d0d.js" crossorigin="anonymous"></script>
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="/assets/js/scrollspy.js"></script>
+    </body>
+</html>

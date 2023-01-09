@@ -4,7 +4,7 @@ title: Setting Up and Signing Up
 abbreviation: Homework 0
 type: homework
 due_date: 2023-01-09
-ordering: 1
+ordering: 0
 draft: 0
 points: 100
 canvas_id: 1180650

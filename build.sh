@@ -1,5 +1,5 @@
 # zip everything:
-python3 course-files/build/zip_it.py course-files/exercises
+python3 course-files/build/zip_it.py course-files/homeworks
 python3 course-files/build/zip_it.py course-files/lectures
 python3 course-files/build/zip_it.py course-files/tutorials
 python3 course-files/build/zip_it.py course-files/extra-practice
