@@ -33,7 +33,7 @@ Once in your group, figure out who has the earliest birthday (i.e. January 1st i
 * Year in School
 * Favorite Breakfast Cereal (or other delightful breakfast delicacy)
 
-> Note, your group will have a Peer Mentor or TA assigned to it and they will come introduce themselves as well! They'll be easy to identify as they'll all be carrying rubber ducks (for real). Because PMs are assigned to multiple groups, they may not be present for all the intros and might ask you to quickly go around and say names again.
+> Note, your group will have a Peer Mentor or TA assigned to it and they will come introduce themselves as well! They'll be easy to identify as they'll all have name tags! Because PMs are assigned to multiple groups, they may not be present for all the intros and might ask you to quickly go around and say names again.
 
 Once you've all had a chance to introduce yourselves, you can get started on your tutorial!
 
