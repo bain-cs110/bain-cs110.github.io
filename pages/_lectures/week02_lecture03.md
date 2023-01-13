@@ -9,6 +9,10 @@ exercise_url: "lecture05.zip"
 description:
 canvas_id: friday-lecture-5-abstraction-january-13
 due_date: 2023-01-13
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=314eeafc-8967-479e-883c-af5f014cfbf8
+     title: "Lecture Recording"
+     duration: "50:00"
 slides:
    - url: https://docs.google.com/presentation/d/1qJs9MlBetn-HEKNTIBJuuP8x-fqu4fW6sDCYWuFzzlk/edit?usp=sharing
      title: Writing our Own Functions

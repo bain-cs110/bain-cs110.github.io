@@ -10,7 +10,7 @@ canvas_id: monday-lecture-3-data-types-operators-and-variables-january-9
 exercise_url: lecture03.zip
 videos:
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8a55a3b7-3abc-49e6-96b9-af5f014cfbc3
-     title: "Lecture Recording (Not Posted)"
+     title: "Lecture Recording"
      duration: "50:00"
 slides:
    - url: https://docs.google.com/presentation/d/1PS8W-I_zUhTjnTPvRvTt-mS3tHLyCPgu6RJEUblVspI/edit?usp=sharing
