@@ -140,7 +140,7 @@ def func_name(req_name_1, req_name_2, req_name_3, req_name_4, opt_name=default_v
 
 
 ### Test Your New Function!
-When you've finished with your `make_square` function, create the pattern pictured below by calling your function with the following arguments (below). Copy the following code and pasting it ***below*** your function definition and ***above*** the `TRIANGLE CHALLENGE` comment. Make sure these function calls are NOT indented as they are not part of your function definition.
+When you've finished with your `make_square` function, create the pattern pictured below by calling your function with the following arguments (below). Copy the following code and pasting it ***below*** your function definition. Make sure these function calls are NOT indented as they are not part of your function definition.
 
 ```python
 # center blue block
