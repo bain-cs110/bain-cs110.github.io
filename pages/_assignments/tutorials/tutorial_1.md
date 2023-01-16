@@ -32,15 +32,14 @@ Once you've gotten the file, rename it to `tutorial_01.py` and move it into your
 > 1. Working with parameters & arguments
 > 1. Translating specifications into smaller steps that a computer can perform
 
-
 Go ahead open the file in IDLE, take a look at it and then run it. You should see something like this:
 
-<img class="small frame" src="/assets/images/tutorial01/before.png" />
+<img class="medium frame" src="/assets/images/tutorial01/before.png" />
 
 
 > **Note**: If you're on a Mac and are currently in Dark mode, you might see the below:
 > 
-> <img class="small frame" src="/assets/images/tutorial01/darkmode.png" />
+> <img class="medium frame" src="/assets/images/tutorial01/darkmode.png" />
 > 
 > For some reason, `Tkinter` switches the colors white and black when your Mac is in
 > dark mode. To fix this, you have two options:
@@ -99,7 +98,7 @@ Hopefully, you and your partner discussed something along the lines of the follo
 
 Sweet! That's cool. We can make any sort of rectangle we want! See if you can reproduce the below image by modifying the inputs given to the `create_rectangle` function (ignore the triangle for now, we'll get there later):
 
-<img class="small frame" src="/assets/images/tutorial01/modified.png" />
+<img class="medium frame" src="/assets/images/tutorial01/modified.png" />
 
 
 ### Writing our Own Version
@@ -111,8 +110,8 @@ That's a great idea I heard you exclaim! After all, let's say we just want to dr
 Your job is to write this function which we'll call `make_square`. It will have the following inputs:
 > note, in the real world you get to decide on your own names for these inputs, but for simplicity, we're giving you the names you should use here:
 1. **a_canvas** *`Canvas`*: the canvas where you want the square to be drawn 
-1. **bottom-left-x** *(int)*: an x-coordinate for the bottom-left corner of the square
-1. **bottom-left-y** *(int)*: a y-coordinate for the bottom-left corner of the square
+1. **bottom_left_x** *(int)*: an x-coordinate for the bottom-left corner of the square
+1. **bottom_left_y** *(int)*: a y-coordinate for the bottom-left corner of the square
 1. **width** *(int)*: the width (and also height) of the square.
 1. **color** *(str, optional)*: a name of color of the square, which defaults to blue: `"blue"`.
 
@@ -160,7 +159,7 @@ make_square(the_canvas, 50, 50, 50, color="#8FCB9B")
 make_square(the_canvas, 200, 50, 50, color="#8FCB9B")
 ```
 
-<img class="small frame" src="/assets/images/tutorial01/after_square.png" />
+<img class="medium frame" src="/assets/images/tutorial01/after_square.png" />
 
 Note, those weird colors (e.g. `"#8FCB9B"`) are called "hex codes" and are colors reprsented in a symbol system called "hexidecimal" (think of it like the Dewey Decimal system but for colors). Here is a <a href="https://coolors.co/app" target="_blank">link to a color generator</a> (to browse different hexidecimal color codes, press the spacebar). You can also use regular color names like `"green"`, `"blue"`, `"red"`, etc. (make sure they"re strings though!).
 
@@ -171,8 +170,8 @@ Alright, now that we're experts in writing our own functions...let's do it again
 Your job is to write a function which we'll call `make_picture_frame`. It will have the following inputs:
 > note, in the real world you get to decide on your own names for these inputs, but for simplicity, we're giving you the names you should use here:
 1. **a_canvas** *`Canvas`*: the canvas where you want the square to be drawn 
-1. **bottom-left-x** *(int)*: an x-coordinate for the bottom-left corner of the square
-1. **bottom-left-y** *(int)*: a y-coordinate for the bottom-left corner of the square
+1. **bottom_left_x** *(int)*: an x-coordinate for the bottom-left corner of the square
+1. **bottom_left_y** *(int)*: a y-coordinate for the bottom-left corner of the square
 1. **width** *(int)*: the width (and also height) of the square.
 1. **frame_width** *(int)*: the width of the picture frame
 1. **frame_color** *(str, optional)*: a name of color of the square, which defaults to blue: `"blue"`.
