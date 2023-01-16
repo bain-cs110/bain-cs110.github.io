@@ -117,7 +117,7 @@ Your job is to write this function which we'll call `make_square`. It will have 
 
 In other words, if we invoked your `make_square` function as follows...
 
-`make_square(the_canvas, (100, 100), 100, color='blue')`
+`make_square(the_canvas, 100, 100, 100, color='blue')`
 
 ...your function would draw a 100x100 blue square with its bottom-right corner at position (100, 100), as pictured above.
 
@@ -216,11 +216,11 @@ If you recall from earlier, the right side of our canvas has a dope triangle on 
 
 <img class="medium frame" src="/assets/images/tutorial01/before.png" />
 
-This challenge asks you to do the same thing as the first challenge, but instead of designing a function `make_square` using TKinter"s `create_rectangle`, you"ll design `make_triangle_left` and `make_triangle_right` to use TKinter"s `create_polygon` function. Here, instead of calculating just one extra coordinate point...you'll have to calculate two more coordinates and use all three coordinates as input to the `create_polygon` function.
+This challenge asks you to do the same thing as the first challenge, but instead of designing a function `make_square` using TKinter's `create_rectangle`, you"ll design `make_triangle_left` and `make_triangle_right` to use TKinter"s `create_polygon` function. Here, instead of calculating just one extra coordinate point...you'll have to calculate two more coordinates and use all three coordinates as input to the `create_polygon` function.
 
 ### Create a left triangle function
 
-In the Triangle Challenge section of the file, create a function called `make_triangle_left` that draws a 45-45-90-degree right triangle, where the right angle is positioned at the bottom-left corner (as pictured above). It accepts the following arguments:
+In the Triangle Challenge section of the file, create a function called `make_triangle_left` that draws a 45-45-90-degree right triangle, where the right angle is positioned at the bottom-left corner. It accepts the following arguments:
 
 1. **a_canvas** *(Canvas)*: where you want the triangle to be drawn.
 1. **bottom_left_x** *(int)*: defines the x-coordinate of the bottom-left position of the triangle.
@@ -263,14 +263,14 @@ make_triangle_left(the_canvas, 400, 300, 100, color="#8FCB9B")
 * * *
 
 ## Getting Credit for Your Work
-If you're in class make sure to check-in with your PM you don't need to submit a `.py` file on Canvas. Instead, find one other person in your group that is finished and peer review each others work. Here are the things to check:
+If you're in class you don't need to submit a `.py` file on Canvas. Instead, find one other person in your group that is finished and peer review each other's work. Here are the things to check:
 
 1. Does their code look readable and neat?
 1. Can you understand what their code does by reading it?
 1. How was their solution different from yours (if at all)?
 1. Does their program run and generate the correct test images?
 
-Once you've each taken a look, take a second to debrief. Anything either of you found difficult? Easy? Fun? Mind-blowing? Once you've debriefed, fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLScFw18yE8C1L2te7MPFCvcbGCFkIdURc0aMonRGQ8-X0FJkwQ/viewform?usp=sf_link" target="_blank">attendance Google Form</a>. **NOTE: You will need the NetID of the person's whose code you reviewed.**
+Once you've each taken a look, take a second to debrief. Anything either of you found difficult? Easy? Fun? Mind-blowing? Once you've debriefed, fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLScFw18yE8C1L2te7MPFCvcbGCFkIdURc0aMonRGQ8-X0FJkwQ/viewform?usp=sf_link" target="_blank">attendance Google Form</a>. **NOTE: You will need the NetID of the person's whose code you reviewed.** You're free to go after you're finished, though we hope that you might consider sticking around and helping others in your group.
 
 If you're submitting remotely, you MUST submit your completed tutorial to Canvas and it will be graded. Make sure that all of your functions are named correctly and that they use the EXACT parameter order, names, and types as specified. If you've followed the instructions correctly, the image your function should generate should look like the below:
 
