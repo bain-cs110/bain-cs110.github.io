@@ -161,7 +161,9 @@ make_square(the_canvas, 200, 50, 50, color="#8FCB9B")
 
 <img class="medium frame" src="/assets/images/tutorial01/after_square.png" />
 
-Note, those weird colors (e.g. `"#8FCB9B"`) are called "hex codes" and are colors reprsented in a symbol system called "hexidecimal" (think of it like the Dewey Decimal system but for colors). Here is a <a href="https://coolors.co/app" target="_blank">link to a color generator</a> (to browse different hexidecimal color codes, press the spacebar). You can also use regular color names like `"green"`, `"blue"`, `"red"`, etc. (make sure they"re strings though!).
+Note, those weird colors (e.g. `"#8FCB9B"`) are called "hex codes" and are colors reprsented in a symbol system called "hexidecimal" (think of it like the Dewey Decimal system but for colors). Here is a <a href="https://coolors.co/app" target="_blank">link to a color generator</a> (to browse different hexidecimal color codes, press the spacebar). You can also use regular color names like `"green"`, `"blue"`, `"red"`, etc. (make sure they're strings though!).
+
+* * *
 
 ## Pictureframe Challenge
 
@@ -197,6 +199,8 @@ make_pictureframe(the_canvas, 0, 100, 100, 15, frame_color="purple", pic_color="
 ```
 
 <img class="medium frame" src="/assets/images/tutorial01/after_overlay.png" />
+
+* * *
 
 ## Triangle Challenge
 
