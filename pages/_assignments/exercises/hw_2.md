@@ -21,7 +21,7 @@ In this assignment, you are going to get some practice writing functions using t
 
 First, download the homework 2 starter file below:
 
-<a class="nu-button" href="/course-files/homework/hw02_template.py" target="_blank">
+<a class="nu-button" href="/course-files/homeworks/hw02_template.py" target="_blank">
     Homework Starter File <i class="fas fa-download"></i>
 </a>
 
@@ -59,7 +59,7 @@ Reemeber that from our pre-recorded lecture we have a library of samples functio
 > 
 > For some reason, `Tkinter` switches the colors white and black when your Mac is in
 > dark mode. To fix this, you have two options:
-> 1. [Use these instructions from Apple to switch to Light mode](https://support.apple.com/en-us/HT208976)
+> 1. <a href="https://support.apple.com/en-us/HT208976" target="_blank"> Use these instructions from Apple to switch to Light mode.</a>
 > 2. On line 8, change the value of the `background` input to `"black"`.
 
 ### Documentation
@@ -72,7 +72,7 @@ Open up `homework_02.py` and take a look at what's already existing in the file.
 
 * * *
 
-### 1. Modify the make_oval function
+### 1. Modify the `make_oval` function
 The job of the **make_oval** function is to draw an oval to the canvas, centered at a given center point, according to a given x-radius (the radius in the x-axis of the oval) and y-radius (the radius in the y-direction of an oval). You've been given the function header for this function as part of the template so you only need to focus on the function's body.
 
 We are creating this function because in the existing `tkinter` function, `create_oval`, is not intuitive (just like in the Tutorial we created our own `make_square` function).
@@ -171,7 +171,7 @@ make_bullseye(the_canvas, 400, 300, 20, 10)
 
 * * *
 
-### 4. Make the make_face function
+### 4. Create the `make_face` function
 The job of the **make_face** function is to draw a face (i.e. a circle) with two eyes (i.e. ovals) to the canvas, according to the center point and width specified by the arguments. The function accepts the following arguments:
 
 1. **a_canvas (Canvas)**: where you want the face to be drawn.

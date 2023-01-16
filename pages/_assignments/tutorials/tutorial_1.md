@@ -44,7 +44,7 @@ Go ahead open the file in IDLE, take a look at it and then run it. You should se
 > 
 > For some reason, `Tkinter` switches the colors white and black when your Mac is in
 > dark mode. To fix this, you have two options:
-> 1. [Use these instructions from Apple to switch to Light mode](https://support.apple.com/en-us/HT208976)
+> 1. <a href="https://support.apple.com/en-us/HT208976" target="_blank"> Use these instructions from Apple to switch to Light mode.</a>
 > 2. On line 3, change the value of the `background` input to `"black"`.
 
 ## Getting Started 
@@ -267,7 +267,7 @@ If you're in class make sure to check-in with your PM you don't need to submit a
 1. How was their solution different from yours (if at all)?
 1. Does their program run and generate the correct test images?
 
-Once you've each taken a look, take a second to debrief. Anything either of you found difficult? Easy? Fun? Mind-blowing? Once you've debriefed, fill out this [attendance Google Form](https://docs.google.com/forms/d/e/1FAIpQLScFw18yE8C1L2te7MPFCvcbGCFkIdURc0aMonRGQ8-X0FJkwQ/viewform?usp=sf_link). **NOTE: You will need the NetID of the person's whose code you reviewed.**
+Once you've each taken a look, take a second to debrief. Anything either of you found difficult? Easy? Fun? Mind-blowing? Once you've debriefed, fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLScFw18yE8C1L2te7MPFCvcbGCFkIdURc0aMonRGQ8-X0FJkwQ/viewform?usp=sf_link" target="_blank">attendance Google Form</a>. **NOTE: You will need the NetID of the person's whose code you reviewed.**
 
 If you're submitting remotely, you MUST submit your completed tutorial to Canvas and it will be graded. Make sure that all of your functions are named correctly and that they use the EXACT parameter order, names, and types as specified. If you've followed the instructions correctly, the image your function should generate should look like the below:
 
