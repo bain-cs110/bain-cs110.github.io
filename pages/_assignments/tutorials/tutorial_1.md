@@ -82,7 +82,7 @@ Using the above documentation, think about what that function call does. Talk wi
 
 * * *
 
-## Modifying the Existing Function Call
+## Square Challenge
 
 Hopefully, you and your partner discussed something along the lines of the following:
 
@@ -163,7 +163,7 @@ make_square(the_canvas, 200, 50, 50, color="#8FCB9B")
 
 Note, those weird colors (e.g. `"#8FCB9B"`) are called "hex codes" and are colors reprsented in a symbol system called "hexidecimal" (think of it like the Dewey Decimal system but for colors). Here is a <a href="https://coolors.co/app" target="_blank">link to a color generator</a> (to browse different hexidecimal color codes, press the spacebar). You can also use regular color names like `"green"`, `"blue"`, `"red"`, etc. (make sure they"re strings though!).
 
-### Use Your Function in Another Function
+## Pictureframe Challenge
 
 Alright, now that we're experts in writing our own functions...let's do it again! This time we're going to use our `make_square` function inside ANOTHER custom function that draws a picture frame (a square with a smaller square laid on top). Scroll down in your file until you see `##?#!#?# PICTUREFRAME CHALLENGE`.
 
