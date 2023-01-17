@@ -183,7 +183,7 @@ The job of the **make_face** function is to draw a face (i.e. a circle) with two
 
 **Your job**: Your job is to use the make_circle and make_oval functions that you've just created to draw a face. The face should be a circle, and it should have 2 oval eyes (see screenshot below). 
 
-> **Note:** The eyes need to scale with the width of the face. Their **width** should be 1/25 the width of the face. Their **height** should be 1/15 the height of the face. They should be offset by 1/8 the width of the face from the center of the face in both the x and y-directions.
+> **Note:** The eyes need to scale with the width of the face. Their **radius in the x-direction** should be 1/25 the width of the face. Their **radius in the y-direction** should be 1/15 the height of the face. They should be offset by 1/8 the width of the face from the center of the face in both the x and y-directions.
 
 > **Note:** You MUST use your `make_circle` and `make_oval` functions to complete this one. Why do all that work again?
 
