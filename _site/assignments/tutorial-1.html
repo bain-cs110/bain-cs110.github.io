@@ -17,13 +17,13 @@
             <div class="sidebar">
                 <ol class="side-menu">
   <li><a href="#getting-started">Getting Started</a></li>
-  <li><a href="#modifying-the-existing-function-call">Modifying the Existing Function Call</a>
+  <li><a href="#square-challenge">Square Challenge</a>
     <ol>
       <li><a href="#writing-our-own-version">Writing our Own Version</a></li>
       <li><a href="#test-your-new-function">Test Your New Function!</a></li>
-      <li><a href="#use-your-function-in-another-function">Use Your Function in Another Function</a></li>
     </ol>
   </li>
+  <li><a href="#pictureframe-challenge">Pictureframe Challenge</a></li>
   <li><a href="#triangle-challenge">Triangle Challenge</a>
     <ol>
       <li><a href="#create-a-left-triangle-function">Create a left triangle function</a></li>
@@ -60,6 +60,15 @@
     
 
 </p>  -->
+<hr />
+<blockquote>
+  <p><strong>Announcement</strong></p>
+
+  <p>Typically, if you can’t make it to class for any reason on a given Wednesday for a Tutorial, you can just submit it remotely. However, if you can’t attend our usual class time on Wednesdays (or feel more comfortable in a quieter/smaller setting), but would still like help completing the tutorial, we now have a selection of Alternate Tutorial Times available each Wednesday afternoon and evening. You can see them on the same OH spreadsheet as usual.</p>
+</blockquote>
+
+<hr />
+
 <p>This tutorial is a warmup for HW 2. Please download the starter file and complete the instructions outlined below.</p>
 
 <p>If you’ve never done this before, there are a lot of little typing / logic / conceptual mistakes that <strong>everyone</strong> makes. Please pay careful attention and help each other complete the assignment!</p>
@@ -84,20 +93,22 @@ In order to prepare you for this week’s homework, we wanted to use this tutori
 
 <p>Go ahead open the file in IDLE, take a look at it and then run it. You should see something like this:</p>
 
-<p><img class="small frame" src="/assets/images/tutorial01/before.png" /></p>
+<p><img class="medium frame" src="/assets/images/tutorial01/before.png" /></p>
 
 <blockquote>
   <p><strong>Note</strong>: If you’re on a Mac and are currently in Dark mode, you might see the below:</p>
 
-  <p><img class="small frame" src="/assets/images/tutorial01/darkmode.png" /></p>
+  <p><img class="medium frame" src="/assets/images/tutorial01/darkmode.png" /></p>
 
   <p>For some reason, <code class="language-plaintext highlighter-rouge">Tkinter</code> switches the colors white and black when your Mac is in
 dark mode. To fix this, you have two options:</p>
   <ol>
-    <li><a href="https://support.apple.com/en-us/HT208976">Use these instructions from Apple to switch to Light mode</a></li>
+    <li><a href="https://support.apple.com/en-us/HT208976" target="_blank"> Use these instructions from Apple to switch to Light mode.</a></li>
     <li>On line 3, change the value of the <code class="language-plaintext highlighter-rouge">background</code> input to <code class="language-plaintext highlighter-rouge">"black"</code>.</li>
   </ol>
 </blockquote>
+
+<hr />
 
 <h2 id="getting-started">Getting Started</h2>
 
@@ -139,7 +150,7 @@ and one <strong>optional</strong> argument:</li>
 
 <hr />
 
-<h2 id="modifying-the-existing-function-call">Modifying the Existing Function Call</h2>
+<h2 id="square-challenge">Square Challenge</h2>
 
 <p>Hopefully, you and your partner discussed something along the lines of the following:</p>
 
@@ -159,7 +170,7 @@ and also provide one optional input:</li>
 
 <p>Sweet! That’s cool. We can make any sort of rectangle we want! See if you can reproduce the below image by modifying the inputs given to the <code class="language-plaintext highlighter-rouge">create_rectangle</code> function (ignore the triangle for now, we’ll get there later):</p>
 
-<p><img class="small frame" src="/assets/images/tutorial01/modified.png" /></p>
+<p><img class="medium frame" src="/assets/images/tutorial01/modified.png" /></p>
 
 <h3 id="writing-our-own-version">Writing our Own Version</h3>
 
@@ -172,8 +183,8 @@ and also provide one optional input:</li>
   <p>note, in the real world you get to decide on your own names for these inputs, but for simplicity, we’re giving you the names you should use here:</p>
   <ol>
     <li><strong>a_canvas</strong> <em><code class="language-plaintext highlighter-rouge">Canvas</code></em>: the canvas where you want the square to be drawn</li>
-    <li><strong>bottom-left-x</strong> <em>(int)</em>: an x-coordinate for the bottom-left corner of the square</li>
-    <li><strong>bottom-left-y</strong> <em>(int)</em>: a y-coordinate for the bottom-left corner of the square</li>
+    <li><strong>bottom_left_x</strong> <em>(int)</em>: an x-coordinate for the bottom-left corner of the square</li>
+    <li><strong>bottom_left_y</strong> <em>(int)</em>: a y-coordinate for the bottom-left corner of the square</li>
     <li><strong>width</strong> <em>(int)</em>: the width (and also height) of the square.</li>
     <li><strong>color</strong> <em>(str, optional)</em>: a name of color of the square, which defaults to blue: <code class="language-plaintext highlighter-rouge">"blue"</code>.</li>
   </ol>
@@ -181,7 +192,7 @@ and also provide one optional input:</li>
 
 <p>In other words, if we invoked your <code class="language-plaintext highlighter-rouge">make_square</code> function as follows…</p>
 
-<p><code class="language-plaintext highlighter-rouge">make_square(the_canvas, (100, 100), 100, color='blue')</code></p>
+<p><code class="language-plaintext highlighter-rouge">make_square(the_canvas, 100, 100, 100, color='blue')</code></p>
 
 <p>…your function would draw a 100x100 blue square with its bottom-right corner at position (100, 100), as pictured above.</p>
 
@@ -210,7 +221,7 @@ and also provide one optional input:</li>
 </blockquote>
 
 <h3 id="test-your-new-function">Test Your New Function!</h3>
-<p>When you’ve finished with your <code class="language-plaintext highlighter-rouge">make_square</code> function, create the pattern pictured below by calling your function with the following arguments (below). Copy the following code and pasting it <strong><em>below</em></strong> your function definition and <strong><em>above</em></strong> the <code class="language-plaintext highlighter-rouge">TRIANGLE CHALLENGE</code> comment. Make sure these function calls are NOT indented as they are not part of your function definition.</p>
+<p>When you’ve finished with your <code class="language-plaintext highlighter-rouge">make_square</code> function, create the pattern pictured below by calling your function with the following arguments (below). Copy the following code and pasting it <strong><em>below</em></strong> your function definition. Make sure these function calls are NOT indented as they are not part of your function definition.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># center blue block
 </span><span class="n">make_square</span><span class="p">(</span><span class="n">the_canvas</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
@@ -228,11 +239,13 @@ and also provide one optional input:</li>
 <span class="n">make_square</span><span class="p">(</span><span class="n">the_canvas</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">"#8FCB9B"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p><img class="small frame" src="/assets/images/tutorial01/after_square.png" /></p>
+<p><img class="medium frame" src="/assets/images/tutorial01/after_square.png" /></p>
 
-<p>Note, those weird colors (e.g. <code class="language-plaintext highlighter-rouge">"#8FCB9B"</code>) are called “hex codes” and are colors reprsented in a symbol system called “hexidecimal” (think of it like the Dewey Decimal system but for colors). Here is a <a href="https://coolors.co/app" target="_blank">link to a color generator</a> (to browse different hexidecimal color codes, press the spacebar). You can also use regular color names like <code class="language-plaintext highlighter-rouge">"green"</code>, <code class="language-plaintext highlighter-rouge">"blue"</code>, <code class="language-plaintext highlighter-rouge">"red"</code>, etc. (make sure they”re strings though!).</p>
+<p>Note, those weird colors (e.g. <code class="language-plaintext highlighter-rouge">"#8FCB9B"</code>) are called “hex codes” and are colors reprsented in a symbol system called “hexidecimal” (think of it like the Dewey Decimal system but for colors). Here is a <a href="https://coolors.co/app" target="_blank">link to a color generator</a> (to browse different hexidecimal color codes, press the spacebar). You can also use regular color names like <code class="language-plaintext highlighter-rouge">"green"</code>, <code class="language-plaintext highlighter-rouge">"blue"</code>, <code class="language-plaintext highlighter-rouge">"red"</code>, etc. (make sure they’re strings though!).</p>
 
-<h3 id="use-your-function-in-another-function">Use Your Function in Another Function</h3>
+<hr />
+
+<h2 id="pictureframe-challenge">Pictureframe Challenge</h2>
 
 <p>Alright, now that we’re experts in writing our own functions…let’s do it again! This time we’re going to use our <code class="language-plaintext highlighter-rouge">make_square</code> function inside ANOTHER custom function that draws a picture frame (a square with a smaller square laid on top). Scroll down in your file until you see <code class="language-plaintext highlighter-rouge">##?#!#?# PICTUREFRAME CHALLENGE</code>.</p>
 
@@ -241,8 +254,8 @@ and also provide one optional input:</li>
   <p>note, in the real world you get to decide on your own names for these inputs, but for simplicity, we’re giving you the names you should use here:</p>
   <ol>
     <li><strong>a_canvas</strong> <em><code class="language-plaintext highlighter-rouge">Canvas</code></em>: the canvas where you want the square to be drawn</li>
-    <li><strong>bottom-left-x</strong> <em>(int)</em>: an x-coordinate for the bottom-left corner of the square</li>
-    <li><strong>bottom-left-y</strong> <em>(int)</em>: a y-coordinate for the bottom-left corner of the square</li>
+    <li><strong>bottom_left_x</strong> <em>(int)</em>: an x-coordinate for the bottom-left corner of the square</li>
+    <li><strong>bottom_left_y</strong> <em>(int)</em>: a y-coordinate for the bottom-left corner of the square</li>
     <li><strong>width</strong> <em>(int)</em>: the width (and also height) of the square.</li>
     <li><strong>frame_width</strong> <em>(int)</em>: the width of the picture frame</li>
     <li><strong>frame_color</strong> <em>(str, optional)</em>: a name of color of the square, which defaults to blue: <code class="language-plaintext highlighter-rouge">"blue"</code>.</li>
@@ -276,6 +289,8 @@ and also provide one optional input:</li>
 
 <p><img class="medium frame" src="/assets/images/tutorial01/after_overlay.png" /></p>
 
+<hr />
+
 <h2 id="triangle-challenge">Triangle Challenge</h2>
 
 <blockquote>
@@ -291,11 +306,11 @@ and also provide one optional input:</li>
 
 <p><img class="medium frame" src="/assets/images/tutorial01/before.png" /></p>
 
-<p>This challenge asks you to do the same thing as the first challenge, but instead of designing a function <code class="language-plaintext highlighter-rouge">make_square</code> using TKinter”s <code class="language-plaintext highlighter-rouge">create_rectangle</code>, you”ll design <code class="language-plaintext highlighter-rouge">make_triangle_left</code> and <code class="language-plaintext highlighter-rouge">make_triangle_right</code> to use TKinter”s <code class="language-plaintext highlighter-rouge">create_polygon</code> function. Here, instead of calculating just one extra coordinate point…you’ll have to calculate two more coordinates and use all three coordinates as input to the <code class="language-plaintext highlighter-rouge">create_polygon</code> function.</p>
+<p>This challenge asks you to do the same thing as the first challenge, but instead of designing a function <code class="language-plaintext highlighter-rouge">make_square</code> using TKinter’s <code class="language-plaintext highlighter-rouge">create_rectangle</code>, you”ll design <code class="language-plaintext highlighter-rouge">make_triangle_left</code> and <code class="language-plaintext highlighter-rouge">make_triangle_right</code> to use TKinter”s <code class="language-plaintext highlighter-rouge">create_polygon</code> function. Here, instead of calculating just one extra coordinate point…you’ll have to calculate two more coordinates and use all three coordinates as input to the <code class="language-plaintext highlighter-rouge">create_polygon</code> function.</p>
 
 <h3 id="create-a-left-triangle-function">Create a left triangle function</h3>
 
-<p>In the Triangle Challenge section of the file, create a function called <code class="language-plaintext highlighter-rouge">make_triangle_left</code> that draws a 45-45-90-degree right triangle, where the right angle is positioned at the bottom-left corner (as pictured above). It accepts the following arguments:</p>
+<p>In the Triangle Challenge section of the file, create a function called <code class="language-plaintext highlighter-rouge">make_triangle_left</code> that draws a 45-45-90-degree right triangle, where the right angle is positioned at the bottom-left corner. It accepts the following arguments:</p>
 
 <ol>
   <li><strong>a_canvas</strong> <em>(Canvas)</em>: where you want the triangle to be drawn.</li>
@@ -341,7 +356,7 @@ and also provide one optional input:</li>
 <hr />
 
 <h2 id="getting-credit-for-your-work">Getting Credit for Your Work</h2>
-<p>If you’re in class make sure to check-in with your PM you don’t need to submit a <code class="language-plaintext highlighter-rouge">.py</code> file on Canvas. Instead, find one other person in your group that is finished and peer review each others work. Here are the things to check:</p>
+<p>If you’re in class you don’t need to submit a <code class="language-plaintext highlighter-rouge">.py</code> file on Canvas. Instead, find one other person in your group that is finished and peer review each other’s work. Here are the things to check:</p>
 
 <ol>
   <li>Does their code look readable and neat?</li>
@@ -350,7 +365,7 @@ and also provide one optional input:</li>
   <li>Does their program run and generate the correct test images?</li>
 </ol>
 
-<p>Once you’ve each taken a look, take a second to debrief. Anything either of you found difficult? Easy? Fun? Mind-blowing? Once you’ve debriefed, fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLScFw18yE8C1L2te7MPFCvcbGCFkIdURc0aMonRGQ8-X0FJkwQ/viewform?usp=sf_link">attendance Google Form</a>. <strong>NOTE: You will need the NetID of the person’s whose code you reviewed.</strong></p>
+<p>Once you’ve each taken a look, take a second to debrief. Anything either of you found difficult? Easy? Fun? Mind-blowing? Once you’ve debriefed, <strong>both of you should fill out this</strong> <a href="https://docs.google.com/forms/d/e/1FAIpQLScFw18yE8C1L2te7MPFCvcbGCFkIdURc0aMonRGQ8-X0FJkwQ/viewform?usp=sf_link" target="_blank">attendance Google Form</a>. <strong>NOTE: You will need the NetID of the person’s whose code you reviewed.</strong> You’re free to go after you’re finished, though we hope that you might consider sticking around and helping others in your group.</p>
 
 <p>If you’re submitting remotely, you MUST submit your completed tutorial to Canvas and it will be graded. Make sure that all of your functions are named correctly and that they use the EXACT parameter order, names, and types as specified. If you’ve followed the instructions correctly, the image your function should generate should look like the below:</p>
 

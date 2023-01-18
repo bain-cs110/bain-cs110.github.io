@@ -24,10 +24,10 @@
   </li>
   <li><a href="#your-tasks">Your Tasks</a>
     <ol>
-      <li><a href="#1-modify-the-make_oval-function">1. Modify the make_oval function</a></li>
+      <li><a href="#1-modify-the-make_oval-function">1. Modify the <code class="language-plaintext highlighter-rouge">make_oval</code> function</a></li>
       <li><a href="#2-create-the-make_circle-function">2. Create the <code class="language-plaintext highlighter-rouge">make_circle</code> function</a></li>
       <li><a href="#3-create-the-make_bullseye-function">3. Create the <code class="language-plaintext highlighter-rouge">make_bullseye</code> function</a></li>
-      <li><a href="#4-make-the-make_face-function">4. Make the make_face function</a></li>
+      <li><a href="#4-create-the-make_face-function">4. Create the <code class="language-plaintext highlighter-rouge">make_face</code> function</a></li>
     </ol>
   </li>
   <li><a href="#testing">Testing</a></li>
@@ -75,7 +75,7 @@
 
 <p>First, download the homework 2 starter file below:</p>
 
-<p><a class="nu-button" href="/course-files/homework/hw02_template.py" target="_blank">
+<p><a class="nu-button" href="/course-files/homeworks/hw02_template.py" target="_blank">
     Homework Starter File <i class="fas fa-download"></i>
 </a></p>
 
@@ -114,7 +114,7 @@
   <p>For some reason, <code class="language-plaintext highlighter-rouge">Tkinter</code> switches the colors white and black when your Mac is in
 dark mode. To fix this, you have two options:</p>
   <ol>
-    <li><a href="https://support.apple.com/en-us/HT208976">Use these instructions from Apple to switch to Light mode</a></li>
+    <li><a href="https://support.apple.com/en-us/HT208976" target="_blank"> Use these instructions from Apple to switch to Light mode.</a></li>
     <li>On line 8, change the value of the <code class="language-plaintext highlighter-rouge">background</code> input to <code class="language-plaintext highlighter-rouge">"black"</code>.</li>
   </ol>
 </blockquote>
@@ -129,7 +129,7 @@ dark mode. To fix this, you have two options:</p>
 
 <hr />
 
-<h3 id="1-modify-the-make_oval-function">1. Modify the make_oval function</h3>
+<h3 id="1-modify-the-make_oval-function">1. Modify the <code class="language-plaintext highlighter-rouge">make_oval</code> function</h3>
 <p>The job of the <strong>make_oval</strong> function is to draw an oval to the canvas, centered at a given center point, according to a given x-radius (the radius in the x-axis of the oval) and y-radius (the radius in the y-direction of an oval). You’ve been given the function header for this function as part of the template so you only need to focus on the function’s body.</p>
 
 <p>We are creating this function because in the existing <code class="language-plaintext highlighter-rouge">tkinter</code> function, <code class="language-plaintext highlighter-rouge">create_oval</code>, is not intuitive (just like in the Tutorial we created our own <code class="language-plaintext highlighter-rouge">make_square</code> function).</p>
@@ -236,7 +236,7 @@ dark mode. To fix this, you have two options:</p>
 
 <hr />
 
-<h3 id="4-make-the-make_face-function">4. Make the make_face function</h3>
+<h3 id="4-create-the-make_face-function">4. Create the <code class="language-plaintext highlighter-rouge">make_face</code> function</h3>
 <p>The job of the <strong>make_face</strong> function is to draw a face (i.e. a circle) with two eyes (i.e. ovals) to the canvas, according to the center point and width specified by the arguments. The function accepts the following arguments:</p>
 
 <ol>
@@ -251,7 +251,7 @@ dark mode. To fix this, you have two options:</p>
 <p><strong>Your job</strong>: Your job is to use the make_circle and make_oval functions that you’ve just created to draw a face. The face should be a circle, and it should have 2 oval eyes (see screenshot below).</p>
 
 <blockquote>
-  <p><strong>Note:</strong> The eyes need to scale with the width of the face. Their <strong>width</strong> should be 1/25 the width of the face. Their <strong>height</strong> should be 1/15 the height of the face. They should be offset by 1/8 the width of the face from the center of the face in both the x and y-directions.</p>
+  <p><strong>Note:</strong> The eyes need to scale with the width of the face. Their <strong>radius in the x-direction</strong> should be 1/25 the width of the face. Their <strong>radius in the y-direction</strong> should be 1/15 the height of the face. They should be offset by 1/8 the width of the face from the center of the face in both the x and y-directions.</p>
 </blockquote>
 
 <blockquote>

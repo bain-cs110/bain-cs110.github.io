@@ -13,6 +13,13 @@ description:
 due_date: 2023-01-18
 ---
 
+* * * 
+> **Announcement**
+>
+> Typically, if you can't make it to class for any reason on a given Wednesday for a Tutorial, you can just submit it remotely. However, if you can't attend our usual class time on Wednesdays (or feel more comfortable in a quieter/smaller setting), but would still like help completing the tutorial, we now have a selection of Alternate Tutorial Times available each Wednesday afternoon and evening. You can see them on the same OH spreadsheet as usual.
+
+* * *
+
 This tutorial is a warmup for HW 2. Please download the starter file and complete the instructions outlined below.
 
 If you've never done this before, there are a lot of little typing / logic / conceptual mistakes that **everyone** makes. Please pay careful attention and help each other complete the assignment!
@@ -45,6 +52,8 @@ Go ahead open the file in IDLE, take a look at it and then run it. You should se
 > dark mode. To fix this, you have two options:
 > 1. <a href="https://support.apple.com/en-us/HT208976" target="_blank"> Use these instructions from Apple to switch to Light mode.</a>
 > 2. On line 3, change the value of the `background` input to `"black"`.
+
+* * *
 
 ## Getting Started 
 
