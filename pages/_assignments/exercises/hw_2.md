@@ -155,7 +155,7 @@ The job of the **make_bullseye** function is to draw a bullseye of 4 concentric 
 1. **radius (int)** : an int that specifies the radius of the inner-most circle.
 1. **distance (int)** : an int that represents how far apart each circle should be drawn.
 
-**Your job**: Your job is to use the `make_circle` function that you just created to draw a bullseye (with 4 concentric circles of different colors — you choose the colors).
+**Your job**: Your job is to use the `make_circle` function that you just created to draw a bullseye (with 4 concentric circles of alternating colors).
 
 **HINT**: you'll have to draw the biggest circle first, or else your big circle will overwrite (occlude) the smaller circles.
 
