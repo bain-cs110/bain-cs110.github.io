@@ -253,18 +253,18 @@ When you've finished making your `make_triangle_left` and `make_triangle_right` 
 
 ```python
 # row 1
-make_triangle_right(the_canvas, 400, 100, 100, color="#5B9279")
-make_triangle_left(the_canvas, 400, 100, 100, color="#5B9279")
-make_triangle_right(the_canvas, 600, 100, 100, color="#5B9279")
+make_triangle_right(the_canvas, 400, 0, 100, color="#5B9279")
+make_triangle_left(the_canvas, 400, 0, 100, color="#5B9279")
+make_triangle_right(the_canvas, 600, 0, 100, color="#5B9279")
 
 # row 2
-make_triangle_left(the_canvas, 300, 200, 100)
-make_triangle_right(the_canvas, 500, 200, 100)
-make_triangle_left(the_canvas, 500, 200, 100)
+make_triangle_left(the_canvas, 300, 100, 100)
+make_triangle_right(the_canvas, 500, 100, 100)
+make_triangle_left(the_canvas, 500, 100, 100)
 
 # row 3
-make_triangle_right(the_canvas, 400, 300, 100, color="#8FCB9B")
-make_triangle_left(the_canvas, 400, 300, 100, color="#8FCB9B")
+make_triangle_right(the_canvas, 400, 200, 100, color="#8FCB9B")
+make_triangle_left(the_canvas, 400, 200, 100, color="#8FCB9B")
 ```
 
 <img class="medium frame" src="/assets/images/tutorial01/after_both.png" />
