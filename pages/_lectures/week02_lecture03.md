@@ -2,11 +2,10 @@
 layout: module
 title: "Abstraction"
 type: lecture
-description:
+description: "(Mini-Quiz 0)"
 draft: 0
 num: 5
 exercise_url: "lecture05.zip"
-description: "Mini-Quiz 0"
 canvas_id: friday-lecture-5-abstraction-january-13
 due_date: 2023-01-13
 videos:
