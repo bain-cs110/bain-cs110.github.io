@@ -50,7 +50,7 @@ Move the downloaded file into your new `hw01` folder **and rename it `homework_0
 
 1. Right click on the **homework_01.py** file that you just saved in your **hw01 folder** and open it with IDLE.
 2. You should now see some python code. Click anywhere inside that file so that your cursor is now in that window.
-3. Hit F5 (if you're on a Mac, hit the **fn** key and then **F5**). As an alternative to F5, you can also go to the Run menu and select **Run Module**. Your code will then be executed by the Python interpreter. Right now, it doesn't do much.
+3. Hit F5 (if you're on a Mac, hit the **fn** key and then **F5**). As an alternative to F5, you can also go to the Run menu and select **Run Module**. Your code will then be executed by the Python interpreter. Right now, it doesn't do much, but using just `forward`, `left`, and `right` we can make some cool stuff!
 
 Please complete the following exercises by editing the **homework_01.py** file using IDLE:
 
@@ -73,12 +73,12 @@ Next we'll focus on some numerical programming toward the bottom of the `homewor
 
 #### 1. Write a program that computes and prints the result of:
 
-<img src="/assets/images/hw01/equation.png" style="width: 10%" class="screenshot"/>
+<img src="/assets/images/hw01/equation.png" style="width: 30%" class="screenshot"/>
 
 (The answer is roughly 0.1017).
 
 #### 2. User input of `string`s
-Write a program to ask the user to enter their name. Then print a message that says "hello" to them. For example, this is what you would see if you used my name:
+Write a program to ask the user to enter their name. Then print a message that says "hello" to them. For example, this is what you would see if you used my name (notice we use a `prompt`):
 
 ```python
 Enter a name:Connor 	   # prompt the user for a name (not necessarily Connor)
@@ -89,7 +89,7 @@ Hello there, Connor        # output a sentence that says hello!
 Write a program that asks the user for a weight in kilograms and converts it to pounds. There are 2.2 pounds in a kilogram. You only need to worry about whole number weight entries. This is what it should look like:
 
 ```python
-Enter weight in kg: 5         # prompt the user for a weight in kg
+Enter weight in kg:5         # prompt the user for a weight in kg
 5 kilograms is 11.0 pounds.   # output the result
 ```
 
@@ -97,7 +97,7 @@ Enter weight in kg: 5         # prompt the user for a weight in kg
 Write a program that asks the user to input a word and then tell the user how many letters are in that word. For example:
 
 ```python
-Enter a word: supercalifragilisticexpialidocious # prompt the user for a word
+Enter a word:supercalifragilisticexpialidocious # prompt the user for a word
 There are 34 letters in that word.   # output the result
 ```
 
