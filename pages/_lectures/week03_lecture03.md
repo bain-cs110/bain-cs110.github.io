@@ -1,12 +1,12 @@
 ---
 layout: module
-title: " "
+title: "Practice Writing Functions"
 type: lecture
 draft: 0
 due_date: 2023-01-20
 num: 7
 exercise_url: "lecture07.zip"
-description: "Mini-Quiz 1"
+description: "(Mini-Quiz 1)"
 canvas_id: friday-lecture-7-more-practice-writing-functions-january-20
 slides:
    - url: https://docs.google.com/presentation/d/1UsjGYhk_oExty2Avh9yXB8BUhMNLI83Qxzqetpe3vrU/edit?usp=sharing
