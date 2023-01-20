@@ -12,6 +12,7 @@ videos:
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8a55a3b7-3abc-49e6-96b9-af5f014cfbc3
      title: "Lecture Recording"
      duration: "50:00"
+     live: 1
 slides:
    - url: https://docs.google.com/presentation/d/1PS8W-I_zUhTjnTPvRvTt-mS3tHLyCPgu6RJEUblVspI/edit?usp=sharing
      title: Data Types, Operators, and Variables
