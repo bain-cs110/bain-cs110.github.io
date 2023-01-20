@@ -12,6 +12,7 @@ videos:
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2c87cb6b-147a-4f02-9da3-af5f014cfc50
      title: "Lecture Recording"
      duration: "50:00"
+     live: 1
 slides:
    - url: https://docs.google.com/presentation/d/1UsjGYhk_oExty2Avh9yXB8BUhMNLI83Qxzqetpe3vrU/edit?usp=sharing
      title: More Functions Practice
