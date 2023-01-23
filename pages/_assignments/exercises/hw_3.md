@@ -45,7 +45,7 @@ After you've done some sketching on paper, _select the one_ that you would like 
 
 If you want to draw using more advanced shapes, sweet! Take a look at the `tkinter_warmup.py` file (downloadable below) for some more advanced examples. If you're having trouble conceptualizing how to make a shape, come to office hours so we can help!
 
-<a class="nu-button" href="/course-files/lecrtures/lecture06/04_tkinter_warmup.py" target="_blank">
+<a class="nu-button" href="/course-files/lectures/lecture06/04_tkinter_warmup.py" target="_blank">
     More Advanced Tkinter Examples <i class="fas fa-download"></i>
 </a>
 
