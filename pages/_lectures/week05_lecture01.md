@@ -1,6 +1,6 @@
 ---
 layout: module
-title: " "
+title: "Quiz 1 Review"
 description:
 type: lecture
 draft: 1

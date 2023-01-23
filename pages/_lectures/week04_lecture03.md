@@ -1,6 +1,6 @@
 ---
 layout: module
-title: " "
+title: "Lists + Style"
 type: lecture
 description:
 draft: 1
