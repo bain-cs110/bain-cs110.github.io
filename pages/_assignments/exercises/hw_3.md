@@ -20,7 +20,7 @@ draft: 0
 
 <br>
 
-<a class="nu-button" href="/course-files/homework/hw03_template.py" target="_blank">
+<a class="nu-button" href="/course-files/homeworks/hw03_template.py" target="_blank">
     Homework Starter File <i class="fas fa-download"></i>
 </a>
 
