@@ -101,7 +101,7 @@ This draws an oval with a "bounding box" (an imaginary rectangle that encompasse
 
 Your `make_oval` function will use `create_oval` but accept the following arguments:
 
-1. **canvas (Canvas)**: where you want the oval to be drawn.
+1. **a_canvas (Canvas)**: where you want the oval to be drawn.
 1. **center_x (int)**: the x-coordinate of the center of the oval.
 1. **center_y (int)**: the y-coordinate of the center of the oval.
 1. **radius_x (int)**: specifies the radius of the oval in the x-direction.
@@ -126,7 +126,7 @@ make_oval(the_canvas, 400, 100, 40, 25)
 ### 2. Create the `make_circle` function
 The job of the **make_circle** function is to draw a circle to the canvas, centered at the given center, and with the given radius. We are creating this function as a _convenience_ function. Though every circle is actually an ellipse, it's common enough that we're going to make a special function just for the circle shape. The function accepts the following arguments:
 
-1. **canvas (Canvas)**: where you want the circle to be drawn.
+1. **a_canvas (Canvas)**: where you want the circle to be drawn.
 1. **center_x (int)**: the x-coordinate of the center of the circle.
 1. **center_y (int)**: the y-coordinate of the center of the circle.
 1. **radius (int)**: specifies the radius of the circle.
