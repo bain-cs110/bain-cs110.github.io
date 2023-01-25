@@ -18,7 +18,7 @@ the_canvas.create_text(
 
 # make an oval:
 the_canvas.create_oval(
-    (50, 150),  (150, 250), # top left x-y, bottom right x-y
+    (50, 150),  (150, 250), # bottom left x-y, top right x-y
     fill='#FF4136',
     width=5
 )
