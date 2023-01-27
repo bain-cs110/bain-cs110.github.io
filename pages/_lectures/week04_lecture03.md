@@ -4,6 +4,7 @@ title: "Lists! and more functions..."
 type: lecture
 description: (Mini-Quiz 2)
 draft: 0
+exercise_url: "lecture10.zip"
 num: 10
 canvas_id: friday-lecture-10-lists-january-27
 slides:
