@@ -17,6 +17,11 @@ readings:
      video_url: <https://www.py4e.com/lessons/lists>
      source: "Python for Everybody"
 due_date: 2023-01-27
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c44bf65b-2100-4327-b24d-af5f014cfc9c
+     title: "Lecture Recording"
+     duration: "50:00"
+     live: 1
 ---
 
 So, we've got these **tuples**: collections of simpler pieces of data stored together. But we can't edit them because they're _immutable_? That's MAJORLY bogus. Surely there's a way around that...
