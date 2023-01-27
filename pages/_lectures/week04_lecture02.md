@@ -25,6 +25,10 @@ slides:
    - url: https://docs.google.com/presentation/d/1IMOQJhDzvkk_lHtU7-XtO7HNRT0UnJxyeS4nkX9fP6U/edit?usp=sharing
      title: Sequences of Data and Modules
 readings:
+   - title: "Ch12: Modules"
+     author: "Heinold"
+     url: https://www.brianheinold.net/python/A_Practical_Introduction_to_Python_Programming_Heinold.pdf
+     notes: "Skim sections 12.1 through 12.4."
    - title: "Ch 11: Tuples"
      author: "Charles Severance"
      url: https://www.py4e.com/html3/11-tuples
