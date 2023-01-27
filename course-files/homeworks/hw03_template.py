@@ -22,33 +22,12 @@ def make_square(a_canvas, bottom_left, width, color="blue"):
         fill=color)
 
 
-
 # a sample creation
-
 # square face
-
-
-
-def make_square_face(a_canvas, center, a_color="green", size=300):
-    
-    center_x = center[0] # grab the center x coord
-    center_y = center[1] # grab the center y coord
-
-    # the face is centered  at the center of my creature
-    # with the width of the face being the same
-    make_square(a_canvas, (center_x - size / 2, center_y - size/2), size, color="green") # face
-
-    # the left eye is shifted by 50 in the x-direction (1/6 the size of the square)
-    # to the left and by 50 i the y-direction (1/6 the size of the square)
-    make_square(a_canvas, (center_x - size / 6, center_y + size / 6), size / 6, color="purple") # left eye
-
-    # right eye is the same, but different x coordinate
-    make_square(a_canvas, (center_x + size / 6, center_y + size / 6), size / 6, color="cyan") # right eye
-
-    # the nose, is shifted by a much smaller amount. and is 1/30 the size
-    make_square(a_canvas, (center_x - size / 60, center_y - size / 60), size / 30, color="white") # nose
-
-make_square_face(the_canvas, (200, 200))
++make_square(the_canvas, (50, 50), 300, color="green")  # face
++make_square(the_canvas, (100, 250), 50, color="purple")  # left eye
++make_square(the_canvas, (250, 250), 50, color="cyan")  # right eye
++make_square(the_canvas, (195, 196), 10, color="white")  # nose
 ########################## YOUR CODE ABOVE THIS LINE ##############################
 # helper function that draws a grid.
 def make_grid(c, w, h):
