@@ -24,10 +24,10 @@ def make_square(a_canvas, bottom_left, width, color="blue"):
 
 # a sample creation
 # square face
-+make_square(the_canvas, (50, 50), 300, color="green")  # face
-+make_square(the_canvas, (100, 250), 50, color="purple")  # left eye
-+make_square(the_canvas, (250, 250), 50, color="cyan")  # right eye
-+make_square(the_canvas, (195, 196), 10, color="white")  # nose
+make_square(the_canvas, (50, 50), 300, color="green")  # face
+make_square(the_canvas, (100, 250), 50, color="purple")  # left eye
+make_square(the_canvas, (250, 250), 50, color="cyan")  # right eye
+make_square(the_canvas, (195, 196), 10, color="white")  # nose
 ########################## YOUR CODE ABOVE THIS LINE ##############################
 # helper function that draws a grid.
 def make_grid(c, w, h):
