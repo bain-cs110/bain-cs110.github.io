@@ -22,12 +22,23 @@ def make_square(a_canvas, bottom_left, width, color="blue"):
         fill=color)
 
 
-# a sample creation
-# square face
-make_square(the_canvas, (50, 50), 300, color="green")  # face
-make_square(the_canvas, (100, 250), 50, color="purple")  # left eye
+center = (200, 200)
+width = 100
+big_square_width = width
+center_x = center[0]
+center_y = center[1]
+
+make_square(the_canvas, (center_x - width / 2, center_y - width / 2), width, color="green")  # facemake_square(the_canvas, (100, 250), 50, color="purple")  # left eye
+make_square(the_canvas, (center_x - width / 3, center_y + width / 6), big_square_width / 6, color="purple")  # left eye
 make_square(the_canvas, (250, 250), 50, color="cyan")  # right eye
 make_square(the_canvas, (195, 196), 10, color="white")  # nose
+
+import random
+
+random_x = random.randint(50,200)
+random_y = random.randint(50,200)
+random_width = random.randint(25, 300)
+
 ########################## YOUR CODE ABOVE THIS LINE ##############################
 # helper function that draws a grid.
 def make_grid(c, w, h):
