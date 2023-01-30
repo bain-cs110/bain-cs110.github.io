@@ -10,6 +10,11 @@ canvas_id: monday-lecture-11-q1-review-january-30
 slides:
    - url: https://docs.google.com/presentation/d/1yc9CXDyXT6a4MA-TV4hAjaPFvjS9bXCfa8Jx_DAUfeg/edit?usp=sharing
      title: Q1 Review
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ca1b0a37-46e0-48e2-95c4-af5f014cfcb2
+     title: "Lecture Recording"
+     duration: "50:00"
+     live: 1
 ---
 
 Today is reserved for talking about and preparing for Quiz 1. I'll come with practice questions for us to work on as a class (I'll demo solving them up front) but feel free to come with specific questions as well. Make sure you have taken a look at the Quiz 1 page on our Canvas page for lots of details on how to study, what resources there are, etc.
