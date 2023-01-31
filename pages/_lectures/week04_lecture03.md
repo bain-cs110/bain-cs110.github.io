@@ -13,8 +13,8 @@ slides:
 readings:
    - title: "Ch 9: Lists"
      author: "Charles Severance"
-     url: <https://www.py4e.com/html3/9-lists>
-     video_url: <https://www.py4e.com/lessons/lists>
+     url: https://www.py4e.com/html3/9-lists
+     video_url: https://www.py4e.com/lessons/lists
      source: "Python for Everybody"
 due_date: 2023-01-27
 videos:
