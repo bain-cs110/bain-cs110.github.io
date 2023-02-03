@@ -9,6 +9,11 @@ canvas_id: friday-lecture-12-conditionals-feb-3
 slides:
    - url: https://docs.google.com/presentation/d/1HPwV121oVld59x6QEwXNtt5CzHrIIovR8-ojv4oofZU/edit?usp=sharing
      title: Conditionals
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1b29f4ba-a5ea-4a14-9a94-af5f014cfce7
+     title: "Live Lecture"
+     duration: "50:00"
+     live: 1
 readings:
    - title: "Ch5: Conditionals"
      source: "ThinkCS"
