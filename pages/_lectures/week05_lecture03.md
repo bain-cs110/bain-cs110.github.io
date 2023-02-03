@@ -7,8 +7,8 @@ num: 12
 exercise_url: "lecture12.zip"
 canvas_id: friday-lecture-12-conditionals-feb-3
 slides:
-   - url: https://docs.google.com/presentation/d/1GPmoV09GRQFlerbiuSK4awq7KQN2W1tnSePtvhti5Ps/edit?usp=sharing
-     title: Sequences of Data and Functions
+   - url: https://docs.google.com/presentation/d/1HPwV121oVld59x6QEwXNtt5CzHrIIovR8-ojv4oofZU/edit?usp=sharing
+     title: Conditionals
 readings:
    - title: "Ch5: Conditionals"
      source: "ThinkCS"
