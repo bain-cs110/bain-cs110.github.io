@@ -1,8 +1,24 @@
 ---
 layout: module
-title: " "
+title: "Conditionals"
 type: lecture
-draft: 1
+draft: 0
 num: 12
+exercise_url: "lecture12.zip"
+canvas_id: friday-lecture-12-conditionals-feb-3
+slides:
+   - url: https://docs.google.com/presentation/d/1GPmoV09GRQFlerbiuSK4awq7KQN2W1tnSePtvhti5Ps/edit?usp=sharing
+     title: Sequences of Data and Functions
+readings:
+   - title: "Ch5: Conditionals"
+     source: "ThinkCS"
+     url: http://openbookproject.net/thinkcs/python/english3e/conditionals.html
+   - title: "Ch 4: Conditional Execution"
+     author: "Charles Severance"
+     url: https://www.py4e.com/html3/03-conditional
+     video_url: https://www.py4e.com/lessons/logic
+     source: "Python for Everybody"
 due_date: 2023-02-03
 ---
+
+<img class="module-image" src="/assets/images/lectures/fork.jpg" /> In this lesson, we're going to go over conditional logic, which will allow you to write programs that have different outcomes depending on the data, events, and/or user interactions that take place as your program executes. This is often referred to as your program's "state." Specifically we'll cover the beginnings of "conditionals" (if/else statements).
