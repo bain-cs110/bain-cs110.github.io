@@ -14,7 +14,6 @@ draft: 0
 >
 > 1. More practice working with built-in functions
 > 1. Practice writing your own functions
-> 1. Working with modules (and creating your own!)
 
 <img class="creature" src="/assets/images/hw03/creature.png" /> In this assignment, you are going to write a program to draw a creature of your own design/choosing using <a href="" target="_blank">tkinter</a>. At the end of this assignment, someone should be able to use your function to draw your creature: anywhere on the screen at any size or color. In other words, your function needs to honor the parameters that are passed into it. If you don't quite know what this means (it's a confusing concept for people just learning to program), make sure to ask questions!
 
