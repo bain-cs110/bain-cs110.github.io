@@ -15,6 +15,11 @@ readings:
   - title: "Ch7: Iteration"
     source: "ThinkCS"
     url: http://openbookproject.net/thinkcs/python/english3e/iteration.html
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a550596b-65ee-45b2-8769-af5f014cfd00
+     title: "Live Lecture"
+     duration: "50:00"
+     live: 1
 slides:
    - url: https://docs.google.com/presentation/d/1ytssV7pk1v9CBcRIMJIrumzhCkJ4-dDjYfSO3WzykOw/edit?usp=sharing
      title: Control Flow - Loops
