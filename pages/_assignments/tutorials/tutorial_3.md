@@ -161,4 +161,4 @@ Once you've each taken a look, take a second to debrief. Anything either of you 
 
 If you're submitting remotely, you MUST submit your completed tutorial to Canvas and it will be graded. Make sure that all of your functions are named correctly and that they use the EXACT parameter order, names, and types as specified.
 
-Please turn in your completed `.py` file on Canvas by Wednesday night at midnight.
+Please turn in your completed `.py` file on Canvas by Wednesday night at midnight. ONLY SUBMIT the file you worked in...not the `utilities.py` file.
