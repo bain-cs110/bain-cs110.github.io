@@ -119,6 +119,14 @@ def make_oval(canvas, center, radius_x, radius_y, color='#FF4136', tag=None, str
     )
 
 def make_cloud(canvas, center, tag=None):
+      '''
+    Name: make_cloud
+    Purpose: draws a cloud to a given canvas object
+    Inputs:
+      1. a canvas (Canvas) to draw on
+      2. a center (tuple) to center the cloud at
+      3. a tag (str) to give the cloud a name
+    '''
     for i in range(randint(0, 10)):
         x_offset = randint(-40, 40)
         y_offset = randint(0, 20)
