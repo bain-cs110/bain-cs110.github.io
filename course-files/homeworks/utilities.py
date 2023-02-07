@@ -119,7 +119,7 @@ def make_oval(canvas, center, radius_x, radius_y, color='#FF4136', tag=None, str
     )
 
 def make_cloud(canvas, center, tag=None):
-      '''
+    '''
     Name: make_cloud
     Purpose: draws a cloud to a given canvas object
     Inputs:
