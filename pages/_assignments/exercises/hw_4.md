@@ -199,6 +199,27 @@ All that for one lousy animation. This better be worth it...
 > **NOTE: There is an important difference between this assignment and the tutorial.**<br>
 > In the tutorial, you had to manually delete mario each time you wanted to move the picture across the screen. In this homework we have a special function in the utilities library called `utilities.update_position` that gets rid of that step completely. Rather than having to erase and draw a completely new mario each time, this function allows us to specify a particular `tag` and move that shape by a certain amount in the x and/or y direction. However, you still have to use `gui.update()` to update the screen and the `time` library to control how fast the animation goes.
 
+Now that we have `update_position`, moving a creature is as easy as using it's tag. Here's the documentation from `update_position` (which you can see by opening the utilities file).
+
+```python
+'''
+Name: update_position
+Purpose: updates the x and y position of all shapes that have been tagged
+with the tag argument
+Inputs:
+    1. a canvas (Canvas) to search
+    2. a tag (str) to move
+    3. x (int; optional) amount to move in the x direction
+    4. y (int; optional) amount to move in the y direction
+'''
+```
+
+That means to move, say, an object tagged `"mario"` 50 units in the x direction we'd just say:
+
+```python
+utilities.update_position(the_canvas, "mario", x=50)
+```
+
 Below the part of your program where you make your clouds, you'll need to do the following:
 
 <div>
@@ -217,7 +238,7 @@ Hint 1: You will only have 1 "animation loop" to animate both the creatures.
 
 Hint 2: To reset the creatures position, you need to use a conditional to check the creatures's position each time it moves.
 
-Hint 3: To find the left-most or right-most x-coordinate of a tagged object, you can use the `utilities.get_left` and `utilites.get_right` functions.
+Hint 3: To find the left-most or right-most x-coordinate of a tagged object, you can use the `utilities.get_left` and `utilites.get_right` functions. You can see what inputs those functions require by looking in the `utilities.py` file.
 
 Hint 4: If you need to find the WIDTH of your object...get this...there's a function called `utilities.get_width`. Now why might that be useful...(see Hint 5).
 
