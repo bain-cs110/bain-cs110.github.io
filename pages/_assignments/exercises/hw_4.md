@@ -33,6 +33,8 @@ Note there are a number of functions in `utilities.py` that you *can* use but yo
 
 Because we're now dealing with TWO files, you need to make sure they are BOTH in the same folder (but you will only submit the `hw04.py` file.)
 
+> **Note:** Having trouble with IDLE and the Utilities file? See <a href="https://campuswire.com/c/GB09BA912/feed/261" target="_blank">this Campuswire post to see if your issue is an easy fix.</a>
+
 * * *
 
 ## Part 1: Landscapes
