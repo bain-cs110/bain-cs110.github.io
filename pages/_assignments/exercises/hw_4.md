@@ -227,7 +227,7 @@ Below the part of your program where you make your clouds, you'll need to do the
         <li>Create your creature somewhere on the bottom half of the screen. (make sure your call to `make_creature` goes inside the section labeled <pre>### MAKE YOUR CREATURES (at least 2 unique ones)</pre></li>
         <li>Animate that creature so that it moves across the screen.</li>
         <li>If the creature gets to the end of the screen, it should seamlessly be moved to the beginning of the screen.</li>
-        <li>Create a second creature (e.g. use your same `make_creature` function but give it different colors, size, etc.; like my cars in teh video below). Be sure to give your new creature a <em>unique</em> tag.</li>
+        <li>Create a second creature (e.g. use your same `make_creature` function but give it different colors, size, etc.; like my two cars in the video below). Be sure to give your new creature a <em>unique</em> tag.</li>
         <li>Make the second creature moves in the opposite direction, and also loops back around when it gets to the end of the screen (see the video below where I use a car as my creature)</li>
     </ol>
 </div>
