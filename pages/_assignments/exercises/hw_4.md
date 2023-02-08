@@ -206,8 +206,8 @@ Below the part of your program where you make your clouds, you'll need to do the
         <li>Create your creature somewhere on the bottom half of the screen. (make sure your call to `make_creature` goes inside the section labeled <pre>### MAKE YOUR CREATURES (at least 2 unique ones)</pre></li>
         <li>Animate that creature so that it moves across the screen.</li>
         <li>If the creature gets to the end of the screen, it should seamlessly be moved to the beginning of the screen.</li>
-        <li>Create a second creature (choose different colors). Be sure to give your new creature a <em>unique</em> tag.</li>
-        <li>Make the second creature move in the opposite direction, and also loop back around when it gets to the end of the screen (see the video below where I use a car as my creature)</li>
+        <li>Create a second creature (e.g. use your same `make_creature` function but give it different colors, size, etc.; like my cars in teh video below). Be sure to give your new creature a <em>unique</em> tag.</li>
+        <li>Make the second creature moves in the opposite direction, and also loops back around when it gets to the end of the screen (see the video below where I use a car as my creature)</li>
     </ol>
 </div>
 
@@ -219,9 +219,11 @@ Hint 2: To reset the creatures position, you need to use a conditional to check 
 
 Hint 3: To find the left-most or right-most x-coordinate of a tagged object, you can use the `utilities.get_left` and `utilites.get_right` functions.
 
-Hint 4: In order to "reset" each creature once they go off the screen, you can still use `update_position`. The screen is 1000 pixels wide.
+Hint 4: If you need to find the WIDTH of your object...get this...there's a function called `utilities.get_width`. Now why might that be useful...(see Hint 5).
 
-Hint 5: If you find only PART(s) of your creature moving but not others, it means you missed tagging one of the shapes in Part 2. Double check you've tagged all those shapes!
+Hint 5: In order to "reset" each creature once they go off the screen, you can still use `update_position`. The screen is 1000 pixels wide.
+
+Hint 6: If you find only PART(s) of your creature moving but not others, it means you missed tagging one of the shapes in Part 2. Double check you've tagged all those shapes!
 
 ### Optional enhancements
 The more you practice, the better you'll get!
