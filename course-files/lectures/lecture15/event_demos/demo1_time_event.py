@@ -28,11 +28,11 @@ def make_square_face(a_canvas, center, width, my_tag=""):
     center_y = center[1]
     project_utilities.make_square(a_canvas, (center_x - width / 2,
        center_y - width / 2), width, fill_color="green", tag=my_tag)
-    project_utilities.make_square(a_canvas, (center_x - width / 3, center_y - width / 6),
+    project_utilities.make_square(a_canvas, (center_x - width / 3, center_y + width / 6),
        big_square_width / 6, fill_color="purple", tag=my_tag)  # left eye
-    project_utilities.make_square(a_canvas, (center_x + width / 6, center_y - width / 6),
+    project_utilities.make_square(a_canvas, (center_x + width / 6, center_y + width / 6),
        big_square_width / 6, fill_color="white", tag=my_tag)  # right eye
-    project_utilities.make_square(a_canvas, (center_x - width / 60, center_y +
+    project_utilities.make_square(a_canvas, (center_x - width / 60, center_y -
         width / 60), width / 30, fill_color="white", tag=my_tag)  # nose
    
 
