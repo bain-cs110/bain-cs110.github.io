@@ -58,6 +58,16 @@ mario_2 = [
 (0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0)
 ]
 
+
+# Name: draw_row
+# Purpose: draws a single row of pixel art
+# Inputs:
+#  1. canvas (Canvas), the canvas to draw on
+#  2. row (tuple), the row of the artwork we want to draw
+#  3. bottom_left (tuple), the bottom left coordinate to draw the picture at
+#  4. color (list) a list of colors to draw with
+#  5. pixel (int; optional) the size of each pixel
+#  6. tag (string; optional) the tag to assign to each shape
 def draw_row(canvas:Canvas, row:tuple, bottom_left:tuple, colors:list, pixel:int=25, tag=""):
     x = bottom_left[0]
     y = bottom_left[1]
@@ -66,13 +76,22 @@ def draw_row(canvas:Canvas, row:tuple, bottom_left:tuple, colors:list, pixel:int
             make_square(canvas, (x, y), pixel, fill_color=colors[cell], tag=tag)
         x += pixel
 
+# Name: draw_pixel_art
+# Purpose: draws an entire piece of pixel art
+# Inputs:
+#  1. canvas (Canvas), the canvas to draw on
+#  2. bottom_left (tuple), the bottom left coordinate to draw the picture at
+#  3. artwork (list) the actual picture to draw
+#  4. palette (list) a list of colors to draw with
+#  5. pixel (int; optional) the size of each pixel
+#  6. tag (string; optional) the tag to assign to each shape
 def draw_pixel_art(canvas:Canvas, bottom_left:tuple, artwork:list, palette:list, pixel:int=10, tag=""):
     x = bottom_left[0]
     y = bottom_left[1] + len(artwork)*pixel
     for row in artwork:
         # draw each row at the specified (x, y) position:
         draw_row(canvas, row, (x, y), colors=palette, pixel=pixel, tag=tag)
-        # ...and don't forget to shift the y-value up by the proper
+        # ...and don't forget to shift the y-value down by the proper
         #  amount so that the next row won't draw on top of the first one:
         y -= pixel
     canvas.scale(tag, 0, 0, 1, -1)

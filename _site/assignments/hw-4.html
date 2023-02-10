@@ -90,6 +90,10 @@
 
 <p>Because we’re now dealing with TWO files, you need to make sure they are BOTH in the same folder (but you will only submit the <code class="language-plaintext highlighter-rouge">hw04.py</code> file.)</p>
 
+<blockquote>
+  <p><strong>Note:</strong> Having trouble with IDLE and the Utilities file? See <a href="https://campuswire.com/c/GB09BA912/feed/261" target="_blank">this Campuswire post to see if your issue is an easy fix.</a></p>
+</blockquote>
+
 <hr />
 
 <h2 id="part-1-landscapes">Part 1: Landscapes</h2>
@@ -262,6 +266,25 @@
 In the tutorial, you had to manually delete mario each time you wanted to move the picture across the screen. In this homework we have a special function in the utilities library called <code class="language-plaintext highlighter-rouge">utilities.update_position</code> that gets rid of that step completely. Rather than having to erase and draw a completely new mario each time, this function allows us to specify a particular <code class="language-plaintext highlighter-rouge">tag</code> and move that shape by a certain amount in the x and/or y direction. However, you still have to use <code class="language-plaintext highlighter-rouge">gui.update()</code> to update the screen and the <code class="language-plaintext highlighter-rouge">time</code> library to control how fast the animation goes.</p>
 </blockquote>
 
+<p>Now that we have <code class="language-plaintext highlighter-rouge">update_position</code>, moving a creature is as easy as using it’s tag. Here’s the documentation from <code class="language-plaintext highlighter-rouge">update_position</code> (which you can see by opening the utilities file).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">'''
+Name: update_position
+Purpose: updates the x and y position of all shapes that have been tagged
+with the tag argument
+Inputs:
+    1. a canvas (Canvas) to search
+    2. a tag (str) to move
+    3. x (int; optional) amount to move in the x direction
+    4. y (int; optional) amount to move in the y direction
+'''</span>
+</code></pre></div></div>
+
+<p>That means to move, say, an object tagged <code class="language-plaintext highlighter-rouge">"mario"</code> 50 units in the x direction we’d just say:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">utilities</span><span class="p">.</span><span class="n">update_position</span><span class="p">(</span><span class="n">the_canvas</span><span class="p">,</span> <span class="s">"mario"</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+</code></pre></div></div>
+
 <p>Below the part of your program where you make your clouds, you’ll need to do the following:</p>
 
 <div>
@@ -269,8 +292,8 @@ In the tutorial, you had to manually delete mario each time you wanted to move t
         <li>Create your creature somewhere on the bottom half of the screen. (make sure your call to `make_creature` goes inside the section labeled <pre>### MAKE YOUR CREATURES (at least 2 unique ones)</pre></li>
         <li>Animate that creature so that it moves across the screen.</li>
         <li>If the creature gets to the end of the screen, it should seamlessly be moved to the beginning of the screen.</li>
-        <li>Create a second creature (choose different colors). Be sure to give your new creature a <em>unique</em> tag.</li>
-        <li>Make the second creature move in the opposite direction, and also loop back around when it gets to the end of the screen (see the video below where I use a car as my creature)</li>
+        <li>Create a second creature (e.g. use your same `make_creature` function but give it different colors, size, etc.; like my two cars in the video below). Be sure to give your new creature a <em>unique</em> tag.</li>
+        <li>Make the second creature moves in the opposite direction, and also loops back around when it gets to the end of the screen (see the video below where I use a car as my creature)</li>
     </ol>
 </div>
 
@@ -280,11 +303,13 @@ In the tutorial, you had to manually delete mario each time you wanted to move t
 
 <p>Hint 2: To reset the creatures position, you need to use a conditional to check the creatures’s position each time it moves.</p>
 
-<p>Hint 3: To find the left-most or right-most x-coordinate of a tagged object, you can use the <code class="language-plaintext highlighter-rouge">utilities.get_left</code> and <code class="language-plaintext highlighter-rouge">utilites.get_right</code> functions.</p>
+<p>Hint 3: To find the left-most or right-most x-coordinate of a tagged object, you can use the <code class="language-plaintext highlighter-rouge">utilities.get_left</code> and <code class="language-plaintext highlighter-rouge">utilites.get_right</code> functions. You can see what inputs those functions require by looking in the <code class="language-plaintext highlighter-rouge">utilities.py</code> file.</p>
 
-<p>Hint 4: In order to “reset” each creature once they go off the screen, you can still use <code class="language-plaintext highlighter-rouge">update_position</code>. The screen is 1000 pixels wide.</p>
+<p>Hint 4: If you need to find the WIDTH of your object…get this…there’s a function called <code class="language-plaintext highlighter-rouge">utilities.get_width</code>. Now why might that be useful…(see Hint 5).</p>
 
-<p>Hint 5: If you find only PART(s) of your creature moving but not others, it means you missed tagging one of the shapes in Part 2. Double check you’ve tagged all those shapes!</p>
+<p>Hint 5: In order to “reset” each creature once they go off the screen, you can still use <code class="language-plaintext highlighter-rouge">update_position</code>. The screen is 1000 pixels wide.</p>
+
+<p>Hint 6: If you find only PART(s) of your creature moving but not others, it means you missed tagging one of the shapes in Part 2. Double check you’ve tagged all those shapes!</p>
 
 <h3 id="optional-enhancements-1">Optional enhancements</h3>
 <p>The more you practice, the better you’ll get!</p>
