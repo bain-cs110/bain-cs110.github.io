@@ -5,6 +5,7 @@ title: "Events and Listeners"
 type: lecture
 draft: 0
 num: 15
+canvas_id: friday-lecture-15-events-feb-10
 exercise_url: "lecture15.zip"
 due_date: 2023-02-10
 slides:
