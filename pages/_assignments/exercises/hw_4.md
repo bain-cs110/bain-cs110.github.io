@@ -240,7 +240,7 @@ Hint 1: You will only have 1 "animation loop" to animate both the creatures.
 
 Hint 2: To reset the creatures position, you need to use a conditional to check the creatures's position each time it moves.
 
-Hint 3: To find the left-most or right-most x-coordinate of a tagged object, you can use the `utilities.get_left` and `utilites.get_right` functions. You can see what inputs those functions require by looking in the `utilities.py` file.
+Hint 3: To find the left-most or right-most x-coordinate of a tagged object, you can use the `utilities.get_left` and `utilites.get_right` functions. You can see what inputs those functions require by looking in the `utilities.py` file. There are examples of how to call those functions INCLUDED in the template file.
 
 Hint 4: If you need to find the WIDTH of your object...get this...there's a function called `utilities.get_width`. Now why might that be useful...(see Hint 5).
 
