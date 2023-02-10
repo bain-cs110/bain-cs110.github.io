@@ -48,6 +48,8 @@ In `hw04.py`, replace the code on lines 12-15 (which is repetitive) with a loop 
 1. Use a loop
 1. Use the random module, and in particular the [random.randint](https://docs.python.org/3/library/random.html#random.randint) function to give each cloud a random (x, y) position (given the dimensions of the screen). (Remember, you need to import the module in order to use it just like we imported the time module in the tutorial this week.)
 
+Hint: stuck? see <a href="https://api.slack.com/apps" target="_blank">this campuswire post</a>.
+
 ### Optional enhancements
 1. Modify `make_cloud` to make more realistic clouds
 1. Make the clouds sometimes look like storm clouds
@@ -191,6 +193,8 @@ def make_creature(a_canvas, center, width, my_tag=""):
     make_square(a_canvas, (center_x - width / 60, center_y - width / 60), width / 30, color="white", tag=my_tag)  # nose
 ```
 
+A completed example of this for my car creature is on <a href="https://campuswire.com/c/GB09BA912/feed/286" target="_blank">Campuswire</a>.
+
 All that for one lousy animation. This better be worth it...
 
 * * *
@@ -236,7 +240,7 @@ Below the part of your program where you make your clouds, you'll need to do the
 
 <iframe src="https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=99980f14-bfe6-4986-a09c-ae89004d2ab2&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 
-Hint 1: You will only have 1 "animation loop" to animate both the creatures.
+Hint 1: You will only have 1 "animation loop" to animate both the creatures. (<a href="https://campuswire.com/c/GB09BA912/feed/288" target="_blank">More help on Campuswire</a>)
 
 Hint 2: To reset the creatures position, you need to use a conditional to check the creatures's position each time it moves.
 
