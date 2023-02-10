@@ -8,6 +8,11 @@ num: 15
 canvas_id: friday-lecture-15-events-feb-10
 exercise_url: "lecture15.zip"
 due_date: 2023-02-10
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3a49646f-e11c-41f9-adbd-af5f014cfd43
+     title: "Live Lecture"
+     duration: "50:00"
+     live: 1
 slides:
    - url: https://docs.google.com/presentation/d/1J6uBChLSMHUpadShyyXiEi7kvBFL3PWiw4qOWW9lLRg/edit?usp=sharing
      title: Events and Listeners
