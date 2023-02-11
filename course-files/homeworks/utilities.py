@@ -131,4 +131,5 @@ def make_cloud(canvas, center, tag=None):
         x_offset = randint(-40, 40)
         y_offset = randint(0, 20)
         make_circle(canvas, (center[0] + x_offset,
-                    center[1] + y_offset), randint(10, 50))
+                    center[1] + y_offset), randint(10, 50),
+                    tag=tag)
