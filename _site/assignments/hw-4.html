@@ -111,6 +111,8 @@
   <li>Use the random module, and in particular the <a href="https://docs.python.org/3/library/random.html#random.randint">random.randint</a> function to give each cloud a random (x, y) position (given the dimensions of the screen). (Remember, you need to import the module in order to use it just like we imported the time module in the tutorial this week.)</li>
 </ol>
 
+<p>Hint: stuck? see <a href="https://api.slack.com/apps" target="_blank">this campuswire post</a>.</p>
+
 <h3 id="optional-enhancements">Optional enhancements</h3>
 <ol>
   <li>Modify <code class="language-plaintext highlighter-rouge">make_cloud</code> to make more realistic clouds</li>
@@ -255,6 +257,8 @@
 </span>    <span class="n">make_square</span><span class="p">(</span><span class="n">a_canvas</span><span class="p">,</span> <span class="p">(</span><span class="n">center_x</span> <span class="o">-</span> <span class="n">width</span> <span class="o">/</span> <span class="mi">60</span><span class="p">,</span> <span class="n">center_y</span> <span class="o">-</span> <span class="n">width</span> <span class="o">/</span> <span class="mi">60</span><span class="p">),</span> <span class="n">width</span> <span class="o">/</span> <span class="mi">30</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">"white"</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="n">my_tag</span><span class="p">)</span>  <span class="c1"># nose
 </span></code></pre></div></div>
 
+<p>A completed example of this for my car creature is on <a href="https://campuswire.com/c/GB09BA912/feed/286" target="_blank">Campuswire</a>.</p>
+
 <p>All that for one lousy animation. This better be worth it…</p>
 
 <hr />
@@ -299,11 +303,11 @@ Inputs:
 
 <iframe src="https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=99980f14-bfe6-4986-a09c-ae89004d2ab2&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=true&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay"></iframe>
 
-<p>Hint 1: You will only have 1 “animation loop” to animate both the creatures.</p>
+<p>Hint 1: You will only have 1 “animation loop” to animate both the creatures. (<a href="https://campuswire.com/c/GB09BA912/feed/288" target="_blank">More help on Campuswire</a>)</p>
 
 <p>Hint 2: To reset the creatures position, you need to use a conditional to check the creatures’s position each time it moves.</p>
 
-<p>Hint 3: To find the left-most or right-most x-coordinate of a tagged object, you can use the <code class="language-plaintext highlighter-rouge">utilities.get_left</code> and <code class="language-plaintext highlighter-rouge">utilites.get_right</code> functions. You can see what inputs those functions require by looking in the <code class="language-plaintext highlighter-rouge">utilities.py</code> file.</p>
+<p>Hint 3: To find the left-most or right-most x-coordinate of a tagged object, you can use the <code class="language-plaintext highlighter-rouge">utilities.get_left</code> and <code class="language-plaintext highlighter-rouge">utilites.get_right</code> functions. You can see what inputs those functions require by looking in the <code class="language-plaintext highlighter-rouge">utilities.py</code> file. There are examples of how to call those functions INCLUDED in the template file.</p>
 
 <p>Hint 4: If you need to find the WIDTH of your object…get this…there’s a function called <code class="language-plaintext highlighter-rouge">utilities.get_width</code>. Now why might that be useful…(see Hint 5).</p>
 
