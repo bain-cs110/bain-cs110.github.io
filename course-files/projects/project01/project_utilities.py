@@ -321,7 +321,7 @@ def make_cloud(canvas, center, my_tag=""):
     * `center` (`tuple`): [Required] A coordinate to center the cloud on.
     * `my_tag` (`str`): The tag to assign to the cloud.
     '''
-    for i in range(random.randint(0,10)):
+    for i in range(random.randint(1,10)):
         x_offset = random.randint(-40,40)
         y_offset = random.randint(0,20)
         make_circle(canvas, (center[0] + x_offset, center[1] + y_offset), random.randint(10,50), tag=my_tag)
