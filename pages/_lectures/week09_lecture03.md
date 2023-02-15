@@ -1,6 +1,6 @@
 ---
 layout: module
-title: " "
+title: "Handling Errors"
 description:
 type: lecture
 draft: 1
