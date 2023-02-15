@@ -1,6 +1,6 @@
 ---
 layout: module
-title: " "
+title: "Dictionary Algorithms and JSON Data"
 description:
 type: lecture
 draft: 1

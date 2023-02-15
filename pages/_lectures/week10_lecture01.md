@@ -1,6 +1,6 @@
 ---
 layout: module
-title: " "
+title: "Advanced Dictionary Uses"
 type: lecture
 draft: 1
 num: 24

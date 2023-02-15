@@ -1,6 +1,7 @@
 ---
 layout: module
-title: " "
+title: "Processing Data"
+description: "(Mini-Quiz 4)"
 type: lecture
 draft: 1
 num: 18
