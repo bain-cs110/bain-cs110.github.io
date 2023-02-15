@@ -4,6 +4,7 @@ title: Quiz 2
 type: quiz
 draft: 0
 num: 2
+canvas_id: wednesday-quiz-2-in-person-feb-22
 due_date: 2023-02-22
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: module
-title: " "
+title: "Introduction to Dictionaries"
 description:
 type: lecture
 draft: 1

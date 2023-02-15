@@ -1,6 +1,6 @@
 ---
 layout: module
-title: " "
+title: "Applications of Dictionaries"
 type: lecture
 description:
 draft: 1
