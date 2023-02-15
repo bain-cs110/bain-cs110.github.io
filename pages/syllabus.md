@@ -132,7 +132,7 @@ These will be short quizzes for each module of the course that serve as a check 
 If you attend class but do not receive credit, you can fill out this [Attendance Petition form](https://docs.google.com/forms/d/e/1FAIpQLSf9MFfVf14aimPxFkniDytGYZsviQ-UNEocYTwTATq_jbbOlQ/viewform?usp=sf_link).
 
 ### Homework Grading
-Homework will be approximately weekly and is due at 11:59pm on the specified date. You will submit your homework assignments on Canvas.
+Homework will be approximately weekly and is due at the Canvas specified date. You will submit your homework assignments on Canvas.
 
 We will still accept late homework up to 48 hours after the original due date, with a 10% deduction per 24 hour period.
 
