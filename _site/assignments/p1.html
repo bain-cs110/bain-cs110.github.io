@@ -91,7 +91,7 @@
 
 <p><img class="frame center med-lg" src="/assets/images/project01/grid.svg" /></p>
 
-<p>We’ve been taking care of this for you with some magic in the templates you’ve started with…but we’re removing that scaffold for this project. <strong>Luckily</strong>, fixing things for this is relatively easy! For instance, in your <code class="language-plaintext highlighter-rouge">make_creature</code> function you’ll use from HW4, you’ll (as a human) just need “run” the following algorithm:</p>
+<p>We’ve been taking care of this for you with some magic in the templates you’ve started with…but we’re removing that scaffold for this project. <strong>Luckily</strong>, fixing things for this is relatively easy! For instance, in your <code class="language-plaintext highlighter-rouge">make_creature</code> function you’ll use from HW4, you’ll (<strong>as a human</strong>) just need “run” the following algorithm:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for shape in each_of_your_shapes:
     look to see if the y-coordinate is being shifted from the center or corner (i.e. relatively placed)
@@ -100,6 +100,8 @@
     else:
         leave it alone
 </code></pre></div></div>
+
+<p>Again, that is NOT code you put in Python. That is a series of steps YOU will take to flip each of your y-values.</p>
 
 <p>Once you’ve fixed your function…you’re good to go! However, while you’re doing you animations keep in mind that the y-axis is flipped. To go up, you DECREASE the y-value and to go down you INCREASE the y-value.</p>
 
@@ -333,7 +335,6 @@ At the top of your file please include a short paragraph (bullet points are fine
             <td>6</td>
             <td>
                 <ul>
-                    <li>Ensure the aquarium program is invoked from main.py (up to 1 pt)</li>
                     <li>At least 5 background creatures have been rendered</li>
                     <li>At least 5 landscape features have been rendered (with different sizes, positions, colors, etc.)</li>
                 </ul>

@@ -5,7 +5,7 @@ import math
 __all__ = [
     "make_circle", "make_oval", "make_square", "make_rectangle", "make_line",
     "make_car", "make_cloud", "make_grid", "make_image", "get_top", "get_left",
-    "get_right", "get_left", "get_center", "get_bottom", "fix_y_axis_for", "get_tag_from_event",
+    "get_right", "get_left", "get_center", "get_bottom", "get_tag_from_event",
     "update_position", "update_fill", "delete", "flip", "rotate"
 ]
 
@@ -313,18 +313,19 @@ def get_height(canvas, tag):
     y_coords = _get_y_coordinates(canvas, tag)
     return max(*y_coords) - min(*y_coords)
 
-def make_cloud(canvas, center, my_tag=""):
+def make_cloud(canvas, center, fill_color="white", my_tag=""):
     '''
     Draws a weird looking cloud on a given `Canvas`
 
     * `canvas` (`Canvas`): [Required] The `Canvas` to drawn on.
     * `center` (`tuple`): [Required] A coordinate to center the cloud on.
+    * `fill_color` (`str`): A color to draw the clouds.
     * `my_tag` (`str`): The tag to assign to the cloud.
     '''
-    for i in range(random.randint(0,10)):
+    for i in range(random.randint(1,10)):
         x_offset = random.randint(-40,40)
         y_offset = random.randint(0,20)
-        make_circle(canvas, (center[0] + x_offset, center[1] + y_offset), random.randint(10,50), tag=my_tag)
+        make_circle(canvas, (center[0] + x_offset, center[1] + y_offset), random.randint(10, 50), fill_color=fill_color, tag=my_tag)
 
 def make_car(canvas, top_left=(0, 0), fill_color="#3D9970", my_tag=None):
     '''
@@ -431,6 +432,8 @@ def delete(canvas, tag):
 
     * `canvas` (`Canvas`): [Required] The `Canvas` object to search in.
     * `tag` (`str`): [Required] The tag of the object to delete.
+
+    Note, if an object doesn't exist with that tag, nothing will happen.
     '''
     ids = canvas.find_withtag(tag)
     for id in ids:

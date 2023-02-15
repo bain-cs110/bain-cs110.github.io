@@ -5,16 +5,20 @@ import math
 __all__ = [
     "make_circle", "make_oval", "make_square", "make_rectangle", "make_line",
     "make_car", "make_cloud", "make_grid", "make_image", "get_top", "get_left",
-    "get_right", "get_left", "get_center", "get_bottom", "fix_y_axis_for", "get_tag_from_event",
+    "get_right", "get_left", "get_center", "get_bottom", "get_tag_from_event",
     "update_position", "update_fill", "delete", "flip", "rotate"
 ]
 
 _cache = []
+
+
 def _get_coordinates(canvas, id):
     return canvas.coords(id)
 
+
 def _set_coordinates(canvas, id, coordinates):
     canvas.coords(id, coordinates)
+
 
 def _update_position_by_id(canvas, id, x=2, y=0):
     coords = _get_coordinates(canvas, id)
@@ -27,11 +31,14 @@ def _update_position_by_id(canvas, id, x=2, y=0):
     # set the coordinates:
     _set_coordinates(canvas, id, coords)
 
+
 def _get_x_coordinates(canvas, tag):
     return _get_coordinates_by_dimension(canvas, tag, dimension='x')
 
+
 def _get_y_coordinates(canvas, tag):
     return _get_coordinates_by_dimension(canvas, tag, dimension='y')
+
 
 def _get_coordinates_by_dimension(canvas, tag, dimension='x'):
     '''
@@ -50,6 +57,7 @@ def _get_coordinates_by_dimension(canvas, tag, dimension='x'):
             if i % 2 == pos:
                 coords.append(shape_coords[i])
     return coords
+
 
 def make_circle(canvas, center, radius, fill_color='blue', tag=None, stroke_width=2, outline=None):
     '''
@@ -70,6 +78,7 @@ def make_circle(canvas, center, radius, fill_color='blue', tag=None, stroke_widt
         canvas, center, radius, radius, fill_color=fill_color, tag=tag,
         stroke_width=stroke_width, outline=outline
     )
+
 
 def make_oval(canvas, center, radius_x, radius_y, fill_color='#FF4136', tag=None, stroke_width=1, outline=None):
     '''
@@ -96,7 +105,7 @@ def make_oval(canvas, center, radius_x, radius_y, fill_color='#FF4136', tag=None
         tag=tag,
         stroke_width=stroke_width,
         outline=outline)
-    
+
 
 def make_poly_circle(canvas, center, radius, fill_color='#FF4136', tag=None, stroke_width=1, outline=None):
     return make_poly_oval(
@@ -108,6 +117,7 @@ def make_poly_circle(canvas, center, radius, fill_color='#FF4136', tag=None, str
         tag=tag,
         stroke_width=stroke_width,
         outline=outline)
+
 
 def make_poly_oval(canvas, center, radius_x, radius_y, fill_color='#FF4136', tag=None, stroke_width=1, outline=None):
     x, y = center
@@ -144,6 +154,7 @@ def make_poly_oval(canvas, center, radius_x, radius_y, fill_color='#FF4136', tag
         smooth=True
     )
 
+
 def rotate(canvas, tag, degrees=5, origin=None):
     '''
     Rotates any polygons with a given tag around a point on a given canvas. Note that this does
@@ -171,8 +182,10 @@ def rotate(canvas, tag, degrees=5, origin=None):
         # update coordinates:
         for i in range(0, len(coords), 2):
             px, py = coords[i], coords[i+1]
-            qx = ox + math.cos(degrees) * (px - ox) - math.sin(degrees) * (py - oy)
-            qy = oy + math.sin(degrees) * (px - ox) + math.cos(degrees) * (py - oy)
+            qx = ox + math.cos(degrees) * (px - ox) - \
+                math.sin(degrees) * (py - oy)
+            qy = oy + math.sin(degrees) * (px - ox) + \
+                math.cos(degrees) * (py - oy)
             coords[i] = qx
             coords[i+1] = qy
         # set the coordinates:
@@ -202,6 +215,7 @@ def make_square(canvas, top_left, width, fill_color="green", tag=None, stroke_wi
         outline=outline
     )
 
+
 def make_rectangle(canvas, top_left, width, height, fill_color="black", tag=None, stroke_width=1, outline=None):
     '''
     Draws a square on a specified canvas with a particular `top_left` coordinate.
@@ -225,6 +239,7 @@ def make_rectangle(canvas, top_left, width, height, fill_color="black", tag=None
         tags=tag
     )
 
+
 def make_line(canvas, coordinates, curvy=False, fill_color="grey", width=2, tag=None, dash=None):
     '''
     Draws a line on a specified canvas between a list of coordinates.
@@ -247,6 +262,7 @@ def make_line(canvas, coordinates, curvy=False, fill_color="grey", width=2, tag=
         tag=tag,
         dash=None)
 
+
 def get_left(canvas, tag):
     '''
     Returns the left-most x-coordinate of an object with the given tag.
@@ -255,6 +271,7 @@ def get_left(canvas, tag):
     * `tag` (`str`): [Required] The tag of the object to lookup.
     '''
     return min(*_get_x_coordinates(canvas, tag))
+
 
 def get_right(canvas, tag):
     '''
@@ -265,6 +282,7 @@ def get_right(canvas, tag):
     '''
     return max(*_get_x_coordinates(canvas, tag))
 
+
 def get_top(canvas, tag):
     '''
     Returns the top-most y-coordinate of an object with the given tag.
@@ -274,6 +292,7 @@ def get_top(canvas, tag):
     '''
     return min(*_get_y_coordinates(canvas, tag))
 
+
 def get_bottom(canvas, tag):
     '''
     Returns the bottom-most y-coordinate of an object with the given tag.
@@ -282,6 +301,7 @@ def get_bottom(canvas, tag):
     * `tag` (`str`): [Required] The tag of the object to lookup.
     '''
     return max(*_get_y_coordinates(canvas, tag))
+
 
 def get_width(canvas, tag):
     '''
@@ -293,6 +313,7 @@ def get_width(canvas, tag):
     x_coords = _get_x_coordinates(canvas, tag)
     return max(*x_coords) - min(*x_coords)
 
+
 def get_center(canvas, tag):
     '''
     Returns the center x-coordinate of an object with the given tag.
@@ -302,6 +323,7 @@ def get_center(canvas, tag):
     '''
 
     return get_width(canvas, tag) / 2 + get_left(canvas, tag)
+
 
 def get_height(canvas, tag):
     '''
@@ -313,6 +335,7 @@ def get_height(canvas, tag):
     y_coords = _get_y_coordinates(canvas, tag)
     return max(*y_coords) - min(*y_coords)
 
+
 def make_cloud(canvas, center, my_tag=""):
     '''
     Draws a weird looking cloud on a given `Canvas`
@@ -321,10 +344,12 @@ def make_cloud(canvas, center, my_tag=""):
     * `center` (`tuple`): [Required] A coordinate to center the cloud on.
     * `my_tag` (`str`): The tag to assign to the cloud.
     '''
-    for i in range(random.randint(0,10)):
-        x_offset = random.randint(-40,40)
-        y_offset = random.randint(0,20)
-        make_circle(canvas, (center[0] + x_offset, center[1] + y_offset), random.randint(10,50), tag=my_tag)
+    for i in range(random.randint(1, 10)):
+        x_offset = random.randint(-40, 40)
+        y_offset = random.randint(0, 20)
+        make_circle(canvas, (center[0] + x_offset, center[1] +
+                    y_offset), random.randint(10, 50), tag=my_tag)
+
 
 def make_car(canvas, top_left=(0, 0), fill_color="#3D9970", my_tag=None):
     '''
@@ -337,10 +362,13 @@ def make_car(canvas, top_left=(0, 0), fill_color="#3D9970", my_tag=None):
 
     '''
     x, y = top_left
-    make_rectangle(canvas, (x + 50, y), 100, 40, fill_color=fill_color, tag=my_tag)
-    make_rectangle(canvas, (x, y + 30), 200, 45, fill_color=fill_color, tag=my_tag)
+    make_rectangle(canvas, (x + 50, y), 100, 40,
+                   fill_color=fill_color, tag=my_tag)
+    make_rectangle(canvas, (x, y + 30), 200, 45,
+                   fill_color=fill_color, tag=my_tag)
     make_circle(canvas, (x + 50, y + 80), 20, fill_color='black', tag=my_tag)
     make_circle(canvas, (x + 150, y + 80), 20, fill_color='black', tag=my_tag)
+
 
 def make_image(
         canvas, image_path, position=(200, 200), rotation=None,
@@ -356,7 +384,7 @@ def make_image(
     '''
     # import PIL libraries
     from PIL import Image, ImageTk
-    anchor='nw'
+    anchor = 'nw'
 
     # 1. create PIL image and apply any image transformations:
     dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -373,10 +401,13 @@ def make_image(
 
     # 2. convert to tkinter-compatible image format:
     tkinter_image = ImageTk.PhotoImage(pil_image)
-    _cache.append(tkinter_image)  # workaround for known tkinter bug: http://effbot.org/pyfaq/why-do-my-tkinter-images-not-appear.htm
+    # workaround for known tkinter bug: http://effbot.org/pyfaq/why-do-my-tkinter-images-not-appear.htm
+    _cache.append(tkinter_image)
 
     # 3. draw image on canvas:
-    canvas.create_image(*position, image=tkinter_image, anchor=anchor, **kwargs)
+    canvas.create_image(*position, image=tkinter_image,
+                        anchor=anchor, **kwargs)
+
 
 def get_tag_from_event(canvas, event):
     '''
@@ -389,7 +420,7 @@ def get_tag_from_event(canvas, event):
 
         x = event.x
         y = event.y
-        shape_id = canvas.find_closest(x, y) # get the top shape
+        shape_id = canvas.find_closest(x, y)  # get the top shape
         if shape_id:
             tags = canvas.gettags(shape_id)
             if len(tags) > 0:
@@ -399,6 +430,7 @@ def get_tag_from_event(canvas, event):
     except:
         print('error: none found')
         return None
+
 
 def update_position(canvas, tag, x=0, y=0):
     '''
@@ -413,6 +445,7 @@ def update_position(canvas, tag, x=0, y=0):
     for id in ids:
         _update_position_by_id(canvas, id, x, y)
 
+
 def update_fill(canvas, tag, color):
     '''
     Change the fill color of a tagged object.
@@ -425,12 +458,15 @@ def update_fill(canvas, tag, color):
     for id in ids:
         canvas.itemconfig(id, fill=color)
 
+
 def delete(canvas, tag):
     '''
     Delete a given tagged object on a particular canvas.
 
     * `canvas` (`Canvas`): [Required] The `Canvas` object to search in.
     * `tag` (`str`): [Required] The tag of the object to delete.
+
+    Note, if an object doesn't exist with that tag, nothing will happen.
     '''
     ids = canvas.find_withtag(tag)
     for id in ids:
@@ -490,16 +526,16 @@ def make_grid(canvas, width, height):
             for y in range(0, height, interval):
                 for x in range(0, width, interval):
                     canvas.create_oval(
-                    x - offset,
-                    y - offset,
-                    x + offset,
-                    y + offset,
-                    fill='black'
+                        x - offset,
+                        y - offset,
+                        x + offset,
+                        y + offset,
+                        fill='black'
                     )
                     canvas.create_text(
-                    x + offset,
-                    y + offset,
-                    text="({0}, {1})".format(x, y),
-                    anchor="nw",
-                    font=("Purisa", 8)
+                        x + offset,
+                        y + offset,
+                        text="({0}, {1})".format(x, y),
+                        anchor="nw",
+                        font=("Purisa", 8)
                     )
