@@ -66,7 +66,6 @@ the_canvas.bind('<Button-2>', double_click_handle)
 
 # sample code to make a creature:
 make_creature(the_canvas, (400, 400), primary_color='white', my_tag="test")
-
 ####################################################################################
 
 ## ANIMATION LOOP HERE ####################################################
