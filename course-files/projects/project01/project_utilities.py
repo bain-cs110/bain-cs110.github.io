@@ -549,7 +549,7 @@ def make_gradient(canvas, top_left, height, width, start_color, end_color, steps
     * `start_color` (`str`): [Required] Color to start the gradient at (MUST BE A HEX COLOR; e.g. `#FF0000` not `"red"`)
     * `end_color` (`str`): [Required] Color to end the gradient at (MUST BE A HEX COLOR; e.g. `#FF0000` not `"red"`)
     * `steps` (`int`): The number of steps to interpolate over.
-    * `my-tag` (`str`): A tag to assign to the gradient.
+    * `my_tag` (`str`): A tag to assign to the gradient.
     '''
 
     row_height = height // steps
