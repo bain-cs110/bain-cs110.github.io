@@ -83,6 +83,9 @@
             <li>
                     <a class="function" href="#rotate">rotate</a>
             </li>
+            <li>
+                    <a class="function" href="#make_gradient">make_gradient</a>
+            </li>
     </ul>
 
 
@@ -112,7 +115,7 @@ project_utilities    </h1>
 </span><span id="L-6"><a href="#L-6"><span class="linenos">  6</span></a>    <span class="s2">&quot;make_circle&quot;</span><span class="p">,</span> <span class="s2">&quot;make_oval&quot;</span><span class="p">,</span> <span class="s2">&quot;make_square&quot;</span><span class="p">,</span> <span class="s2">&quot;make_rectangle&quot;</span><span class="p">,</span> <span class="s2">&quot;make_line&quot;</span><span class="p">,</span>
 </span><span id="L-7"><a href="#L-7"><span class="linenos">  7</span></a>    <span class="s2">&quot;make_car&quot;</span><span class="p">,</span> <span class="s2">&quot;make_cloud&quot;</span><span class="p">,</span> <span class="s2">&quot;make_grid&quot;</span><span class="p">,</span> <span class="s2">&quot;make_image&quot;</span><span class="p">,</span> <span class="s2">&quot;get_top&quot;</span><span class="p">,</span> <span class="s2">&quot;get_left&quot;</span><span class="p">,</span>
 </span><span id="L-8"><a href="#L-8"><span class="linenos">  8</span></a>    <span class="s2">&quot;get_right&quot;</span><span class="p">,</span> <span class="s2">&quot;get_left&quot;</span><span class="p">,</span> <span class="s2">&quot;get_center&quot;</span><span class="p">,</span> <span class="s2">&quot;get_bottom&quot;</span><span class="p">,</span> <span class="s2">&quot;get_tag_from_event&quot;</span><span class="p">,</span>
-</span><span id="L-9"><a href="#L-9"><span class="linenos">  9</span></a>    <span class="s2">&quot;update_position&quot;</span><span class="p">,</span> <span class="s2">&quot;update_fill&quot;</span><span class="p">,</span> <span class="s2">&quot;delete&quot;</span><span class="p">,</span> <span class="s2">&quot;flip&quot;</span><span class="p">,</span> <span class="s2">&quot;rotate&quot;</span>
+</span><span id="L-9"><a href="#L-9"><span class="linenos">  9</span></a>    <span class="s2">&quot;update_position&quot;</span><span class="p">,</span> <span class="s2">&quot;update_fill&quot;</span><span class="p">,</span> <span class="s2">&quot;delete&quot;</span><span class="p">,</span> <span class="s2">&quot;flip&quot;</span><span class="p">,</span> <span class="s2">&quot;rotate&quot;</span><span class="p">,</span> <span class="s2">&quot;make_gradient&quot;</span>
 </span><span id="L-10"><a href="#L-10"><span class="linenos"> 10</span></a><span class="p">]</span>
 </span><span id="L-11"><a href="#L-11"><span class="linenos"> 11</span></a>
 </span><span id="L-12"><a href="#L-12"><span class="linenos"> 12</span></a><span class="n">_cache</span> <span class="o">=</span> <span class="p">[]</span>
@@ -574,44 +577,143 @@ project_utilities    </h1>
 </span><span id="L-468"><a href="#L-468"><span class="linenos">468</span></a>        <span class="n">_set_coordinates</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">shape_id</span><span class="p">,</span> <span class="n">flipped_coordinates</span><span class="p">)</span>
 </span><span id="L-469"><a href="#L-469"><span class="linenos">469</span></a>
 </span><span id="L-470"><a href="#L-470"><span class="linenos">470</span></a>
-</span><span id="L-471"><a href="#L-471"><span class="linenos">471</span></a><span class="k">def</span> <span class="nf">make_grid</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
-</span><span id="L-472"><a href="#L-472"><span class="linenos">472</span></a>    <span class="sd">&#39;&#39;&#39;</span>
-</span><span id="L-473"><a href="#L-473"><span class="linenos">473</span></a><span class="sd">    Draw a grid on a given canvas.</span>
-</span><span id="L-474"><a href="#L-474"><span class="linenos">474</span></a>
-</span><span id="L-475"><a href="#L-475"><span class="linenos">475</span></a><span class="sd">    * `canvas` (`Canvas`): [Required] The `Canvas` object to drawn in.</span>
-</span><span id="L-476"><a href="#L-476"><span class="linenos">476</span></a><span class="sd">    * `width` (`int`): [Required] Width of the grid to draw.</span>
-</span><span id="L-477"><a href="#L-477"><span class="linenos">477</span></a><span class="sd">    * `height` (`int`): [Required] Height of the grid to draw.</span>
-</span><span id="L-478"><a href="#L-478"><span class="linenos">478</span></a><span class="sd">    &#39;&#39;&#39;</span>
-</span><span id="L-479"><a href="#L-479"><span class="linenos">479</span></a>    <span class="n">interval</span> <span class="o">=</span> <span class="mi">100</span>
-</span><span id="L-480"><a href="#L-480"><span class="linenos">480</span></a>
-</span><span id="L-481"><a href="#L-481"><span class="linenos">481</span></a>    <span class="c1"># Delete old grid if it exists:</span>
-</span><span id="L-482"><a href="#L-482"><span class="linenos">482</span></a>    <span class="n">canvas</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s1">&#39;grid_line&#39;</span><span class="p">)</span>
-</span><span id="L-483"><a href="#L-483"><span class="linenos">483</span></a>    <span class="c1"># Creates all vertical lines at intevals of 100</span>
-</span><span id="L-484"><a href="#L-484"><span class="linenos">484</span></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">interval</span><span class="p">):</span>
-</span><span id="L-485"><a href="#L-485"><span class="linenos">485</span></a>        <span class="n">canvas</span><span class="o">.</span><span class="n">create_line</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="s1">&#39;grid_line&#39;</span><span class="p">)</span>
+</span><span id="L-471"><a href="#L-471"><span class="linenos">471</span></a><span class="k">def</span> <span class="nf">_make_color_tuple</span><span class="p">(</span><span class="n">color</span><span class="p">):</span>
+</span><span id="L-472"><a href="#L-472"><span class="linenos">472</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-473"><a href="#L-473"><span class="linenos">473</span></a><span class="sd">    turn something like &quot;#000000&quot; into 0,0,0</span>
+</span><span id="L-474"><a href="#L-474"><span class="linenos">474</span></a><span class="sd">    or &quot;#FFFFFF into &quot;255,255,255&quot;</span>
+</span><span id="L-475"><a href="#L-475"><span class="linenos">475</span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="L-476"><a href="#L-476"><span class="linenos">476</span></a>    <span class="n">R</span> <span class="o">=</span> <span class="n">color</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+</span><span id="L-477"><a href="#L-477"><span class="linenos">477</span></a>    <span class="n">G</span> <span class="o">=</span> <span class="n">color</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+</span><span id="L-478"><a href="#L-478"><span class="linenos">478</span></a>    <span class="n">B</span> <span class="o">=</span> <span class="n">color</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span>
+</span><span id="L-479"><a href="#L-479"><span class="linenos">479</span></a>
+</span><span id="L-480"><a href="#L-480"><span class="linenos">480</span></a>    <span class="n">R</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+</span><span id="L-481"><a href="#L-481"><span class="linenos">481</span></a>    <span class="n">G</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+</span><span id="L-482"><a href="#L-482"><span class="linenos">482</span></a>    <span class="n">B</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+</span><span id="L-483"><a href="#L-483"><span class="linenos">483</span></a>
+</span><span id="L-484"><a href="#L-484"><span class="linenos">484</span></a>    <span class="k">return</span> <span class="n">R</span><span class="p">,</span> <span class="n">G</span><span class="p">,</span> <span class="n">B</span>
+</span><span id="L-485"><a href="#L-485"><span class="linenos">485</span></a>
 </span><span id="L-486"><a href="#L-486"><span class="linenos">486</span></a>
-</span><span id="L-487"><a href="#L-487"><span class="linenos">487</span></a>        <span class="c1"># Creates all horizontal lines at intevals of 100</span>
-</span><span id="L-488"><a href="#L-488"><span class="linenos">488</span></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">interval</span><span class="p">):</span>
-</span><span id="L-489"><a href="#L-489"><span class="linenos">489</span></a>            <span class="n">canvas</span><span class="o">.</span><span class="n">create_line</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="s1">&#39;grid_line&#39;</span><span class="p">)</span>
-</span><span id="L-490"><a href="#L-490"><span class="linenos">490</span></a>
-</span><span id="L-491"><a href="#L-491"><span class="linenos">491</span></a>            <span class="c1"># Creates axis labels</span>
-</span><span id="L-492"><a href="#L-492"><span class="linenos">492</span></a>            <span class="n">offset</span> <span class="o">=</span> <span class="mi">2</span>
-</span><span id="L-493"><a href="#L-493"><span class="linenos">493</span></a>            <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">interval</span><span class="p">):</span>
-</span><span id="L-494"><a href="#L-494"><span class="linenos">494</span></a>                <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">interval</span><span class="p">):</span>
-</span><span id="L-495"><a href="#L-495"><span class="linenos">495</span></a>                    <span class="n">canvas</span><span class="o">.</span><span class="n">create_oval</span><span class="p">(</span>
-</span><span id="L-496"><a href="#L-496"><span class="linenos">496</span></a>                    <span class="n">x</span> <span class="o">-</span> <span class="n">offset</span><span class="p">,</span>
-</span><span id="L-497"><a href="#L-497"><span class="linenos">497</span></a>                    <span class="n">y</span> <span class="o">-</span> <span class="n">offset</span><span class="p">,</span>
-</span><span id="L-498"><a href="#L-498"><span class="linenos">498</span></a>                    <span class="n">x</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span>
-</span><span id="L-499"><a href="#L-499"><span class="linenos">499</span></a>                    <span class="n">y</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span>
-</span><span id="L-500"><a href="#L-500"><span class="linenos">500</span></a>                    <span class="n">fill</span><span class="o">=</span><span class="s1">&#39;black&#39;</span>
-</span><span id="L-501"><a href="#L-501"><span class="linenos">501</span></a>                    <span class="p">)</span>
-</span><span id="L-502"><a href="#L-502"><span class="linenos">502</span></a>                    <span class="n">canvas</span><span class="o">.</span><span class="n">create_text</span><span class="p">(</span>
-</span><span id="L-503"><a href="#L-503"><span class="linenos">503</span></a>                    <span class="n">x</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span>
-</span><span id="L-504"><a href="#L-504"><span class="linenos">504</span></a>                    <span class="n">y</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span>
-</span><span id="L-505"><a href="#L-505"><span class="linenos">505</span></a>                    <span class="n">text</span><span class="o">=</span><span class="s2">&quot;(</span><span class="si">{0}</span><span class="s2">, </span><span class="si">{1}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span>
-</span><span id="L-506"><a href="#L-506"><span class="linenos">506</span></a>                    <span class="n">anchor</span><span class="o">=</span><span class="s2">&quot;nw&quot;</span><span class="p">,</span>
-</span><span id="L-507"><a href="#L-507"><span class="linenos">507</span></a>                    <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Purisa&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
-</span><span id="L-508"><a href="#L-508"><span class="linenos">508</span></a>                    <span class="p">)</span>
+</span><span id="L-487"><a href="#L-487"><span class="linenos">487</span></a><span class="k">def</span> <span class="nf">_interpolate_tuple</span><span class="p">(</span><span class="n">startcolor</span><span class="p">,</span> <span class="n">goalcolor</span><span class="p">,</span> <span class="n">steps</span><span class="p">):</span>
+</span><span id="L-488"><a href="#L-488"><span class="linenos">488</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-489"><a href="#L-489"><span class="linenos">489</span></a><span class="sd">    Take two RGB color sets and mix them over a specified number of steps.  Return the list</span>
+</span><span id="L-490"><a href="#L-490"><span class="linenos">490</span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="L-491"><a href="#L-491"><span class="linenos">491</span></a>    <span class="c1"># white</span>
+</span><span id="L-492"><a href="#L-492"><span class="linenos">492</span></a>
+</span><span id="L-493"><a href="#L-493"><span class="linenos">493</span></a>    <span class="n">R</span> <span class="o">=</span> <span class="n">startcolor</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span><span id="L-494"><a href="#L-494"><span class="linenos">494</span></a>    <span class="n">G</span> <span class="o">=</span> <span class="n">startcolor</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span><span id="L-495"><a href="#L-495"><span class="linenos">495</span></a>    <span class="n">B</span> <span class="o">=</span> <span class="n">startcolor</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</span><span id="L-496"><a href="#L-496"><span class="linenos">496</span></a>
+</span><span id="L-497"><a href="#L-497"><span class="linenos">497</span></a>    <span class="n">targetR</span> <span class="o">=</span> <span class="n">goalcolor</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span><span id="L-498"><a href="#L-498"><span class="linenos">498</span></a>    <span class="n">targetG</span> <span class="o">=</span> <span class="n">goalcolor</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span><span id="L-499"><a href="#L-499"><span class="linenos">499</span></a>    <span class="n">targetB</span> <span class="o">=</span> <span class="n">goalcolor</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</span><span id="L-500"><a href="#L-500"><span class="linenos">500</span></a>
+</span><span id="L-501"><a href="#L-501"><span class="linenos">501</span></a>    <span class="n">DiffR</span> <span class="o">=</span> <span class="n">targetR</span> <span class="o">-</span> <span class="n">R</span>
+</span><span id="L-502"><a href="#L-502"><span class="linenos">502</span></a>    <span class="n">DiffG</span> <span class="o">=</span> <span class="n">targetG</span> <span class="o">-</span> <span class="n">G</span>
+</span><span id="L-503"><a href="#L-503"><span class="linenos">503</span></a>    <span class="n">DiffB</span> <span class="o">=</span> <span class="n">targetB</span> <span class="o">-</span> <span class="n">B</span>
+</span><span id="L-504"><a href="#L-504"><span class="linenos">504</span></a>
+</span><span id="L-505"><a href="#L-505"><span class="linenos">505</span></a>    <span class="n">buffer</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="L-506"><a href="#L-506"><span class="linenos">506</span></a>
+</span><span id="L-507"><a href="#L-507"><span class="linenos">507</span></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">steps</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+</span><span id="L-508"><a href="#L-508"><span class="linenos">508</span></a>        <span class="n">iR</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">R</span> <span class="o">+</span> <span class="p">(</span><span class="n">DiffR</span> <span class="o">*</span> <span class="n">i</span> <span class="o">/</span> <span class="n">steps</span><span class="p">))</span>
+</span><span id="L-509"><a href="#L-509"><span class="linenos">509</span></a>        <span class="n">iG</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">G</span> <span class="o">+</span> <span class="p">(</span><span class="n">DiffG</span> <span class="o">*</span> <span class="n">i</span> <span class="o">/</span> <span class="n">steps</span><span class="p">))</span>
+</span><span id="L-510"><a href="#L-510"><span class="linenos">510</span></a>        <span class="n">iB</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">B</span> <span class="o">+</span> <span class="p">(</span><span class="n">DiffB</span> <span class="o">*</span> <span class="n">i</span> <span class="o">/</span> <span class="n">steps</span><span class="p">))</span>
+</span><span id="L-511"><a href="#L-511"><span class="linenos">511</span></a>
+</span><span id="L-512"><a href="#L-512"><span class="linenos">512</span></a>        <span class="n">hR</span> <span class="o">=</span> <span class="nb">hex</span><span class="p">(</span><span class="n">iR</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;0x&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+</span><span id="L-513"><a href="#L-513"><span class="linenos">513</span></a>        <span class="n">hG</span> <span class="o">=</span> <span class="nb">hex</span><span class="p">(</span><span class="n">iG</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;0x&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+</span><span id="L-514"><a href="#L-514"><span class="linenos">514</span></a>        <span class="n">hB</span> <span class="o">=</span> <span class="nb">hex</span><span class="p">(</span><span class="n">iB</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;0x&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+</span><span id="L-515"><a href="#L-515"><span class="linenos">515</span></a>
+</span><span id="L-516"><a href="#L-516"><span class="linenos">516</span></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">hR</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="L-517"><a href="#L-517"><span class="linenos">517</span></a>            <span class="n">hR</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span> <span class="o">+</span> <span class="n">hR</span>
+</span><span id="L-518"><a href="#L-518"><span class="linenos">518</span></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">hB</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="L-519"><a href="#L-519"><span class="linenos">519</span></a>            <span class="n">hB</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span> <span class="o">+</span> <span class="n">hB</span>
+</span><span id="L-520"><a href="#L-520"><span class="linenos">520</span></a>
+</span><span id="L-521"><a href="#L-521"><span class="linenos">521</span></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">hG</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="L-522"><a href="#L-522"><span class="linenos">522</span></a>            <span class="n">hG</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span> <span class="o">+</span> <span class="n">hG</span>
+</span><span id="L-523"><a href="#L-523"><span class="linenos">523</span></a>
+</span><span id="L-524"><a href="#L-524"><span class="linenos">524</span></a>        <span class="n">color</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="o">+</span><span class="n">hR</span><span class="o">+</span><span class="n">hG</span><span class="o">+</span><span class="n">hB</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</span><span id="L-525"><a href="#L-525"><span class="linenos">525</span></a>        <span class="n">buffer</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+</span><span id="L-526"><a href="#L-526"><span class="linenos">526</span></a>
+</span><span id="L-527"><a href="#L-527"><span class="linenos">527</span></a>    <span class="k">return</span> <span class="n">buffer</span>
+</span><span id="L-528"><a href="#L-528"><span class="linenos">528</span></a>
+</span><span id="L-529"><a href="#L-529"><span class="linenos">529</span></a>
+</span><span id="L-530"><a href="#L-530"><span class="linenos">530</span></a><span class="k">def</span> <span class="nf">_interpolate</span><span class="p">(</span><span class="n">startcolor</span><span class="p">,</span> <span class="n">goalcolor</span><span class="p">,</span> <span class="n">steps</span><span class="p">):</span>
+</span><span id="L-531"><a href="#L-531"><span class="linenos">531</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="L-532"><a href="#L-532"><span class="linenos">532</span></a><span class="sd">    wrapper for interpolate_tuple that accepts colors as html (&quot;#CCCCC&quot; and such)</span>
+</span><span id="L-533"><a href="#L-533"><span class="linenos">533</span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="L-534"><a href="#L-534"><span class="linenos">534</span></a>    <span class="n">start_tuple</span> <span class="o">=</span> <span class="n">_make_color_tuple</span><span class="p">(</span><span class="n">startcolor</span><span class="p">)</span>
+</span><span id="L-535"><a href="#L-535"><span class="linenos">535</span></a>    <span class="n">goal_tuple</span> <span class="o">=</span> <span class="n">_make_color_tuple</span><span class="p">(</span><span class="n">goalcolor</span><span class="p">)</span>
+</span><span id="L-536"><a href="#L-536"><span class="linenos">536</span></a>
+</span><span id="L-537"><a href="#L-537"><span class="linenos">537</span></a>    <span class="k">return</span> <span class="n">_interpolate_tuple</span><span class="p">(</span><span class="n">start_tuple</span><span class="p">,</span> <span class="n">goal_tuple</span><span class="p">,</span> <span class="n">steps</span><span class="p">)</span>
+</span><span id="L-538"><a href="#L-538"><span class="linenos">538</span></a>
+</span><span id="L-539"><a href="#L-539"><span class="linenos">539</span></a>
+</span><span id="L-540"><a href="#L-540"><span class="linenos">540</span></a>
+</span><span id="L-541"><a href="#L-541"><span class="linenos">541</span></a><span class="k">def</span> <span class="nf">make_gradient</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">top_left</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">start_color</span><span class="p">,</span> <span class="n">end_color</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">my_tag</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+</span><span id="L-542"><a href="#L-542"><span class="linenos">542</span></a>    <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="L-543"><a href="#L-543"><span class="linenos">543</span></a><span class="sd">    Draws a gradient rectangle on a given canvas.</span>
+</span><span id="L-544"><a href="#L-544"><span class="linenos">544</span></a>
+</span><span id="L-545"><a href="#L-545"><span class="linenos">545</span></a><span class="sd">    * `canvas` (`Canvas`): [Required] The `Canvas` object to drawn in.</span>
+</span><span id="L-546"><a href="#L-546"><span class="linenos">546</span></a><span class="sd">    * `top_left` (`tuple`): [Required] The corner coordinate to start the rectangle at</span>
+</span><span id="L-547"><a href="#L-547"><span class="linenos">547</span></a><span class="sd">    * `width` (`int`): [Required] Width of the rectangle to draw.</span>
+</span><span id="L-548"><a href="#L-548"><span class="linenos">548</span></a><span class="sd">    * `height` (`int`): [Required] Height of the rectangle to draw.</span>
+</span><span id="L-549"><a href="#L-549"><span class="linenos">549</span></a><span class="sd">    * `start_color` (`str`): [Required] Color to start the gradient at (MUST BE A HEX COLOR; e.g. `#FF0000` not `&quot;red&quot;`)</span>
+</span><span id="L-550"><a href="#L-550"><span class="linenos">550</span></a><span class="sd">    * `end_color` (`str`): [Required] Color to end the gradient at (MUST BE A HEX COLOR; e.g. `#FF0000` not `&quot;red&quot;`)</span>
+</span><span id="L-551"><a href="#L-551"><span class="linenos">551</span></a><span class="sd">    * `steps` (`int`): The number of steps to interpolate over.</span>
+</span><span id="L-552"><a href="#L-552"><span class="linenos">552</span></a><span class="sd">    * `my-tag` (`str`): A tag to assign to the gradient.</span>
+</span><span id="L-553"><a href="#L-553"><span class="linenos">553</span></a><span class="sd">    &#39;&#39;&#39;</span>
+</span><span id="L-554"><a href="#L-554"><span class="linenos">554</span></a>
+</span><span id="L-555"><a href="#L-555"><span class="linenos">555</span></a>    <span class="n">row_height</span> <span class="o">=</span> <span class="n">height</span> <span class="o">//</span> <span class="n">steps</span>
+</span><span id="L-556"><a href="#L-556"><span class="linenos">556</span></a>
+</span><span id="L-557"><a href="#L-557"><span class="linenos">557</span></a>    <span class="n">colors</span> <span class="o">=</span> <span class="n">_interpolate</span><span class="p">(</span><span class="n">start_color</span><span class="p">,</span> <span class="n">end_color</span><span class="p">,</span> <span class="n">steps</span><span class="p">)</span>
+</span><span id="L-558"><a href="#L-558"><span class="linenos">558</span></a>
+</span><span id="L-559"><a href="#L-559"><span class="linenos">559</span></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">steps</span><span class="p">):</span>
+</span><span id="L-560"><a href="#L-560"><span class="linenos">560</span></a>        <span class="n">canvas</span><span class="o">.</span><span class="n">create_rectangle</span><span class="p">(</span>
+</span><span id="L-561"><a href="#L-561"><span class="linenos">561</span></a>            <span class="p">[</span>
+</span><span id="L-562"><a href="#L-562"><span class="linenos">562</span></a>            <span class="p">(</span><span class="n">top_left</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">top_left</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="n">row_height</span><span class="p">),</span>
+</span><span id="L-563"><a href="#L-563"><span class="linenos">563</span></a>            <span class="p">(</span><span class="n">top_left</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">width</span><span class="p">,</span> <span class="n">top_left</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">row_height</span><span class="p">)</span>
+</span><span id="L-564"><a href="#L-564"><span class="linenos">564</span></a>            <span class="p">],</span>
+</span><span id="L-565"><a href="#L-565"><span class="linenos">565</span></a>            <span class="n">fill</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+</span><span id="L-566"><a href="#L-566"><span class="linenos">566</span></a>            <span class="n">width</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+</span><span id="L-567"><a href="#L-567"><span class="linenos">567</span></a>            <span class="n">tags</span><span class="o">=</span><span class="n">my_tag</span>
+</span><span id="L-568"><a href="#L-568"><span class="linenos">568</span></a>            <span class="p">)</span>
+</span><span id="L-569"><a href="#L-569"><span class="linenos">569</span></a>
+</span><span id="L-570"><a href="#L-570"><span class="linenos">570</span></a><span class="k">def</span> <span class="nf">make_grid</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+</span><span id="L-571"><a href="#L-571"><span class="linenos">571</span></a>    <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="L-572"><a href="#L-572"><span class="linenos">572</span></a><span class="sd">    Draw a grid on a given canvas.</span>
+</span><span id="L-573"><a href="#L-573"><span class="linenos">573</span></a>
+</span><span id="L-574"><a href="#L-574"><span class="linenos">574</span></a><span class="sd">    * `canvas` (`Canvas`): [Required] The `Canvas` object to drawn in.</span>
+</span><span id="L-575"><a href="#L-575"><span class="linenos">575</span></a><span class="sd">    * `width` (`int`): [Required] Width of the grid to draw.</span>
+</span><span id="L-576"><a href="#L-576"><span class="linenos">576</span></a><span class="sd">    * `height` (`int`): [Required] Height of the grid to draw.</span>
+</span><span id="L-577"><a href="#L-577"><span class="linenos">577</span></a><span class="sd">    &#39;&#39;&#39;</span>
+</span><span id="L-578"><a href="#L-578"><span class="linenos">578</span></a>    <span class="n">interval</span> <span class="o">=</span> <span class="mi">100</span>
+</span><span id="L-579"><a href="#L-579"><span class="linenos">579</span></a>
+</span><span id="L-580"><a href="#L-580"><span class="linenos">580</span></a>    <span class="c1"># Delete old grid if it exists:</span>
+</span><span id="L-581"><a href="#L-581"><span class="linenos">581</span></a>    <span class="n">canvas</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s1">&#39;grid_line&#39;</span><span class="p">)</span>
+</span><span id="L-582"><a href="#L-582"><span class="linenos">582</span></a>    <span class="c1"># Creates all vertical lines at intevals of 100</span>
+</span><span id="L-583"><a href="#L-583"><span class="linenos">583</span></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">interval</span><span class="p">):</span>
+</span><span id="L-584"><a href="#L-584"><span class="linenos">584</span></a>        <span class="n">canvas</span><span class="o">.</span><span class="n">create_line</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="s1">&#39;grid_line&#39;</span><span class="p">)</span>
+</span><span id="L-585"><a href="#L-585"><span class="linenos">585</span></a>
+</span><span id="L-586"><a href="#L-586"><span class="linenos">586</span></a>        <span class="c1"># Creates all horizontal lines at intevals of 100</span>
+</span><span id="L-587"><a href="#L-587"><span class="linenos">587</span></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">interval</span><span class="p">):</span>
+</span><span id="L-588"><a href="#L-588"><span class="linenos">588</span></a>            <span class="n">canvas</span><span class="o">.</span><span class="n">create_line</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="s1">&#39;grid_line&#39;</span><span class="p">)</span>
+</span><span id="L-589"><a href="#L-589"><span class="linenos">589</span></a>
+</span><span id="L-590"><a href="#L-590"><span class="linenos">590</span></a>            <span class="c1"># Creates axis labels</span>
+</span><span id="L-591"><a href="#L-591"><span class="linenos">591</span></a>            <span class="n">offset</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span id="L-592"><a href="#L-592"><span class="linenos">592</span></a>            <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">interval</span><span class="p">):</span>
+</span><span id="L-593"><a href="#L-593"><span class="linenos">593</span></a>                <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">interval</span><span class="p">):</span>
+</span><span id="L-594"><a href="#L-594"><span class="linenos">594</span></a>                    <span class="n">canvas</span><span class="o">.</span><span class="n">create_oval</span><span class="p">(</span>
+</span><span id="L-595"><a href="#L-595"><span class="linenos">595</span></a>                    <span class="n">x</span> <span class="o">-</span> <span class="n">offset</span><span class="p">,</span>
+</span><span id="L-596"><a href="#L-596"><span class="linenos">596</span></a>                    <span class="n">y</span> <span class="o">-</span> <span class="n">offset</span><span class="p">,</span>
+</span><span id="L-597"><a href="#L-597"><span class="linenos">597</span></a>                    <span class="n">x</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span>
+</span><span id="L-598"><a href="#L-598"><span class="linenos">598</span></a>                    <span class="n">y</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span>
+</span><span id="L-599"><a href="#L-599"><span class="linenos">599</span></a>                    <span class="n">fill</span><span class="o">=</span><span class="s1">&#39;black&#39;</span>
+</span><span id="L-600"><a href="#L-600"><span class="linenos">600</span></a>                    <span class="p">)</span>
+</span><span id="L-601"><a href="#L-601"><span class="linenos">601</span></a>                    <span class="n">canvas</span><span class="o">.</span><span class="n">create_text</span><span class="p">(</span>
+</span><span id="L-602"><a href="#L-602"><span class="linenos">602</span></a>                    <span class="n">x</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span>
+</span><span id="L-603"><a href="#L-603"><span class="linenos">603</span></a>                    <span class="n">y</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span>
+</span><span id="L-604"><a href="#L-604"><span class="linenos">604</span></a>                    <span class="n">text</span><span class="o">=</span><span class="s2">&quot;(</span><span class="si">{0}</span><span class="s2">, </span><span class="si">{1}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span>
+</span><span id="L-605"><a href="#L-605"><span class="linenos">605</span></a>                    <span class="n">anchor</span><span class="o">=</span><span class="s2">&quot;nw&quot;</span><span class="p">,</span>
+</span><span id="L-606"><a href="#L-606"><span class="linenos">606</span></a>                    <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Purisa&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</span><span id="L-607"><a href="#L-607"><span class="linenos">607</span></a>                    <span class="p">)</span>
 </span></pre></div>
 
 
@@ -975,44 +1077,44 @@ function so that it can be rotated by the <code><a href="#rotate">rotate</a></co
 
     </div>
     <a class="headerlink" href="#make_grid"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="make_grid-472"><a href="#make_grid-472"><span class="linenos">472</span></a><span class="k">def</span> <span class="nf">make_grid</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
-</span><span id="make_grid-473"><a href="#make_grid-473"><span class="linenos">473</span></a>    <span class="sd">&#39;&#39;&#39;</span>
-</span><span id="make_grid-474"><a href="#make_grid-474"><span class="linenos">474</span></a><span class="sd">    Draw a grid on a given canvas.</span>
-</span><span id="make_grid-475"><a href="#make_grid-475"><span class="linenos">475</span></a>
-</span><span id="make_grid-476"><a href="#make_grid-476"><span class="linenos">476</span></a><span class="sd">    * `canvas` (`Canvas`): [Required] The `Canvas` object to drawn in.</span>
-</span><span id="make_grid-477"><a href="#make_grid-477"><span class="linenos">477</span></a><span class="sd">    * `width` (`int`): [Required] Width of the grid to draw.</span>
-</span><span id="make_grid-478"><a href="#make_grid-478"><span class="linenos">478</span></a><span class="sd">    * `height` (`int`): [Required] Height of the grid to draw.</span>
-</span><span id="make_grid-479"><a href="#make_grid-479"><span class="linenos">479</span></a><span class="sd">    &#39;&#39;&#39;</span>
-</span><span id="make_grid-480"><a href="#make_grid-480"><span class="linenos">480</span></a>    <span class="n">interval</span> <span class="o">=</span> <span class="mi">100</span>
-</span><span id="make_grid-481"><a href="#make_grid-481"><span class="linenos">481</span></a>
-</span><span id="make_grid-482"><a href="#make_grid-482"><span class="linenos">482</span></a>    <span class="c1"># Delete old grid if it exists:</span>
-</span><span id="make_grid-483"><a href="#make_grid-483"><span class="linenos">483</span></a>    <span class="n">canvas</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s1">&#39;grid_line&#39;</span><span class="p">)</span>
-</span><span id="make_grid-484"><a href="#make_grid-484"><span class="linenos">484</span></a>    <span class="c1"># Creates all vertical lines at intevals of 100</span>
-</span><span id="make_grid-485"><a href="#make_grid-485"><span class="linenos">485</span></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">interval</span><span class="p">):</span>
-</span><span id="make_grid-486"><a href="#make_grid-486"><span class="linenos">486</span></a>        <span class="n">canvas</span><span class="o">.</span><span class="n">create_line</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="s1">&#39;grid_line&#39;</span><span class="p">)</span>
-</span><span id="make_grid-487"><a href="#make_grid-487"><span class="linenos">487</span></a>
-</span><span id="make_grid-488"><a href="#make_grid-488"><span class="linenos">488</span></a>        <span class="c1"># Creates all horizontal lines at intevals of 100</span>
-</span><span id="make_grid-489"><a href="#make_grid-489"><span class="linenos">489</span></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">interval</span><span class="p">):</span>
-</span><span id="make_grid-490"><a href="#make_grid-490"><span class="linenos">490</span></a>            <span class="n">canvas</span><span class="o">.</span><span class="n">create_line</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="s1">&#39;grid_line&#39;</span><span class="p">)</span>
-</span><span id="make_grid-491"><a href="#make_grid-491"><span class="linenos">491</span></a>
-</span><span id="make_grid-492"><a href="#make_grid-492"><span class="linenos">492</span></a>            <span class="c1"># Creates axis labels</span>
-</span><span id="make_grid-493"><a href="#make_grid-493"><span class="linenos">493</span></a>            <span class="n">offset</span> <span class="o">=</span> <span class="mi">2</span>
-</span><span id="make_grid-494"><a href="#make_grid-494"><span class="linenos">494</span></a>            <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">interval</span><span class="p">):</span>
-</span><span id="make_grid-495"><a href="#make_grid-495"><span class="linenos">495</span></a>                <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">interval</span><span class="p">):</span>
-</span><span id="make_grid-496"><a href="#make_grid-496"><span class="linenos">496</span></a>                    <span class="n">canvas</span><span class="o">.</span><span class="n">create_oval</span><span class="p">(</span>
-</span><span id="make_grid-497"><a href="#make_grid-497"><span class="linenos">497</span></a>                    <span class="n">x</span> <span class="o">-</span> <span class="n">offset</span><span class="p">,</span>
-</span><span id="make_grid-498"><a href="#make_grid-498"><span class="linenos">498</span></a>                    <span class="n">y</span> <span class="o">-</span> <span class="n">offset</span><span class="p">,</span>
-</span><span id="make_grid-499"><a href="#make_grid-499"><span class="linenos">499</span></a>                    <span class="n">x</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span>
-</span><span id="make_grid-500"><a href="#make_grid-500"><span class="linenos">500</span></a>                    <span class="n">y</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span>
-</span><span id="make_grid-501"><a href="#make_grid-501"><span class="linenos">501</span></a>                    <span class="n">fill</span><span class="o">=</span><span class="s1">&#39;black&#39;</span>
-</span><span id="make_grid-502"><a href="#make_grid-502"><span class="linenos">502</span></a>                    <span class="p">)</span>
-</span><span id="make_grid-503"><a href="#make_grid-503"><span class="linenos">503</span></a>                    <span class="n">canvas</span><span class="o">.</span><span class="n">create_text</span><span class="p">(</span>
-</span><span id="make_grid-504"><a href="#make_grid-504"><span class="linenos">504</span></a>                    <span class="n">x</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span>
-</span><span id="make_grid-505"><a href="#make_grid-505"><span class="linenos">505</span></a>                    <span class="n">y</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span>
-</span><span id="make_grid-506"><a href="#make_grid-506"><span class="linenos">506</span></a>                    <span class="n">text</span><span class="o">=</span><span class="s2">&quot;(</span><span class="si">{0}</span><span class="s2">, </span><span class="si">{1}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span>
-</span><span id="make_grid-507"><a href="#make_grid-507"><span class="linenos">507</span></a>                    <span class="n">anchor</span><span class="o">=</span><span class="s2">&quot;nw&quot;</span><span class="p">,</span>
-</span><span id="make_grid-508"><a href="#make_grid-508"><span class="linenos">508</span></a>                    <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Purisa&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
-</span><span id="make_grid-509"><a href="#make_grid-509"><span class="linenos">509</span></a>                    <span class="p">)</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="make_grid-571"><a href="#make_grid-571"><span class="linenos">571</span></a><span class="k">def</span> <span class="nf">make_grid</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+</span><span id="make_grid-572"><a href="#make_grid-572"><span class="linenos">572</span></a>    <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="make_grid-573"><a href="#make_grid-573"><span class="linenos">573</span></a><span class="sd">    Draw a grid on a given canvas.</span>
+</span><span id="make_grid-574"><a href="#make_grid-574"><span class="linenos">574</span></a>
+</span><span id="make_grid-575"><a href="#make_grid-575"><span class="linenos">575</span></a><span class="sd">    * `canvas` (`Canvas`): [Required] The `Canvas` object to drawn in.</span>
+</span><span id="make_grid-576"><a href="#make_grid-576"><span class="linenos">576</span></a><span class="sd">    * `width` (`int`): [Required] Width of the grid to draw.</span>
+</span><span id="make_grid-577"><a href="#make_grid-577"><span class="linenos">577</span></a><span class="sd">    * `height` (`int`): [Required] Height of the grid to draw.</span>
+</span><span id="make_grid-578"><a href="#make_grid-578"><span class="linenos">578</span></a><span class="sd">    &#39;&#39;&#39;</span>
+</span><span id="make_grid-579"><a href="#make_grid-579"><span class="linenos">579</span></a>    <span class="n">interval</span> <span class="o">=</span> <span class="mi">100</span>
+</span><span id="make_grid-580"><a href="#make_grid-580"><span class="linenos">580</span></a>
+</span><span id="make_grid-581"><a href="#make_grid-581"><span class="linenos">581</span></a>    <span class="c1"># Delete old grid if it exists:</span>
+</span><span id="make_grid-582"><a href="#make_grid-582"><span class="linenos">582</span></a>    <span class="n">canvas</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s1">&#39;grid_line&#39;</span><span class="p">)</span>
+</span><span id="make_grid-583"><a href="#make_grid-583"><span class="linenos">583</span></a>    <span class="c1"># Creates all vertical lines at intevals of 100</span>
+</span><span id="make_grid-584"><a href="#make_grid-584"><span class="linenos">584</span></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">interval</span><span class="p">):</span>
+</span><span id="make_grid-585"><a href="#make_grid-585"><span class="linenos">585</span></a>        <span class="n">canvas</span><span class="o">.</span><span class="n">create_line</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="s1">&#39;grid_line&#39;</span><span class="p">)</span>
+</span><span id="make_grid-586"><a href="#make_grid-586"><span class="linenos">586</span></a>
+</span><span id="make_grid-587"><a href="#make_grid-587"><span class="linenos">587</span></a>        <span class="c1"># Creates all horizontal lines at intevals of 100</span>
+</span><span id="make_grid-588"><a href="#make_grid-588"><span class="linenos">588</span></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">interval</span><span class="p">):</span>
+</span><span id="make_grid-589"><a href="#make_grid-589"><span class="linenos">589</span></a>            <span class="n">canvas</span><span class="o">.</span><span class="n">create_line</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="s1">&#39;grid_line&#39;</span><span class="p">)</span>
+</span><span id="make_grid-590"><a href="#make_grid-590"><span class="linenos">590</span></a>
+</span><span id="make_grid-591"><a href="#make_grid-591"><span class="linenos">591</span></a>            <span class="c1"># Creates axis labels</span>
+</span><span id="make_grid-592"><a href="#make_grid-592"><span class="linenos">592</span></a>            <span class="n">offset</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span id="make_grid-593"><a href="#make_grid-593"><span class="linenos">593</span></a>            <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">interval</span><span class="p">):</span>
+</span><span id="make_grid-594"><a href="#make_grid-594"><span class="linenos">594</span></a>                <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">interval</span><span class="p">):</span>
+</span><span id="make_grid-595"><a href="#make_grid-595"><span class="linenos">595</span></a>                    <span class="n">canvas</span><span class="o">.</span><span class="n">create_oval</span><span class="p">(</span>
+</span><span id="make_grid-596"><a href="#make_grid-596"><span class="linenos">596</span></a>                    <span class="n">x</span> <span class="o">-</span> <span class="n">offset</span><span class="p">,</span>
+</span><span id="make_grid-597"><a href="#make_grid-597"><span class="linenos">597</span></a>                    <span class="n">y</span> <span class="o">-</span> <span class="n">offset</span><span class="p">,</span>
+</span><span id="make_grid-598"><a href="#make_grid-598"><span class="linenos">598</span></a>                    <span class="n">x</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span>
+</span><span id="make_grid-599"><a href="#make_grid-599"><span class="linenos">599</span></a>                    <span class="n">y</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span>
+</span><span id="make_grid-600"><a href="#make_grid-600"><span class="linenos">600</span></a>                    <span class="n">fill</span><span class="o">=</span><span class="s1">&#39;black&#39;</span>
+</span><span id="make_grid-601"><a href="#make_grid-601"><span class="linenos">601</span></a>                    <span class="p">)</span>
+</span><span id="make_grid-602"><a href="#make_grid-602"><span class="linenos">602</span></a>                    <span class="n">canvas</span><span class="o">.</span><span class="n">create_text</span><span class="p">(</span>
+</span><span id="make_grid-603"><a href="#make_grid-603"><span class="linenos">603</span></a>                    <span class="n">x</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span>
+</span><span id="make_grid-604"><a href="#make_grid-604"><span class="linenos">604</span></a>                    <span class="n">y</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span>
+</span><span id="make_grid-605"><a href="#make_grid-605"><span class="linenos">605</span></a>                    <span class="n">text</span><span class="o">=</span><span class="s2">&quot;(</span><span class="si">{0}</span><span class="s2">, </span><span class="si">{1}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span>
+</span><span id="make_grid-606"><a href="#make_grid-606"><span class="linenos">606</span></a>                    <span class="n">anchor</span><span class="o">=</span><span class="s2">&quot;nw&quot;</span><span class="p">,</span>
+</span><span id="make_grid-607"><a href="#make_grid-607"><span class="linenos">607</span></a>                    <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Purisa&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</span><span id="make_grid-608"><a href="#make_grid-608"><span class="linenos">608</span></a>                    <span class="p">)</span>
 </span></pre></div>
 
 
@@ -1512,6 +1614,64 @@ not work with circles or ovals generated using the <code>create_oval</code>/<cod
 <li><code>tag</code> (<code>str</code>): The tag of the object to animate.</li>
 <li><code>degrees</code> (<code>int</code>): How far, in degrees, you would like to rotate the object.</li>
 <li><code>origin</code> (<code>tuple</code>): A coordinate about which to rotate.</li>
+</ul>
+</div>
+
+
+                </section>
+                <section id="make_gradient">
+                            <input id="make_gradient-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
+<div class="attr function">
+            
+        <span class="def">def</span>
+        <span class="name">make_gradient</span><span class="signature pdoc-code multiline">(<span class="param">	<span class="n">canvas</span>,</span><span class="param">	<span class="n">top_left</span>,</span><span class="param">	<span class="n">height</span>,</span><span class="param">	<span class="n">width</span>,</span><span class="param">	<span class="n">start_color</span>,</span><span class="param">	<span class="n">end_color</span>,</span><span class="param">	<span class="n">steps</span><span class="o">=</span><span class="mi">10</span>,</span><span class="param">	<span class="n">my_tag</span><span class="o">=</span><span class="kc">None</span></span>)</span>
+
+                <label class="view-source-button" for="make_gradient-view-source"><span>View Source</span></label>
+
+    </div>
+    <a class="headerlink" href="#make_gradient"></a>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="make_gradient-542"><a href="#make_gradient-542"><span class="linenos">542</span></a><span class="k">def</span> <span class="nf">make_gradient</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">top_left</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">start_color</span><span class="p">,</span> <span class="n">end_color</span><span class="p">,</span> <span class="n">steps</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">my_tag</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+</span><span id="make_gradient-543"><a href="#make_gradient-543"><span class="linenos">543</span></a>    <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="make_gradient-544"><a href="#make_gradient-544"><span class="linenos">544</span></a><span class="sd">    Draws a gradient rectangle on a given canvas.</span>
+</span><span id="make_gradient-545"><a href="#make_gradient-545"><span class="linenos">545</span></a>
+</span><span id="make_gradient-546"><a href="#make_gradient-546"><span class="linenos">546</span></a><span class="sd">    * `canvas` (`Canvas`): [Required] The `Canvas` object to drawn in.</span>
+</span><span id="make_gradient-547"><a href="#make_gradient-547"><span class="linenos">547</span></a><span class="sd">    * `top_left` (`tuple`): [Required] The corner coordinate to start the rectangle at</span>
+</span><span id="make_gradient-548"><a href="#make_gradient-548"><span class="linenos">548</span></a><span class="sd">    * `width` (`int`): [Required] Width of the rectangle to draw.</span>
+</span><span id="make_gradient-549"><a href="#make_gradient-549"><span class="linenos">549</span></a><span class="sd">    * `height` (`int`): [Required] Height of the rectangle to draw.</span>
+</span><span id="make_gradient-550"><a href="#make_gradient-550"><span class="linenos">550</span></a><span class="sd">    * `start_color` (`str`): [Required] Color to start the gradient at (MUST BE A HEX COLOR; e.g. `#FF0000` not `&quot;red&quot;`)</span>
+</span><span id="make_gradient-551"><a href="#make_gradient-551"><span class="linenos">551</span></a><span class="sd">    * `end_color` (`str`): [Required] Color to end the gradient at (MUST BE A HEX COLOR; e.g. `#FF0000` not `&quot;red&quot;`)</span>
+</span><span id="make_gradient-552"><a href="#make_gradient-552"><span class="linenos">552</span></a><span class="sd">    * `steps` (`int`): The number of steps to interpolate over.</span>
+</span><span id="make_gradient-553"><a href="#make_gradient-553"><span class="linenos">553</span></a><span class="sd">    * `my-tag` (`str`): A tag to assign to the gradient.</span>
+</span><span id="make_gradient-554"><a href="#make_gradient-554"><span class="linenos">554</span></a><span class="sd">    &#39;&#39;&#39;</span>
+</span><span id="make_gradient-555"><a href="#make_gradient-555"><span class="linenos">555</span></a>
+</span><span id="make_gradient-556"><a href="#make_gradient-556"><span class="linenos">556</span></a>    <span class="n">row_height</span> <span class="o">=</span> <span class="n">height</span> <span class="o">//</span> <span class="n">steps</span>
+</span><span id="make_gradient-557"><a href="#make_gradient-557"><span class="linenos">557</span></a>
+</span><span id="make_gradient-558"><a href="#make_gradient-558"><span class="linenos">558</span></a>    <span class="n">colors</span> <span class="o">=</span> <span class="n">_interpolate</span><span class="p">(</span><span class="n">start_color</span><span class="p">,</span> <span class="n">end_color</span><span class="p">,</span> <span class="n">steps</span><span class="p">)</span>
+</span><span id="make_gradient-559"><a href="#make_gradient-559"><span class="linenos">559</span></a>
+</span><span id="make_gradient-560"><a href="#make_gradient-560"><span class="linenos">560</span></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">steps</span><span class="p">):</span>
+</span><span id="make_gradient-561"><a href="#make_gradient-561"><span class="linenos">561</span></a>        <span class="n">canvas</span><span class="o">.</span><span class="n">create_rectangle</span><span class="p">(</span>
+</span><span id="make_gradient-562"><a href="#make_gradient-562"><span class="linenos">562</span></a>            <span class="p">[</span>
+</span><span id="make_gradient-563"><a href="#make_gradient-563"><span class="linenos">563</span></a>            <span class="p">(</span><span class="n">top_left</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">top_left</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="n">row_height</span><span class="p">),</span>
+</span><span id="make_gradient-564"><a href="#make_gradient-564"><span class="linenos">564</span></a>            <span class="p">(</span><span class="n">top_left</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">width</span><span class="p">,</span> <span class="n">top_left</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">row_height</span><span class="p">)</span>
+</span><span id="make_gradient-565"><a href="#make_gradient-565"><span class="linenos">565</span></a>            <span class="p">],</span>
+</span><span id="make_gradient-566"><a href="#make_gradient-566"><span class="linenos">566</span></a>            <span class="n">fill</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+</span><span id="make_gradient-567"><a href="#make_gradient-567"><span class="linenos">567</span></a>            <span class="n">width</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+</span><span id="make_gradient-568"><a href="#make_gradient-568"><span class="linenos">568</span></a>            <span class="n">tags</span><span class="o">=</span><span class="n">my_tag</span>
+</span><span id="make_gradient-569"><a href="#make_gradient-569"><span class="linenos">569</span></a>            <span class="p">)</span>
+</span></pre></div>
+
+
+            <div class="docstring"><p>Draws a gradient rectangle on a given canvas.</p>
+
+<ul>
+<li><code>canvas</code> (<code>Canvas</code>): [Required] The <code>Canvas</code> object to drawn in.</li>
+<li><code>top_left</code> (<code>tuple</code>): [Required] The corner coordinate to start the rectangle at</li>
+<li><code>width</code> (<code>int</code>): [Required] Width of the rectangle to draw.</li>
+<li><code>height</code> (<code>int</code>): [Required] Height of the rectangle to draw.</li>
+<li><code>start_color</code> (<code>str</code>): [Required] Color to start the gradient at (MUST BE A HEX COLOR; e.g. <code>#FF0000</code> not <code>"red"</code>)</li>
+<li><code>end_color</code> (<code>str</code>): [Required] Color to end the gradient at (MUST BE A HEX COLOR; e.g. <code>#FF0000</code> not <code>"red"</code>)</li>
+<li><code>steps</code> (<code>int</code>): The number of steps to interpolate over.</li>
+<li><code>my-tag</code> (<code>str</code>): A tag to assign to the gradient.</li>
 </ul>
 </div>
 
