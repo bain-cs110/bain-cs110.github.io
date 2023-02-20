@@ -5,8 +5,8 @@ import math
 __all__ = [
     "make_circle", "make_oval", "make_square", "make_rectangle", "make_line",
     "make_car", "make_cloud", "make_grid", "make_image", "get_top", "get_left",
-    "get_right", "get_left", "get_center", "get_bottom", "get_tag_from_event",
-    "update_position", "update_fill", "delete", "flip", "rotate", "make_gradient"
+    "get_right", "get_left", "get_center", "get_bottom", "fix_y_axis_for", "get_tag_from_event",
+    "update_position", "update_fill", "delete", "flip", "rotate"
 ]
 
 _cache = []
@@ -313,19 +313,18 @@ def get_height(canvas, tag):
     y_coords = _get_y_coordinates(canvas, tag)
     return max(*y_coords) - min(*y_coords)
 
-def make_cloud(canvas, center, fill_color="white", my_tag=""):
+def make_cloud(canvas, center, my_tag=""):
     '''
     Draws a weird looking cloud on a given `Canvas`
 
     * `canvas` (`Canvas`): [Required] The `Canvas` to drawn on.
     * `center` (`tuple`): [Required] A coordinate to center the cloud on.
-    * `fill_color` (`str`): A color to draw the clouds.
     * `my_tag` (`str`): The tag to assign to the cloud.
     '''
-    for i in range(random.randint(1,10)):
+    for i in range(random.randint(0,10)):
         x_offset = random.randint(-40,40)
         y_offset = random.randint(0,20)
-        make_circle(canvas, (center[0] + x_offset, center[1] + y_offset), random.randint(10, 50), fill_color=fill_color, tag=my_tag)
+        make_circle(canvas, (center[0] + x_offset, center[1] + y_offset), random.randint(10,50), tag=my_tag)
 
 def make_car(canvas, top_left=(0, 0), fill_color="#3D9970", my_tag=None):
     '''
@@ -432,8 +431,6 @@ def delete(canvas, tag):
 
     * `canvas` (`Canvas`): [Required] The `Canvas` object to search in.
     * `tag` (`str`): [Required] The tag of the object to delete.
-
-    Note, if an object doesn't exist with that tag, nothing will happen.
     '''
     ids = canvas.find_withtag(tag)
     for id in ids:
@@ -467,105 +464,6 @@ def flip(canvas, tag):
             counter += 1
         _set_coordinates(canvas, shape_id, flipped_coordinates)
 
-
-def _make_color_tuple(color):
-    """
-    turn something like "#000000" into 0,0,0
-    or "#FFFFFF into "255,255,255"
-    """
-    R = color[1:3]
-    G = color[3:5]
-    B = color[5:7]
-
-    R = int(R, 16)
-    G = int(G, 16)
-    B = int(B, 16)
-
-    return R, G, B
-
-
-def _interpolate_tuple(startcolor, goalcolor, steps):
-    """
-    Take two RGB color sets and mix them over a specified number of steps.  Return the list
-    """
-    # white
-
-    R = startcolor[0]
-    G = startcolor[1]
-    B = startcolor[2]
-
-    targetR = goalcolor[0]
-    targetG = goalcolor[1]
-    targetB = goalcolor[2]
-
-    DiffR = targetR - R
-    DiffG = targetG - G
-    DiffB = targetB - B
-
-    buffer = []
-
-    for i in range(0, steps + 1):
-        iR = int(R + (DiffR * i / steps))
-        iG = int(G + (DiffG * i / steps))
-        iB = int(B + (DiffB * i / steps))
-
-        hR = hex(iR).replace("0x", "")
-        hG = hex(iG).replace("0x", "")
-        hB = hex(iB).replace("0x", "")
-
-        if len(hR) == 1:
-            hR = "0" + hR
-        if len(hB) == 1:
-            hB = "0" + hB
-
-        if len(hG) == 1:
-            hG = "0" + hG
-
-        color = ("#"+hR+hG+hB).upper()
-        buffer.append(color)
-
-    return buffer
-
-
-def _interpolate(startcolor, goalcolor, steps):
-    """
-    wrapper for interpolate_tuple that accepts colors as html ("#CCCCC" and such)
-    """
-    start_tuple = _make_color_tuple(startcolor)
-    goal_tuple = _make_color_tuple(goalcolor)
-
-    return _interpolate_tuple(start_tuple, goal_tuple, steps)
-
-
-
-def make_gradient(canvas, top_left, height, width, start_color, end_color, steps=10, my_tag = None):
-    '''
-    Draws a gradient rectangle on a given canvas.
-
-    * `canvas` (`Canvas`): [Required] The `Canvas` object to drawn in.
-    * `top_left` (`tuple`): [Required] The corner coordinate to start the rectangle at
-    * `width` (`int`): [Required] Width of the rectangle to draw.
-    * `height` (`int`): [Required] Height of the rectangle to draw.
-    * `start_color` (`str`): [Required] Color to start the gradient at (MUST BE A HEX COLOR; e.g. `#FF0000` not `"red"`)
-    * `end_color` (`str`): [Required] Color to end the gradient at (MUST BE A HEX COLOR; e.g. `#FF0000` not `"red"`)
-    * `steps` (`int`): The number of steps to interpolate over.
-    * `my_tag` (`str`): A tag to assign to the gradient.
-    '''
-
-    row_height = height // steps
-
-    colors = _interpolate(start_color, end_color, steps)
-
-    for i in range(steps):
-        canvas.create_rectangle(
-            [
-            (top_left[0], top_left[0] + i * row_height),
-            (top_left[0] + width, top_left[0] + (i+1) * row_height)
-            ],
-            fill=colors[i],
-            width=0,
-            tags=my_tag
-            )
 
 def make_grid(canvas, width, height):
     '''
