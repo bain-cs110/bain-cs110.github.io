@@ -284,6 +284,7 @@ def get_bottom(canvas, tag):
     '''
     return max(*_get_y_coordinates(canvas, tag))
 
+
 def get_width(canvas, tag):
     '''
     Returns the width of an object with the given tag.
@@ -313,6 +314,23 @@ def get_height(canvas, tag):
     '''
     y_coords = _get_y_coordinates(canvas, tag)
     return max(*y_coords) - min(*y_coords)
+
+
+def check_if_tag_exists(canvas, tag):
+    '''
+    Returns `True` if a given tag exists otherwise returns `False`.
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` to look at.
+    * `tag` (`str`): [Required] The tag of the object to lookup.
+
+    '''
+    result = canvas.find_withtag(tag)
+
+    if result:
+        return True
+    else:
+        return False
+
 
 def make_cloud(canvas, center, fill_color="white", my_tag=""):
     '''
