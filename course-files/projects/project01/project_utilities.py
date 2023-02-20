@@ -221,8 +221,9 @@ def make_rectangle(canvas, top_left, width, height, fill_color="black", tag=None
     return canvas.create_rectangle(
         [(x, y), (x + width, y + height)],
         fill=fill_color,
-        width=0,
-        tags=tag
+        tags=tag,
+        width=stroke_width,
+        outline=outline
     )
 
 def make_line(canvas, coordinates, curvy=False, fill_color="grey", width=2, tag=None, dash=None):
