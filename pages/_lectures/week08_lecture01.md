@@ -8,6 +8,11 @@ num: 19
 exercise_url: "lecture19.zip"
 due_date: 2023-02-20
 canvas_id: monday-lecture-19-q2-review-feb-20
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=37ffc694-3d31-459b-9ec3-af5f014cfdbb
+     title: "Live Lecture"
+     duration: "50:00"
+     live: 1
 slides:
    - url: https://docs.google.com/presentation/d/1H5ZOr1uTLVyKxnra6YWgGHuUWMM6vfSN9tvHyRo6Uh8/edit?usp=sharing
      title: Q2 Review
