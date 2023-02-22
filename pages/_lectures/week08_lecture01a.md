@@ -21,7 +21,7 @@ Extra review session for those interested.
 
 NOTE as of 7:21pm Panopto is being absolutley horridly slow at processing the video. I'm posting two backup copies of it here momentarily.
 
-Alt Link 1: <a href="https://northwestern.hosted.panopto.com/Panopto/Podcast/Download/d0424c8d-bf39-4e63-97b6-afac0136bbeb.mp4?mediaTargetType=videoPodcast" target="_blank>Video Download</a>
+Alt Link 1: <a href="https://northwestern.hosted.panopto.com/Panopto/Podcast/Download/d0424c8d-bf39-4e63-97b6-afac0136bbeb.mp4?mediaTargetType=videoPodcast" target="_blank">Video Download</a>
 
 Alt Link 2: <a href="https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f6b29d22-271c-43ed-8d7d-afb1001b3f10" target="_blank">Alternate Panopto Stream</a>
 
