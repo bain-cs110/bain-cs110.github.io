@@ -195,15 +195,14 @@ def make_square(canvas, top_left, width, fill_color="green", tag=None, stroke_wi
     Return an objectID `(int)`.
     '''
     x, y = top_left
-    return canvas.create_rectangle(
-        [(x, y), (x + width, y + width)],
-        fill=fill_color,
-        tags=tag,
-        width=stroke_width,
-        outline=outline
-    )
+    x, y = top_left
+    return canvas.create_polygon([top_left,
+                                  (x + width, y),
+                                  (x + width, y + width),
+                                  (x, y + width)
+                                  ], fill=fill_color, tags=tag, outline=outline, width=stroke_width)
 
-def make_rectangle(canvas, top_left, width, height, fill_color="black", tag=None, stroke_width=1, outline=None):
+def make_rectangle(canvas, top_left, width, height, fill_color="blue", tag=None, stroke_width=1, outline=None):
     '''
     Draws a square on a specified canvas with a particular `top_left` coordinate.
 
@@ -219,13 +218,11 @@ def make_rectangle(canvas, top_left, width, height, fill_color="black", tag=None
     Return an objectID `(int)`.
     '''
     x, y = top_left
-    return canvas.create_rectangle(
-        [(x, y), (x + width, y + height)],
-        fill=fill_color,
-        tags=tag,
-        width=stroke_width,
-        outline=outline
-    )
+    return canvas.create_polygon([top_left,
+                                    (x + width, y),
+                                    (x + width, y + height),
+                                    (x, y + height)
+                                    ], fill=fill_color, tags=tag, outline=outline, width=stroke_width)
 
 def make_line(canvas, coordinates, curvy=False, fill_color="grey", width=2, tag=None, dash=None):
     '''

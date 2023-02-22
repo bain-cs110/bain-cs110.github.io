@@ -69,10 +69,10 @@ make_creature(the_canvas, (400, 400), primary_color='white', my_tag="test")
 
 ## ANIMATION LOOP HERE ####################################################
 # Note, you will only have ONE animation loop
-
+project_utilities.make_square(the_canvas, (500, 500), 50, tag = "squareboi", fill_color="white", outline="purple")
 while True:
     project_utilities.update_position(the_canvas, "test", x=2, y=-2)
-    project_utilities.flip(the_canvas, "test")
+    project_utilities.rotate(the_canvas, "squareboi", 10, (500,500))
     #print("top:", project_utilities.get_top(the_canvas, "test"))
     #print("bottom:", project_utilities.get_top(the_canvas, "test"))
     gui.update()
