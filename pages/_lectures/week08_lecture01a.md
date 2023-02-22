@@ -18,3 +18,5 @@ due_date: 2023-02-21
 ---
 
 Extra review session for those interested.
+
+NOTE as of 7:21pm Panopto is being absolutley horridly slow at processing the video. I'm posting two backup copies of it here momentarily.
