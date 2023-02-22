@@ -6,7 +6,8 @@ __all__ = [
     "make_circle", "make_oval", "make_square", "make_rectangle", "make_line",
     "make_car", "make_cloud", "make_grid", "make_image", "get_top", "get_left",
     "get_right", "get_left", "get_center", "get_bottom", "get_tag_from_event",
-    "update_position", "update_fill", "delete", "flip", "rotate", "make_gradient"
+    "update_position", "update_fill", "delete", "flip", "rotate", "make_gradient", 
+    "check_if_tag_exists"
 ]
 
 _cache = []
