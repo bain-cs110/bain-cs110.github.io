@@ -8,6 +8,11 @@ num: 20
 due_date: 2023-02-24
 canvas_id: friday-lecture-20-dictionaries-feb-24
 exercise_url: "lecture20.zip"
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a3d8e766-7821-469f-94f4-af5f014cfdfe
+     title: "Live Lecture "
+     duration: "50:00"
+     live: 1
 slides:
    - url: https://docs.google.com/presentation/d/13UPZ2pugkyi-dti7EiMCNmAp5P0XqyUfpWa5J0_lXiw/edit?usp=sharing
      title: Intro to Dictionaries
