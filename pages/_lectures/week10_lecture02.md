@@ -1,6 +1,6 @@
 ---
 layout: module
-title: "APIs and Project 2"
+title: "PIP and Project 2"
 type: lecture
 draft: 1
 num: 25
