@@ -15,7 +15,7 @@ print("   3. or not in the word at all (you'll see a X).")
 print("Good luck!")
 print()
 
-# TODO: Read the list_of_words.csv file and append 5 letter words to the word_list entry
+# TODO: Read the list_of_words.txt file and append 5 letter words to the word_list entry
 # (which is a list) of our game_data dictionary
 some_file_name = ""
 my_file = open(some_file_name, "r")
