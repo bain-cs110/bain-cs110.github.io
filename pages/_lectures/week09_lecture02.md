@@ -18,7 +18,7 @@ videos:
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=af6053fc-2956-4525-9ddc-afb600310545
      title: "File Basics"
      duration: "6:59"
-   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=af6053fc-2956-4525-9ddc-afb600310545
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9bc2fc3b-b616-4db3-b703-afb60031008d
      title: "Helpful String and List Methods"
      duration: "1:57"
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d825e2be-25cc-46b7-9f23-afb6003100c1
