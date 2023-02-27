@@ -1,6 +1,6 @@
 ---
 layout: lecture-two-column
-title: Quiz 3
+title: Quiz 3 (optional)
 type: quiz
 draft: 1
 num: 3

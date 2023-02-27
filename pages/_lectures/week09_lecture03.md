@@ -1,6 +1,6 @@
 ---
 layout: module
-title: "Handling Errors"
+title: "Dictionary Algorithms"
 description:
 type: lecture
 draft: 1

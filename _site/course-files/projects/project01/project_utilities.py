@@ -6,7 +6,8 @@ __all__ = [
     "make_circle", "make_oval", "make_square", "make_rectangle", "make_line",
     "make_car", "make_cloud", "make_grid", "make_image", "get_top", "get_left",
     "get_right", "get_left", "get_center", "get_bottom", "get_tag_from_event",
-    "update_position", "update_fill", "delete", "flip", "rotate", "make_gradient"
+    "update_position", "update_fill", "delete", "flip", "rotate", "make_gradient", 
+    "check_if_tag_exists"
 ]
 
 _cache = []
@@ -194,15 +195,14 @@ def make_square(canvas, top_left, width, fill_color="green", tag=None, stroke_wi
     Return an objectID `(int)`.
     '''
     x, y = top_left
-    return canvas.create_rectangle(
-        [(x, y), (x + width, y + width)],
-        fill=fill_color,
-        tags=tag,
-        width=stroke_width,
-        outline=outline
-    )
+    x, y = top_left
+    return canvas.create_polygon([top_left,
+                                  (x + width, y),
+                                  (x + width, y + width),
+                                  (x, y + width)
+                                  ], fill=fill_color, tags=tag, outline=outline, width=stroke_width)
 
-def make_rectangle(canvas, top_left, width, height, fill_color="black", tag=None, stroke_width=1, outline=None):
+def make_rectangle(canvas, top_left, width, height, fill_color="blue", tag=None, stroke_width=1, outline=None):
     '''
     Draws a square on a specified canvas with a particular `top_left` coordinate.
 
@@ -218,12 +218,11 @@ def make_rectangle(canvas, top_left, width, height, fill_color="black", tag=None
     Return an objectID `(int)`.
     '''
     x, y = top_left
-    return canvas.create_rectangle(
-        [(x, y), (x + width, y + height)],
-        fill=fill_color,
-        width=0,
-        tags=tag
-    )
+    return canvas.create_polygon([top_left,
+                                    (x + width, y),
+                                    (x + width, y + height),
+                                    (x, y + height)
+                                    ], fill=fill_color, tags=tag, outline=outline, width=stroke_width)
 
 def make_line(canvas, coordinates, curvy=False, fill_color="grey", width=2, tag=None, dash=None):
     '''
@@ -283,6 +282,7 @@ def get_bottom(canvas, tag):
     '''
     return max(*_get_y_coordinates(canvas, tag))
 
+
 def get_width(canvas, tag):
     '''
     Returns the width of an object with the given tag.
@@ -312,6 +312,23 @@ def get_height(canvas, tag):
     '''
     y_coords = _get_y_coordinates(canvas, tag)
     return max(*y_coords) - min(*y_coords)
+
+
+def check_if_tag_exists(canvas, tag):
+    '''
+    Returns `True` if a given tag exists otherwise returns `False`.
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` to look at.
+    * `tag` (`str`): [Required] The tag of the object to lookup.
+
+    '''
+    result = canvas.find_withtag(tag)
+
+    if result:
+        return True
+    else:
+        return False
+
 
 def make_cloud(canvas, center, fill_color="white", my_tag=""):
     '''
