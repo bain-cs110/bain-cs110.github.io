@@ -18,6 +18,6 @@ videos:
      live: 1
 ---
 
-On Friday we intrdouced the concept of a _dictionary_ – a new way to store data in Python. In all of our examples on Friday, we treated dictionaries like a _lookup table_, I give it a piece of information, and it gives me some corresponding piece of information back.
+On Friday we introduced the concept of a _dictionary_ – a new way to store data in Python. In all of our examples on Friday, we treated dictionaries like a _lookup table_, I give it a piece of information, and it gives me some corresponding piece of information back.
 
 But dictionaries are also super useful to represent more **complex** pieces of data. Think of things we interact with all the time, TikTok posts, YouTube Videos, tweets. How does the computer store and access that data? Today we'll see how a dictionary might be one approach to how we might store this data.
