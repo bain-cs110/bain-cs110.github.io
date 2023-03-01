@@ -246,7 +246,7 @@ the_canvas.bind(KEY_PRESS, handle_typing)
 
 ########################## GAME SETUP AND PLAY ##############################
 # Read in the wordlist and set the secret word
-#read_in_words('wordlist.txt')
+#read_in_words('list_of_words.txt')
 # Print the solution for debugging
 #print(game_data['solution'])
 # Render the game board!
