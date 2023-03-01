@@ -97,7 +97,7 @@ Once you've completed all of your to-dos, make sure to run your program and see 
     Word List File<i class="fas fa-download"></i>
 </a>
 
-> **Note**: Depending on which browser you use, you may need to Right-Click on the World List button and select Download Linked File in order for your browser to download the file.
+> **Note**: Depending on which browser you use, you may need to Right-Click on the World List button and select `Download Linked File` or `Save link as...` in order for your browser to download the file.
 
 * * *
 
