@@ -135,7 +135,7 @@ def render_previous_guess(canvas, previous_guess, guess_number, hint):
             # square with the CORRECT_COLOR.
             pass
 
-        elif hint[i] == "-":
+        elif hint[i] == "+":
             # TODO: replace pass with a call to `w0rdle_library.color_a_grid_square` to color the
             # square with the PARTIAL_COLOR.
             pass
