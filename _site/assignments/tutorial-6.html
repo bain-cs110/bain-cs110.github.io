@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+    <head>
+            <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Getting Started on Project 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    
+
+    </head>
+    <body class="two-column">
+        <div class="wrapper">
+
+            <div class="sidebar">
+                <ol class="side-menu">
+  <li><a href="#getting-setup">Getting Setup</a></li>
+  <li><a href="#option-1-yelp-option">Option 1: Yelp Option</a>
+    <ol>
+      <li><a href="#practice-outputting-dictionary-values">Practice Outputting Dictionary Values</a></li>
+      <li><a href="#using-helper-functions">Using Helper Functions</a></li>
+      <li><a href="#practice-querying">Practice Querying</a></li>
+      <li><a href="#learning-more-about-the-yelp-module-apisyelppy">Learning more about the yelp module (apis/yelp.py)</a></li>
+    </ol>
+  </li>
+  <li><a href="#option-2-spotify-option">Option 2: Spotify Option</a></li>
+  <li><a href="#practice-outputting-dictionary-values-1">Practice Outputting Dictionary Values</a>
+    <ol>
+      <li><a href="#practice-querying-1">Practice Querying</a></li>
+    </ol>
+  </li>
+  <li><a href="#getting-credit-for-your-work">Getting Credit for Your Work</a></li>
+</ol>
+
+            </div>
+
+          <article>
+            <div class="main">
+                <!--
+
+    
+        <h1>
+            <a href="../assignments/">Assignments</a> > 
+            Tutorial 6: Getting Started on Project 2
+        </h1>
+    
+-->
+                <a href="/assignments/tutorial-6" target="_blank">Open this page in a new window.</a>
+<br>
+<br>
+<!-- <p>
+    <!--
+        Due on Wed, 03/08 @ 11:59PM.
+    
+    
+        100 Points.
+    
+    
+
+</p>  -->
+<p>In this week’s tutorial, we’ll be working on <a href="../assignments/p2">Project 2</a>. This includes:</p>
+
+<ol>
+  <li>Setting our computers up to work on P2.</li>
+  <li>Practicing using some of the modules that have been provided for you inside of the apis directory.</li>
+</ol>
+
+<p>NOTE: While you may complete the Project submissions as a team, this tutorial should be completed solo (i.e. everyone needs to setup their computer so it’s capable of working on the project).</p>
+
+<p>Please complete the following steps:</p>
+
+<hr />
+<h2 id="getting-setup">Getting Setup</h2>
+
+<p>Complete the “Setup” section of <a href="../assignments/p2">Project 2</a>.</p>
+
+<p>When you’re done, complete one of the two options (either / or) listed below:</p>
+
+<hr />
+
+<h2 id="option-1-yelp-option">Option 1: Yelp Option</h2>
+<p>Create a brand new file called <code class="language-plaintext highlighter-rouge">tutorial06.py</code> directly inside of your <code class="language-plaintext highlighter-rouge">project02</code> folder (the location matters). Your directory structure should look like this:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├── apis
+├── restaurant_finder.py
+├── tests
+└── tutorial06.py
+</code></pre></div></div>
+
+<p>Next, paste the following code into your <code class="language-plaintext highlighter-rouge">tutorial06.py</code> file and run it.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">apis</span> <span class="kn">import</span> <span class="n">yelp</span>
+
+<span class="n">businesses</span> <span class="o">=</span> <span class="n">yelp</span><span class="p">.</span><span class="n">get_businesses</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">businesses</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>You should see some Evanston restaurants print to the screen (as a list of dictionaries).</p>
+<h3 id="practice-outputting-dictionary-values">Practice Outputting Dictionary Values</h3>
+<ol>
+  <li>Output just the <code class="language-plaintext highlighter-rouge">name</code> of each business to the screen</li>
+  <li>Output the <code class="language-plaintext highlighter-rouge">name</code>, <code class="language-plaintext highlighter-rouge">rating</code>, and <code class="language-plaintext highlighter-rouge">review_count</code> to the screen</li>
+</ol>
+
+<h3 id="using-helper-functions">Using Helper Functions</h3>
+<p>There is also a helper function inside of the <a href="/course-files/projects/project02/docs/apis/yelp.html" target="_blank">apis.yelp</a> module that can help you output businesses to the screen, which you are welcome to modify:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">table_text</span> <span class="o">=</span> <span class="n">yelp</span><span class="p">.</span><span class="n">get_formatted_business_list_table</span><span class="p">(</span><span class="n">businesses</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">table_text</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="practice-querying">Practice Querying</h3>
+<p>When you’re done outputting the data, open the <code class="language-plaintext highlighter-rouge">apis/yelp.py</code> and navigate down to the <code class="language-plaintext highlighter-rouge">get_businesses</code> function definition. Note all of the keyword  (optional) parameters that the function accepts.</p>
+
+<p>Next, go back to your <code class="language-plaintext highlighter-rouge">tutorial06.py</code> file and modify the get_businesses(…) function call by:</p>
+<ol>
+  <li>Use the various keyword arguments (<code class="language-plaintext highlighter-rouge">price</code>, <code class="language-plaintext highlighter-rouge">category</code>, and/or <code class="language-plaintext highlighter-rouge">location</code>) to change which results get displayed.</li>
+  <li>Use the <code class="language-plaintext highlighter-rouge">sort_by</code> keyword argument to change the sort order.</li>
+</ol>
+
+<blockquote class="blockquote-no-margin">
+  <h3 id="learning-more-about-the-yelp-module-apisyelppy">Learning more about the yelp module (apis/yelp.py)</h3>
+  <p>You can also learn more about the yelp module by:</p>
+  <ul>
+    <li>Looking at the online documentation here: <a href="/course-files/projects/project02/docs/apis/yelp.html" target="_blank">/project02/docs/apis/yelp.html</a></li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h2 id="option-2-spotify-option">Option 2: Spotify Option</h2>
+<p>Create a brand new file called <code class="language-plaintext highlighter-rouge">tutorial06.py</code> directly inside of your <code class="language-plaintext highlighter-rouge">project02</code> folder (the location matters). Your directory structure should look like this:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├── apis
+├── music_finder.py
+├── tests
+└── tutorial06.py
+</code></pre></div></div>
+
+<p>Next, paste the following code into your <code class="language-plaintext highlighter-rouge">tutorial06.py</code> file and run it.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">apis</span> <span class="kn">import</span> <span class="n">spotify</span>
+<span class="n">artists</span> <span class="o">=</span> <span class="n">spotify</span><span class="p">.</span><span class="n">get_artists</span><span class="p">(</span><span class="s">'Beyonce'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">artists</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>You should see some search results relating to Beyonce print to the screen (as a list of dictionaries).</p>
+
+<h2 id="practice-outputting-dictionary-values-1">Practice Outputting Dictionary Values</h2>
+<ol>
+  <li>Output just the <code class="language-plaintext highlighter-rouge">name</code> of each artist to</li>
+  <li>Output the <code class="language-plaintext highlighter-rouge">name</code>, <code class="language-plaintext highlighter-rouge">genres</code>, and <code class="language-plaintext highlighter-rouge">share_url</code> to the screen</li>
+</ol>
+
+<h3 id="practice-querying-1">Practice Querying</h3>
+<p>When you’re done outputting the data, open the <code class="language-plaintext highlighter-rouge">apis/spotify.py</code> file and navigate down to the <code class="language-plaintext highlighter-rouge">get_similar_tracks</code> function definition. Note all of the keyword (optional) parameters that the function accepts.</p>
+
+<p>While each parameter is technically optional, this function needs some seed data in order to give you song recommendations. Up to 5 seed values may be provided in any combination of seed_artists, seed_tracks and seed_genres. In other words: <br /><code class="language-plaintext highlighter-rouge">len(artist_ids) + len(track_ids) + len(genres)</code> must be between 1 and 5.</p>
+
+<p>Next, go back to your <code class="language-plaintext highlighter-rouge">tutorial06.py</code> file and try invoking the <code class="language-plaintext highlighter-rouge">spotify.get_similar_tracks</code> function as follows:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">track_recommendations</span> <span class="o">=</span> <span class="n">spotify</span><span class="p">.</span><span class="n">get_similar_tracks</span><span class="p">(</span><span class="n">artist_ids</span><span class="o">=</span><span class="p">[</span><span class="s">'6vWDO969PvNqNYHIOW5v0m'</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">track_recommendations</span><span class="p">)</span>
+</code></pre></div></div>
+<ul>
+  <li>Try passing in different Artist IDs</li>
+  <li>Try passing in a list of genres (see the <code class="language-plaintext highlighter-rouge">apis.spotify.get_genres_abridged</code> function to get some valid genre categories).</li>
+</ul>
+
+<p>There is also a helper function inside of the <code class="language-plaintext highlighter-rouge">apis.spotify</code> module that can help you output the tracks to the screen:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">table_text</span> <span class="o">=</span> <span class="n">spotify</span><span class="p">.</span><span class="n">get_formatted_tracklist_table</span><span class="p">(</span><span class="n">track_recommendations</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">table_text</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>If you still have time, please experiment with some of the other built-in functions:</p>
+<ul>
+  <li>get_tracks</li>
+  <li>get_top_tracks_by_artist</li>
+  <li>get_related_artists</li>
+  <li>get_playlists</li>
+</ul>
+
+<blockquote class="blockquote-no-margin">
+  <h4 id="learning-more-about-the-spotify-module-apisspotifypy">Learning more about the spotify module (apis/spotify.py)</h4>
+  <p>Checkout the documentation here: <a href="/course-files/projects/project02/docs/apis/spotify.html" target="_blank">Spotify Library</a></p>
+</blockquote>
+
+<hr />
+
+<h2 id="getting-credit-for-your-work">Getting Credit for Your Work</h2>
+
+<p>If you’re in class you don’t need to submit a <code class="language-plaintext highlighter-rouge">.py</code> file on Canvas. Instead, find one other person in your group that is finished and peer review each other’s work. Here are the things to check:</p>
+
+<ol>
+  <li>Does their code look readable and neat?</li>
+  <li>Can you understand what their code does by reading it?</li>
+  <li>How was their solution different from yours (if at all)?</li>
+  <li>Did they do anything cool?</li>
+</ol>
+
+<p>Once you’ve each taken a look, take a second to debrief. Anything either of you found difficult? Easy? Fun? Mind-blowing? Once you’ve debriefed, <strong>both of you should fill out this</strong> <a href="https://docs.google.com/forms/d/e/1FAIpQLScFw18yE8C1L2te7MPFCvcbGCFkIdURc0aMonRGQ8-X0FJkwQ/viewform?usp=sf_link" target="_blank">attendance Google Form</a>. <strong>NOTE: You will need the NetID of the person’s whose code you reviewed.</strong> You’re free to go after you’re finished, though we hope that you might consider sticking around and helping others in your group.</p>
+
+<p>If you’re submitting remotely, you MUST submit your completed tutorial to Canvas and it will be graded. Make sure that all of your functions are named correctly and that they use the EXACT parameter order, names, and types as specified.</p>
+
+<p>Please turn in your completed <code class="language-plaintext highlighter-rouge">tutorial06.py</code> file on Canvas by Wednesday night at midnight. ONLY SUBMIT the file you worked in and no other files.</p>
+
+
+            </div>
+</article>
+      </div>
+        
+            <script type="text/javascript" src="/assets/js/main.js"></script>
+    
+    <script src="https://kit.fontawesome.com/62a7c74d0d.js" crossorigin="anonymous"></script>
+    <script>
+        //little bit of a hack:
+        const scrollLeft = () => {
+            //console.log('scrollLeft');
+            document.documentElement.scrollLeft = 0;
+        };
+        setTimeout(scrollLeft, 100);
+    </script>
+        <script type="text/javascript" src="/assets/js/scrollspy.js"></script>
+    </body>
+</html>
