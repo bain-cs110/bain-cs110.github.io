@@ -3,7 +3,7 @@ layout: assignment-two-column
 title: Getting Started on Project 2
 type: tutorial
 abbreviation: Tutorial 6
-draft: 1
+draft: 0
 num: 6
 points: 100
 canvas_id: 1174719
