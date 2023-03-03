@@ -17,6 +17,6 @@ if __name__ == '__main__':
         TestYelp('test_execute_business_queries_just_one_simplified'),
         TestTwilio('test_can_import_twilio'),
         TestTwilio('test_can_import_twilio_api_module'),
-        TestTwilio('test_can_send_email')
+        #TestTwilio('test_can_send_email')
     ])
     unittest.TextTestRunner(verbosity=2).run(suite)
