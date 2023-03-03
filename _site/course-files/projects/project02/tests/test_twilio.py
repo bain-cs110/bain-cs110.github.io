@@ -21,7 +21,6 @@ class TestTwilio(unittest.TestCase):
         email_address = input("Please enter your email address: ")
         self.assertTrue(twilio.send_mail(
                 email_address,
-                email_address,
                 f"[CS 110] {os.getlogin()} Test Successful",
                 "Twilio Test Successful.")
                 )
