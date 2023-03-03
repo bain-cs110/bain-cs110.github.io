@@ -6,7 +6,7 @@ try:
 except:
     pass
 
-def set_master_apitutor_token():
+def set_main_apitutor_token():
     '''Checks to make sure that you have included the API Tutor token in the my_token.py file.'''
     global API_TUTOR_TOKEN
     try:
@@ -18,7 +18,8 @@ def set_master_apitutor_token():
             title + '\n' + '*' * len(title) + \
             '\nPlease download the the my_token.py file from Canvas and save it in your apis directory.\n\n'
         raise Exception(error_message)
-set_master_apitutor_token()
+    
+set_main_apitutor_token()
 
 
 def get_token(url):
