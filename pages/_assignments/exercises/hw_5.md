@@ -80,9 +80,10 @@ Before you submit, make sure you’ve tested that your program does the followin
 
 {:.checkbox-list}
 * Reads in a list of 5-letter words from the `word_list.txt` file
+* (Optional) Prints out the solution to the puzzle in the interpreter window
 * Only allows the user to enter 5 letter words
-* If a user hits ENTER and hasn't entered 5 letters don't accept it as a guess
-* If a user hits ENTER and has entered an INVALID word don't accept it as a guess
+* If a user hits ENTER and hasn't entered 5 letters don't accept it as a guess (you'll see a message printed to the interpreter)
+* If a user hits ENTER and has entered an INVALID word don't accept it as a guess (you'll see a message printed to the interpreter)
 * You do not need to worry about the case where the user enters the same word multiple times
 * After each guess, W0RDLE responds with the correct hint and moves to the next line
 * Guesses currently being entered are black text on a white (`DEFAULT_COLOR`) background
@@ -91,7 +92,7 @@ Before you submit, make sure you’ve tested that your program does the followin
     * Completely correct letters will have a green (`CORRECT_COLOR`) background
     * Partially correct letters will have a yellow (`PARTIAL_COLOR`) background
     * Letters that don't appear will have a grey (`WRONG_COLOR`) background
-* The user can only make 6 valid guesses
+* The user can only make 6 valid guesses (the game will be unplayable after that)
 * If the user guesses correctly, they should see a popup message
 
 ## Starter Code
