@@ -139,9 +139,10 @@ to know how to use them to complete the assignment. You can search for the <code
 
 <ul class="checkbox-list">
   <li>Reads in a list of 5-letter words from the <code class="language-plaintext highlighter-rouge">word_list.txt</code> file</li>
+  <li>(Optional) Prints out the solution to the puzzle in the interpreter window</li>
   <li>Only allows the user to enter 5 letter words</li>
-  <li>If a user hits ENTER and hasn’t entered 5 letters don’t accept it as a guess</li>
-  <li>If a user hits ENTER and has entered an INVALID word don’t accept it as a guess</li>
+  <li>If a user hits ENTER and hasn’t entered 5 letters don’t accept it as a guess (you’ll see a message printed to the interpreter)</li>
+  <li>If a user hits ENTER and has entered an INVALID word don’t accept it as a guess (you’ll see a message printed to the interpreter)</li>
   <li>You do not need to worry about the case where the user enters the same word multiple times</li>
   <li>After each guess, W0RDLE responds with the correct hint and moves to the next line</li>
   <li>Guesses currently being entered are black text on a white (<code class="language-plaintext highlighter-rouge">DEFAULT_COLOR</code>) background</li>
@@ -153,7 +154,7 @@ to know how to use them to complete the assignment. You can search for the <code
       <li>Letters that don’t appear will have a grey (<code class="language-plaintext highlighter-rouge">WRONG_COLOR</code>) background</li>
     </ul>
   </li>
-  <li>The user can only make 6 valid guesses</li>
+  <li>The user can only make 6 valid guesses (the game will be unplayable after that)</li>
   <li>If the user guesses correctly, they should see a popup message</li>
 </ul>
 
