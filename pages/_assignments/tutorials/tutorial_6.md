@@ -44,7 +44,7 @@ Next, paste the following code into your `tutorial06.py` file and run it.
 ```python
 from apis import yelp
 
-businesses = yelp.get_businesses(location="Evanston, IL")
+businesses = yelp.get_businesses("Evanston, IL")
 print(businesses)
 ```
 
