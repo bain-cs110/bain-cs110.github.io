@@ -169,7 +169,7 @@ There are two larger programming assignments in the course which we will refer t
 
 Late submissions of Projects *will not be accepted*.
 
-The second project will be due at the start of the university's assigned final exam block for this course which is **Thursday, March 16th at 3pm.**
+The second project will be due at the start of the university's assigned final exam block for this course which is **Thursday, March 16th at 5pm.**
 
 ## Grading Equity Policies
 
