@@ -132,6 +132,39 @@ If you still have time, please experiment with some of the other built-in functi
 
 * * *
 
+## Other General Reminders
+
+Some other things that might be useful during project 2!
+
+```python
+# Splitting a string of numbers separated by commas into a list of strings
+test = "1,2,3,4,5"
+my_list = test.split(",")
+```
+
+```python
+# Converting strings to an integer
+a_string = "1"
+an_int = int(a_string)
+```
+
+```python
+# Saving something someone entered into a dictionary
+test = {"keyboard_entry": ""}
+some_input = input("Please type in something.")
+test['keyboard_entry'] = some_input
+```
+
+```python
+# Short circuiting a function...
+def example_function(a_number):
+    if a_number == 2:
+        return None
+    print("I'll only print if the nubmer isn't 2")
+    return "hello"
+```
+
+* * *
 ## Getting Credit for Your Work
 
 If you're in class you don't need to submit a `.py` file on Canvas. Instead, find one other person in your group that is finished and peer review each other's work. Here are the things to check:
