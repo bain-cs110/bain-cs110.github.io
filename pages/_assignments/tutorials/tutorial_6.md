@@ -143,11 +143,12 @@ my_list = ["a", "b", "c", "d"]
 for item in my_list:
     print(counter, item)
     counter = counter + 1
-    
+
 # Printing all of the different key value pairs in a dictionary one by one:
 my_dict = {"a": 1, "b":2, "c": 3}
 for key in my_dict:
     print(key, my_dict[key])
+```
 
 ```python
 # Splitting a string of numbers separated by commas into a list of strings
