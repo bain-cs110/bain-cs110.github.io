@@ -51,7 +51,6 @@ Please write a program that accomplishes the following tasks. **DO NOT TRY TO DO
     * make sure to review the documentation for `w0rdle_library.color_a_grid_square` in `w0rdle_library.py`.
     * note: the coordinate it asks for is not the Canvas coordinate, but instead the coordinate on the W0rdle grid which looks like the grid below.
     * make sure to use the right colors which are defined as variables near the top of the file: `CORRECT_COLOR`, `PARTIAL_COLOR`, and `WRONG_COLOR`
-    * **NOTE** there is a small existing bug with this function that you'll need to fix. Hint: take a look at the conditional statement for "partially correct" letters.
 1. Finish the `render_game_board` function by looping through the list of previous_guesses and calling the `render_previous_guess` function for each one.
 
 ```bash
