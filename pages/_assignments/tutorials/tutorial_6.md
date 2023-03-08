@@ -137,9 +137,28 @@ If you still have time, please experiment with some of the other built-in functi
 Some other things that might be useful during project 2!
 
 ```python
+# Printing all of the different things in a list one on each line:
+counter = 0
+my_list = ["a", "b", "c", "d"]
+for item in my_list:
+    print(counter, item)
+    counter = counter + 1
+    
+# Printing all of the different key value pairs in a dictionary one by one:
+my_dict = {"a": 1, "b":2, "c": 3}
+for key in my_dict:
+    print(key, my_dict[key])
+
+```python
 # Splitting a string of numbers separated by commas into a list of strings
 test = "1,2,3,4,5"
 my_list = test.split(",")
+```
+
+```python
+# Making a list of numbers or things into a string separated by commas.
+my_list = [1, 2, 3, 4, 5]
+my_string = ",".join(my_list)
 ```
 
 ```python
