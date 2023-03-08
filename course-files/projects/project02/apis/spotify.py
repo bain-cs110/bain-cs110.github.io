@@ -13,6 +13,7 @@ __all__ = [
     'get_related_artists', 'get_top_tracks_by_artist',
     'get_similar_tracks', 'get_playlists_by_user',
     'get_tracks_by_playlist',
+    'get_formatted_artist_table_html',
     'get_formatted_tracklist_table',
     'get_formatted_tracklist_table_html',
     'get_track_player_html',
@@ -338,7 +339,7 @@ def get_formatted_artist_table_html(artists: list):
                 css=cell_css,
                 name=artist.get('name'),
                 image_url=artist.get('image_url_small'),
-                artist_name=artist.get('genres'),
+                genres=artist.get('genres'),
                 share_url=artist.get('share_url')
             )
         )
