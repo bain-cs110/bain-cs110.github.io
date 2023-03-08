@@ -82,7 +82,7 @@ def generate_hint(guess, solution):
     return hint
 
 
-def finalize_guess(canvas, guess, hint):
+def finalize_guess(a_canvas, guess, hint):
     '''
     Finalizes a valid user guess.
 
@@ -93,7 +93,7 @@ def finalize_guess(canvas, guess, hint):
       4. It checks to see if the user has reached the max number of guesses
 
     Parameters:
-      * `canvas` (`Canvas`): The canvas being used for the game.
+      * `a_canvas` (`Canvas`): The canvas being used for the game.
       * `guess` (`str`): The guess to be rendered on the screen.
       * `hint` (`str`): The evaluated hint so that we can color the blocks correctly.
 
@@ -108,17 +108,17 @@ def finalize_guess(canvas, guess, hint):
 
     # Set the current_guess key in game_data to the empty string ("")
     if hint == "$$$$$":
-        w0rdle_library.game_over(canvas, happy=True)
+        w0rdle_library.game_over(a_canvas, happy=True)
     elif len(game_data['previous_guesses']) == 6:
-        w0rdle_library.game_over(canvas)
+        w0rdle_library.game_over(a_canvas)
 
 
-def render_previous_guess(canvas, previous_guess, guess_number, hint):
+def render_previous_guess(a_canvas, previous_guess, guess_number, hint):
     '''
     Renders a previous guess on the canvas.
 
     Parameters:
-      * `canvas` (`Canvas`): The canvas to play the game on.
+      * `a_canvas` (`Canvas`): The canvas to play the game on.
       * `previous_guess` (`str`): The previous guess to be rendered
       * `guess_number` (`int`): The number of the guess to be drawn (y-coordinate)
       * `hint` (`str`): The hint string that was generated from that guess
@@ -153,7 +153,7 @@ def render_game_board(a_canvas):
     Renders the game board.
 
     Parameters:
-      * `canvas` (`Canvas`): A canvas to play the game on.
+      * `a_canvas` (`Canvas`): A canvas to play the game on.
 
     Returns:
       * `None` (Draws to the canvas)
