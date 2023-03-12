@@ -146,7 +146,7 @@ w0rdle    </h1>
 </span><span id="L-82"><a href="#L-82"><span class="linenos"> 82</span></a>    <span class="k">return</span> <span class="n">hint</span>
 </span><span id="L-83"><a href="#L-83"><span class="linenos"> 83</span></a>
 </span><span id="L-84"><a href="#L-84"><span class="linenos"> 84</span></a>
-</span><span id="L-85"><a href="#L-85"><span class="linenos"> 85</span></a><span class="k">def</span> <span class="nf">finalize_guess</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">guess</span><span class="p">,</span> <span class="n">hint</span><span class="p">):</span>
+</span><span id="L-85"><a href="#L-85"><span class="linenos"> 85</span></a><span class="k">def</span> <span class="nf">finalize_guess</span><span class="p">(</span><span class="n">a_canvas</span><span class="p">,</span> <span class="n">guess</span><span class="p">,</span> <span class="n">hint</span><span class="p">):</span>
 </span><span id="L-86"><a href="#L-86"><span class="linenos"> 86</span></a>    <span class="sd">&#39;&#39;&#39;</span>
 </span><span id="L-87"><a href="#L-87"><span class="linenos"> 87</span></a><span class="sd">    Finalizes a valid user guess.</span>
 </span><span id="L-88"><a href="#L-88"><span class="linenos"> 88</span></a>
@@ -157,7 +157,7 @@ w0rdle    </h1>
 </span><span id="L-93"><a href="#L-93"><span class="linenos"> 93</span></a><span class="sd">      4. It checks to see if the user has reached the max number of guesses</span>
 </span><span id="L-94"><a href="#L-94"><span class="linenos"> 94</span></a>
 </span><span id="L-95"><a href="#L-95"><span class="linenos"> 95</span></a><span class="sd">    Parameters:</span>
-</span><span id="L-96"><a href="#L-96"><span class="linenos"> 96</span></a><span class="sd">      * `canvas` (`Canvas`): The canvas being used for the game.</span>
+</span><span id="L-96"><a href="#L-96"><span class="linenos"> 96</span></a><span class="sd">      * `a_canvas` (`Canvas`): The canvas being used for the game.</span>
 </span><span id="L-97"><a href="#L-97"><span class="linenos"> 97</span></a><span class="sd">      * `guess` (`str`): The guess to be rendered on the screen.</span>
 </span><span id="L-98"><a href="#L-98"><span class="linenos"> 98</span></a><span class="sd">      * `hint` (`str`): The evaluated hint so that we can color the blocks correctly.</span>
 </span><span id="L-99"><a href="#L-99"><span class="linenos"> 99</span></a>
@@ -172,17 +172,17 @@ w0rdle    </h1>
 </span><span id="L-108"><a href="#L-108"><span class="linenos">108</span></a>
 </span><span id="L-109"><a href="#L-109"><span class="linenos">109</span></a>    <span class="c1"># Set the current_guess key in game_data to the empty string (&quot;&quot;)</span>
 </span><span id="L-110"><a href="#L-110"><span class="linenos">110</span></a>    <span class="k">if</span> <span class="n">hint</span> <span class="o">==</span> <span class="s2">&quot;$$$$$&quot;</span><span class="p">:</span>
-</span><span id="L-111"><a href="#L-111"><span class="linenos">111</span></a>        <span class="n">w0rdle_library</span><span class="o">.</span><span class="n">game_over</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">happy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="L-111"><a href="#L-111"><span class="linenos">111</span></a>        <span class="n">w0rdle_library</span><span class="o">.</span><span class="n">game_over</span><span class="p">(</span><span class="n">a_canvas</span><span class="p">,</span> <span class="n">happy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </span><span id="L-112"><a href="#L-112"><span class="linenos">112</span></a>    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;previous_guesses&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
-</span><span id="L-113"><a href="#L-113"><span class="linenos">113</span></a>        <span class="n">w0rdle_library</span><span class="o">.</span><span class="n">game_over</span><span class="p">(</span><span class="n">canvas</span><span class="p">)</span>
+</span><span id="L-113"><a href="#L-113"><span class="linenos">113</span></a>        <span class="n">w0rdle_library</span><span class="o">.</span><span class="n">game_over</span><span class="p">(</span><span class="n">a_canvas</span><span class="p">)</span>
 </span><span id="L-114"><a href="#L-114"><span class="linenos">114</span></a>
 </span><span id="L-115"><a href="#L-115"><span class="linenos">115</span></a>
-</span><span id="L-116"><a href="#L-116"><span class="linenos">116</span></a><span class="k">def</span> <span class="nf">render_previous_guess</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">previous_guess</span><span class="p">,</span> <span class="n">guess_number</span><span class="p">,</span> <span class="n">hint</span><span class="p">):</span>
+</span><span id="L-116"><a href="#L-116"><span class="linenos">116</span></a><span class="k">def</span> <span class="nf">render_previous_guess</span><span class="p">(</span><span class="n">a_canvas</span><span class="p">,</span> <span class="n">previous_guess</span><span class="p">,</span> <span class="n">guess_number</span><span class="p">,</span> <span class="n">hint</span><span class="p">):</span>
 </span><span id="L-117"><a href="#L-117"><span class="linenos">117</span></a>    <span class="sd">&#39;&#39;&#39;</span>
 </span><span id="L-118"><a href="#L-118"><span class="linenos">118</span></a><span class="sd">    Renders a previous guess on the canvas.</span>
 </span><span id="L-119"><a href="#L-119"><span class="linenos">119</span></a>
 </span><span id="L-120"><a href="#L-120"><span class="linenos">120</span></a><span class="sd">    Parameters:</span>
-</span><span id="L-121"><a href="#L-121"><span class="linenos">121</span></a><span class="sd">      * `canvas` (`Canvas`): The canvas to play the game on.</span>
+</span><span id="L-121"><a href="#L-121"><span class="linenos">121</span></a><span class="sd">      * `a_canvas` (`Canvas`): The canvas to play the game on.</span>
 </span><span id="L-122"><a href="#L-122"><span class="linenos">122</span></a><span class="sd">      * `previous_guess` (`str`): The previous guess to be rendered</span>
 </span><span id="L-123"><a href="#L-123"><span class="linenos">123</span></a><span class="sd">      * `guess_number` (`int`): The number of the guess to be drawn (y-coordinate)</span>
 </span><span id="L-124"><a href="#L-124"><span class="linenos">124</span></a><span class="sd">      * `hint` (`str`): The hint string that was generated from that guess</span>
@@ -217,7 +217,7 @@ w0rdle    </h1>
 </span><span id="L-153"><a href="#L-153"><span class="linenos">153</span></a><span class="sd">    Renders the game board.</span>
 </span><span id="L-154"><a href="#L-154"><span class="linenos">154</span></a>
 </span><span id="L-155"><a href="#L-155"><span class="linenos">155</span></a><span class="sd">    Parameters:</span>
-</span><span id="L-156"><a href="#L-156"><span class="linenos">156</span></a><span class="sd">      * `canvas` (`Canvas`): A canvas to play the game on.</span>
+</span><span id="L-156"><a href="#L-156"><span class="linenos">156</span></a><span class="sd">      * `a_canvas` (`Canvas`): A canvas to play the game on.</span>
 </span><span id="L-157"><a href="#L-157"><span class="linenos">157</span></a>
 </span><span id="L-158"><a href="#L-158"><span class="linenos">158</span></a><span class="sd">    Returns:</span>
 </span><span id="L-159"><a href="#L-159"><span class="linenos">159</span></a><span class="sd">      * `None` (Draws to the canvas)</span>
@@ -437,13 +437,13 @@ guess:</p>
 <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">finalize_guess</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">canvas</span>, </span><span class="param"><span class="n">guess</span>, </span><span class="param"><span class="n">hint</span></span>)</span>
+        <span class="name">finalize_guess</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">a_canvas</span>, </span><span class="param"><span class="n">guess</span>, </span><span class="param"><span class="n">hint</span></span>)</span>
 
                 <label class="view-source-button" for="finalize_guess-view-source"><span>View Source</span></label>
 
     </div>
     <a class="headerlink" href="#finalize_guess"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="finalize_guess-86"><a href="#finalize_guess-86"><span class="linenos"> 86</span></a><span class="k">def</span> <span class="nf">finalize_guess</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">guess</span><span class="p">,</span> <span class="n">hint</span><span class="p">):</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="finalize_guess-86"><a href="#finalize_guess-86"><span class="linenos"> 86</span></a><span class="k">def</span> <span class="nf">finalize_guess</span><span class="p">(</span><span class="n">a_canvas</span><span class="p">,</span> <span class="n">guess</span><span class="p">,</span> <span class="n">hint</span><span class="p">):</span>
 </span><span id="finalize_guess-87"><a href="#finalize_guess-87"><span class="linenos"> 87</span></a>    <span class="sd">&#39;&#39;&#39;</span>
 </span><span id="finalize_guess-88"><a href="#finalize_guess-88"><span class="linenos"> 88</span></a><span class="sd">    Finalizes a valid user guess.</span>
 </span><span id="finalize_guess-89"><a href="#finalize_guess-89"><span class="linenos"> 89</span></a>
@@ -454,7 +454,7 @@ guess:</p>
 </span><span id="finalize_guess-94"><a href="#finalize_guess-94"><span class="linenos"> 94</span></a><span class="sd">      4. It checks to see if the user has reached the max number of guesses</span>
 </span><span id="finalize_guess-95"><a href="#finalize_guess-95"><span class="linenos"> 95</span></a>
 </span><span id="finalize_guess-96"><a href="#finalize_guess-96"><span class="linenos"> 96</span></a><span class="sd">    Parameters:</span>
-</span><span id="finalize_guess-97"><a href="#finalize_guess-97"><span class="linenos"> 97</span></a><span class="sd">      * `canvas` (`Canvas`): The canvas being used for the game.</span>
+</span><span id="finalize_guess-97"><a href="#finalize_guess-97"><span class="linenos"> 97</span></a><span class="sd">      * `a_canvas` (`Canvas`): The canvas being used for the game.</span>
 </span><span id="finalize_guess-98"><a href="#finalize_guess-98"><span class="linenos"> 98</span></a><span class="sd">      * `guess` (`str`): The guess to be rendered on the screen.</span>
 </span><span id="finalize_guess-99"><a href="#finalize_guess-99"><span class="linenos"> 99</span></a><span class="sd">      * `hint` (`str`): The evaluated hint so that we can color the blocks correctly.</span>
 </span><span id="finalize_guess-100"><a href="#finalize_guess-100"><span class="linenos">100</span></a>
@@ -469,9 +469,9 @@ guess:</p>
 </span><span id="finalize_guess-109"><a href="#finalize_guess-109"><span class="linenos">109</span></a>
 </span><span id="finalize_guess-110"><a href="#finalize_guess-110"><span class="linenos">110</span></a>    <span class="c1"># Set the current_guess key in game_data to the empty string (&quot;&quot;)</span>
 </span><span id="finalize_guess-111"><a href="#finalize_guess-111"><span class="linenos">111</span></a>    <span class="k">if</span> <span class="n">hint</span> <span class="o">==</span> <span class="s2">&quot;$$$$$&quot;</span><span class="p">:</span>
-</span><span id="finalize_guess-112"><a href="#finalize_guess-112"><span class="linenos">112</span></a>        <span class="n">w0rdle_library</span><span class="o">.</span><span class="n">game_over</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">happy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="finalize_guess-112"><a href="#finalize_guess-112"><span class="linenos">112</span></a>        <span class="n">w0rdle_library</span><span class="o">.</span><span class="n">game_over</span><span class="p">(</span><span class="n">a_canvas</span><span class="p">,</span> <span class="n">happy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </span><span id="finalize_guess-113"><a href="#finalize_guess-113"><span class="linenos">113</span></a>    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;previous_guesses&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
-</span><span id="finalize_guess-114"><a href="#finalize_guess-114"><span class="linenos">114</span></a>        <span class="n">w0rdle_library</span><span class="o">.</span><span class="n">game_over</span><span class="p">(</span><span class="n">canvas</span><span class="p">)</span>
+</span><span id="finalize_guess-114"><a href="#finalize_guess-114"><span class="linenos">114</span></a>        <span class="n">w0rdle_library</span><span class="o">.</span><span class="n">game_over</span><span class="p">(</span><span class="n">a_canvas</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -489,7 +489,7 @@ guess:</p>
 <p>Parameters:</p>
 
 <ul>
-<li><code>canvas</code> (<code>Canvas</code>): The canvas being used for the game.</li>
+<li><code>a_canvas</code> (<code>Canvas</code>): The canvas being used for the game.</li>
 <li><code>guess</code> (<code>str</code>): The guess to be rendered on the screen.</li>
 <li><code>hint</code> (<code>str</code>): The evaluated hint so that we can color the blocks correctly.</li>
 </ul>
@@ -508,18 +508,18 @@ guess:</p>
 <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">render_previous_guess</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">canvas</span>, </span><span class="param"><span class="n">previous_guess</span>, </span><span class="param"><span class="n">guess_number</span>, </span><span class="param"><span class="n">hint</span></span>)</span>
+        <span class="name">render_previous_guess</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">a_canvas</span>, </span><span class="param"><span class="n">previous_guess</span>, </span><span class="param"><span class="n">guess_number</span>, </span><span class="param"><span class="n">hint</span></span>)</span>
 
                 <label class="view-source-button" for="render_previous_guess-view-source"><span>View Source</span></label>
 
     </div>
     <a class="headerlink" href="#render_previous_guess"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="render_previous_guess-117"><a href="#render_previous_guess-117"><span class="linenos">117</span></a><span class="k">def</span> <span class="nf">render_previous_guess</span><span class="p">(</span><span class="n">canvas</span><span class="p">,</span> <span class="n">previous_guess</span><span class="p">,</span> <span class="n">guess_number</span><span class="p">,</span> <span class="n">hint</span><span class="p">):</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="render_previous_guess-117"><a href="#render_previous_guess-117"><span class="linenos">117</span></a><span class="k">def</span> <span class="nf">render_previous_guess</span><span class="p">(</span><span class="n">a_canvas</span><span class="p">,</span> <span class="n">previous_guess</span><span class="p">,</span> <span class="n">guess_number</span><span class="p">,</span> <span class="n">hint</span><span class="p">):</span>
 </span><span id="render_previous_guess-118"><a href="#render_previous_guess-118"><span class="linenos">118</span></a>    <span class="sd">&#39;&#39;&#39;</span>
 </span><span id="render_previous_guess-119"><a href="#render_previous_guess-119"><span class="linenos">119</span></a><span class="sd">    Renders a previous guess on the canvas.</span>
 </span><span id="render_previous_guess-120"><a href="#render_previous_guess-120"><span class="linenos">120</span></a>
 </span><span id="render_previous_guess-121"><a href="#render_previous_guess-121"><span class="linenos">121</span></a><span class="sd">    Parameters:</span>
-</span><span id="render_previous_guess-122"><a href="#render_previous_guess-122"><span class="linenos">122</span></a><span class="sd">      * `canvas` (`Canvas`): The canvas to play the game on.</span>
+</span><span id="render_previous_guess-122"><a href="#render_previous_guess-122"><span class="linenos">122</span></a><span class="sd">      * `a_canvas` (`Canvas`): The canvas to play the game on.</span>
 </span><span id="render_previous_guess-123"><a href="#render_previous_guess-123"><span class="linenos">123</span></a><span class="sd">      * `previous_guess` (`str`): The previous guess to be rendered</span>
 </span><span id="render_previous_guess-124"><a href="#render_previous_guess-124"><span class="linenos">124</span></a><span class="sd">      * `guess_number` (`int`): The number of the guess to be drawn (y-coordinate)</span>
 </span><span id="render_previous_guess-125"><a href="#render_previous_guess-125"><span class="linenos">125</span></a><span class="sd">      * `hint` (`str`): The hint string that was generated from that guess</span>
@@ -555,7 +555,7 @@ guess:</p>
 <p>Parameters:</p>
 
 <ul>
-<li><code>canvas</code> (<code>Canvas</code>): The canvas to play the game on.</li>
+<li><code>a_canvas</code> (<code>Canvas</code>): The canvas to play the game on.</li>
 <li><code>previous_guess</code> (<code>str</code>): The previous guess to be rendered</li>
 <li><code>guess_number</code> (<code>int</code>): The number of the guess to be drawn (y-coordinate)</li>
 <li><code>hint</code> (<code>str</code>): The hint string that was generated from that guess</li>
@@ -586,7 +586,7 @@ guess:</p>
 </span><span id="render_game_board-154"><a href="#render_game_board-154"><span class="linenos">154</span></a><span class="sd">    Renders the game board.</span>
 </span><span id="render_game_board-155"><a href="#render_game_board-155"><span class="linenos">155</span></a>
 </span><span id="render_game_board-156"><a href="#render_game_board-156"><span class="linenos">156</span></a><span class="sd">    Parameters:</span>
-</span><span id="render_game_board-157"><a href="#render_game_board-157"><span class="linenos">157</span></a><span class="sd">      * `canvas` (`Canvas`): A canvas to play the game on.</span>
+</span><span id="render_game_board-157"><a href="#render_game_board-157"><span class="linenos">157</span></a><span class="sd">      * `a_canvas` (`Canvas`): A canvas to play the game on.</span>
 </span><span id="render_game_board-158"><a href="#render_game_board-158"><span class="linenos">158</span></a>
 </span><span id="render_game_board-159"><a href="#render_game_board-159"><span class="linenos">159</span></a><span class="sd">    Returns:</span>
 </span><span id="render_game_board-160"><a href="#render_game_board-160"><span class="linenos">160</span></a><span class="sd">      * `None` (Draws to the canvas)</span>
@@ -632,7 +632,7 @@ guess:</p>
 <p>Parameters:</p>
 
 <ul>
-<li><code>canvas</code> (<code>Canvas</code>): A canvas to play the game on.</li>
+<li><code>a_canvas</code> (<code>Canvas</code>): A canvas to play the game on.</li>
 </ul>
 
 <p>Returns:</p>

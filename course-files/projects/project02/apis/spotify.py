@@ -178,7 +178,8 @@ def get_similar_tracks(artist_ids: list = [], track_ids: list = [], genres: list
     Spotify's way of providing recommendations. One or more params is required:
     artist_ids, track_ids, or genres. Up to 5 seed values may be provided in
     any combination of seed_artists, seed_tracks and seed_genres. In other words:
-    len(artist_ids) + len(track_ids) + len(genres) between 1 and 5.
+    len(artist_ids) + len(track_ids) + len(genres) between 1 and 5. You MUST provide
+    at least one seed artist or track.
 
     * `artist_ids` (`list`): A list of artist ids (list of strings).
         * Example: `[ '06HL4z0CvFAxyc27GXpf02', '3Nrfpe0tUJi4K4DXYWgMUX' ]`
