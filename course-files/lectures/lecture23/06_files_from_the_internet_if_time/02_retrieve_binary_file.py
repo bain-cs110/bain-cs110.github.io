@@ -1,4 +1,3 @@
-import utilities
 import ssl # for https requests
 from urllib.request import urlopen
 
@@ -19,8 +18,7 @@ for item in items:
     # print(file_data)
 
     # 3. write it to a file
-    file_path = utilities.get_file_path(file_name, subdirectory='results')
-    f = open(file_path, 'wb')  #note the 'wb' flag (b is for binary)
+    f = open(file_name, 'wb')  #note the 'wb' flag (b is for binary)
     f.write(file_data)
     f.close()
-    print('Binary file written to', file_path, '\nGo take a look!')
+    print('Binary file written to', file_name, '\nGo take a look!')

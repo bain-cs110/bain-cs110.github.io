@@ -1,4 +1,3 @@
-import utilities
 import ssl # for https requests
 from urllib.request import urlopen
 
@@ -12,8 +11,7 @@ file_data = response.read().decode('utf-8', 'ignore')
 # print(file_data)
 
 # 3. write it to a file
-file_path = utilities.get_file_path('data.json', subdirectory='results')
-f = open(file_path, 'w')
+f = open('data.json', 'w')
 f.write(file_data)
 f.close()
 print('Data file written to results/data.json. Go take a look!')
