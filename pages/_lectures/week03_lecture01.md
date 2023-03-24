@@ -1,9 +1,9 @@
 ---
 layout: module
-title: NO CLASS (MLK Day)
+title: Writing Flexible Functions
 type: lecture
 draft: 1
-num: 
+num: 6
 description:
-due_date: 2023-01-16
+due_date: 2023-04-10
 ---

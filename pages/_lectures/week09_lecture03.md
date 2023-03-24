@@ -1,23 +1,8 @@
 ---
 layout: module
 title: "Dictionary Algorithms"
-description: "(Mini-Quiz 5)"
 type: lecture
-draft: 0
-num: 23
-due_date: 2023-03-03
-canvas_id: friday-lecture-23-dictionary-algorithms-mar-3
-exercise_url: "lecture23.zip"
-slides:
-   - url: https://docs.google.com/presentation/d/1zW7k1PZOSZgPdkUocAPLfkhcJ2otxYydfuKhwkRHNyw/edit?usp=sharing
-     title: "Dictionary Algorithms"
-videos:
-   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=883666a0-31ed-4dfd-9e11-af5f014cfe49
-     title: "Live Lecture"
-     duration: "50:00"
-     live: 1
+draft: 1
+num: 24
+due_date: 2023-05-26
 ---
-
-Today we'll continue with our discussion of dictionaries, reviewing their use as a complex data structure and then introducing one last big use-case: as a "brain" for Python.
-
-Dictionaries are powerful data structures to use in the implementation of counting/tallying algorithms. Today, we'll use that idea to count everything from letters, to words, to the number of Restaurant Violations each restaurant in the city of Evanston has.

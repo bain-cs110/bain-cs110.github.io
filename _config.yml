@@ -4,24 +4,25 @@
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-title: "COMP_SCI 110: Winter 2023"
+title: "COMP_SCI 110: Spring 2023"
 subtitle: "Intro to Computer Programming"
 email: connor.bain@northwestern.edu
 description: >- # this means to ignore newlines until "baseurl:"
-term_start_date: "2023-01-02"
+term_start_date: "2023-03-27"
 url: "bain-cs110.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username:
 canvas_id: 185071
-campuswire_url: https://campuswire.com/p/GB09BA912
-canvas_url: https://canvas.northwestern.edu/courses/185071
+canvas_url: https://canvas.northwestern.edu/courses/188272
 timezone: "America/Chicago"
 # Build settings
 markdown: kramdown
 theme: minima
 exclude:
   - _lectures/draft
-  - _assignments/draft
+  - _assignments/exercises/draft
+  - _assignments/tutorials/draft
+  - _assignments/projects/draft
   - course-files/build
 
 collections:

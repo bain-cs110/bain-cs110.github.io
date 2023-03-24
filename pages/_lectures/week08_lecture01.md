@@ -1,21 +1,8 @@
 ---
 layout: module
 title: "Q2 Review"
-description:
 type: lecture
-draft: 0
-num: 19
-exercise_url: "lecture19.zip"
-due_date: 2023-02-20
-canvas_id: monday-lecture-19-q2-review-feb-20
-videos:
-   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=37ffc694-3d31-459b-9ec3-af5f014cfdbb
-     title: "Live Lecture"
-     duration: "50:00"
-     live: 1
-slides:
-   - url: https://docs.google.com/presentation/d/1H5ZOr1uTLVyKxnra6YWgGHuUWMM6vfSN9tvHyRo6Uh8/edit?usp=sharing
-     title: Q2 Review
+draft: 1
+num: 20
+due_date: 2023-05-15
 ---
-
-Today is reserved for talking about and preparing for Quiz 2. I'll come with practice questions for us to work on as a class (I'll demo solving them up front) but feel free to come with specific questions as well. Make sure you have taken a look at the Quiz 2 page on our Canvas page for lots of details on how to study, what resources there are, etc.

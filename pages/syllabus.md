@@ -6,15 +6,15 @@ permalink: /syllabus/
 
 
 |--|--|
-| **Term** | Winter 2023 |
+| **Term** | Spring 2023 |
 | **Course** | COMP_SCI 110: Intro to Computer Programming |
 | **Prerequisites** | None |
 | **Instructor** | Prof. Connor Bain (connor.bain@northwestern.edu) |
-| **Lecture Time** | Section 1/2. Monday, Wednesday, & Friday, 10:00 - 10:50am |
-| **Lecture Location** | [Tech Auditorium](https://www.mccormick.northwestern.edu/contact/tech-room-finder-map.php?id=L165&room-floor=1&room-id=1055&room-ingress=) |
+| **Lecture Time** | Monday, Wednesday, & Friday, 10:00 - 10:50am |
+| **Lecture Location** | [Fisk Hall Rm. 217](https://maps.northwestern.edu/txt/facility/113) |
 | **Required Materials** | _Zero Cost Course_ – (All course materials are open educational resources) |
 
-> Please note that this syllabus is subject to change prior to Jan 3, 2022.
+> Please note that this syllabus is subject to change prior to March 28, 2022.
 
 ## About the Course
 CS 110 is meant as an introduction to the key ideas of computer programming and assumes no prior programming knowledge. In this course, we'll use the programming language Python with two goals: first, we want to give you a sense of the kinds of creative activities, both directed problem-solving and creative pursuits, that programming can support; and two, we want to introduce you to the fundamental constructs (and associated skills and techniques) of computer programming.
@@ -40,7 +40,7 @@ For lecture days, we'll have interactive lectures where we introduce a new topic
 When we assign a pre-recorded lecture, students *must* watch the video before coming to lecture. Organizationally, some topics/modules span multiple lectures.
 
 ### Tutorial / Study Groups
-The best way to learn how to program is by writing lots of programs. To facilitate this, and to provide a more close-knit learning setting within the context of our larger class, you will each take part in weekly tutorial sessions with one of our Peer Mentors (PMs). You will sign up for a Tutorial Group at the end of the first week of class and then, each Wednesday of the quarter, you'll come to class and complete a tutorial with that group and the guidance of a PM/TA.
+The best way to learn how to program is by writing lots of programs. To facilitate this, and to provide a more close-knit learning setting within the context of our larger class, you will each take part in weekly tutorial sessions with one of our Peer Mentors (PMs). You will sign up for a Tutorial Group at the end of the first week of class and then, each week of the quarter, you'll work with your group to complete a tutorial under the guidance of a PM/TA.
 
 By completing the tutorials, you will become familiar with the types of strategies you might use to approach problems (which will be closely related to the homework / projects), push you to write lots of programs, and help you assess what you know and don't know so that you can know when to ask for more help in lecture or in office hours.
 
@@ -60,46 +60,23 @@ Office hours and locations / Zoom links are posted on the shared Google Sheet th
 
 ## Course Staff
 This is a very large class and in order to better support each of your learning goals, we have a huge course staff. Our Peer Mentors (PMs) and TAs serve as your first point of contact in the course and you'll each be assigned to a PM/TA throughout the quarter.
-
 ### Instructor
 * Prof. Connor Bain (connor.bain@northwestern.edu)
 
 ### Graduate Teaching Assitants (TAs)
-* Ammar Gilani
-* Maryam Hedayati
-
+TBD
 ### Undergraduate Peer Mentors (PMs)
-
-* Angeli Mittal
-* Zoryah Gray
-* Si Woo Park
-* Amira Mohamed
-* Jamie Lee
-* Defne Deda
-* Naomi Wu
-* Ugonna Akali
-* Natan Gamliel
-* Sharat Dhananjaya
-* Ana de Souza
-* Victor Chen
-* Lily Ryan
-* Julia Chu
-* Lucas Saidenberg
-* Andres Rojas
-* Randy Truong
-* Lucy Joseph
-
+TBD
 ## Course Grading Policy
 Your course grade is calculated as follows:
 
 {:.medium}
-| **Tutorials**     | 15% |
-| **Mini-Quizzes**  | 5%  |
+| **Tutorials**     | 20% |
 | **Homeworks**     | 25% |
 | **2 Projects**    | 25% |
 | **3 Quizzes**     | 30% |
 
-> There will be approximately 1 tutorial, 1 mini-quiz, and 1 assignment (either homework exercise or project) due per week.
+> There will be approximately 1 tutorial and 1 assignment (either homework exercise or project) due per week.
 
 Final grades are assigned on a fixed scale which is set by the registrar's office:
 
@@ -122,14 +99,9 @@ Final grades are assigned on a fixed scale which is set by the registrar's offic
 
 There will be three cumulative assessments of your knowledge and practice of the course material administered during our assigned class time (50 minutes). There will be no Final Exam outside of these three quizzes.
 
-The three quizzes will be held in Week 5 (Wednesday, February 1), Week 8 (Wednesday, Feb 22), and Week 10 (Friday, March 10th) of the course.
+The three quizzes will be held in Week 5 (???), Week 8 (???), and Week 10 (???) of the course.
 
 > **Note**: because this class is offered by the Computer Science department which is housed in the McCormick School of Engineering, we will still have class during Weinberg's Reading Week.
-
-### Mini-Quizzes
-These will be short quizzes for each module of the course that serve as a check of your attendance and/or asynchronous participation in the course. For those that complete the Mini-Quiz in class, you will receive full credit for your attendance and full participation. If you choose to complete the Mini-Quiz remotely, you will need to complete the Canvas version of the quiz within 48 hours of your scheduled class time.
-
-If you attend class but do not receive credit, you can fill out this [Attendance Petition form](https://docs.google.com/forms/d/e/1FAIpQLSf9MFfVf14aimPxFkniDytGYZsviQ-UNEocYTwTATq_jbbOlQ/viewform?usp=sf_link).
 
 ### Homework Grading
 Homework will be approximately weekly and is due at the Canvas specified date. You will submit your homework assignments on Canvas.
@@ -159,17 +131,14 @@ This course is meant to a be a learning community which requires the dedicated p
 
 If you attend the Tutorial session in-person, work diligently, and make a legitimate attempt (up to the discretion of your Peer Mentor) at completing the assignment, you will receive full-credit. If you choose not to attend in-person, then your assignment will be reviewed for completion _and accuracy_ meaning you may nor may not receive full credit.
 
-If you attend class but do not receive credit, you can fill out this [Attendance Petition form](https://docs.google.com/forms/d/e/1FAIpQLSf9MFfVf14aimPxFkniDytGYZsviQ-UNEocYTwTATq_jbbOlQ/viewform?usp=sf_link).
-
 We will not accept late tutorial submissions.
-
 ### Project Grading
 
 There are two larger programming assignments in the course which we will refer to as Projects. These Projects are a significant portion of your course grade and represent quite a bit more work than the usual homework assignments. These assignments will be graded based on a rubric provided with the assignment description.
 
 Late submissions of Projects *will not be accepted*.
 
-The second project will be due at the start of the university's assigned final exam block for this course which is **Thursday, March 16th at 5pm.**
+The second project will be due at the start of the university's assigned final exam block for this course which is **Tuesday, June 6th at 5pm.**
 
 ## Grading Equity Policies
 
@@ -213,13 +182,11 @@ Please note, you will need a computer capable of running Python 3+ in order to p
 
 > If you are struggling to get Python and your code editor installed, this is (alas) ***normal*** (ask any software engineer). This is also one of the reasons why we have such a big course staff: to troubleshoot individual laptop problems with students.
 
-### Campuswire
-Campuswire is a Question-and-Answer site like Piazza that allows students to ask questions that can then be answered by _either_ Course Staff or other students in the course.
-
-Additionally, we will use Campuswire as a way of allowing students to ask questions during lectures if you do not feel comfortable asking aloud. To facilitate this, we will use the #lecture chat channel.
+### edSTEM
+edSTEM is a Question-and-Answer site like Piazza/Campuswire that allows students to ask questions that can then be answered by _either_ Course Staff or other students in the course.
 
 {:.blockquote-no-margin}
-> To register for the course Campuswire (you will only have to do this once), please use the link on Canvas.
+> To register for the course edSTEM (you will only have to do this once), please use the link on Canvas.
 
 ### Other Questions
 For any other issues that you think are not appropriate for the peer mentors or graduate TA, please talk to Prof. Bain. This might include things like concerns about your progress in the course, questions about content from lectures, personal matters related to your participation in the course, larger grade concerns, advice about future courses, majors, and internships, etc.

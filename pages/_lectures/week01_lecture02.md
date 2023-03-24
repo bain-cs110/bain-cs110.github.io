@@ -4,16 +4,16 @@ title: Hardware and Software
 type: lecture
 description:
 num: 1
-draft: 0
-canvas_id: wednesday-lecture-1-hardware-and-software-january-4
-due_date: 2023-01-04
+draft: 1
+canvas_id: wednesday-lecture-1-hardware-and-software-march-29
+due_date: 2023-03-29
 videos:
-   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fed96bcc-cc6a-4388-9f89-af5f014cfb7a
+   - url: 
      title: "Live Lecture"
      duration: "50:00"
      live: 1
 slides:
-   - url: https://docs.google.com/presentation/d/1oy-5fPUOVKY0jkVxxCvboPWpCndatLXWdQENaWftLso/edit?usp=sharing
+   - url: 
      title: Hardware and Software
 readings:
    - title: "Ch1: Intro to Computing"
