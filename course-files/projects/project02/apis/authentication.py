@@ -7,16 +7,16 @@ except:
     pass
 
 def set_main_apitutor_token():
-    '''Checks to make sure that you have included the API Tutor token in the my_token.py file.'''
+    '''Checks to make sure that you have included the API Tutor token in the secret_tokens.py file.'''
     global API_TUTOR_TOKEN
     try:
-        from apis import my_token
-        API_TUTOR_TOKEN = my_token.API_TUTOR_TOKEN
+        from apis import secret_tokens
+        API_TUTOR_TOKEN = secret_tokens.API_TUTOR_TOKEN
     except:
         title = 'IMPORTANT: You Need an Access Token!'
         error_message = '\n\n\n' + '*' * len(title) + '\n' + \
             title + '\n' + '*' * len(title) + \
-            '\nPlease download the the my_token.py file from Canvas and save it in your apis directory.\n\n'
+            '\nPlease download the the secret_tokens.py file from Canvas and save it in your apis directory.\n\n'
         raise Exception(error_message)
     
 set_main_apitutor_token()

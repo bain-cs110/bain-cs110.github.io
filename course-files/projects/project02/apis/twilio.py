@@ -26,14 +26,14 @@ def send_mail(to_emails: list, subject: str, content: str):
     )
 
     try:
-        from apis import my_token
-        SENDGRID_TOKEN = my_token.SENDGRID_TOKEN
+        from apis import secret_tokens
+        SENDGRID_TOKEN = secret_tokens.SENDGRID_TOKEN
 
     except:
         title = 'IMPORTANT: You Need an Access Token!'
         error_message = '\n\n\n' + '*' * len(title) + '\n' + \
             title + '\n' + '*' * len(title) + \
-            '\nPlease download the the my_token.py file from Canvas and save it in your apis directory.\n\n'
+            '\nPlease download the the secret_tokens.py file from Canvas and save it in your apis directory.\n\n'
         raise Exception(error_message)
     
     try:

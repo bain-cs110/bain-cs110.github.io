@@ -5,10 +5,10 @@ except:
     pass
 
 import requests
-from apis import authentication
+import base64
 
 __all__ = [
-    'get_genres', 'get_genres_abridged', 'get_tracks',
+    'get_genres', 'get_tracks',
     'get_artists', 'get_playlists', 'get_audio_features_by_track',
     'get_related_artists', 'get_top_tracks_by_artist',
     'get_similar_tracks', 'get_playlists_by_user',
@@ -21,28 +21,27 @@ __all__ = [
     'get_album_player_html',
 ]
 
-def get_genres():
+def get_genres(abridged:bool = True):
     '''
     Queries Spotify for a list of available genres.
-    Returns a list of strings representing the genres.
+
+    * `abridged`  (`bool`): 
+
+    Returns a list of strings representing the genres. If `abridged` is True,
+    returns a shortened hard-coded list rather than asking Spotify for the complete list.
     '''
+    if abridged:
+        return [
+            "alternative", "ambient", "blues",
+            "chill", "country", "dance", "electronic", "folk",
+            "funk", "happy", "hip-hop", "indie-pop", "jazz", "k-pop", "metal",
+            "new-release", "pop", "punk", "reggae", "rock",
+            "soul", "study", "trance", "work-out", "world-music"
+        ]
+
     url = 'https://api.spotify.com/v1/recommendations/available-genre-seeds'
     data = _issue_get_request(url)
     return data['genres']
-
-
-def get_genres_abridged():
-    '''
-    Returns a short, hard-coded list of genres (strings). Note that all of the strings in the list must be valid Spotify genres.
-    '''
-    return [
-        "alternative", "ambient", "blues",
-        "chill", "country", "dance", "electronic", "folk",
-        "funk", "happy", "hip-hop", "indie-pop", "jazz", "k-pop", "metal",
-        "new-release", "pop", "punk", "reggae", "rock",
-        "soul", "study", "trance", "work-out", "world-music"
-    ]
-
 
 def get_tracks(search_term: str, simplify: bool = True):
     '''
@@ -416,6 +415,44 @@ def get_formatted_tracklist_table_html(tracks: list):
 ############################################
 # Some private, helper functions utilities #
 ############################################
+
+def _generate_authentication_header():
+
+    try:
+        from apis import secret_tokens
+        client_id = secret_tokens.SPOTIFY_CLIENT_ID
+        client_secret = secret_tokens.SPOTIFY_CLIENT_SECRET
+
+    except:
+        title = 'IMPORTANT: You Need an Access Token!'
+        error_message = '\n\n\n' + '*' * len(title) + '\n' + \
+            title + '\n' + '*' * len(title) + \
+            '\nPlease download the the secret_tokens.py file from Canvas and save it in your apis directory.\n\n'
+        raise Exception(error_message)
+
+    # Step 1 - Authorization
+    auth_url = "https://accounts.spotify.com/api/token"
+    headers = {}
+    data = {}
+
+    # Encode as Base64
+    message = f"{client_id}:{client_secret}"
+    messageBytes = message.encode('ascii')
+    base64Bytes = base64.b64encode(messageBytes)
+    base64Message = base64Bytes.decode('ascii')
+
+    headers['Authorization'] = f"Basic {base64Message}"
+    data['grant_type'] = "client_credentials"
+
+    r = requests.post(auth_url, headers=headers, data=data)
+
+    token = r.json()['access_token']
+    headers = {
+        'Authorization': 'Bearer ' + token
+    }
+
+    return headers
+
 def _issue_get_request(url):
     '''
     Private function. Retrieves data from any Spotify endpoint using the authentication key.
@@ -424,13 +461,9 @@ def _issue_get_request(url):
 
     Returns whatever Spotify's API endpoint gives back.
     '''
-    token = authentication.get_token('https://www.apitutor.org/spotify/key')
-    headers = {
-        'Authorization': 'Bearer ' + token
-    }
+    headers = _generate_authentication_header()
     response = requests.get(url, headers=headers, verify=True)
     return response.json()
-
 
 def _simplify_tracks(tracks: list):
     '''

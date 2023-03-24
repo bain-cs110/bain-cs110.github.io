@@ -1,10 +1,10 @@
 try:
-    import authentication, utilities
+    import utilities
     utilities.modify_system_path()
 except:
     pass
 
-from apis import authentication, utilities
+from apis import utilities, secret_tokens
 import requests
 import textwrap
 
@@ -38,7 +38,7 @@ def _issue_get_request(url:str):
 
     Returns whatever Yelp's API endpoint gives back.
     '''
-    token = authentication.get_token('https://www.apitutor.org/yelp/key')
+    token = secret_tokens.YELP_API_TOKEN
     headers = {
         'Authorization': 'Bearer ' + token
     }

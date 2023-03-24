@@ -1,7 +1,8 @@
 .DS_Store
 *.pyc
 __pycache__/
+_site/course-files/projects/project02/tutorial06.py
 course-files/projects/project02/tutorial06.py
-course-files/projects/project02/apis/my_token.py
-_site/course-files/projects/project02/apis/my_token.py
+course-files/projects/project02/apis/secret_tokens.py
+_site/course-files/projects/project02/apis/secret_tokens.py
 _site/
