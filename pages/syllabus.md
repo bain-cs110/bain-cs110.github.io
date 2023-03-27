@@ -68,6 +68,7 @@ This is a very large class and in order to better support each of your learning 
 
 ### Graduate Teaching Assitants (TAs)
 * Walker Demel
+
 ### Undergraduate Peer Mentors (PMs)
 * Stephanie Ma
 * Angeli Mittal
@@ -166,7 +167,6 @@ Late submissions of Projects *will not be accepted*.
 The second project will be due at the start of the university's assigned final exam block for this course which is **Tuesday, June 6th at 5pm.**
 
 * * *
-
 ## Grading Equity Policies
 
 > The course is specifically designed to be academically equitable to all students when it comes to assessment and has two special policies related to grading: 1. An _emergency erasure policy_; 2. A _deliberate extension policy_.
