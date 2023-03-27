@@ -67,9 +67,22 @@ This is a very large class and in order to better support each of your learning 
 * Prof. Connor Bain (connor.bain@northwestern.edu)
 
 ### Graduate Teaching Assitants (TAs)
-TBD
+* Walker Demel
 ### Undergraduate Peer Mentors (PMs)
-TBD
+* Stephanie Ma
+* Angeli Mittal
+* Amira Mohamed
+* Andres Rojas
+* Defne Deda
+* Julia Chu
+* Kathleen Lee
+* Lev Rosenberg
+* Natan Gamliel
+* Nicole Tartakovsky
+* Si Woo Park
+* Victor Chen
+* Vikram Achuthan
+* Zoryah Gray
 
 * * *
 ## Course Grading Policy
@@ -126,6 +139,7 @@ If your program does not run, you will not receive full credit no matter how sma
 You will receive your assignment grades on Canvas within a week of your submission.
 
 ### Mini-Quizzes
+
 These will be short quizzes for each module of the course that serve as a check of your attendance and/or asynchronous participation in the course. For those that complete the Mini-Quiz in class, you will receive full credit for your attendance and full participation. If you choose to complete the Mini-Quiz remotely, you will need to complete the Canvas version of the quiz within 60 hours of your scheduled class time.
 
 If you attend class but do not receive credit, you can fill out this [Attendance Petition form](https://docs.google.com/forms/d/e/1FAIpQLSf9MFfVf14aimPxFkniDytGYZsviQ-UNEocYTwTATq_jbbOlQ/viewform?usp=sf_link).
