@@ -25,6 +25,8 @@ The second goal of the course is to introduce you to the fundamental constructs 
 
 Taking this course means committing — for 10 weeks — to attending lectures, tutorials, and office hours, turning in assignments / projects, doing (lots of) practice problems, and most importantly, persevering when things get difficult. Asking questions throughout the class is not a sign of weakness–it shows that you are actively trying to understand what you know and what you do not know. We have an excellent staff of teaching assistants and peer mentors who are here to answer your questions, help you understand course material in different ways, and push you to your fullest learning potential. With your consistent and _active_ participation in learning, you can navigate the material in the course and become a proficient programmer by the end of the quarter.
 
+* * *
+
 ## Course Format
 
 While some of our reserved class periods will be used for **interactive lectures** where new concepts will be introduced, other days will be reserved for in-depth **tutorials** where students will be expected to review course materials (recorded lecture videos, slides, and notes) **before** the class period and during class we will work in small groups to complete an in-depth programming assignment.
@@ -58,6 +60,7 @@ Office hours are meant to be a time where you can ask questions that you need an
 
 Office hours and locations / Zoom links are posted on the shared Google Sheet that we used to signup for tutorials. It's also linked on our Canvas home page. Some office hours will be in person. Others will be virtual.
 
+* * *
 ## Course Staff
 This is a very large class and in order to better support each of your learning goals, we have a huge course staff. Our Peer Mentors (PMs) and TAs serve as your first point of contact in the course and you'll each be assigned to a PM/TA throughout the quarter.
 ### Instructor
@@ -67,16 +70,19 @@ This is a very large class and in order to better support each of your learning 
 TBD
 ### Undergraduate Peer Mentors (PMs)
 TBD
+
+* * *
 ## Course Grading Policy
 Your course grade is calculated as follows:
 
 {:.medium}
-| **Tutorials**     | 20% |
+| **Tutorials**     | 15% |
+| **Mini-Quizzes**  | 5%  |
 | **Homeworks**     | 25% |
 | **2 Projects**    | 25% |
 | **3 Quizzes**     | 30% |
 
-> There will be approximately 1 tutorial and 1 assignment (either homework exercise or project) due per week.
+> There will be approximately 1 tutorial, 1 mini-quiz, and 1 assignment (either homework exercise or project) due per week.
 
 Final grades are assigned on a fixed scale which is set by the registrar's office:
 
@@ -99,7 +105,7 @@ Final grades are assigned on a fixed scale which is set by the registrar's offic
 
 There will be three cumulative assessments of your knowledge and practice of the course material administered during our assigned class time (50 minutes). There will be no Final Exam outside of these three quizzes.
 
-The three quizzes will be held in Week 5 (???), Week 8 (???), and Week 10 (???) of the course.
+The three quizzes will be held in Week 5 (April 26), Week 8 (May 17), and Week 10 (June 2) of the course.
 
 > **Note**: because this class is offered by the Computer Science department which is housed in the McCormick School of Engineering, we will still have class during Weinberg's Reading Week.
 
@@ -113,11 +119,16 @@ We do not accept resubmissions of assignments. This means it is up to you to ver
 2. That your program runs without intervention (except those assignments that ask for human input).
 3. That your program is NOT dependent on running on _your specific_ computer.
 
-If you are submitting a partially complete assignment, please include a file (or a Canvas comment) that explains which parts of the assignment you completed and which parts you did not. If you were having a specific problem with completing that part of the assignment (other than "ran out of time"), make sure to describe what you tried and why you were unable to fix it.
+If you are submitting a partially complete assignment, please a Canvas comment that explains which parts of the assignment you completed and which parts you did not. If you were having a specific problem with completing that part of the assignment (other than "ran out of time"), make sure to describe what you tried and why you were unable to fix it.
 
 If your program does not run, you will not receive full credit no matter how small the error.
 
-You will receive your assignment grades on Canvas within a week of your submission. On occasion, your grader may make an error on an assignment. If you have any grading questions/concerns, please comment on the assignment in Canvas within 1 week of the grades being released. Please do not email course staff about grade discrepancies.
+You will receive your assignment grades on Canvas within a week of your submission.
+
+### Mini-Quizzes
+These will be short quizzes for each module of the course that serve as a check of your attendance and/or asynchronous participation in the course. For those that complete the Mini-Quiz in class, you will receive full credit for your attendance and full participation. If you choose to complete the Mini-Quiz remotely, you will need to complete the Canvas version of the quiz within 60 hours of your scheduled class time.
+
+If you attend class but do not receive credit, you can fill out this [Attendance Petition form](https://docs.google.com/forms/d/e/1FAIpQLSf9MFfVf14aimPxFkniDytGYZsviQ-UNEocYTwTATq_jbbOlQ/viewform?usp=sf_link).
 
 ### Tutorial Grading
 
@@ -140,6 +151,8 @@ Late submissions of Projects *will not be accepted*.
 
 The second project will be due at the start of the university's assigned final exam block for this course which is **Tuesday, June 6th at 5pm.**
 
+* * *
+
 ## Grading Equity Policies
 
 > The course is specifically designed to be academically equitable to all students when it comes to assessment and has two special policies related to grading: 1. An _emergency erasure policy_; 2. A _deliberate extension policy_.
@@ -148,14 +161,14 @@ These two policies are provided to accommodate the myriad situations that studen
 
 ### Deliberate Extension Policy
 
-The _deliberate extension policy_ applies ONLY to **Homeworks** and is meant to accommodate students who may have a particular week during the quarter where they are unable to complete the assigned Exercise on-time. Students may apply (using a Google Form included at the bottom of each assignment) and receive a waiver of the late penalty on assignments:
+The _deliberate extension policy_ applies ONLY to **Homeworks** and is meant to accommodate students who may have a particular week during the quarter where they are unable to complete the assigned homework on-time. Students may apply (using a Google Form included at the bottom of each assignment) and receive a waiver of the late penalty on assignments:
 
-* Students **must** request the extension via the form at least 24 hours in advance of the Exercise deadline.
-* Students **may not** request extensions on consecutive assignments.
+* Students **must** request the extension via the form at least 24 hours in advance of the homework deadline.
+* Students **may not** request more than 2 extensions in a quarter.
 
 The policy is _deliberate_ in that you, as a student, must actively consider at least 24 hours in advance of the deadline that you will need extra time to complete this assignment. We do not allow consecutive extensions. If you find yourself needing extra time on consecutive assignments, this is a good sign that you need to reach out to someone on the Course Staff for help.
 
-There will be no exceptions to this policy. Once you are granted an extension, it cannot be voided.
+There will be no exceptions to this policy. Once you apply for a valid extension, it cannot be voided.
 
 No assignments are accepted after 48 hours. This policy does not extend the final due date, it only waives the late penalty.
 
@@ -167,12 +180,14 @@ The _emergency grade erasure policy_ acknowledges that often times life situatio
 * Your lowest tutorial score (including 0s) is dropped
   * _You may not drop the final tutorial_ (in Week 10).
 * Your lowest **homework** score (including 0s) is dropped.
-* You may NOT drop mini-quiz or project scores.
+* Your lowest **mini-quiz** score (including 0s) is dropped.
+* You may **NOT** drop project scores.
 
 If you _choose_ to drop an assignment early in the quarter only to find yourself in an emergency situation later in the quarter, you will need to reach out to your Dean of Students in order to arrange for flexibility across all of your coursework.
 
 This policy will be automatically applied at the end of the quarter for all students. No action is required on your part.
 
+* * *
 ## Course Materials and Resources
 
 ### Course Software
@@ -196,6 +211,8 @@ For any other issues that you think are not appropriate for the peer mentors or 
 * <a href="https://www.py4e.com/">Python for Everyone</a>, by Chuck Severance
 * <a href="http://openbookproject.net/thinkcs/python/english3e/">How to think like a Computer Scientist</a>, by Peter Wentworth, Jeffrey Elkner, Allen B. Downey, and Chris Meyers
 
+* * *
+
 ## Policy on Academic Honesty
 In the past, there have been incidents in which students have presented work other than their own. For the programming assignments: you are allowed (encouraged, even!) to discuss general approaches to solving problems, but all work you submit must be your own. Working “together” and presenting variants of the same file is not acceptable. Here are some specific guidelines to make sure you don’t cross the line:
 
@@ -206,17 +223,25 @@ In the past, there have been incidents in which students have presented work oth
 
 Contact Prof. Bain if you have any questions about what is appropriate. Please note that all suspected incidents of violating the Academic Integrity of the course will be reported immediately to the Dean of Students.
 
+* * *
+
 ## Academic Integrity
 Students in this course are required to comply with the policies found in the booklet, "Academic Integrity at Northwestern University: A Basic Guide". All papers submitted for credit in this course must be submitted electronically unless otherwise instructed by the professor. Your written work may be tested for plagiarized content. For details regarding academic integrity at Northwestern or to download the guide, visit: <a href="https://www.northwestern.edu/provost/policies-procedures/academic-integrity/index.html" target="_blank">https://www.northwestern.edu/provost/policies-procedures/academic-integrity/index.html</a>.
+
+* * *
 
 ## Accessibility
 Northwestern University is committed to providing the most accessible learning environment as possible for students with disabilities. Should you anticipate or experience disability-related barriers in the academic setting, please contact AccessibleNU to move forward with the university’s established accommodation process (e: accessiblenu@northwestern.edu; p: 847-467-5530). If you already have established accommodations with AccessibleNU, please let me know as soon as possible, preferably within the first two weeks of the term, so we can work together to implement your disability accommodations. Disability information, including academic accommodations, is confidential under the Family Educational Rights and Privacy Act.
 
 All accommodation requests must be processed through AccessibleNU.
 
+* * *
+
 ## Statement of Inclusivity
 
 This course strives to be an inclusive learning community–respectful of those with differing backgrounds and beliefs. As a community, we aim to be respectful to all learners in this class, regardless of race, ethnicity, socio-economic status, religion, gender identity, or sexual orientation. There will be an optional survey administered at the beginning of the quarter asking you to provide the name and pronouns that you use. This information will be shared with all members of the instructional staff. You are welcome to correct us on your name or preferred pronouns if a mistake is made. If you have concerns, please contact Prof. Bain.
+
+* * *
 
 ## Wellness and Mental Health
 Northwestern University is committed to supporting the wellness of our students. Student Affairs has multiple resources to support student wellness and mental health. If you are feeling distressed or overwhelmed, please reach out for help. Students can access confidential resources through the Counseling and Psychological Services (CAPS), Religious and Spiritual Life (RSL) and the Center for Awareness, Response and Education (CARE). Additional information on all of the resources mentioned above can be found here:
@@ -224,6 +249,8 @@ Northwestern University is committed to supporting the wellness of our students.
 * [https://www.northwestern.edu/counseling/](https://www.northwestern.edu/counseling/)
 * [https://www.northwestern.edu/religious-life/](https://www.northwestern.edu/religious-life/)
 * [https://www.northwestern.edu/care/](https://www.northwestern.edu/care/)
+
+* * *
 
 ## COVID-19 Classroom Expectations
 Students, faculty, and staff must comply with University expectations regarding appropriate classroom behavior, including those outlined below and in the [COVID-19 Code of Conduct](https://www.northwestern.edu/communitystandards/about-us/northwestern-university-student-expectations-covid-19-code-of-conduct.html). With respect to classroom procedures, this includes:
@@ -234,10 +261,14 @@ Students, faculty, and staff must comply with University expectations regarding 
 
 If a student fails to comply with the [COVID-19 Code of Conduct](https://www.northwestern.edu/communitystandards/about-us/northwestern-university-student-expectations-covid-19-code-of-conduct.html) or other University expectations related to COVID-19, the instructor may ask the student to leave the class. The instructor is asked to report the incident to the Office of Community Standards for additional follow-up.
 
+* * *
+
 ## COVID-19 Testing Compliance
 To protect the health of our community, Northwestern University requires unvaccinated students who are in on-campus programs to be tested for COVID-19 twice per week.
 
 Students who fail to comply with current or future COVID-19 testing protocols will be referred to the Office of Community standards to face disciplinary action, including escalation up to restriction from campus and suspension.
+
+* * *
 
 ## Course Recording Policy
 Unauthorized student recording of classroom or other academic activities (including advising sessions or office hours) is prohibited. Unauthorized recording is unethical and may also be a violation of University policy and state law. Students requesting the use of assistive technology as an accommodation should contact AccessibleNU. Unauthorized use of classroom recordings — including distributing or posting them — is also prohibited.  
@@ -246,7 +277,9 @@ Under the University’s Copyright Policy, faculty own the copyright to instruct
 
 This class or portions of this class will be recorded by the instructor for educational purposes. Your instructor will communicate how members of the class can access the recordings. Portions of the course that contain images, questions or commentary/discussion by students will be edited out of any recordings that are saved beyond the current term.
 
-### Exceptions to Class Modality
+* * *
+
+## Exceptions to Class Modality
 Class sessions for this course will occur in person. Individual students will not be granted permission to attend remotely except as the result of an Americans with Disabilities Act (ADA) accommodation as determined by AccessibleNU.
 
 Maintaining the health of the community remains our priority.  If you are experiencing any symptoms of COVID do not attend class and update your Symptom Tracker application right away to connect with Northwestern’s Case Management Team for guidance on next steps. Also contact the instructor as soon as possible to arrange to complete coursework.
