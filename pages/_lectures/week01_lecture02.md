@@ -7,6 +7,11 @@ num: 1
 draft: 0
 canvas_id: wednesday-lecture-1-hardware-and-software-march-29
 due_date: 2023-03-29
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dbaeb7f2-ed4b-47cf-925f-afd20160014a
+     title: "Live Lecture"
+     duration: "50:00"
+     live: 1
 slides:
    - url: https://docs.google.com/presentation/d/1tCgyzceXOs0mgFH-rRhYTGQXAXJpkTWIVVT2LZDpmBg/edit?usp=sharing
      title: Hardware and Software
