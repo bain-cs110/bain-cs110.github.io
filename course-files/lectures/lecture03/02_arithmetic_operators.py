@@ -18,6 +18,7 @@ print('abc' + 'defg')  # in the context of a string, the + sign concatenates two
 print("Hello" + "there") # Don't forget...it won't add a space unless you tell it to!
 print("Hello " + "there")
 
+
 # Note: not all operators work with all datatypes.
 # Uncomment the line below to see what happens.
 # print('34' - '34')
