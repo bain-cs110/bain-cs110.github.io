@@ -28,7 +28,7 @@ permalink: /resources/staff-directory/
     <li><a><img src="/assets/images/directory/connor.jpg">
         <span><h3>Connor Bain</h3><h4>Instructor</h4></span>
     </a></li>
-    <li><a><img src="/assets/images/directory/defne.webp">
+    <li><a><img src="/assets/images/directory/defne.jpg">
         <span><h3>Defne Deda</h3><h4>Peer Mentor</h4></span>
     </a></li>
     <li><a><img src="/assets/images/directory/julia.jpg">
