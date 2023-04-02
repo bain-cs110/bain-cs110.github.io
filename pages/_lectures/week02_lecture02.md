@@ -12,8 +12,8 @@ videos:
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=19165232-5c3d-4481-af09-af85002d2dbd
      title: "What is a function?"
      duration: "4:02"
-   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a493527b-f203-4aa9-83fb-af85002cbc54
-     title: "Syntax of Calling Functions (**MINI-QUIZ 0**)"
+   - url: https://canvas.northwestern.edu/courses/188272/assignments/1233441
+     title: "Syntax of Calling Functions (<b>MINI-QUIZ 0</b>)"
      duration: "9:43"
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=14a89b6a-5666-4217-8f9a-af85002d082c
      title: "Using the `print` Function?"
