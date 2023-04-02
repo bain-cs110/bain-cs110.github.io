@@ -7,8 +7,8 @@ permalink: /resources/staff-directory/
 <style>
    ul.profiles {margin:0 auto; padding:0; list-style:none;}
    ul.profiles a {display:block; border:none; outline:none; text-decoration:none;}
-   ul.profiles li {margin:0 0 5px 0; padding:0; width:300px; display:block; float:left; border:none; outline:none; overflow:hidden;}
-   ul.profiles li img {object-position: 0 0; object-fit: cover; margin:0 auto; padding:10px 10px 0 10px; width:275px; height:275px; opacity:0.9;}
+   ul.profiles li {margin:0 0 5px 0; padding:0; width:250px; display:block; float:left; border:none; outline:none; overflow:hidden;}
+   ul.profiles li img {object-position: 0 0; object-fit: cover; margin:0 auto; padding:10px 10px 0 10px; width:250px; height:250px; opacity:0.9;}
    ul.profiles li:hover img {opacity:1.0; padding:0 10px 10px 10px;}
    ul.profiles li span {margin-top:-20px; padding:10px; position:relative; border-top:1px solid #ccc; width:100%; display:block; background-color:#fff;}
    ul.profiles h3 {margin:0; padding:0; color:#000; opacity:0.6; font-size:20px; line-height:18px; text-shadow:0px 0px 1px #eee; font-weight:normal; -webkit-transition-delay:0s; -webkit-transition-duration: 0.1s;}
