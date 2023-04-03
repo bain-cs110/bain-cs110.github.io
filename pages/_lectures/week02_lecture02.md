@@ -12,14 +12,15 @@ videos:
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=19165232-5c3d-4481-af09-af85002d2dbd
      title: "What is a function?"
      duration: "4:02"
-   - url: https://canvas.northwestern.edu/courses/188272/assignments/1233441
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1e7a9e1f-e378-4b25-8deb-afd8015857f9
      title: "Syntax of Calling Functions (<b>MINI-QUIZ 0</b>)"
      duration: "9:43"
+     live: 1
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=14a89b6a-5666-4217-8f9a-af85002d082c
      title: "Using the `print` Function?"
      duration: "7:34"
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=90475dce-ebd6-4db1-9ad1-af85002cbcd6
-     title: "Sytnax of Reporters"
+     title: "Syntax of Reporters (<b>PANOPTO LOG AUDIT</b>)"
      duration: "3:40"
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b0793bb9-c084-4423-ada5-af85002cbd02
      title: "Using the `input` Function"
@@ -38,6 +39,9 @@ readings:
      source: "Python for Everybody"
 
 ---
+
+> **REMINDER**: For the recording with the mini-quiz built in, you can't use the "button" link. Instead, use the Canvas button at the very bottom of the page that says `Load Mini-Quiz ...`. If you get an error saying "cannot access" or "video not available" make sure to try going to the Panopto "tab" on Canvas (left menu bar - `Panopto`) which will "authenticate you" in Panopto's system.
+
 In today's pre-recorded lecture, we're talking about how to use functions! By the end of the videos and practice files, you should be able to:
 
 1. Use a built-in function
