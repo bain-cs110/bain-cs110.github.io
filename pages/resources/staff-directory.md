@@ -20,6 +20,9 @@ permalink: /resources/staff-directory/
 
 <ul class = "profiles">
     <li><a><img src="/assets/images/directory/andres.jpg">
+        <span><h3>Amira Mohamed</h3><h4>Peer Mentor</h4></span>
+    </a></li>
+    <li><a><img src="/assets/images/directory/andres.jpg">
         <span><h3>Andrés Rojas</h3><h4>Peer Mentor</h4></span>
     </a></li>
     <li><a><img src="/assets/images/directory/angeli.jpg">
