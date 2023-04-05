@@ -12,8 +12,8 @@ videos:
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=19165232-5c3d-4481-af09-af85002d2dbd
      title: "What is a function?"
      duration: "4:02"
-   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=1e7a9e1f-e378-4b25-8deb-afd8015857f9
-     title: "Syntax of Calling Functions (<b>MINI-QUIZ 0</b>)"
+   - url: 
+     title: "Syntax of Calling Functions (<b>MINI-QUIZ 0 - USE LOAD BUTTON AT BOTTOM OF SCREEN</b>)"
      duration: "9:43"
      live: 1
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=14a89b6a-5666-4217-8f9a-af85002d082c
