@@ -7,6 +7,11 @@ num: 2
 canvas_id: friday-lecture-2-writing-programs-march-31
 description:
 due_date: 2023-03-31
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=652de9b2-0c52-4eb1-a74c-afd20160017b
+     title: "Lecture Recording"
+     duration: "50:00"
+     live: 1
 slides:
    - url: https://docs.google.com/presentation/d/1lq5vQvSWUtKlcyeOnMRY9CQh_YY4JZy-IDZrrZzOfEQ/edit?usp=sharing
      title: "Writing Programs"

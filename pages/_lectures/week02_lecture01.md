@@ -8,6 +8,11 @@ description:
 due_date: 2023-04-03
 canvas_id: monday-lecture-3-data-types-operators-and-variables-april-3
 exercise_url: lecture03.zip
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8291a3b5-e05e-484b-a512-afd2016001a8
+     title: "Lecture Recording"
+     duration: "50:00"
+     live: 1
 slides:
    - url: https://docs.google.com/presentation/d/1Ddk28_d0Z0nBmb8zmtU7q9Iqs3NUA_innWL-ma3MwCk/edit?usp=sharing
      title: Data Types, Operators, and Variables
