@@ -3,7 +3,7 @@
 # ----------------------------------------------------
 # function definition:
 def say_hello():
-    print('Hello there!')
+    print('Hello there, Obi-wan!')
     print('How are you this morning?')
 
 # function call (always does the same thing):
