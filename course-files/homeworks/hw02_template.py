@@ -1,6 +1,6 @@
 '''
 Documentation: https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/canvas.html
-Color Picker: https://coolors.co/
+Color Picker: https://coolors.co/ # spring 2023
 '''
 from tkinter import Canvas, Tk
 gui = Tk()
@@ -61,6 +61,7 @@ def make_grid(c, w, h):
     for i in range(0, h, interval):
         c.create_line(0, i, w, i, tag='grid_line')
 
+    # spring 2023 marker
     # Creates axis labels
     offset = 2
     for y in range(0, h, interval):

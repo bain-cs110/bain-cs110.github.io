@@ -4,6 +4,7 @@ title: "Practice with Functions and Tkinter"
 type: lecture
 draft: 0
 num: 7
+canvas_id: 
 due_date: 2023-04-12
 exercise_url: "lecture07.zip"
 videos:

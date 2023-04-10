@@ -7,7 +7,7 @@ num: 6
 due_date: 2023-04-10
 exercise_url: "lecture06.zip"
 description:
-canvas_id: lecture-6-writing-flexible-functions
+canvas_id: monday-lecture-6-writing-flexible-functions
 slides:
   - url: https://docs.google.com/presentation/d/16ldSczIOl1A7A8PrwzXncsyaRTiWVADr17cefzbWTWw/edit?usp=sharing
     title: Writing Flexible Functions
