@@ -17,6 +17,13 @@ the_canvas.create_rectangle(
     fill="blue")
 
 
+# ?#!#?# SQUAREFACE CHALLENGE
+
+
+
+
+
+
 ##?#!#?# PICTUREFRAME CHALLENGE
 
 
