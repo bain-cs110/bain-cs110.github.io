@@ -82,7 +82,7 @@ Here's the official documentation of the `create_oval` method:
 > 1. `int`: a bottom-left corner x-coordinate
 > 2. `int`: a bottom-left corner y-coordinate
 > 3. `int`: a top-right corner x-coordinate
-> 4. `int`: a top-right corner x-coordinate
+> 4. `int`: a top-right corner y-coordinate
 >
 > and one **optional** argument:
 >
@@ -108,7 +108,7 @@ Your `make_oval` function will use `create_oval` but accept the following argume
 1. **radius_y (int)**: specifies the radius of the oval in the y-direction.
 1. **color (str, optional)**: represents the color of the oval, defaults to `"hot pink"`.
 
-**Your job**: Currently, the `create_oval` function has the correct function header, but always draws a hard-coded oval with a bottom-left coordinate of (100, 100), and a top-right coordinate of (200, 150) — which effectively draws it at a centerpoint of (150, 125), with an x-radius of 50 and a y-radius of 25. Don't believe me? Try changing the function call on line 24. When you change the inputs...does the oval change? Your job is to modify the code so that the top-left (x, y) and bottom-right (x, y) coordinates are calculated based on the radius_x, radius_y and center point specified by the arguments; and that the fill color is determined by the `color` argument. 
+**Your job**: Currently, the `create_oval` function has the correct function header, but always draws a hard-coded oval with a bottom-left coordinate of (100, 100), and a top-right coordinate of (200, 150) — which effectively draws it at a centerpoint of (150, 125), with an x-radius of 50 and a y-radius of 25. Don't believe me? Try changing the function call on line 24. When you change the inputs...does the oval change? Your job is to modify the code so that the bottom-left (x, y) and top-right (x, y) coordinates are calculated based on the radius_x, radius_y and center point specified by the arguments; and that the fill color is determined by the `color` argument. 
 
 Here's some tests for your `make_oval` function (the image you should see can be seen below):
 
