@@ -63,13 +63,13 @@ Office hours and locations / Zoom links are posted on the shared Google Sheet th
 * * *
 ## Course Staff
 This is a very large class and in order to better support each of your learning goals, we have a huge course staff. Our Peer Mentors (PMs) and TAs serve as your first point of contact in the course and you'll each be assigned to a PM/TA throughout the quarter.
-### Instructor
+#### Instructor
 * Prof. Connor Bain (connor.bain@northwestern.edu)
 
-### Graduate Teaching Assitants (TAs)
+#### Graduate Teaching Assitants (TAs)
 * Walker Demel
 
-### Undergraduate Peer Mentors (PMs)
+#### Undergraduate Peer Mentors (PMs)
 * Stephanie Ma
 * Angeli Mittal
 * Amira Mohamed
@@ -201,6 +201,28 @@ If you _choose_ to drop an assignment early in the quarter only to find yourself
 
 This policy will be automatically applied at the end of the quarter for all students. No action is required on your part.
 
+## Accessibility
+
+Northwestern University is committed to providing the most accessible learning environment as possible for students with disabilities. Should you anticipate or experience disability-related barriers in the academic setting, please contact AccessibleNU to move forward with the university’s established accommodation process (e: accessiblenu@northwestern.edu; p: 847-467-5530). If you already have established accommodations with AccessibleNU, please let me know as soon as possible, preferably within the first two weeks of the term, so we can work together to implement your disability accommodations. Disability information, including academic accommodations, is confidential under the Family Educational Rights and Privacy Act.
+
+All accommodation requests must be processed through AccessibleNU.
+
+* * *
+
+## Statement of Inclusivity
+
+This course strives to be an inclusive learning community–respectful of those with differing backgrounds and beliefs. As a community, we aim to be respectful to all learners in this class, regardless of race, ethnicity, socio-economic status, religion, gender identity, or sexual orientation. There will be an optional survey administered at the beginning of the quarter asking you to provide the name and pronouns that you use. This information will be shared with all members of the instructional staff. You are welcome to correct us on your name or preferred pronouns if a mistake is made. If you have concerns, please contact Prof. Bain.
+
+* * *
+
+## Wellness and Mental Health
+
+Northwestern University is committed to supporting the wellness of our students. Student Affairs has multiple resources to support student wellness and mental health. If you are feeling distressed or overwhelmed, please reach out for help. Students can access confidential resources through the Counseling and Psychological Services (CAPS), Religious and Spiritual Life (RSL) and the Center for Awareness, Response and Education (CARE). Additional information on all of the resources mentioned above can be found here:
+
+* [https://www.northwestern.edu/counseling/](https://www.northwestern.edu/counseling/)
+* [https://www.northwestern.edu/religious-life/](https://www.northwestern.edu/religious-life/)
+* [https://www.northwestern.edu/care/](https://www.northwestern.edu/care/)
+
 * * *
 ## Course Materials and Resources
 
@@ -217,7 +239,6 @@ edSTEM is a Question-and-Answer site like Piazza/Campuswire that allows students
 {:.blockquote-no-margin}
 > To register for the course edSTEM (you will only have to do this once), please use the link on Canvas.
 
-### Other Questions
 For any other issues that you think are not appropriate for the peer mentors or graduate TA, please talk to Prof. Bain. This might include things like concerns about your progress in the course, questions about content from lectures, personal matters related to your participation in the course, larger grade concerns, advice about future courses, majors, and internships, etc.
 
 ### Supplementary Materials (optional)
@@ -235,55 +256,23 @@ In the past, there have been incidents in which students have presented work oth
 * While working with other students, it is perfectly acceptable to ‘look’ at each other’s code (perhaps while helping someone to debug), but you should NEVER be scribing (typing or writing) your own work while looking at someone else’s (on a computer screen, paper, whiteboard, etc.).
 * Uploading materials from this course to websites that sell such content to students is prohibited by Northwestern’s academic integrity policies, and may also put you at risk for violating copyright policies in Northwestern’s Student Conduct Code.
 
-Contact Prof. Bain if you have any questions about what is appropriate. Please note that all suspected incidents of violating the Academic Integrity of the course will be reported immediately to the Dean of Students.
-
-* * *
-
-## Academic Integrity
 Students in this course are required to comply with the policies found in the booklet, "Academic Integrity at Northwestern University: A Basic Guide". All papers submitted for credit in this course must be submitted electronically unless otherwise instructed by the professor. Your written work may be tested for plagiarized content. For details regarding academic integrity at Northwestern or to download the guide, visit: <a href="https://www.northwestern.edu/provost/policies-procedures/academic-integrity/index.html" target="_blank">https://www.northwestern.edu/provost/policies-procedures/academic-integrity/index.html</a>.
 
-* * *
-
-## Accessibility
-Northwestern University is committed to providing the most accessible learning environment as possible for students with disabilities. Should you anticipate or experience disability-related barriers in the academic setting, please contact AccessibleNU to move forward with the university’s established accommodation process (e: accessiblenu@northwestern.edu; p: 847-467-5530). If you already have established accommodations with AccessibleNU, please let me know as soon as possible, preferably within the first two weeks of the term, so we can work together to implement your disability accommodations. Disability information, including academic accommodations, is confidential under the Family Educational Rights and Privacy Act.
-
-All accommodation requests must be processed through AccessibleNU.
-
-* * *
-
-## Statement of Inclusivity
-
-This course strives to be an inclusive learning community–respectful of those with differing backgrounds and beliefs. As a community, we aim to be respectful to all learners in this class, regardless of race, ethnicity, socio-economic status, religion, gender identity, or sexual orientation. There will be an optional survey administered at the beginning of the quarter asking you to provide the name and pronouns that you use. This information will be shared with all members of the instructional staff. You are welcome to correct us on your name or preferred pronouns if a mistake is made. If you have concerns, please contact Prof. Bain.
-
-* * *
-
-## Wellness and Mental Health
-Northwestern University is committed to supporting the wellness of our students. Student Affairs has multiple resources to support student wellness and mental health. If you are feeling distressed or overwhelmed, please reach out for help. Students can access confidential resources through the Counseling and Psychological Services (CAPS), Religious and Spiritual Life (RSL) and the Center for Awareness, Response and Education (CARE). Additional information on all of the resources mentioned above can be found here:
-
-* [https://www.northwestern.edu/counseling/](https://www.northwestern.edu/counseling/)
-* [https://www.northwestern.edu/religious-life/](https://www.northwestern.edu/religious-life/)
-* [https://www.northwestern.edu/care/](https://www.northwestern.edu/care/)
+Contact Prof. Bain if you have any questions about what is appropriate. Please note that all suspected incidents of violating the Academic Integrity of the course will be reported immediately to the Dean of Students.
 
 * * *
 
 ## COVID-19 Classroom Expectations
 Students, faculty, and staff must comply with University expectations regarding appropriate classroom behavior, including those outlined below and in the [COVID-19 Code of Conduct](https://www.northwestern.edu/communitystandards/about-us/northwestern-university-student-expectations-covid-19-code-of-conduct.html). With respect to classroom procedures, this includes:
+
 * Policies regarding masking and social distancing evolve as the public health situation changes. Students are responsible for understanding and complying with current masking, testing, Symptom Tracking, and social distancing requirements.
 * In some classes, masking and/or social distancing may be required as a result of an Americans with Disabilities Act (ADA) accommodation for the instructor or a student in the class even when not generally required on campus. In such cases, the instructor will notify the class.
-* No food is allowed inside classrooms. Drinks are permitted, but please keep your face covering on and use a straw.
-* Faculty may assign seats in some classes to help facilitate contact tracing in the event that a student tests positive for COVID-19. Students must sit in their assigned seats.
 
 If a student fails to comply with the [COVID-19 Code of Conduct](https://www.northwestern.edu/communitystandards/about-us/northwestern-university-student-expectations-covid-19-code-of-conduct.html) or other University expectations related to COVID-19, the instructor may ask the student to leave the class. The instructor is asked to report the incident to the Office of Community Standards for additional follow-up.
 
-* * *
-
-## COVID-19 Testing Compliance
-To protect the health of our community, Northwestern University requires unvaccinated students who are in on-campus programs to be tested for COVID-19 twice per week.
-
-Students who fail to comply with current or future COVID-19 testing protocols will be referred to the Office of Community standards to face disciplinary action, including escalation up to restriction from campus and suspension.
+> **REMINDER**: All the materials for this class are available via Canvas and all attendance-based grades can be replaced by Canvas activities (with the exception of our in-class Quizzes). **If you do not feel well then please, for the saftey of our community, do not attend class.** If you are unsure of how to complete the activities on Canvas, please reach out to Prof. Bain or post on edSTEM.
 
 * * *
-
 ## Course Recording Policy
 Unauthorized student recording of classroom or other academic activities (including advising sessions or office hours) is prohibited. Unauthorized recording is unethical and may also be a violation of University policy and state law. Students requesting the use of assistive technology as an accommodation should contact AccessibleNU. Unauthorized use of classroom recordings — including distributing or posting them — is also prohibited.  
 
