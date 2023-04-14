@@ -8,6 +8,11 @@ due_date: 2023-04-10
 exercise_url: "lecture06.zip"
 description:
 canvas_id: monday-lecture-6-writing-flexible-functions
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5e31267e-df18-4241-8174-afd201600229&start=60
+     title: "Lecture Recording"
+     duration: "50:00"
+     live: 1
 slides:
   - url: https://docs.google.com/presentation/d/16ldSczIOl1A7A8PrwzXncsyaRTiWVADr17cefzbWTWw/edit?usp=sharing
     title: Writing Flexible Functions
