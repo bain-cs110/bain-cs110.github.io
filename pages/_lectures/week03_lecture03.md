@@ -8,6 +8,11 @@ due_date: 2023-04-14
 exercise_url: "lecture08.zip"
 canvas_id: friday-lecture-8-more-function-writing
 num: 8
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e67048fc-68b5-4388-a643-afd20160028d&start=60
+     title: "Lecture Recording"
+     duration: "50:00"
+     live: 1
 slides:
    - url: https://docs.google.com/presentation/d/1Jxs0zenselLTPv9uCOxcbZ72kCVvvLSV8nk40KQzcW0/edit?usp=sharing
      title: (functions) Please Don't Destroy (our data)
