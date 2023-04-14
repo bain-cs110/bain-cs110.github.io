@@ -15,7 +15,7 @@ videos:
      live: 1
 slides:
    - url: https://docs.google.com/presentation/d/1Jxs0zenselLTPv9uCOxcbZ72kCVvvLSV8nk40KQzcW0/edit?usp=sharing
-     title: (functions) Please Don't Destroy (our data)
+     title: Practice Writing Functions
 readings:
    - title: "Ch 4: Functions"
      author: "Charles Severance"
