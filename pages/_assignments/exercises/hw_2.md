@@ -178,7 +178,7 @@ The job of the **make_face** function is to draw a face (i.e. a circle) with two
 1. **center_x (int)**:  the x-coordinate of the center of the face.
 1. **center_y (int)**:  the y-coordinate of the center of the face.
 1. **width (int)**: the _width_ of the face. (Remember, your `make_circle` function takes as input a `radius` but this parameter specifies the whole width of the face.)
-1. **eye_color (string, optional)**: a string that specifies the color of the eyes that defaults to `"white`
+1. **eye_color (string, optional)**: a string that specifies the color of the eyes that defaults to `"white"`
 1. **face_color (string, optional)**: a string that specifies the color of the face that defaults to `"purple"`
 
 **Your job**: Your job is to use the make_circle and make_oval functions that you've just created to draw a face. The face should be a circle, and it should have 2 oval eyes (see screenshot below). **YOU MAY NOT USE `create_oval` in this function.**
