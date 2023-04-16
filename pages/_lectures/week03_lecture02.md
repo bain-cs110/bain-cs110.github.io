@@ -2,6 +2,7 @@
 layout: module
 title: "Practice with Functions and Tkinter"
 type: lecture
+description: "Mini-Quiz 2"
 draft: 0
 num: 7
 canvas_id: 

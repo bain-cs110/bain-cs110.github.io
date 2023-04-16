@@ -1,9 +1,22 @@
 ---
 layout: module
-title: "Writing Reporters"
+title: "Writing Reporters + Modules"
 type: lecture
 description:
+cavnas_id: monday-lecture-9-writing-reporters-+-modules
 num: 9
-draft: 1
+exercise_url: "lecture09.zip"
+draft: 0
 due_date: 2023-04-17
+readings:
+   - title: "Ch20: Modules"
+     author: "Heinold"
+     url: https://www.brianheinold.net/python/A_Practical_Introduction_to_Python_Programming_Heinold.pdf
+slides:
+  - url: https://docs.google.com/presentation/d/1N3w_fok8XhrklJOaVGXXme0CC-B-WWFSOqrHfwIiQzg/edit?usp=sharing
+    title: Writing Reporters + Modules
 ---
+
+Today we'll continue our discussion of writing functions (yes, again...I promise their important). But today, we'll add a new tool to our arsenal – writing a **reporter** function!
+
+We'll also talk a little about libraries of functions written by other people that we can use in our own programs called **modules**.
