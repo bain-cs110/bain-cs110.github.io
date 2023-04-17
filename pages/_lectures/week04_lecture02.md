@@ -28,12 +28,12 @@ slides:
 readings:
    - title: "Ch 11: Tuples"
      author: "Charles Severance"
-     url: https://www.py4e.com/html3/11-tuples
+     url: https://www.py4e.com/lessons/tuples
      video_url: https://www.py4e.com/lessons/tuples
      source: "Python for Everybody"
    - title: "Ch 9: Lists"
      author: "Charles Severance"
-     url: https://www.py4e.com/html3/9-lists
+     url: https://www.py4e.com/lessons/lists
      video_url: https://www.py4e.com/lessons/lists
      source: "Python for Everybody"
 ---
