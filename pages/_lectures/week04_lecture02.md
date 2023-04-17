@@ -9,20 +9,21 @@ num: 10
 due_date: 2023-04-19
 canvas_id: 
 videos:
-   - url: 
-     title: "Tuples (Concept)"
-     duration: ""
-   - url: 
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=603e1495-2070-4d68-9607-afe700001eed
+     title: "Sequences; Tuples (Concept)"
+     duration: "8:54"
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=08b5b57d-cb3e-46ca-85b2-afe6018183c1
      title: "Tuples (IDLE)"
-     duration: ""
-   - url: 
+     duration: "11:05"
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4d840b41-1aa9-4f7f-8e55-afe700001f65
      title: "List (Concept)"
-     duration: ""     
+     duration: "3:52"     
    - url: 
-     title: "List (IDLE)"
-     duration: "" 
+     title: "List (IDLE) (<b>MINI-QUIZ 2 - USE LOAD BUTTON AT BOTTOM OF SCREEN</b>)"
+     duration: "13:20"
+     live: 1
 slides:
-   - url: https://docs.google.com/presentation/d/1IMOQJhDzvkk_lHtU7-XtO7HNRT0UnJxyeS4nkX9fP6U/edit?usp=sharing
+   - url: https://docs.google.com/presentation/d/1gwk0qvzXApM7-ueuejhnK-rLeH8qJwDaiwdMYwfueMc/edit?usp=sharing
      title: Sequences of Data
 readings:
    - title: "Ch 11: Tuples"

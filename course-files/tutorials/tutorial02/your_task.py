@@ -6,41 +6,11 @@ the_canvas = Canvas(gui, width=600, height=600, background='white',
                     scrollregion="0 -600 600 0")
 the_canvas.pack()
 
-# helper function that draws a grid.
-def make_grid(c, w, h):
-    interval = 100
-    # Creates all vertical lines at intevals of 100
-    for i in range(0, w, interval):
-        c.create_line(i, 0, i, h, tag='grid_line')
-    # Creates all horizontal lines at intevals of 100
-    for i in range(0, h, interval):
-        c.create_line(0, i, w, i, tag='grid_line')
-    # Creates axis labels
-    offset = 2
-    for y in range(0, h, interval):
-        for x in range(0, w, interval):
-            c.create_oval(
-                x - offset,
-                y - offset,
-                x + offset,
-                y + offset,
-                fill='black'
-            )
-            c.create_text(
-                x + offset,
-                y + offset, 
-                text="({0}, {1})".format(x, y),
-                anchor="nw",
-                font=("Purisa", 8)
-            )
-
 def make_square(a_canvas, bottom_left, width, color="white"):
     a_canvas.create_rectangle(
         bottom_left,
         (bottom_left[0] + width, bottom_left[1] + width),
         fill=color)
-
-make_grid(the_canvas, 600, 600) # draw the grid
 
 ########################## YOUR CODE BELOW THIS LINE ##############################
 clothes = "red"
@@ -258,5 +228,40 @@ make_mario(the_canvas, (420, 10), pixel=15)
 '''
 
 ########################## YOUR CODE ABOVE THIS LINE ##############################
+
+
+# helper function that draws a grid.
+
+
+def make_grid(c, w, h):
+    interval = 100
+    # Creates all vertical lines at intevals of 100
+    for i in range(0, w, interval):
+        c.create_line(i, 0, i, h, tag='grid_line')
+    # Creates all horizontal lines at intevals of 100
+    for i in range(0, h, interval):
+        c.create_line(0, i, w, i, tag='grid_line')
+    # Creates axis labels
+    offset = 2
+    for y in range(0, h, interval):
+        for x in range(0, w, interval):
+            c.create_oval(
+                x - offset,
+                y - offset,
+                x + offset,
+                y + offset,
+                fill='black'
+            )
+            c.create_text(
+                x + offset,
+                y + offset,
+                text="({0}, {1})".format(x, y),
+                anchor="nw",
+                font=("Purisa", 8)
+            )
+
+
+make_grid(the_canvas, 600, 600)  # draw the grid
+
 the_canvas.scale("all", 0, 0, 1, -1)
 the_canvas.mainloop()
