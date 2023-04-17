@@ -44,7 +44,7 @@ If you want to draw using more advanced shapes than what we used last week (e.g.
 
 Take a look at the `tkinter_warmup.py` file (downloadable below) for some more advanced examples. If you're having trouble conceptualizing how to make a shape, come to office hours so we can help!
 
-<a class="nu-button" href="/course-files/lectures/lecture06/04_tkinter_warmup.py" target="_blank">
+<a class="nu-button" href="/course-files/lectures/lecture07/01_tkinter_warmup.py" target="_blank">
     More Advanced Tkinter Examples <i class="fas fa-download"></i>
 </a>
 
@@ -64,6 +64,7 @@ This first "sketch" of your creature need only create _a single creature_ (i.e. 
 1. Keep it simple (we recommend anywhere between 4 (minimum) to 8 shapes)! You can always add more functionality later.
 2. Make only one or two changes at a time and then test out those changes by running your file. This makes things easier to debug.
 3. Use the grid that gets drawn to help you figure out the "math" behind your design! If you find the grid annoying you can comment it out by searching for the function call to `make_grid` and adding a `#` at the beginning of the line.
+
 * * *
 
 ## Part 3: Turn it into a `make_creature` function
@@ -77,7 +78,7 @@ Once your program successfully draws the creature that you sketched, we're going
 * A keyword (optional) parameter, `size`, specifying the size of the creature (should be an `int` or `float`). You can choose the default value.
 * If you want to add other parameters (for instance, the size of the ears for the bear) you are free to do so to further customize your creature, but make sure they are **optional** parameters!
 
-Then move all of your creature code into the body of that function. <mark>**Make sure to change** `the_canvas` to `a_canvas` in your function calls since now we want to draw on the Canvas specified by the function input and **not just** the canvas that our file has.</mark>
+Then move all of your creature code into the body of that function. <mark><b>Make sure to change</b> `the_canvas` to `a_canvas` in your function calls since now we want to draw on the Canvas specified by the function input and <b>not just</b> the canvas that our file has. You'll get a 0 from the autograder if your program does this!</mark>
 
 * * *
 
