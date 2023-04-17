@@ -1,6 +1,7 @@
 '''
 Documentation: https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/canvas.html
 Color Picker: https://coolors.co/
+!!*&!
 '''
 from tkinter import Canvas, Tk
 gui = Tk()
@@ -10,17 +11,15 @@ the_canvas = Canvas(gui, width=500, height=500, background='white',
 
 the_canvas.pack()
 
-########################## YOUR CODE BELOW THIS LINE ##############################
+########################## YOUR CODE BELOW THIS LINE #############################!!*&!#
 
 ## We've copied make_square from our earlier tutorial to this file so we can use it.
 ## Note, we've modified it to use a tuple instead of two separate x, y inputs.
-
 def make_square(a_canvas, bottom_left, width, color="blue"):
     a_canvas.create_rectangle(
         bottom_left,
         (bottom_left[0] + width, bottom_left[1] + width),
         fill=color)
-
 
 # a sample creation
 # square face
@@ -28,10 +27,13 @@ make_square(the_canvas, (50, 50), 300, color="green")  # face
 make_square(the_canvas, (100, 250), 50, color="purple")  # left eye
 make_square(the_canvas, (250, 250), 50, color="cyan")  # right eye
 make_square(the_canvas, (195, 196), 10, color="white")  # nose
-########################## YOUR CODE ABOVE THIS LINE ##############################
+
+########################## YOUR CODE ABOVE THIS LINE #############################!!*&!#
 # helper function that draws a grid.
 def make_grid(c, w, h):
     interval = 100
+
+    # spring 2023
 
     # Creates all vertical lines at intevals of 100
     for i in range(0, w, interval):
