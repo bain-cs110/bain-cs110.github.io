@@ -16,7 +16,7 @@ def make_random_oval(canvas):
     
     canvas.create_oval(
         x - x_radius, y - y_radius,
-        x + x_radius, y + y_radius
+        x + x_radius, y + y_radius,
         fill="green"
     )
 

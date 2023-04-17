@@ -26,19 +26,35 @@ def make_square(a_canvas, bottom_left_x, bottom_left_y, width, color="blue"):
 def make_pyramid(a_canvas, bottom_left_x, bottom_left_y, width, fill_color="green"):
     
     # make bottom row
-    make_square(a_canvas, bottom_left_x, bottom_left_y, width, color="green")
-    make_square(a_canvas, bottom_left_x + width, bottom_left_y, width, color="green")
-    make_square(a_canvas, bottom_left_x + width*2, bottom_left_y, width, color="green")
+    make_square(a_canvas, bottom_left_x,
+                bottom_left_y, width, color=fill_color)
+    make_square(a_canvas, bottom_left_x + width,
+                bottom_left_y, width, color=fill_color)
+    make_square(a_canvas, bottom_left_x + width*2,
+                bottom_left_y, width, color=fill_color)
 
     # make middle row
-    make_square(a_canvas, bottom_left_x + width / 2, bottom_left_y + width, width, color="green")
-    make_square(a_canvas, bottom_left_x + width * 3 / 2, bottom_left_y + width, width, color="green")
+    make_square(a_canvas, bottom_left_x + width / 2,
+                bottom_left_y + width, width, color=fill_color)
+    make_square(a_canvas, bottom_left_x + width * 3 / 2, bottom_left_y + width, width, color=fill_color)
 
     # make top row
-    make_square(a_canvas, bottom_left_x + width, bottom_left_y + width * 2, width, color="green")
+    make_square(a_canvas, bottom_left_x + width, bottom_left_y +
+                width * 2, width, color=fill_color)
 
 
-make_pyramid(the_canvas, 50, 100, 50, fill_color="purple")
+def make_mega_pyramid(a_canvas, bottom_left_x, bottom_left_y, width, fill_color="green"):
+
+    # bottom left
+    make_pyramid(a_canvas, bottom_left_x, bottom_left_y, width, fill_color=fill_color)
+    # bottom right
+    make_pyramid(a_canvas, bottom_left_x + 3 * width, bottom_left_y,
+                 width, fill_color=fill_color)
+    # top middle
+    make_pyramid(a_canvas, bottom_left_x + 1.5 * width, bottom_left_y + 3 * width,
+                 width, fill_color=fill_color)
+
+make_mega_pyramid(the_canvas, 0, 0, 50, fill_color="cyan")
 
 ########################## YOUR CODE ABOVE THIS LINE ##############################
 # helper function that draws a grid.
