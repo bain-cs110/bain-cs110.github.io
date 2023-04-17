@@ -21,7 +21,7 @@ videos:
    - url: 
      title: "List (IDLE) (<b>MINI-QUIZ 2 - USE LOAD BUTTON AT BOTTOM OF SCREEN</b>)"
      duration: "13:20"
-     live: 1
+     quiz: 1
 slides:
    - url: https://docs.google.com/presentation/d/1gwk0qvzXApM7-ueuejhnK-rLeH8qJwDaiwdMYwfueMc/edit?usp=sharing
      title: Sequences of Data

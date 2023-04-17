@@ -54,6 +54,10 @@ show_schedule: 1
                 {% assign className = "live" %}
                 {% assign type = "lecture" %}
             {% endif %}
+            {% if video.quiz %}
+                {% assign className = "quiz" %}
+                {% assign type = "video_quiz" %}
+            {% endif %}
             {% assign label = "Video" | append: " " | append: vnum %}
             {% if video.chat %}
                 {% assign label = "Chat" %}
@@ -61,9 +65,15 @@ show_schedule: 1
             {% endif %}
             <tr>
                 <td>
+                    {% if video.quiz %}
+                    <a class="{{ className }}" >
+                        {{label}}
+                    </a>
+                    {% else %}
                     <a class="{{ className }}" href="{{video.url}}" target="_blank">
                         {{label}} <i class="fa fa-link"></i>
                     </a>
+                    {% endif %}
                 </td>
                 <td>
                     {{video.title}}
