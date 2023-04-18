@@ -13,7 +13,7 @@ due_date: 2023-04-05
 canvas_id: 1224389
 ---
 
-In tutorial today, you will meet your assigned peer mentor and fellow classmates and write a few simple programs. Attendance at the first tutorial session is **MANDATORY**. There is nothing to submit for this tutorial. You will simply show your PM your completed work and they will mark you as present.
+In tutorial today, you will meet your assigned peer mentor and fellow classmates and write a few simple programs. Attendance at the first tutorial session is **MANDATORY**.
 
 Our objectives for this assignment are:
 
