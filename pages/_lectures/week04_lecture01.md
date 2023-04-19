@@ -8,6 +8,11 @@ num: 9
 exercise_url: "lecture09.zip"
 draft: 0
 due_date: 2023-04-17
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c7fd1e79-514e-4135-a216-afd2016002c3&start=60
+     title: "Lecture Recording"
+     duration: "50:00"
+     live: 1
 readings:
    - title: "Ch20: Modules"
      author: "Heinold"

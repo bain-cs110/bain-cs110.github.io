@@ -78,7 +78,7 @@ Once your program successfully draws the creature that you sketched, we're going
 * A keyword (optional) parameter, `size`, specifying the size of the creature (should be an `int` or `float`). You can choose the default value.
 * If you want to add other parameters (for instance, the size of the ears for the bear) you are free to do so to further customize your creature, but make sure they are **optional** parameters!
 
-Then move all of your creature code into the body of that function. <mark><b>Make sure to change</b> `the_canvas` to `a_canvas` in your function calls since now we want to draw on the Canvas specified by the function input and <b>not just</b> the canvas that our file has. You'll get a 0 from the autograder if your program does this!</mark>
+Then move all of your creature code into the body of that function. <mark><b>Make sure to change</b> the_canvas to a_canvas in your function definition since now we want to draw on the Canvas specified by the function input and <b>not just</b> the canvas that our file has. You'll get a 0 from the autograder if your program does this!</mark> You'll use `a_canvas` when inside your functions' header and body and `the_canvas` outside.
 
 * * *
 
