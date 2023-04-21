@@ -5,6 +5,7 @@ description: "(Mini-Quiz 5)"
 type: lecture
 draft: 0
 num: 11
+canvas_id: friday-lecture-11-sequences-review-+-scope
 exercise_url: "lecture11.zip"
 due_date: 2023-04-21
 slides:
