@@ -9,6 +9,7 @@ videos:
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7898c652-3b0a-4c6e-bb41-afd201600314&start=60
      title: "Live Lecture"
      duration: "50:00"
+     live: 1
 canvas_id: friday-lecture-11-sequences-review-+-scope
 exercise_url: "lecture11.zip"
 due_date: 2023-04-21
