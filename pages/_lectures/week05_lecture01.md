@@ -7,6 +7,9 @@ draft: 0
 num: 12
 due_date: 2023-04-24
 exercise_url: "lecture12.zip"
+slides:
+   - url: https://docs.google.com/presentation/d/1bfBI-eVbUdcbkmbRBtmX6m5BbRY1H9CBk0QfodF5geo/edit?usp=sharing
+     title: "Quiz 1 Review"
 videos:
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c8319573-9d62-409e-9b29-afd201600332&start=60
      title: "Live Lecture"
