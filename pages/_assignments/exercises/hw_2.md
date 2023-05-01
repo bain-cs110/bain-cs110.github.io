@@ -3,7 +3,7 @@ layout: assignment-two-column
 title: Writing Functions
 abbreviation: HW2
 type: homework
-due_date: 2024-04-14
+due_date: 2023-04-14
 ordering: 2
 points: 100
 draft: 0

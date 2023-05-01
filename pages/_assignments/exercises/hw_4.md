@@ -9,7 +9,7 @@ draft: 0
 canvas_id: 1224383
 ---
 
-In this homework assignment, you'll be moving from making "static" pictures like in HW2 and HW3, to making live animations! Make sure to complete [Tutorial 3](tutorial03) before attempting this homework. Once you've finished Tutorial 4, you'll see how the `hw04_utilities.update_position` function makes our work a little easier by getting rid of some of the steps of animation.
+In this homework assignment, you'll be moving from making "static" pictures like in HW2 and HW3, to making live animations! Make sure to complete [Tutorial 3](tutorial03) before attempting this homework. Once you've finished Tutorial 3, you'll see how the `hw04_utilities.update_position` function makes our work a little easier by getting rid of some of the steps of animation.
 
 Note there are a number of functions in `hw04_utilities.py` that you *can* use but you only *have* to use `update_position` to complete this assignment (though `get_left` and `get_right` might be useful depending on your approach to part 2). You _should not_ use any function that starts with an underscore. These are called "private functions" and are ONLY meant for use within that one particular file.
 
@@ -33,7 +33,7 @@ Note there are a number of functions in `hw04_utilities.py` that you *can* use b
 
 Because we're now dealing with TWO files, you need to make sure they are BOTH in the same folder (but you will only submit the `hw04.py` file.)
 
-> **Note:** Having trouble with IDLE and the Utilities file? See <a href="" target="_blank">this edSTEM post to see if your issue is an easy fix.</a>
+> **Note:** Having trouble with IDLE and the Utilities file? See <a href="https://edstem.org/us/courses/37920/discussion/3050854" target="_blank">this edSTEM post to see if your issue is an easy fix.</a>
 
 * * *
 
