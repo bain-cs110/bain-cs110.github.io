@@ -100,7 +100,7 @@ In order to control Time...in Python...we're going to use the `Time` module whic
 
 Now that we know how to pause time in Python, we also need to know how to erase our Canvas. Luckily, Canvas data objects have a built-in method called `delete` that allows us to delete stuff from the canvas. In our case, our `Canvas` is just named `canvas` so to delete something we just need to use the method `the_canvas.delete`. It takes one required input, namely a string that explains what to delete. Try rearranging your program so FIRST it draws the pixel art verison of mario, THEN it takes a 5 second pause, and then AFTER the pause add `the_canvas.delete('all')` (which asks Python to delete everything on the Canvas). Theoretically, we'll see Mario get drawn...then a 5 second pause...then Mario will go bye bye.
 
-What if we wanted to ONLY delete Mario and not our beautiful grid lines? If you take a look in `utilities.py`, you'll notice that there's an extra optional parameter that's been added to `draw_pixel_art`, `draw_row`, and `draw_square` called `tag` (it expects a `str`). This `tag` is a system that TKinter allows us to use to "name" each of the things we draw. You'll see that the `make_grid` function tags all of its drawings with the `"grid_line"` name. This means we can modify our call to `draw_pixel_art` to pass a value in for this new optional parameter. One logical name might be `"mario"`.
+What if we wanted to ONLY delete Mario and not our beautiful grid lines? If you take a look in `tutorial03_utilities.py`, you'll notice that there's an extra optional parameter that's been added to `draw_pixel_art`, `draw_row`, and `draw_square` called `tag` (it expects a `str`). This `tag` is a system that TKinter allows us to use to "name" each of the things we draw. You'll see that the `make_grid` function tags all of its drawings with the `"grid_line"` name. This means we can modify our call to `draw_pixel_art` to pass a value in for this new optional parameter. One logical name might be `"mario"`.
 
 Once we add that additional input to `draw_pixel_art`, Canvas knows that our drawing is actually called "mario", so instead of deleting "all" things on the canvas, we can change our call to `the_canvas.delete` to just delete Mario: `the_canvas.delete("mario")`.
 
@@ -113,7 +113,7 @@ Now that we can both erase/update our Canvas and control time...it's finally tim
 Now, your job is to move this code into an "infinite" `while` loop. So in each iteration of our loop, you'll need to do the following:
 1. Erase the mario currently on the screen
 2. Draw a new mario (slightly shifted to the right)
-3. Pause (let's say for `0.25` seconds)
+3. Update the screen (call the `gui.update()` method) and then pause (let's say for `0.25` seconds)
 
 Put your existing drawing code inside of a new infinite `while` loop and rearrange it so it looks like the above steps. Try running your animation.
 
