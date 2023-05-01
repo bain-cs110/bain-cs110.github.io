@@ -1,6 +1,6 @@
 from tkinter import Canvas, Tk
 import time
-from utilities import make_grid
+from tutorial03_utilities import make_grid
 
 # initialize window
 gui = Tk()

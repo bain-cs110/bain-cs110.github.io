@@ -19,7 +19,7 @@ videos:
      title: "List (Concept)"
      duration: "3:52"     
    - url: 
-     title: "List (IDLE) (<b>MINI-QUIZ 2 - USE LOAD BUTTON AT BOTTOM OF SCREEN</b>)"
+     title: "List (IDLE) (<b>MINI-QUIZ - USE LOAD BUTTON AT BOTTOM OF SCREEN</b>)"
      duration: "13:20"
      quiz: 1
 slides:
