@@ -4,24 +4,22 @@ from tutorial03_utilities import make_grid
 
 # initialize window
 gui = Tk()
-the_canvas = Canvas(gui, width=600, height=600, background='white',
-                    scrollregion="0 -600 600 0")
+the_canvas = Canvas(gui, width=600, height=600, background='white')
 the_canvas.pack()
 
 # helper function that draws a grid.
 make_grid(the_canvas, 600, 600)
 ########################## YOUR CODE BELOW THIS LINE ##############################
 
-def make_square(a_canvas, bottom_left, width, fill_color='#84A9C0', outline_color='#DDD', tag=""):
+def make_square(a_canvas, top_left, width, fill_color='#84A9C0', outline_color='#DDD', tag=""):
     a_canvas.create_rectangle([
-        bottom_left,
-        (bottom_left[0] + width, bottom_left[1] + width)
+        top_left,
+        (top_left[0] + width, top_left[1] + width)
         ],
         fill=fill_color,
         outline=outline_color,
         tags=tag
     )
-    a_canvas.scale(tag, 0, 0, 1, -1)
 
 
 width = 100

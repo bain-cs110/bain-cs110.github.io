@@ -22,5 +22,9 @@ marios_colors = [None, "red", "blue", "saddle brown", "bisque3", "black", "gold"
 draw_pixel_art(the_canvas, (150, 0), mario_0,
                marios_colors, tag="mario", pixel=10)
 
+# This will ask Python to actually update the screen each time. It should be called
+# AFTER you draw each of your shapes ONCE per loop!
+gui.update()
+
 ########################## YOUR CODE ABOVE THIS LINE ##############################
 the_canvas.mainloop()

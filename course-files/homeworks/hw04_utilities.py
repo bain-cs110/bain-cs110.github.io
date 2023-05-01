@@ -58,7 +58,6 @@ def update_position(canvas, tag, x=2, y=0):
     shape_ids = canvas.find_withtag(tag)
     for id in shape_ids:
         _update_position_by_id(canvas, id, x, y)
-    canvas.master.update()
 
 def get_left(canvas, tag):
     '''

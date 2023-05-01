@@ -110,8 +110,6 @@ def draw_pixel_art(canvas, top_left, artwork, palette, pixel=10, tag=""):
         #  amount so that the next row won't draw on top of the first one:
         y += pixel
 
-    canvas.master.update()
-
 def make_square(canvas, top_left, width, fill_color='#84A9C0', outline_color='#DDD', tag=None):
     canvas.create_rectangle([
         top_left,

@@ -40,20 +40,18 @@ the_canvas.create_oval((900, WINDOW_HEIGHT - 100), (1000, WINDOW_HEIGHT - 200), 
 
 ###!!*&!# ANIMATION SECTION (your code to animate goes below)
 
-# move shapes that have the tag 'test-square' 50 pixels to the right:
-time.sleep(1) # wait one second
-hw04_utilities.update_position(the_canvas, 'test-square', x=50, y=0)
-print("Left side", hw04_utilities.get_left(the_canvas, 'test-square'))
-
-# now do it again!
-time.sleep(1)
-hw04_utilities.update_position(the_canvas, 'test-square', x=50, y=0)
-print("Left side", hw04_utilities.get_left(the_canvas, 'test-square'))
-
-# and again!
-time.sleep(1)
-hw04_utilities.update_position(the_canvas, 'test-square', x=50, y=0)
-print("Left side", hw04_utilities.get_left(the_canvas, 'test-square'))
+counter = 0
+while counter < 3:
+    # Update test-square's position
+    hw04_utilities.update_position(the_canvas, 'test-square', x=50, y=0)
+    # Print out it's left most x-coordinate
+    print("Left side", hw04_utilities.get_left(the_canvas, 'test-square'))
+   
+    # These two things below will always go at the bottom of the loop! And only appear ONCE each.
+    # Draw the update to the screen.
+    gui.update()
+    # Wait a second
+    time.sleep(1)    
 
 ######!!*&!#################### YOUR CODE ABOVE THIS LINE ##############################
 # makes sure the canvas keeps running:
