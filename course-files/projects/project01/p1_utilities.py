@@ -7,7 +7,7 @@ __all__ = [
     "make_car", "make_cloud", "make_grid", "make_image", "get_top", "get_left",
     "get_right", "get_left", "get_center", "get_bottom", "get_tag_from_event",
     "update_position", "update_fill", "delete", "flip", "rotate", "make_gradient", 
-    "check_if_tag_exists"
+    "does_tag_exist", "random_color"
 ]
 
 _cache = []
@@ -314,7 +314,7 @@ def get_height(canvas, tag):
     return max(*y_coords) - min(*y_coords)
 
 
-def check_if_tag_exists(canvas, tag):
+def does_tag_exist(canvas, tag):
     '''
     Returns `True` if a given tag exists otherwise returns `False`.
 
@@ -583,6 +583,16 @@ def make_gradient(canvas, top_left, height, width, start_color, end_color, steps
             width=0,
             tags=my_tag
             )
+        
+
+def random_color():
+    '''
+    Returns a random color as a `string` to be used with `tkinter`.
+
+    It does not accept any inputs.
+    '''
+    r = lambda: random.randint(0,255)
+    return '#%02X%02X%02X' % (r(), r(), r())
 
 def make_grid(canvas, width, height):
     '''

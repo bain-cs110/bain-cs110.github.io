@@ -1,5 +1,5 @@
 from tkinter import Canvas, Tk
-import project_utilities
+import p1_utilities
 import time
 gui = Tk()
 gui.title('My Terrarium')
@@ -7,13 +7,15 @@ gui.title('My Terrarium')
 # initialize canvas:
 window_width = gui.winfo_screenwidth()
 window_height = gui.winfo_screenheight()
-the_canvas = Canvas(gui, width=1000, height=1000, background='white')
+the_canvas = Canvas(gui, width=800, height=800, background='white')
 the_canvas.pack()
 
 ########################## YOUR CODE BELOW THIS LINE ##############################
 
 ### MAKE CREATURE SECTION (put your function defs here ) ##########################
-def make_creature(canvas, center, size=100, my_tag='creature', primary_color='lightgray', secondary_color="green"):
+
+# Here's a delightful smiley face as an example (feel free to delete it)
+def make_creature(canvas, center, size=100, my_tag='', primary_color='lightgray', secondary_color="green"):
     radius = size / 2
     # just a demo of how you might think about making your creature:
     left_eye_pos = (center[0] - radius / 4, center[1] - radius / 5)
@@ -21,17 +23,18 @@ def make_creature(canvas, center, size=100, my_tag='creature', primary_color='li
     eye_width = radius / 10
     eye_height = radius / 10
 
-    project_utilities.make_circle(canvas, center, radius,
+    p1_utilities.make_circle(canvas, center, radius,
                           fill_color=primary_color, tag=my_tag)
-    project_utilities.make_oval(canvas, left_eye_pos, eye_width,
+    p1_utilities.make_oval(canvas, left_eye_pos, eye_width,
                         eye_height, fill_color="red", tag=my_tag)
-    project_utilities.make_oval(canvas, right_eye_pos, eye_width,
+    p1_utilities.make_oval(canvas, right_eye_pos, eye_width,
                         eye_height, fill_color="green", tag=my_tag)
-    project_utilities.make_line(canvas, [
+    p1_utilities.make_line(canvas, [
         (center[0] - radius / 2, center[1] + radius / 3),
         (center[0], center[1] + radius / 1.2),
         (center[0] + radius / 2, center[1] + radius / 3)
     ], curvy=True, tag=my_tag)
+
 ####################################################################################
 
 
@@ -48,13 +51,13 @@ counter = 0
 def click_handle(event):
     global counter
     new_tag = "square_" + str(counter)
-    project_utilities.make_square(
+    p1_utilities.make_square(
         the_canvas, (event.x, event.y), 100, fill_color='pink', tag=new_tag)
     counter = counter + 1
 
 def double_click_handle(event):
     print(event)
-    print(project_utilities.get_tag_from_event(the_canvas, event))
+    print(p1_utilities.get_tag_from_event(the_canvas, event))
 
 the_canvas.bind('<Button-1>', click_handle)
 the_canvas.bind('<Button-2>', double_click_handle)
@@ -70,18 +73,10 @@ make_creature(the_canvas, (400, 400), primary_color='white', my_tag="test")
 ## ANIMATION LOOP HERE ####################################################
 # Note, you will only have ONE animation loop
 
-
-def make_star(a_canvas, center, width, fill_color="green"):
-    project_utilities.make_square(the_canvas, (center[0] - width/2, center[1] - width/2), width, tag = "square-1", fill_color="white", outline="purple")
-    project_utilities.make_square(the_canvas, (center[0] - width/2, center[1] - width/2), width, tag = "square-2", fill_color="white", outline="purple")
-    project_utilities.rotate(the_canvas, "square-1", 45, center)
-
-make_star(the_canvas, (100, 100), 50, fill_color="white")
-
 while True:
-    project_utilities.update_position(the_canvas, "test", x=2, y=-2)
-    #print("top:", project_utilities.get_top(the_canvas, "test"))
-    #print("bottom:", project_utilities.get_top(the_canvas, "test"))
+    p1_utilities.update_position(the_canvas, "test", x=2, y=-2)
+    # print("top:", p1_utilities.get_top(the_canvas, "test"))
+    # print("bottom:", p1_utilities.get_top(the_canvas, "test"))
     gui.update()
     time.sleep(0.1)
 

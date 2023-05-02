@@ -8,7 +8,7 @@ python3 course-files/build/zip_it.py ../bain-cs110/exercise_solutions
 
 
 # P1 Docs
-pdoc --show-source course-files/projects/project01/project_utilities -o course-files/projects/project01/docs
+pdoc --show-source course-files/projects/project01/p1_utilities -o course-files/projects/project01/docs
 
 # HW 5 Docs
 pdoc --show-source course-files/homeworks/hw05/w0rdle.py -o course-files/homeworks/hw05/docs
