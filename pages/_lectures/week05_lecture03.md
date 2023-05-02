@@ -7,7 +7,7 @@ num: 13
 exercise_url: "lecture13.zip"
 due_date: 2023-04-28
 videos:
-   - url: 1https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d351e9b7-d778-4526-8fa4-afd20160036b&start=60
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d351e9b7-d778-4526-8fa4-afd20160036b&start=60
      title: "Live Lecture"
      duration: "50:00"
      live: 1
