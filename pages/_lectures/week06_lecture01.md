@@ -7,6 +7,11 @@ num: 14
 due_date: 2023-05-01
 exercise_url: "lecture14.zip"
 canvas_id: monday-lecture-14-more-control-flow-may-1
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0ec7c640-7f41-4125-822e-afd201600388&start=60
+     title: "Live Lecture"
+     duration: "50:00"
+     live: 1
 slides:
    - url: https://docs.google.com/presentation/d/1smezcRKjSgUudLx5SiQWfAPOC-ssE1cJCpEGGV5A1sE/edit?usp=sharing
      title: Control Flow - Loops
