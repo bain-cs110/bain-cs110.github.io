@@ -17,7 +17,7 @@ marios_colors = [None, "red", "blue", "saddle brown", "bisque3", "black", "gold"
 #    mario_0
 #    mario_1
 #    mario_2
-# They are imported from tutorial04_utilities.py above so you can use them like regular variables
+# They are imported from tutorial03_utilities.py above so you can use them like regular variables
 
 draw_pixel_art(the_canvas, (150, 0), mario_0,
                marios_colors, tag="mario", pixel=10)
