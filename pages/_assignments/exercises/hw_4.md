@@ -292,7 +292,7 @@ def make_creature(a_canvas, center, width, my_tag=""):
                 color="white", tag=my_tag)  # nose
 ```
 
-A completed example of this for my car creature is on <a href="https://campuswire.com/c/GB09BA912/feed/286" target="_blank">Campuswire</a>.
+A completed example of this for my car creature is on <a href="https://edstem.org/us/courses/37920/discussion/3069299" target="_blank">edSTEM</a>.
 
 All that for one lousy animation. This better be worth it...
 
