@@ -53,7 +53,7 @@ In the `hw04_utilities.py` file you've downloaded. There's a `make_cloud` functi
 1. a `canvas` to draw on 
 2. a `center` tuple `(x,y)` to draw the center of the cloud.
 
-In your `hw04.py`, replace the code in the `LANDSCAPE` portion of the file near the top (which is repetitive) with a loop (any kind of loop you want) that makes at least 10 to 30 clouds the top portion of the screen. Hints:
+In your `hw04.py`, replace the code in the landscape portion of the file near the top where it calls the `make_cloud` function several times (which is repetitive) with a loop (any kind of loop you want) that makes at least 10 to 30 clouds the top portion of the screen. Hints:
 
 1. Use a loop
 1. Use the random module, and in particular the [random.randint](https://docs.python.org/3/library/random.html#random.randint) function to give each cloud a random (x, y) position (given the dimensions of the screen). (Remember, you need to import the module in order to use it just like we imported the time module in the tutorial this week.)
