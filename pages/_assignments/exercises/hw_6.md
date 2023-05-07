@@ -1,6 +1,6 @@
 ---
 layout: assignment-two-column
-title: Homework 6
+title: Dictionaries Assignment
 abbreviation: HW6
 type: homework
 due_date: 2023-05-26
