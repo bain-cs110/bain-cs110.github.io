@@ -1,6 +1,6 @@
 ---
 layout: assignment-two-column
-title: Tutorial 6
+title: Getting Started on P2
 type: tutorial
 abbreviation: Tutorial 6
 draft: 1
