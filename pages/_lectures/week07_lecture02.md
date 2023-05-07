@@ -23,13 +23,13 @@ videos:
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=23b68400-7b1a-43d5-a58c-affb015f7b43
      title: "Clicking and Dragging"
      duration: "1:27"   
-   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b03d58f6-f52c-47ef-a22c-affb015f7abf
-     title: "Keyboard Events"
-     duration: "4:38"   
    - url: 
-     title: "Keyboard and Mouse Together (<b>MINI-QUIZ - USE LOAD BUTTON AT BOTTOM OF SCREEN</b>)"
+     title: "Keyboard Events (<b>MINI-QUIZ - USE LOAD BUTTON AT BOTTOM OF SCREEN</b>)"
+     duration: "4:38"
+     quiz: 1   
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=48c1f68d-774c-4664-95c9-affb015f7a6b
+     title: "Keyboard and Mouse Together"
      duration: "3:32" 
-     quiz: 1
 ---
 
 Today we'll continue our discussion of events with a review and the introduction of KEYBOARD events. The one other new concept we'll touch on is that of SCOPE or when and where we can access particular variables. `global` variables will give us the new power to keep track of things as we use events to interact with our canvas.
