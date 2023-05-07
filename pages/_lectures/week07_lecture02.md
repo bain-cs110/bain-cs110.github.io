@@ -2,10 +2,10 @@
 layout: module
 title: "Keyboard Events (and Scope)"
 type: lecture
+description: "(Mini-Quiz 8)"
 draft: 0
 num: 18
-due_date: 2023-05-09
-canvas_id: wednesday-lecture-18-pre-recorded-keyboard-events-may 10
+due_date: 2023-05-10
 exercise_url: "lecture18.zip"
 slides:
    - url: https://docs.google.com/presentation/d/1Mx7xfww-hjEMnwGjdvJmr7JzZAjI0OVPhCwjgaJAFkg/edit?usp=sharing
@@ -29,6 +29,7 @@ videos:
    - url: 
      title: "Keyboard and Mouse Together (<b>MINI-QUIZ - USE LOAD BUTTON AT BOTTOM OF SCREEN</b>)"
      duration: "3:32" 
+     quiz: 1
 ---
 
 Today we'll continue our discussion of events with a review and the introduction of KEYBOARD events. The one other new concept we'll touch on is that of SCOPE or when and where we can access particular variables. `global` variables will give us the new power to keep track of things as we use events to interact with our canvas.

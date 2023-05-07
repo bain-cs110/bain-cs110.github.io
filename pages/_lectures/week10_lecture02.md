@@ -1,6 +1,7 @@
 ---
 layout: module
 title: "PIP"
+description: "(Mini-Quiz)"
 type: lecture
 draft: 1
 num: 25
