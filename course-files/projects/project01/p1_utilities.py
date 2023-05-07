@@ -5,7 +5,7 @@ import math
 __all__ = [
     "make_circle", "make_oval", "make_square", "make_rectangle", "make_line",
     "make_car", "make_cloud", "make_grid", "make_image", "get_top", "get_left",
-    "get_right", "get_left", "get_center", "get_bottom", "get_tag_from_event",
+    "get_right", "get_left", "get_center", "get_bottom", "get_width", "get_height", "get_tag_from_event",
     "update_position", "update_fill", "delete", "flip", "rotate", "make_gradient", 
     "does_tag_exist", "random_color"
 ]

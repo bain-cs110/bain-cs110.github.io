@@ -1,6 +1,6 @@
 from tkinter import Canvas, Tk
 import mario_module
-import project_utilities
+import p1_utilities
 
 gui = Tk()
 gui.title('Keyboard Events')
@@ -13,12 +13,12 @@ KEY_PRESS = '<Key>'
 MOUSE_CLICK = '<Button-1>'
 
 def select_mario(event):
-    tag = project_utilities.get_tag_from_event(the_canvas, event)
+    tag = p1_utilities.get_tag_from_event(the_canvas, event)
     print(tag)
 
 def move_mario(event):
     print(event.keysym)
-    project_utilities.update_position(the_canvas, 'mario_0', x=10, y=0)
+    p1_utilities.update_position(the_canvas, 'mario_0', x=10, y=0)
 
 mario_module.make_mario(the_canvas, (0, 0), size=15, my_tag='mario_0')
 mario_module.make_mario(the_canvas, (150, 200), size=10, version=2, my_tag='mario_1')

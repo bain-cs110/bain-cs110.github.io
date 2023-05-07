@@ -1,5 +1,5 @@
 from tkinter import Canvas
-import project_utilities
+import p1_utilities
 
 GOOMBA_COLORS = [None, "saddle brown", "black", "tan", "white"]
 # goomba
