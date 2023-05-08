@@ -30,6 +30,8 @@ Here's the documentation for it in case you need it:
 
 And you'll need the Mario Module (also in the same folder:
 
+> **Note:** If you downloaded this file prior to Monday at 6pm, there's a typo in it! You can either download the new version below...or you can change the line on 108 to `p1_utilities` instead of `project_utilities`.
+
 <a class="nu-button" href="/course-files/tutorials/tutorial04/mario_module.py" target="_blank">
     Mario Module <i class="fas fa-download"></i>
 </a>
