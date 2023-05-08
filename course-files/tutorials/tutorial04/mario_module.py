@@ -105,7 +105,7 @@ def draw_row(canvas:Canvas, row:tuple, top_left:tuple, colors:list, pixel:int=25
     y = top_left[1]
     for cell in row:
         if cell != 0:
-            project_utilities.make_square(canvas, (x, y), pixel, fill_color=colors[cell], tag=tag)
+            p1_utilities.make_square(canvas, (x, y), pixel, fill_color=colors[cell], tag=tag)
         x += pixel
 
 def draw_pixel_art(canvas:Canvas, top_left:tuple, artwork:list, palette:list, pixel:int=10, tag=""):
