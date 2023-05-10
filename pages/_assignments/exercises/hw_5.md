@@ -23,7 +23,7 @@ You should use the Project 1 starter code as the basis for this project. While t
 
 ## What to Submit
 
-If your function is working correctly you'll see 5 of your creature and 5 of your landscape object! Make sure to submit ONLY your `p1.py` file to Canvas by the deadline. **DO NOT SUBMIT THE UTILITIES FILE**.
+If your functions are working correctly (make sure you use the function names and parameter names defined in the project assignment) you'll see 5 of your creature and 5 of your landscape object! Make sure to submit ONLY your `p1.py` file to Canvas by the deadline. **DO NOT SUBMIT THE UTILITIES FILE**.
 
 * * *
 
