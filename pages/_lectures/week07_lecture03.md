@@ -9,7 +9,7 @@ due_date: 2023-05-12
 canvas_id: friday-lecture-19-loops-and-data-may-12
 exercise_url: "lecture19.zip"
 slides:
-    - url: https://docs.google.com/presentation/d/14FkuqKsXj-nucRLRC5_gHbgH6BqEvRJg2UqVSfJvakQ/edit?usp=sharing
+   - url: https://docs.google.com/presentation/d/14FkuqKsXj-nucRLRC5_gHbgH6BqEvRJg2UqVSfJvakQ/edit?usp=sharing
      title: Loops and Data
 ---
 
