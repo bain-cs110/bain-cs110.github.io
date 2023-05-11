@@ -576,8 +576,8 @@ def make_gradient(canvas, top_left, height, width, start_color, end_color, steps
     for i in range(steps):
         canvas.create_rectangle(
             [
-            (top_left[0], top_left[0] + i * row_height),
-            (top_left[0] + width, top_left[0] + (i+1) * row_height)
+            (top_left[0], top_left[1] + i * row_height),
+            (top_left[0] + width, top_left[1] + (i+1) * row_height)
             ],
             fill=colors[i],
             width=0,
