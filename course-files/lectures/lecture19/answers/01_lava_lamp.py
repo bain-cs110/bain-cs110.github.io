@@ -52,7 +52,7 @@ while True:
         shape_speed = -1 * shape[1] # load the shape's speed
 
         # if one of our shapes reaches the bottom of the canvas
-        if p1_utilities.get_bottom(the_canvas, shape_tag) > 1000:
+        if p1_utilities.get_top(the_canvas, shape_tag) > 800:
             # then calculate a new position at the "top" of the canvas
             reset_position = window_height + p1_utilities.get_height(the_canvas, shape_tag)
             # and move the shape with that tag to that "top" of the canvas
@@ -61,6 +61,6 @@ while True:
 
         # regardless move the shape a little bit (determined by its speed)
         p1_utilities.update_position(
-            the_canvas, tag=shape_tag, x=0, y=-1 * shape_speed)
+            the_canvas, tag=shape_tag, x=0, y= -1 * shape_speed)
     gui.update()
     time.sleep(0.002)
