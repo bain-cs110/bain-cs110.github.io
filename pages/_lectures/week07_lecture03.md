@@ -8,6 +8,10 @@ num: 19
 due_date: 2023-05-12
 canvas_id: friday-lecture-19-loops-and-data-may-12
 exercise_url: "lecture19.zip"
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=205e71ca-495e-411b-bc53-afd201600441&start=120
+     title: "Live Lecture"
+     duration: "50:00"
 slides:
    - url: https://docs.google.com/presentation/d/14FkuqKsXj-nucRLRC5_gHbgH6BqEvRJg2UqVSfJvakQ/edit?usp=sharing
      title: Loops and Data
