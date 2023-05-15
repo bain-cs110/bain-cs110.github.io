@@ -6,7 +6,7 @@ __all__ = [
     "make_circle", "make_oval", "make_square", "make_rectangle", "make_line",
     "make_car", "make_cloud", "make_grid", "make_image", "get_top", "get_left",
     "get_right", "get_left", "get_center", "get_bottom", "get_width", "get_height", "get_tag_from_event",
-    "update_position", "update_fill", "delete", "flip", "rotate", "make_gradient", 
+    "update_position", "update_tag", "update_fill", "delete", "flip", "rotate", "make_gradient", 
     "does_tag_exist", "random_color"
 ]
 
@@ -417,6 +417,18 @@ def get_tag_from_event(canvas, event):
     except:
         print('error: none found')
         return None
+
+def update_tag(canvas, old_tag, new_tag):
+    '''
+    Change all objects with a given `old_tag` to a `new_tag`.
+
+    * `canvas` (`Canvas`): [Required] The `Canvas` object to search in.
+    * `old_tag` (`str`): [Required] The tag of the object to you want to 'rename'.
+    * `new_tag` (`str`): [Required] The tag you want to 'rename' it to.
+    '''
+    ids = canvas.find_withtag(old_tag)
+    for id in ids:
+        canvas.itemconfigure(id, tag=new_tag)   
 
 def update_position(canvas, tag, x=0, y=0):
     '''
