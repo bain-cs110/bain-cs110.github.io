@@ -12,8 +12,9 @@ videos:
      title: "1st Hour of Review Session"
      duration: "60:00"
      live: 1
+slides:
+   - url: https://docs.google.com/presentation/d/1AIQy4R29aJexWUYr-k0K_PiTJKNjQFhYBuGxYEHGOfY/edit?usp=sharing
+     title: Q2 Review
 ---
 
 Extra review session for those interested!
-
-Recording is live! Slides to be posted...
