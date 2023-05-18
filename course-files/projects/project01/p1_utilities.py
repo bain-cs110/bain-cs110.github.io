@@ -244,7 +244,7 @@ def make_line(canvas, coordinates, curvy=False, fill_color="grey", width=2, tag=
         smooth=curvy,
         fill=fill_color,
         tag=tag,
-        dash=None)
+        dash=dash)
 
 def get_left(canvas, tag):
     '''
