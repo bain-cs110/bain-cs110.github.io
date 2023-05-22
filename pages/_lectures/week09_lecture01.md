@@ -10,6 +10,10 @@ exercise_url: "lecture22.zip"
 slides:
    - url: https://docs.google.com/presentation/d/1ooNElxP5yI-ujuc8HMr3r62JeSyJv2tTTOCRDRMbPRk/edit?usp=sharing
      title: Dictionary Algorithms
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=729d863b-2db5-4727-8a60-afd2016004f4&start=60
+     title: "Live Lecture"
+     live: 1
 ---
 
 On Friday we introduced the concept of a _dictionary_ – a new way to store data in Python. In all of our examples on Friday, we treated dictionaries like a _lookup table_, I give it a piece of information, and it gives me some corresponding piece of information back.
