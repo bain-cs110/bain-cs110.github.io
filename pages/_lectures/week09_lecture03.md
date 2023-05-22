@@ -1,6 +1,6 @@
 ---
 layout: module
-title: "Dictionary Algorithms"
+title: "Libraries and APIs"
 type: lecture
 description: "(Mini-Quiz 11)"
 draft: 1

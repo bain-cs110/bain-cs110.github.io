@@ -1,7 +1,7 @@
 game_data = {
   "solution": "vague",
   "current_guess": "",
-  "previous_guesses": [],
+  "past_guesses": [],
   "word_list": []
   }
 
@@ -11,12 +11,16 @@ print("You have 6 guesses.")
 print("For each guess, we'll tell you whether or not the letters in your guess...")
 print("   1. exactly match the secret word (you'll see a $)")
 print("   2. are in the secret word but in a different location (you'll see a +)")
-print("   3. or not in the word at all (you'll see a X).")
+print("   3. or not in the word at all (you'll see a *).")
 print("Good luck!")
 print()
 
-# TODO: Read the list_of_words.txt file and append 5 letter words to the word_list entry
-# (which is a list) of our game_data dictionary
+# TODO: Read the wordlist.txt file and append 5 letter words to the word_list entry
+# (which is a list) of our game_data dictionary. Make sure to convert each of these words
+# to UPPER CASE (Hint: you can convert a string to upper case by using upper() method:
+# test_string = "hello"
+# upper_case = test_string.upper()
+
 some_file_name = ""
 my_file = open(some_file_name, "r")
 for line in my_file:
@@ -46,8 +50,8 @@ solution = game_data['solution']
 while guess_count < 6:
     guess = input("What is your guess? ")
 
-    # TODO: Convert the guess to lowercase
-    # print("TEST".lower())
+    # TODO: Convert the guess to uppercase
+    # print("test".upper())
 
     # TODO: Change this to see if the input is exactly 5 letters long
     # Else, print an "invalid guess" message and continue
@@ -72,7 +76,7 @@ while guess_count < 6:
         # TODO: Else-if that letter is IN that word anywhere,
         # then add a + to our hint (use the `in` operator!)
 
-        # TODO: Else, that letter isn't in our word so add an X to our hint
+        # TODO: Else, that letter isn't in our word so add an * to our hint
 
     # Print the user's guess
     print(guess)
