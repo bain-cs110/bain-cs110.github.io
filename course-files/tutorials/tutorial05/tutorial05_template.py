@@ -1,5 +1,5 @@
 game_data = {
-  "solution": "vague",
+  "solution": "VAGUE",
   "current_guess": "",
   "past_guesses": [],
   "word_list": []
