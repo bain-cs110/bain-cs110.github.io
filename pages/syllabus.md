@@ -180,7 +180,7 @@ The _deliberate extension policy_ applies ONLY to **Homeworks** and is meant to 
 * Students **must** request the extension via the form at least 24 hours in advance of the homework deadline.
 * Students **may not** request more than 2 extensions in a quarter.
 
-The policy is _deliberate_ in that you, as a student, must actively consider at least 24 hours in advance of the deadline that you will need extra time to complete this assignment. We do not allow consecutive extensions. If you find yourself needing extra time on consecutive assignments, this is a good sign that you need to reach out to someone on the Course Staff for help.
+The policy is _deliberate_ in that you, as a student, must actively consider at least 24 hours in advance of the deadline that you will need extra time to complete this assignment. If you find yourself needing extra time on consecutive assignments, this is a good sign that you need to reach out to someone on the Course Staff for help.
 
 There will be no exceptions to this policy. Once you apply for a valid extension, it cannot be voided.
 
