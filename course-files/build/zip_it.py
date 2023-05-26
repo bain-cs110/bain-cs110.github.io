@@ -8,6 +8,7 @@ from excluded import EXCLUDED
 def exclude(filename):
     import re
     from builtins import any
+ 
     for pattern in EXCLUDED:
         # for word in file_tokens:
         match = re.search(pattern, filename)
@@ -17,7 +18,6 @@ def exclude(filename):
         except Exception:
             continue
     return False
-
 
 def zipfolder(foldername, target_dir):
 
