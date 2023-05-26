@@ -67,7 +67,7 @@ print(table_text)
 
 ### Practice Querying
 
-When you're done outputting the data, open the `apis/yelp.py` and navigate down to the `get_businesses` function definition. Note all of the keyword  (optional) parameters that the function accepts.
+When you're done outputting the data up the Yelp documentation and navigate down to the `get_businesses` function. Note all of the keyword  (optional) parameters that the function accepts.
 
 Next, go back to your `tutorial06.py` file and modify the get_businesses(...) function call by:
 
@@ -112,7 +112,7 @@ You should see some search results relating to Beyonce print to the screen (as a
 
 ### Practice Querying
 
-When you're done outputting the data, open the `apis/spotify.py` file and navigate down to the `get_similar_tracks` function definition. Note all of the keyword (optional) parameters that the function accepts.
+When you're done outputting the data, open the Spotify documentation and navigate down to the `get_similar_tracks` function. Note all of the keyword (optional) parameters that the function accepts.
 
 While each parameter is technically optional, this function needs some seed data in order to give you song recommendations. Up to 5 seed values may be provided in any combination of seed_artists, seed_tracks and seed_genres. In other words: `len(artist_ids) + len(track_ids) + len(genres)` must be between 1 and 5.
 
