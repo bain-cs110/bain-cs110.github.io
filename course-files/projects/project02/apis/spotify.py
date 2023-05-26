@@ -12,10 +12,9 @@ __all__ = [
     'get_artists', 'get_playlists', 'get_audio_features_by_track',
     'get_related_artists', 'get_top_tracks_by_artist',
     'get_similar_tracks', 'get_playlists_by_user',
-    'get_tracks_by_playlist',
+    'get_playlist_tracks',
     'get_formatted_artist_table_html',
-    'get_formatted_tracklist_table',
-    'get_formatted_tracklist_table_html',
+    'generate_tracks_table',
     'get_track_player_html',
     'get_playlist_player_html',
     'get_album_player_html',
@@ -76,7 +75,7 @@ def get_top_tracks_by_artist(artist_id: str, simplify: bool = True):
     return _simplify_tracks(data['tracks'])
 
 
-def get_tracks_by_playlist(playlist_id: str, simplify: bool = True):
+def get_playlist_tracks(playlist_id: str, simplify: bool = True):
     '''
     Retrieves a list of the tracks associated with a playlist_id
 
@@ -272,14 +271,20 @@ def get_album_player_html(album_id: str, width: int = 300, height: int = 380):
     </iframe>'''.format(album_id=album_id, width=width, height=height)
 
 
-def get_formatted_tracklist_table(tracks: list):
+def generate_tracks_table(tracks: list, to_html: bool = False):
     '''
     Function that builds a string representation of the tracks.
 
     * `tracks` (`list`): [Required] List of tracks.
+    * `to_html` (`bool`): If True it will generate an HTML version (for an email or web page)
+        and if False (default) will generate a string to print in Python.
 
     Returns a table as a string (that can subsequently be printed to the screen).
     '''
+    
+    if to_html:
+        return _get_formatted_tracklist_table_html(tracks)
+
     line_width = 95
     text = ''
     template = '{0:2} | {1:<22.22} | {2:<30.30} | {3:<30.30}\n'
@@ -357,7 +362,7 @@ def get_formatted_artist_table_html(artists: list):
     '''.format(css=cell_css, table_css=table_css, rows=''.join(rows))
 
 
-def get_formatted_tracklist_table_html(tracks: list):
+def _get_formatted_tracklist_table_html(tracks: list):
     '''
     Makes a nice formatted HTML table of tracks. Good for writing to an
     HTML file or for sending in an email.
@@ -444,9 +449,22 @@ def _generate_authentication_header():
     headers['Authorization'] = f"Basic {base64Message}"
     data['grant_type'] = "client_credentials"
 
-    r = requests.post(auth_url, headers=headers, data=data)
 
-    token = r.json()['access_token']
+    try:
+        r = requests.post(auth_url, headers=headers, data=data)
+        token = r.json()['access_token']
+
+    except:
+        print("DEBUG: Using backup...")
+        time.sleep(1)
+        from apis import authentication
+        try:
+            token = authentication.get_token(
+                'https://www.apitutor.org/spotify/key')
+        except Exception as e:
+            print("COULD NOT COMMUNICATE WITH SPOTIFY. I even tried the backup. Did you run the setup tests?")
+            raise Exception(e)
+    
     headers = {
         'Authorization': 'Bearer ' + token
     }

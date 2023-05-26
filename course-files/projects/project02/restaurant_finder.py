@@ -1,7 +1,6 @@
 from apis import yelp
 from apis import twilio
 
-
 user_selections = {
     'categories': [],
     'sort_order': ''

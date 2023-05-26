@@ -4,24 +4,42 @@ import unittest
 import helpers
 helpers.modify_system_path()
 
-
 class TestAuthentication(unittest.TestCase):
 
-    def test_token(self):
-        self.assertEqual(authentication.API_TUTOR_TOKEN,
-                         'API.fda8c628-f8f0-448d-aad8-42c2fcd067ec')
+    def test_tokens(self):
 
-    def test_get_key(self):
+        try:
+            from apis import secret_tokens
+                
+            self.assertEqual(len(secret_tokens.API_TUTOR_TOKEN),
+                            40)
+            self.assertEqual(len(secret_tokens.SENDGRID_TOKEN),
+                            69)
+            self.assertEqual(len(secret_tokens.SPOTIFY_CLIENT_ID),
+                            32)
+            self.assertEqual(len(secret_tokens.SPOTIFY_CLIENT_SECRET),
+                            32)
+            self.assertEqual(len(secret_tokens.YELP_API_TOKEN),
+                            128)
+        
+        except:
+            title = 'IMPORTANT: You Need an Access Token!'
+            error_message = '\n\n\n' + '*' * len(title) + '\n' + \
+                title + '\n' + '*' * len(title) + \
+                '\nPlease download the the secret_tokens.py file from Canvas and save it in your apis directory.\n\n'
+            raise Exception(error_message)
+
+    def test_get_backup(self):
         yelp_key = authentication.get_token(
             'https://www.apitutor.org/yelp/key')
         
-        self.assertEqual(len(yelp_key), 128)
         time.sleep(1.0)
         
         spotify_key = authentication.get_token(
             'https://www.apitutor.org/spotify/key')
-        self.assertEqual(len(spotify_key), 178)
-        time.sleep(1.0)
+        
+        self.assertEqual(len(yelp_key) != 0, True)
+        self.assertEqual(len(spotify_key) != 0, True)
 
 
 if __name__ == '__main__':

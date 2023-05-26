@@ -43,5 +43,5 @@ def send_mail(to_emails: list, subject: str, content: str):
         return True
     except Exception as e:
         print(e)
-        print("If the above says error 401 or 403, this is not your fault it's Dr. Bain's. See Campuswire for more details.")
+        print("If the above says error 401 or 403 but does NOT say something about a SSL_CERTIFICATE, this is not your fault it's Dr. Bain's. Post a private post on edSTEM.")
         return False

@@ -11,8 +11,8 @@ if __name__ == '__main__':
 
     suite = unittest.TestSuite()
     suite.addTests([
-        TestAuthentication('test_token'),
-        TestAuthentication('test_get_key'),
+        TestAuthentication('test_tokens'),
+        TestAuthentication('test_get_backup'),
         TestSpotify('test__issue_get_request_only_one'),
         TestYelp('test_execute_business_queries_just_one_simplified'),
         TestTwilio('test_can_import_twilio'),

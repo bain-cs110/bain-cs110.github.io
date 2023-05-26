@@ -3,15 +3,15 @@ try:
     utilities.modify_system_path()
 except:
     pass
-
+import time
 from apis import utilities, secret_tokens
 import requests
 import textwrap
 
 __all__ = [
     'get_businesses', 'get_categories',
-    'get_formatted_business_list_table',
-    'get_formatted_business_table', 'get_reviews'
+    'generate_businesses_table',
+    'generate_business_table', 'get_reviews'
 ]
 def get_categories():
     """
@@ -38,12 +38,36 @@ def _issue_get_request(url:str):
 
     Returns whatever Yelp's API endpoint gives back.
     '''
+
     token = secret_tokens.YELP_API_TOKEN
     headers = {
         'Authorization': 'Bearer ' + token
     }
     response = requests.get(url, headers=headers, verify=True)
+    
+    if response.status_code != 200:
+        time.sleep(1)
+
+        from apis import authentication
+        token = authentication.get_token(
+            'https://www.apitutor.org/yelp/key')
+        
+        print("DEBUG: Using backup...")
+
+        headers = {
+            'Authorization': 'Bearer ' + token
+        }
+        response = requests.get(url, headers=headers, verify=True)
+
+        if response.status_code != 200:
+            raise Exception("COULD NOT COMMUNICATE WITH YELP. Did you run the verification tests?")
+        else:
+            return response.json()
+        
     return response.json()
+
+   
+    
 
 
 def _simplify_businesses(data:list):
@@ -158,13 +182,13 @@ def _generate_business_search_url(location:str, limit:int=10, term:str=None, cat
 
     return url
 
-def get_businesses(location:str, limit:int=10, term:str=None, categories:str=None, sort_by:str=None, price:str=None, open_now:str=None, attributes:list=None, simplify:bool=True):
+def get_businesses(location:str, limit:int=10, search_term:str=None, categories:str=None, sort_by:str=None, price:str=None, open_now:str=None, attributes:list=None, simplify:bool=True):
     '''
     Searches for Yelp businesses based on various search criteria. Parameters:
 
     * `location` (`str`):   [Required] Location to search.
     * `limit` (`int`):      An integer indicating how many records to return. Max of 50.
-    * `term` (`str`):       A search term
+    * `search_term` (`str`): A search term
     * `categories` (`str`): One or more comma-delimited categories to filter by.
     * `sort_by` (`str`):    How to order search results. Options are:
                         best_match, rating, review_count, distance. Note that the
@@ -182,7 +206,7 @@ def get_businesses(location:str, limit:int=10, term:str=None, categories:str=Non
     url = _generate_business_search_url(
         location,
         limit=limit,
-        term=term,
+        term=search_term,
         categories=categories,
         sort_by=sort_by,
         price=price,
@@ -196,9 +220,9 @@ def get_businesses(location:str, limit:int=10, term:str=None, categories:str=Non
         return data
     return _simplify_businesses(data)
 
-def get_formatted_business_list_table(businesses:list):
+def generate_businesses_table(businesses:list):
     '''
-    Generates a tabular representation of a list of businesses to be displayed in the terminal.
+    Generates a tabular representation of a *list* of businesses to be displayed in the terminal.
 
     * `businesses` (`list`): A list of simplified dictionaries (where each dictionary represents a business).
 
@@ -361,10 +385,10 @@ def _get_reviews_display_html(reviews:list):
         rows=review_rows
     )
 
-def get_formatted_business_table(business:dict, reviews:list=None, to_html=True):
+
+def generate_business_table(business: dict, reviews: list = None, to_html=True):
     '''
-    Makes a formatted HTML table of a business and corresponding review. Good for writing to an
-    HTML file or for sending in an email.
+    Makes a formatted table of a business and corresponding review.
 
     * `business` (`dict`): [Required] A dictionary that represents a business.
     * `reviews` (`list`): List of reviews that correspond to the business
