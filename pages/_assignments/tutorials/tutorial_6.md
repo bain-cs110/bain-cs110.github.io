@@ -107,7 +107,7 @@ You should see some search results relating to Beyonce print to the screen (as a
 
 ## Practice Outputting Dictionary Values
 
-1. Output just the `name` of each artist to
+1. Output just the `name` of each artist to the screen
 2. Output the `name`, `genres`, and `share_url` to the screen
 
 ### Practice Querying
