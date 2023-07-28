@@ -21,7 +21,7 @@ In this assignment, you are going to get some practice writing functions using t
 
 First, download the homework 2 starter file below:
 
-<a class="nu-button" href="{{site.base_url}}/course-files/homeworks/hw02_template.py" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/homeworks/hw02_template.py" target="_blank">
     Homework Starter File <i class="fas fa-download"></i>
 </a>
 
@@ -53,7 +53,7 @@ canvas.mainloop()
 ### TKinter sample code
 Reemeber that from our pre-recorded lecture we have a library of samples function calls to `tkinter` in our `warm_up.py` file. If you find yourself confused about how the functions work, you can use that as a reference as you learn how to draw shapes using the tkinter canvas library. When you run `warm_up.py` from IDLE (by pressing F5), you should see an image like this:
 
-<img class="med-lg center" src="{{site.base_url}}/assets/images/hw02/warmup.png" />
+<img class="med-lg center" src="{{site.url}}/assets/images/hw02/warmup.png" />
 
 > **Note**: If you're on a Mac and are currently in Dark mode, you might not see the grid lines.
 > 
@@ -202,7 +202,7 @@ make_face(the_canvas, 400, 400, 100)
 ## Testing
 When you’re done, your program should draw be able to draw the below image:
 
-<img class="medium" src="{{site.base_url}}/assets/images/hw02/final-screenshot.png" />
+<img class="medium" src="{{site.url}}/assets/images/hw02/final-screenshot.png" />
 
 Note that while the image you see above will be produced with those function calls, your functions **must be able to produce their output at any input**. That is, for example, your `make_face` function has to actually use the inputs given to it. We will test your functions with other inputs to make sure that those inputs are actually used in the function body.
 

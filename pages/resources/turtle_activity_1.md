@@ -24,4 +24,4 @@ Move your turtle around and watch how the value in each of these three different
 
 <iframe frameborder="0" height="550" scrolling="no" src="https://ct-stem.s3.amazonaws.com/uploads/bainco/2020/06/30/programming_step2_2020-06-30-18-51-00-320523.html" width="500">Something has gone wrong. Please reload the page.</iframe>
 
-[Next turtle activity...](/resources/turtle-activity-2)
+[Next turtle activity...]({{site.base_url}}/resources/turtle-activity-2)
