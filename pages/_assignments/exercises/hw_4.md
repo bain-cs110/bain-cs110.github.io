@@ -19,13 +19,13 @@ Note there are a number of functions in `hw04_utilities.py` that you *can* use b
 > 1. Practice working with if statements
 > 1. Practice working with modules
 
-<a class="nu-button" href="/course-files/homeworks/hw04_template.py" target="_blank">
+<a class="nu-button" href="{{site.base_url}}/course-files/homeworks/hw04_template.py" target="_blank">
     Homework Starter File <i class="fas fa-download"></i>
 </a>
 
 <br>
 
-<a class="nu-button" href="/course-files/homeworks/hw04_utilities.py" target="_blank">
+<a class="nu-button" href="{{site.base_url}}/course-files/homeworks/hw04_utilities.py" target="_blank">
     Utilities Library <i class="fas fa-download"></i>
 </a>
 <br>
@@ -41,7 +41,7 @@ Because we're now dealing with TWO files, you need to make sure they are BOTH in
 
 I've got some good news...and I've got some bad news. Let's start with the bad news. We've been lying to you for 4 weeks. `tkinter`'s y-axis is actually flipped from what we're used to from 8th grade math.
 
-<img class="frame center med-lg" src="/assets/images/project01/grid.svg" />
+<img class="frame center med-lg" src="{{site.base_url}}/assets/images/project01/grid.svg" />
 
 We've been taking care of this for you with some magic in the templates you've started with...but we're removing that scaffold starting for this assignment. This means moving <mark>UP in the `tkinter` world means DECREASING the y-value</mark> and <mark>moving DOWN means INCREASING the y-value</mark>. We'll warn you about this in each of the parts below.
 

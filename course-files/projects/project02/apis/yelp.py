@@ -199,6 +199,7 @@ def get_businesses(location:str, limit:int=10, search_term:str=None, categories:
     * `attributes` (`list`): A list of any one ore more of the following filters: `hot_and_new`, `reservation`, `gender_neutral_restrooms`, `open_to_all`, `wheelchair_accessible`
     * `simplify` (`bool`):  Indicates whether you want to simplify the data that is returned. Non-simplified data
                             will return a list of dictionaries.
+                            
     Returns a `list` of businesses matching your search / ordering / limit criteria.
     '''
 

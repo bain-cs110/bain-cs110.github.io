@@ -35,7 +35,7 @@ Today, we'll be combining a number of the concepts we've been practicing the las
 
 You will be creating a Wordle-style game but in text rather than in graphics (spoiler alert: you'll do the graphics for the HW). If you haven't played Wordle before, your goal is to guess a secret 5-letter word in, at most, 6 guesses. Each time you guess, you're given some "hints" about about how correct your guess was:
 
-<img class="medium frame" src="/assets/images/tutorials/wordle.webp" />
+<img class="medium frame" src="{{site.base_url}}/assets/images/tutorials/wordle.webp" />
 
 We'll be building a simpler, text-based version for the Tutorial but then using the same techniques in HW 6 to create the full version!
 
@@ -92,13 +92,13 @@ Once you've completed all of your to-dos, make sure to run your program and see 
 
 ## Starter Files
 
-<a class="nu-button" href="/course-files/tutorials/tutorial05/tutorial05_template.py" target="_blank">
+<a class="nu-button" href="{{site.base_url}}/course-files/tutorials/tutorial05/tutorial05_template.py" target="_blank">
     Tutorial Starter File <i class="fas fa-download"></i>
 </a>
 <br>
 <br>
 
-<a class="nu-button" href="/course-files/tutorials/tutorial05/wordlist.txt" target="_blank">
+<a class="nu-button" href="{{site.base_url}}/course-files/tutorials/tutorial05/wordlist.txt" target="_blank">
     Word List File<i class="fas fa-download"></i>
 </a>
 

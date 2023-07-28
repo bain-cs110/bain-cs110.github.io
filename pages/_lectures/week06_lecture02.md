@@ -26,7 +26,7 @@ videos:
      title: "Revisiting Mario (IDLE)"
      duration: "20:06"   
    - url: 
-     title: "Intro to Animation (<b>MINI-QUIZ - USE LOAD BUTTON AT BOTTOM OF SCREEN</b>)"
+     title: "Intro to Animation<br>(<b>MINI-QUIZ - USE LOAD BUTTON AT BOTTOM OF SCREEN</b>)"
      duration: "11:30"  
      quiz: 1    
 slides:

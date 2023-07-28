@@ -19,52 +19,52 @@ permalink: /resources/staff-directory/
 </style>
 
 <ul class = "profiles">
-    <li><a><img src="/assets/images/directory/amira.jpg">
+    <li><a><img src="{{site.base_url}}/assets/images/directory/amira.jpg">
         <span><h3>Amira Mohamed</h3><h4>Peer Mentor</h4></span>
     </a></li>
-    <li><a><img src="/assets/images/directory/andres.jpg">
+    <li><a><img src="{{site.base_url}}/assets/images/directory/andres.jpg">
         <span><h3>Andrés Rojas</h3><h4>Peer Mentor</h4></span>
     </a></li>
-    <li><a><img src="/assets/images/directory/angeli.jpg">
+    <li><a><img src="{{site.base_url}}/assets/images/directory/angeli.jpg">
         <span><h3>Angeli Mittal</h3><h4>Peer Mentor</h4></span>
     </a></li>
-    <li><a><img src="/assets/images/directory/connor.jpg">
+    <li><a><img src="{{site.base_url}}/assets/images/directory/connor.jpg">
         <span><h3>Connor Bain</h3><h4>Instructor</h4></span>
     </a></li>
-    <li><a><img src="/assets/images/directory/defne.jpg">
+    <li><a><img src="{{site.base_url}}/assets/images/directory/defne.jpg">
         <span><h3>Defne Deda</h3><h4>Peer Mentor</h4></span>
     </a></li>
-    <li><a><img src="/assets/images/directory/julia.jpg">
+    <li><a><img src="{{site.base_url}}/assets/images/directory/julia.jpg">
         <span><h3>Julia Chu</h3><h4>Peer Mentor</h4></span>
     </a></li>
-    <li><a><img src="/assets/images/directory/kathleen.jpg">
+    <li><a><img src="{{site.base_url}}/assets/images/directory/kathleen.jpg">
         <span><h3>Kathleen Lee</h3><h4>Peer Mentor</h4></span>
     </a></li>
-    <li><a><img src="/assets/images/directory/lev.png">
+    <li><a><img src="{{site.base_url}}/assets/images/directory/lev.png">
         <span><h3>Lev Rosenberg</h3><h4>Peer Mentor</h4></span>
     </a></li>
-    <li><a><img src="/assets/images/directory/natan.jpg">
+    <li><a><img src="{{site.base_url}}/assets/images/directory/natan.jpg">
         <span><h3>Natan Gamliel</h3><h4>Peer Mentor</h4></span>
     </a></li>
-    <li><a><img src="/assets/images/directory/nicole.jpg">
+    <li><a><img src="{{site.base_url}}/assets/images/directory/nicole.jpg">
         <span><h3>Nicole Tartakovsky</h3><h4>Peer Mentor</h4></span>
     </a></li>
-    <li><a><img src="/assets/images/directory/si_woo.jpg">
+    <li><a><img src="{{site.base_url}}/assets/images/directory/si_woo.jpg">
         <span><h3>Si Woo Park</h3><h4>Peer Mentor</h4></span>
     </a></li>
-    <li><a><img src="/assets/images/directory/stephanie.jpg">
+    <li><a><img src="{{site.base_url}}/assets/images/directory/stephanie.jpg">
         <span><h3>Stephanie Ma</h3><h4>Peer Mentor</h4></span>
     </a></li>
-    <li><a><img src="/assets/images/directory/victor.jpg">
+    <li><a><img src="{{site.base_url}}/assets/images/directory/victor.jpg">
         <span><h3>Victor Chen</h3><h4>Peer Mentor</h4></span>
     </a></li>
-    <li><a><img src="/assets/images/directory/vikram.png">
+    <li><a><img src="{{site.base_url}}/assets/images/directory/vikram.png">
         <span><h3>Vikram Achuthan</h3><h4>Peer Mentor</h4></span>
     </a></li>
-    <li><a><img src="/assets/images/directory/walker.png">
+    <li><a><img src="{{site.base_url}}/assets/images/directory/walker.png">
         <span><h3>Walker Demel</h3><h4>Graduate TA</h4></span>
     </a></li>
-     <li><a><img src="/assets/images/directory/zoryah.jpg">
+     <li><a><img src="{{site.base_url}}/assets/images/directory/zoryah.jpg">
         <span><h3>Zoryah Gray</h3><h4>Peer Mentor</h4></span>
     </a></li>
 </ul>

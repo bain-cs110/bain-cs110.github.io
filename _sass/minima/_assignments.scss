@@ -9,7 +9,6 @@
 
 .assignments, .schedule {
     .passed {
-        background: #F9F9F9;
         strong {
             color: #777;
         }
@@ -29,21 +28,21 @@
         .pj, a.pj,
         .lec, a.lec,
         .lab, a.lab,
-        .quiz, a.quiz,
+        .quizzes, a.quizzes,
         .ec, a.ec {
             // opacity: 0.6;
-            background: #CCC;
+            background: #5A5A5A;
         }
         strong, th {
             font-weight: 200;
-            color: #5c5962;
+            color: #5A5A5A;
         }
     }
 }
 
 
 .assignments, .lectures, .assignment, .reference, .lecture, .readings, .link-menu, .two-column article, .syllabus, .schedule {
-    display: flex;
+    display: inline;
     flex-direction: column;
 
     .badge, a.badge,
@@ -51,9 +50,11 @@
     .pj, a.pj,
     .lec, a.lec,
     .lab, a.lab,
-    .quiz, a.quiz,
+    .quizzes, a.quizzes,
     .live, .recorded,
     .ec, a.ec {
+        text-align: center;
+        min-width: 40px;
         display: inline-block;
         border-radius: 4px;
         color: white;
@@ -63,7 +64,6 @@
         text-decoration: none;
         padding: 3px 7px;
         border-bottom: solid transparent 1px;
-        min-width: 42px;
         margin-right: 5px;
         text-indent: 0px;
     }
@@ -72,20 +72,19 @@
         color: #444;
     }
     .hw, .hw:hover {
-        background: $purple;
-    }
-    .quiz, .quiz:hover {
         background: $mutedblue;
     }
+    .quizzes, .quizzes:hover {
+        background: $orange;
+    }
     .pj, .pj:hover {
-        background: $blue;
+        background: $orange;
     }
     .lec, .lec:hover, a.lec {
-        background: $lightlightpurple;
+        background: $purple;
     }
     .lab, .lab:hover {
         background: $green;
-        font-weight: 600;
     }
     .ec, .ec:hover {
         background: rgba(104, 74, 152, 0.5);
@@ -95,7 +94,7 @@
     .live {
         background: $orange;
     }
-    .quiz {
+    .quizzes {
         border: none !important;
     }
 
@@ -129,7 +128,6 @@
             padding: 10px 10px 5px 15px;
         }
         li {
-            list-style-type: none;
             padding: 0px;
             margin-bottom: 5px;
             a {
@@ -170,7 +168,6 @@
     }
 
     .checkbox-list > li:before {
-        font-family:"Font Awesome 5 Pro";
         content: "\f00c";
         font-weight: 600;
         color: #1cb954;
@@ -271,23 +268,14 @@ blockquote.quote {
         }
     }
     ul {
-        list-style: none;
-        li::before {
-            font-size: 20px;
-            content: "\2022";
-            font-weight: bold;
-            display: inline-block;
-            text-indent: -16px;
-            vertical-align: text-bottom;
-            color: $purple;
-        }
+    
     }
     h2 {
         border-bottom: solid 1px $lightgrey;
     }
     h3 {
         color: #676767;
-        font-family:"Campton Extra Light";
+        font-family:lato;
         // color: $lightpurple;
         font-size: 1.5em;
     }

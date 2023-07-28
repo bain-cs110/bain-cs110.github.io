@@ -2,13 +2,14 @@ $lightgrey: #F6F6F6;
 $grey: #999;
 $darkgrey: #5c5962;
 $nupurple: #4E2A84;
-$purple: #684a98;
+$purple: #4E2A84;
 $lightpurple: #934B66;
 $lightlightpurple: rgba(132, 109, 172, 0.65);
-$green: #009c7b;
-$blue: #2869e6;
+$green: #008656;
+$blue: #0D2D6C;
 $mutedblue: #5B85AA;
-$orange: #F46036;
+$orange: #e32400;
+$yellow: #D9C826;
 
 * {
     box-sizing: border-box;
@@ -20,7 +21,7 @@ iframe {
 
 body {
     margin: 0;
-    font-family: 'Akkurat Pro Regular';
+    font-family: lato;
     color: #342f2e;
     box-sizing: border-box;
     overflow-x: hidden;
@@ -69,9 +70,8 @@ ol.spaced li, ul.spaced li {
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: "Campton Book",Tahoma,sans-serif;
+    font: bold Lato, sans serif;
     color: $nupurple;
-    font-weight: 600;
 
     a, a:hover, a:visited, a:active {
         text-decoration: none;
@@ -235,11 +235,12 @@ header {
             color: white;
             background: none;
         }
+        font: bold Lato, sans serif;
     }
     h2 {
         margin-top: 0px;
         margin-bottom: 20px;
-        font-family: "Campton Extra Light",Tahoma,sans-serif;
+        font: bold Lato, sans serif;
         border-bottom: none;
         color: white;
         a, a:hover, a:visited, a:active {
@@ -264,7 +265,6 @@ nav {
 
         li {
             border-bottom: solid 3px transparent;
-            list-style: none;
             padding: 10px 5px;
 
             &.active {

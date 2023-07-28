@@ -25,6 +25,6 @@ readings:
     url: http://openbookproject.net/thinkcs/python/english3e/iteration.html
 ---
 
-<img class="module-image" src="/assets/images/lectures/loops.gif" /> In this lesson, we’re going to go over loops -- a way of allowing your program to repeat code. Being able to repeat code blocks (also know as "looping" or "iterating") is very powerful, and will allow you to easily perform repetitive tasks in a variety of different contexts: playing songs, drawing pictures, building animations, doing data processing, and so forth.
+<img class="module-image" src="{{site.base_url}}/assets/images/lectures/loops.gif" /> In this lesson, we’re going to go over loops -- a way of allowing your program to repeat code. Being able to repeat code blocks (also know as "looping" or "iterating") is very powerful, and will allow you to easily perform repetitive tasks in a variety of different contexts: playing songs, drawing pictures, building animations, doing data processing, and so forth.
 
 I also highly recommend that you read Chapter 5 in the Severance (Python for Everyone), for additional review.

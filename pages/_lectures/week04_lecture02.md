@@ -1,7 +1,7 @@
 ---
 layout: module
 title: "Sequences (Tuples) and Modules"
-description: "Mini-Quiz 4"
+description: "(Mini-Quiz 4)"
 type: lecture
 exercise_url: "lecture10.zip"
 draft: 0

@@ -1,7 +1,7 @@
 ---
 layout: lecture-two-column
 title: Quiz 2
-type: quiz
+type: quizzes
 draft: 0
 num: 2
 canvas_id: wednesday-quiz-2-in-person-may-17

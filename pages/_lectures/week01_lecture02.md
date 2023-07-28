@@ -25,4 +25,4 @@ readings:
 
 In today's lesson, we're going to think a little bit more about how computers work. <br><br>It is important for you to generate your own model of how a computer processes your instructions so that you can get the feedback you need to write the program you intended.
 
-[Turtle Activities Link](/resources/turtle-activity-0)
+[Turtle Activities Link]({{site.base_url}}/resources/turtle-activity-0)

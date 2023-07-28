@@ -1,10 +1,10 @@
 ---
 layout: lecture-two-column
 title: Quiz 3 (optional)
-type: quiz
+type: quizzes
 draft: 0
 num: 3
-due_date: 2023-06-02
+due_date: 2023-09-02
 ---
 
 If you have already taken Quiz 1 and Quiz 2 and are satisfied with your grade, Quiz 3 is optional (given that you can drop your lowest quiz score).

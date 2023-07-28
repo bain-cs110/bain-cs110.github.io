@@ -1,7 +1,7 @@
 ---
 layout: lecture-two-column
 title: Quiz 1
-type: quiz
+type: quizzes
 draft: 0
 num: 1
 due_date: 2023-04-26

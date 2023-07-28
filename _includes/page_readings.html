@@ -1,4 +1,4 @@
-<ol class="readings">
+<ul>
 {% for item in page.readings %}
     {% assign optional = 0 %}
     {% if item.optional == 1 %}
@@ -7,14 +7,14 @@
         {% include reading.html %} 
     {% endif %}
 {% endfor %}
-</ol>
+</ul>
 {% if optional == 1 %}
     <h3>Optional</h3>
-    <ol class="readings">
+    <ul>
     {% for item in page.readings %}
         {% if item.optional == 1 %}
             {% include reading.html %} 
         {% endif %}
     {% endfor %}
-    </ol>
+    </ul>
 {% endif %}

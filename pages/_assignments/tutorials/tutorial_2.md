@@ -27,7 +27,7 @@ In addition to gaining more practice with functions, there are three takeaways t
 
 ## Understanding the "hardcoded" version of Mario
 
-<a class="nu-button" href="/course-files/tutorials/tutorial02/your_task.py" target="_blank">
+<a class="nu-button" href="{{site.base_url}}/course-files/tutorials/tutorial02/your_task.py" target="_blank">
     Tutorial Starter File <i class="fas fa-download"></i>
 </a>
 
@@ -35,7 +35,7 @@ Please download and open the `your_task.py` file and take a look at it. Note tha
 
 Scroll down in the file until you see the usual `"YOUR CODE BELOW HERE"` message and take a brief look at the code. It's a long file...but it's super repetitive. Let's see what it does:
 
-<img class="medium frame" src="/assets/images/tutorials/mario1.png" />
+<img class="medium frame" src="{{site.base_url}}/assets/images/tutorials/mario1.png" />
 
 A few things to pay attention to in this file:
 
@@ -53,7 +53,7 @@ Try re-assigning a different color to the `clothes` variable, and running the pr
 
 A lot of the times in programming (or really in text-editing too), you might want to find a certain line or word in a really long program. To do this, we can use the **FIND** tool. To do this in IDLE, open the `Edit` menu and select `Find...`. It'll bring up a menu like the below:
 
-<img class="medium frame" src="/assets/images/tutorials/find.png" />
+<img class="medium frame" src="{{site.base_url}}/assets/images/tutorials/find.png" />
 
 Say you wanted to see which lines of our program pertain to Mario's overalls. Well they start off blue, so you'd open up the Find tool and then search for `"blue"`. Once you click **Find** it will highlight the first occurrence of that search term in the file. If you want to find the next one, then you'd just click **Find Next**.
 
@@ -71,7 +71,7 @@ To make this process more efficient, create another variable called `pixel` and 
 
 The _Find_ tool is really dope. It does a great job of locating things you might want to change. What if you wanted to make a ton of the same change. Say...replace the value `25` with the variable `pixel`. For this sort of thing, you can use the **Find and Replace** tool. Open up the `Edit` menu and then select `Replace...`.
 
-<img class="medium frame" src="/assets/images/tutorials/replace.png" />
+<img class="medium frame" src="{{site.base_url}}/assets/images/tutorials/replace.png" />
 
 > **NOTE**: BE VERY CAREFUL WITH THIS TOOL. Though it's possible to reverse your changes with Undo, remember computers are not particularly smart and will only do _exactly_ what you tell them to and no more.
 
@@ -154,7 +154,7 @@ You can think of this function as a _helper_ or _translation_ function that is b
 
 Once you get 14, 13, 12, and 11 (and you feel like you've got a handle for WHY that works) checkout the hint below for the remaining rows. Yes, you can copy and paste the remaining rows...but only do so if you understand why this works. Otherwise, it's time to ask some questions!
 
-<a class="nu-button" href="/course-files/tutorials/tutorial02/hint_1.py" target="_blank">
+<a class="nu-button" href="{{site.base_url}}/course-files/tutorials/tutorial02/hint_1.py" target="_blank">
     Hint<i class="fas fa-download"></i>
 </a>
 
@@ -190,7 +190,7 @@ make_mario(the_canvas, (420, 400), clothes='#E5F77D', overalls='#75B9BE', pixel=
 make_mario(the_canvas, (420, 10), pixel=15)
 ```
 
-<img class="medium frame" src="/assets/images/tutorials/marios.png" />
+<img class="medium frame" src="{{site.base_url}}/assets/images/tutorials/marios.png" />
 
 Make some other custom marios that use different inputs to make sure your function works as expected.
 

@@ -58,7 +58,7 @@ You should see some Evanston restaurants print to the screen (as a list of dicti
 
 ### Using Helper Functions
 
-There is also a helper function inside of the <a href="/course-files/projects/project02/docs/apis/yelp.html" target="_blank">apis.yelp</a> module that can help you output businesses to the screen, which you are welcome to modify:
+There is also a helper function inside of the <a href="{{site.base_url}}/course-files/projects/project02/docs/apis/yelp.html" target="_blank">apis.yelp</a> module that can help you output businesses to the screen, which you are welcome to modify:
 
 ```python
 table_text = yelp.generate_businesses_table(businesses)
@@ -80,7 +80,7 @@ Next, go back to your `tutorial06.py` file and modify the get_businesses(...) fu
 >
 > You can also learn more about the yelp module by:
 >
-> * Looking at the online documentation here: <a href="/course-files/projects/project02/docs/apis/yelp.html" target="_blank">/project02/docs/apis/yelp.html</a>
+> * Looking at the online documentation here: <a href="{{site.base_url}}/course-files/projects/project02/docs/apis/yelp.html" target="_blank">/project02/docs/apis/yelp.html</a>
 
 * * *
 
@@ -144,7 +144,7 @@ If you still have time, please experiment with some of the other built-in functi
 
 > #### Learning more about the spotify module (apis/spotify.py)
 >
-> Checkout the documentation here: <a href="/course-files/projects/project02/docs/apis/spotify.html" target="_blank">Spotify Library</a>
+> Checkout the documentation here: <a href="{{site.base_url}}/course-files/projects/project02/docs/apis/spotify.html" target="_blank">Spotify Library</a>
 
 * * *
 
