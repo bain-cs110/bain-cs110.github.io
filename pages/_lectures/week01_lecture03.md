@@ -27,9 +27,9 @@ Today we're going to spend more time practicing the actual action of programming
 
 The first half of class, we'll spend talking more about our turtle activities from last time. Shelly is still in danger and we must save them!
 
-* [Turtle Activities Link]({{site.base_url}}/resources/turtle-activity-3)
-* [Python Version]({{site.base_url}}/course-files/lectures/lecture02/turtle_demo.py)
+* [Turtle Activities Link]({{site.url}}/resources/turtle-activity-3)
+* [Python Version]({{site.url}}/course-files/lectures/lecture02/turtle_demo.py)
 
-The second half of class, we'll spend installing Python and doing HW 0 so you're done with your HW before the weekend starts! If you are reading this and haven't already, please download Python for your system by following the direction in [the homework assignment]({{site.base_url}}/assignments/hw-0).
+The second half of class, we'll spend installing Python and doing HW 0 so you're done with your HW before the weekend starts! If you are reading this and haven't already, please download Python for your system by following the direction in [the homework assignment]({{site.url}}/assignments/hw-0).
 
 Note: If you're reading this before class, go ahead and download Python **now** rather than later. Beacuse there are so many people in our class, the interent in our class slows _wayyyyy_ down when everyone tries to download a large file at the same time.

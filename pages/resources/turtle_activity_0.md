@@ -19,4 +19,4 @@ These are the only <strong>commands</strong> that exist in your world here. Each
 
 In this simulation, you only had three <strong>commands</strong>. In other words, the computer only understood these three actions of turning left, turning right, and going forward. But say we wanted the turtle to go backwards one square. Is there any way we could <em>combine</em> these three commands into a BACKWARDS command?
 
-[Next turtle activity...]({{site.base_url}}/resources/turtle-activity-1)
+[Next turtle activity...]({{site.url}}/resources/turtle-activity-1)

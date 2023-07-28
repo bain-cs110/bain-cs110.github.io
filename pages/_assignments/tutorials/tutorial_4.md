@@ -18,13 +18,13 @@ The goal of this tutorial is to get you more comfortable with event handlers. Th
 
 You'll need the `p1_utilities` library in your Tutorial 04 folder to complete today's activity (if you haven't been moving stuff to your `cs110` folder that we setup in the very first tutorial...nows a good time to start).
 
-<a class="nu-button" href="{{site.base_url}}/course-files/projects/project01/p1_utilities.py" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/projects/project01/p1_utilities.py" target="_blank">
     Utilities Library <i class="fas fa-download"></i>
 </a>
 
 Here's the documentation for it in case you need it:
 
-<a class="nu-button" href="{{site.base_url}}/course-files/projects/project01/docs/p1_utilities.html" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/projects/project01/docs/p1_utilities.html" target="_blank">
     Utilities Library Documentation <i class="fas fa-download"></i>
 </a>
 
@@ -32,7 +32,7 @@ And you'll need the Mario Module (also in the same folder:
 
 > **Note:** If you downloaded this file prior to Monday at 6pm, there's a typo in it! You can either download the new version below...or you can change the line on 108 to `p1_utilities` instead of `project_utilities`.
 
-<a class="nu-button" href="{{site.base_url}}/course-files/tutorials/tutorial04/mario_module.py" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/tutorials/tutorial04/mario_module.py" target="_blank">
     Mario Module <i class="fas fa-download"></i>
 </a>
 
@@ -45,7 +45,7 @@ Open `01_mouse_events.py` (linked below) and complete the following tasks:
 1. modify the `add_new_goomba` function so that it adds a new Goomba wherever the user clicks. Make the size of the Goomba random as its drawn. Optional: come up with a way of tracking how many Goomba have been created so that each Goomba can have a unique tag.
 2. When you're done, add the following line to your program right below your MOUSE_CLICK event handler:<br><br>**`the_canvas.bind(MOUSE_DRAG, add_new_goomba)`** <br><br>Now run your program again, and notice that your `add_new_goomba` function is invoked when you either click or drag.
 
-<a class="nu-button" href="{{site.base_url}}/course-files/tutorials/tutorial04/01_mouse_events.py" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/tutorials/tutorial04/01_mouse_events.py" target="_blank">
     Mouse Events <i class="fas fa-download"></i>
 </a>
 
@@ -66,7 +66,7 @@ Open `02_keyboard_events.py` (linked below) and complete the following tasks:
 > **NOTES:**
 > In order for your Canvas to listen for keyboard events, you must invoke the **`the_canvas.focus_set()`** method after you invoke `the_canvas.pack()` (at the top of your program). Without **`the_canvas.focus_set()`**, your keyboard events will not fire because they will go to the IDLE application rather than specifically to your canvas. _We did NOT do this for you._
 
-<a class="nu-button" href="{{site.base_url}}/course-files/tutorials/tutorial04/02_keyboard_events.py" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/tutorials/tutorial04/02_keyboard_events.py" target="_blank">
     Keyboard Events <i class="fas fa-download"></i>
 </a>
 

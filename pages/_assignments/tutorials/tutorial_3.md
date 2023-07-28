@@ -36,7 +36,7 @@ In the pre-recorded lecture wrote a complete `draw_pixel_art` function that allo
 
 But...how do we animate something? Well, think of a [flip book](https://andymation.squarespace.com):
 
-<img class="frame" style="width: 25%;" src="{{site.base_url}}/assets/images/tutorials/flipbook.gif" />
+<img class="frame" style="width: 25%;" src="{{site.url}}/assets/images/tutorials/flipbook.gif" />
 
 A moving image, is just a series of still-images / drawings flashing by at a certain pace. So really, an animation is just a series of repeated steps:
 
@@ -57,13 +57,13 @@ If only there were a way to take a series of small steps in our program and repe
 
 Download these two starter files and make sure they're both in the same folder on your computer:
 
-<a class="nu-button" href="{{site.base_url}}/course-files/tutorials/tutorial03/animate_mario.py" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/tutorials/tutorial03/animate_mario.py" target="_blank">
     Tutorial Starter File <i class="fas fa-download"></i>
 </a>
 
 <br>
 
-<a class="nu-button" href="{{site.base_url}}/course-files/tutorials/tutorial03/tutorial03_utilities.py" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/tutorials/tutorial03/tutorial03_utilities.py" target="_blank">
     Utilities Library <i class="fas fa-download"></i>
 </a>
 
@@ -83,9 +83,9 @@ Modify the function call to `draw_pixel_art` to draw these other two alternate d
 </thead>
 <tbody>
   <tr>
-    <td><img src="{{site.base_url}}/assets/images/tutorials/mario_0.png" width="250"></td>
-    <td><img src="{{site.base_url}}/assets/images/tutorials/mario_1.png" width="250"></td>
-    <td><img src="{{site.base_url}}/assets/images/tutorials/mario_2.png" width="250"></td>
+    <td><img src="{{site.url}}/assets/images/tutorials/mario_0.png" width="250"></td>
+    <td><img src="{{site.url}}/assets/images/tutorials/mario_1.png" width="250"></td>
+    <td><img src="{{site.url}}/assets/images/tutorials/mario_2.png" width="250"></td>
   </tr>
 </tbody>
 </table>
@@ -124,7 +124,7 @@ WOW. A whole lot of nothing. Well, that's because we never asked Python to actua
 > Note, the below hint must be put in the same folder as your other two files for it to work!
 > <br>
 > <br>
-> <a class="nu-button" href="{{site.base_url}}/course-files/tutorials/tutorial03/hint.py" target="_blank">Hint 1 <i class="fas fa-download"></i></a>
+> <a class="nu-button" href="{{site.url}}/course-files/tutorials/tutorial03/hint.py" target="_blank">Hint 1 <i class="fas fa-download"></i></a>
 
 How cool is THAT!? Mario is racing across the screen; but more like an ice skater than the track and field star he actually is. To make this a little more "animation" like, we want to draw 3 different versions of Mario rather than just the same version of mario shifted a bit each time. Remember those other mario versions from Step 1? What we want to do is draw `mario_0`, then `mario_1`, then `mario_2`, then `mario_0`, then ... To do this, use an `if-elseif-else` conditional along with counter so that the mario version we draw changes each iteration (hint: `counter % 3` will cycle between the values of 0, 1, and 2). This is a slightly more advanced version of what we talked about last week:
 

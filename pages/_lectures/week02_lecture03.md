@@ -24,7 +24,7 @@ readings:
      source: "Python for Everybody"
 ---
 
-<img class="module-image" src="{{site.base_url}}/assets/images/lectures/lecture_05_functions.png" />
+<img class="module-image" src="{{site.url}}/assets/images/lectures/lecture_05_functions.png" />
 Now that we're starting to get used to functions...we need to start to understand how to design them ourselves. First we'll review some topics from Wednesday and then re-motivate why functions are useful - to encapsulate code. Then, we'll start to understand all of the details of defining our own functions, from names, to parameters, to awesome functionality.
 
 Functions allow us to tackle the key CS concept of **abstraction**. Programming is like making an investment in your future – we do a bunch of work **now** in order to be **lazy** later. Why? Think of it this way. Programming is basically like considering all of the tasks you do each day, and making a cool machine (aka a _function_) in order to automate that task. But what happens when you have two very similar tasks. For instance, what if on Mondays you have an Ego Waffle...but on Tuesdays you have toast.

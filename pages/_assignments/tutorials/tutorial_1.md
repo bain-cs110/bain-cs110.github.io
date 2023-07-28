@@ -17,7 +17,7 @@ This tutorial is a warmup for HW 2. Please download the starter file and complet
 
 If you've never done this before, there are a lot of little typing / logic / conceptual mistakes that **everyone** makes. Please pay careful attention and help each other complete the assignment!
 
-<a class="nu-button" href="{{site.base_url}}/course-files/tutorials/tutorial01/tutorial01_template.py" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/tutorials/tutorial01/tutorial01_template.py" target="_blank">
     Tutorial Starter File<i class="fas fa-download"></i>
 </a>
 
@@ -34,12 +34,12 @@ Once you've gotten the file, rename it to `tutorial_01.py` and move it into your
 
 Go ahead open the file in IDLE, take a look at it and then run it. You should see something like this:
 
-<img class="medium frame" src="{{site.base_url}}/assets/images/tutorial01/before.png" />
+<img class="medium frame" src="{{site.url}}/assets/images/tutorial01/before.png" />
 
 
 > **Note**: If you're on a Mac and are currently in Dark mode, you might see the below:
 > 
-> <img class="medium frame" src="{{site.base_url}}/assets/images/tutorial01/darkmode.png" />
+> <img class="medium frame" src="{{site.url}}/assets/images/tutorial01/darkmode.png" />
 > 
 > For some reason, `Tkinter` switches the colors white and black when your Mac is in
 > dark mode. To fix this, you have two options:
@@ -100,7 +100,7 @@ Hopefully, you and your partner discussed something along the lines of the follo
 
 Sweet! That's cool. We can make any sort of rectangle we want! See if you can reproduce the below image by modifying the inputs given to the `create_rectangle` function (ignore the triangle for now, we'll get there later):
 
-<img class="medium frame" src="{{site.base_url}}/assets/images/tutorial01/modified.png" />
+<img class="medium frame" src="{{site.url}}/assets/images/tutorial01/modified.png" />
 
 
 ### Writing our Own Version
@@ -160,7 +160,7 @@ make_square(the_canvas, 50, 50, 50, color="#8FCB9B")
 make_square(the_canvas, 200, 50, 50, color="#8FCB9B")
 ```
 
-<img class="medium frame" src="{{site.base_url}}/assets/images/tutorial01/after_square.png" />
+<img class="medium frame" src="{{site.url}}/assets/images/tutorial01/after_square.png" />
 
 Note, those weird colors (e.g. `"#8FCB9B"`) are called "hex codes" and are colors reprsented in a symbol system called "hexidecimal" (think of it like the Dewey Decimal system but for colors). Here is a <a href="https://coolors.co/app" target="_blank">link to a color generator</a> (to browse different hexidecimal color codes, press the spacebar). You can also use regular color names like `"green"`, `"blue"`, `"red"`, etc. (make sure they're strings though!).
 
@@ -184,7 +184,7 @@ Now your job is to write a function which we'll call `make_squareface`. It will 
 
 This function will use three calls to your `make_square` function to create a face (see below)! First, you'll make the big square for the face, then you'll make two more squares for the eyes. In the below, we draw a square face at a coordinate of `(400, 100)`, a width of `100`, a eye color of `"purple"` and a face color of `"gray"`.
 
-<img class="medium frame" src="{{site.base_url}}/assets/images/tutorial01/squareface.png" />
+<img class="medium frame" src="{{site.url}}/assets/images/tutorial01/squareface.png" />
 
 The tricky part here is that we the location of the eyes...depends on the location of the face! And not only that...the size of the eyes depends on the size of the face!
 
@@ -261,7 +261,7 @@ make_pictureframe(the_canvas, 100, 200, 100, 25)
 make_pictureframe(the_canvas, 0, 100, 100, 15, frame_color="purple", pic_color="white")
 ```
 
-<img class="medium frame" src="{{site.base_url}}/assets/images/tutorial01/after_overlay.png" />
+<img class="medium frame" src="{{site.url}}/assets/images/tutorial01/after_overlay.png" />
 
 * * *
 
@@ -275,7 +275,7 @@ Scroll down in your file until you see the following:
 
 If you recall from earlier, the right side of our canvas has a dope triangle on it. Let's tackle that one now.
 
-<img class="medium frame" src="{{site.base_url}}/assets/images/tutorial01/before.png" />
+<img class="medium frame" src="{{site.url}}/assets/images/tutorial01/before.png" />
 
 This challenge asks you to do the same thing as the first challenge, but instead of designing a function `make_square` using TKinter's `create_rectangle`, you"ll design `make_triangle_left` and `make_triangle_right` to use TKinter"s `create_polygon` function. Here, instead of calculating just one extra coordinate point...you'll have to calculate two more coordinates and use all three coordinates as input to the `create_polygon` function.
 
@@ -319,7 +319,7 @@ make_triangle_right(the_canvas, 400, 200, 100, color="#8FCB9B")
 make_triangle_left(the_canvas, 400, 200, 100, color="#8FCB9B")
 ```
 
-<img class="medium frame" src="{{site.base_url}}/assets/images/tutorial01/after_both.png" />
+<img class="medium frame" src="{{site.url}}/assets/images/tutorial01/after_both.png" />
 
 * * *
 

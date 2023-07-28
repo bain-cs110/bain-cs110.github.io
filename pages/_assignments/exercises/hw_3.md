@@ -15,11 +15,11 @@ draft: 0
 > 1. More practice working with built-in functions
 > 1. Practice writing your own functions
 
-<img class="creature" src="{{site.base_url}}/assets/images/hw03/creature.png" /> In this assignment, you are going to write a program to draw a creature of your own design/choosing using <a href="" target="_blank">tkinter</a>. At the end of this assignment, someone should be able to use your function to draw your creature: anywhere on the screen at any size or color. In other words, your function needs to honor the parameters that are passed into it. If you don't quite know what this means (it's a confusing concept for people just learning to program), make sure to ask questions!
+<img class="creature" src="{{site.url}}/assets/images/hw03/creature.png" /> In this assignment, you are going to write a program to draw a creature of your own design/choosing using <a href="" target="_blank">tkinter</a>. At the end of this assignment, someone should be able to use your function to draw your creature: anywhere on the screen at any size or color. In other words, your function needs to honor the parameters that are passed into it. If you don't quite know what this means (it's a confusing concept for people just learning to program), make sure to ask questions!
 
 <br>
 
-<a class="nu-button" href="{{site.base_url}}/course-files/homeworks/hw03/hw03_template.py" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/homeworks/hw03/hw03_template.py" target="_blank">
     Homework Starter File <i class="fas fa-download"></i>
 </a>
 
@@ -44,7 +44,7 @@ If you want to draw using more advanced shapes than what we used last week (e.g.
 
 Take a look at the `tkinter_warmup.py` file (downloadable below) for some more advanced examples. If you're having trouble conceptualizing how to make a shape, come to office hours so we can help!
 
-<a class="nu-button" href="{{site.base_url}}/course-files/lectures/lecture07/01_tkinter_warmup.py" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/lectures/lecture07/01_tkinter_warmup.py" target="_blank">
     More Advanced Tkinter Examples <i class="fas fa-download"></i>
 </a>
 
@@ -109,7 +109,7 @@ make_creature(the_canvas, (199, 469), size=122, primary_color='#3f5364', seconda
 >
 > The cool thing about this fix is that all it's doing is changing the value stored in the `size` variable. We only need to change it in that one place because everywhere we use `size`, python will use the smaller value cause that's what's stored in there!
 
-<img class="medium frame center" src="{{site.base_url}}/assets/images/hw03/creatures.png" />
+<img class="medium frame center" src="{{site.url}}/assets/images/hw03/creatures.png" />
 
 
 * * *

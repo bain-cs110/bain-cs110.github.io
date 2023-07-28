@@ -159,7 +159,7 @@ Pick an approach and implement in your program. Finally Run your program again a
 
 This time, rather than starting from scratch, we're going to give you a template to work in. Click the big purple button below to download the file `turtorial.py`. Move that downloaded file into your `tutorial0` folder.
 
-<a download class="nu-button" href="{{site.base_url}}/course-files/tutorials/tutorial00/turtorial.py" target="_blank">
+<a download class="nu-button" href="{{site.url}}/course-files/tutorials/tutorial00/turtorial.py" target="_blank">
     Tutorial Starter File <i class="fas fa-download"></i>
 </a>
 

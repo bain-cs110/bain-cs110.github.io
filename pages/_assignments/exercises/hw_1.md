@@ -38,7 +38,7 @@ First create a new folder in your CS 110 folder, inside the `homeworks` folder c
 
 Then download the starter file by clicking on the big button below.
 
-<a download class="nu-button" href="{{site.base_url}}/course-files/homeworks/hw01_template.py" target="_blank">
+<a download class="nu-button" href="{{site.url}}/course-files/homeworks/hw01_template.py" target="_blank">
     Homework Starter File <i class="fas fa-download"></i>
 </a>
 
@@ -67,14 +67,14 @@ Please complete the following exercises by editing the **homework_01.py** file u
 
 After completing all 4 exercises, your screen should look something like this (your shapes might be different sizes and colors):
 
-<img src="{{site.base_url}}/assets/images/hw01/turtles.png" style="width: 33%;" class="screenshot"/>
+<img src="{{site.url}}/assets/images/hw01/turtles.png" style="width: 33%;" class="screenshot"/>
 
 ## Part 2: Some Calculator Programs
 Next we'll focus on some numerical programming toward the bottom of the `homework_01.py` file.
 
 #### 1. Write a program that computes and prints the result of:
 
-<img src="{{site.base_url}}/assets/images/hw01/equation.png" style="width: 30%" class="screenshot"/>
+<img src="{{site.url}}/assets/images/hw01/equation.png" style="width: 30%" class="screenshot"/>
 
 (The answer is roughly 0.1017).
 

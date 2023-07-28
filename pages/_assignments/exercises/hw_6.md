@@ -105,31 +105,31 @@ Before you submit, make sure you’ve tested that your program does the followin
 
 You'll need all of these downloaded but **you will only work in the `w0rdle.py` file**.
 
-<a class="nu-button" href="{{site.base_url}}/course-files/homeworks/hw06/w0rdle.py" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/homeworks/hw06/w0rdle.py" target="_blank">
     Homework Starter File <i class="fas fa-download"></i>
 </a>
 <br>
 <br>
 
-<a class="nu-button" href="{{site.base_url}}/course-files/homeworks/hw06/docs/w0rdle.html" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/homeworks/hw06/docs/w0rdle.html" target="_blank">
     Pretty Documentation for Starter File Functions<i class="fas fa-download"></i>
 </a>
 <br>
 <br>
 
-<a class="nu-button" href="{{site.base_url}}/course-files/homeworks/hw06/hw6_utilities.py" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/homeworks/hw06/hw6_utilities.py" target="_blank">
     HW6 Utilities File<i class="fas fa-download"></i>
 </a>
 <br>
 <br>
 
-<a class="nu-button" href="{{site.base_url}}/course-files/homeworks/hw06/docs/hw6_utilities.html" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/homeworks/hw06/docs/hw6_utilities.html" target="_blank">
     Pretty Documentation for W0rdle Library<i class="fas fa-download"></i>
 </a>
 <br>
 <br>
 
-<a class="nu-button" href="{{site.base_url}}/course-files/homeworks/hw06/wordlist.txt" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/homeworks/hw06/wordlist.txt" target="_blank">
     W0rdle Word List File<i class="fas fa-download"></i>
 </a>
 <br>

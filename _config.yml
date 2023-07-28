@@ -9,7 +9,7 @@ subtitle: "Intro to Computer Programming"
 email: connor.bain@northwestern.edu
 description: >- # this means to ignore newlines until "baseurl:"
 term_start_date: "2023-03-27"
-url: "bain-cs110.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://bain-cs110.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username:
 canvas_id: 185071

@@ -12,4 +12,4 @@ Change the slider and then click the RESET button. Now do it again. See any diff
 
 In our model here, we assigned (or updated) the value of a variable by using that slider. In a text based language like Python, we'll instead use the symbol `=` to assign value to a variable. 
 
-[Next turtle activity...]({{site.base_url}}/resources/turtle-activity-3)
+[Next turtle activity...]({{site.url}}/resources/turtle-activity-3)

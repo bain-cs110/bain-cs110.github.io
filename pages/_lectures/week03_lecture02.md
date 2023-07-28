@@ -35,6 +35,6 @@ readings:
 
 Today we'll continue our work with calling and defining functions in the context of `Tkinter` a library for Python that will allow us to create beautiful shapes and art!
 
-<img class="medium" src="{{site.base_url}}/assets/images/hw02/warmup.png" />
+<img class="medium" src="{{site.url}}/assets/images/hw02/warmup.png" />
 
 > **Note**: There's an audio glitch with the last 3 files where for some reason it sounds like my voice is "echoing." I've tried to fix it but for some reason it just refuses to go away! Hopefully by the time you read this I've got it fixed but if not, I'm sorry it sounds weird!
