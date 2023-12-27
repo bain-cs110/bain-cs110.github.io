@@ -3,8 +3,13 @@
     <head>
         {% include head.html %}
     </head>
-    <body class="one-column">
-        <div class="container">
+    {% if page.title %}
+    <title>{{page.title}}</title>
+    {% else %}
+    <title>Error</title>
+    {% endif %}
+    <body style="width: 95%" class="one-column">
+        <div style="width: 95%;" class="container">
             <main>
                 {{ content }}
             </main>      

@@ -1,8 +1,8 @@
 ---
 layout: module
-title: "Memorial Day (No Class)"
+title: "Python in the Real World"
 type: lecture
 draft: 1
-num:
-due_date: 2023-05-29
+num: 23
+due_date: 2024-03-04
 ---

@@ -2,9 +2,9 @@
 layout: lecture-two-column
 title: Quiz 1
 type: quizzes
-draft: 0
+draft: 1
 num: 1
-due_date: 2023-04-26
+due_date: 2024-01-31
 ---
 
 Quiz 1 will cover all the content from the beginning of the class up to and including Lecture 11.

@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<section class="readings">
+{{content}}
+<table>
+    <caption>Links to Course Resources</caption>
+    <thead>
+        <tr>
+            <th scope="col">Page</th>
+            <th scope="col">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+
+{% assign sortedResources = site.resources | sort: 'ordering' %}
+
+{% for resource in sortedResources %}
+    <tr>
+        {% if resource.draft == 1 %}
+        <td>{{resource.title}} - Not Yet Available</td>
+        {% else %}
+        <td><a href="{{site.canvas_url}}/pages/{{resource.canvas_id}}">{{resource.title}}</a></td>
+        {% endif %}
+        <td>
+            {{resource.description}}
+        </td>
+    </tr>
+{% endfor %}
+    </tbody>
+</table>
+</section>

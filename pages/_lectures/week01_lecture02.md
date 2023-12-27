@@ -1,28 +1,22 @@
 ---
 layout: module
-title: Hardware and Software
+title: Why are we here?
 type: lecture
 description:
-num: 1
+num: 0
 draft: 0
-canvas_id: wednesday-lecture-1-hardware-and-software-march-29
-due_date: 2023-03-29
-videos:
-   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dbaeb7f2-ed4b-47cf-925f-afd20160014a
-     title: "Live Lecture"
-     duration: "50:00"
-     live: 1
+canvas_id: wednesday-lecture-0-why-are-we-here-?
+canvas_title: Wednesday - Lecture 0 - Why are we here?
+due_date: 2024-01-03
 slides:
-   - url: https://docs.google.com/presentation/d/1tCgyzceXOs0mgFH-rRhYTGQXAXJpkTWIVVT2LZDpmBg/edit?usp=sharing
-     title: Hardware and Software
-readings:
-   - title: "Ch1: Intro to Computing"
-     author: "Charles Severance"
-     url: https://www.py4e.com/html3/01-intro
-     video_url: https://www.py4e.com/lessons/intro
-     source: "Python for Everybody"
+   - url: https://docs.google.com/presentation/d/1pBVN9dpN-bGjiF1HCLaPLtJjQjC_y9MHoHs52dVJU4U/edit?usp=sharing
+     title: "What is Programming?"
 ---
 
-In today's lesson, we're going to think a little bit more about how computers work. <br><br>It is important for you to generate your own model of how a computer processes your instructions so that you can get the feedback you need to write the program you intended.
+In today's Lecture, we'll talk about what it means to _program_. We'll also cover many of the logistical/administrative elements of CS 110.
 
-[Turtle Activities Link]({{site.url}}/resources/turtle-activity-0)
+By the end of today you should:
+1. Have an idea of what it means to _program_
+2. Know why you are taking this class
+3. Have a rough picture of what you will learn in this class
+4. At least be aware of the course resources available to you

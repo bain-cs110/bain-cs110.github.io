@@ -1,7 +1,10 @@
 ---
 layout: default
 title: Finding Recommenders for Applications
-permalink: /resources/recommenders/
+description: Tips on asking for letters of recommendation
+ordering: 100
+canvas_id: finding-recommenders-for-applications
+draft: 0
 ---
 Many applications ask for some sort of _reference_, a person with whom you've worked that can attest to all of the stuff you submit as part of your application. No matter what year you are in school, it's always a daunting part of the application process. Who do you ask? What sorts of information do they need? What if they say no?
 
@@ -62,17 +65,43 @@ Remember, your recommenders are meant to both verify and complement your other a
 * * *
 
 ## General Advice
-* You shouldn't ask a professor for a letter of recommendation if the only relationship you have with them is taking their class. A letter writer needs to attest to how your are exceptional and if all they know is how you did in their class, there's no way they can do that.
+* You shouldn't ask a professor for a letter of recommendation if the only relationship you have with them is taking their class. A letter writer needs to attest to how you are exceptional and if all they know is how you did in their class, there's no way they can do that.
 * It's awesome to ask for a recommendation in-person as you can have a conversation about it right then and there, however, make sure to follow-up via email so there's a written reminder that they've agreed to serve as a recommender.
 * Make sure to make available any application materials you think would be helpful for your recommender, regardless of whether or not they actually have to write a letter. The more information we have about why you are exceptional, the easier it is for us to help you.
 * If a recommender asks you questions about your application, **respond as soon as you can**. It's imperative that we be able to clear up any confusion _before_ the letter goes in. You want to tell a cohesive story across all your application materials.
 * If you are submitting more than one application, do your best to summarize all of the requirements and applications in one place for your recommender (e.g. see below for an example of a student applying to various grad schools)
 
-| Due Date | School | Degree Program | Notes |
-| -------- | -------------- | -------------- | -------------- |
-| June 28  | Durmstrang Institute | M.S. in Robotics | Possible Phone Recommendation |
-| July 31 | Hogwarts School of Witchcraft and Wizardry | Ph.D. in Muggle Studies | Letter due via owl post |
-| Aug 1 | Beauxbatons | M.D. Ph.D. (Research Area: Potions) | Letter to be submitted online at Interfolio |
+<table style="border-top: solid 1px #444; border-bottom: solid 1px #444; border-collapse: collapse; width: 100%; margin-bottom: 30px;">
+        <caption>Sample Table</caption>
+        <thead>
+            <tr style="border-bottom: solid 1px #444;">
+                <th scope="col" style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; border-bottom: dotted 1px #999; padding: 8px; text-align: left; min-width: 80px;">Due Date</th>
+                <th scope="col" style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; border-bottom: dotted 1px #999; padding: 8px; text-align: left; min-width: 80px;">School</th>
+                <th scope="col" style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; border-bottom: dotted 1px #999; padding: 8px; text-align: left; min-width: 80px;">Degree Program</th>
+                <th scope="col" style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; border-bottom: dotted 1px #999; padding: 8px; text-align: left; min-width: 80px;">Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;">June 28</td>
+                <td style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;">Durmstrang Institute</td>
+                <td style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;">M.S. in Robotics</td>
+                <td style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;">Possible Phone Recommendation</td>
+            </tr>
+            <tr>
+                <td style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;">July 31</td>
+                <td style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;">Hogwarts School of Witchcraft and Wizardry</td>
+                <td style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;">Ph.D. in Muggle Studies</td>
+                <td style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;">Letter due via owl post</td>
+            </tr>
+            <tr>
+                <td style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;">Aug 1</td>
+                <td style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;">Beauxbatons</td>
+                <td style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;">M.D. Ph.D. (Research Area: Potions)</td>
+                <td style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;">Letter to be submitted online at Interfolio</td>
+            </tr>
+        </tbody>
+    </table>
 
 * _Please_ send us reminders. A good rule of thumb is 1-month, 1-week, 1-day. If your recommender has a penchant for slow responses, you might consider changing the way your remind them. One strategy for professors hard to reach via email would be to try and drop by their office hours.
 

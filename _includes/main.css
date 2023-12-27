@@ -10,7 +10,7 @@ iframe {
 
 body {
     margin: 0;
-    font-family: lato;
+    font-family: 'Akkurat Pro Regular';
     color: #342f2e;
     box-sizing: border-box;
     overflow-x: hidden;
@@ -79,8 +79,9 @@ h2,
 h3,
 h4,
 h5 {
-    font: bold Lato, sans serif;
+    font-family: "Campton Book", Tahoma, sans-serif;
     color: #4E2A84;
+    font-weight: 600;
 }
 
 h1 a,
@@ -133,11 +134,11 @@ h1 span {
 }
 
 h1 span.hw {
-    background: #4E2A84;
+    background: #684a98;
 }
 
 h1 span.pj {
-    background: #4E2A84;
+    background: #684a98;
 }
 
 h2,
@@ -297,7 +298,6 @@ header {
 header h1 {
     margin-bottom: 0px;
     color: white;
-    font: bold Lato, sans serif;
 }
 
 header h1 a,
@@ -311,7 +311,7 @@ header h1 a:active {
 header h2 {
     margin-top: 0px;
     margin-bottom: 20px;
-    font: bold Lato, sans serif;
+    font-family: "Campton Extra Light", Tahoma, sans-serif;
     border-bottom: none;
     color: white;
 }
@@ -343,6 +343,7 @@ nav ul {
 
 nav ul li {
     border-bottom: solid 3px transparent;
+    list-style: none;
     padding: 10px 5px;
 }
 
@@ -367,11 +368,81 @@ nav ul li:active {
     border-bottom: solid 3px #999;
 }
 
+@font-face {
+    font-family: "Akkurat Pro Light";
+    src: url("https://common.northwestern.edu/v8/css/fonts/AkkuratProLight.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Akkurat Pro Light Italic";
+    src: url("https://common.northwestern.edu/v8/css/fonts/AkkuratProLightItalic.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Akkurat Pro Regular";
+    src: url("https://common.northwestern.edu/v8/css/fonts/AkkuratProRegular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Akkurat Pro Italic";
+    src: url("https://common.northwestern.edu/v8/css/fonts/AkkuratProItalic.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Akkurat Pro Bold";
+    src: url("https://common.northwestern.edu/v8/css/fonts/AkkuratProBold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Akkurat Pro Bold Italic";
+    src: url("https://common.northwestern.edu/v8/css/fonts/AkkuratProBoldItalic.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Campton Book";
+    src: url("https://common.northwestern.edu/v8/css/fonts/CamptonBook.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Campton Bold";
+    src: url("https://common.northwestern.edu/v8/css/fonts/CamptonBold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Campton Extra Bold";
+    src: url("https://common.northwestern.edu/v8/css/fonts/CamptonExtraBold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Campton Extra Light";
+    src: url("https://common.northwestern.edu/v8/css/fonts/CamptonExtraLight.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 table {
     border-top: solid 1px #444;
     border-bottom: solid 1px #444;
     border-collapse: collapse;
-    width: 90%;
+    width: 100%;
     margin-bottom: 30px;
 }
 
@@ -395,7 +466,7 @@ table th ul li {
 }
 
 table td {
-    font-family: lato;
+    font-family: "Akkurat Pro Light";
 }
 
 table td strong,
@@ -403,7 +474,7 @@ table td i,
 table td a.lec,
 table td a.hw,
 table td a.pj {
-    font-family: lato;
+    font-family: 'Akkurat Pro Regular';
 }
 
 table td:first-child,
@@ -503,15 +574,15 @@ table.rubric ul {
 }
 
 table.xsmall {
-    width: 25% !important;
+    width: 250px !important;
 }
 
 table.small {
-    width: 50% !important;
+    width: 400px !important;
 }
 
 table.medium {
-    width: 75% !important;
+    width: 600px !important;
 }
 
 table.medium.module td:nth-child(2) {
@@ -521,6 +592,11 @@ table.medium.module td:nth-child(2) {
 .container {
     grid-template-columns: 1fr;
     grid-template-areas: "top" "menu" "main" "bottom";
+}
+
+.assignments .passed,
+.schedule .passed {
+    background: #F9F9F9;
 }
 
 .assignments .passed strong,
@@ -536,8 +612,8 @@ table.medium.module td:nth-child(2) {
 .assignments .passed a.lec,
 .assignments .passed .lab,
 .assignments .passed a.lab,
-.assignments .passed .quizzes,
-.assignments .passed a.quizzes,
+.assignments .passed .quiz,
+.assignments .passed a.quiz,
 .assignments .passed .ec,
 .assignments .passed a.ec,
 .lectures .passed .hw,
@@ -548,8 +624,8 @@ table.medium.module td:nth-child(2) {
 .lectures .passed a.lec,
 .lectures .passed .lab,
 .lectures .passed a.lab,
-.lectures .passed .quizzes,
-.lectures .passed a.quizzes,
+.lectures .passed .quiz,
+.lectures .passed a.quiz,
 .lectures .passed .ec,
 .lectures .passed a.ec,
 .readings .passed .hw,
@@ -560,8 +636,8 @@ table.medium.module td:nth-child(2) {
 .readings .passed a.lec,
 .readings .passed .lab,
 .readings .passed a.lab,
-.readings .passed .quizzes,
-.readings .passed a.quizzes,
+.readings .passed .quiz,
+.readings .passed a.quiz,
 .readings .passed .ec,
 .readings .passed a.ec,
 .syllabus .passed .hw,
@@ -572,8 +648,8 @@ table.medium.module td:nth-child(2) {
 .syllabus .passed a.lec,
 .syllabus .passed .lab,
 .syllabus .passed a.lab,
-.syllabus .passed .quizzes,
-.syllabus .passed a.quizzes,
+.syllabus .passed .quiz,
+.syllabus .passed a.quiz,
 .syllabus .passed .ec,
 .syllabus .passed a.ec,
 .schedule .passed .hw,
@@ -584,11 +660,13 @@ table.medium.module td:nth-child(2) {
 .schedule .passed a.lec,
 .schedule .passed .lab,
 .schedule .passed a.lab,
+.schedule .passed .quiz,
+.schedule .passed a.quiz,
 .schedule .passed .quizzes,
 .schedule .passed a.quizzes,
 .schedule .passed .ec,
 .schedule .passed a.ec {
-    background: #5A5A5A;
+    background: #707070;
 }
 
 .assignments .passed strong,
@@ -602,7 +680,7 @@ table.medium.module td:nth-child(2) {
 .schedule .passed strong,
 .schedule .passed th {
     font-weight: 200;
-    color: #5A5A5A;
+    color: #707070;
 }
 
 .assignments,
@@ -615,7 +693,7 @@ table.medium.module td:nth-child(2) {
 .two-column article,
 .syllabus,
 .schedule {
-    display: inline;
+    display: flex;
     flex-direction: column;
 }
 
@@ -629,8 +707,8 @@ table.medium.module td:nth-child(2) {
 .assignments a.lec,
 .assignments .lab,
 .assignments a.lab,
-.assignments .quizzes,
-.assignments a.quizzes,
+.assignments .quiz,
+.assignments a.quiz,
 .assignments .live,
 .assignments .recorded,
 .assignments .ec,
@@ -645,8 +723,8 @@ table.medium.module td:nth-child(2) {
 .lectures a.lec,
 .lectures .lab,
 .lectures a.lab,
-.lectures .quizzes,
-.lectures a.quizzes,
+.lectures .quiz,
+.lectures a.quiz,
 .lectures .live,
 .lectures .recorded,
 .lectures .ec,
@@ -661,8 +739,8 @@ table.medium.module td:nth-child(2) {
 .assignment a.lec,
 .assignment .lab,
 .assignment a.lab,
-.assignment .quizzes,
-.assignment a.quizzes,
+.assignment .quiz,
+.assignment a.quiz,
 .assignment .live,
 .assignment .recorded,
 .assignment .ec,
@@ -677,8 +755,8 @@ table.medium.module td:nth-child(2) {
 .reference a.lec,
 .reference .lab,
 .reference a.lab,
-.reference .quizzes,
-.reference a.quizzes,
+.reference .quiz,
+.reference a.quiz,
 .reference .live,
 .reference .recorded,
 .reference .ec,
@@ -693,8 +771,8 @@ table.medium.module td:nth-child(2) {
 .lecture a.lec,
 .lecture .lab,
 .lecture a.lab,
-.lecture .quizzes,
-.lecture a.quizzes,
+.lecture .quiz,
+.lecture a.quiz,
 .lecture .live,
 .lecture .recorded,
 .lecture .ec,
@@ -709,8 +787,8 @@ table.medium.module td:nth-child(2) {
 .readings a.lec,
 .readings .lab,
 .readings a.lab,
-.readings .quizzes,
-.readings a.quizzes,
+.readings .quiz,
+.readings a.quiz,
 .readings .live,
 .readings .recorded,
 .readings .ec,
@@ -725,8 +803,8 @@ table.medium.module td:nth-child(2) {
 .link-menu a.lec,
 .link-menu .lab,
 .link-menu a.lab,
-.link-menu .quizzes,
-.link-menu a.quizzes,
+.link-menu .quiz,
+.link-menu a.quiz,
 .link-menu .live,
 .link-menu .recorded,
 .link-menu .ec,
@@ -741,8 +819,8 @@ table.medium.module td:nth-child(2) {
 .two-column article a.lec,
 .two-column article .lab,
 .two-column article a.lab,
-.two-column article .quizzes,
-.two-column article a.quizzes,
+.two-column article .quiz,
+.two-column article a.quiz,
 .two-column article .live,
 .two-column article .recorded,
 .two-column article .ec,
@@ -757,8 +835,8 @@ table.medium.module td:nth-child(2) {
 .syllabus a.lec,
 .syllabus .lab,
 .syllabus a.lab,
-.syllabus .quizzes,
-.syllabus a.quizzes,
+.syllabus .quiz,
+.syllabus a.quiz,
 .syllabus .live,
 .syllabus .recorded,
 .syllabus .ec,
@@ -773,14 +851,14 @@ table.medium.module td:nth-child(2) {
 .schedule a.lec,
 .schedule .lab,
 .schedule a.lab,
+.schedule .quiz,
+.schedule a.quiz,
 .schedule .quizzes,
 .schedule a.quizzes,
 .schedule .live,
 .schedule .recorded,
 .schedule .ec,
 .schedule a.ec {
-    text-align: center;
-    min-width: 40px;
     display: inline-block;
     border-radius: 4px;
     color: white;
@@ -790,6 +868,8 @@ table.medium.module td:nth-child(2) {
     text-decoration: none;
     padding: 3px 7px;
     border-bottom: solid transparent 1px;
+    min-width: 42px;
+    text-align: center;
     margin-right: 5px;
     text-indent: 0px;
 }
@@ -838,30 +918,32 @@ table.medium.module td:nth-child(2) {
 .syllabus .hw:hover,
 .schedule .hw,
 .schedule .hw:hover {
-    background: #5B85AA;
+    background: #684a98;
 }
 
-.assignments .quizzes,
-.assignments .quizzes:hover,
-.lectures .quizzes,
-.lectures .quizzes:hover,
-.assignment .quizzes,
-.assignment .quizzes:hover,
-.reference .quizzes,
-.reference .quizzes:hover,
-.lecture .quizzes,
-.lecture .quizzes:hover,
-.readings .quizzes,
-.readings .quizzes:hover,
-.link-menu .quizzes,
-.link-menu .quizzes:hover,
-.two-column article .quizzes,
-.two-column article .quizzes:hover,
-.syllabus .quizzes,
-.syllabus .quizzes:hover,
+.assignments .quiz,
+.assignments .quiz:hover,
+.lectures .quiz,
+.lectures .quiz:hover,
+.assignment .quiz,
+.assignment .quiz:hover,
+.reference .quiz,
+.reference .quiz:hover,
+.lecture .quiz,
+.lecture .quiz:hover,
+.readings .quiz,
+.readings .quiz:hover,
+.link-menu .quiz,
+.link-menu .quiz:hover,
+.two-column article .quiz,
+.two-column article .quiz:hover,
+.syllabus .quiz,
+.syllabus .quiz:hover,
+.schedule .quiz,
+.schedule .quiz:hover,
 .schedule .quizzes,
 .schedule .quizzes:hover {
-    background: #e32400;
+    background: #243545;
 }
 
 .assignments .pj,
@@ -884,8 +966,86 @@ table.medium.module td:nth-child(2) {
 .syllabus .pj:hover,
 .schedule .pj,
 .schedule .pj:hover {
-    background: #e32400;
+    background: #2869e6;
 }
+
+   ul.profiles {
+       margin: 0 auto;
+       padding: 0;
+       list-style: none;
+   }
+
+   ul.profiles a {
+       display: block;
+       border: none;
+       outline: none;
+       text-decoration: none;
+   }
+
+   ul.profiles li {
+       margin: 0 0 5px 0;
+       padding: 0;
+       width: 250px;
+       display: block;
+       float: left;
+       border: none;
+       outline: none;
+       overflow: hidden;
+   }
+
+   ul.profiles li img {
+       object-position: 0 0;
+       object-fit: cover;
+       margin: 0 auto;
+       padding: 10px 10px 0 10px;
+       width: 250px;
+       height: 250px;
+       opacity: 0.9;
+   }
+
+   ul.profiles li:hover img {
+       opacity: 1.0;
+       padding: 0 10px 10px 10px;
+   }
+
+   ul.profiles li span {
+       margin-top: -20px;
+       padding: 10px;
+       position: relative;
+       border-top: 1px solid #ccc;
+       width: 100%;
+       display: block;
+       background-color: #fff;
+   }
+
+   ul.profiles h3 {
+       margin: 0;
+       padding: 0;
+       color: #000;
+       opacity: 0.6;
+       font-size: 20px;
+       line-height: 18px;
+       text-shadow: 0px 0px 1px #eee;
+       font-weight: normal;
+       -webkit-transition-delay: 0s;
+       -webkit-transition-duration: 0.1s;
+   }
+
+   ul.profiles li:hover h3 {
+       opacity: 1.0;
+   }
+
+   ul.profiles h4 {
+       margin: 5px 0 0 0;
+       padding: 0px 0 0 0;
+       color: #000;
+       opacity: 0.4;
+       font-size: 16px;
+   }
+
+   h6 {
+       font-size: 18px;
+   }
 
 .assignments .lec,
 .assignments .lec:hover,
@@ -917,7 +1077,7 @@ table.medium.module td:nth-child(2) {
 .schedule .lec,
 .schedule .lec:hover,
 .schedule a.lec {
-    background: #4E2A84;
+    background: #243545;
 }
 
 .assignments .lab,
@@ -940,7 +1100,8 @@ table.medium.module td:nth-child(2) {
 .syllabus .lab:hover,
 .schedule .lab,
 .schedule .lab:hover {
-    background: #008656;
+    background: #00755C;
+    font-weight: 600;
 }
 
 .assignments .ec,
@@ -977,20 +1138,7 @@ table.medium.module td:nth-child(2) {
 .two-column article .live,
 .syllabus .live,
 .schedule .live {
-    background: #e32400;
-}
-
-.assignments .quizzes,
-.lectures .quizzes,
-.assignment .quizzes,
-.reference .quizzes,
-.lecture .quizzes,
-.readings .quizzes,
-.link-menu .quizzes,
-.two-column article .quizzes,
-.syllabus .quizzes,
-.schedule .quizzes {
-    border: none !important;
+    background: #C2320A;
 }
 
 .assignments .recorded,
@@ -1043,6 +1191,7 @@ table.medium.module td:nth-child(2) {
 }
 
 .two-column .outline li {
+    list-style-type: none;
     padding: 0px;
     margin-bottom: 5px;
 }
@@ -1124,6 +1273,7 @@ table.medium.module td:nth-child(2) {
 .two-column article .checkbox-list>li:before,
 .syllabus .checkbox-list>li:before,
 .schedule .checkbox-list>li:before {
+    font-family: "Font Awesome 5 Pro";
     content: "\f00c";
     font-weight: 600;
     color: #1cb954;
@@ -1254,6 +1404,30 @@ blockquote.quote.slim:before {
     margin-left: 30px;
 }
 
+.assignment ul,
+.lecture ul,
+.details ul,
+.two-column article ul,
+.syllabus ul,
+.schedule ul {
+    
+}
+
+.assignment ul li::before,
+.lecture ul li::before,
+.details ul li::before,
+.two-column article ul li::before,
+.syllabus ul li::before,
+.schedule ul li::before {
+    font-size: 20px;
+    content: "\2022";
+    font-weight: bold;
+    display: inline-block;
+    text-indent: -16px;
+    vertical-align: text-bottom;
+    color: #684a98;
+}
+
 .assignment h2,
 .lecture h2,
 .details h2,
@@ -1270,7 +1444,7 @@ blockquote.quote.slim:before {
 .syllabus h3,
 .schedule h3 {
     color: #676767;
-    font-family: lato;
+    font-family: "Campton Extra Light";
     font-size: 1.5em;
 }
 
@@ -1326,7 +1500,7 @@ blockquote.quote.slim:before {
 }
 
 .two-column .sidebar {
-    width: 22%;
+    width: 20%;
     height: 25vh;
     position: -webkit-sticky;
     position: sticky;
@@ -1397,6 +1571,7 @@ blockquote.quote.slim:before {
 
 .two-column .sidebar .side-menu li {
     margin-top: 0px;
+    list-style-type: none;
     line-height: 1.2em;
 }
 
@@ -1467,8 +1642,8 @@ blockquote.quote.slim:before {
 
 .two-column article {
     display: flex;
-    width: 100%;
-    padding: 20px 0px 20px 40px;
+    width: 85%;
+    padding: 20px 20px;
 }
 
 .two-column article h1 {
@@ -1489,7 +1664,6 @@ blockquote.quote.slim:before {
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
-    border: 0px !important;
 }
 
 .highlight .hll {
@@ -1859,7 +2033,7 @@ blockquote.quote.slim:before {
 .subtitle {
     margin: -20px 0px 15px 0px;
     color: #676767;
-    font-family: lato;
+    font-family: "Campton Extra Light";
     font-size: 1.2em;
 }
 
@@ -1932,12 +2106,12 @@ img.cars {
 .nu-button,
 .nu-button:visited,
 .nu-button:active {
-    background: #4E2A84;
+    background: #684a98;
     border: none;
-    border-radius: 5px;
     color: #fff !important;
-    margin: 2em;
-    padding: .5em;
+    margin: 20px .5em 20px 0;
+    padding: .8em 1em .7em 1em;
+    align-self: flex-start;
     text-transform: uppercase;
     transition: 0.3s ease;
     text-decoration: none;
@@ -1948,6 +2122,12 @@ img.cars {
 .nu-button:active:hover {
     background: #934B66;
     border: none;
+}
+
+.nu-button i,
+.nu-button:visited i,
+.nu-button:active i {
+    margin-left: 5px;
 }
 
 table.instructions td,
@@ -2019,7 +2199,7 @@ table.instructions th {
     }
 
     table td {
-        font-family: lato;
+        font-family: "Akkurat Pro Regular";
     }
 
     .schedule table td:nth-child(1),

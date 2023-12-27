@@ -3,23 +3,38 @@ layout: single-column
 show_outline: 1
 show_schedule: 1
 ---
+{% if page.lec_assignment %}
+<object hidden="hidden" id="assignment-flag-custom"></object>
+<object hidden="hidden" id="canvas_id">{{page.canvas_id}}</object>
+<object hidden="hidden" id="due_date">{{page.due_date}}</object>
+<object hidden="hidden" id="canvas_assignment_group">{{page.canvas_assignment_group}}</object>
+<object hidden="hidden" id="canvas_submission_types">{{page.canvas_submission_types}}</object>
+<object hidden="hidden" id="canvas_allowed_extensions">{{page.canvas_allowed_extensions}}</object>
+<object hidden="hidden" id="canvas_points_possible">{{page.canvas_points_possible}}</object>
+{% endif %}
 
 {{content}}
 
+<hr>
+
+{% if page.readings or page.exercise_url or page.slides or page.videos or 
+    page.mini_quiz_id or page.quiz_url or page.extras %}
 <h2 id="do-now">Today's Resources</h2>
+{% endif %}
+
 {% assign num = 1 %}
 
 {% if page.exercise_url %}
-    <h3 id="code">{{num}}. Exercise Files</h3> 
-    <a class="nu-button" href="{{site.baseurl}}/course-files/lectures/{{page.exercise_url}}" target="_blank">
+    <h3 style="padding-bottom:10px;" id="code">{{num}}. Exercise Files</h3> 
+    <a class="nu-button" href="{{site.url}}/course-files/lectures/{{page.exercise_url}}" target="_blank">
         Download Exercise Files <i class="fas fa-download"></i>
     </a>
     {% assign num = num | plus: 1 %}
 {% endif %}
 
-<h3 id="slides">{{num}}. Slides</h3>  
-{% assign num = num | plus: 1 %}
 {% if page.slides %}
+<h3 style="padding-top:20px;" id="slides">{{num}}. Slides</h3>
+{% assign num = num | plus: 1 %}
     <ul>
     {% for slide in page.slides %}
         <li>
@@ -27,12 +42,10 @@ show_schedule: 1
         </li>
     {% endfor %}
     </ul>
-{% else %}
-    <p>No slides posted.</p>
 {% endif %}
 
 {% if page.videos %}
-<h3 id="videos">{{num}}. Lecture Video(s)</h3>
+<h3 style="padding-top:15px;" id="videos">{{num}}. Pre-Recorded Lecture Video(s), Mini-Quizzes, and Live Recordings</h3>
 {% assign num = num | plus: 1 %}
 
     <table class="medium module">
@@ -91,14 +104,36 @@ show_schedule: 1
     </table>
 {% endif %}
 
+
+
+
 {% if page.readings %}
-    <h3 id="readings">{{ num }}. Supplemental Materials</h3>
+    {% if page.type == "ethics" %}
+    <h3 style="padding-top:15px;" id="readings">{{ num }}. Assigned Readings</h3>
+    {% else %}
+    <h3 style="padding-top:15px;" id="readings">{{ num }}. Supplemental Materials</h3>
+    {% endif %}
     {% include page_readings.html %} 
     {% assign num = num | plus: 1 %}
 {% endif %}
 
+{% if page.mini_quiz_id %}
+<h3 style="padding-top:10px;" id="quiz">{{ num }}. Mini-Quiz {{ page.mini_quiz_num }}: {{page.mini_quiz_title}}</h3>
+<p>
+    If you did not participate in class then you should use this Canvas Quiz as a substitute. If you are not physically present in
+    the classroom, do NOT attempt to participate in the PollEverywhere activities through any means. Doing so is a violation
+    of our Academic Honesty policy and you will be reported to your Dean of Students for violation of said policy.
+    <br>
+    <ul>
+    <li><a href="{{ site.canvas_url }}/{{page.mini_quiz_id}}" target="_blank">Mini-Quiz {{ page.mini_quiz_num }}</a></li>
+    </ul>
+</p>
+{% assign num = num | plus: 1 %}
+
+{% endif %}
+
 {% if page.quiz_url %}
-    <h3 id="quiz">{{ num }}. Take the Practice (Ungraded) Quiz</h3>
+    <h3 style="padding-top:15px;" id="quiz">{{ num }}. Take the Practice (Ungraded) Quiz</h3>
     <p>
         Note: The quiz is to help you test your own understanding 
         of the concepts. It is not graded, and is designed to help you to see 
@@ -109,7 +144,7 @@ show_schedule: 1
 {% endif %}
 
 {% if page.extras %}
-    <h2 id="reminders">Reminders</h2>
+    <h2 style="padding-top:15px;" id="reminders">Reminders</h2>
     <ul>
         {% for extra in page.extras %}
             <li>

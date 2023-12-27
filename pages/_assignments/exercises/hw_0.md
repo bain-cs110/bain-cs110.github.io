@@ -3,11 +3,16 @@ layout: assignment-two-column
 title: Setting Up and Signing Up
 abbreviation: Homework 0
 type: homework
-due_date: 2023-03-31
+due_date: 2024-01-05
 ordering: 0
 draft: 0
 points: 100
-canvas_id: 1224379
+canvas_id: 
+canvas_title: Homework 0
+canvas_assignment_group: "Homework"
+canvas_points_possible: 100
+canvas_submission_types: "online_upload"
+canvas_allowed_extensions: "py"
 ---
 
 This assignment is super easy and super short. _Please complete Activity 0 and Activity 1 on Wednesday or Thursday._ **We will complete Activities 2-4 in class on Friday.**
@@ -29,7 +34,7 @@ Download the latest version (3.11.x) of python here: <a href="https://www.python
 
 > ### Important Note for Windows Users
 >
-> Make sure that the checkbox at the very bottom that says Add Python 3.x (the screenshots show Python 3.7 but this applies to all Python installations) to PATH is checked: <img class="large frame" src="/assets/images/hw0/command-prompt-windows-installer.png" />
+> Make sure that the checkbox at the very bottom that says Add Python 3.x (the screenshots show Python 3.7 but this applies to all Python installations) to PATH is checked: <img class="large frame" src="{{site.url}}/assets/images/hw0/command-prompt-windows-installer.png" />
 
 Once the installer is finished, you're done with Activity 0! If you have an issue, feel free to post a question on edSTEM or come to class on Friday with your question (I can help diagnose issues after class).
 
@@ -48,7 +53,7 @@ There are several ways of finding a Tutorial Team in our class:
 
 > **Note**: If you have not signed up for a Team on Canvas by Friday evening at 11:59pm, we will use your Survey results to assign you to a team. You will not be able to self-register for teams after Friday.
 
-<a class="lab" href="https://docs.google.com/forms/d/e/1FAIpQLSdZpH-c9G21IXj2-OkNWN1lhoXfflENKsI180jg6kFluxM87Q/viewform?usp=sf_link" target="_blank">TEAMS SURVEY<i class="fa fa-link" aria-hidden="true"></i></a> (note, you must be logged into your NU Gmail account in order to access; this is a clickable button). _This is REQUIRED and will count for 50% of your grade for this assignment._
+<a class="lab" href="https://docs.google.com/forms/d/e/1FAIpQLSetYZHB2EvXBs3e1jnPPnU9nDh2Kcz6QJVXhn-9wKPhaC_7IA/viewform?usp=sf_link" target="_blank">TEAMS SURVEY<i class="fa fa-link" aria-hidden="true"></i></a> (note, you must be logged into your NU Gmail account in order to access; this is a clickable button). _This is REQUIRED._ **If you don't fill it out, <mark>you'll get a 0</mark> on HW 0.**
 
 While we'd like for the Teams to be as stable as possible throughout the quarter, stuff does happen so switching will be allowed after Week 2.
 
@@ -62,13 +67,13 @@ Navigate to the folder on your machine where Python was installed. For me, on a 
 
 Inside, the Python 3.11 folder, you'll find a program called **IDLE** - this is the IDLE application. Double click on that file to run it. You should then see something like this (disregard the version numbers in the screenshots):
 
-<img style="width: 100%;" class="screenshot" src="/assets/images/hw0/idle_1.png" />
+<img style="width: 100%;" class="screenshot" src="{{site.url}}/assets/images/hw0/idle_1.png" />
 
 I recommend keeping IDLE in your dock (on a Mac) or making a Desktop Shortcut to IDLE (on Windows).
 
 At the **&gt;&gt;&gt;** prompt, you can type any valid python command. For example, type `print("hello world!")` and hit enter (Note: those quotation marks are important!). You should see something like this:
 
-<img style="width: 100%;" class="screenshot" src="/assets/images/hw0/idle_2.png" />
+<img style="width: 100%;" class="screenshot" src="{{site.url}}/assets/images/hw0/idle_2.png" />
 
 This is called the *Interpreter Window.* It allows you to run lines of Python code one at a time. The above example asks Python to run the `print` function with an input of `"hello world!"` (which is a type of data we call a `string`).
 
@@ -88,7 +93,7 @@ To run this program, go to the "Run" menu (again, at the top of the screen on a 
 
 After your file is saved, Python should then _execute_ or run your program and show the results in the Interpreter Window.
 
-<img style="width: 100%;" class="screenshot" src="/assets/images/hw0/interpreter_window.png" />
+<img style="width: 100%;" class="screenshot" src="{{site.url}}/assets/images/hw0/interpreter_window.png" />
 
 If you see a result of `5`, congratulations! You've officially saved and run your first program.
 
@@ -142,4 +147,4 @@ For this assignment, you will upload your `homework_0.py` file to the assignment
 * * *
 
 ## Requesting an extension
-If you need to request an extension on this assignment use the <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeqyOhXfPiVuHh5AF5AIcoGEeTnMaq7o2P6yJzujFkQyXXSOA/viewform?usp=sf_link">Extension Request form</a>. Please see the Syllabus for requirements. Your extension is automatically accepted if you meet the conditions. You will see your due date on Canvas update 24 hours prior to the original deadline.
+If you need to request an extension on this assignment use the <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScZd-_OCJp8A3r5o3Eia729HL4O--JSVhfm_g0yjWFnMZPu6w/viewform?usp=sf_link">Extension Request form</a>. Please see the Syllabus for requirements. Your extension is automatically accepted if you meet the conditions. You will see your due date on Canvas update 24 hours prior to the original deadline.

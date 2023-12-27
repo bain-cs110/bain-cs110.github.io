@@ -3,18 +3,40 @@ layout: assignment-two-column
 title: Syllabus
 permalink: /syllabus/
 ---
-
-
-|--|--|
-| **Term** | Spring 2023 |
-| **Course** | COMP_SCI 110: Intro to Computer Programming |
-| **Prerequisites** | None |
-| **Instructor** | Prof. Connor Bain (connor.bain@northwestern.edu) |
-| **Lecture Time** | Monday, Wednesday, & Friday, 10:00 - 10:50am |
-| **Lecture Location** | [Fisk Hall Rm. 217](https://maps.northwestern.edu/txt/facility/113) |
-| **Required Materials** | _Zero Cost Course_ – (All course materials are open educational resources) |
-
-> Please note that this syllabus is subject to change prior to March 28, 2022.
+<table style="border-top: solid 1px #444; border-bottom: solid 1px #444; border-collapse: collapse; width: 100%; margin-bottom: 30px;">
+  <caption>Summary Details for COMP_SCI 110</caption>
+  <tbody>
+      <tr>
+          <th scope="row" style="text-align: left; font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;"><strong style="font-family: 'Akkurat Pro Regular';">Term</strong></th>
+          <td style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;">Winter 2024</td>
+      </tr>
+      <tr>
+          <th scope="row" style="text-align: left; font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;"><strong style="font-family: 'Akkurat Pro Regular';">Course</strong></th>
+          <td style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;">COMP_SCI 110: Introduction to Computer Programming</td>
+      </tr>
+      <tr>
+          <th scope="row" style="text-align: left; font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;"><strong style="font-family: 'Akkurat Pro Regular';">Prerequisites</strong></th>
+          <td style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;">None</td>
+      </tr>
+      <tr>
+          <th scope="row" style="text-align: left; font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;"><strong style="font-family: 'Akkurat Pro Regular';">Instructor</strong></th>
+          <td style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;">Prof. Connor Bain (connor.bain@northwestern.edu)</td>
+      </tr>
+      <tr>
+          <th scope="row" style="text-align: left; font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;"><strong style="font-family: 'Akkurat Pro Regular';">Lecture Time</strong></th>
+          <td style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;">Monday, Wednesday, &amp; Friday, 10:00am - 10:50am</td>
+      </tr>
+      <tr>
+          <th scope="row" style="text-align: left; font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;"><strong style="font-family: 'Akkurat Pro Regular';">Lecture Location</strong></th>
+          <td style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;"><a style="text-decoration: none; color: #4e2a84; border-bottom: solid #934B66 2px;" href="https://www.mccormick.northwestern.edu/contact/tech-room-finder-map.php?id=L165&room-floor=1&room-id=1055&room-ingress=">Ryan Family (Tech) Auditorium</a></td>
+      </tr>
+      <tr>
+          <th scope="row" style="text-align: left; font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;"><strong style="font-family: 'Akkurat Pro Regular';">Required Materials</strong></th>
+          <td style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;"><em>Zero Cost Course</em> &ndash; (All course materials are open educational resources)</td>
+      </tr>
+  </tbody>
+</table>
+> Please note that this syllabus is subject to change prior to Jan 3, 2024.
 
 ## About the Course
 CS 110 is meant as an introduction to the key ideas of computer programming and assumes no prior programming knowledge. In this course, we'll use the programming language Python with two goals: first, we want to give you a sense of the kinds of creative activities, both directed problem-solving and creative pursuits, that programming can support; and two, we want to introduce you to the fundamental constructs (and associated skills and techniques) of computer programming.
@@ -67,36 +89,23 @@ This is a very large class and in order to better support each of your learning 
 * Prof. Connor Bain (connor.bain@northwestern.edu)
 
 #### Graduate Teaching Assitants (TAs)
-* Walker Demel
+* TBD
 
 #### Undergraduate Peer Mentors (PMs)
-* Stephanie Ma
-* Angeli Mittal
-* Amira Mohamed
-* Andres Rojas
-* Defne Deda
-* Julia Chu
-* Kathleen Lee
-* Lev Rosenberg
-* Natan Gamliel
-* Nicole Tartakovsky
-* Si Woo Park
-* Victor Chen
-* Vikram Achuthan
-* Zoryah Gray
+* TBD
 
 * * *
 ## Course Grading Policy
 Your course grade is calculated as follows:
 
 {:.medium}
-| **Tutorials**     | 15% |
+| **Tutorials**     | 10% |
 | **Mini-Quizzes**  | 5%  |
 | **Homeworks**     | 25% |
 | **2 Projects**    | 25% |
-| **3 Quizzes**     | 30% |
+| **3 Quizzes**     | 35% |
 
-> There will be approximately 1 tutorial, 1 mini-quiz, and 1 assignment (either homework exercise or project) due per week.
+> There will be approximately 1 tutorial, 2 mini-quizzes, and 1 assignment (either homework exercise or project) due per week.
 
 Final grades are assigned on a fixed scale which is set by the registrar's office:
 
@@ -117,9 +126,7 @@ Final grades are assigned on a fixed scale which is set by the registrar's offic
 
 ### Quizzes
 
-There will be three cumulative assessments of your knowledge and practice of the course material administered during our assigned class time (50 minutes). There will be no Final Exam outside of these three quizzes.
-
-The three quizzes will be held in Week 5 (April 26), Week 8 (May 17), and Week 10 (June 2) of the course.
+There will be three cumulative assessments of your knowledge and practice of the course material administered during our assigned class time (50 minutes). There will be no Final Exam outside of these three quizzes. The tentative dates of these quizzes can be found on our Course Schedule.
 
 > **Note**: because this class is offered by the Computer Science department which is housed in the McCormick School of Engineering, we will still have class during Weinberg's Reading Week.
 
@@ -143,7 +150,7 @@ You will receive your assignment grades on Canvas within a week of your submissi
 
 These will be short quizzes for each module of the course that serve as a check of your attendance and/or asynchronous participation in the course. For those that complete the Mini-Quiz in class, you will receive full credit for your attendance and full participation. If you choose to complete the Mini-Quiz remotely, you will need to complete the Canvas version of the quiz within 60 hours of your scheduled class time.
 
-If you attend class but do not receive credit or complete a Pre-Recorded Lecture Mini-Quiz but don't receive credit, you can fill out this [Completion Grade Petition form](https://forms.gle/XXBHmQYUBzVvL5n66).
+If you attend class but do not receive credit or complete a Pre-Recorded Lecture Mini-Quiz but don't receive credit, you can fill out this [Completion Grade Petition form](https://forms.gle/aSgMnrEmHjYZk5AA8).
 
 ### Tutorial Grading
 
@@ -157,7 +164,7 @@ This course is meant to a be a learning community which requires the dedicated p
 
 If you attend the Tutorial session in-person, work diligently, and make a legitimate attempt (up to the discretion of your Peer Mentor) at completing the assignment, you will receive full-credit. If you choose not to attend in-person, then your assignment will be reviewed for completion _and accuracy_ meaning you may nor may not receive full credit.
 
-If you attend a tutorial session but do not receive credit, you can fill out this [Completion Grade Petition form](https://forms.gle/XXBHmQYUBzVvL5n66).
+If you attend a tutorial session but do not receive credit, you can fill out this [Completion Grade Petition form](https://forms.gle/aSgMnrEmHjYZk5AA8).
 
 We will not accept late tutorial submissions.
 ### Project Grading
@@ -171,16 +178,18 @@ The second project will be due at the start of the university's assigned final e
 * * *
 ## Grading Equity Policies
 
-> The course is specifically designed to be academically equitable to all students when it comes to assessment and has two special policies related to grading: 1. An _emergency erasure policy_; 2. A _deliberate extension policy_.
+> The course is specifically designed to be academically equitable to all students when it comes to assessment and has two special policies related to grading: 1. An _emergency erasure policy_; 2. A _deliberate Late Waiver policy_.
 
 These two policies are provided to accommodate the myriad situations that students encounter over the life cycle of the class (e.g. student org travel, sickness, etc.). **This built-in leniency means that there will be no other exceptions to the course syllabus without prior authorization from the Dean of Students at Northwestern. I cannot offer any other leniency, make-up assignments, extensions, etc., outside these policies.**
 
-### Deliberate Extension Policy
+> **Note**: If you are found in violation of the Academic Honesty Policy at any point in the course (including misrepresenting your attendance, submitting LLM-generated code, etc.), <mark>you will lose access to these policies</mark>. This penalty will also apply retroactively meaning that if you were found in violation of our Academic Honesty Policy in Week 10, but used a Late Penalty Waiver in Week 2, your waiver would be retroactively removed.
 
-The _deliberate extension policy_ applies ONLY to **Homeworks** and is meant to accommodate students who may have a particular week during the quarter where they are unable to complete the assigned homework on-time. Students may apply (using a Google Form included at the bottom of each assignment) and receive a waiver of the late penalty on assignments:
+### Late Penalty Waivers
+
+This applies ONLY to **Homeworks** and is meant to accommodate students who may have a particular week during the quarter where they are unable to complete the assigned homework on-time. Students may apply (using a Google Form included at the bottom of each assignment) and receive a waiver of the late penalty on homework assignments:
 
 * Students **must** request the extension via the form at least 24 hours in advance of the homework deadline.
-* Students **may not** request more than 2 extensions in a quarter.
+* Students **may not** request more than 2 Late Penalty Waivers in a quarter.
 
 The policy is _deliberate_ in that you, as a student, must actively consider at least 24 hours in advance of the deadline that you will need extra time to complete this assignment. If you find yourself needing extra time on consecutive assignments, this is a good sign that you need to reach out to someone on the Course Staff for help.
 
@@ -192,16 +201,18 @@ No assignments are accepted after 48 hours. This policy does not extend the fina
 
 The _emergency grade erasure policy_ acknowledges that often times life situations occur that make it impossible to keep up in a course. **_Do not_ use this a planning or scheduling device.** This is specifically meant to take care of emergencies that happen in your life during the quarter.
 
-* Your lowest quiz score (including 0s) is dropped (we keep the best 2 of 3)
-* Your lowest tutorial score (including 0s) is dropped
+* Your lowest quiz score (including 0s) is dropped (we keep the best 2 of 3).
+* Your lowest tutorial score (including 0s) is dropped.
   * _You may not drop the final tutorial_ (in Week 10).
 * Your lowest **homework** score (including 0s) is dropped.
-* Your lowest **mini-quiz** score (including 0s) is dropped.
+* Your lowest 2 **mini-quiz** scores (including 0s) are dropped.
 * You may **NOT** drop project scores.
 
 If you _choose_ to drop an assignment early in the quarter only to find yourself in an emergency situation later in the quarter, you will need to reach out to your Dean of Students in order to arrange for flexibility across all of your coursework.
 
 This policy will be automatically applied at the end of the quarter for all students. No action is required on your part.
+
+* * *
 
 ## Accessibility
 
@@ -264,17 +275,6 @@ Contact Prof. Bain if you have any questions about what is appropriate. Please n
 
 * * *
 
-## COVID-19 Classroom Expectations
-Students, faculty, and staff must comply with University expectations regarding appropriate classroom behavior, including those outlined below and in the [COVID-19 Code of Conduct](https://www.northwestern.edu/communitystandards/about-us/northwestern-university-student-expectations-covid-19-code-of-conduct.html). With respect to classroom procedures, this includes:
-
-* Policies regarding masking and social distancing evolve as the public health situation changes. Students are responsible for understanding and complying with current masking, testing, Symptom Tracking, and social distancing requirements.
-* In some classes, masking and/or social distancing may be required as a result of an Americans with Disabilities Act (ADA) accommodation for the instructor or a student in the class even when not generally required on campus. In such cases, the instructor will notify the class.
-
-If a student fails to comply with the [COVID-19 Code of Conduct](https://www.northwestern.edu/communitystandards/about-us/northwestern-university-student-expectations-covid-19-code-of-conduct.html) or other University expectations related to COVID-19, the instructor may ask the student to leave the class. The instructor is asked to report the incident to the Office of Community Standards for additional follow-up.
-
-> **REMINDER**: All the materials for this class are available via Canvas and all attendance-based grades can be replaced by Canvas activities (with the exception of our in-class Quizzes). **If you do not feel well then please, for the saftey of our community, do not attend class.** If you are unsure of how to complete the activities on Canvas, please reach out to Prof. Bain or post on edSTEM.
-
-* * *
 ## Course Recording Policy
 Unauthorized student recording of classroom or other academic activities (including advising sessions or office hours) is prohibited. Unauthorized recording is unethical and may also be a violation of University policy and state law. Students requesting the use of assistive technology as an accommodation should contact AccessibleNU. Unauthorized use of classroom recordings — including distributing or posting them — is also prohibited.  
 
