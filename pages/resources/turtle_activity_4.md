@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: module
 title: Turtle Activity 4
 permalink: /resources/turtle-activity-4/
 ---
