@@ -114,7 +114,7 @@ netid = "abc1234"
 
 Make sure to run your program which should look like the below:
 
-<img style="width: 100%;" class="screenshot" src="/assets/images/hw0/final_program.png" />
+<img style="width: 100%;" class="screenshot" src="{{site.url}}/assets/images/hw0/final_program.png" />
 
 Notice that you won't see your NetID outputted in the _Interpreter Window_. That's because you didn't actually ask Python to do anything with your NetID–you just asked it to remember it. That's okay for now. We just want to have it store the NetID so that when we run your program, we can tell your program apart from your classmate's.
 

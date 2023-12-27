@@ -23,7 +23,7 @@ Today we're going to spend more time practicing the actual action of programming
 
 The first half of class, we'll spend talking some basic turtle activities. Shelly is in danger and we must save them!
 
-* [Turtle Activities Link]({{site.url}}/resources/turtle-activity-3)
+* [Turtle Activities Link]({{site.url}}/resources/turtle-activity-0)
 * [Python Version]({{site.url}}/course-files/lectures/lecture02/turtle_demo.py)
 
 The second half of class, we'll spend installing Python and doing HW 0 so you're done with your HW before the weekend starts! If you are reading this and haven't already, please download Python for your system by following the direction in Homework 0.
