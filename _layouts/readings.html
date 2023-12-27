@@ -9,10 +9,10 @@ layout: default
 <table>
     <thead>
         <tr>
-            <th>Week</th>
-            <th></th>
-            <th>Topic</th>
-            <th>Readings</th>
+            <th scope="col">Week</th>
+            <th scope="col">Date</th>
+            <th scope="col">Topic</th>
+            <th scope="col">Readings</th>
         </tr>
     </thead>
     <tbody>
@@ -24,7 +24,7 @@ layout: default
         {% assign diffDays = diffSeconds | divided_by: 3600 | divided_by: 24 | plus: 1 %}
         {% assign week = diffDays | divided_by: 7 | plus: 1 %}
         <tr>
-            <th>
+            <th scope="rowgroup">
                 {% if week != last_week %}
                     Week {{week}}
                 {% endif %}

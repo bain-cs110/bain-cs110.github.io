@@ -33,4 +33,4 @@ lengths). Explain how your program works.
 
 5. Spend some time experimenting. See what sort of designs you can have your turtle buddy draw! If you're not feeling particularly creative, try recreating this program:
 
-<img height="456" src="https://ct-stem.s3.amazonaws.com/uploads/bainco/2020/07/01/screen%20shot%202020-07-01%20at%2012.04.25%20pm_2020-07-01-11-48-33-232370.png" width="210">
+<img alt="A sample program." height="456" src="https://ct-stem.s3.amazonaws.com/uploads/bainco/2020/07/01/screen%20shot%202020-07-01%20at%2012.04.25%20pm_2020-07-01-11-48-33-232370.png" width="210">
