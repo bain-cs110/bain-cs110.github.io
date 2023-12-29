@@ -26,15 +26,15 @@ Our first and most important task is to get Python and our first "Integrated Dev
 
 > ### What if I've already installed Python on my laptop?
 >
-> Note: many people who have programmed with Python before already have Python 3.x installed. To check, search for an existing Python installation. If you already have a version of Python3 installed, move on to Part 2. It doesn't hurt to install another version of Python, but it's not necessary. If you have any questions, feel free to ask Connor or one of the peer mentors / TAs.
+> Note: many people who have programmed with Python before already have Python 3.x installed. To check, search for an existing Python installation. If you already have a version of Python3 installed, move on to Part 2. It doesn't hurt to install another version of Python, but it's not necessary. If you have any questions, feel free to ask Prof. Bain or one of the peer mentors / TAs.
 
 We will use the Python 3 programming language and **IDLE**, which is Python's Integrated Development and Learning Environment.
 
-Download the latest version (3.11.x) of python here: <a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a>. You should be able to just click the big yellow "Download" button, but if it asks you which version you'd like to download: if you're on a Mac, use the "Universal2" installer; if you're on a Windows machine, pick the "Windows installer (64 bit)" version. Once it downloads, you'll need to launch the file you downloaded.
+Download the latest version (3.12.x) of python here: <a href="https://www.python.org/downloads/" target="_blank">https://www.python.org/downloads/</a>. You should be able to just click the big yellow "Download" button, but if it asks you which version you'd like to download: if you're on a Mac, use the "Universal2" installer; if you're on a Windows machine, pick the "Windows installer (64 bit)" version. Once it downloads, you'll need to launch the file you downloaded.
 
 > ### Important Note for Windows Users
 >
-> Make sure that the checkbox at the very bottom that says Add Python 3.x (the screenshots show Python 3.7 but this applies to all Python installations) to PATH is checked: <img class="large frame" src="{{site.url}}/assets/images/hw0/command-prompt-windows-installer.png" />
+> Make sure that the checkbox at the very bottom that says Add Python 3.x (the screenshots show Python 3.7 but this applies to all Python installations) to PATH is checked: <img alt="windows installer" class="large frame" src="{{site.url}}/assets/images/hw0/command-prompt-windows-installer.png" />
 
 Once the installer is finished, you're done with Activity 0! If you have an issue, feel free to post a question on edSTEM or come to class on Friday with your question (I can help diagnose issues after class).
 
@@ -67,13 +67,13 @@ Navigate to the folder on your machine where Python was installed. For me, on a 
 
 Inside, the Python 3.11 folder, you'll find a program called **IDLE** - this is the IDLE application. Double click on that file to run it. You should then see something like this (disregard the version numbers in the screenshots):
 
-<img style="width: 100%;" class="screenshot" src="{{site.url}}/assets/images/hw0/idle_1.png" />
+<img alt="Idle" style="width: 100%;" class="screenshot" src="{{site.url}}/assets/images/hw0/idle_1.png" />
 
 I recommend keeping IDLE in your dock (on a Mac) or making a Desktop Shortcut to IDLE (on Windows).
 
 At the **&gt;&gt;&gt;** prompt, you can type any valid python command. For example, type `print("hello world!")` and hit enter (Note: those quotation marks are important!). You should see something like this:
 
-<img style="width: 100%;" class="screenshot" src="{{site.url}}/assets/images/hw0/idle_2.png" />
+<img alt="prompt" style="width: 100%;" class="screenshot" src="{{site.url}}/assets/images/hw0/idle_2.png" />
 
 This is called the *Interpreter Window.* It allows you to run lines of Python code one at a time. The above example asks Python to run the `print` function with an input of `"hello world!"` (which is a type of data we call a `string`).
 
@@ -93,7 +93,7 @@ To run this program, go to the "Run" menu (again, at the top of the screen on a 
 
 After your file is saved, Python should then _execute_ or run your program and show the results in the Interpreter Window.
 
-<img style="width: 100%;" class="screenshot" src="{{site.url}}/assets/images/hw0/interpreter_window.png" />
+<img alt="interpreter window" style="width: 100%;" class="screenshot" src="{{site.url}}/assets/images/hw0/interpreter_window.png" />
 
 If you see a result of `5`, congratulations! You've officially saved and run your first program.
 
@@ -114,7 +114,7 @@ netid = "abc1234"
 
 Make sure to run your program which should look like the below:
 
-<img style="width: 100%;" class="screenshot" src="{{site.url}}/assets/images/hw0/final_program.png" />
+<img alt="final program" style="width: 100%;" class="screenshot" src="{{site.url}}/assets/images/hw0/final_program.png" />
 
 Notice that you won't see your NetID outputted in the _Interpreter Window_. That's because you didn't actually ask Python to do anything with your NetID–you just asked it to remember it. That's okay for now. We just want to have it store the NetID so that when we run your program, we can tell your program apart from your classmate's.
 
