@@ -2,6 +2,7 @@
 layout: default
 title: Using PIP
 permalink: /resources/pip/
+ordering: 99
 ---
 
 ## If you have a Windows machine

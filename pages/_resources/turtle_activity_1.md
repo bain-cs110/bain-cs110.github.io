@@ -2,6 +2,8 @@
 layout: module
 title: Turtle Activity 1
 permalink: /resources/turtle-activity-1/
+draft: 1
+hidden: 1
 ---
 
 Surprise! You just wrote your first computer <strong>program</strong>! A program is just a collection of instructions that a computer can run. When you combined the existing commands to go BACKWARDS, you wrote a program.

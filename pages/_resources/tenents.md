@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Course Tenets
+description: our core principles
 permalink: /resources/tenets/
 ---
 

@@ -2,6 +2,8 @@
 layout: module
 title: Turtle Activity 3
 permalink: /resources/turtle-activity-3/
+draft: 1
+hidden: 1
 ---
 
 When we construct sentences in English, we end up using quite a bit of syntax in order to make sure our meaning is communicated correctly. This often includes quite a bit of punctuation–seemingly meaningless symbols that drastically change the way we read/interpret a sentence. If you've ever seen a program in a traditional <strong>text-based </strong>programming language like Python, Java, or even something like Fortran, you're sure to have noticed the same types of things! Semicolons, indents, and parentheses are just some examples of syntax that are used in text-based programming languages to prevent ambiguities.

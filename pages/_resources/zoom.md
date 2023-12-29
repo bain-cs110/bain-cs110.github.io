@@ -2,6 +2,7 @@
 layout: default
 title: Course Zoom Instructions
 permalink: /resources/zoom/
+ordering: 99
 ---
 
 ## Logging Into Zoom

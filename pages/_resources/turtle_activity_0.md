@@ -2,6 +2,8 @@
 layout: module
 title: Turtle Activity 0
 permalink: /resources/turtle-activity-0/
+draft: 1
+hidden: 1
 ---
 
 Below, you'll see exactly what everyone expects to see on a typical day: a turtle on a chessboard (or a grid of&nbsp;<strong>patches</strong>)&nbsp;with some lava on it. Your goal? Guide the turtle to the safety of the violet (yes, that's violet not "purple") patch.

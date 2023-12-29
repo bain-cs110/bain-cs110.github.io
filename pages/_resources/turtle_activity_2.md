@@ -2,6 +2,8 @@
 layout: module
 title: Turtle Activity 2
 permalink: /resources/turtle-activity-2/
+draft: 1
+hidden: 1
 ---
 
 we can update the value of a variable by **assigning** it a new value. Then, we can use that newly assigned value to do something new in our program Below we have our usual turtle sim, but with an important added feature, a slider at the top called NUMBER-OF-LAVA.

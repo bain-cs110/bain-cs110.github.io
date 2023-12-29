@@ -2,6 +2,8 @@
 layout: module
 title: Turtle Activity 4
 permalink: /resources/turtle-activity-4/
+hidden: 1
+draft: 1
 ---
 Now that you're experts, lets put your skills to some creative use. We have our delightful turtle buddy and some simple ways of controlling its movement. We also now know how to chain these movements (or commands) together into <strong>programs</strong>. But programs don't need to always be about completing some sort of task. What if we used our turtle buddy to create art? Computers are great at performing the same simple tasks repeatedly at amazing speed. Here, we're going to use a slightly modified version of our previous activity that focuses on drawing designs based off of your turtle buddy's movements.
 

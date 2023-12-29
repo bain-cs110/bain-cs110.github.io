@@ -2,7 +2,7 @@
 layout: default
 title: edSTEM Guidelines
 description: Rules of conduct for Ed
-ordering: 99
+ordering: 11
 canvas_id: edstem-guidelines
 draft: 0
 ---

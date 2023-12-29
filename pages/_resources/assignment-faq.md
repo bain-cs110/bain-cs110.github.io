@@ -2,6 +2,8 @@
 layout: default
 title: Assignment Submission + Grading FAQ
 permalink: /resources/assignment-faq/
+description: commonly asked submissions and grading questions
+ordering: 10
 ---
 
 > I got a plagiarism warning comment on Canvas. What does this mean?
@@ -31,29 +33,29 @@ I don't like to be harsh, but if you send us a screenshot of a timestamp, we won
 
 It's trivial to manipulate these digital timestamps so they don't serve as any sort of proof. It's your responsibility to upload your files by the due date.
 
-> How do I see what I got wrong on the Exercise?
+> How do I see what I got wrong on the Homework?
 
-Go to the Canvas submission page for the assignment in question. View the comments, of which, you'll see at least two. The one that says `See attached files.` has an attachment with your name and NetID, along with the extension `.HTML`. You can download and open that file in any web browser to see the autograder report for your assignment.
+Go to the Canvas submission page for the assignment in question. One of the comments has an attachment with your name and NetID, along with the extension `.txt` or `.html`. You can download and open that file to see the autograder report for your assignment.
 
 > I got a 0 because the autograder couldn't read my file or couldn't find my work. Can I resubmit?
 
 WE DO NOT ACCEPT RESUBMISSIONS. It's your responsiblity to make sure the file you submitted is the one you meant to submit. It takes seconds to verify via Canvas you uploaded the right file.
 
-> I submitted an extension request, but was still assessed a late penalty.
+> I submitted a late penalty waiver, but was still assessed a late penalty.
 
-This usually means you either a) submitted two consecutive extension requests (that's not allowed) or b) submitted the request less than 24 hours before the Canvas **Due At** date (the deadline).
+This usually means you either a) have already used 2 late penalty waivers or b) submitted the waiver form less than 24 hours before the Canvas **Due At** date (the deadline).
 
-> Can I apply for an extension after the deadline?
-
-No.
-
-> Can I apply for an extension to remove the late penalty after getting my grade back?
+> Can I apply for a late penalty waiver after the deadline?
 
 No.
 
-> Can I submit an assignment after the 48 hour period if I received an extension?
+> Can I apply for a late penalty waiver to remove the late penalty after getting my grade back?
 
-No. The extension waives the late penalty. It does not extend the assignment deadline beyond the 48 hour period.
+No.
+
+> Can I submit an assignment after the 48 hour period if I received an late penalty waiver?
+
+No. The late penalty waiver waives the late penalty. It does not extend the assignment deadline beyond the 48 hour period.
 
 > I don't understand what went wrong. I see the test failed, but don't know why.
 

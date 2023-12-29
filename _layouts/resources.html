@@ -16,6 +16,7 @@ layout: default
 {% assign sortedResources = site.resources | sort: 'ordering' %}
 
 {% for resource in sortedResources %}
+    {% unless resource.hidden == 1 %}
     <tr>
         {% if resource.draft == 1 %}
         <td>{{resource.title}} - Not Yet Available</td>
@@ -26,6 +27,7 @@ layout: default
             {{resource.description}}
         </td>
     </tr>
+    {% endunless %}
 {% endfor %}
     </tbody>
 </table>
