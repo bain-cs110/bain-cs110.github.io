@@ -63,9 +63,9 @@ While we'd like for the Teams to be as stable as possible throughout the quarter
 
 > Note: We will complete this and the following two activities during class on Friday.
 
-Navigate to the folder on your machine where Python was installed. For me, on a Mac, my IDLE was saved to Applications > Python 3.11 (or you can also search for it). For Windows users, it will likely be in a folder inside of Program Files (which you can also search for). It should also create a shortcut on your Desktop.
+Navigate to the folder on your machine where Python was installed. For me, on a Mac, my IDLE was saved to Applications > Python 3.12 (or you can also search for it). For Windows users, it will likely be in a folder inside of Program Files (which you can also search for). It should also create a shortcut on your Desktop.
 
-Inside, the Python 3.11 folder, you'll find a program called **IDLE** - this is the IDLE application. Double click on that file to run it. You should then see something like this (disregard the version numbers in the screenshots):
+Inside, the Python 3.12 folder, you'll find a program called **IDLE** - this is the IDLE application. Double click on that file to run it. You should then see something like this (disregard the version numbers in the screenshots):
 
 <img alt="Idle" style="width: 100%;" class="screenshot" src="{{site.url}}/assets/images/hw0/idle_1.png" />
 
