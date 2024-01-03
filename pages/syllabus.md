@@ -84,15 +84,7 @@ Office hours and locations / Zoom links are posted on the shared Google Sheet th
 
 * * *
 ## Course Staff
-This is a very large class and in order to better support each of your learning goals, we have a huge course staff. Our Peer Mentors (PMs) and TAs serve as your first point of contact in the course and you'll each be assigned to a PM/TA throughout the quarter.
-#### Instructor
-* Prof. Connor Bain (connor.bain@northwestern.edu)
-
-#### Graduate Teaching Assitants (TAs)
-* TBD
-
-#### Undergraduate Peer Mentors (PMs)
-* TBD
+This is a very large class and in order to better support each of your learning goals, we have a huge course staff. Our Peer Mentors (PMs) and TAs serve as your first point of contact in the course and you'll each be assigned to a PM/TA throughout the quarter. You can see them on our Course Staff Directory which is available on Canvas.
 
 * * *
 ## Course Grading Policy

@@ -11,6 +11,9 @@ ordering: -1
     <li><a><img alt="picture of Adi" src="{{site.url}}/assets/images/directory/adi.jpg">
         <span><h3>Adi Chakka</h3><h4>Peer Mentor</h4></span>
     </a></li>
+    <li><a><img alt="picture of Alan" src="{{site.url}}/assets/images/directory/alan.jpg">
+        <span><h3>Alan Guo</h3><h4>Peer Mentor</h4></span>
+    </a></li>
     <li><a><img alt="picture of Alyssa" src="{{site.url}}/assets/images/directory/alyssa.jpg">
         <span><h3>Alyssa Shou</h3><h4>Peer Mentor</h4></span>
     </a></li>
@@ -28,6 +31,9 @@ ordering: -1
     </a></li>
     <li><a><img alt="picture of Belen" src="{{site.url}}/assets/images/directory/belen.jpg">
         <span><h3>Belen Edgar</h3><h4>Peer Mentor</h4></span>
+    </a></li>
+    <li><a><img alt="picture of Brenda" src="{{site.url}}/assets/images/directory/brenda.jpg">
+        <span><h3>Brenda Mutai</h3><h4>Peer Mentor</h4></span>
     </a></li>
     <li><a><img alt="picture of Prof. Bain" src="{{site.url}}/assets/images/directory/connor.jpg">
         <span><h3>Dr. Connor Bain</h3><h4>Professor / Instructor</h4></span>
