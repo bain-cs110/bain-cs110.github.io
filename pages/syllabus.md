@@ -132,11 +132,11 @@ We do not accept resubmissions of assignments. This means it is up to you to ver
 2. That your program runs without intervention (except those assignments that ask for human input).
 3. That your program is NOT dependent on running on _your specific_ computer.
 
-If you are submitting a partially complete assignment, please a Canvas comment that explains which parts of the assignment you completed and which parts you did not. If you were having a specific problem with completing that part of the assignment (other than "ran out of time"), make sure to describe what you tried and why you were unable to fix it.
+If you are submitting a partially complete assignment, add a Canvas comment that explains which parts of the assignment you completed and which parts you did not. If you were having a specific problem with completing that part of the assignment (other than "ran out of time"), make sure to describe what you tried and why you were unable to fix it.
 
-If your program does not run, you will not receive full credit no matter how small the error.
+<mark>If your program does not run, you will not receive full credit no matter how small the error.</mark>
 
-You will receive your assignment grades on Canvas within a week of your submission. If you find an issue with the grading of your assignment, please see edSTEM for a link to the Mistake Form.
+You will generally receive your assignment grades on Canvas within a week of your submission.
 
 ### Mini-Quizzes
 
@@ -158,7 +158,8 @@ If you attend the Tutorial session in-person, work diligently, and make a legiti
 
 If you attend a tutorial session but do not receive credit, you can fill out this [Completion Grade Petition form](https://forms.gle/aSgMnrEmHjYZk5AA8).
 
-We will not accept late tutorial submissions.
+<mark>We will not accept late tutorial submissions.</mark>
+
 ### Project Grading
 
 There are two larger programming assignments in the course which we will refer to as Projects. These Projects are a significant portion of your course grade and represent quite a bit more work than the usual homework assignments. These assignments will be graded based on a rubric provided with the assignment description.
@@ -258,10 +259,11 @@ In the past, there have been incidents in which students have presented work oth
 
 * Do not exchange programs or program fragments in any form – on paper, via e-mail, or by other means.
 * Do not copy solutions from any source, including the web or previous CS 110 students.
+* Do not use auto-generated code as part of your solutions to homeworks and projects.
 * While working with other students, it is perfectly acceptable to ‘look’ at each other’s code (perhaps while helping someone to debug), but you should NEVER be scribing (typing or writing) your own work while looking at someone else’s (on a computer screen, paper, whiteboard, etc.).
 * Uploading materials from this course to websites that sell such content to students is prohibited by Northwestern’s academic integrity policies, and may also put you at risk for violating copyright policies in Northwestern’s Student Conduct Code.
 
-Students in this course are required to comply with the policies found in the booklet, "Academic Integrity at Northwestern University: A Basic Guide". All papers submitted for credit in this course must be submitted electronically unless otherwise instructed by the professor. Your written work may be tested for plagiarized content. For details regarding academic integrity at Northwestern or to download the guide, visit: <a href="https://www.northwestern.edu/provost/policies-procedures/academic-integrity/index.html" target="_blank">https://www.northwestern.edu/provost/policies-procedures/academic-integrity/index.html</a>.
+Students in this course are required to comply with the policies found in the booklet, "Academic Integrity at Northwestern University: A Basic Guide". All assignments submitted for credit in this course must be submitted electronically unless otherwise instructed by the professor. Your written work may be tested for plagiarized content. For details regarding academic integrity at Northwestern or to download the guide, visit: <a href="https://www.northwestern.edu/provost/policies-procedures/academic-integrity/index.html" target="_blank">https://www.northwestern.edu/provost/policies-procedures/academic-integrity/index.html</a>.
 
 Contact Prof. Bain if you have any questions about what is appropriate. Please note that all suspected incidents of violating the Academic Integrity of the course will be reported immediately to the Dean of Students.
 
