@@ -11,6 +11,12 @@ due_date: 2024-01-05
 slides:
    - url: https://docs.google.com/presentation/d/1I-MjTFxcKQ858IynZuyv5Iu__jztiY3nlBPuVz-Yixw/edit?usp=sharing
      title: "What is a computer?"
+
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=83a5bfc2-6719-45b2-9d12-b0cf014c70d2
+     title: "Live Lecture Recording"
+     duration: "51:00"
+     live: 1
 readings:
    - title: "Ch1: Why Program"
      author: "Charles Severance"
