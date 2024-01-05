@@ -116,6 +116,8 @@ Make sure to run your program which should look like the below:
 
 <img alt="final program" style="width: 100%;" class="screenshot" src="{{site.url}}/assets/images/hw0/final_program.png" />
 
+> **Note**: See those numbers to the side of each line? Those are called line numbers and allow us to easily call out "locations" in our program. Depending on what computer you're working on, they might not show by default. You can enable them by going to the `Options` menu in IDLE and selecting `Show Line Numbers`.
+
 Notice that you won't see your NetID outputted in the _Interpreter Window_. That's because you didn't actually ask Python to do anything with your NetID–you just asked it to remember it. That's okay for now. We just want to have it store the NetID so that when we run your program, we can tell your program apart from your classmate's.
 
 Make sure to save your modified program using the `File` menu and selecting `Save` on the Editor Window.
