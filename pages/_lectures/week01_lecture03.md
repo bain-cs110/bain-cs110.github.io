@@ -18,6 +18,11 @@ videos:
      duration: "51:00"
      live: 1
 readings:
+   - title: "Ch1: Intro to Computing"
+     author: "Charles Severance"
+     url: https://www.py4e.com/html3/01-intro
+     video_url: https://www.py4e.com/lessons/intro
+     source: "Python for Everybody"
    - title: "Ch1: Why Program"
      author: "Charles Severance"
      url: https://www.py4e.com/html3/01-intro

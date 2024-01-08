@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Using PIP
-permalink: /resources/pip/
+canvas_id: using-pip
 ordering: 99
 ---
 

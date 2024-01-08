@@ -2,14 +2,12 @@
 
 ## Submitting to Canvas
 
-Questions about submitting to Canvas? About DrRacket features? Checkout our FAQ pages:
+Questions about submitting to Canvas?
+* [How to submit a file on Canvas](https://community.canvaslms.com/t5/Student-Guide/How-do-I-upload-a-file-as-an-assignment-submission-in-Canvas/ta-p/274)
+* [How to double check you've submitted successfully](https://community.canvaslms.com/t5/Student-Guide/How-do-I-know-when-my-assignment-has-been-submitted-in-a-course/ta-p/416678)
+* [Submission and Grading FAQ](https://canvas.northwestern.edu/courses/206668/pages/assignment-submission-+-grading-faq)
 
-* [DrRacket Cheat Sheet](https://canvas.northwestern.edu/courses/201068/pages/drracket-cheatsheet)
-* [Checking for Runtime and Syntax Errors](https://canvas.northwestern.edu/courses/201068/pages/checking-for-syntax-or-runtime-errors-in-racket)
-* [Submission and Grading FAQ](https://canvas.northwestern.edu/courses/201068/pages/exercise-submission-+-grading-faq)
-* [Autograder FAQ](https://canvas.northwestern.edu/courses/201068/pages/autograder-and-submission-faq)
-
-Remember, **close DrRacket before you submit** to ensure that you've saved your latest work. The Automated Type Checker (ConnorBot) will post its results of its type checks and the built-in `check-expect`s every 30 minutes. If you get an unexpected failure, it may be because you submitted the wrong file.
+Remember, **close IDLE before you submit** to ensure that you've saved your latest work.
 
 * * *
 
@@ -17,4 +15,5 @@ Remember, **close DrRacket before you submit** to ensure that you've saved your 
 
 <mark>Remember, the deadline for submitting this waiver is 24 hours before the DUE AT time on Canvas.</mark>
 
-If you need to request a late penalty waiver on this assignment use the <a href="https://forms.gle/qPjnrmqtZSjpaGAY6">Late Penalty Waiver form</a>. Please see the Syllabus for requirements.
+If you need to request a late penalty waiver on this assignment use the <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqyOhXfPiVuHh5AF5AIcoGEeTnMaq7o2P6yJzujFkQyXXSOA/viewform?usp=sf_link">Late Penalty Waiver form</a>. Please see the Syllabus for requirements.
+

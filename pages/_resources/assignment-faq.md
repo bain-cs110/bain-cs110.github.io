@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Assignment Submission + Grading FAQ
-permalink: /resources/assignment-faq/
+canvas_id: exercise-submission-+-grading-faq
 description: commonly asked submissions and grading questions
 ordering: 10
 ---

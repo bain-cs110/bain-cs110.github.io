@@ -2,7 +2,7 @@
 layout: default
 title: Course Tenets
 description: our core principles
-permalink: /resources/tenets/
+canvas_id: course-tenets
 ---
 
 # Course Tenets

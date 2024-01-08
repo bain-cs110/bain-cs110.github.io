@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Course Zoom Instructions
-permalink: /resources/zoom/
+canvas_id: course-zoom-instructions
 ordering: 99
 ---
 

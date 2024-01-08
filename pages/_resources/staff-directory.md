@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Staff Directory
-permalink: /resources/staff-directory/
 canvas_id: staff-directory
 draft: 0
 description: our wonderful course staff!

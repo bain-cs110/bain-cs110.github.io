@@ -1,12 +1,12 @@
-## Import some libraries so we don't have to start from scratch
+## Ignore everything before the line of all # symbols!
 from turtle import *
 
 def raise_(ex):
     raise ex
+
 class MyTurtle(object):
     def __new__(cls, x=-100, y=-100, pencolor="black"):
         my_turtle = Turtle()
-        my_turtle.speed(0)
         my_turtle.forward = lambda x: raise_(
             Exception(
                 "Sorry, I don't know how to do that. Did you mean to use forward(some_turtle, {})?".format(
@@ -52,30 +52,38 @@ def left_turn(a_turtle, angle):
 def change_pen_color(a_turtle, color):
     a_turtle.pen(pencolor=color)
 
-################################
-# Example
-################################
+#####################################################################
+### TURTLE CHEATSHEET ###############################################
+# Pretend we have a turtle named: turtle_0
 
-# Make a turtle called turtle_1 for us to draw with
-turtle_1 = MyTurtle(x=-300, y=150)
+# If we want turtle_0 to go forward 100 steps we just say:
+# forward(turtle_0, 100)
 
-# Create a new function called to_draw that explains to our turtle
-# how they should move across the screen
-def to_draw():
-    left_turn(turtle_1, 54)
-    forward(turtle_1, 50)
+# If we want turtle_0 to turn left or right 90 degrees, we just say:
+# left_turn(turtle_0, 90)
+# right_turn(turtle_0, 90)
 
-    # This is "short" for "repeat 20 times"
-    for i in range(20):
-        forward(turtle_1, 150)
-        right_turn(turtle_1, 75)
-        change_pen_color(turtle_1, "blue")
+# If we want to turn turtle_0 around, we'd just turn 180 degrees!
+# right_turn(turtle_0, 180)
 
-    for i in range(1):
-        forward(turtle_1, 350)
-        right_turn(turtle_1, 90)
-        change_pen_color(turtle_1, "red")
+# If we want turtle_0 to change the color of its pen:
+# change_pen_color(turtle_0, "green")
 
-# Actually ask the turtle to draw
-while True:
-    to_draw()
+# If we want to make a new turtle at a specific x, y coordinate, we use the optional
+# arguments to the MyTurtle Function like so:
+# turtle_0 = MyTurtle(x = 100, y = 100)
+# (If you leave those out, it will default to 0, 0)
+
+#####################################################################
+turtle_1 = MyTurtle(x=-300, y=200)
+
+forward(turtle_1, 200)
+right_turn(turtle_1, 90)
+forward(turtle_1, 100)
+
+change_pen_color(turtle_1, "yellow")
+
+right_turn(turtle_1, 90)
+forward(turtle_1, 200)
+right_turn(turtle_1, 90)
+forward(turtle_1, 100)
