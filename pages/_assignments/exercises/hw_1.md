@@ -7,7 +7,7 @@ due_date: 2024-01-12
 ordering: 1
 draft: 0
 points: 100
-canvas_id: 
+canvas_id: 1354598
 canvas_title: Homework 1
 canvas_assignment_group: "Homework"
 canvas_points_possible: 100

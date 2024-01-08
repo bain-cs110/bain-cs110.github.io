@@ -6,6 +6,7 @@ num: 2
 draft: 0
 description:
 due_date: 2024-01-08
+canvas_title: Monday - Lecture 2 - Data Types, Operators, and Variables
 canvas_id: monday-lecture-2-data-types-operators-and-variables
 exercise_url: lecture02.zip
 slides:
