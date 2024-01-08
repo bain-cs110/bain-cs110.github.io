@@ -9,6 +9,11 @@ due_date: 2024-01-08
 canvas_title: Monday - Lecture 2 - Data Types, Operators, and Variables
 canvas_id: monday-lecture-2-data-types-operators-and-variables
 exercise_url: lecture02.zip
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4b44002c-2f77-480a-a72b-b0cf014c70f9
+     title: "Live Lecture Recording"
+     live: 1
+     duration: "51:00"
 slides:
    - url: https://docs.google.com/presentation/d/1gELOqQIbcGWFM1ar_DenmPy5bUk2V8_YXxReuV7KRGM/edit?usp=sharing
      title: Data Types, Operators, and Variables
