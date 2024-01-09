@@ -63,4 +63,13 @@ For many lectures, there are associated files you can use to follow along with t
 
 If you're on a Windows machine, there's a few extra steps to extract a ZIP file. [You can follow those instructions here.](https://www.cedarville.edu/insights/computer-help/post/how-to-extract-files-from-a-zipped-compressed-folder) **Note:** you _must extract_ these files first in order to use them in IDLE. Otherwise, it will say "read-only" and you will not be able to run or edit the files.
 
+To open a `.py` file, it's easiest to:
+
+1. Open up the `IDLE` application.
+2. Click on the `File` menu
+3. Click on the `Open...` option
+4. Using the pop-up window, navigate to the file you'd like to open!
+
+If you REALLY want to be able to double click `.py` files and have them open in IDLE, you can do so, but it takes a few steps ([Mac](https://superuser.com/questions/1219589/set-python-idle-as-default-program-to-open-py-files-on-mac#:~:text=Right%20click%20on%20a%20.,make%20it%20persist%20for%20all%20.); [Windows](https://superuser.com/questions/455558/how-to-open-python-files-in-idle-by-default-windows)). However, the above steps will ALWAYS work.
+
 Additionally, there are practice problems available in the slides that AREN'T covered in the pre-recorded video. Try to solve them on your own and then take a look at the solutions in the exercise ZIP file.
