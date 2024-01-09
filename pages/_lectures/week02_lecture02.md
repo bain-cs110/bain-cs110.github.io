@@ -49,13 +49,11 @@ readings:
 
 In today's pre-recorded lecture, we're talking about how to use functions! By the end of the videos and practice files, you should be able to:
 
-1. Use a built-in function
-2. Call a function with arguments
-3. Call a function with optional arguments
-4. Use the print function
+1. Call a function with arguments
+2. Call a function with optional arguments
+3. Use the print function
+4. Understand what a _reporter_ is
 5. Use the input function
-6. Understand what a _reporter_ is
-7. Understand what a _method_ is
 
 Note that you need to watch this lecture BEFORE coming to class on Wednesday.
 
