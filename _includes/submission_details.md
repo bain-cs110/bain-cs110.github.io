@@ -15,5 +15,5 @@ Remember, **close IDLE before you submit** to ensure that you've saved your late
 
 <mark>Remember, the deadline for submitting this waiver is 24 hours before the DUE AT time on Canvas.</mark>
 
-If you need to request a late penalty waiver on this assignment use the <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqyOhXfPiVuHh5AF5AIcoGEeTnMaq7o2P6yJzujFkQyXXSOA/viewform?usp=sf_link">Late Penalty Waiver form</a>. Please see the Syllabus for requirements.
+If you need to request a late penalty waiver on this assignment use the <a href="https://docs.google.com/forms/d/e/1FAIpQLScZd-_OCJp8A3r5o3Eia729HL4O--JSVhfm_g0yjWFnMZPu6w/viewform?usp=sf_link">Late Penalty Waiver form</a>. Please see the Syllabus for requirements.
 
