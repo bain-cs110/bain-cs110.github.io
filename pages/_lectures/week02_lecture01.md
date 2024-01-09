@@ -35,4 +35,12 @@ For many lectures, there are associated files you can use to follow along with t
 
 If you're on a Windows machine, there's a few extra steps to extract a ZIP file. [You can follow those instructions here.](https://www.cedarville.edu/insights/computer-help/post/how-to-extract-files-from-a-zipped-compressed-folder) **Note:** you _must extract_ these files first in order to use them in IDLE. Otherwise, it will say "read-only" and you will not be able to run or edit the files.
 
+To open a `.py` file, it's easiest to:
+1. Open up the `IDLE` application.
+2. Click on the `File` menu
+3. Click on the `Open...` option
+4. Using the pop-up window, navigate to the file you'd like to open!
+
+If you REALLY want to be able to double click `.py` files and have them open in IDLE, you can do so, but it takes a few steps ([Mac](); [Windows]()). However, the above steps will ALWAYS work.
+
 One of the other important tasks we'll tackle today is to setup our computers to have all of our CS 110 work in the same place. I'm going to demo it during lecture, and then in our Tutorial on Wednesday you'll be able to do the same thing!

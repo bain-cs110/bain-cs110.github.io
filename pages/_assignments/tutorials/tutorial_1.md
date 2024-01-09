@@ -170,7 +170,7 @@ This time, rather than starting from scratch, we're going to give you a template
     Tutorial Starter File <i class="fas fa-download"></i>
 </a>
 
-* Once you've moved it, open it up in IDLE
+* Once you've moved it, open it up in IDLE, by opening IDLE, clicking on the `File` menu, selecting `Open...`, and navigating to your downloaded file.
 * Modify the program so that your turtle draws a square.
 * Modify the program so that after drawing a square the turtle...
   * first changes its pen color to `"cyan"`
