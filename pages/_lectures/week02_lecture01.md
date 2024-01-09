@@ -41,6 +41,6 @@ To open a `.py` file, it's easiest to:
 3. Click on the `Open...` option
 4. Using the pop-up window, navigate to the file you'd like to open!
 
-If you REALLY want to be able to double click `.py` files and have them open in IDLE, you can do so, but it takes a few steps ([Mac](); [Windows]()). However, the above steps will ALWAYS work.
+If you REALLY want to be able to double click `.py` files and have them open in IDLE, you can do so, but it takes a few steps ([Mac](https://superuser.com/questions/1219589/set-python-idle-as-default-program-to-open-py-files-on-mac#:~:text=Right%20click%20on%20a%20.,make%20it%20persist%20for%20all%20.); [Windows](https://superuser.com/questions/455558/how-to-open-python-files-in-idle-by-default-windows)). However, the above steps will ALWAYS work.
 
 One of the other important tasks we'll tackle today is to setup our computers to have all of our CS 110 work in the same place. I'm going to demo it during lecture, and then in our Tutorial on Wednesday you'll be able to do the same thing!
