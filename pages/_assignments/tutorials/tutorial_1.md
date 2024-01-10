@@ -128,7 +128,7 @@ Well that was a let down...nothing got outputted!
 
 Remember: _computers don't do anything we don't ask of them._ Because we didn't ask Python to output the value of `grade`, when we run our program...it doesn't output the result of the calculation.
 
-Add a new line to your program that calls the `print` function with an input of the variable `grade`. Now try running your program again. If everything is correct with your calculator, you should see `95.25` printed out in the Interpreter (`>>>`) Window since we've asked our program to output the value stored in that variable.
+Add a new line to your program that calls the `print` function with an input of the variable `grade`. Now try running your program again. If everything is correct with your calculator, you should see `94` printed out in the Interpreter (`>>>`) Window since we've asked our program to output the value stored in that variable.
 
 ### Using the `input` Function
 
