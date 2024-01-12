@@ -11,6 +11,3 @@ say_hello('Varun')
 say_hello('Grace')
 say_hello('Charlie')
 say_hello('Jazmin')
-
-# result = say_hello('Jazmin')
-# print('No return value:', result)
