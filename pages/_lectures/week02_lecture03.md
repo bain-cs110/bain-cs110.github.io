@@ -12,6 +12,11 @@ mini_quiz_title: Variables, Operators, and Using Functions
 exercise_url: "lecture04.zip"
 canvas_id: friday-lecture-4-abstraction
 canvas_title: "Friday - Lecture 4 - Abstraction"
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1c47e667-7747-42b6-9267-b0cf014c713c
+     title: "Lecture Recording"
+     live: 1
+     duration: "50:00"
 slides:
    - url: https://docs.google.com/presentation/d/1SyKAtH2TlrelKZKSxqO12z5GS5N1KNYhOiOvWNCXG70/edit?usp=sharing
      title: Writing our Own Functions
