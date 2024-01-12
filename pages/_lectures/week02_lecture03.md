@@ -11,6 +11,7 @@ mini_quiz_num: 1
 mini_quiz_title: Variables, Operators, and Using Functions
 exercise_url: "lecture04.zip"
 canvas_id: friday-lecture-4-abstraction
+canvas_title: "Friday - Lecture 4 - Abstraction"
 slides:
    - url: https://docs.google.com/presentation/d/1SyKAtH2TlrelKZKSxqO12z5GS5N1KNYhOiOvWNCXG70/edit?usp=sharing
      title: Writing our Own Functions
