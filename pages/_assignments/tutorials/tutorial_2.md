@@ -7,8 +7,8 @@ draft: 0
 points: 100
 num: 1
 canvas_title: Tutorial 2
-canvas_id: 
-canvas_assignment_group: "Tutorials"
+canvas_id: 1357225
+canvas_assignment_group: "Tutorial"
 canvas_points_possible: 100
 canvas_submission_types: "online_upload"
 canvas_allowed_extensions: "rkt"

@@ -8,7 +8,7 @@ ordering: 2
 points: 100
 draft: 0
 points: 100
-canvas_id: 
+canvas_id: 1357224
 canvas_title: Homework 2
 canvas_assignment_group: "Homework"
 canvas_points_possible: 100

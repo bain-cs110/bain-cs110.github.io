@@ -6,11 +6,11 @@ description: "(Pre-Recorded Mini-Quiz 2)"
 draft: 0
 num: 5
 lec_assignment: 1
-canvas_assignment_group: "Mini-Quizzes"
+canvas_assignment_group: "Mini-Quiz"
 canvas_points_possible: 10
 canvas_allowed_extensions: "rkt"
 canvas_submission_types: "external_tool"
-canvas_id: 
+canvas_id: 1357226
 canvas_title: Lecture 5 (Pre-Recorded) - Writing Functions - Mini-Quiz 2
 exercise_url: "lecture05.zip"
 due_date: 2024-01-17
