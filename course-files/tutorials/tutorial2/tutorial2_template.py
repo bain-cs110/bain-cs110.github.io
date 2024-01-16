@@ -1,7 +1,11 @@
 ## Ignore everything before the line of all # symbols!
 from turtle import *
+
+
 def raise_(ex):
     raise ex
+
+
 class MyTurtle(object):
     def __new__(cls, x=-100, y=-100, pencolor="black"):
         my_turtle = Turtle()
@@ -37,17 +41,29 @@ class MyTurtle(object):
         my_turtle.pendown()
         Screen().tracer(1)
         return my_turtle
+
+
 def repeat(a_turtle, an_action, num_times):
     for i in range(num_times):
         an_action(a_turtle, i)
+
+
 def forward(a_turtle, dist=0):
     a_turtle._go(dist)
+
+
 def right_turn(a_turtle, angle):
     a_turtle._rotate(-angle)
+
+
 def left_turn(a_turtle, angle):
     a_turtle._rotate(angle)
+
+
 def change_pen_color(a_turtle, color):
     a_turtle.pen(pencolor=color)
+
+
 #####################################################################
 ### TURTLE CHEATSHEET ###############################################
 # Pretend we have a turtle named: turtle_0
@@ -72,6 +88,9 @@ def change_pen_color(a_turtle, color):
 
 #####################################################################
 
+shelly = MyTurtle(x=-100, y=0)
+
+
 # function definition with 1 required parameter
 # and 1 optional/keyword parameter
 def draw_diamond(side_length, color="green"):
@@ -85,5 +104,6 @@ def draw_diamond(side_length, color="green"):
     left_turn(shelly, 90)
     forward(shelly, side_length)
     left_turn(shelly, 45)
+
 
 # Note, there are no function calls in this file yet! That's your job.
