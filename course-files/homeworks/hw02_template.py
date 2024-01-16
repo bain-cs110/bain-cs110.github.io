@@ -1,5 +1,5 @@
 from tkinter import Canvas, Tk
-
+import math
 gui = Tk()
 gui.title("Homework 2")
 the_canvas = Canvas(gui, width=500, height=500, background="white")
