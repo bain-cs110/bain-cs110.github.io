@@ -12,6 +12,11 @@ mini_quiz_id: quizzes/229751
 mini_quiz_num: 3
 mini_quiz_title: Writing Functions
 due_date: 2024-01-19
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3df18c82-cd58-451c-9867-b0cf014c71bc
+     title: "Live Lecture Recording"
+     duration: "51:00"
+     live: 1
 slides:
    - url: https://docs.google.com/presentation/d/1Xf_qG1Ag4MC2n8OB8Srr5hC4npw8lAvdlD9a7pmQS1g/edit?usp=sharing
      title: "Writing Functions Practice"
