@@ -19,7 +19,7 @@ videos:
      title: "Tuples"
      duration: "14:10"
    - url: 
-     title: "List <b>Mini-Quiz</b> (Use LOAD Button)"
+     title: "Lists (<b>Mini-Quiz</b> use LOAD button at bottom of page)"
      duration: "11:16"
      quiz: 1
 slides:
