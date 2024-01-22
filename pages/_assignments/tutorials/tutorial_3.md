@@ -316,7 +316,7 @@ The *Find* tool is really dope. It does a great job of locating things you might
 
 > **NOTE**: BE VERY CAREFUL WITH THIS TOOL. Though it's possible to reverse your changes with Undo, remember computers are not particularly smart and will only do *exactly* what you tell them to and no more.
 
-Now, we want to replace all the instances of `25` for the `width` parameter for each `make_square` call. But if we just do `25` in Find and `pixel` in Replace...this tool will replace EVERYWHERE we see a 25 with the text `width`. There's lots of other `25s` (e.g. `325`) in it that we don't want to mess with.
+Now, we want to replace all the instances of `25` for the `width` parameter for each `square` call. But if we just do `25` in Find and `pixel` in Replace...this tool will replace EVERYWHERE we see a 25 with the text `width`. There's lots of other `25s` (e.g. `325`) in it that we don't want to mess with.
 
 You can actually avoid those cases by selecting the `Whole Word` option in the tool...but that still doesn't fix the problem of other `25s` elsewhere in the document.
 
@@ -441,7 +441,7 @@ Make some other custom marios that use different inputs to make sure your functi
 
 ## Optional Challenges
 
-1. Create a helper function called `make_row` to further simplify your `mario` function. Then, rather than repeating almost identical code for each row created, you will simply invoke `make_row` 15 times (once for each row).
+1. Create a helper function called `row` to further simplify your `mario` function. Then, rather than repeating almost identical code for each row created, you will simply invoke `row` 15 times (once for each row).
 2. Create a second pixel art function that draws a different image. Google "pixel art simple" to get ideas.
 3. The pixel argument is kind of awkward. Arguably a better function design would allow the calling function to specify the width of Mario (as opposed to the individual pixels that comprise him). Therefore, modify the function header so that it requires a `width` (int) parameter instead of a `pixel` parameter. This change means that you will need to derive the appropriate size of the pixel based on the width and the number of columns needed to generate Mario (which is 13). When you're done, update each of the function calls at the bottom of the file so that they pass in a width argument.
 
