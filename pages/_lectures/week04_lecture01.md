@@ -13,6 +13,7 @@ videos:
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5899f713-5b8c-479f-9514-b0cf014c71d1
      title: "Live Lecture Recording"
      duration: "51:00"
+     live: 1
 readings:
    - title: "Ch20: Modules"
      author: "Heinold"
