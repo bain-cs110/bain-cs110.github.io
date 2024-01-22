@@ -266,7 +266,7 @@ In addition to gaining more practice with functions, there are three takeaways t
 
 ## Understanding the "hardcoded" version of Mario
 
-<a class="nu-button" href="{{site.url}}/course-files/tutorials/tutorial3/mario.py" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/tutorials/tutorial3/your_task.py" target="_blank">
     Mario Starter File <i class="fas fa-download"></i>
 </a>
 
