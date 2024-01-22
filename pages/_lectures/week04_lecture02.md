@@ -5,6 +5,7 @@ type: lecture
 description: "(Mini-Quiz 4)"
 draft: 0
 num: 8
+lec_assignment: 1
 due_date: 2024-01-24
 exercise_url: "lecture08.zip"
 canvas_assignment_group: "Mini-Quiz"

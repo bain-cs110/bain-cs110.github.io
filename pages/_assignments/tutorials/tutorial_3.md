@@ -8,7 +8,7 @@ points: 100
 num: 3
 due_date: 2024-01-24
 canvas_title: Tutorial 3
-canvas_id: 
+canvas_id: 1359044
 canvas_assignment_group: "Tutorial"
 canvas_points_possible: 100
 canvas_submission_types: "online_upload"
@@ -139,7 +139,7 @@ Interpolate colors is a reporter function that returns a color that is <em>betwe
 
 * * *
 
-### Task 1
+## Task 1
 
 Spend a few minutes calling each of these functions. If you were super comfortable with oval, circle, rectangle, and square, skip straight to triangle, polygon, and line. Make sure to experiment with different inputs to get a sense of what sorts of shapes each function can make. Tag team with your team mates and try unique inputs.
 
@@ -230,6 +230,7 @@ a_square = square(size=25, color="blue")
 a_sqaure = rotate(a_square, degrees=45)
 overlay(a_square, circle1)
 ```
+
 * * *
 
 ## Task 3

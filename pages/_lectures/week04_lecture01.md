@@ -5,6 +5,7 @@ type: lecture
 description:
 draft: 0
 num: 7
+canvas_title: "Monday - Lecture 7 - Reporters + Modules
 exercise_url: "lecture07.zip"
 due_date: 2024-01-22
 readings:
