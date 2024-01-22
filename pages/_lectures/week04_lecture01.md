@@ -27,4 +27,4 @@ Today we'll continue our discussion of writing functions (yes, again...I promise
 
 We'll also talk a little about libraries of functions written by other people that we can use in our own programs called **modules**.
 
-Finally we'll talk a little bit about a weird thing called **classes* which allow us to define our own data types!
+Finally we'll talk a little bit about a weird thing called **classes** which allow us to define our own data types!
