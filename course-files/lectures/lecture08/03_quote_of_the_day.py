@@ -1,6 +1,6 @@
 # given the list of inspirational quotes, write a program that picks a different
-# one everytime your computer runs this program. Use the "randint" function to pick
-# a random number (we'll demo this in class).
+# one every time your computer runs this program. Use the `randint`` function first...
+# then write another version that uses the `choice`` function!
 import random
 
 quotes = (

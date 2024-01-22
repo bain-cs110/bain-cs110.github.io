@@ -71,7 +71,6 @@ print(list_of_strings)
 
 
 
-
 # ## Example 7: You can add data to a list:
 print("\n\nappending...")
 print(list_of_strings)
@@ -85,7 +84,7 @@ print(list_of_strings)
 ## Example 8:  You can remove an item from a list using its index:
 print("\n\nremoving...")
 print(list_of_strings)
-list_of_strings.pop()  # pop removes data from the end of the list
+list_of_strings.pop()  # pop removes data from the end of the list by default
 print(list_of_strings)
 list_of_strings.pop(2) # removes the second item from the list
 print(list_of_strings)
