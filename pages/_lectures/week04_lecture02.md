@@ -12,7 +12,7 @@ canvas_assignment_group: "Mini-Quiz"
 canvas_points_possible: 10
 canvas_allowed_extensions: "py"
 canvas_submission_types: "external_tool"
-canvas_id: 
+canvas_id: 1359045
 canvas_title: Lecture 8 (Pre-Recorded) - Sequences - Mini-Quiz 4
 videos:
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=73b931d9-2375-4604-a3dc-b0ff0025384d
