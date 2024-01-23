@@ -433,7 +433,7 @@ mario((420, 10), pixel=15)
 
 > **Note**: Wondering what those weird colors are? Those are 'hexcolors' which are colors represented in a number system called hexadecimal. You can use any of them! [See here to explore](https://htmlcolorcodes.com)!
 
-<img class="medium frame" src="{{site.url}}/assets/images/tutorials/tutorial3/marios.png" />
+<img alt="marios screenshot!" class="medium frame" src="{{site.url}}/assets/images/tutorials/tutorial3/marios.png" />
 
 Make some other custom marios that use different inputs to make sure your function works as expected. I'd suggest also trying out the random functions as inputs to these things as practice for the homework!
 
