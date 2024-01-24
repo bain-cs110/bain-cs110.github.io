@@ -229,7 +229,7 @@ Try out each of these functions with some of the shapes. Here's an example:
 ```python
 circle1 = circle(center=(500, 500), radius=50, color="red")
 a_square = square(size=25, color="blue")
-a_sqaure = rotate(a_square, degrees=45)
+a_sqaure = rotate(a_square, degrees=45) # note, there's a silly bug here...can you fix it?
 overlay(a_square, circle1)
 ```
 
