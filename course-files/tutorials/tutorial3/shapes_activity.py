@@ -10,6 +10,8 @@ the_canvas.pack()
 
 
 
+
+
 ########################## YOUR CODE ABOVE THIS LINE ##############################
 
 make_grid(900, 900)  # draw the grid

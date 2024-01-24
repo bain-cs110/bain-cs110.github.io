@@ -55,7 +55,7 @@ Your first task is to write a function called `flower`, that draws a 8-petal (4 
     <li>Finally, use the overlay function on each shape to overlay it onto the original oval!</li>
   </ul>
 </details>
-
+<br>
 <details>
   <summary>The <span style="font-family: courier">overlay</span> function</summary>
 Overlay is a reporter function that takes its first input and overlays it on its second input by centering the images before returning the modified first shape.
@@ -66,7 +66,7 @@ Overlay is a reporter function that takes its first input and overlays it on its
 <li>offset_y (int, optional) - an offset in the y-direction</li>
 </ul>
 </details>
-
+<br>
 <details>
   <summary>The <span style="font-family: courier">rotate</span> function</summary>
 Rotate is a reporter function that takes the shape it is given as input and rotates it about a given point by a certain number of degrees before returning the modified shape to be used elsewhere.
@@ -76,7 +76,7 @@ Rotate is a reporter function that takes the shape it is given as input and rota
 <li>origin (tuple, optional) - about which point to rotate (defaults to center of shape)</li>
 </ul>
 </details>
-
+<br>
 <details>
   <summary>The <span style="font-family: courier">duplicate</span> function</summary>
 Duplicate is a reporter function that takes the shape it is given as input and returns a perfect copy to be used elsewhere.

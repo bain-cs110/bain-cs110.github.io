@@ -264,15 +264,20 @@ def duplicate(shape, color=None):
         return the_copy
 
 
-def star(center=(0, 0), radius=50, color="hotpink", **kwargs):
-    alpha = (2 * pi) / 10
+def star(center=(0, 0), radius=50, color="hotpink", outer_radius=75, points=5, **kwargs):
+    arc_segment = 360 / points
     vertices = []
-    for i in range(11):
-        i = 11 - i
-        r = radius * (i % 2 + 1) / 2
-        omega = alpha * i
-        vertices.append(((r * sin(omega)) + center[0], (r * cos(omega)) + center[1]))
-
+    for i in range(points):
+        inner_point = (
+            radius * cos(radians(arc_segment * i)) + center[0],
+            -1 * radius * sin(radians(arc_segment * i)) + center[1],
+        )
+        vertices.append(inner_point)
+        outer_point = (
+            outer_radius * cos(radians(arc_segment * i + arc_segment / 2)) + center[0],
+            -1 * outer_radius * sin(radians(arc_segment * i + arc_segment / 2)) + center[1],
+        )
+        vertices.append(outer_point)
     return polygon(vertices, color=color, **kwargs)
 
 

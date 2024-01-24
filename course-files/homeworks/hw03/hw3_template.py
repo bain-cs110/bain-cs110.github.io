@@ -16,9 +16,6 @@ the_canvas.pack()
 
 
 
-
-
-
 ########################## YOUR CODE ABOVE THIS LINE ##############################
 # helper function that draws a grid.
 make_grid(900, 900)  # draw the grid

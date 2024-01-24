@@ -122,8 +122,10 @@ Arc is a reporter function that both draws the shape on a screen and returns tha
 Star is a reporter function that both draws the shape on a screen and returns that shape to be used later. It has the following inputs:
 <ul>
 <li>center (tuple, optional) - where to draw the shape</li>
-<li>radius (int, optional) - how big to draw the shape</li>
+<li>radius (int, optional) - the inner radius of the star</li>
 <li>color (str, optional) - what color to make the shape</li>
+<li>outer_radius (int, optional) - the outer radius of the star</li>
+<li>points (int, optional) - how many points for the star to have</li>
 </ul>
 </details>
 
