@@ -56,6 +56,35 @@ Your first task is to write a function called `flower`, that draws a 4-petal flo
   </ul>
 </details>
 
+<details>
+  <summary>The <span style="font-family: courier">overlay</span> function</summary>
+Overlay is a reporter function that takes its first input and overlays it on its second input by centering the images before returning the modified first shape.
+<ul>
+<li>shape1 (Shape) - the shape to be placed on top</li>
+<li>shape2 (Shape) - the shape to be placed on the bottom</li>
+<li>offset_x (int, optional) - an offset in the x-direction</li>
+<li>offset_y (int, optional) - an offset in the y-direction</li>
+</ul>
+</details>
+
+<details>
+  <summary>The <span style="font-family: courier">rotate</span> function</summary>
+Rotate is a reporter function that takes the shape it is given as input and rotates it about a given point by a certain number of degrees before returning the modified shape to be used elsewhere.
+<ul>
+<li>shape (Shape) - the shape to be rotated</li>
+<li>degrees (int, optional) - how much to rotate</li>
+<li>origin (tuple, optional) - about which point to rotate (defaults to center of shape)</li>
+</ul>
+</details>
+
+<details>
+  <summary>The <span style="font-family: courier">duplicate</span> function</summary>
+Duplicate is a reporter function that takes the shape it is given as input and returns a perfect copy to be used elsewhere.
+<ul>
+<li>shape (Shape) - the shape to be duplicated</li>
+</ul>
+</details>
+
 
 For example, I used these calls to make the flowers below (note, I used the `interpolate_colors` function to make multi-colored petals; yours can just be a single color).
 ```python
@@ -171,12 +200,29 @@ Using the above example tests is a great way to make sure that your function wor
   <summary><b>Step by Step</b></summary>
 <ol>
 <li>Import the random module's functions named randint and choice into your file (hint: do this at the top of your file)</li>
-<li>Write one function call to `creature` that uses two function calls to randint to place the creature at a random (x,y) coordinate on the canvas.</li>
+<li>Write one function call to creature that uses two function calls to randint to place the creature at a random (x,y) coordinate on the canvas.</li>
 <li>Write one function call to creature that uses a function call to randint to generate a random size of your creature.</li>
 <li>Write one function call to creature that uses two function calls to choice to pick random a primary_color and secondary_color. (Hint: you can make a palette by just making a list of some of the colors you've loved or <a href="http://cs111.wellesley.edu/archive/cs111_fall14/public_html/labs/lab12/tkintercolor.html">pick some new ones</a>!)</li>
 </ol>
 </details>
 <br>
+
+<details>
+  <summary><b>How to use the <span style="font-family: courier">randint</span> function</b></summary>
+  randint is a reporter function that is most useful for generating integers. It is part of the random module so make sure to import it via <span style="font-family: courier">from random import choice</span>  It has the following inputs:
+  <ul>
+    <li>lower_bound (int) - the min number to generate</li>
+    <li>upper_bound (int) - the max number to generate</li>
+  </ul>
+</details>
+<details>
+  <summary><b>How to use the <span style="font-family: courier">choice</span> function</b></summary>
+  choice is a reporter function that is most useful for picking a random element from a sequence! It is part of the random module so make sure to import it via <span style="font-family: courier">from random import choice</span> It has the following inputs:
+  <ul>
+    <li>a_sequence (list, tuple, or str) - the sequence to pick a random element of</li>
+  </ul>
+</details>
+
 Make sure your program runs with the **five** new function calls and that you get different results each time you run your program.
 
 * * *
