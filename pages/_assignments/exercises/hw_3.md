@@ -39,7 +39,7 @@ Make sure to download the above template and move it to your `cs110` folder. Ren
 
 ## Part 1: Compound Shape Warmup
 
-Your first task is to write a function called `flower`, that draws a 4-petal flower like the below. Your function must be named `flower` and have the following inputs:
+Your first task is to write a function called `flower`, that draws a 8-petal (4 ovals) flower like the below. Your function must be named `flower` and have the following inputs:
 
 * A positional (required) parameter, `center`, specifying the x-y position of the center of your flower (should be a `tuple`).
 * A keyword (optional) parameter, `radius_x`, specifying the radius in the x-direction of each petal (the default should be 50).
