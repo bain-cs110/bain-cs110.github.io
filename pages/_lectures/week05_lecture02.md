@@ -2,6 +2,8 @@
 layout: lecture-two-column
 title: Quiz 1
 type: quizzes
+canvas_title: Wednesday - Quiz 1
+canvas_id: wednesday-quiz-1
 draft: 0
 num: 1
 due_date: 2024-01-31
