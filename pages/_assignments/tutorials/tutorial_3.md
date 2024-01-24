@@ -394,7 +394,7 @@ You can think of this function as a *helper* or *translation* function that is b
 
 Once you get 0, and 1 done (and you feel like you've got a handle for WHY that works) checkout the hint below for the remaining rows. Yes, you can copy and paste the remaining rows...but only do so if you understand why this works. Otherwise, it's time to ask some questions!
 
-<a class="nu-button" href="{{site.url}}/course-files/tutorials/tutorial02/hint_1.py" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/tutorials/tutorial3/hint_1.py" target="_blank">
     Hint<i class="fas fa-download"></i>
 </a>
 
