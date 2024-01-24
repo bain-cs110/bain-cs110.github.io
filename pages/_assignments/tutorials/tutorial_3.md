@@ -316,7 +316,7 @@ The *Find* tool is really dope. It does a great job of locating things you might
 
 > **NOTE**: BE VERY CAREFUL WITH THIS TOOL. Though it's possible to reverse your changes with Undo, remember computers are not particularly smart and will only do *exactly* what you tell them to and no more.
 
-Now, we want to replace all the instances of `25` for the `width` parameter for each `square` call. But if we just do `25` in Find and `pixel` in Replace...this tool will replace EVERYWHERE we see a 25 with the text `width`. There's lots of other `25s` (e.g. `325`) in it that we don't want to mess with.
+Now, we want to replace all the instances of `25` for the `width` parameter for each `square` call. But if we just do `25` in Find and `pixel` in Replace...this tool will replace EVERYWHERE we see a 25 with the text `width`. There's lots of other `25s` (e.g. `325`) in it that we don't want to mess with (DON'T DO THIS UNTIL READING THE NEXT TWO PARAGRAPHS).
 
 You can actually avoid those cases by selecting the `Whole Word` option in the tool...but that still doesn't fix the problem of other `25s` elsewhere in the document.
 
