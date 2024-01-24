@@ -320,7 +320,7 @@ Now, we want to replace all the instances of `25` for the `width` parameter for 
 
 You can actually avoid those cases by selecting the `Whole Word` option in the tool...but that still doesn't fix the problem of other `25s` elsewhere in the document.
 
-However...we've got two extra symbols on either end of our `25` for the `width` input that makes it special: a space (``) on the left hand side and a comma (`,`) on the right hand side. If we instead search for the string `25,` and replace with `pixel,`, then IDLE will only replace the ones we care about! Try a couple of instances using the `Replace + Find` button and once you're sure it's working correctly, try using `Replace All`.
+However...we've got two extra symbols on either end of our `25` for the `width` input that makes it special: an `=` on the left hand side and a comma (`,`) on the right hand side. If we instead search for the string `=25,` and replace with `pixel,`, then IDLE will only replace the ones we care about! Try a couple of instances using the `Replace + Find` button and once you're sure it's working correctly, try using `Replace All`.
 
 > **NOTE**: At this point, you should have some weird looking Marios (try running your code after doing the above). Why is this? What's going on? Take a look at WHERE the squares are being drawn. Talk with someone next to you and try to figure out why your code does what it does. Brainstorm with the people in your team. What did we miss? Consider the inputs we give to each call to the `square` function...
 
