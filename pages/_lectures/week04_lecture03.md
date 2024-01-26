@@ -13,6 +13,11 @@ mini_quiz_num: 5
 mini_quiz_title: Reporters and Sequences
 exercise_url: "lecture09.zip"
 due_date: 2024-01-26
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1db338f0-6cf6-46ba-a0bd-b0cf014c71f9
+     live: 1
+     title: "Live Lecture Recording"
+     duration: "51:00"
 slides:
    - url: https://docs.google.com/presentation/d/1l9ObeP_mB4STgcAHFg_wHEKDSd2t5npT4QaQhW9h5u0/edit?usp=sharing
      title: "Sequences and Scope"
