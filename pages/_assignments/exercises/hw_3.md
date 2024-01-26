@@ -172,13 +172,13 @@ creature((875, 469), size=122, primary_color="#3f5364", secondary_color="#bfdc65
 Depending on how you implement the size input in your function body, your creature might appear WAY too <em>big</em> or WAY too <em>small</em>. While we won't be expecting an exact relationship between the size of your creature and the actual visual size it ends with, it should be roughly like our creature below. If you find your creature to be way too big with the test calls, an easy way to fix this is to, at the very beginning of your function, do the following:
 <br><br>
 
-size = size / 10
+<code>size = size / 10</code>
 <br><br>
 
 this just says "make the size 1/10 the size someone entered". Depending on your design, you might need to tweak that denominator to scale the image well. If your creature is too small on the other hand, you might do:
 <br><br>
 
-size = size * 10
+<code>size = size * 10</code>
 <br><br>
 
 The cool thing about this fix is that all it's doing is changing the value stored in the `size` variable. We only need to change it in that one place because everywhere we use `size`, python will use the smaller value cause that's what's stored in there!
