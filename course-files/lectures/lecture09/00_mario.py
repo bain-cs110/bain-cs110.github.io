@@ -10,11 +10,11 @@ def get_xy(origin, pixel_size, mario_coord):
     x = origin[0]  # extract the x-coordinate
     y = origin[1]  # extract the y-coordinate
 
-    row = mario_coord[0]  # extract the row number
-    col = mario_coord[1]  # extract the col number
+    col = mario_coord[0]  # extract the col number
+    row = mario_coord[1]  # extract the row number
 
-    new_x = x + row * pixel_size  # calculate the new x
-    new_y = y + col * pixel_size  # calculate the new y
+    new_x = x + col * pixel_size  # calculate the new x
+    new_y = y + row * pixel_size  # calculate the new y
 
     return (new_x, new_y)
 
