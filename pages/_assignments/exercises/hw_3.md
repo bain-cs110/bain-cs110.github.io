@@ -20,7 +20,7 @@ canvas_allowed_extensions: "py"
 > 1. More practice working with built-in functions
 > 1. Practice writing your own functions
 
-<img alt="An example creature" class="creature" src="{{site.url}}/assets/images/hw03/creature.png" /> In this assignment, you are going to write some functions to draw compound shapes of your own design/choosing usingtkinter. At the end of this assignment, someone should be able to use your function to draw your creature: anywhere on the screen at any size or color. In other words, your function needs to honor the parameters that are passed into it. If you don't quite know what this means (it's a confusing concept for people just learning to program), make sure to ask questions!
+<img alt="An example creature" class="creature" src="{{site.url}}/assets/images/hw03/creature.png" /> In this assignment, you are going to write some functions to draw compound shapes of your own design/choosing using tkinter. At the end of this assignment, someone should be able to use your function to draw your creature: anywhere on the screen at any size or color. In other words, your function needs to honor the parameters that are passed into it. If you don't quite know what this means (it's a confusing concept for people just learning to program), make sure to ask questions!
 
 
 <a class="nu-button" href="{{site.url}}/course-files/homeworks/hw03/hw3_template.py" target="_blank">
@@ -57,7 +57,7 @@ Your first task is to write a function called `flower`, that draws a 8-petal (4 
 </details>
 <br>
 <details>
-  <summary>The <span style="font-family: courier">overlay</span> function</summary>
+  <summary>The <code>overlay</code> function</summary>
 Overlay is a reporter function that takes its first input and overlays it on its second input by centering the images before returning the modified first shape.
 <ul>
 <li>shape1 (Shape) - the shape to be placed on top</li>
@@ -68,7 +68,7 @@ Overlay is a reporter function that takes its first input and overlays it on its
 </details>
 <br>
 <details>
-  <summary>The <span style="font-family: courier">rotate</span> function</summary>
+  <summary>The <code>rotate</code> function</summary>
 Rotate is a reporter function that takes the shape it is given as input and rotates it about a given point by a certain number of degrees before returning the modified shape to be used elsewhere.
 <ul>
 <li>shape (Shape) - the shape to be rotated</li>
@@ -205,19 +205,21 @@ Using the above example tests is a great way to make sure that your function wor
 <li>Write one function call to creature that uses two function calls to choice to pick random a primary_color and secondary_color. (Hint: you can make a palette by just making a list of some of the colors you've loved or <a href="http://cs111.wellesley.edu/archive/cs111_fall14/public_html/labs/lab12/tkintercolor.html">pick some new ones</a>!)</li>
 </ol>
 </details>
-<br>
+
 
 <details>
-  <summary><b>How to use the <span style="font-family: courier">randint</span> function</b></summary>
-  randint is a reporter function that is most useful for generating integers. It is part of the random module so make sure to import it via <span style="font-family: courier">from random import choice</span>  It has the following inputs:
+  <summary><b>How to use the <code>randint</code> function</b></summary>
+  randint is a reporter function that is most useful for generating integers. It is part of the random module so make sure to import it via <code>from random import randint</code>. It has the following inputs:
   <ul>
     <li>lower_bound (int) - the min number to generate</li>
     <li>upper_bound (int) - the max number to generate</li>
   </ul>
 </details>
+
+
 <details>
-  <summary><b>How to use the <span style="font-family: courier">choice</span> function</b></summary>
-  choice is a reporter function that is most useful for picking a random element from a sequence! It is part of the random module so make sure to import it via <span style="font-family: courier">from random import choice</span> It has the following inputs:
+  <summary><b>How to use the <code>choice</code> function</b></summary>
+  choice is a reporter function that is most useful for picking a random element from a sequence! It is part of the random module so make sure to import it via <code>from random import choice</code>. It has the following inputs:
   <ul>
     <li>a_sequence (list, tuple, or str) - the sequence to pick a random element of</li>
   </ul>
