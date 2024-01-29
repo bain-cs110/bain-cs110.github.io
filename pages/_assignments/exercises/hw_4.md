@@ -77,3 +77,5 @@ This is a participation-based activity meaning someone's review doesn't affect y
 * Any comments that violate the Northwestern Student Code of Conduct will be referred to the Dean of Student's office.
 * If you do not leave a comment on each of the 4 rubric items, you will receive a 10 point penalty. These comments don't need to be extensive, but they should be meaningful. You can reference particular line numbers of a person's program if you want to refer to something specific.
 * Just like a normal homework, these peer reviews should be completed by Friday at 11:59pm CST. If your review is completed after that, you will receive the normal Late Penalty. Peer reviews completed after Sunday at 11:59pm CST will receive a 0.
+
+{% include submission_details.md %}
