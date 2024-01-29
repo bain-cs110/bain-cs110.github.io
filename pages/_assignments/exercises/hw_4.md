@@ -25,7 +25,7 @@ To that effect, this assignment will ask you to serve as a Peer Reviewer for ano
 1. Be kind.
 2. Explain your reasoning.
 3. Balance giving explicit directions with just pointing out problems and letting the programmer decide.
-4. Encourage the author to simplify code or add code comments instead of just saying "you should do this instead...".
+4. Encourage the author to simplify code or add code comments to explain their approach instead of just saying "you should do this instead...".
 
 * * *
 
@@ -43,7 +43,7 @@ Once your peer has reviewed your assignment, you can view their comments by [fol
 
 ## What To Look For
 
-Canvas has a _rubric_ built-in for the assignment for you to use to evaluate the person's program. While you should certainly look at the other student's flower function, _please focus most of your attention on the other submitter's `creature` function_. For each rubric item you should assign a **score** <mark>and</mark> add a **2+ sentence comment** justifying your numeric score.
+Canvas has a _rubric_ built-in for the assignment for you to use to evaluate the person's program. While you should certainly look at the other student's flower function, _please focus most of your attention on the other submitter's `creature` function_. For each rubric item you should assign a **category** <mark>and</mark> add a **2+ sentence comment** justifying your rubric selection.
 
 * Design
   * Does this program fit the idea of the assignment?
@@ -71,7 +71,7 @@ There's a fifth rubric item that asks whether or not you learned anything from r
 
 ## How will you be graded?
 
-This is a participation-based activity meaning someone's review doesn't affect your grade on the assignment. You will receive credit based off of whether or not you completed your review of a peer's program. <mark>You will lose points if you do not do any of the following:</mark>:
+This is a participation-based activity meaning someone's review doesn't affect your grade on the assignment. You will receive credit based off of whether or not you completed your review of a peer's program. <mark>You will lose points if you do not do any of the following</mark>:
 
 * If your comments/rubric selections are random or unthoughtful (as determined by course staff), you will receive a 0. They must be written by you without the aid of any other tools.
 * Any comments that violate the Northwestern Student Code of Conduct will be referred to the Dean of Student's office.
