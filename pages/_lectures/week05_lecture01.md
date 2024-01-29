@@ -1,6 +1,7 @@
 ---
 layout: module
 title: "Quiz 1 Review"
+canvas_title: "Monday - Lecture 10 - Quiz 1 Review"
 type: lecture
 draft: 0
 description: (In-Person Mini-Quiz 6)
