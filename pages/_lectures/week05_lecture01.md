@@ -6,6 +6,7 @@ type: lecture
 draft: 0
 description: (In-Person Mini-Quiz 6)
 num: 10
+exercise_url: "lecture10.zip"
 due_date: 2024-01-29
 mini_quiz_id: quizzes/230204
 mini_quiz_num: 6
