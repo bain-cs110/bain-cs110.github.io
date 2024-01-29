@@ -11,6 +11,11 @@ due_date: 2024-01-29
 mini_quiz_id: quizzes/230204
 mini_quiz_num: 6
 mini_quiz_title: Getting Ready for MQ 1
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=98172d9f-aa0b-4df7-ae56-b0cf014c720f
+     live: 1
+     title: "Live Lecture Recording"
+     duration: "51:00"
 slides:
    - url: https://docs.google.com/presentation/d/1obY4YuFPO2p0ky0qTZw1qjyeGvfMUVXib9vn6dJVPjU/edit?usp=sharing
      title: "Q1 Review"
