@@ -33,7 +33,23 @@ To that effect, this assignment will ask you to serve as a Peer Reviewer for ano
 
 The peer review will be completed via Canvas. Here are the instructions on [how to access your assigned peer review](https://community.canvaslms.com/t5/Student-Guide/How-do-I-submit-a-peer-review-to-an-assignment/ta-p/293).
 
+<details>
+  <summary>What should the rubric look like?</summary>
+  Like this!
+  <img alt="screenshot of rubric" src= {{site.url}}/assets/images/hw04/hw4_rubric.png>
+  <b>Note that the categories are "out of order" so make sure to select the one you mean!</b>
+</details>
+<br>
+
 You should download the other person's program and copy it into your Homework 3 folder (so that you can use the `hw3_shapes` module) in order to complete your review.
+
+<details>
+  <summary>Having trouble downloading your peer's submission?</summary>
+  A number of people reported not seeing a download button in the peer review (especially on Macs). To download your Peer's Submission, visit <b>your HW 4</b> assignment and view the feedback. Everyone should have a comment from Prof. Bain with an attached file that is the submission of your peer. If that's not the case, email Prof. Bain.
+</details>
+<br>
+
+<mark>Once you click submit you will not be able to edit your Peer Review so make sure to read all the instructions below FIRST and double check you've completed the review before hitting submit!</mark>
 
 Once your peer has reviewed your assignment, you can view their comments by [following the instructions here](https://community.canvaslms.com/t5/Student-Guide/Where-can-I-find-my-peers-feedback-for-peer-reviewed-assignments/ta-p/320).
 
@@ -67,6 +83,12 @@ Canvas has a _rubric_ built-in for the assignment for you to use to evaluate the
 
 There's a fifth rubric item that asks whether or not you learned anything from reviewing this student's assignment that you might want to change / use in your own `creature` function if you were asked to revise it.
 
+<details>
+  <summary>How do I add a comment?</summary>
+  For each rubric category, there's a small "comment bubble." Click on the bubble and it will allow you to add your comment!
+  <img alt="screenshot of rubric comment button" src= {{site.url}}/assets/images/hw04/hw4_rubric_bubble.png>
+</details>
+<br>
 * * *
 
 ## How will you be graded?

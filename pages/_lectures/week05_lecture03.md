@@ -1,7 +1,7 @@
 ---
 layout: module
 title: "Conditionals"
-canvas_id: "friday-lecture-11-control-flow
+canvas_id: "friday-lecture-11-control-flow"
 canvas_title: "Friday - Lecture 11 - Control Flow"
 type: lecture
 draft: 0
