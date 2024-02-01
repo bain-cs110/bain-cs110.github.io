@@ -36,7 +36,7 @@ The peer review will be completed via Canvas. Here are the instructions on [how 
 <details>
   <summary>What should the rubric look like?</summary>
   Like this!
-  <img alt="screenshot of rubric" src= {{site.url}}/assets/images/hw04/hw4_rubric.png>
+  <img alt="screenshot of rubric" src="{{site.url}}/assets/images/hw04/hw4_rubric.png"/>
   <b>Note that the categories are "out of order" so make sure to select the one you mean!</b>
 </details>
 <br>
@@ -86,7 +86,7 @@ There's a fifth rubric item that asks whether or not you learned anything from r
 <details>
   <summary>How do I add a comment?</summary>
   For each rubric category, there's a small "comment bubble." Click on the bubble and it will allow you to add your comment!
-  <img alt="screenshot of rubric comment button" src= {{site.url}}/assets/images/hw04/hw4_rubric_bubble.png>
+  <img alt="screenshot of rubric comment button" style="width=250px;" src="{{site.url}}/assets/images/hw04/hw4_rubric_bubble.png"/>
 </details>
 <br>
 * * *
