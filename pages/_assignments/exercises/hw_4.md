@@ -35,8 +35,8 @@ The peer review will be completed via Canvas. Here are the instructions on [how 
 
 <details>
   <summary>What should the rubric look like?</summary>
-  Like this!
-  <img alt="screenshot of rubric" src="{{site.url}}/assets/images/hw04/hw4_rubric.png"/>
+  Like this!<br>
+  <img alt="screenshot of rubric" src="{{site.url}}/assets/images/hw04/hw4_rubric.png"/><br>
   <b>Note that the categories are "out of order" so make sure to select the one you mean!</b>
 </details>
 <br>
@@ -100,4 +100,12 @@ This is a participation-based activity meaning someone's review doesn't affect y
 * If you do not leave a comment on each of the 4 rubric items, you will receive a 10 point penalty. These comments don't need to be extensive, but they should be meaningful. You can reference particular line numbers of a person's program if you want to refer to something specific.
 * Just like a normal homework, these peer reviews should be completed by Friday at 11:59pm CST. If your review is completed after that, you will receive the normal Late Penalty. Peer reviews completed after Sunday at 11:59pm CST will receive a 0.
 
-{% include submission_details.md %}
+<b>You do not need to submit anything to the HW4 assignment. It's literally only here to provide instructions and to have a Canvas assignment that we can put your grade in.</b>
+
+* * *
+
+## Late Penalty Waiver
+
+<mark>Remember, the deadline for submitting this waiver is 24 hours before the DUE AT time on Canvas.</mark>
+
+If you need to request a late penalty waiver on this assignment use the <a href="https://docs.google.com/forms/d/e/1FAIpQLScZd-_OCJp8A3r5o3Eia729HL4O--JSVhfm_g0yjWFnMZPu6w/viewform?usp=sf_link">Late Penalty Waiver form</a>. Please see the Syllabus for requirements.
