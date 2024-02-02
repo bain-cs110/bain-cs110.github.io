@@ -102,6 +102,8 @@ This is a participation-based activity meaning someone's review doesn't affect y
 
 <b>You do not need to submit anything to the HW4 assignment. It's literally only here to provide instructions and to have a Canvas assignment that we can put your grade in.</b>
 
+<mark>When you submit</mark> the rubric will not display the correct item selections. <b>Worry not!</b> Your rubric selections have been saved correctly, Canvas is just displaying them incorrectly. When we grade the peer reviews, we'll make sure to post a summary comment with your true cateogry selections. There's nothing you need to do!
+
 * * *
 
 ## Late Penalty Waiver
