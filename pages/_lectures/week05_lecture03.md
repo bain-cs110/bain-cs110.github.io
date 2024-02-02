@@ -17,7 +17,11 @@ readings:
      url: https://www.py4e.com/html3/03-conditional
      video_url: https://www.py4e.com/lessons/logic
      source: "Python for Everybody"
-
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=298e87f5-31fa-4351-aba7-b0cf014c7250
+     title: "Live Lecture Recording"
+     duration: "51:00"
+     live: 1
 slides:
    - url: https://docs.google.com/presentation/d/1yH75WERtk4vIpTZ2gJcD8RQFeaMYkafp6s5mZHNnHkI/edit?usp=sharing
      title: "Control Flow - Conditionals"
