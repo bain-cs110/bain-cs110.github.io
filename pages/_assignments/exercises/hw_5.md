@@ -30,13 +30,13 @@ Note there are a number of functions in `hw5_utilities.py` that you *can* use bu
 > 1. Practice working with if statements
 > 1. Practice working with modules
 
-<a class="nu-button" href="{{site.url}}/course-files/homeworks/hw5_template.py" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/homeworks/hw5/hw5_template.py" target="_blank">
     Homework Starter File <i class="fas fa-download"></i>
 </a>
 
 You need to make sure they are BOTH in the same folder (but you will only submit the `hw5.py` file.)
 
-<a class="nu-button" href="{{site.url}}/course-files/homeworks/hw5_utilities.py" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/homeworks/hw5/hw5_utilities.py" target="_blank">
     Utilities Library File<i class="fas fa-download"></i>
 </a>
 
