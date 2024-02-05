@@ -7,6 +7,12 @@ draft: 0
 points: 100
 num: 3
 due_date: 2024-02-07
+canvas_title: Tutorial 4
+canvas_id: 
+canvas_assignment_group: "Tutorial"
+canvas_points_possible: 100
+canvas_submission_types: "online_upload"
+canvas_allowed_extensions: "py"
 ---
 
 The goal of this tutorial is to get you comfortable with if/else statements and while loops. Both of these types of statements are very powerful, so getting comfortable with them is essential (and will help you with HW 4).
