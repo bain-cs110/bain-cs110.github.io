@@ -6,6 +6,11 @@ python3 course-files/build/zip_it.py course-files/tutorials
 python3 course-files/build/zip_it.py ../bain-cs110/tutorial_solutions
 python3 course-files/build/zip_it.py ../bain-cs110/exercise_solutions
 
+# T4 Docs
+pdoc --show-source --logo "https://bain-cs110.github.io/assets/images/cs110.png" course-files/tutorials/tutorial4/tutorial4_utilities -o course-files/tutorials/tutorial4/docs
+
+# HW 5 Docs
+pdoc --show-source --logo "https://bain-cs110.github.io/assets/images/cs110.png" course-files/homeworks/hw5/hw5_utilities -o course-files/homeworks/hw5/docs
 
 # P1 Docs
 pdoc --show-source course-files/projects/project01/p1_utilities -o course-files/projects/project01/docs

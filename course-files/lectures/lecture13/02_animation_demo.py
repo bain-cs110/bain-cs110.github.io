@@ -15,27 +15,17 @@ def setup():
     # helper function that draws a grid.
     make_grid(600, 600)
 
-    mario_colors = [None, "red", "blue", "saddle brown", "bisque3", "black", "gold"]
-
-    # 3 Different Mario Drawings:
-    #    mario_0
-    #    mario_1
-    #    mario_2
-    # They are imported from tutorial4_utilities above so you can use them like regular variables
-    pixel_art((150, 0), mario_0, mario_colors, tag="mario", pixel=10)
+    square(top_left = (0, 450), size=50, color="yellow", tag="test_square")
 
     # This is how many animations to attempt per second. If you want to slow down your
     #   animations, just decrease this number! If you want to speed up...
     global ticks_per_second
-    ticks_per_second = 1
+    ticks_per_second = 20
 
 
 def go():
-
-    ## Update the global variable ticks to keep track of how many times we've animated!
-    ## Don't delete this! It keeps track of how many animations we've done so far.
-    global ticks
-    ticks = ticks + 1
+    delete("test_square")
+    square(top_left=(0 + ticks * 5, 450), color="green", tag="test_square")
 
 
 ########################## YOUR CODE ABOVE THIS LINE ##############################
@@ -45,6 +35,6 @@ while True:
     go()
     gui.update()
     time.sleep(1 / ticks_per_second)
-
+    ticks = ticks + 1
 # makes sure the canvas keeps running:
 the_canvas.mainloop()

@@ -12,6 +12,7 @@ ticks = 0
 ########################## YOUR CODE BELOW THIS LINE ##############################
 
 def setup():
+    print("Setup time!")
     # helper function that draws a grid.
     make_grid(600, 600)
 
@@ -31,11 +32,7 @@ def setup():
 
 
 def go():
-
-    ## Update the global variable ticks to keep track of how many times we've animated!
-    ## Don't delete this! It keeps track of how many animations we've done so far.
-    global ticks
-    ticks = ticks + 1
+    print("Go time!")
 
 
 ########################## YOUR CODE ABOVE THIS LINE ##############################
@@ -45,6 +42,6 @@ while True:
     go()
     gui.update()
     time.sleep(1 / ticks_per_second)
-
+    ticks = ticks + 1
 # makes sure the canvas keeps running:
 the_canvas.mainloop()
