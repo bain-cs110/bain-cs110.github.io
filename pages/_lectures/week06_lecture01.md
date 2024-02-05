@@ -2,6 +2,8 @@
 layout: module
 title: "More Control Flow - Loops!"
 type: lecture
+canvas_title: "Monday - Lecture 12 - More Control Flow"
+canvas_id: "monday-lecture-12-more-control-flow"
 draft: 0
 num: 12
 due_date: 2024-02-05

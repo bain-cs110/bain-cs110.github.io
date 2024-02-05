@@ -7,7 +7,7 @@ type: homework
 due_date: 2024-02-09
 points: 100
 draft: 0
-canvas_id: 
+canvas_id: 1362726
 canvas_assignment_group: "Homework"
 canvas_points_possible: 100
 canvas_submission_types: "online_upload"

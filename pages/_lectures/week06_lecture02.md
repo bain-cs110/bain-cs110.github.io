@@ -12,7 +12,7 @@ canvas_assignment_group: "Mini-Quiz"
 canvas_points_possible: 10
 canvas_allowed_extensions: "py"
 canvas_submission_types: "external_tool"
-canvas_id: 
+canvas_id: 1362728
 canvas_title: Lecture 13 (Pre-Recorded) - Using Loops - Mini-Quiz 7
 readings:
    - title: "Ch5: Iteration"
