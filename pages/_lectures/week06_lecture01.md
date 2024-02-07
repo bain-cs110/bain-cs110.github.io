@@ -8,6 +8,11 @@ draft: 0
 num: 12
 due_date: 2024-02-05
 exercise_url: "lecture12.zip"
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0e9a7143-59b1-4372-99cd-b0cf014c7271
+     title: "Live Lecture Recording"
+     duration: "51:00"
+     live: 1
 slides:
    - url: https://docs.google.com/presentation/d/1QRbZDdELwsjFv3i7RQv4RDfrIuFwoZD4hPj-B-qcpAQ/edit?usp=sharing
      title: Control Flow - Loops
