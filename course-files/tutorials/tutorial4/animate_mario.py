@@ -11,12 +11,12 @@ ticks_per_second = None
 ticks = 0
 ########################## YOUR CODE BELOW THIS LINE ##############################
 
+mario_colors = [None, "red", "blue", "saddle brown", "bisque3", "black", "gold"]
+
 def setup():
     print("Setup time!")
     # helper function that draws a grid.
     make_grid(600, 600)
-
-    mario_colors = [None, "red", "blue", "saddle brown", "bisque3", "black", "gold"]
 
     # 3 Different Mario Drawings:
     #    mario_0

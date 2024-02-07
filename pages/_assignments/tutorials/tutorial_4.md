@@ -78,7 +78,7 @@ The main difference in this program is that instead of having just one Mario pix
 
 Additionally, `tutorial4_utilities` has lots of helpful functions in it which you can either view by opening up the file or by using the page here:
 
-Note there are a number of functions in `hw5_utilities.py` that you _can_ use but you only _have_ to use `move` and `cloud`. You _should not_ use any function that starts with an underscore. These are called "private functions" and are ONLY meant for use within that one particular file. In fact...rather than reading the .py file, instead, you can click on this dope purple button and see all the function's you have available to you and their documentation!
+Note there are a number of functions in `tutorial4_utilities.py` that you _can_ use but you only _have_ to use `move` and `cloud`. You _should not_ use any function that starts with an underscore. These are called "private functions" and are ONLY meant for use within that one particular file. In fact...rather than reading the .py file, instead, you can click on this dope purple button and see all the function's you have available to you and their documentation!
 
 <a class="nu-button" href="{{site.url}}/course-files/tutorials/tutorial4/docs/tutorial4_utilities.html" target="_blank">
     Utilities Library Documentation
@@ -111,11 +111,15 @@ Find the `setup` function definition in the template file. This is the part of t
 
 ## Step 2 - Pausing and Erasing Things
 
-There are two new skills we need in order to animate Mario. The first one is we need to learn how to control `time` and the second is we need to know how to erase the Canvas.
+There are two new skills we need in order to animate Mario. The first one is we need to learn how to control `time` and the second is we need to know how to erase the Canvas. <mark>Note that we're done with the <code>setup</code> function now and will want to be working in the <code>go</code> function's body for the rest of our time in this tutorial</mark>.
 
-In order to control Time...in Python...we're going to use the `Time` module which is already imported for you at the top of the file. The only function we need to know about right now is the `time.sleep` function. It has one required parameter: the number of seconds (`float`) you would like Python to sleep for (e.g. `time.sleep(1)` will ask the computer to sleep for 1 second before continuing on in your program). Try adding a call to `time.sleep` for 5 seconds _before_ your call to the `pixel_art` function. If we first ask Python to pause for 5 seconds and then draw, we should see a 5 second delay between clicking "run" and seeing Mario pop up on our Canvas. Try some other values for sleep as well. (Don't add multiple sleeps though, just change the input to the function).
+In order to control Time...in Python...we're going to use the `Time` module which is already imported for you at the top of the file. The only function we need to know about right now is the `time.sleep` function. It has one required parameter: the number of seconds (`float`) you would like Python to sleep for (e.g. `time.sleep(1)` will ask the computer to sleep for 1 second before continuing on in your program).
 
-In order to make a flip book, we essentially need to know how to erase something. In `tutorial4_utilities` there's a function called `delete` that allows us to delete stuff from our screen that we can just call in our template file. It takes one required input, namely a string that explains what to delete. Try rearranging your program so FIRST it draws the pixel art mario, THEN it takes a 5 second pause, and then AFTER the pause add `delete("all")` (which asks Python to delete everything on the window). Theoretically, we'll see Mario get drawn...then a 5 second pause...then Mario will go bye bye.
+In the `go` function, locate the `print` statement. Then add a call to call to `time.sleep` for 5 seconds. Then add another print statement right after that prints `"I AM WELL RESTED!"`. Run your program. Try some other values for `sleep` as well. You should see (in the Interpreter Window) repeated messages approximately however many seconds apart you specify.
+
+> **Note**: The `go` function will actually take care of pausing for you (if you look all the way at the bottom of the file, it will pause for a bit after each call to the `go` function completes) so make sure to remove any calls to `time.sleep(...)` you've added before moving on.
+
+In order to make a flip book, we essentially need to know how to erase something. In `tutorial4_utilities` there's a function called `delete` that allows us to delete stuff from our screen that we can just call in our template file. It takes one required input, namely a string that explains what to delete. Add a call to `delete` with an input of the tag `"all"` to the top of your `go` function. Does the grid disappear when you run the function?
 
 What if we wanted to ONLY delete Mario and not our beautiful grid lines? If you take a look in `tutorial4_utilities`, you'll notice that there's an extra optional parameter that's been added to `pixel_art`, `row`, and `square` called `tag` (it expects a `str`). This `tag` is a system that `tkinter` allows us to use to "name" each of the things we draw. For instance, you'll see that the `make_grid` function tags all of its drawings with the `"grid_line"` name. This means we can modify our call to `pixel_art` to pass a value in for this new optional parameter. One logical name might be `"mario"` (that's the example the template uses).
 
@@ -131,10 +135,10 @@ Now we could create an infinite loop by using a `while` block, however, instead 
 
 That means to animate our mario, we just need to write the body of the function `go` to explain to python how to continuously update (i.e. where do we draw the mario this time) and delete the mario image. Here's what we need to tell our `go` function to do:
 
-1. Erase the mario currently on the screen
+1. Delete the mario currently on the screen
 2. Draw a new mario (slightly shifted to the right)
 
-That's it! So at the top of the `go` function's body, call some function that the screen to deletes our first mario named `"mario_1"`. Now, we need to teach it how to draw a new mario, slightly to the right of where the first one was. In other words, **the more ticks we have gone through** the more to the right (increase on the x-axis) we need to draw our mario. On tick 0, we want to shift mario over by 0 on the x-axis. One tick 1, we want to shift mario over by say 5. Then by 10. Then by 15. Then by 20. If only there was a mathematical operation that allowed us to represent the relationship between the value of `ticks` and the amount we want to shift by. Once you've got that figured out, modify the call to `pixel_art` so it's x-coordinate uses that relationship.
+That's it! So at the top of the `go` function's body, call some function that the screen to deletes our first mario named `"mario"`. Now, we need to teach it how to draw a new mario, slightly to the right of where the first one was. In other words, **the more ticks we have gone through** the more to the right (increase on the x-axis) we need to draw our mario. On tick 0, we want to shift mario over by 0 on the x-axis. One tick 1, we want to shift mario over by say 5. Then by 10. Then by 15. Then by 20. If only there was a mathematical operation that allowed us to represent the relationship between the value of `ticks` and the amount we want to shift by. Once you've got that figured out, modify the call to `pixel_art` so it's x-coordinate uses that relationship.
 
 Now when you run your program Mario is racing across the screen; but more like an ice skater than the track and field star he actually is. To make this a little more "animation" like, we want to draw 3 different versions of Mario rather than just the same version of mario shifted a bit each time. Remember those other mario versions from Step 1? What we want to do is draw `mario_0`, then `mario_1`, then `mario_2`, then `mario_0`, then ... To do this, use an `if-elseif-else` conditional along with counter so that the mario version we draw changes each iteration (hint: `ticks % 3` will cycle between the values of 0, 1, and 2). This is a slightly more advanced version of what we talked about last week:
 
@@ -154,7 +158,7 @@ Your last task is to make a SECOND mario also animate across the screen below th
 <details>
 <summary>Hints!</summary>
 <ul>
-<li>Remember, you'll need to assign this mario a unique tag (maybe <code>"mario_2"</code>) if you want it to be animated differently than our first mario.</li>
+<li>Remember, you'll need to assign this mario a unique tag (maybe <code>"luigi"</code>) if you want it to be animated differently than our first mario.</li>
 <li>Before we were moving left to right so we needed to <b>add</b> to the x-position. Now we're moving right to left. What can we do differently?</li>
 <li> Rather than calling <code>pixel_art</code> 3 separate times for the 3 versions of mario. instead, try setting a variable called <code>style</code> to be equal to the three mario versions in the if-elif-else block, and then use that variable in place of the mario design in the call to <code>pixel_art</code>.</li>
 <li>Mario facing the wrong direction? Try using the <code>mirror</code> function. It takes just one input, a <code>tag</code> with a shape to flip.</li>
