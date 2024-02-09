@@ -11,6 +11,11 @@ description: "(In-Class Mini-Quiz 8)"
 mini_quiz_id: quizzes/230999
 mini_quiz_num: 8
 mini_quiz_title: Conditionals and Loops
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b6c6f794-795a-404c-9f42-b0cf014c72b9
+     title: "Live Lecture Recording"
+     duration: "51:00"
+     live: 1
 exercise_url: "lecture14.zip"
 slides:
    - url: https://docs.google.com/presentation/d/1mHv6fFnneNEMoNFWQ-P-zUfbTF3w0iENZ77hJ5S8uHo/edit?usp=sharing
