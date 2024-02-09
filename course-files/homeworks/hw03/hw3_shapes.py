@@ -1,19 +1,8 @@
 from math import sqrt, pi, radians, sin, cos
 
+__docformat__ = "google"
+
 the_canvas = None
-
-
-def interpolate_colors(color1, color2, frac):
-    if "#" not in color1:
-        color1 = tuple((c // 256 for c in the_canvas.winfo_rgb(color1)))
-    else:
-        color1 = _tupelize_color(color1)
-    if "#" not in color2:
-        color2 = tuple((c // 256 for c in the_canvas.winfo_rgb(color2)))
-    else:
-        color2 = _tupelize_color(color2)
-    return _interpolate_tuple(color1, color2, frac)
-
 
 def _tupelize_color(color):
     R = int(color[1:3], 16)
@@ -83,27 +72,55 @@ def setup_shapes(some_canvas):
     global the_canvas
     the_canvas = some_canvas
 
-
-def polygon(points=[], color="hotpink", **kwargs):
-    return the_canvas.create_polygon(points, fill=color, **kwargs)
-
-
 def rectangle(top_left=(0, 0), width=25, height=50, color="hotpink", **kwargs):
+    """
+    A reporter function that draws a rectangle.
+    Args:
+        top_left (`tuple`): A coordinate representing the top left-hand corner of the shape.
+        width (`int`): How wide to draw the shape.
+        height (`int`): How tall to draw the shape.
+        color (`str`): What color to draw the shape.
+
+    Returns:
+         `Shape`: The rectangle that was created.
+    """
     point_0 = top_left
     point_1 = (top_left[0] + width, top_left[1])
     point_2 = (top_left[0] + width, top_left[1] + height)
     point_3 = (top_left[0], top_left[1] + height)
-
     return the_canvas.create_polygon(
         point_0, point_1, point_2, point_3, fill=color, **kwargs
     )
 
 
 def square(top_left=(0, 0), size=25, color="hotpink", **kwargs):
+    """
+    A reporter function that draws a square.
+    Args:
+        top_left (`tuple`): A coordinate representing the top left-hand corner of the shape.
+        size (`int`): How big to draw the shape.
+        color (`str`): What color to draw the shape.
+
+    Returns:
+         `Shape`: The square that was created.
+    >>> Example
+    >>> oval(top_left=(450, 450), size=50, color="green")
+    """
     return rectangle(top_left=top_left, width=size, height=size, color=color, **kwargs)
 
 
 def oval(center=(0, 0), radius_x=25, radius_y=50, color="hotpink", **kwargs):
+    """
+    A reporter function that draws an oval.
+    Args:
+        center (`tuple`): A coordinate representing the center of the shape.
+        radius_x (`int`): Specifies the oval's radius on the x-axis.
+        radius_y (`int`): Specifies the oval's radius on the y-axis.
+        color (`str`): What color to draw the shape.
+
+    Returns:
+         `Shape`: The oval that was created.
+    """
     x = center[0]
     y = center[1]
     x0, y0, x1, y1 = (x - radius_x, y - radius_y, x + radius_x, y + radius_y)
@@ -128,12 +145,35 @@ def oval(center=(0, 0), radius_x=25, radius_y=50, color="hotpink", **kwargs):
 
 
 def circle(center=(0, 0), radius=25, color="hotpink", **kwargs):
+    """
+    A reporter function that draws a circle.
+    Args:
+        center (`tuple`): A coordinate representing the center of the shape.
+        radius (`int`): Specifies the circle's radius.
+        color (`str`): What color to draw the shape.
+
+    Returns:
+         `Shape`: The circle that was created.
+    """
     return oval(center=center, radius_x=radius, radius_y=radius, color=color, **kwargs)
 
 
 def triangle(
     bottom_center=(0, 0), width=25, top_shift=0, height=0, color="hotpink", **kwargs
 ):
+    """
+    A reporter function that draws a triangle.
+    Args:
+        bottom_center (`tuple`): A coordinate representing the bottom center of the shape.
+        width (`int`): Specifies the width of the base of the triangle.
+        top_shift (`int`): Specifies the how far to the left or right to shift the top of 
+            the triangle from the bottom center.
+        height (`int`): Specifies the triangle's height.
+        color (`str`): What color to draw the shape.
+
+    Returns:
+         `Shape`: The triangle that was created.
+    """
     if height == 0:
         height = width * sqrt(3) / 2
     point_0 = (bottom_center[0] - width / 2, bottom_center[1])
@@ -144,12 +184,31 @@ def triangle(
 
 
 def line(points=[], color="hotpink", **kwargs):
+    """
+    A reporter function that draws a line given a list of points.
+    Args:
+        points (`list`): The points that define the line; this should be a list of tuples (coordinates).
+        color (`str`): What color to make the shape.
+
+    Returns:
+        `Shape`: The line that was created.
+   """
     return the_canvas.create_line(points, fill=color, **kwargs)
 
 
 def arc(points=[], width=5, color="hotpink", line_steps=15, **kwargs):
+    """
+    A reporter function that draws an arc ("curve") given a list of points.
+    Args:
+        points (`list`): The points outlining the curve; this should be a list of tuples (coordinates).
+            Make sure to give it at least 3 (x,y) coordinates that aren't a straight line!
+        color (`str`): What color to make the shape.
+
+    Returns:
+        `Shape`: The arc that was created.
+   """
     the_canvas.create_line(
-        points,  # tuple of x-y pairs
+        points,  
         width=width,
         fill=color,
         splinesteps=line_steps,
@@ -158,113 +217,19 @@ def arc(points=[], width=5, color="hotpink", line_steps=15, **kwargs):
     )
 
 
-def get_top(tag):
-    bbox = the_canvas.bbox(tag)
-    return bbox[1]
-
-
-def get_bottom(tag):
-    bbox = the_canvas.bbox(tag)
-    return bbox[3]
-
-
-def get_left(tag):
-    bbox = the_canvas.bbox(tag)
-    return bbox[0]
-
-
-def get_right(tag):
-    bbox = the_canvas.bbox(tag)
-    return bbox[2]
-
-
-def get_height(tag):
-    bbox = the_canvas.bbox(tag)
-    return bbox[3] - bbox[1] - 1
-
-
-def get_width(tag):
-    bbox = the_canvas.bbox(tag)
-    return bbox[2] - bbox[0] - 1
-
-
-def distance(p1, p2):
-    return sqrt(((p1[0] - p2[0]) ** 2) + ((p1[1] - p2[1]) ** 2))
-
-
-def center(tag):
-    bbox = the_canvas.bbox(tag)
-    return (((bbox[2] + bbox[0]) / 2), ((bbox[1] + bbox[3]) / 2))
-
-
-def overlay(shape1, shape2, offset_x=0, offset_y=0):
-    center1 = center(shape1)
-    center2 = center(shape2)
-    the_canvas.move(
-        shape1,
-        (center2[0] - center1[0]) + offset_x,
-        (center2[1] - center1[1]) + offset_y,
-    )
-    the_canvas.tag_raise(shape1, shape2)
-    return shape1
-
-
-def underlay(shape1, shape2, offset_x=0, offset_y=0):
-    center1 = center(shape1)
-    center2 = center(shape2)
-    the_canvas.move(
-        shape1,
-        (center2[0] - center1[0]) + offset_x,
-        (center2[1] - center1[1]) + offset_y,
-    )
-    the_canvas.tag_lower(shape1, shape2)
-    return shape1
-
-
-def above(shape1, shape2, offset_x=0, offset_y=0):
-    overlay(shape1, shape2)
-    the_canvas.move(
-        shape1,
-        0 + offset_x,
-        -1 * (get_height(shape2) + get_height(shape1)) / 2 + offset_y,
-    )
-    return shape1
-
-
-def beside(shape1, shape2, offset_x=0, offset_y=0):
-    overlay(shape1, shape2)
-    the_canvas.move(
-        shape1,
-        (get_width(shape2) + get_width(shape1)) / 2 + offset_x,
-        0 + offset_y,
-    )
-    return shape1
-
-
-def below(shape1, shape2, offset_x=0, offset_y=0):
-    overlay(shape1, shape2)
-    the_canvas.move(
-        shape1,
-        0 + offset_x,
-        (get_height(shape2) + get_height(shape1)) / 2 + offset_y,
-    )
-    return shape1
-
-
-def duplicate(shape, color=None):
-    shape_type = the_canvas.type(shape)
-    shape_config = the_canvas.itemconfig(shape)
-    shape_coords = the_canvas.coords(shape)
-    the_copy = None
-    if shape_type == "polygon":
-        new_config = {key: shape_config[key][-1] for key in shape_config.keys()}
-        if color != None:
-            new_config["fill"] = color
-        the_copy = the_canvas.create_polygon(shape_coords, **new_config)
-        return the_copy
-
-
 def star(center=(0, 0), radius=50, color="hotpink", outer_radius=75, points=5, **kwargs):
+    """
+    A reporter function that draws a star.
+    Args:
+        center (`tuple`): A coordinate representing the center of the shape.
+        radius (`int`): Specifies the radius of the inside part of the star.
+        color (`str`): Specifies the color of the star.
+        outer_radius (`int`): Specifies the radius of the outside part of the star.
+        points (`int`): Specifies the number of points for the star.
+
+    Returns:
+         `Shape`: The star that was created.
+    """
     arc_segment = 360 / points
     vertices = []
     for i in range(points):
@@ -281,10 +246,180 @@ def star(center=(0, 0), radius=50, color="hotpink", outer_radius=75, points=5, *
         vertices.append(outer_point)
     return polygon(vertices, color=color, **kwargs)
 
+def polygon(points=[], color="hotpink", **kwargs):
+    """
+    A reporter function that draws a polygon given a list of points.
+    Args:
+        points (`list`): The points outlining the polygon; this should be a list of tuples (coordinates).
+            defaults to an empty list.
+        color (`str`): What color to make the shape.
+
+    Returns:
+        `Shape`: The polygon that was created.
+   """
+    return the_canvas.create_polygon(points, fill=color, **kwargs)
+
+
+def overlay(shape1, shape2, offset_x=0, offset_y=0):
+    """
+    A reporter function that overlays shape1 onto shape2. It does this by moving shape 1's center
+    to shape 2's center, and then applying any specified offset.
+    Args:
+        shape1 (`Shape`): The first shape to use.
+        shape2 (`Shape`): The second shape to use.
+        offset_x (`int`): How much to shift shape 2 in the x-direction after centering it.
+        offset_y (`int`): How much to shift shape 2 in the x-direction after centering it.
+
+    Returns:
+        `Shape`: The modified shape1.
+   """
+    center1 = get_center(shape1)
+    center2 = get_center(shape2)
+    the_canvas.move(
+        shape1,
+        (center2[0] - center1[0]) + offset_x,
+        (center2[1] - center1[1]) + offset_y,
+    )
+    the_canvas.tag_raise(shape1, shape2)
+    return shape1
+
+
+def underlay(shape1, shape2, offset_x=0, offset_y=0):
+    """
+    A reporter function that underlays shape1 beneath shape2. It does this by moving shape 1's center
+    to shape 2's center, and then applying any specified offset.
+    Args:
+        shape1 (`Shape`): The first shape to use.
+        shape2 (`Shape`): The second shape to use.
+        offset_x (`int`): How much to shift shape 2 in the x-direction after centering it.
+        offset_y (`int`): How much to shift shape 2 in the x-direction after centering it.
+
+    Returns:
+        `Shape`: The modified shape1.
+   """
+    center1 = get_center(shape1)
+    center2 = get_center(shape2)
+    the_canvas.move(
+        shape1,
+        (center2[0] - center1[0]) + offset_x,
+        (center2[1] - center1[1]) + offset_y,
+    )
+    the_canvas.tag_lower(shape1, shape2)
+    return shape1
+
+
+def above(shape1, shape2, offset_x=0, offset_y=0):
+    """
+    A reporter function that places shape1 above shape2 (vertically). It does this by moving shape 1's center
+    to shape 2's center, moving shape 1 in the y-direction the exact height of shape 2, and then applying any
+    specified offset.
+
+    Args:
+        shape1 (`Shape`): The first shape to use.
+        shape2 (`Shape`): The second shape to use.
+        offset_x (`int`): How much to shift shape 2 in the x-direction after moving it.
+        offset_y (`int`): How much to shift shape 2 in the x-direction after moving it.
+
+    Returns:
+        `Shape`: The modified shape1.  
+    """
+    overlay(shape1, shape2)
+    the_canvas.move(
+        shape1,
+        0 + offset_x,
+        -1 * (get_height(shape2) + get_height(shape1)) / 2 + offset_y,
+    )
+    return shape1
+
+
+def beside(shape1, shape2, offset_x=0, offset_y=0):
+    """
+    A reporter function that places shape1 beside shape2 (horizontally). It does this by moving shape 1's center
+    to shape 2's center, moving shape 1 in the x-direction the exact width of shape 2, and then applying any
+    specified offset.
+
+    Args:
+        shape1 (`Shape`): The first shape to use.
+        shape2 (`Shape`): The second shape to use.
+        offset_x (`int`): How much to shift shape 2 in the x-direction after moving it.
+        offset_y (`int`): How much to shift shape 2 in the x-direction after moving it.
+
+    Returns:
+        `Shape`: The modified shape1.  
+    """
+    overlay(shape1, shape2)
+    the_canvas.move(
+        shape1,
+        (get_width(shape2) + get_width(shape1)) / 2 + offset_x,
+        0 + offset_y,
+    )
+    return shape1
+
+
+def below(shape1, shape2, offset_x=0, offset_y=0):
+    """
+    A reporter function that places shape1 below shape2 (vertically). It does this by moving shape 1's center
+    to shape 2's center, moving shape 1 in the y-direction the exact height of shape 2, and then applying any
+    specified offset.
+
+    Args:
+        shape1 (`Shape`): The first shape to use.
+        shape2 (`Shape`): The second shape to use.
+        offset_x (`int`): How much to shift shape 2 in the x-direction after moving it.
+        offset_y (`int`): How much to shift shape 2 in the x-direction after moving it.
+
+    Returns:
+        `Shape`: The modified shape1.  
+    """
+    overlay(shape1, shape2)
+    the_canvas.move(
+        shape1,
+        0 + offset_x,
+        (get_height(shape2) + get_height(shape1)) / 2 + offset_y,
+    )
+    return shape1
+
+
+def duplicate(shape, color=None):
+    """
+    A reporter function that perfectly copies a shape and returns that copy.
+
+    Args:
+        shape (`Shape`): The shape to duplicate.
+        color (`str`): A new color to use with the duplicated shape.
+
+    Returns:
+        `Shape`: The new duplicated shape.  
+    """
+    shape_type = the_canvas.type(shape)
+    shape_config = the_canvas.itemconfig(shape)
+    shape_coords = the_canvas.coords(shape)
+    the_copy = None
+    if shape_type == "polygon":
+        new_config = {key: shape_config[key][-1] for key in shape_config.keys()}
+        if color != None:
+            new_config["fill"] = color
+        the_copy = the_canvas.create_polygon(shape_coords, **new_config)
+        return the_copy
+    
 
 def rotate(shape, degrees=5, origin=None):
+    """
+    A reporter function that takes a shape and rotates it by a specified amount around a specified point.
+    It does this by interpolating a polygon around the shape and calculating the shifts of individual
+    points on the edge of the polygon.
+
+    Args:
+        shape (`Shape`): The shape to rotate.
+        degrees (`int`): The number of degrees to rotate the shape.
+        origin (`tuple`): An `(x,y)` coordinate about which to perform the rotation. Defaults to the center
+            of the given shape.
+
+    Returns:
+        `Shape`: The modified shape.  
+    """
     if origin is None:
-        origin = center(shape)
+        origin = get_center(shape)
 
     theta = radians(degrees)
     ox, oy = origin
@@ -301,3 +436,138 @@ def rotate(shape, degrees=5, origin=None):
     the_canvas.coords(shape, coords)
 
     return shape
+
+def interpolate_colors(color1, color2, frac):
+    """
+    A reporter function that generates a new color between two given colors.
+    Args:
+        color1 (`str`): The path of the file to wrap
+        color2 (`str`): The path of the file to wrap
+        frac (`float`): What fraction of each color to take. An input of 0 returns
+            color1, an input of 1 returns color2, an input of 0.5 returns a color
+            perfectly between the two.
+
+    Returns:
+         A color (as a hex `str`) to be used elsewhere
+   """
+    if "#" not in color1:
+        color1 = tuple((c // 256 for c in the_canvas.winfo_rgb(color1)))
+    else:
+        color1 = _tupelize_color(color1)
+    if "#" not in color2:
+        color2 = tuple((c // 256 for c in the_canvas.winfo_rgb(color2)))
+    else:
+        color2 = _tupelize_color(color2)
+    return _interpolate_tuple(color1, color2, frac)
+
+
+def get_top(shape):
+    """
+    A reporter function calculates the **minimum** y-value of a given shape (since the y-axis is flipped).
+
+    Args:
+        shape (`Shape`): The shape in question.
+
+    Returns:
+         A `int` representing the minimum y-coordinate of the shape.
+    """
+    bbox = the_canvas.bbox(shape)
+    return bbox[1]
+
+
+def get_bottom(shape):
+    """
+    A reporter function calculates the **maximum** y-value of a given shape (since the y-axis is flipped).
+    
+    Args:
+        shape (`Shape`): The shape in question.
+
+    Returns:
+         A `int` representing the maximum y-coordinate of the shape.
+    """
+    bbox = the_canvas.bbox(shape)
+    return bbox[3]
+
+
+def get_left(shape):
+    """
+    A reporter function calculates the **minimum** x-value of a given shape.
+        
+    Args:
+        shape (`Shape`): The shape in question.
+
+    Returns:
+         A `int` representing the minimum x-coordinate of the shape.
+    """
+    bbox = the_canvas.bbox(shape)
+    return bbox[0]
+
+
+def get_right(shape):
+    """
+    A reporter function calculates the **maximum** x-value of a given shape.
+        
+    Args:
+        shape (`Shape`): The shape in question.
+
+    Returns:
+         A `int` representing the maximum x-coordinate of the shape.
+    """ 
+    bbox = the_canvas.bbox(shape)
+    return bbox[2]
+
+
+def get_height(shape):
+    """
+    A reporter function calculates the height of some given shape.
+        
+    Args:
+        shape (`Shape`): The shape in question.
+
+    Returns:
+         A `int` representing the height of the shape.
+    """
+    bbox = the_canvas.bbox(shape)
+    return bbox[3] - bbox[1] - 1
+
+
+def get_width(shape):
+    """
+    A reporter function calculates the width of some given shape.
+        
+    Args:
+        shape (`Shape`): The shape in question.
+
+    Returns:
+         An `int` representing width of the shape.
+    """
+    bbox = the_canvas.bbox(shape)
+    return bbox[2] - bbox[0] - 1
+
+
+def distance(point1, point2):
+    """
+    A reporter function calculates the distance between two `(x, y)` coordinates.
+          
+    Args:
+        point1 (`tuple`): The first `(x, y)` coordinate.
+        point2 (`tuple`): The second `(x, y)` coordinate.
+
+    Returns:
+         A `float` representing the distance between the two points.
+    """
+    return sqrt(((point1[0] - point2[0]) ** 2) + ((point1[1] - point2[1]) ** 2))
+
+
+def get_center(shape):
+    """
+    A reporter function calculates the a coordinate at the center of some shape.
+        
+    Args:
+        shape (`Shape`): The shape in question.
+
+    Returns:
+         A `tuple` representing center of the given shape.
+    """
+    bbox = the_canvas.bbox(shape)
+    return (((bbox[2] + bbox[0]) / 2), ((bbox[1] + bbox[3]) / 2))

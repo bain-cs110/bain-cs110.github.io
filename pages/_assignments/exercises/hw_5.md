@@ -192,7 +192,7 @@ Then we tackle the constituent shapes. Since my creature is relatively simple, I
 
 ## Part 3: Instantiate your Creatures
 
-In the `setup` function, below your clouds, call your newly improved `creature` function twice. The first creature needs to be in the bottom left hand portion of the screen <mark>and must have the tag <code>"creature_1"</code></mark>. The second creature needs to be in the bottom right hand portion of the screen <mark>and must have the tag <code>"creature_2"</code></mark>. Make sure to use different colors, sizes, etc., for the two creature calls like my two cars in the below screenshot.
+In the `setup` function, below your clouds, call your newly improved `creature` function twice. The first creature needs to be in the **bottom left hand portion of the screen** <mark>and must have the tag <code>"creature_1"</code></mark>. The second creature needs to be in the **bottom right hand portion of the screen** <mark>and must have the tag <code>"creature_2"</code></mark>. Make sure to use different colors, sizes, etc., for the two creature calls like my two cars in the below screenshot.
 
 * * *
 
