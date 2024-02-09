@@ -259,6 +259,6 @@ Your job for this task is to...
 
 ## What to Submit
 
-If your program is working correctly, you should see something like the above linked video. Make sure to submit ONLY your `hw55.py` file to Canvas by the deadline.
+If your program is working correctly, you should see something like the above linked video. Make sure to submit ONLY your `hw5.py` file to Canvas by the deadline.
 
 {% include submission_details.md %}
