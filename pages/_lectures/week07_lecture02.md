@@ -11,7 +11,7 @@ canvas_assignment_group: "Mini-Quiz"
 canvas_points_possible: 10
 canvas_allowed_extensions: "py"
 canvas_submission_types: "external_tool"
-canvas_id: 
+canvas_id: 1365554
 canvas_title: Lecture 16 (Pre-Recorded) - More Events - Mini-Quiz 9
 exercise_url: "lecture16.zip"
 slides:
