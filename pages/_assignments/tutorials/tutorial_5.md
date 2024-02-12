@@ -45,7 +45,7 @@ And you'll need the Mario Module (also in the same folder):
 
 ## 1. Dealing with Mouse Events
 
-<a class="nu-button" href="{{site.url}}/course-files/tutorials/tutorial04/01_mouse_events.py" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/tutorials/tutorial5/01_mouse_events.py" target="_blank">
     Mouse Events <i class="fas fa-download"></i>
 </a>
 
@@ -70,7 +70,7 @@ Open `02_keyboard_events.py` (linked below) and complete the following tasks:
 3. When the user presses the d-key, move one of the marios **right** 10 pixels.
 4. When the user presses the s-key, move one of the marios **down** 10 pixels.
 
-<a class="nu-button" href="{{site.url}}/course-files/tutorials/tutorial04/02_keyboard_events.py" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/tutorials/tutorial5/02_keyboard_events.py" target="_blank">
     Keyboard Events <i class="fas fa-download"></i>
 </a>
 
