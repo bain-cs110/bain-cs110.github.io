@@ -43,5 +43,3 @@ while True:
     gui.update()
     time.sleep(1 / ticks_per_second)
     ticks = ticks + 1
-# makes sure the canvas keeps running:
-the_canvas.mainloop()

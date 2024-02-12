@@ -663,3 +663,4 @@ def setup_shapes(some_canvas):
 
     global the_canvas
     the_canvas = some_canvas
+    the_canvas.focus_set()

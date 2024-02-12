@@ -1,5 +1,5 @@
 from tkinter import Canvas
-import p1_utilities
+from p1_utilities import *
 
 GOOMBA_COLORS = [None, "saddle brown", "black", "tan", "white"]
 # goomba
@@ -22,7 +22,40 @@ GOOMBA = [
     (0, 0, 2, 2, 2, 2, 2, 0, 0, 2, 2, 2, 2, 2, 0, 0)
 ]
 
-MARIOS_COLORS = [None, "red", "blue", "saddle brown", "bisque3", "black", "gold"]
+HEART_COLORS = [None, "#E0607E", "black", "white"]
+HEART = (
+    (0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0),
+    (0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0),
+    (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+    (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+    (1, 1, 1, 2, 2, 3, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 1, 1, 1),
+    (1, 1, 1, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1),
+    (1, 1, 1, 2, 2, 2, 1, 2, 1, 1, 1, 2, 1, 2, 2, 2, 1, 1, 1),
+    (1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1),
+    (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+    (0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0),
+    (0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0),
+    (0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0),
+    (0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0),
+    (0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0)
+)
+
+FRANK_COLORS = [None, 'black', '#5ec031', 'white']
+FRANK = (
+    (0, 0, 1, 1, 1, 1, 1, 0, 0),
+    (0, 0, 2, 2, 2, 2, 2, 0, 0),
+    (0, 0, 2, 2, 2, 2, 2, 0, 0),
+    (0, 0, 2, 1, 2, 1, 2, 0, 0),
+    (0, 0, 2, 2, 2, 2, 2, 0, 0),
+    (0, 2, 3, 3, 3, 3, 3, 2, 0),
+    (0, 2, 2, 2, 2, 2, 2, 2, 0),
+    (0, 2, 2, 2, 2, 2, 2, 2, 0),
+    (0, 0, 1, 1, 1, 1, 1, 0, 0),
+    (0, 0, 1, 1, 1, 1, 1, 0, 0),
+    (0, 0, 2, 2, 0, 2, 2, 0, 0)
+)
+
+MARIO_COLORS = [None, "red", "blue", "saddle brown", "bisque3", "black", "gold"]
 
 MARIO_0 = [
     (0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0),
@@ -100,26 +133,26 @@ MARIO_3 = [
 (0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0)
 ]
 
-def draw_row(canvas:Canvas, row:tuple, top_left:tuple, colors:list, pixel:int=25, tag=""):
+def row(row:tuple, top_left:tuple, colors:list, pixel:int=25, tag=""):
     x = top_left[0]
     y = top_left[1]
     for cell in row:
         if cell != 0:
-            p1_utilities.make_square(canvas, (x, y), pixel, fill_color=colors[cell], tag=tag)
+            square((x, y), pixel, color=colors[cell], tag=tag)
         x += pixel
 
-def draw_pixel_art(canvas:Canvas, top_left:tuple, artwork:list, palette:list, pixel:int=10, tag=""):
+def pixel_art(top_left:tuple, artwork:list, palette:list, pixel:int=10, tag=""):
     x = top_left[0]
     y = top_left[1]
-    for row in artwork:
+    for shape_row in artwork:
         # draw each row at the specified (x, y) position:
-        draw_row(canvas, row, (x, y), colors=palette, pixel=pixel, tag=tag)
+        row(shape_row, (x, y), colors=palette, pixel=pixel, tag=tag)
 
         # ...and don't forget to shift the y-value down by the proper
         #  amount so that the next row won't draw on top of the first one:
         y += pixel
 
-def make_mario(canvas:Canvas, top_left:tuple, version:int=0, colors:list=MARIOS_COLORS, size:int=10, my_tag=""):
+def mario(top_left:tuple, version:int=0, colors:list=MARIO_COLORS, size:int=10, tag=""):
     if version == 0:
         art = MARIO_0
 
@@ -135,7 +168,13 @@ def make_mario(canvas:Canvas, top_left:tuple, version:int=0, colors:list=MARIOS_
     else:
         raise Exception("Uh oh, we don't have that Mario version.")
 
-    draw_pixel_art(canvas, top_left, art, palette=colors, pixel=size, tag=my_tag)
+    pixel_art(top_left, art, palette=colors, pixel=size, tag=tag)
 
-def make_goomba(canvas:Canvas, top_left:tuple, colors:list=GOOMBA_COLORS, size:int=10, my_tag=""):
-    draw_pixel_art(canvas, top_left, GOOMBA, palette=colors, pixel=size, tag=my_tag)
+def goomba(top_left:tuple, colors:list=GOOMBA_COLORS, size:int=10, tag=""):
+    pixel_art(top_left, GOOMBA, palette=colors, pixel=size, tag=tag)
+
+def heart(top_left:tuple, colors:list=HEART_COLORS, size:int=10, tag=""):
+    pixel_art(top_left, HEART, palette=colors, pixel=size, tag=tag)
+
+def frank(top_left:tuple, colors:list=FRANK_COLORS, size:int=10, tag=""):
+    pixel_art(top_left, FRANK, palette=colors, pixel=size, tag=tag)
