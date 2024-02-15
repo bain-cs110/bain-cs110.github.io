@@ -41,7 +41,7 @@ And you'll need the Mario Module (also in the same folder):
 
 * * *
 
-> **Note**: Sick of Mario? Feeling Valentines-Day-y? Feeling anti-Valentines-Day-y? In addition to the mario and goomba functions, there's also <code>heart</code> and <code>frank</code> functions. They all work the same way: they take a top_left (tuple), colors (list), size (int), and a tag (str).
+> **Note**: Sick of Mario? Feeling Valentines-Day-y? Feeling anti-Valentines-Day-y? In addition to the mario and goomba functions, there's also <code>heart</code> and <code>frank</code> functions. They all work the same way: they take a <code>top_left</code> (tuple), <code>colors</code> (list - optional), <code>size</code> (int - optional), and a <code>tag</code> (str - optional).
 
 ## 1. Dealing with Mouse Events
 
