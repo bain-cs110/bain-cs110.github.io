@@ -183,8 +183,8 @@ def arc(points=[], width=5, color="hotpink", line_steps=15, tag="", **kwargs):
 
     Returns:
         `Shape`: The arc that was created.
-   """
-    the_canvas.create_line(
+    """
+    return the_canvas.create_line(
         points,  
         width=width,
         fill=color,
@@ -461,18 +461,21 @@ def rotate(shape, degrees=5, origin=None):
     theta = radians(degrees)
     ox, oy = origin
 
-    coords = the_canvas.coords(shape)
-    # update coordinates:
-    for i in range(0, len(coords), 2):
-        px, py = coords[i], coords[i + 1]
-        qx = cos(theta) * (px - ox) - sin(theta) * (py - oy) + ox
-        qy = sin(theta) * (px - ox) + cos(theta) * (py - oy) + oy
-        coords[i] = qx
-        coords[i + 1] = qy
-    # set the coordinates:
-    the_canvas.coords(shape, coords)
+    all_shapes = the_canvas.find_withtag(shape)
 
-    return shape
+    for a_shape in all_shapes:
+        coords = the_canvas.coords(a_shape)
+        # update coordinates:
+        for i in range(0, len(coords), 2):
+            px, py = coords[i], coords[i + 1]
+            qx = cos(theta) * (px - ox) - sin(theta) * (py - oy) + ox
+            qy = sin(theta) * (px - ox) + cos(theta) * (py - oy) + oy
+            coords[i] = qx
+            coords[i + 1] = qy
+        # set the coordinates:
+        the_canvas.coords(a_shape, coords)
+
+    return shape 
 
 
 def distance(point1, point2):
@@ -534,7 +537,11 @@ def get_center(shape):
     Returns:
          A `tuple` representing center of the given shape.
     """
-    bbox = the_canvas.bbox(shape)
+    bbox = _safe_bbox(shape)
+
+    if bbox is None:
+        raise Exception(f"We couldn't find the shape with id/tag {shape}. Make sure it exists!")
+
     return (((bbox[2] + bbox[0]) / 2), ((bbox[1] + bbox[3]) / 2))
 
 
@@ -548,7 +555,7 @@ def get_top(shape):
     Returns:
          A `int` representing the minimum y-coordinate of the shape.
     """
-    bbox = the_canvas.bbox(shape)
+    bbox = _safe_bbox(shape)
     return bbox[1]
 
 
@@ -562,7 +569,7 @@ def get_bottom(shape):
     Returns:
          A `int` representing the maximum y-coordinate of the shape.
     """
-    bbox = the_canvas.bbox(shape)
+    bbox = _safe_bbox(shape)
     return bbox[3]
 
 
@@ -576,7 +583,7 @@ def get_left(shape):
     Returns:
          A `int` representing the minimum x-coordinate of the shape.
     """
-    bbox = the_canvas.bbox(shape)
+    bbox = _safe_bbox(shape)
     return bbox[0]
 
 
@@ -590,7 +597,7 @@ def get_right(shape):
     Returns:
          A `int` representing the maximum x-coordinate of the shape.
     """ 
-    bbox = the_canvas.bbox(shape)
+    bbox = _safe_bbox(shape)
     return bbox[2]
 
 
@@ -604,7 +611,7 @@ def get_height(shape):
     Returns:
          A `int` representing the height of the shape.
     """
-    bbox = the_canvas.bbox(shape)
+    bbox = _safe_bbox(shape)
     return bbox[3] - bbox[1] - 1
 
 
@@ -618,7 +625,7 @@ def get_width(shape):
     Returns:
          An `int` representing width of the shape.
     """
-    bbox = the_canvas.bbox(shape)
+    bbox = _safe_bbox(shape)
     return bbox[2] - bbox[0] - 1
 
 
@@ -652,7 +659,11 @@ def make_grid(w, h):
                 font=("Purisa", 8),
             )
 
-
+def _safe_bbox(shape):
+    try:
+        return the_canvas.bbox(shape)
+    except:
+        raise Exception(f"We couldn't find the shape with tag/id: {shape}. Make sure this shape exists!") 
 
 def _tupelize_color(color):
     R = int(color[1:3], 16)
