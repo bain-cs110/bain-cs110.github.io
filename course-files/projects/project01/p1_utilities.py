@@ -461,18 +461,21 @@ def rotate(shape, degrees=5, origin=None):
     theta = radians(degrees)
     ox, oy = origin
 
-    coords = the_canvas.coords(shape)
-    # update coordinates:
-    for i in range(0, len(coords), 2):
-        px, py = coords[i], coords[i + 1]
-        qx = cos(theta) * (px - ox) - sin(theta) * (py - oy) + ox
-        qy = sin(theta) * (px - ox) + cos(theta) * (py - oy) + oy
-        coords[i] = qx
-        coords[i + 1] = qy
-    # set the coordinates:
-    the_canvas.coords(shape, coords)
+    all_shapes = the_canvas.find_withtag(shape)
 
-    return shape
+    for a_shape in all_shapes:
+        coords = the_canvas.coords(a_shape)
+        # update coordinates:
+        for i in range(0, len(coords), 2):
+            px, py = coords[i], coords[i + 1]
+            qx = cos(theta) * (px - ox) - sin(theta) * (py - oy) + ox
+            qy = sin(theta) * (px - ox) + cos(theta) * (py - oy) + oy
+            coords[i] = qx
+            coords[i + 1] = qy
+        # set the coordinates:
+        the_canvas.coords(a_shape, coords)
+
+    return shape 
 
 
 def distance(point1, point2):
