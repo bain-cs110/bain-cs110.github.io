@@ -9,6 +9,9 @@ due_date: 2024-02-16
 canvas_id: friday-lecture-17-loops-and-data
 canvas_title: Friday - Lecture 17 - Loops and Data
 exercise_url: "lecture17.zip"
+mini_quiz_id: quizzes/231587
+mini_quiz_num: 10
+mini_quiz_title: More Loops and Conditionals
 slides: 
    - url: https://docs.google.com/presentation/d/1jI2RGlQKeulr5ESEeRmn9N-L6xIRQMIYf3lxYLMbrVU/edit?usp=sharing
      title: Processing Data with Loops
