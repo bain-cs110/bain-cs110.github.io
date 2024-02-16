@@ -67,6 +67,11 @@ def setup():
     #   once in this function!
     creature((400, 400), primary_color='white', tag="test")
 
+    arc1= arc([(400, 400), (500, 600), (600, 400)])
+
+    square1 = square()
+    overlay(arc1, square1)
+
     ## Setting some listeners!
     setup_listener('<Button-1>', click_handle)
 
