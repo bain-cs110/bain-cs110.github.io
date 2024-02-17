@@ -17,7 +17,7 @@ slides:
      title: Processing Data with Loops
 
 videos:
-   - utl: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=81c61044-603a-482d-884a-b0cf014c732a&start=720
+   - utl: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=81c61044-603a-482d-884a-b0cf014c732a&start=660
      title: "Live Lecture Recording"
      duration: "51:00"
      live: 1
