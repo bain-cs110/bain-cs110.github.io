@@ -17,22 +17,21 @@ ticks = 0
 
 ### MAKE CREATURE SECTION (put your function defs here ) ##########################
 # Here's a delightful smiley face as an example (feel free to delete it)
-def creature(center, size=100, tag='', primary_color='lightgray', secondary_color="green"):
-    radius = size / 2
-    # just a demo of how you might think about making your creature:
-    left_eye_pos = (center[0] - radius / 4, center[1] - radius / 5)
-    right_eye_pos = (center[0] + radius / 4, center[1] - radius / 5)
-    eye_width = radius / 10
-    eye_height = radius / 10
 
-    circle(center=center, radius=radius, color=primary_color, tag=tag)
-    oval(center=left_eye_pos, radius_x=eye_width, radius_y=eye_height, color="red", tag=tag)
-    oval(center=right_eye_pos, radius_x=eye_width, radius_y=eye_height, color="green", tag=tag)
-    line([
-        (center[0] - radius / 2, center[1] + radius / 3),
-        (center[0], center[1] + radius / 1.2),
-        (center[0] + radius / 2, center[1] + radius / 3)
-    ], curvy=True, tag=tag)
+
+def creature(center, size=100, tag='', primary_color='lightgray', secondary_color="green"):
+ 
+    face = circle(center, radius=size, color="yellow", tag=tag) #face
+
+    left_eye = oval(radius_x=size / 5, radius_y=size / 3.333, color="red", tag=tag) #left eye
+    right_eye = oval(radius_x=size / 5, radius_y=size / 3.333, color="green", tag=tag) # right eye
+    mouth = oval(radius_x= size / 2.5, radius_y=size / 10, color="blue", tag=tag) # mouth
+
+    overlay(left_eye, face, offset_x=-size / 3.333, offset_y=-size / 20)
+    overlay(right_eye, face, offset_x=size / 3.333, offset_y=-size / 20)
+    overlay(mouth, face, offset_y=size/2)
+
+
 
 ####################################################################################
 
@@ -40,7 +39,7 @@ def creature(center, size=100, tag='', primary_color='lightgray', secondary_colo
 ### MAKE LANDSCAPE OBJECT SECTION (put your function defs here ) ###################
 # Note: if you're going to use shapes that ALSO were part of your creature, no need
 # to copy those function definitions twice!
-    
+
 
 
 
