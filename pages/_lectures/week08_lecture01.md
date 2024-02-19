@@ -12,6 +12,10 @@ exercise_url: "lecture18.zip"
 mini_quiz_id: quizzes/231660
 mini_quiz_num: 11
 mini_quiz_title: Getting Ready for Q2
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4db7411f-3fec-4d57-b13f-b0cf014c7347
+     title: "Live Lecture Recording"
+     live: 1
 slides: 
    - url: https://docs.google.com/presentation/d/15zS478mTuuoszIkJ0Lh5lZ8qBaQhDRLJuoeUl5OySl0/edit?usp=sharing
      title: "Quiz 2 Review"
