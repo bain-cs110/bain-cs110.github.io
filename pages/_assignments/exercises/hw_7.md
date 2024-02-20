@@ -1,8 +1,8 @@
 ---
 layout: assignment-two-column
 title: Building a Game
-abbreviation: HW6
+abbreviation: HW7
 type: homework
-due_date: 2024-02-23
+due_date: 2024-03-01
 draft: 1
 ---
