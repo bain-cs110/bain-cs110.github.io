@@ -661,7 +661,10 @@ def make_grid(w, h):
 
 def _safe_bbox(shape):
     try:
-        return the_canvas.bbox(shape)
+        bbox = the_canvas.bbox(shape)
+        if bbox is None:
+            Exception(f"We couldn't find the shape with tag/id: {shape}. Make sure this shape exists!") 
+        return bbox
     except:
         raise Exception(f"We couldn't find the shape with tag/id: {shape}. Make sure this shape exists!") 
 
