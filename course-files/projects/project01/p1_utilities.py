@@ -247,7 +247,7 @@ def spiral(center=(0, 0), width=100, roughness=0.01, start=0, spirals=5, line_wi
     Args:
         center (`tuple`): A coordinate representing the center of the shape.
         width (`int`): Specifies the total width of the spiral.
-        roughness ('float'): Controls how spiral-y the shape is (lower is less spiral-y)
+        roughness (`float`): Controls how spiral-y the shape is (lower is less spiral-y)
         start (`int`): Where on the spiral to start drawing.
         spirals (`int`): How many loops to draw.
         line_width (`int`): How wide for the line to be drawn.
