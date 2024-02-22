@@ -5,7 +5,8 @@ type: lecture
 draft: 0
 num: 19
 due_date: 2024-02-23
-canvas_id: friday-lecture-21-dictionaries-may-19
+canvas_title: "Friday - Lecture 19 - Dictionaries"
+canvas_id: friday-lecture-19-dictionaries
 exercise_url: "lecture19.zip"
 slides:
    - url: https://docs.google.com/presentation/d/1tedUedb6soquvByENjp0X1x7C5HSBNDYhUUicxwx-9E/edit?usp=sharing
