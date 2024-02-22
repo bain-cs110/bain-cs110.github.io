@@ -238,6 +238,38 @@ def polygon(points=[], color="hotpink", tag="", **kwargs):
    """
     return the_canvas.create_polygon(points, fill=color, tags=tag, **kwargs)
 
+def _polar_to_cartesian(r, theta):
+    return int(r*cos(theta)), int(r*sin(theta))
+
+def spiral(center=(0, 0), width=100, roughness=0.01, start=0, spirals=5, line_width=1, **kwargs):
+    """
+    A reporter function that draws a spiral.
+    Args:
+        center (`tuple`): A coordinate representing the center of the shape.
+        width (`int`): Specifies the total width of the spiral.
+        roughness ('float'): Controls how spiral-y the shape is (lower is less spiral-y)
+        start (`int`): Where on the spiral to start drawing.
+        spirals (`int`): How many loops to draw.
+        line_width (`int`): How wide for the line to be drawn.
+        tag (`str`): The tag to assign to the shape.
+
+    Returns:
+         `Shape`: The spiral that was created.
+    """
+    theta = 0.0
+    r = start
+    all_points = []
+    prev_pos = _polar_to_cartesian(r, theta)
+    distance = width / 4 / pi / spirals 
+    all_points.append((prev_pos[0] + center[0], prev_pos[1] + center[1]))
+    while theta < 2 * spirals * pi:
+        theta += roughness
+        r = start + distance*theta
+        pos = _polar_to_cartesian(r, theta)
+        all_points.append((pos[0] + center[0], pos[1] + center[1]))
+
+    return arc(points=all_points, width=line_width, **kwargs)
+
 def text(top_left=(0,0), text="", font=("Purisa", 32), tag="", **kwargs):
     """
     A reporter function that draws text to the screen
