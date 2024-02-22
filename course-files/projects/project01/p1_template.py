@@ -23,8 +23,8 @@ def creature(center, size=100, tag='', primary_color='lightgray', secondary_colo
  
     face = circle(center, radius=size, color="yellow", tag=tag) #face
 
-    left_eye = oval(radius_x=size / 5, radius_y=size / 3.333, color="red", tag=tag) #left eye
-    right_eye = oval(radius_x=size / 5, radius_y=size / 3.333, color="green", tag=tag) # right eye
+    left_eye = oval(radius_x=size / 5, radius_y=size / 3.333, color="red", tag=[tag, tag + "_eye"]) #left eye
+    right_eye = oval(radius_x=size / 5, radius_y=size / 3.333, color="green", tag=[tag, tag + "_eye"]) # right eye
     mouth = oval(radius_x= size / 2.5, radius_y=size / 10, color="blue", tag=tag) # mouth
 
     overlay(left_eye, face, offset_x=-size / 3.333, offset_y=-size / 20)
@@ -68,6 +68,9 @@ def setup():
     
     ## Setting some listeners!
     setup_listener('<Button-1>', click_handle)
+    
+    make_grid(800, 800)
+    spiral(center=(400, 400), spirals = 5, tag="spiral", color="blue")
 
     # This is how many animations to attempt per second. If you want to slow down your
     #   animations, just decrease this number! If you want to speed up...
@@ -80,7 +83,14 @@ def setup():
 def go():
     # Here's where you'll put everything you want to control your animations
     #   EXCEPT event listeners (look higher up)
-    move("test", x_shift=2, y_shift=-2)
+    move("spiral", x_shift=2, y_shift=-2)
+
+    rotate("spiral", 10)
+
+    if ticks % 20 < 10:
+        update_color("test_eye", "hotpink")
+    else:
+        update_color("test_eye", "cyan")
 
 
 ######&&!*#################### YOUR CODE ABOVE THIS LINE ##############################

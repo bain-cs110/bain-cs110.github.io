@@ -16,8 +16,8 @@ pdoc --show-source --logo "https://bain-cs110.github.io/assets/images/cs110.png"
 pdoc --show-source course-files/projects/project01/p1_utilities -o course-files/projects/project01/docs
 
 # HW 6 Docs
-pdoc --show-source course-files/homeworks/hw06/w0rdle.py -o course-files/homeworks/hw06/docs
-pdoc --show-source course-files/homeworks/hw06/hw6_utilities.py -o course-files/homeworks/hw06/docs
+pdoc --show-source course-files/homeworks/hw6/hw6.py -o course-files/homeworks/hw6/docs
+pdoc --show-source course-files/homeworks/hw6/Wordle.py -o course-files/homeworks/hw6/docs
 
 # P2 Docs
 pdoc --show-source --logo "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Yelp_Logo.svg/800px-Yelp_Logo.svg.png" course-files/projects/project02/apis/yelp -o course-files/projects/project02/docs
