@@ -8,6 +8,11 @@ due_date: 2024-02-23
 canvas_title: "Friday - Lecture 19 - Dictionaries"
 canvas_id: friday-lecture-19-dictionaries
 exercise_url: "lecture19.zip"
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=28e38a28-7ccd-4308-b1db-b0cf014c7374
+     title: "Live Lecture Recording"
+     duration: "50:00"
+     live: 1
 slides:
    - url: https://docs.google.com/presentation/d/1tedUedb6soquvByENjp0X1x7C5HSBNDYhUUicxwx-9E/edit?usp=sharing
      title: Intro to Dictionaries
