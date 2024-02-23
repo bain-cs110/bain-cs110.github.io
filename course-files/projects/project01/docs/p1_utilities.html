@@ -63,10 +63,10 @@
                     <a class="function" href="#text">text</a>
             </li>
             <li>
-                    <a class="function" href="#raise_up">raise_up</a>
+                    <a class="function" href="#put_in_front">put_in_front</a>
             </li>
             <li>
-                    <a class="function" href="#lower_down">lower_down</a>
+                    <a class="function" href="#put_in_back">put_in_back</a>
             </li>
             <li>
                     <a class="function" href="#overlay">overlay</a>
@@ -462,7 +462,7 @@ p1_utilities    </h1>
 </span><span id="L-290"><a href="#L-290"><span class="linenos">290</span></a>                                  <span class="n">fill</span><span class="o">=</span><span class="n">color</span><span class="p">,</span>
 </span><span id="L-291"><a href="#L-291"><span class="linenos">291</span></a>                                  <span class="n">tags</span><span class="o">=</span><span class="n">tag</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 </span><span id="L-292"><a href="#L-292"><span class="linenos">292</span></a>
-</span><span id="L-293"><a href="#L-293"><span class="linenos">293</span></a><span class="k">def</span> <span class="nf">raise_up</span><span class="p">(</span><span class="n">tag</span><span class="p">):</span>
+</span><span id="L-293"><a href="#L-293"><span class="linenos">293</span></a><span class="k">def</span> <span class="nf">put_in_front</span><span class="p">(</span><span class="n">tag</span><span class="p">):</span>
 </span><span id="L-294"><a href="#L-294"><span class="linenos">294</span></a>    <span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-295"><a href="#L-295"><span class="linenos">295</span></a><span class="sd">    A function that &quot;raises&quot; a shape to the &quot;top&quot; of the screen.&quot;</span>
 </span><span id="L-296"><a href="#L-296"><span class="linenos">296</span></a>
@@ -471,7 +471,7 @@ p1_utilities    </h1>
 </span><span id="L-299"><a href="#L-299"><span class="linenos">299</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="L-300"><a href="#L-300"><span class="linenos">300</span></a>    <span class="n">the_canvas</span><span class="o">.</span><span class="n">tag_raise</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
 </span><span id="L-301"><a href="#L-301"><span class="linenos">301</span></a>
-</span><span id="L-302"><a href="#L-302"><span class="linenos">302</span></a><span class="k">def</span> <span class="nf">lower_down</span><span class="p">(</span><span class="n">tag</span><span class="p">):</span>
+</span><span id="L-302"><a href="#L-302"><span class="linenos">302</span></a><span class="k">def</span> <span class="nf">put_in_back</span><span class="p">(</span><span class="n">tag</span><span class="p">):</span>
 </span><span id="L-303"><a href="#L-303"><span class="linenos">303</span></a>    <span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-304"><a href="#L-304"><span class="linenos">304</span></a><span class="sd">    A function that &quot;lowers&quot; a shape to the &quot;bottom&quot; of the screen.&quot;</span>
 </span><span id="L-305"><a href="#L-305"><span class="linenos">305</span></a>
@@ -1760,25 +1760,25 @@ int with the font size.</li>
 
 
                 </section>
-                <section id="raise_up">
-                            <input id="raise_up-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
+                <section id="put_in_front">
+                            <input id="put_in_front-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">raise_up</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">tag</span></span>)</span>
+        <span class="name">put_in_front</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">tag</span></span>)</span>
 
-                <label class="view-source-button" for="raise_up-view-source"><span>View Source</span></label>
+                <label class="view-source-button" for="put_in_front-view-source"><span>View Source</span></label>
 
     </div>
-    <a class="headerlink" href="#raise_up"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="raise_up-294"><a href="#raise_up-294"><span class="linenos">294</span></a><span class="k">def</span> <span class="nf">raise_up</span><span class="p">(</span><span class="n">tag</span><span class="p">):</span>
-</span><span id="raise_up-295"><a href="#raise_up-295"><span class="linenos">295</span></a>    <span class="sd">&quot;&quot;&quot;</span>
-</span><span id="raise_up-296"><a href="#raise_up-296"><span class="linenos">296</span></a><span class="sd">    A function that &quot;raises&quot; a shape to the &quot;top&quot; of the screen.&quot;</span>
-</span><span id="raise_up-297"><a href="#raise_up-297"><span class="linenos">297</span></a>
-</span><span id="raise_up-298"><a href="#raise_up-298"><span class="linenos">298</span></a><span class="sd">    Args:</span>
-</span><span id="raise_up-299"><a href="#raise_up-299"><span class="linenos">299</span></a><span class="sd">        tag (`str`): The tag to raise.</span>
-</span><span id="raise_up-300"><a href="#raise_up-300"><span class="linenos">300</span></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="raise_up-301"><a href="#raise_up-301"><span class="linenos">301</span></a>    <span class="n">the_canvas</span><span class="o">.</span><span class="n">tag_raise</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+    <a class="headerlink" href="#put_in_front"></a>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="put_in_front-294"><a href="#put_in_front-294"><span class="linenos">294</span></a><span class="k">def</span> <span class="nf">put_in_front</span><span class="p">(</span><span class="n">tag</span><span class="p">):</span>
+</span><span id="put_in_front-295"><a href="#put_in_front-295"><span class="linenos">295</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="put_in_front-296"><a href="#put_in_front-296"><span class="linenos">296</span></a><span class="sd">    A function that &quot;raises&quot; a shape to the &quot;top&quot; of the screen.&quot;</span>
+</span><span id="put_in_front-297"><a href="#put_in_front-297"><span class="linenos">297</span></a>
+</span><span id="put_in_front-298"><a href="#put_in_front-298"><span class="linenos">298</span></a><span class="sd">    Args:</span>
+</span><span id="put_in_front-299"><a href="#put_in_front-299"><span class="linenos">299</span></a><span class="sd">        tag (`str`): The tag to raise.</span>
+</span><span id="put_in_front-300"><a href="#put_in_front-300"><span class="linenos">300</span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="put_in_front-301"><a href="#put_in_front-301"><span class="linenos">301</span></a>    <span class="n">the_canvas</span><span class="o">.</span><span class="n">tag_raise</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -1793,25 +1793,25 @@ int with the font size.</li>
 
 
                 </section>
-                <section id="lower_down">
-                            <input id="lower_down-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
+                <section id="put_in_back">
+                            <input id="put_in_back-view-source" class="view-source-toggle-state" type="checkbox" aria-hidden="true" tabindex="-1">
 <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">lower_down</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">tag</span></span>)</span>
+        <span class="name">put_in_back</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">tag</span></span>)</span>
 
-                <label class="view-source-button" for="lower_down-view-source"><span>View Source</span></label>
+                <label class="view-source-button" for="put_in_back-view-source"><span>View Source</span></label>
 
     </div>
-    <a class="headerlink" href="#lower_down"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="lower_down-303"><a href="#lower_down-303"><span class="linenos">303</span></a><span class="k">def</span> <span class="nf">lower_down</span><span class="p">(</span><span class="n">tag</span><span class="p">):</span>
-</span><span id="lower_down-304"><a href="#lower_down-304"><span class="linenos">304</span></a>    <span class="sd">&quot;&quot;&quot;</span>
-</span><span id="lower_down-305"><a href="#lower_down-305"><span class="linenos">305</span></a><span class="sd">    A function that &quot;lowers&quot; a shape to the &quot;bottom&quot; of the screen.&quot;</span>
-</span><span id="lower_down-306"><a href="#lower_down-306"><span class="linenos">306</span></a>
-</span><span id="lower_down-307"><a href="#lower_down-307"><span class="linenos">307</span></a><span class="sd">    Args:</span>
-</span><span id="lower_down-308"><a href="#lower_down-308"><span class="linenos">308</span></a><span class="sd">        tag (`str`): The tag to raise.</span>
-</span><span id="lower_down-309"><a href="#lower_down-309"><span class="linenos">309</span></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="lower_down-310"><a href="#lower_down-310"><span class="linenos">310</span></a>    <span class="n">the_canvas</span><span class="o">.</span><span class="n">tag_lower</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+    <a class="headerlink" href="#put_in_back"></a>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="put_in_back-303"><a href="#put_in_back-303"><span class="linenos">303</span></a><span class="k">def</span> <span class="nf">put_in_back</span><span class="p">(</span><span class="n">tag</span><span class="p">):</span>
+</span><span id="put_in_back-304"><a href="#put_in_back-304"><span class="linenos">304</span></a>    <span class="sd">&quot;&quot;&quot;</span>
+</span><span id="put_in_back-305"><a href="#put_in_back-305"><span class="linenos">305</span></a><span class="sd">    A function that &quot;lowers&quot; a shape to the &quot;bottom&quot; of the screen.&quot;</span>
+</span><span id="put_in_back-306"><a href="#put_in_back-306"><span class="linenos">306</span></a>
+</span><span id="put_in_back-307"><a href="#put_in_back-307"><span class="linenos">307</span></a><span class="sd">    Args:</span>
+</span><span id="put_in_back-308"><a href="#put_in_back-308"><span class="linenos">308</span></a><span class="sd">        tag (`str`): The tag to raise.</span>
+</span><span id="put_in_back-309"><a href="#put_in_back-309"><span class="linenos">309</span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="put_in_back-310"><a href="#put_in_back-310"><span class="linenos">310</span></a>    <span class="n">the_canvas</span><span class="o">.</span><span class="n">tag_lower</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
 </span></pre></div>
 
 

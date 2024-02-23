@@ -87,10 +87,13 @@ def go():
 
     rotate("spiral", 10)
 
+
     if ticks % 20 < 10:
         update_color("test_eye", "hotpink")
+        lower_down('test_eye')
     else:
         update_color("test_eye", "cyan")
+        raise_up('test_eye')
 
 
 ######&&!*#################### YOUR CODE ABOVE THIS LINE ##############################

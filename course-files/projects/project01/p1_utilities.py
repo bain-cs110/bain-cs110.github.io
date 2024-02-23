@@ -290,7 +290,7 @@ def text(top_left=(0,0), text="", font=("Purisa", 32), color="black", tag="", **
                                   fill=color,
                                   tags=tag, **kwargs)
 
-def raise_up(tag):
+def put_in_front(tag):
     """
     A function that "raises" a shape to the "top" of the screen."
 
@@ -299,7 +299,7 @@ def raise_up(tag):
     """
     the_canvas.tag_raise(tag)
 
-def lower_down(tag):
+def put_in_back(tag):
     """
     A function that "lowers" a shape to the "bottom" of the screen."
 
