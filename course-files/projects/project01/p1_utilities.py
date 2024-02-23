@@ -270,7 +270,7 @@ def spiral(center=(0, 0), width=100, roughness=0.01, start=0, spirals=5, line_wi
 
     return arc(points=all_points, width=line_width, **kwargs)
 
-def text(top_left=(0,0), text="", font=("Purisa", 32), tag="", **kwargs):
+def text(top_left=(0,0), text="", font=("Purisa", 32), color="black", tag="", **kwargs):
     """
     A reporter function that draws text to the screen
     Args:
@@ -278,6 +278,7 @@ def text(top_left=(0,0), text="", font=("Purisa", 32), tag="", **kwargs):
         text (`str`): What text to draw.
         font (`tuple`): A tuple where the first element is a string for the font name and the second is an
            int with the font size.
+        color (`str`): What color should the text be.
         tag (`str`): The name to tag this thing with.
 
     Returns:
@@ -286,7 +287,26 @@ def text(top_left=(0,0), text="", font=("Purisa", 32), tag="", **kwargs):
     return the_canvas.create_text(top_left,
                                   text=text, 
                                   font=font,
+                                  fill=color,
                                   tags=tag, **kwargs)
+
+def raise_up(tag):
+    """
+    A function that "raises" a shape to the "top" of the screen."
+
+    Args:
+        tag (`str`): The tag to raise.
+    """
+    the_canvas.tag_raise(tag)
+
+def lower_down(tag):
+    """
+    A function that "lowers" a shape to the "bottom" of the screen."
+
+    Args:
+        tag (`str`): The tag to raise.
+    """
+    the_canvas.tag_lower(tag)
 
 def overlay(shape1, shape2, offset_x=0, offset_y=0):
     """
