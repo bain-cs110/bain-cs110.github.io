@@ -6,7 +6,7 @@ type: lecture
 draft: 0
 num: 21
 due_date: 2024-02-28
-canvas_id:
+canvas_id: 1371705
 exercise_url: "lecture21.zip"
 lec_assignment: 1
 canvas_assignment_group: "Mini-Quiz"

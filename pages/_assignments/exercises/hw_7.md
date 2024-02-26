@@ -5,7 +5,7 @@ abbreviation: HW7
 type: homework
 due_date: 2024-03-01
 draft: 0
-canvas_id: 
+canvas_id: 1371703
 canvas_title: "Homework 7"
 canvas_assignment_group: "Homework"
 canvas_points_possible: 100

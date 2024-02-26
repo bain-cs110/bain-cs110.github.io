@@ -8,7 +8,7 @@ num: 6
 points: 100
 due_date: 2024-02-28
 canvas_title: Tutorial 6
-canvas_id: 
+canvas_id: 1371704
 canvas_assignment_group: "Tutorial"
 canvas_points_possible: 100
 canvas_submission_types: "online_upload"
