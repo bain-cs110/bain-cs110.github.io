@@ -89,7 +89,7 @@ Please make the following enhancements to the `tutorial06.py` file (each marked 
 
 Once you've completed all of your to-dos, make sure to run your program and see if it works like it should!
 
-> Note: If you follow these steps you'll create a Wordle with a small "double-letter bug" in that the real Wordle gives you information about <a href="https://www.wordnerdle.com/wordle-double-letter/" target="_blank">how many times a letter appears in the solution</a>. You do NOT need to worry about this in either the tutorial or homework this week. If you <em>want</em> to solve it you may–it just involves counting how many times a letter occurs and basing the "hint" off of that information.
+> Note: If you follow these steps you'll create a Wordle with a small "double-letter bug" in that the real Wordle gives you information about <a href="https://nerdschalk.com/wordle-same-letter-twice-rules-explained-how-does-it-work/" target="_blank">how many times a letter appears in the solution</a>. You do NOT need to worry about this in either the tutorial or homework this week. If you <em>want</em> to solve it you may–it just involves counting how many times a letter occurs and basing the "hint" off of that information.
 
 * * *
 
