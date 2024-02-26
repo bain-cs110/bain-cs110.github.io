@@ -76,13 +76,13 @@ Both ways are totally fine, so use whatever way is most convenient for you.
 
 Please make the following enhancements to the `tutorial06.py` file (each marked `TODO` in the `.py` file).
 
-* First, read through the file called `wordlist.txt` and add all the 5-letter words *converted to UPPER CASE* to the `word_list` key of the `game_data` dictionary.
+* First, read through the file called `wordlist.txt` and add all the 5-letter words *converted to UPPER CASE* to the `word_list` key of the `game_data` dictionary. You'll complete all this work in the <code>read_in_words</code> function.
 * Next, you'll have to take care of validating each user guess by:
   * Converting their guess to *UPPER CASE*
   * Seeing if their guess is exactly 5 characters long
   * Checking to see if the guess is in the word list you loaded in
 * If any of these tests fails, you need to ask the user to guess again (hint: use `continue` to go to the next iteration of the loop)
-* Once you've validated the guess, next up is to generate the `hint` for the user. You'll loop through *each* letter of the solution and...
+* Once you've validated the guess, next up is to generate the `hint` for the user inside the <code>generate_hint</code> function. You'll loop through *each* letter of the solution and...
   * If the letter perfectly matches the solution, you'll add a `"🟩"` to the hint
   * If the letter is in the solution, but isn't in the right location, you'll add a `"🟨"` to the hint
   * Otherwise the letter isn't in the solution at all, so you'll add a `"⬜"` to the hint
