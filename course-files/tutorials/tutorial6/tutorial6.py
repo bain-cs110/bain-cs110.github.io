@@ -60,6 +60,7 @@ def generate_hint(guess, solution):
     for i in range(0, 5):
         # TODO: If that letter matches the corresponding one in the solution
         # then add a 🟩 to our hint (hint += "🟩")
+        # Here's an example of comparing specific letters
         print(guess[i] == solution[i])
 
         # TODO: Else-if that letter is IN that word anywhere,

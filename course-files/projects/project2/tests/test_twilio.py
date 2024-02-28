@@ -15,11 +15,11 @@ class TestTwilio(unittest.TestCase):
 
     def test_can_import_twilio_api_module(self, *args, **kwargs):
         self.assertNotEqual(
-            str(twilio.send_mail).find('function send_mail'), -1)
+            str(twilio.send_email).find('function send_email'), -1)
 
     def test_can_send_email(self, *args, **kwargs):
         email_address = input("Please enter your email address: ")
-        self.assertTrue(twilio.send_mail(
+        self.assertTrue(twilio.send_email(
                 email_address,
                 f"[CS 110] {os.getlogin()} Test Successful",
                 "Twilio Test Successful.")

@@ -7,19 +7,22 @@ except:
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 
+__docformat__ = "google"
 
-def send_mail(to_emails: list, subject: str, content: str):
+def send_email(to_emails: list, subject: str, content: str):
     '''
-    Uses the SendGrid API to send an email.
+    Uses the SendGrid (Twilio) API to send an email.
 
-    * `to_emails` (`list` or `str`):   [Required] A list of recipient emails, string is fine for one recipient.
-    * `subject` (`str`):             [Required] The subject of the email.
-    * `content` (`str`):        [Required] Text or HTML to be included in the body of the email.
+    Args:
+        to_emails (`list` or `str`): A list of recipient emails, string is fine for one recipient.
+        subject (`str`): The subject of the email.
+        content (`str`): Text or HTML to be included in the body of the email.
 
-    Returns `True` if the email was successfully sent, `False` otherwise.
+    Returns:
+        a `bool`, specifically `True` if the email was successfully sent, `False` otherwise.
     '''
     message = Mail(
-        from_email='nu.compsci110@gmail.com',
+        from_email='nu.compsci110@gmail.com', ## NOTE: Don't modify this or your email won't be sent.
         to_emails=to_emails,
         subject=subject,
         html_content=content
@@ -39,7 +42,6 @@ def send_mail(to_emails: list, subject: str, content: str):
     try:
         sg = SendGridAPIClient(SENDGRID_TOKEN)
         sg.send(message)
-        print('Email sent. You may need to check your spam folder.')
         return True
     except Exception as e:
         print(e)

@@ -8,6 +8,9 @@ from apis import utilities, secret_tokens
 import requests
 import textwrap
 
+__docformat__ = "google"
+
+
 __all__ = [
     'get_businesses', 'get_categories',
     'generate_businesses_table',
@@ -15,10 +18,14 @@ __all__ = [
 ]
 def get_categories():
     """
-    Returns a list of valid yelp categories which are strings. Note that while this function
-    returns SOME of the valid yelp categories, there's a lot more. They are 
-    <a href="https://blog.yelp.com/businesses/yelp_category_list/#section21">documented on Yelp's website</a>.
+    Simply returns a list of abbreviated categories from Yelp. Doesn't require any arguments.
+   
+    Note that while this function returns SOME of the valid yelp categories, there's a lot more. They are \
+    <a href="https://blog.yelp.com/businesses/yelp_category_list/#section21">documented on Yelp's website</a>. \
     You can use any of those as valid categories for a search.
+
+    Returns:
+        a `list` of valid yelp categories which are strings. 
     """
     categories = [
         'mexican', 'chinese', 'pizza', 'italian', 'thai', 'japanese',
@@ -67,9 +74,6 @@ def _issue_get_request(url:str):
     return response.json()
 
    
-    
-
-
 def _simplify_businesses(data:list):
     '''
     Private function. Simplifies Yelp businesses.
@@ -134,8 +138,8 @@ def _generate_business_search_url(location:str, limit:int=10, term:str=None, cat
     * term (str):       A search term
     * categories (str): One or more comma-delimited categories to filter by.
     * sort_by (str):    How to order search results.
-        * Options are: best_match, rating, review_count, distance
-    * price (str):      How expensive 1, 2, 3, 4 or comma-delimited string, e.g.: 1,2
+        * Options are: `"best_match"`, `"rating"`, `"review_count"`, `"distance"`
+    * price (str):      How expensive 1, 2, 3, 4 or comma-delimited string, e.g.: `"1,2"`
     * open_now (str):   Set to 'true' if you only want the open restaurants
     * `attributes` (`list` of `str`s): A list of one or more of the following filters: `hot_and_new`, `reservation`, `gender_neutral_restrooms`, `open_to_all`, `wheelchair_accessible`
 
@@ -184,23 +188,25 @@ def _generate_business_search_url(location:str, limit:int=10, term:str=None, cat
 
 def get_businesses(location:str, limit:int=10, search_term:str=None, categories:str=None, sort_by:str=None, price:str=None, open_now:str=None, attributes:list=None, simplify:bool=True):
     '''
-    Searches for Yelp businesses based on various search criteria. Parameters:
+    Searches for Yelp businesses based on various search criteria. 
+    
+    Args:
+        location (`str`):   [Required] Location to search.
+        limit (`int`):      An integer indicating how many records to return. Max of 50.
+        search_term (`str`): A search term
+        categories (`str`): One or more comma-delimited categories to filter by.
+        sort_by (`str`):    How to order search results. Options are:
+                            best_match, rating, review_count, distance. Note that the
+                            rating option will be weighted by the number of reviews each
+                            restaurant has.
+        price (`str`):      How expensive 1, 2, 3, 4 or comma-delimited list, e.g.: 1,2
+        open_now (`str`):   Set to 'true' if you only want the open restaurants
+        attributes (`list`): A list of any one ore more of the following filters: `hot_and_new`, `reservation`, `gender_neutral_restrooms`, `open_to_all`, `wheelchair_accessible`
+        simplify (`bool`):  Indicates whether you want to simplify the data that is returned. Non-simplified data
+                                will return a list of dictionaries.
 
-    * `location` (`str`):   [Required] Location to search.
-    * `limit` (`int`):      An integer indicating how many records to return. Max of 50.
-    * `search_term` (`str`): A search term
-    * `categories` (`str`): One or more comma-delimited categories to filter by.
-    * `sort_by` (`str`):    How to order search results. Options are:
-                        best_match, rating, review_count, distance. Note that the
-                        rating option will be weighted by the number of reviews each
-                        restaurant has.
-    * `price` (`str`):      How expensive 1, 2, 3, 4 or comma-delimited list, e.g.: 1,2
-    * `open_now` (`str`):   Set to 'true' if you only want the open restaurants
-    * `attributes` (`list`): A list of any one ore more of the following filters: `hot_and_new`, `reservation`, `gender_neutral_restrooms`, `open_to_all`, `wheelchair_accessible`
-    * `simplify` (`bool`):  Indicates whether you want to simplify the data that is returned. Non-simplified data
-                            will return a list of dictionaries.
-                            
-    Returns a `list` of businesses matching your search / ordering / limit criteria.
+    Returns:
+        a `list` of businesses matching your search / ordering / limit criteria.
     '''
 
     # generate the URL query string based on the arguments passed in by the user
@@ -223,11 +229,13 @@ def get_businesses(location:str, limit:int=10, search_term:str=None, categories:
 
 def generate_businesses_table(businesses:list):
     '''
-    Generates a tabular representation of a *list* of businesses to be displayed in the terminal.
+    Generates a tabular representation of a *list* of businesses to be displayed in a plain textbox.
 
-    * `businesses` (`list`): A list of simplified dictionaries (where each dictionary represents a business).
+    Args:
+        businesses (`list`): A list of dictionaries (where each dictionary represents a business).
 
-    Returns a `string` representation of a table.
+    Returns:
+        a `string` representation of a table.
     '''
     text = ''
     template = '{0:2} | {1:22.22} | {2:<30.30} | {3:<6} | {4:<10}\n'
@@ -256,13 +264,14 @@ def generate_businesses_table(businesses:list):
 
 def get_reviews(business_id:str, simplify:bool=True):
     '''
-    Retrieves a list of Yelp reviews for a particular business. Parameters:
+    Retrieves a list of Yelp reviews for a particular business.
+    
+    Args:
+        business_id (`str`): A character string corresponding to the business id. Example: `"0b6AU869xq6KXdK3NtVJnw"`
+        simplify (`bool`): Indicates whether you want to simplify the data that is returned.
 
-    * `business_id` (`str`): [Required] A character string corresponding to the business id.
-        * Example: `"0b6AU869xq6KXdK3NtVJnw"`
-    * `simplify` (`bool`):   Indicates whether you want to simplify the data that is returned.
-
-    Returns a `list` of reviews.
+    Returns:
+        a `list` of reviews (dictionaries).
     '''
     # https://www.yelp.com/developers/documentation/v3/business_reviews
     url = 'https://api.yelp.com/v3/businesses/' + business_id + '/reviews'
@@ -391,12 +400,14 @@ def generate_business_table(business: dict, reviews: list = None, to_html=True):
     '''
     Makes a formatted table of a business and corresponding review.
 
-    * `business` (`dict`): [Required] A dictionary that represents a business.
-    * `reviews` (`list`): List of reviews that correspond to the business
-    * `to_html` (`bool`): Whether you want to return an HTML representation (for email)
+    Args:
+        business (`dict`): A dictionary that represents a business.
+        reviews (`list`): List of reviews that correspond to the business
+        to_html (`bool`): Whether you want to return an HTML representation (for email)
                      or a string representation (to print to the screen).
 
-    Returns either a text or HTML representation of a business + reviews.
+    Returns:
+        a `str` with either a plain text or an HTML representation of a business + reviews.
     '''
     if not business:
         print('A business is required.')

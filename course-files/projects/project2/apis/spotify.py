@@ -8,6 +8,9 @@ import requests
 import base64
 import time
 
+__docformat__ = "google"
+
+
 __all__ = [
     'get_genres', 'get_tracks',
     'get_artists', 'get_playlists', 'get_audio_features_by_track',
@@ -23,12 +26,14 @@ __all__ = [
 
 def get_genres(abridged:bool = True):
     '''
-    Queries Spotify for a list of available genres.
-
-    * `abridged`  (`bool`): 
-
-    Returns a list of strings representing the genres. If `abridged` is True,
+    Asks Spotify for a list of available genres. If `abridged` is True,
     returns a shortened hard-coded list rather than asking Spotify for the complete list.
+
+    Args:
+        abridged (`bool`): whether or not you want the shorter list of genres.
+
+    Returns:
+        a `list` of `str` representing valid genres.
     '''
     if abridged:
         return [
@@ -47,10 +52,12 @@ def get_tracks(search_term: str, simplify: bool = True):
     '''
     Retrieves a list of Spotify tracks, given the search term passed in.
 
-    * `search_term` (`str`): [Required] A search term (for a song), represented as a string.
-    * `simplify` (`bool`):   Indicates whether you want to simplify the data that is returned.
+    Args:
+        search_term (`str`): A search term (for a song), represented as a string.
+        simplify (`bool`): Indicates whether you want to simplify the data that is returned.
 
-    Returns a list of tracks.
+    Returns:
+        a `list` of tracks.
     '''
     url = 'https://api.spotify.com/v1/search?q=' + search_term + '&type=track'
     data = _issue_get_request(url)
@@ -63,10 +70,12 @@ def get_top_tracks_by_artist(artist_id: str, simplify: bool = True):
     '''
     Retrieves a list of Spotify "top tracks" by an artist
 
-    * `artist_id` (`str`): [Required] The Spotify id of the artist.
-    * `simplify` (`bool`):   Indicates whether you want to simplify the data that is returned.
+    Args:a
+        artist_id (`str`): The Spotify id of the artist.
+        simplify (`bool`): Indicates whether you want to simplify the data that is returned.
 
-    Returns a `list` of tracks.
+    Returns:
+        a `list` of tracks.
     '''
     url = 'https://api.spotify.com/v1/artists/' + \
         artist_id + '/top-tracks?country=us'
@@ -78,12 +87,14 @@ def get_top_tracks_by_artist(artist_id: str, simplify: bool = True):
 
 def get_playlist_tracks(playlist_id: str, simplify: bool = True):
     '''
-    Retrieves a list of the tracks associated with a playlist_id
+    Retrieves a list of the tracks associated with a playlist_id.
 
-    * `playlist_id` (`str`): [Required] The id of the Spotify playlist.
-    * `simplify` (`bool`):   Whether you want to simplify the data that is returned.
+    Args:
+        playlist_id (`str`): The id of the Spotify playlist.
+        simplify (`bool`):  Whether you want to simplify the data that is returned.
 
-    Returns a `list` of tracks.
+    Returns:
+        a `list` of tracks.
     '''
     url = 'https://api.spotify.com/v1/playlists/' + playlist_id + '/tracks'
     data = _issue_get_request(url)
@@ -100,10 +111,12 @@ def get_related_artists(artist_id: str, simplify: bool = True):
     '''
     Retrieves a list of artists who are "related" to the artist you specify (according to Spotify).
 
-    * `artist_id` (`str`): [Required] The Spotify id of the artist, represented as a string.
-    * `simplify` (`bool`):   Indicates whether you want to simplify the data that is returned.
+    Args:
+        artist_id (`str`): [Required] The Spotify id of the artist, represented as a string.
+        simplify (`bool`):   Indicates whether you want to simplify the data that is returned.
 
-    Returns a list of artists.
+    Returns:
+        a `list` of artists.
     '''
     url = 'https://api.spotify.com/v1/artists/' + artist_id + '/related-artists'
     data = _issue_get_request(url)
@@ -116,10 +129,12 @@ def get_artists(search_term: str, simplify: bool = True):
     '''
     Retrieves a list of Spotify artists, given the search term passed in.
 
-    * `search_term` (`str`): [Required] A search term (for an artist), represented as a string.
-    * `simplify` (`bool`):   Indicates whether you want to simplify the data that is returned.
+    Args:
+        search_term (`str`): A search term (for an artist), represented as a string.
+        simplify (`bool`): Indicates whether you want to simplify the data that is returned.
 
-    Returns a `list` of artists.
+    Returns:
+        a `list` of artists.
     '''
     url = 'https://api.spotify.com/v1/search?q=' + search_term + '&type=artist'
     data = _issue_get_request(url)
@@ -132,10 +147,12 @@ def get_playlists(search_term: str, simplify: bool = True):
     '''
     Retrieves a list of Spotify playlists, given the search term passed in.
 
-    * `search_term` (`str`): [Required] A search term (for a song), represented as a string.
-    * `simplify` (`bool`):   Indicates whether you want to simplify the data that is returned.
+    Args:
+        search_term (`str`): A search term (for a song), represented as a string.
+        simplify (`bool`): Indicates whether you want to simplify the data that is returned.
 
-    Returns a `list` of playlists.
+    Returns:
+        a `list` of playlists.
     '''
     url = 'https://api.spotify.com/v1/search?q=' + search_term + '&type=playlist'
     data = _issue_get_request(url)
@@ -148,10 +165,12 @@ def get_playlists_by_user(user_id: str, simplify: bool = True):
     '''
     Retrieves a list of Spotify playlists belonging to a particular user.
 
-    * `user_id` (`str`): [Required] A valid Spotify user id, represented as a string.
-    * `simplify` (`bool`):   Indicates whether you want to simplify the data that is returned.
+    Args:
+        user_id (`str`): A valid Spotify user id, represented as a string.
+        simplify (`bool`): Indicates whether you want to simplify the data that is returned.
 
-    Returns a `list` of playlists belonging to the user.
+    Returns:
+        a `list` of playlists belonging to the user.
     '''
     url = 'https://api.spotify.com/v1/users/' + user_id + '/playlists'
     data = _issue_get_request(url)
@@ -164,9 +183,11 @@ def get_audio_features_by_track(track_id: str):
     '''
     Retrieves Spotify's audio analysis of the track.
 
-    * `track_id` (`str`): [Required] The id of the Spotify track.
+    Args:
+        track_id` (`str`): [Required] The id of the Spotify track.
 
-    Returns a list of audio features.
+    Returns:
+        a `list` of audio features.
     '''
     url = 'https://api.spotify.com/v1/audio-features/' + track_id
     return _issue_get_request(url)
@@ -180,14 +201,13 @@ def get_similar_tracks(artist_ids: list = [], track_ids: list = [], genres: list
     len(artist_ids) + len(track_ids) + len(genres) between 1 and 5. You MUST provide
     at least one seed artist or track.
 
-    * `artist_ids` (`list`): A list of artist ids (list of strings).
-        * Example: `[ '06HL4z0CvFAxyc27GXpf02', '3Nrfpe0tUJi4K4DXYWgMUX' ]`
-    * `track_ids` (`list`): A list of track ids.
-        * Example: `[ '5ZBeML7Lf3FMEVviTyvi8l', '29U7stRjqHU6rMiS8BfaI9' ]`
-    * `genres` (`list`): A list of genres.
-        * Example: `[ 'chill' ]`
+    Args:
+        artist_ids (`list`): A list of artist ids (list of strings). Example: `[ '06HL4z0CvFAxyc27GXpf02', '3Nrfpe0tUJi4K4DXYWgMUX' ]`
+        track_ids (`list`): A list of track ids. Example: `[ '5ZBeML7Lf3FMEVviTyvi8l', '29U7stRjqHU6rMiS8BfaI9' ]`
+        genres (`list`): A list of genres. Example: `[ 'chill' ]`
 
-    Returns a list of tracks that are similar
+    Returns:
+        a `list` of tracks that are similar
     '''
     if not artist_ids and not track_ids and not genres:
         raise Exception('Either artist_ids or track_ids or genres required')
@@ -210,9 +230,7 @@ def get_similar_tracks(artist_ids: list = [], track_ids: list = [], genres: list
         params.append('seed_genres=' + ','.join(genres))
 
     url = 'https://api.spotify.com/v1/recommendations?' + '&'.join(params)
-    
-    print("DEBUG:", url)
-    
+        
     data = _issue_get_request(url)
     if not simplify:
         return data
@@ -228,9 +246,11 @@ def get_track_player_html(track_id: str):
     '''
     Creates the HTML tags for a Spotify player.
 
-    * `track_id` (`str`): [Required] The id of a track.
+    Args:
+        track_id (`str`): The id of a track.
 
-    Returns an HTML iFrame  (str) corresponding to a Spotify player for the track.
+    Returns:
+      a `str` with an HTML iframe corresponding to a Spotify player for the track.
     '''
     return '''
     <iframe src="https://open.spotify.com/embed?uri=spotify:track:{track_id}&amp;theme=white" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" data-testid="audio-player">
@@ -242,11 +262,13 @@ def get_playlist_player_html(playlist_id: str, width: int = 400, height: int = 2
     '''
     Generates an Spotify playlist player.
 
-    * `playlist_id` (`str`): [Required] The Spotify playlist id.
-    * `width` (`int`): The width of the player.
-    * `height` (`int`): The height of the player.
+    Args:
+        playlist_id (`str`): The Spotify playlist id.
+        width (`int`): The width of the player.
+        height (`int`): The height of the player.
 
-    Returns a string representation of an HTML iframe corresponding to the playlist.
+    Returns:
+        a `str` representation of an HTML iframe corresponding to the playlist.
     '''
     return '''
     <iframe src="https://open.spotify.com/embed/playlist/{playlist_id}"
@@ -259,11 +281,13 @@ def get_album_player_html(album_id: str, width: int = 300, height: int = 380):
     '''
     Generates an Spotify album player.
 
-    * `album_id` (`str`): [Required] The Spotify album id.
-    * `width` (`int`): The width of the player.
-    * `height` (`int`): The height of the player.
+    Args:
+        album_id (`str`): The Spotify album id.
+        width (`int`): The width of the player.
+        height (`int`): The height of the player.
 
-    Returns a string representation of an HTML iframe corresponding to the album.
+    Returns:
+        a `str` representation of an HTML iframe corresponding to the album.
     '''
     return '''
     <iframe src="https://open.spotify.com/embed/album/{album_id}"
@@ -276,11 +300,12 @@ def generate_tracks_table(tracks: list, to_html: bool = False):
     '''
     Function that builds a string representation of the tracks.
 
-    * `tracks` (`list`): [Required] List of tracks.
-    * `to_html` (`bool`): If True it will generate an HTML version (for an email or web page)
-        and if False (default) will generate a string to print in Python.
+    Args:
+        tracks (`list`): List of tracks.
+        to_html (`bool`): If `True` it will generate an HTML version (for an email or web page) and if `False` (default) will generate a string to print in Python.
 
-    Returns a table as a string (that can subsequently be printed to the screen).
+    Returns:
+        a table as a `str`
     '''
     
     if to_html:
@@ -316,9 +341,11 @@ def get_formatted_artist_table_html(artists: list):
     Makes a nice formatted HTML table of artists. Good for writing to an
     HTML file or for sending in an email.
 
-    * `artists` (`list`): [Required] A list of artists.
+    Args:
+        artists (`list`): A list of artists.
 
-    Returns an HTML table as a `string`
+    Returns:
+        a `str` with an HTML table in it.
     '''
     if not artists:
         print('A list of artists is required.')
@@ -368,9 +395,11 @@ def _get_formatted_tracklist_table_html(tracks: list):
     Makes a nice formatted HTML table of tracks. Good for writing to an
     HTML file or for sending in an email.
 
-    * `tracks` (`list`): [Required] A list of tracks.
+    Args:
+        tracks (`list`): [Required] A list of tracks.
 
-    Returns an HTML table as a string
+    Returns:
+        a `str` with an HTML table in it.
     '''
     if not tracks:
         print('A list of tracks is required.')
@@ -480,6 +509,7 @@ def _issue_get_request(url):
 
     Returns whatever Spotify's API endpoint gives back.
     '''
+    print("Use this for debugging:", url)
     headers = _generate_authentication_header()
     response = requests.get(url, headers=headers, verify=True)
     return response.json()
