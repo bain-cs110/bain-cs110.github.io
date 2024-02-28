@@ -76,6 +76,11 @@ Both ways are totally fine, so use whatever way is most convenient for you.
 
 Please make the following enhancements to the `tutorial06.py` file (each marked `TODO` in the `.py` file).
 
+> **PLEASE NOTE:**
+> While you only have to write new code in the parts that are marked `TODO` in `wordle.py`, you'll
+> need to understand the other code in `tutorial06.py` in order
+> to know how to edit it to complete the assignment. You can search for the `TODO` tags using the File menu then "Search" in IDLE. <mark>THIS MEANS YOU WILL NEED TO LOOK AT THE EXISTING CODE AROUND THE TODOs to see what is done already and what you'll need to fill-in. DON'T JUST START WRITING CODE. First, understand <a href="https://edstem.org/us/courses/50703/discussion/4458128">what's there</a> THEN start editing.
+
 * First, read through the file called `wordlist.txt` and add all the 5-letter words *converted to UPPER CASE* to the `word_list` key of the `game_data` dictionary. You'll complete all this work in the <code>read_in_words</code> function.
 * Next, you'll have to take care of validating each user guess by:
   * Converting their guess to *UPPER CASE*
