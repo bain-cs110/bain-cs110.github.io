@@ -37,7 +37,7 @@ Here's a video demo of what the finished version should look like:
 > **PLEASE NOTE:**
 > While you only have to write new code in the parts that are marked `TODO` in `wordle.py`, you'll
 > need to understand the other functions in `wordle.py` and `hw7_utilities.py` in order
-> to know how to use them to complete the assignment. You can search for the `TODO` tags using the File menu then "Search" in IDLE.
+> to know how to use them to complete the assignment. You can search for the `TODO` tags using the File menu then "Search" in IDLE. <mark>THIS MEANS YOU WILL NEED TO LOOK AT THE EXISTING CODE AROUND THE TODOs to see what is done already and what you'll need to fill-in. DON'T JUST START WRITING CODE. First, understand <a href="https://edstem.org/us/courses/50703/discussion/4458128">what's there</a> THEN start editing.
 
 ## Your Tasks
 
