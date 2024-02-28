@@ -17,7 +17,9 @@ def read_in_words(file_path):
     for line in my_file:
         # Remove the end line character from each line we read
         word = line.strip('\n')
-        print(word)
+        #print(word)
+
+        ## WARNING: Don't print out every word! Your computer will freak out.
 
     # Print out the list of valid words for debugging
     # print("Valid word list:", game_data['word_list'])
