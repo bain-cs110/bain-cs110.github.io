@@ -174,12 +174,10 @@ def show_game_board():
 
     # Loop through all of the past guesses
     for i in range(0, guess_count):
-
-        print("Drawing past guess...")
-        # print("Guess to draw:", past_guesses[i], i)
+        print("Drawing... Guess Num:", i, "Guess to draw:", past_guesses[i])
         # print("Hint:", generate_hint(past_guesses[i], game_data['solution']))
 
-        # TODO: Use the `show_pass_guess` function to draw each of the
+        # TODO: Use the `show_past_guess` function to draw each of the
         # past guesses to the canvas.
 
     # Now loop through each letter of the current guess and draw it to the board

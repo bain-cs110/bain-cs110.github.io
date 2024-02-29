@@ -17,8 +17,8 @@ __all__ = [
     'get_related_artists', 'get_top_tracks_by_artist',
     'get_similar_tracks', 'get_playlists_by_user',
     'get_playlist_tracks',
-    'get_formatted_artist_table_html',
     'generate_tracks_table',
+    'generate_artists_table',
     'get_track_player_html',
     'get_playlist_player_html',
     'get_album_player_html',
@@ -213,9 +213,9 @@ def get_similar_tracks(artist_ids: list = [], track_ids: list = [], genres: list
         raise Exception('Either artist_ids or track_ids or genres required')
 
     # check if seeds <= 5:
-    artist_ids = artist_ids or []
-    track_ids = track_ids or []
-    genres = genres or []
+    artist_ids = list(artist_ids) or []
+    track_ids = list(track_ids) or []
+    genres = list(genres) or []
     if len(artist_ids) + len(track_ids) + len(genres) > 5:
         error = 'You can only have 5 "seed values" in your recommendations query.\n' + \
             'In other words, (len(artist_ids) + len(track_ids) + len(genres)) must be less than or equal to 5.'
@@ -336,13 +336,14 @@ def generate_tracks_table(tracks: list, to_html: bool = False):
     return text
 
 
-def get_formatted_artist_table_html(artists: list):
+def generate_artists_table(artists: list, to_html:bool=False):
     '''
-    Makes a nice formatted HTML table of artists. Good for writing to an
-    HTML file or for sending in an email.
+    Makes a nice formatted table of artists. Good for writing to an
+    HTML file or showing on the screen.
 
     Args:
         artists (`list`): A list of artists.
+        to_html (`bool`): Whether or not you want the HTML version.
 
     Returns:
         a `str` with an HTML table in it.
@@ -351,6 +352,36 @@ def get_formatted_artist_table_html(artists: list):
         print('A list of artists is required.')
         return
 
+    if to_html:
+        return _get_artist_table_html(artists)
+
+    line_width = 118
+    text = ''
+    template = '{0:2} | {1:<22.22} | {2:<30.30} | {3:<60.60}\n'
+
+    # header section:
+    text += '-' * line_width + '\n'
+    text += template.format(
+        '', 'Name', 'Artist', 'URL'
+    )
+    text += '-' * line_width + '\n'
+
+    # data section:
+    counter = 1
+    for artist in artists:
+        text += template.format(
+            counter,
+            artist.get('name'),
+            artist.get('genres'),
+            artist.get('share_url')
+        )
+        counter += 1
+    text += '-' * line_width + '\n'
+    return text
+
+    
+
+def _get_artist_table_html(artists: list):
     template = '''
         <tr>
             <td {css}>{name}</td>
@@ -511,6 +542,7 @@ def _issue_get_request(url):
     '''
     print("Use this for debugging:", url)
     headers = _generate_authentication_header()
+    url = url.replace(" ", "%20")
     response = requests.get(url, headers=headers, verify=True)
     return response.json()
 

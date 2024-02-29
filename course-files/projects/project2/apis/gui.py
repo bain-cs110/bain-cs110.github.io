@@ -1,4 +1,5 @@
 import customtkinter
+from tkinter import messagebox 
 
 app = None
 textbox = None
@@ -9,11 +10,11 @@ def _setup_window(in_app, title):
     global app
     app = in_app
     app.title(title)
-    app.minsize(1000, 400)
+    app.minsize(1400, 700)
     app.grid_columnconfigure(0, weight=10)
     app.grid_rowconfigure((0,1,2,3), weight=1, uniform=1)
     global textbox
-    textbox = customtkinter.CTkTextbox(app)
+    textbox = customtkinter.CTkTextbox(app, font=("Courier New", 14))
     textbox.grid(row=0, column=0, rowspan=4, columnspan=1, padx=10, pady=(10, 10), sticky="nsew")
     
 def _setup_buttons(some_actions):
@@ -22,13 +23,15 @@ def _setup_buttons(some_actions):
         _make_button(text=button, function=some_actions[button], grid_row=button_count // 2, grid_col=button_count % 2 + 1)
         button_count += 1
         
-def show_text(txt, append=False):
+def show_text(*txt, append=False, sep=" ", end="\n"):
     '''
     This allows us to "print" text to the textbox on the GUI.
 
     Args:
         txt (`str`): whatever text you'd like printed to the screen.
         append (`bool`): whether or not you'd like to append the text to what's there currently.
+        sep (`str`): default separator to be used with multiple text arguments (like `print`)
+        end (`str`): default ending character to be used (like `print`)
 
     Returns:
         `None` but instead updates the GUI's textbox appropriately.
@@ -37,9 +40,39 @@ def show_text(txt, append=False):
     textbox.configure(state="normal")
     if not append:
         textbox.delete("0.0", "end")
-    textbox.insert("insert", txt + "\n")
+
+    plain_text = []
+    for x in txt:
+        tmp_x = x
+        if isinstance(x, type({}.keys())):
+            tmp_x = list(x)
+        plain_text.append(str(tmp_x))
+
+    textbox.insert("insert", sep.join(plain_text) + end)
     textbox.configure(state="disabled")
 
+def popup(message:str, title:str="Pop-Up", kind="info"):
+    '''
+    This allows us to create a pop-up a window without any prompt.
+
+    Args:
+        message (`str`): whatever text you'd like to be shown in the pop-up window.
+        title (`str`): the title of the window.
+        kind (`str`): Either `"info"`, `"warning"`, or `"error"`. Just changes the icon in the pop-up.
+
+    Returns:
+        `None` just shows the window.
+    '''
+    if kind not in ['info', 'warning', 'error']:
+        raise Exception("Not a valid popup type!")
+
+    if kind == "info":
+        messagebox.showinfo(title=title, message=message)
+    elif kind == "warning":
+        messagebox.showwarning(title=title, message=message)
+    elif kind == "error":
+        messagebox.showerror(title=title, message=message)
+        
 def popup_input(prompt=""):
     '''
     This allows us to ask for "input" from our GUI. It pops-up a window with a given prompt.
@@ -51,7 +84,9 @@ def popup_input(prompt=""):
         a `str` containing what the user typed in the pop-up window. If they didn't enter anything or if they clicked Cancel it will return `None`.
     '''
     dialog = customtkinter.CTkInputDialog(text=prompt, title="Input Popup")
-    return dialog.get_input()
+    dialog.after(200, dialog.focus_force())
+    text = dialog.get_input()
+    return text
 
 def _make_button(text="", function=None, grid_row=None, grid_col=None):
     new_button = customtkinter.CTkButton(app, text=text, command=function)

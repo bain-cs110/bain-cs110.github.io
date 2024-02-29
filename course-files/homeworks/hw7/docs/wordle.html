@@ -239,84 +239,82 @@ wordle    </h1>
 </span><span id="L-174"><a href="#L-174"><span class="linenos">174</span></a>
 </span><span id="L-175"><a href="#L-175"><span class="linenos">175</span></a>    <span class="c1"># Loop through all of the past guesses</span>
 </span><span id="L-176"><a href="#L-176"><span class="linenos">176</span></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">guess_count</span><span class="p">):</span>
-</span><span id="L-177"><a href="#L-177"><span class="linenos">177</span></a>
-</span><span id="L-178"><a href="#L-178"><span class="linenos">178</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Drawing past guess...&quot;</span><span class="p">)</span>
-</span><span id="L-179"><a href="#L-179"><span class="linenos">179</span></a>        <span class="c1"># print(&quot;Guess to draw:&quot;, past_guesses[i], i)</span>
-</span><span id="L-180"><a href="#L-180"><span class="linenos">180</span></a>        <span class="c1"># print(&quot;Hint:&quot;, generate_hint(past_guesses[i], game_data[&#39;solution&#39;]))</span>
-</span><span id="L-181"><a href="#L-181"><span class="linenos">181</span></a>
-</span><span id="L-182"><a href="#L-182"><span class="linenos">182</span></a>        <span class="c1"># TODO: Use the `show_pass_guess` function to draw each of the</span>
-</span><span id="L-183"><a href="#L-183"><span class="linenos">183</span></a>        <span class="c1"># past guesses to the canvas.</span>
-</span><span id="L-184"><a href="#L-184"><span class="linenos">184</span></a>
-</span><span id="L-185"><a href="#L-185"><span class="linenos">185</span></a>    <span class="c1"># Now loop through each letter of the current guess and draw it to the board</span>
-</span><span id="L-186"><a href="#L-186"><span class="linenos">186</span></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
-</span><span id="L-187"><a href="#L-187"><span class="linenos">187</span></a>        <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">current_guess</span><span class="p">):</span>
-</span><span id="L-188"><a href="#L-188"><span class="linenos">188</span></a>            <span class="k">break</span>
-</span><span id="L-189"><a href="#L-189"><span class="linenos">189</span></a>        <span class="n">hw7_utilities</span><span class="o">.</span><span class="n">color_a_grid_square</span><span class="p">(</span><span class="n">DEFAULT_COLOR</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">guess_count</span><span class="p">))</span>
-</span><span id="L-190"><a href="#L-190"><span class="linenos">190</span></a>        <span class="n">hw7_utilities</span><span class="o">.</span><span class="n">draw_letter_in_grid</span><span class="p">(</span><span class="n">current_guess</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">guess_count</span><span class="p">))</span>
-</span><span id="L-191"><a href="#L-191"><span class="linenos">191</span></a>
-</span><span id="L-192"><a href="#L-192"><span class="linenos">192</span></a>    <span class="c1"># Update the game board</span>
-</span><span id="L-193"><a href="#L-193"><span class="linenos">193</span></a>    <span class="n">canvas</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
-</span><span id="L-194"><a href="#L-194"><span class="linenos">194</span></a>
-</span><span id="L-195"><a href="#L-195"><span class="linenos">195</span></a><span class="c1">########################## EVENT LISTENERS ##############################</span>
-</span><span id="L-196"><a href="#L-196"><span class="linenos">196</span></a><span class="k">def</span> <span class="nf">handle_typing</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
-</span><span id="L-197"><a href="#L-197"><span class="linenos">197</span></a>    <span class="sd">&#39;&#39;&#39;</span>
-</span><span id="L-198"><a href="#L-198"><span class="linenos">198</span></a><span class="sd">    Event handler for key presses in W0rdle.</span>
-</span><span id="L-199"><a href="#L-199"><span class="linenos">199</span></a>
-</span><span id="L-200"><a href="#L-200"><span class="linenos">200</span></a><span class="sd">    We need to handle 3 specific types of key presses:</span>
-</span><span id="L-201"><a href="#L-201"><span class="linenos">201</span></a><span class="sd">      1. `event.keysym == &quot;BackSpace&quot;`</span>
-</span><span id="L-202"><a href="#L-202"><span class="linenos">202</span></a><span class="sd">      2. `event.keysym == &quot;Return&quot;`</span>
-</span><span id="L-203"><a href="#L-203"><span class="linenos">203</span></a><span class="sd">      3. `len(event.keysym) == 1` (single character keys)</span>
-</span><span id="L-204"><a href="#L-204"><span class="linenos">204</span></a>
-</span><span id="L-205"><a href="#L-205"><span class="linenos">205</span></a><span class="sd">    Args:</span>
-</span><span id="L-206"><a href="#L-206"><span class="linenos">206</span></a><span class="sd">      * `event`: The event to process.</span>
-</span><span id="L-207"><a href="#L-207"><span class="linenos">207</span></a>
-</span><span id="L-208"><a href="#L-208"><span class="linenos">208</span></a><span class="sd">    Returns:</span>
-</span><span id="L-209"><a href="#L-209"><span class="linenos">209</span></a><span class="sd">      * `None` (Draws to the screen and also has side effects)</span>
-</span><span id="L-210"><a href="#L-210"><span class="linenos">210</span></a><span class="sd">    &#39;&#39;&#39;</span>
-</span><span id="L-211"><a href="#L-211"><span class="linenos">211</span></a>    <span class="c1"># print(&quot;handle_typing called!&quot;)</span>
-</span><span id="L-212"><a href="#L-212"><span class="linenos">212</span></a>
-</span><span id="L-213"><a href="#L-213"><span class="linenos">213</span></a>    <span class="c1"># If the player hits BackSpace, delete the last character from the</span>
-</span><span id="L-214"><a href="#L-214"><span class="linenos">214</span></a>    <span class="c1"># &#39;current_guess&#39; key in the game_data dictionary</span>
-</span><span id="L-215"><a href="#L-215"><span class="linenos">215</span></a>    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">keysym</span> <span class="o">==</span> <span class="s2">&quot;BackSpace&quot;</span><span class="p">:</span>
-</span><span id="L-216"><a href="#L-216"><span class="linenos">216</span></a>        <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">][:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</span><span id="L-217"><a href="#L-217"><span class="linenos">217</span></a>
-</span><span id="L-218"><a href="#L-218"><span class="linenos">218</span></a>    <span class="c1"># If the player hits Return...</span>
-</span><span id="L-219"><a href="#L-219"><span class="linenos">219</span></a>    <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">keysym</span> <span class="o">==</span> <span class="s2">&quot;Return&quot;</span><span class="p">:</span>
-</span><span id="L-220"><a href="#L-220"><span class="linenos">220</span></a>        <span class="c1"># First check that 5 letters have been entered</span>
-</span><span id="L-221"><a href="#L-221"><span class="linenos">221</span></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">])</span> <span class="o">!=</span> <span class="mi">5</span><span class="p">:</span>
-</span><span id="L-222"><a href="#L-222"><span class="linenos">222</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;not enough letters&quot;</span><span class="p">)</span>
-</span><span id="L-223"><a href="#L-223"><span class="linenos">223</span></a>            <span class="c1"># Next check if it&#39;s a valid word in our word list</span>
-</span><span id="L-224"><a href="#L-224"><span class="linenos">224</span></a>        <span class="k">elif</span> <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;word_list&#39;</span><span class="p">]:</span>
-</span><span id="L-225"><a href="#L-225"><span class="linenos">225</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;not a valid word&quot;</span><span class="p">)</span>
-</span><span id="L-226"><a href="#L-226"><span class="linenos">226</span></a>        <span class="c1"># If we make it past those two checks, it&#39;s a valid guess</span>
-</span><span id="L-227"><a href="#L-227"><span class="linenos">227</span></a>        <span class="k">else</span><span class="p">:</span>
-</span><span id="L-228"><a href="#L-228"><span class="linenos">228</span></a>            <span class="c1"># First generate a hint, then finalize the guess</span>
-</span><span id="L-229"><a href="#L-229"><span class="linenos">229</span></a>            <span class="n">hint</span> <span class="o">=</span> <span class="n">generate_hint</span><span class="p">(</span><span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">],</span> <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;solution&#39;</span><span class="p">])</span>
-</span><span id="L-230"><a href="#L-230"><span class="linenos">230</span></a>            <span class="n">finalize_guess</span><span class="p">(</span><span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">],</span> <span class="n">hint</span><span class="p">)</span>
-</span><span id="L-231"><a href="#L-231"><span class="linenos">231</span></a>
-</span><span id="L-232"><a href="#L-232"><span class="linenos">232</span></a>    <span class="c1"># If the player hits any other letter/number/symbol on the keyboard</span>
-</span><span id="L-233"><a href="#L-233"><span class="linenos">233</span></a>    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">keysym</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-</span><span id="L-234"><a href="#L-234"><span class="linenos">234</span></a>        <span class="c1"># If the user hasn&#39;t entered 5 letters, add the entered symbol</span>
-</span><span id="L-235"><a href="#L-235"><span class="linenos">235</span></a>        <span class="c1"># to the current guess (make sure to convert it to upper case!)</span>
-</span><span id="L-236"><a href="#L-236"><span class="linenos">236</span></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
-</span><span id="L-237"><a href="#L-237"><span class="linenos">237</span></a>            <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">event</span><span class="o">.</span><span class="n">keysym</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-</span><span id="L-238"><a href="#L-238"><span class="linenos">238</span></a>
-</span><span id="L-239"><a href="#L-239"><span class="linenos">239</span></a>    <span class="c1"># As long as the user hasn&#39;t made 6 guesses, show the game board</span>
-</span><span id="L-240"><a href="#L-240"><span class="linenos">240</span></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;past_guesses&#39;</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">:</span>
-</span><span id="L-241"><a href="#L-241"><span class="linenos">241</span></a>        <span class="n">show_game_board</span><span class="p">()</span>
-</span><span id="L-242"><a href="#L-242"><span class="linenos">242</span></a>
-</span><span id="L-243"><a href="#L-243"><span class="linenos">243</span></a><span class="c1">########################## GAME SETUP AND PLAY ##############################</span>
-</span><span id="L-244"><a href="#L-244"><span class="linenos">244</span></a><span class="c1"># Ask the computer to listen for key presses</span>
-</span><span id="L-245"><a href="#L-245"><span class="linenos">245</span></a><span class="n">hw7_utilities</span><span class="o">.</span><span class="n">setup_listener</span><span class="p">(</span><span class="s1">&#39;&lt;Key&gt;&#39;</span><span class="p">,</span> <span class="n">handle_typing</span><span class="p">)</span>
-</span><span id="L-246"><a href="#L-246"><span class="linenos">246</span></a>
-</span><span id="L-247"><a href="#L-247"><span class="linenos">247</span></a><span class="c1"># Step 1. Read in the wordlist and set the secret word</span>
-</span><span id="L-248"><a href="#L-248"><span class="linenos">248</span></a><span class="c1">#read_in_words(&#39;wordlist.txt&#39;)</span>
-</span><span id="L-249"><a href="#L-249"><span class="linenos">249</span></a>
-</span><span id="L-250"><a href="#L-250"><span class="linenos">250</span></a><span class="c1"># Step 1a. Print the solution for debugging</span>
-</span><span id="L-251"><a href="#L-251"><span class="linenos">251</span></a><span class="c1">#print(game_data[&#39;solution&#39;])</span>
-</span><span id="L-252"><a href="#L-252"><span class="linenos">252</span></a>
-</span><span id="L-253"><a href="#L-253"><span class="linenos">253</span></a><span class="c1"># Step 2. show the game board!</span>
-</span><span id="L-254"><a href="#L-254"><span class="linenos">254</span></a><span class="c1">#show_game_board()</span>
+</span><span id="L-177"><a href="#L-177"><span class="linenos">177</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Drawing... Guess Num:&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;Guess to draw:&quot;</span><span class="p">,</span> <span class="n">past_guesses</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</span><span id="L-178"><a href="#L-178"><span class="linenos">178</span></a>        <span class="c1"># print(&quot;Hint:&quot;, generate_hint(past_guesses[i], game_data[&#39;solution&#39;]))</span>
+</span><span id="L-179"><a href="#L-179"><span class="linenos">179</span></a>
+</span><span id="L-180"><a href="#L-180"><span class="linenos">180</span></a>        <span class="c1"># TODO: Use the `show_past_guess` function to draw each of the</span>
+</span><span id="L-181"><a href="#L-181"><span class="linenos">181</span></a>        <span class="c1"># past guesses to the canvas.</span>
+</span><span id="L-182"><a href="#L-182"><span class="linenos">182</span></a>
+</span><span id="L-183"><a href="#L-183"><span class="linenos">183</span></a>    <span class="c1"># Now loop through each letter of the current guess and draw it to the board</span>
+</span><span id="L-184"><a href="#L-184"><span class="linenos">184</span></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+</span><span id="L-185"><a href="#L-185"><span class="linenos">185</span></a>        <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">current_guess</span><span class="p">):</span>
+</span><span id="L-186"><a href="#L-186"><span class="linenos">186</span></a>            <span class="k">break</span>
+</span><span id="L-187"><a href="#L-187"><span class="linenos">187</span></a>        <span class="n">hw7_utilities</span><span class="o">.</span><span class="n">color_a_grid_square</span><span class="p">(</span><span class="n">DEFAULT_COLOR</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">guess_count</span><span class="p">))</span>
+</span><span id="L-188"><a href="#L-188"><span class="linenos">188</span></a>        <span class="n">hw7_utilities</span><span class="o">.</span><span class="n">draw_letter_in_grid</span><span class="p">(</span><span class="n">current_guess</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">guess_count</span><span class="p">))</span>
+</span><span id="L-189"><a href="#L-189"><span class="linenos">189</span></a>
+</span><span id="L-190"><a href="#L-190"><span class="linenos">190</span></a>    <span class="c1"># Update the game board</span>
+</span><span id="L-191"><a href="#L-191"><span class="linenos">191</span></a>    <span class="n">canvas</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</span><span id="L-192"><a href="#L-192"><span class="linenos">192</span></a>
+</span><span id="L-193"><a href="#L-193"><span class="linenos">193</span></a><span class="c1">########################## EVENT LISTENERS ##############################</span>
+</span><span id="L-194"><a href="#L-194"><span class="linenos">194</span></a><span class="k">def</span> <span class="nf">handle_typing</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+</span><span id="L-195"><a href="#L-195"><span class="linenos">195</span></a>    <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="L-196"><a href="#L-196"><span class="linenos">196</span></a><span class="sd">    Event handler for key presses in W0rdle.</span>
+</span><span id="L-197"><a href="#L-197"><span class="linenos">197</span></a>
+</span><span id="L-198"><a href="#L-198"><span class="linenos">198</span></a><span class="sd">    We need to handle 3 specific types of key presses:</span>
+</span><span id="L-199"><a href="#L-199"><span class="linenos">199</span></a><span class="sd">      1. `event.keysym == &quot;BackSpace&quot;`</span>
+</span><span id="L-200"><a href="#L-200"><span class="linenos">200</span></a><span class="sd">      2. `event.keysym == &quot;Return&quot;`</span>
+</span><span id="L-201"><a href="#L-201"><span class="linenos">201</span></a><span class="sd">      3. `len(event.keysym) == 1` (single character keys)</span>
+</span><span id="L-202"><a href="#L-202"><span class="linenos">202</span></a>
+</span><span id="L-203"><a href="#L-203"><span class="linenos">203</span></a><span class="sd">    Args:</span>
+</span><span id="L-204"><a href="#L-204"><span class="linenos">204</span></a><span class="sd">      * `event`: The event to process.</span>
+</span><span id="L-205"><a href="#L-205"><span class="linenos">205</span></a>
+</span><span id="L-206"><a href="#L-206"><span class="linenos">206</span></a><span class="sd">    Returns:</span>
+</span><span id="L-207"><a href="#L-207"><span class="linenos">207</span></a><span class="sd">      * `None` (Draws to the screen and also has side effects)</span>
+</span><span id="L-208"><a href="#L-208"><span class="linenos">208</span></a><span class="sd">    &#39;&#39;&#39;</span>
+</span><span id="L-209"><a href="#L-209"><span class="linenos">209</span></a>    <span class="c1"># print(&quot;handle_typing called!&quot;)</span>
+</span><span id="L-210"><a href="#L-210"><span class="linenos">210</span></a>
+</span><span id="L-211"><a href="#L-211"><span class="linenos">211</span></a>    <span class="c1"># If the player hits BackSpace, delete the last character from the</span>
+</span><span id="L-212"><a href="#L-212"><span class="linenos">212</span></a>    <span class="c1"># &#39;current_guess&#39; key in the game_data dictionary</span>
+</span><span id="L-213"><a href="#L-213"><span class="linenos">213</span></a>    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">keysym</span> <span class="o">==</span> <span class="s2">&quot;BackSpace&quot;</span><span class="p">:</span>
+</span><span id="L-214"><a href="#L-214"><span class="linenos">214</span></a>        <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">][:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span><span id="L-215"><a href="#L-215"><span class="linenos">215</span></a>
+</span><span id="L-216"><a href="#L-216"><span class="linenos">216</span></a>    <span class="c1"># If the player hits Return...</span>
+</span><span id="L-217"><a href="#L-217"><span class="linenos">217</span></a>    <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">keysym</span> <span class="o">==</span> <span class="s2">&quot;Return&quot;</span><span class="p">:</span>
+</span><span id="L-218"><a href="#L-218"><span class="linenos">218</span></a>        <span class="c1"># First check that 5 letters have been entered</span>
+</span><span id="L-219"><a href="#L-219"><span class="linenos">219</span></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">])</span> <span class="o">!=</span> <span class="mi">5</span><span class="p">:</span>
+</span><span id="L-220"><a href="#L-220"><span class="linenos">220</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;not enough letters&quot;</span><span class="p">)</span>
+</span><span id="L-221"><a href="#L-221"><span class="linenos">221</span></a>            <span class="c1"># Next check if it&#39;s a valid word in our word list</span>
+</span><span id="L-222"><a href="#L-222"><span class="linenos">222</span></a>        <span class="k">elif</span> <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;word_list&#39;</span><span class="p">]:</span>
+</span><span id="L-223"><a href="#L-223"><span class="linenos">223</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;not a valid word&quot;</span><span class="p">)</span>
+</span><span id="L-224"><a href="#L-224"><span class="linenos">224</span></a>        <span class="c1"># If we make it past those two checks, it&#39;s a valid guess</span>
+</span><span id="L-225"><a href="#L-225"><span class="linenos">225</span></a>        <span class="k">else</span><span class="p">:</span>
+</span><span id="L-226"><a href="#L-226"><span class="linenos">226</span></a>            <span class="c1"># First generate a hint, then finalize the guess</span>
+</span><span id="L-227"><a href="#L-227"><span class="linenos">227</span></a>            <span class="n">hint</span> <span class="o">=</span> <span class="n">generate_hint</span><span class="p">(</span><span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">],</span> <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;solution&#39;</span><span class="p">])</span>
+</span><span id="L-228"><a href="#L-228"><span class="linenos">228</span></a>            <span class="n">finalize_guess</span><span class="p">(</span><span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">],</span> <span class="n">hint</span><span class="p">)</span>
+</span><span id="L-229"><a href="#L-229"><span class="linenos">229</span></a>
+</span><span id="L-230"><a href="#L-230"><span class="linenos">230</span></a>    <span class="c1"># If the player hits any other letter/number/symbol on the keyboard</span>
+</span><span id="L-231"><a href="#L-231"><span class="linenos">231</span></a>    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">keysym</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="L-232"><a href="#L-232"><span class="linenos">232</span></a>        <span class="c1"># If the user hasn&#39;t entered 5 letters, add the entered symbol</span>
+</span><span id="L-233"><a href="#L-233"><span class="linenos">233</span></a>        <span class="c1"># to the current guess (make sure to convert it to upper case!)</span>
+</span><span id="L-234"><a href="#L-234"><span class="linenos">234</span></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+</span><span id="L-235"><a href="#L-235"><span class="linenos">235</span></a>            <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">event</span><span class="o">.</span><span class="n">keysym</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</span><span id="L-236"><a href="#L-236"><span class="linenos">236</span></a>
+</span><span id="L-237"><a href="#L-237"><span class="linenos">237</span></a>    <span class="c1"># As long as the user hasn&#39;t made 6 guesses, show the game board</span>
+</span><span id="L-238"><a href="#L-238"><span class="linenos">238</span></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;past_guesses&#39;</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">:</span>
+</span><span id="L-239"><a href="#L-239"><span class="linenos">239</span></a>        <span class="n">show_game_board</span><span class="p">()</span>
+</span><span id="L-240"><a href="#L-240"><span class="linenos">240</span></a>
+</span><span id="L-241"><a href="#L-241"><span class="linenos">241</span></a><span class="c1">########################## GAME SETUP AND PLAY ##############################</span>
+</span><span id="L-242"><a href="#L-242"><span class="linenos">242</span></a><span class="c1"># Ask the computer to listen for key presses</span>
+</span><span id="L-243"><a href="#L-243"><span class="linenos">243</span></a><span class="n">hw7_utilities</span><span class="o">.</span><span class="n">setup_listener</span><span class="p">(</span><span class="s1">&#39;&lt;Key&gt;&#39;</span><span class="p">,</span> <span class="n">handle_typing</span><span class="p">)</span>
+</span><span id="L-244"><a href="#L-244"><span class="linenos">244</span></a>
+</span><span id="L-245"><a href="#L-245"><span class="linenos">245</span></a><span class="c1"># Step 1. Read in the wordlist and set the secret word</span>
+</span><span id="L-246"><a href="#L-246"><span class="linenos">246</span></a><span class="c1">#read_in_words(&#39;wordlist.txt&#39;)</span>
+</span><span id="L-247"><a href="#L-247"><span class="linenos">247</span></a>
+</span><span id="L-248"><a href="#L-248"><span class="linenos">248</span></a><span class="c1"># Step 1a. Print the solution for debugging</span>
+</span><span id="L-249"><a href="#L-249"><span class="linenos">249</span></a><span class="c1">#print(game_data[&#39;solution&#39;])</span>
+</span><span id="L-250"><a href="#L-250"><span class="linenos">250</span></a>
+</span><span id="L-251"><a href="#L-251"><span class="linenos">251</span></a><span class="c1"># Step 2. show the game board!</span>
+</span><span id="L-252"><a href="#L-252"><span class="linenos">252</span></a><span class="c1">#show_game_board()</span>
 </span></pre></div>
 
 
@@ -609,23 +607,21 @@ guess:</p>
 </span><span id="show_game_board-175"><a href="#show_game_board-175"><span class="linenos">175</span></a>
 </span><span id="show_game_board-176"><a href="#show_game_board-176"><span class="linenos">176</span></a>    <span class="c1"># Loop through all of the past guesses</span>
 </span><span id="show_game_board-177"><a href="#show_game_board-177"><span class="linenos">177</span></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">guess_count</span><span class="p">):</span>
-</span><span id="show_game_board-178"><a href="#show_game_board-178"><span class="linenos">178</span></a>
-</span><span id="show_game_board-179"><a href="#show_game_board-179"><span class="linenos">179</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Drawing past guess...&quot;</span><span class="p">)</span>
-</span><span id="show_game_board-180"><a href="#show_game_board-180"><span class="linenos">180</span></a>        <span class="c1"># print(&quot;Guess to draw:&quot;, past_guesses[i], i)</span>
-</span><span id="show_game_board-181"><a href="#show_game_board-181"><span class="linenos">181</span></a>        <span class="c1"># print(&quot;Hint:&quot;, generate_hint(past_guesses[i], game_data[&#39;solution&#39;]))</span>
-</span><span id="show_game_board-182"><a href="#show_game_board-182"><span class="linenos">182</span></a>
-</span><span id="show_game_board-183"><a href="#show_game_board-183"><span class="linenos">183</span></a>        <span class="c1"># TODO: Use the `show_pass_guess` function to draw each of the</span>
-</span><span id="show_game_board-184"><a href="#show_game_board-184"><span class="linenos">184</span></a>        <span class="c1"># past guesses to the canvas.</span>
-</span><span id="show_game_board-185"><a href="#show_game_board-185"><span class="linenos">185</span></a>
-</span><span id="show_game_board-186"><a href="#show_game_board-186"><span class="linenos">186</span></a>    <span class="c1"># Now loop through each letter of the current guess and draw it to the board</span>
-</span><span id="show_game_board-187"><a href="#show_game_board-187"><span class="linenos">187</span></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
-</span><span id="show_game_board-188"><a href="#show_game_board-188"><span class="linenos">188</span></a>        <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">current_guess</span><span class="p">):</span>
-</span><span id="show_game_board-189"><a href="#show_game_board-189"><span class="linenos">189</span></a>            <span class="k">break</span>
-</span><span id="show_game_board-190"><a href="#show_game_board-190"><span class="linenos">190</span></a>        <span class="n">hw7_utilities</span><span class="o">.</span><span class="n">color_a_grid_square</span><span class="p">(</span><span class="n">DEFAULT_COLOR</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">guess_count</span><span class="p">))</span>
-</span><span id="show_game_board-191"><a href="#show_game_board-191"><span class="linenos">191</span></a>        <span class="n">hw7_utilities</span><span class="o">.</span><span class="n">draw_letter_in_grid</span><span class="p">(</span><span class="n">current_guess</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">guess_count</span><span class="p">))</span>
-</span><span id="show_game_board-192"><a href="#show_game_board-192"><span class="linenos">192</span></a>
-</span><span id="show_game_board-193"><a href="#show_game_board-193"><span class="linenos">193</span></a>    <span class="c1"># Update the game board</span>
-</span><span id="show_game_board-194"><a href="#show_game_board-194"><span class="linenos">194</span></a>    <span class="n">canvas</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</span><span id="show_game_board-178"><a href="#show_game_board-178"><span class="linenos">178</span></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Drawing... Guess Num:&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;Guess to draw:&quot;</span><span class="p">,</span> <span class="n">past_guesses</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</span><span id="show_game_board-179"><a href="#show_game_board-179"><span class="linenos">179</span></a>        <span class="c1"># print(&quot;Hint:&quot;, generate_hint(past_guesses[i], game_data[&#39;solution&#39;]))</span>
+</span><span id="show_game_board-180"><a href="#show_game_board-180"><span class="linenos">180</span></a>
+</span><span id="show_game_board-181"><a href="#show_game_board-181"><span class="linenos">181</span></a>        <span class="c1"># TODO: Use the `show_past_guess` function to draw each of the</span>
+</span><span id="show_game_board-182"><a href="#show_game_board-182"><span class="linenos">182</span></a>        <span class="c1"># past guesses to the canvas.</span>
+</span><span id="show_game_board-183"><a href="#show_game_board-183"><span class="linenos">183</span></a>
+</span><span id="show_game_board-184"><a href="#show_game_board-184"><span class="linenos">184</span></a>    <span class="c1"># Now loop through each letter of the current guess and draw it to the board</span>
+</span><span id="show_game_board-185"><a href="#show_game_board-185"><span class="linenos">185</span></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+</span><span id="show_game_board-186"><a href="#show_game_board-186"><span class="linenos">186</span></a>        <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">current_guess</span><span class="p">):</span>
+</span><span id="show_game_board-187"><a href="#show_game_board-187"><span class="linenos">187</span></a>            <span class="k">break</span>
+</span><span id="show_game_board-188"><a href="#show_game_board-188"><span class="linenos">188</span></a>        <span class="n">hw7_utilities</span><span class="o">.</span><span class="n">color_a_grid_square</span><span class="p">(</span><span class="n">DEFAULT_COLOR</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">guess_count</span><span class="p">))</span>
+</span><span id="show_game_board-189"><a href="#show_game_board-189"><span class="linenos">189</span></a>        <span class="n">hw7_utilities</span><span class="o">.</span><span class="n">draw_letter_in_grid</span><span class="p">(</span><span class="n">current_guess</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">guess_count</span><span class="p">))</span>
+</span><span id="show_game_board-190"><a href="#show_game_board-190"><span class="linenos">190</span></a>
+</span><span id="show_game_board-191"><a href="#show_game_board-191"><span class="linenos">191</span></a>    <span class="c1"># Update the game board</span>
+</span><span id="show_game_board-192"><a href="#show_game_board-192"><span class="linenos">192</span></a>    <span class="n">canvas</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
 </span></pre></div>
 
 
@@ -651,52 +647,52 @@ guess:</p>
 
     </div>
     <a class="headerlink" href="#handle_typing"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="handle_typing-197"><a href="#handle_typing-197"><span class="linenos">197</span></a><span class="k">def</span> <span class="nf">handle_typing</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
-</span><span id="handle_typing-198"><a href="#handle_typing-198"><span class="linenos">198</span></a>    <span class="sd">&#39;&#39;&#39;</span>
-</span><span id="handle_typing-199"><a href="#handle_typing-199"><span class="linenos">199</span></a><span class="sd">    Event handler for key presses in W0rdle.</span>
-</span><span id="handle_typing-200"><a href="#handle_typing-200"><span class="linenos">200</span></a>
-</span><span id="handle_typing-201"><a href="#handle_typing-201"><span class="linenos">201</span></a><span class="sd">    We need to handle 3 specific types of key presses:</span>
-</span><span id="handle_typing-202"><a href="#handle_typing-202"><span class="linenos">202</span></a><span class="sd">      1. `event.keysym == &quot;BackSpace&quot;`</span>
-</span><span id="handle_typing-203"><a href="#handle_typing-203"><span class="linenos">203</span></a><span class="sd">      2. `event.keysym == &quot;Return&quot;`</span>
-</span><span id="handle_typing-204"><a href="#handle_typing-204"><span class="linenos">204</span></a><span class="sd">      3. `len(event.keysym) == 1` (single character keys)</span>
-</span><span id="handle_typing-205"><a href="#handle_typing-205"><span class="linenos">205</span></a>
-</span><span id="handle_typing-206"><a href="#handle_typing-206"><span class="linenos">206</span></a><span class="sd">    Args:</span>
-</span><span id="handle_typing-207"><a href="#handle_typing-207"><span class="linenos">207</span></a><span class="sd">      * `event`: The event to process.</span>
-</span><span id="handle_typing-208"><a href="#handle_typing-208"><span class="linenos">208</span></a>
-</span><span id="handle_typing-209"><a href="#handle_typing-209"><span class="linenos">209</span></a><span class="sd">    Returns:</span>
-</span><span id="handle_typing-210"><a href="#handle_typing-210"><span class="linenos">210</span></a><span class="sd">      * `None` (Draws to the screen and also has side effects)</span>
-</span><span id="handle_typing-211"><a href="#handle_typing-211"><span class="linenos">211</span></a><span class="sd">    &#39;&#39;&#39;</span>
-</span><span id="handle_typing-212"><a href="#handle_typing-212"><span class="linenos">212</span></a>    <span class="c1"># print(&quot;handle_typing called!&quot;)</span>
-</span><span id="handle_typing-213"><a href="#handle_typing-213"><span class="linenos">213</span></a>
-</span><span id="handle_typing-214"><a href="#handle_typing-214"><span class="linenos">214</span></a>    <span class="c1"># If the player hits BackSpace, delete the last character from the</span>
-</span><span id="handle_typing-215"><a href="#handle_typing-215"><span class="linenos">215</span></a>    <span class="c1"># &#39;current_guess&#39; key in the game_data dictionary</span>
-</span><span id="handle_typing-216"><a href="#handle_typing-216"><span class="linenos">216</span></a>    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">keysym</span> <span class="o">==</span> <span class="s2">&quot;BackSpace&quot;</span><span class="p">:</span>
-</span><span id="handle_typing-217"><a href="#handle_typing-217"><span class="linenos">217</span></a>        <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">][:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</span><span id="handle_typing-218"><a href="#handle_typing-218"><span class="linenos">218</span></a>
-</span><span id="handle_typing-219"><a href="#handle_typing-219"><span class="linenos">219</span></a>    <span class="c1"># If the player hits Return...</span>
-</span><span id="handle_typing-220"><a href="#handle_typing-220"><span class="linenos">220</span></a>    <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">keysym</span> <span class="o">==</span> <span class="s2">&quot;Return&quot;</span><span class="p">:</span>
-</span><span id="handle_typing-221"><a href="#handle_typing-221"><span class="linenos">221</span></a>        <span class="c1"># First check that 5 letters have been entered</span>
-</span><span id="handle_typing-222"><a href="#handle_typing-222"><span class="linenos">222</span></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">])</span> <span class="o">!=</span> <span class="mi">5</span><span class="p">:</span>
-</span><span id="handle_typing-223"><a href="#handle_typing-223"><span class="linenos">223</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;not enough letters&quot;</span><span class="p">)</span>
-</span><span id="handle_typing-224"><a href="#handle_typing-224"><span class="linenos">224</span></a>            <span class="c1"># Next check if it&#39;s a valid word in our word list</span>
-</span><span id="handle_typing-225"><a href="#handle_typing-225"><span class="linenos">225</span></a>        <span class="k">elif</span> <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;word_list&#39;</span><span class="p">]:</span>
-</span><span id="handle_typing-226"><a href="#handle_typing-226"><span class="linenos">226</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;not a valid word&quot;</span><span class="p">)</span>
-</span><span id="handle_typing-227"><a href="#handle_typing-227"><span class="linenos">227</span></a>        <span class="c1"># If we make it past those two checks, it&#39;s a valid guess</span>
-</span><span id="handle_typing-228"><a href="#handle_typing-228"><span class="linenos">228</span></a>        <span class="k">else</span><span class="p">:</span>
-</span><span id="handle_typing-229"><a href="#handle_typing-229"><span class="linenos">229</span></a>            <span class="c1"># First generate a hint, then finalize the guess</span>
-</span><span id="handle_typing-230"><a href="#handle_typing-230"><span class="linenos">230</span></a>            <span class="n">hint</span> <span class="o">=</span> <span class="n">generate_hint</span><span class="p">(</span><span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">],</span> <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;solution&#39;</span><span class="p">])</span>
-</span><span id="handle_typing-231"><a href="#handle_typing-231"><span class="linenos">231</span></a>            <span class="n">finalize_guess</span><span class="p">(</span><span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">],</span> <span class="n">hint</span><span class="p">)</span>
-</span><span id="handle_typing-232"><a href="#handle_typing-232"><span class="linenos">232</span></a>
-</span><span id="handle_typing-233"><a href="#handle_typing-233"><span class="linenos">233</span></a>    <span class="c1"># If the player hits any other letter/number/symbol on the keyboard</span>
-</span><span id="handle_typing-234"><a href="#handle_typing-234"><span class="linenos">234</span></a>    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">keysym</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-</span><span id="handle_typing-235"><a href="#handle_typing-235"><span class="linenos">235</span></a>        <span class="c1"># If the user hasn&#39;t entered 5 letters, add the entered symbol</span>
-</span><span id="handle_typing-236"><a href="#handle_typing-236"><span class="linenos">236</span></a>        <span class="c1"># to the current guess (make sure to convert it to upper case!)</span>
-</span><span id="handle_typing-237"><a href="#handle_typing-237"><span class="linenos">237</span></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
-</span><span id="handle_typing-238"><a href="#handle_typing-238"><span class="linenos">238</span></a>            <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">event</span><span class="o">.</span><span class="n">keysym</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-</span><span id="handle_typing-239"><a href="#handle_typing-239"><span class="linenos">239</span></a>
-</span><span id="handle_typing-240"><a href="#handle_typing-240"><span class="linenos">240</span></a>    <span class="c1"># As long as the user hasn&#39;t made 6 guesses, show the game board</span>
-</span><span id="handle_typing-241"><a href="#handle_typing-241"><span class="linenos">241</span></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;past_guesses&#39;</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">:</span>
-</span><span id="handle_typing-242"><a href="#handle_typing-242"><span class="linenos">242</span></a>        <span class="n">show_game_board</span><span class="p">()</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="handle_typing-195"><a href="#handle_typing-195"><span class="linenos">195</span></a><span class="k">def</span> <span class="nf">handle_typing</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+</span><span id="handle_typing-196"><a href="#handle_typing-196"><span class="linenos">196</span></a>    <span class="sd">&#39;&#39;&#39;</span>
+</span><span id="handle_typing-197"><a href="#handle_typing-197"><span class="linenos">197</span></a><span class="sd">    Event handler for key presses in W0rdle.</span>
+</span><span id="handle_typing-198"><a href="#handle_typing-198"><span class="linenos">198</span></a>
+</span><span id="handle_typing-199"><a href="#handle_typing-199"><span class="linenos">199</span></a><span class="sd">    We need to handle 3 specific types of key presses:</span>
+</span><span id="handle_typing-200"><a href="#handle_typing-200"><span class="linenos">200</span></a><span class="sd">      1. `event.keysym == &quot;BackSpace&quot;`</span>
+</span><span id="handle_typing-201"><a href="#handle_typing-201"><span class="linenos">201</span></a><span class="sd">      2. `event.keysym == &quot;Return&quot;`</span>
+</span><span id="handle_typing-202"><a href="#handle_typing-202"><span class="linenos">202</span></a><span class="sd">      3. `len(event.keysym) == 1` (single character keys)</span>
+</span><span id="handle_typing-203"><a href="#handle_typing-203"><span class="linenos">203</span></a>
+</span><span id="handle_typing-204"><a href="#handle_typing-204"><span class="linenos">204</span></a><span class="sd">    Args:</span>
+</span><span id="handle_typing-205"><a href="#handle_typing-205"><span class="linenos">205</span></a><span class="sd">      * `event`: The event to process.</span>
+</span><span id="handle_typing-206"><a href="#handle_typing-206"><span class="linenos">206</span></a>
+</span><span id="handle_typing-207"><a href="#handle_typing-207"><span class="linenos">207</span></a><span class="sd">    Returns:</span>
+</span><span id="handle_typing-208"><a href="#handle_typing-208"><span class="linenos">208</span></a><span class="sd">      * `None` (Draws to the screen and also has side effects)</span>
+</span><span id="handle_typing-209"><a href="#handle_typing-209"><span class="linenos">209</span></a><span class="sd">    &#39;&#39;&#39;</span>
+</span><span id="handle_typing-210"><a href="#handle_typing-210"><span class="linenos">210</span></a>    <span class="c1"># print(&quot;handle_typing called!&quot;)</span>
+</span><span id="handle_typing-211"><a href="#handle_typing-211"><span class="linenos">211</span></a>
+</span><span id="handle_typing-212"><a href="#handle_typing-212"><span class="linenos">212</span></a>    <span class="c1"># If the player hits BackSpace, delete the last character from the</span>
+</span><span id="handle_typing-213"><a href="#handle_typing-213"><span class="linenos">213</span></a>    <span class="c1"># &#39;current_guess&#39; key in the game_data dictionary</span>
+</span><span id="handle_typing-214"><a href="#handle_typing-214"><span class="linenos">214</span></a>    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">keysym</span> <span class="o">==</span> <span class="s2">&quot;BackSpace&quot;</span><span class="p">:</span>
+</span><span id="handle_typing-215"><a href="#handle_typing-215"><span class="linenos">215</span></a>        <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">][:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span><span id="handle_typing-216"><a href="#handle_typing-216"><span class="linenos">216</span></a>
+</span><span id="handle_typing-217"><a href="#handle_typing-217"><span class="linenos">217</span></a>    <span class="c1"># If the player hits Return...</span>
+</span><span id="handle_typing-218"><a href="#handle_typing-218"><span class="linenos">218</span></a>    <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">keysym</span> <span class="o">==</span> <span class="s2">&quot;Return&quot;</span><span class="p">:</span>
+</span><span id="handle_typing-219"><a href="#handle_typing-219"><span class="linenos">219</span></a>        <span class="c1"># First check that 5 letters have been entered</span>
+</span><span id="handle_typing-220"><a href="#handle_typing-220"><span class="linenos">220</span></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">])</span> <span class="o">!=</span> <span class="mi">5</span><span class="p">:</span>
+</span><span id="handle_typing-221"><a href="#handle_typing-221"><span class="linenos">221</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;not enough letters&quot;</span><span class="p">)</span>
+</span><span id="handle_typing-222"><a href="#handle_typing-222"><span class="linenos">222</span></a>            <span class="c1"># Next check if it&#39;s a valid word in our word list</span>
+</span><span id="handle_typing-223"><a href="#handle_typing-223"><span class="linenos">223</span></a>        <span class="k">elif</span> <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;word_list&#39;</span><span class="p">]:</span>
+</span><span id="handle_typing-224"><a href="#handle_typing-224"><span class="linenos">224</span></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;not a valid word&quot;</span><span class="p">)</span>
+</span><span id="handle_typing-225"><a href="#handle_typing-225"><span class="linenos">225</span></a>        <span class="c1"># If we make it past those two checks, it&#39;s a valid guess</span>
+</span><span id="handle_typing-226"><a href="#handle_typing-226"><span class="linenos">226</span></a>        <span class="k">else</span><span class="p">:</span>
+</span><span id="handle_typing-227"><a href="#handle_typing-227"><span class="linenos">227</span></a>            <span class="c1"># First generate a hint, then finalize the guess</span>
+</span><span id="handle_typing-228"><a href="#handle_typing-228"><span class="linenos">228</span></a>            <span class="n">hint</span> <span class="o">=</span> <span class="n">generate_hint</span><span class="p">(</span><span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">],</span> <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;solution&#39;</span><span class="p">])</span>
+</span><span id="handle_typing-229"><a href="#handle_typing-229"><span class="linenos">229</span></a>            <span class="n">finalize_guess</span><span class="p">(</span><span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">],</span> <span class="n">hint</span><span class="p">)</span>
+</span><span id="handle_typing-230"><a href="#handle_typing-230"><span class="linenos">230</span></a>
+</span><span id="handle_typing-231"><a href="#handle_typing-231"><span class="linenos">231</span></a>    <span class="c1"># If the player hits any other letter/number/symbol on the keyboard</span>
+</span><span id="handle_typing-232"><a href="#handle_typing-232"><span class="linenos">232</span></a>    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">keysym</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="handle_typing-233"><a href="#handle_typing-233"><span class="linenos">233</span></a>        <span class="c1"># If the user hasn&#39;t entered 5 letters, add the entered symbol</span>
+</span><span id="handle_typing-234"><a href="#handle_typing-234"><span class="linenos">234</span></a>        <span class="c1"># to the current guess (make sure to convert it to upper case!)</span>
+</span><span id="handle_typing-235"><a href="#handle_typing-235"><span class="linenos">235</span></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+</span><span id="handle_typing-236"><a href="#handle_typing-236"><span class="linenos">236</span></a>            <span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;current_guess&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">event</span><span class="o">.</span><span class="n">keysym</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</span><span id="handle_typing-237"><a href="#handle_typing-237"><span class="linenos">237</span></a>
+</span><span id="handle_typing-238"><a href="#handle_typing-238"><span class="linenos">238</span></a>    <span class="c1"># As long as the user hasn&#39;t made 6 guesses, show the game board</span>
+</span><span id="handle_typing-239"><a href="#handle_typing-239"><span class="linenos">239</span></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">game_data</span><span class="p">[</span><span class="s1">&#39;past_guesses&#39;</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">:</span>
+</span><span id="handle_typing-240"><a href="#handle_typing-240"><span class="linenos">240</span></a>        <span class="n">show_game_board</span><span class="p">()</span>
 </span></pre></div>
 
 

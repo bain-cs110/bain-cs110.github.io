@@ -8,31 +8,38 @@ def quit_program():
     app.destroy()
 
 def select_favorite_genres():
-    gui.show_text("Select favorite genres here...")
+    print("Select favorite genres here...")
     # 1. Allow user to select one or more genres using the
     #    spotify.get_genres_abridged() function
     # 2. Allow user to store / modify / retrieve genres
     #    in order to get song recommendations
+
+    # Once done, go back to the main_menu
+    main_menu()
           
 def select_favorite_artists():
-    gui.show_text("Select favorite artists here...")
+    print("Select favorite artists here...")
     # 1. Allow user to search for an artist using
     #    spotify.get_artists() function
     # 2. Allow user to store / modify / retrieve artists
     #    in order to get song recommendations
 
+    # Once done, go back to the main_menu
+    main_menu()
+
 def discover_new_music():
-    gui.show_text("Show recommendations here...")
+    print("Show recommendations here...")
     # 1. Allow user to retrieve song recommendations using the
     #    spotify.get_similar_tracks() function
-    # 2. List them below
+    # 2. Show them to the user
     # 3. Ask if you want to email them!
+
 
 ### GLOBAL VARIABLES
     
 user_selections = {
     'genres': [],
-    'artists': []
+    'artists': {}
 }
 
 actions = {

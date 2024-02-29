@@ -50,6 +50,7 @@ def _issue_get_request(url:str):
     headers = {
         'Authorization': 'Bearer ' + token
     }
+    url = url.replace(" ", "%20")
     response = requests.get(url, headers=headers, verify=True)
     
     if response.status_code != 200:
@@ -220,7 +221,7 @@ def get_businesses(location:str, limit:int=10, search_term:str=None, categories:
         open_now=open_now,
         attributes=attributes
     )
-    print("DEBUG:", url)
+    print("Use this for debugging:", url)
 
     data = _issue_get_request(url)
     if not simplify:
@@ -396,7 +397,7 @@ def _get_reviews_display_html(reviews:list):
     )
 
 
-def generate_business_table(business: dict, reviews: list = None, to_html=True):
+def generate_business_table(business: dict, reviews: list = None, to_html=False):
     '''
     Makes a formatted table of a business and corresponding review.
 
