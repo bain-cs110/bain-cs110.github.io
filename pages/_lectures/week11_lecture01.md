@@ -1,6 +1,6 @@
 ---
 layout: lecture-two-column
-title: Project 2 (due at 3pm)
+title: Project 2 (due at 5pm)
 type: lecture
 draft: 1
 num: 
