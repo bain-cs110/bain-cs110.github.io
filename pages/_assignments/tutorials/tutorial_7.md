@@ -4,7 +4,7 @@ title: Getting Started on P2
 type: tutorial
 abbreviation: Tutorial 7
 draft: 0
-num: 6
+num: 7
 points: 100
 due_date: 2024-03-06
 canvas_title: Tutorial 7

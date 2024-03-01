@@ -12,6 +12,9 @@ exercise_url: "lecture22.zip"
 mini_quiz_id: quizzes/232628
 mini_quiz_num: 10
 mini_quiz_title: Complex Dictionaries
+slides:
+   - url: https://docs.google.com/presentation/d/13Bmw84HNmCsQc3IGM4BjPJYN55rZN3Yl68rmhzSXFVE/edit?usp=sharing
+     title: "Dictionaries and APIs"
 ---
 
 Today we'll continue our work with dictionaries, but also expand our repertoire of skills to include getting info from the internet using API Endpoints to query data from servers like YouTube, Spotify, the CTA, and more.

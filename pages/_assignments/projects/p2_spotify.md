@@ -3,7 +3,7 @@ layout: assignment-two-column
 title: Project 2 - Spotify
 due_date: 2024-03-13
 abbreviation: P2S
-draft: 0
+draft: 1
 ---
 
 <table style="width:40%; border:0px;">
