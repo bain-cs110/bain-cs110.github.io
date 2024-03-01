@@ -10,7 +10,7 @@ canvas_id: friday-lecture-22-dictionaries-and-apis
 canvas_title: Friday - Lecture 22 - Dictionaries and APIs
 exercise_url: "lecture22.zip"
 mini_quiz_id: quizzes/232628
-mini_quiz_num: 10
+mini_quiz_num: 13
 mini_quiz_title: Complex Dictionaries
 slides:
    - url: https://docs.google.com/presentation/d/13Bmw84HNmCsQc3IGM4BjPJYN55rZN3Yl68rmhzSXFVE/edit?usp=sharing
