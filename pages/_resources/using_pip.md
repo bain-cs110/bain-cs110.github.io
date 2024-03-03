@@ -103,8 +103,10 @@ For your convenience, we have made you a little cheatsheet to help you get famil
             </tr>
         </tbody>
     </table>
-    <p>Other optional commands you may find useful&hellip;</p>
-    <table class="instructions" style="border-top: solid 1px #444; border-bottom: solid 1px #444; border-collapse: collapse; width: 100%; margin-bottom: 30px;">
+
+<p>Other optional commands you may find useful</p>
+
+<table class="instructions" style="border-top: solid 1px #444; border-bottom: solid 1px #444; border-collapse: collapse; width: 100%; margin-bottom: 30px;">
         <thead>
             <tr style="border-bottom: solid 1px #444;">
                 <th scope="col" style="line-height: 1.5em; margin-top: 5px; vertical-align: top; border-bottom: dotted 1px #999; padding: 8px; text-align: left; font-size: 1em; min-width: 80px;">Idea</th>
@@ -151,16 +153,15 @@ For your convenience, we have made you a little cheatsheet to help you get famil
         </tbody>
     </table>
 
-* * *
-
 ## Using PIP
 
-You can use `pip` to install three packages for P2: `sendgrid`, `requests`, and then to upgrade `certifi`. If `pip3` doesn't work on your computer, then try replacing `pip3` with `pip`. (If you're on Windows, you might also try `py -m pip install requests` and the same syntax to install the other libraries).
+You can use `pip` to install three packages for P2: `sendgrid`, `requests`, `customtkinter` and then to upgrade `certifi`. If `pip3` doesn't work on your computer, then try replacing `pip3` with `pip`. (If you're on Windows, you might also try `py -m pip install requests` and the same syntax to install the other libraries).
 
 Open your Terminal (MacOS) or Command Prompt (Windows) and execute the following commands (from any directory)
 
 ```bash
 pip3 install sendgrid                        # a module to interact with Twilio
 pip3 install requests                        # a module for querying internet resources
+pip3 install customtkinter                   # cool tkinter themes
 pip3 install --upgrade certifi               # for SSL certificates
 ```

@@ -24,7 +24,7 @@ For this option, you are going to use the Yelp API to create a restaurant recomm
 
 <iframe src="https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=2cabf881-7873-4b78-a8d6-b125001d9a6b&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
 
-Note: this is only one way of implementing this program, and includes some extra credit features. Feel free to do it ***your way!***
+Note: this is only one way of implementing this program, and includes some extra credit features. Feel free to do it **your way!**
 
 Please implement the following (5) required features of your restaurant recommendation system (we encourage you to start with the `restaurant_finder.py` template):
 

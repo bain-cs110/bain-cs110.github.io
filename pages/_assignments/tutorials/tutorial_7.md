@@ -36,16 +36,16 @@ When you're done, complete one of the two options (either / or) listed below:
 
 ## Option 1: Yelp Option
 
-Create a brand new file called `tutorial6.py` directly inside of your `project2` folder (the location matters). Your directory structure should look like this:
+Create a brand new file called `tutorial7.py` directly inside of your `project2` folder (the location matters). Your directory structure should look like this:
 
 ```bash
 ├── apis
 ├── restaurant_finder.py
 ├── tests
-└── tutorial06.py
+└── tutorial7.py
 ```
 
-Next, paste the following code into your `tutorial6.py` file and run it.
+Next, paste the following code into your `tutorial7.py` file and run it.
 
 ```python
 from apis import yelp
@@ -74,7 +74,7 @@ print(table_text)
 
 When you're done outputting the data up the Yelp documentation and navigate down to the `get_businesses` function. Note all of the keyword  (optional) parameters that the function accepts.
 
-Next, go back to your `tutorial6.py` file and modify the get_businesses(...) function call by:
+Next, go back to your `tutorial7.py` file and modify the get_businesses(...) function call by:
 
 1. Use the various keyword arguments (`price`, `category`, and/or `location`) to change which results get displayed.
 2. Use the `sort_by` keyword argument to change the sort order.
@@ -85,16 +85,16 @@ Next, go back to your `tutorial6.py` file and modify the get_businesses(...) fun
 
 ## Option 2: Spotify Option
 
-Create a brand new file called `tutorial6.py` directly inside of your `project2` folder (the location matters). Your directory structure should look like this:
+Create a brand new file called `tutorial7.py` directly inside of your `project2` folder (the location matters). Your directory structure should look like this:
 
 ```bash
 ├── apis
 ├── music_finder.py
 ├── tests
-└── tutorial06.py
+└── tutorial7.py
 ```
 
-Next, paste the following code into your `tutorial6.py` file and run it.
+Next, paste the following code into your `tutorial7.py` file and run it.
 
 ```python
 from apis import spotify
@@ -115,7 +115,7 @@ When you're done outputting the data, open the Spotify documentation and navigat
 
 While each parameter is technically optional, this function needs some seed data in order to give you song recommendations. Up to 5 seed values may be provided in any combination of seed_artists, seed_tracks and seed_genres. In other words: `len(artist_ids) + len(track_ids) + len(genres)` must be between 1 and 5.
 
-Next, go back to your `tutorial06.py` file and try invoking the `spotify.get_similar_tracks` function as follows:
+Next, go back to your `tutorial7.py` file and try invoking the `spotify.get_similar_tracks` function as follows:
 
 ```python
 track_recommendations = spotify.get_similar_tracks(artist_ids=['6vWDO969PvNqNYHIOW5v0m'])
