@@ -6,7 +6,7 @@ draft: 0
 num: 24
 description: "(Mini-Quiz 14)"
 canvas_title: Lecture 24 (Pre-Recorded) - Getting Ready for P2 - Mini-Quiz 14
-canvas_id: 
+canvas_id: 1374668
 due_date: 2024-03-06
 exercise_url: "lecture24.zip"
 lec_assignment: 1
