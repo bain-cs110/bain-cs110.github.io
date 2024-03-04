@@ -59,7 +59,10 @@ ordering: -1
         <span><h3>Nicole Tartakovsky</h3><h4>Peer Mentor</h4></span>
     </a></li>
     <li><a><img alt="picture of Renato" src="{{site.url}}/assets/images/directory/renato.jpg">
-        <span><h3>Renato de Souza Cardoso </h3><h4>Peer Mentor</h4></span>
+        <span><h3>Renato de Souza Cardoso</h3><h4>Peer Mentor</h4></span>
+    </a></li>
+    <li><a><img alt="picture of Sydney" src="{{site.url}}/assets/images/directory/sydney.jpg">
+        <span><h3>Sydney Ter Molen</h3><h4>Peer Mentor</h4></span>
     </a></li>
      <li><a><img alt="picture of Zoryah" src="{{site.url}}/assets/images/directory/zoryah.jpg">
         <span><h3>Zoryah Gray</h3><h4>Peer Mentor</h4></span>
