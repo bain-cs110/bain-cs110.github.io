@@ -65,7 +65,7 @@ while True:
         print("Running...", [python_path, '-m', 'pip',
               'install', '--upgrade', user_input.strip()])
         
-        if user_input != "certifi":
+        if user_input != "certifi" or sys.platform != "darwin":
             result = subprocess.run(
                 [python_path, '-m', 'pip', 'install', '--upgrade', user_input.strip()], stdout=subprocess.PIPE)
         
