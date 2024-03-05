@@ -98,13 +98,13 @@ Allow the user to download an mp3 file of the song preview of at least one of th
     </thead>
     <tbody>
         <tr>
-            <td>Main Program Loop</td>
+            <td>Main Program</td>
             <td>5 points</td>
             <td><ul>
-                <li>Loop handles errors (incorrect inputs) (Note: this applies anywhere you ask the user for input)</li>
-                <li>Loop prompts the user for their input</li>
-                <li>Loop honors user requests</li>
-                <li>Loop does not exit unless user asks to quit</li></ul>
+                <li>Handles errors (incorrect inputs) (Note: this applies anywhere you ask the user for input)</li>
+                <li>App prompts the user for their input</li>
+                <li>App honors user requests</li>
+                <li>App does not exit unless user asks to quit</li></ul>
             </td>
         </tr>
         <tr>
@@ -112,8 +112,8 @@ Allow the user to download an mp3 file of the song preview of at least one of th
             <td>8 points</td>
             <td>
                 <ul>
-                    <li>Displays the user's selected genre(s) if any</li>
-                    <li>Displays available genres</li>
+                    <li>Displays the user's selected genre(s) if any on the Main Menu</li>
+                    <li>Displays available genres via the GUI</li>
                     <li>Allows user to select among the genres that are presented (and no others)</li>
                     <li>Allows user to clear out their selected genres and start over</li>
                 </ul>
@@ -127,7 +127,7 @@ Allow the user to download an mp3 file of the song preview of at least one of th
                     <li>Allows user to search for artist</li>
                     <li>Allows user to select among artists returned from Spotify</li>
                     <li>Allows user to clear out selected artists and start over</li>
-                    <li>Displays the names of the user's selected artists</li>
+                    <li>Displays the names of the user's selected artists via the GUI</li>
                 </ul>
             </td>
         </tr>
