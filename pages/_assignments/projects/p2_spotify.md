@@ -32,8 +32,8 @@ Please implement the following (3) required features of your restaurant recommen
 
 You will give the user the option of selecting one or more genres that can be used to “seed” the Spotify song recommendations system. To do this you will do the following:
 
-1. Present the user with a list of available genres using the `spotify.get_genres` function — feel free to modify it.
-2. Ask the user to select one or more genres and store their genre selections in a list variable called “genres”
+1. Present the user with a list of available genres using the `spotify.get_genres` function.
+2. Ask the user to select one or more genres and store them in the `user_selections` dictionary.
 3. The user should be able to clear out this selection.
 
 ### 2. Allow the user to select one or more artists
@@ -41,8 +41,8 @@ You will give the user the option of selecting one or more genres that can be us
 You will also give the user the option of selecting one or more artists that can also be used to “seed” the Spotify song recommendations system. To do this you will do the following:
 
 1. Provide a way for the user to search for and display artists (use the `spotify.get_artists` function)
-2. Provide a way for the user to select the artists they’re interested in and store the corresponding artist objects in a list variable called “artists”
-3. Allow the user to either clear out or append artists to their artists list.
+2. Provide a way for the user to select the artists they’re interested in and store them in the `user_selections` dictionary (hint: store their ids too...)
+3. Allow the user to either clear out or append artists their selections.
 
 ### 3. Generate and email song recommendations
 
@@ -63,8 +63,8 @@ Your email *needs to be readable.* You can either design a custom email or use t
 If you have time and need extra credit, you may enhance your program by also giving the user the option of selecting one or more tracks to “seed” the Spotify song recommendations system. To do this, you will do the following:
 
 1. Provide a way for the user to search for and display tracks
-1. Provide a way for the user to select the tracks they’re interested in and store the corresponding track objects in a list variable called “tracks”
-1. Allow the user to either clear out or append tracks to their tracks list.
+1. Provide a way for the user to select the tracks they’re interested in and store them in the `user_selections` dictionary.
+1. Allow the user to either clear out or append to their tracks list.
 
 #### [2 Points] Extra Credit: Search for similar artists
 

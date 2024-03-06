@@ -33,7 +33,7 @@ Please implement the following (5) required features of your restaurant recommen
 You will give the user the option of selecting one or more restaurant categories that can be used to filter the restaurants. To do this you will do the following:
 
 1. Present the user with some subset from the list of available categories (see `yelp.get_categories` for the complete list).
-2. Ask the user to select one or more categories and store their selections in a variable called categories (a comma-separated list of categories).
+2. Ask the user to select one or more categories and store their selections and store them in the `user_selections` dictionary.
 3. Proved the user with a way to either clear out or update their selected categories.
 
 ### 2. Allow the user to set the sorting criteria
@@ -45,7 +45,7 @@ How results are ordered really matters in search. Yelp allows 4 different option
 Given the user’s selected categories and sorting criteria:
 
 1. Retrieve the restaurants, and allow the user to specify a location before executing the search.
-2. Print the retrieved restaurants to the GUI in some coherent format.
+2. Show the retrieved restaurants on the GUI in some coherent format.
 
 ### 4. Allow the user to preview an individual restaurant
 
