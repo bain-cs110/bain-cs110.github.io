@@ -544,6 +544,11 @@ def _issue_get_request(url):
     headers = _generate_authentication_header()
     url = url.replace(" ", "%20")
     response = requests.get(url, headers=headers, verify=True)
+
+    if response.status_code == 429:
+        retry_length = response.headers['Retry-After']
+        raise Exception(f"Spotify API is overloaded! Please try again in {retry_length} seconds.")
+
     return response.json()
 
 def _simplify_tracks(tracks: list):
