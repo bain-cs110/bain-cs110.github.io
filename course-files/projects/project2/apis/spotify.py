@@ -482,7 +482,7 @@ def _get_formatted_tracklist_table_html(tracks: list):
 # Some private, helper functions utilities #
 ############################################
 
-def _generate_authentication_header():
+def _generate_authentication_header(backup=False):
 
     try:
         from apis import secret_tokens
@@ -510,12 +510,15 @@ def _generate_authentication_header():
     headers['Authorization'] = f"Basic {base64Message}"
     data['grant_type'] = "client_credentials"
 
+    if not backup:
+        try:
+            r = requests.post(auth_url, headers=headers, data=data)
+            token = r.json()['access_token']
+        except:
+            print("DEBUG: Couldn't use default API Key. Trying backup!")
+            backup = True
 
-    try:
-        r = requests.post(auth_url, headers=headers, data=data)
-        token = r.json()['access_token']
-
-    except:
+    if backup:
         print("DEBUG: Using backup...")
         time.sleep(1)
         from apis import authentication
@@ -547,7 +550,12 @@ def _issue_get_request(url):
 
     if response.status_code == 429:
         retry_length = response.headers['Retry-After']
-        raise Exception(f"Spotify API is overloaded! Please try again in {retry_length} seconds.")
+        print(f"Spotify API is overloaded! It asked us to try again in {retry_length} seconds.")
+        print("We're going to try to use the backup...")
+        headers = _generate_authentication_header(backup=True)
+        response = requests.get(url, headers=headers, verify=True)
+        if response.status_code != 200:
+            raise Exception("Uh oh. Couldn't use the backup either. It's likely you've given this function invalid inputs!")
 
     return response.json()
 
