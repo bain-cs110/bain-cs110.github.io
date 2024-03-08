@@ -77,7 +77,7 @@ Enhance your program by also giving the user the option of specifying only resta
 
 #### [3 Points] Allow the user to filter by restaurants that are “hot and new”
 
-Enhance your program by also giving the user the option of specifying only restaurants which are “hot and new.” See the <a href="https://www.yelp.com/developers/documentation/v3/business_search" target="_blank">Yelp documentation</a> for more info.
+Enhance your program by also giving the user the option of specifying only restaurants which are “hot and new.” See the <a href="https://docs.developer.yelp.com/reference/v3_business_search" target="_blank">Yelp documentation (link updated)</a> for more info. (Look under the **attributes** argument)
 
 #### [3 Points] Extra Credit: Generate an HTML file
 
