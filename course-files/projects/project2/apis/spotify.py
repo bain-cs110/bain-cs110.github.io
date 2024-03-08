@@ -500,25 +500,18 @@ def _generate_authentication_header(backup=False):
                 not_cached = False
                 
     if not_cached:
+        
         print("Generating new Spotify Authentication Token...") 
-        try:
-            from apis import secret_tokens
-            if hasattr(secret_tokens, 'ALT_SPOTIFY_CLIENT_ID') and hasattr(secret_tokens, 'ALT_SPOTIFY_CLIENT_SECRET'):
-                current_timestamp = int(time.time())
-                if current_timestamp % 10 < 7:
-                    alt_in_use = True
-                    client_id = secret_tokens.ALT_SPOTIFY_CLIENT_ID
-                    client_secret = secret_tokens.ALT_SPOTIFY_CLIENT_SECRET
-            else:
-                client_id = secret_tokens.SPOTIFY_CLIENT_ID
-                client_secret = secret_tokens.SPOTIFY_CLIENT_SECRET
-
-        except:
-            title = 'IMPORTANT: You Need an Access Token!'
-            error_message = '\n\n\n' + '*' * len(title) + '\n' + \
-                title + '\n' + '*' * len(title) + \
-                '\nPlease download the the secret_tokens.py file from Canvas and save it in your apis directory.\n\n'
-            raise Exception(error_message)
+        from apis import secret_tokens
+        
+        current_timestamp = int(time.time())
+        if current_timestamp % 10 < 7:
+            alt_in_use = True
+            client_id = secret_tokens.ALT_SPOTIFY_CLIENT_ID
+            client_secret = secret_tokens.ALT_SPOTIFY_CLIENT_SECRET
+        else:
+            client_id = secret_tokens.SPOTIFY_CLIENT_ID
+            client_secret = secret_tokens.SPOTIFY_CLIENT_SECRET
 
         # Step 1 - Authorization
         auth_url = "https://accounts.spotify.com/api/token"
