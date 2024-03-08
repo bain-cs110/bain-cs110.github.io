@@ -86,6 +86,8 @@ def popup_input(prompt=""):
     dialog = customtkinter.CTkInputDialog(text=prompt, title="Input Popup")
     dialog.after(200, dialog.focus_force())
     text = dialog.get_input()
+    if text == "":
+        text = None
     return text
 
 def _make_button(text="", function=None, grid_row=None, grid_col=None):

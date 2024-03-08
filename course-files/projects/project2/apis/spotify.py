@@ -3,10 +3,13 @@ try:
     utilities.modify_system_path()
 except:
     pass
-
+import os
 import requests
 import base64
 import time
+import json
+
+SPOTIFY_JSON = "spotify_token.json"
 
 __docformat__ = "google"
 
@@ -483,44 +486,71 @@ def _get_formatted_tracklist_table_html(tracks: list):
 ############################################
 
 def _generate_authentication_header(backup=False):
-
-    try:
-        from apis import secret_tokens
-        client_id = secret_tokens.SPOTIFY_CLIENT_ID
-        client_secret = secret_tokens.SPOTIFY_CLIENT_SECRET
-
-    except:
-        title = 'IMPORTANT: You Need an Access Token!'
-        error_message = '\n\n\n' + '*' * len(title) + '\n' + \
-            title + '\n' + '*' * len(title) + \
-            '\nPlease download the the secret_tokens.py file from Canvas and save it in your apis directory.\n\n'
-        raise Exception(error_message)
-
-    # Step 1 - Authorization
-    auth_url = "https://accounts.spotify.com/api/token"
-    headers = {}
-    data = {}
-
-    # Encode as Base64
-    message = f"{client_id}:{client_secret}"
-    messageBytes = message.encode('ascii')
-    base64Bytes = base64.b64encode(messageBytes)
-    base64Message = base64Bytes.decode('ascii')
-
-    headers['Authorization'] = f"Basic {base64Message}"
-    data['grant_type'] = "client_credentials"
-
-    if not backup:
+    
+    not_cached = True
+    alt_in_use = False
+    if os.path.isfile(SPOTIFY_JSON):
+        with open(SPOTIFY_JSON) as json_file:
+            data = json.load(json_file)
+            if time.time() >= float(data['expires']):
+                print("Auth token expired, time to refresh!")
+                os.remove(SPOTIFY_JSON)
+            else:
+                token = data['token']
+                not_cached = False
+                
+    if not_cached:
+        print("Generating new Spotify Authentication Token...") 
         try:
-            r = requests.post(auth_url, headers=headers, data=data)
-            token = r.json()['access_token']
+            from apis import secret_tokens
+            if hasattr(secret_tokens, 'ALT_SPOTIFY_CLIENT_ID') and hasattr(secret_tokens, 'ALT_SPOTIFY_CLIENT_SECRET'):
+                current_timestamp = int(time.time())
+                if current_timestamp % 10 < 7:
+                    alt_in_use = True
+                    client_id = secret_tokens.ALT_SPOTIFY_CLIENT_ID
+                    client_secret = secret_tokens.ALT_SPOTIFY_CLIENT_SECRET
+            else:
+                client_id = secret_tokens.SPOTIFY_CLIENT_ID
+                client_secret = secret_tokens.SPOTIFY_CLIENT_SECRET
+
         except:
-            print("DEBUG: Couldn't use default API Key. Trying backup!")
-            backup = True
+            title = 'IMPORTANT: You Need an Access Token!'
+            error_message = '\n\n\n' + '*' * len(title) + '\n' + \
+                title + '\n' + '*' * len(title) + \
+                '\nPlease download the the secret_tokens.py file from Canvas and save it in your apis directory.\n\n'
+            raise Exception(error_message)
+
+        # Step 1 - Authorization
+        auth_url = "https://accounts.spotify.com/api/token"
+        headers = {}
+        data = {}
+
+        # Encode as Base64
+        message = f"{client_id}:{client_secret}"
+        messageBytes = message.encode('ascii')
+        base64Bytes = base64.b64encode(messageBytes)
+        base64Message = base64Bytes.decode('ascii')
+
+        headers['Authorization'] = f"Basic {base64Message}"
+        data['grant_type'] = "client_credentials"
+
+        if not backup:
+            try:
+                r = requests.post(auth_url, headers=headers, data=data)
+                token = r.json()['access_token']
+                with open(SPOTIFY_JSON, "w") as outfile:
+                    json_object = json.dumps({ 'token': token, 'expires': time.time() + 3540, 'alt?':alt_in_use }, indent=4)
+                    outfile.write(json_object)
+                
+            except:
+                print("DEBUG: Couldn't use either default API Key. Trying backup!")
+                backup = True
 
     if backup:
         print("DEBUG: Using backup...")
         time.sleep(1)
+        os.remove(SPOTIFY_JSON)
+        
         from apis import authentication
         try:
             token = authentication.get_token(
@@ -544,13 +574,17 @@ def _issue_get_request(url):
     Returns whatever Spotify's API endpoint gives back.
     '''
     print("Use this for debugging:", url)
+    
     headers = _generate_authentication_header()
+    
     url = url.replace(" ", "%20")
     response = requests.get(url, headers=headers, verify=True)
 
     if response.status_code == 429:
         retry_length = response.headers['Retry-After']
         print(f"Spotify API is overloaded! It asked us to try again in {retry_length} seconds.")
+        os.remove(SPOTIFY_JSON)
+        
         print("We're going to try to use the backup...")
         headers = _generate_authentication_header(backup=True)
         response = requests.get(url, headers=headers, verify=True)

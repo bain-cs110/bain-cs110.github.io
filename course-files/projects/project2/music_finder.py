@@ -10,7 +10,7 @@ def quit_program():
 def select_favorite_genres():
     print("Select favorite genres here...")
     # 1. Allow user to select one or more genres using the
-    #    spotify.get_genres_abridged() function
+    #    spotify.get_genres() function
     # 2. Allow user to store / modify / retrieve genres
     #    in order to get song recommendations
 
