@@ -644,7 +644,7 @@ def _simplify_tracks(tracks: list):
                 'share_url': 'https://open.spotify.com/artist/' + item['album']['artists'][0]['id']
             }
         except Exception:
-           pass
+            pass
         simplified.append(track)
     return simplified
 
