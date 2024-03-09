@@ -542,7 +542,8 @@ def _generate_authentication_header(backup=False):
     if backup:
         print("DEBUG: Using backup...")
         time.sleep(1)
-        os.remove(SPOTIFY_JSON)
+        if os.path.isfile(SPOTIFY_JSON):
+            os.remove(SPOTIFY_JSON)
         
         from apis import authentication
         try:
@@ -576,7 +577,9 @@ def _issue_get_request(url):
     if response.status_code == 429:
         retry_length = response.headers['Retry-After']
         print(f"Spotify API is overloaded! It asked us to try again in {retry_length} seconds.")
-        os.remove(SPOTIFY_JSON)
+        
+        if os.path.isfile(SPOTIFY_JSON):
+            os.remove(SPOTIFY_JSON)
         
         print("We're going to try to use the backup...")
         headers = _generate_authentication_header(backup=True)
