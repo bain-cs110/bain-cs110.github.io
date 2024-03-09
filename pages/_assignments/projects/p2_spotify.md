@@ -137,7 +137,7 @@ Allow the user to download an mp3 file of the song preview of at least one of th
             <td><ul>
                 <li>Correctly passes arguments of correct type into the get_similar_tracks() function.</li>
                 <li>Displays recommendations to GUI (including track name and artist name).</li>
-                <li>Successfully emails the recommendation list.</li></ul>
+                <li>Successfully emails the recommendation list in either a readable plain text format or in the provided HTML format.</li></ul>
             </td>
         </tr>
         <tr>

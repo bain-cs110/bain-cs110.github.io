@@ -158,7 +158,7 @@ In addition to searching Yelp, try to integrate data from Spotify as well! Maybe
             <td>3 points</td>
             <td>
                 <ul>
-                    <li>Successfully emails a restaurant recommendation and its reviews to a user</li>
+                    <li>Successfully emails a restaurant recommendation and its reviews to a user in either a readable plain text format or in the provided HTML format.</li>
                 </ul>
             </td>
         </tr>
