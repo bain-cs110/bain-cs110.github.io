@@ -80,6 +80,9 @@ def get_top_tracks_by_artist(artist_id: str, simplify: bool = True):
     Returns:
         a `list` of tracks.
     '''
+    if len(artist_id) != 22:
+        raise TypeError(f"This function expects an Artist ID but you gave it {artist_id}.")
+    
     url = 'https://api.spotify.com/v1/artists/' + \
         artist_id + '/top-tracks?country=us'
     data = _issue_get_request(url)
@@ -121,6 +124,8 @@ def get_related_artists(artist_id: str, simplify: bool = True):
     Returns:
         a `list` of artists.
     '''
+    if len(artist_id) != 22:
+        raise TypeError(f"This function expect an Artist ID but you gave it {artist_id}.")
     url = 'https://api.spotify.com/v1/artists/' + artist_id + '/related-artists'
     data = _issue_get_request(url)
     if not simplify:
@@ -226,8 +231,14 @@ def get_similar_tracks(artist_ids: list = [], track_ids: list = [], genres: list
 
     params = []
     if artist_ids:
+        for i in artist_ids:
+            if len(i) != 22:
+                raise TypeError(f"This input requires Artist IDs but you gave it {i}.")
         params.append('seed_artists=' + ','.join(artist_ids))
     if track_ids:
+        for i in track_ids:
+            if len(i) != 22:
+                raise TypeError(f"This input requires Track IDs but you gave it {i}.")
         params.append('seed_tracks=' + ','.join(track_ids))
     if genres:
         params.append('seed_genres=' + ','.join(genres))
@@ -237,6 +248,9 @@ def get_similar_tracks(artist_ids: list = [], track_ids: list = [], genres: list
     data = _issue_get_request(url)
     if not simplify:
         return data
+    
+    if 'tracks' not in data:
+        raise Exception("We didn't get any track data back from Spotify. Double check the debugging URL to see you're using valid inputs!")
 
     return _simplify_tracks(data['tracks'])
 
