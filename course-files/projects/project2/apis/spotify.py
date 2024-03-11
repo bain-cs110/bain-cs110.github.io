@@ -2382,7 +2382,7 @@ def _issue_get_request(url):
 
     Returns whatever Spotify's API endpoint gives back.
     '''
-    print("Use this for debugging:", url)
+    print("Here's the request we're going to make.\n", url, "\nYou can't access it in a browser, but you can double check the inputs you gave the function are part of the URL.")
     
     headers = _generate_authentication_header()
     

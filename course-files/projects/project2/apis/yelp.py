@@ -221,7 +221,7 @@ def get_businesses(location:str, limit:int=10, search_term:str=None, categories:
         open_now=open_now,
         attributes=attributes
     )
-    print("Use this for debugging:", url)
+    print("Here's the request we're going to make.\n", url, "\nYou can't access it in a browser, but you can double check the inputs you gave the function are part of the URL.")
 
     data = _issue_get_request(url)
     if not simplify:
