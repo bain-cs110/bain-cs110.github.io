@@ -275,7 +275,7 @@ def get_reviews(business_id:str, simplify:bool=True):
         a `list` of reviews (dictionaries).
     '''
     # https://www.yelp.com/developers/documentation/v3/business_reviews
-    url = 'https://api.yelp.com/v3/businesses/' + business_id + '/reviews'
+    url = 'https://api.yelp.com/v3/businesses/' + business_id.strip() + '/reviews'
     data = _issue_get_request(url)
     if not simplify:
         return data
