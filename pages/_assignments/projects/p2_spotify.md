@@ -113,7 +113,7 @@ Allow the user to download an mp3 file of the song preview of at least one of th
             <td>
                 <ul>
                     <li>Displays the user's selected genre(s) if any on the Main Menu</li>
-                    <li>Displays available genres via the GUI</li>
+                    <li>Displays available genres via the GUI (either popup or textbox)</li>
                     <li>Allows user to select among the genres that are presented (and no others)</li>
                     <li>Allows user to clear out their selected genres and start over</li>
                 </ul>
@@ -127,7 +127,7 @@ Allow the user to download an mp3 file of the song preview of at least one of th
                     <li>Allows user to search for artist</li>
                     <li>Allows user to select among artists returned from Spotify</li>
                     <li>Allows user to clear out selected artists and start over</li>
-                    <li>Displays the names of the user's selected artists via the GUI</li>
+                    <li>Displays the names of the user's selected artists via the GUI textbox</li>
                 </ul>
             </td>
         </tr>
@@ -136,7 +136,7 @@ Allow the user to download an mp3 file of the song preview of at least one of th
             <td>11 points</td>
             <td><ul>
                 <li>Correctly passes arguments of correct type into the get_similar_tracks() function.</li>
-                <li>Displays recommendations to GUI (including track name and artist name).</li>
+                <li>Displays recommendations to the GUI textbox (including track name and artist name).</li>
                 <li>Successfully emails the recommendation list in either a readable plain text format or in the provided HTML format.</li></ul>
             </td>
         </tr>

@@ -115,8 +115,8 @@ In addition to searching Yelp, try to integrate data from Spotify as well! Maybe
             <td>8 points</td>
             <td>
                 <ul>
-                    <li>Displays the user's selected categories(s) if any in the GUI</li>
-                    <li>Displays the available Yelp categories from which to choose in the GUI</li>
+                    <li>Displays the user's selected categories(s) if any in the GUI Textbox.</li>
+                    <li>Displays the available Yelp categories from which to choose in the GUI Textbox or Popup Window.</li>
                     <li>Allows user to select among categories</li>
                     <li>Allows user to clear out selected categories and start over</li>
                 </ul>
@@ -138,7 +138,7 @@ In addition to searching Yelp, try to integrate data from Spotify as well! Maybe
                 <ul>
                     <li>Allows the user to specify a location</li>
                     <li>Results honor user’s selected location, categories, and sorting criteria</li>
-                    <li>Shows the restaurants to the GUI in some coherent format</li>
+                    <li>Shows the restaurants to the GUI textbox in some coherent format</li>
                 </ul>
             </td>
         </tr>
