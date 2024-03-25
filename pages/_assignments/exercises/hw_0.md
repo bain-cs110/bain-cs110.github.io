@@ -36,7 +36,7 @@ Download the latest version (3.12.x) of python here: <a href="https://www.python
 >
 > Make sure that the checkbox at the very bottom that says Add Python 3.x (the screenshots show Python 3.7 but this applies to all Python installations) to PATH is checked: <img alt="windows installer" class="large frame" src="{{site.url}}/assets/images/hw0/command-prompt-windows-installer.png" />
 
-> <mark>Windows users should also follow</mark> the <a href="">instructions here</a> to make it so you can double click on a <code>.py</code> file and have it open in IDLE automatically.
+> <mark>Windows users should also follow</mark> the <a href="https://canvas.northwestern.edu/courses/208990/pages/windows-idle-setup">instructions here</a> to make it so you can double click on a <code>.py</code> file and have it open in IDLE automatically.
 
 Once the installer is finished, you're done with Activity 0! If you have an issue, feel free to post a question on edSTEM or come to class on Friday with your question (I can help diagnose issues after class).
 
