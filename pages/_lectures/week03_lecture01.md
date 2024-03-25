@@ -1,8 +1,8 @@
 ---
 layout: module
-title: MLK Jr. Day (University Holiday)
+title: Abstraction
 type: lecture
 draft: 1
-num: 
-due_date: 2024-01-15
+num: 6
+due_date: 2024-04-08
 ---

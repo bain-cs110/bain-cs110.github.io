@@ -2,21 +2,20 @@
 layout: module
 title: Writing Programs
 type: lecture
-draft: 0
-num: 1
-canvas_id: Friday-lecture-1-Writing-Programs-?
+draft: 1
+num: 2
+canvas_id: Friday-lecture-2-Writing-Programs-?
 canvas_title: Friday - Lecture 1 - Writing Programs?
 description:
-due_date: 2024-01-05
+due_date: 2024-03-29
 slides:
-   - url: https://docs.google.com/presentation/d/1I-MjTFxcKQ858IynZuyv5Iu__jztiY3nlBPuVz-Yixw/edit?usp=sharing
-     title: "What is a computer?"
-
-videos:
-   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=83a5bfc2-6719-45b2-9d12-b0cf014c70d2
-     title: "Live Lecture Recording"
-     duration: "51:00"
-     live: 1
+   - url: 
+     title: "Python!"
+#videos:
+#   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=83a5bfc2-6719-45b2-9d12-b0cf014c70d2
+#     title: "Live Lecture Recording"
+#     duration: "51:00"
+#     live: 1
 readings:
    - title: "Ch1: Intro to Computing"
      author: "Charles Severance"

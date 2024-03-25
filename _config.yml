@@ -4,14 +4,14 @@
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-title: "COMP_SCI 110: Winter 2024"
+title: "COMP_SCI 110: Spring 2024"
 subtitle: "Intro to Computer Programming"
 email: connor.bain@northwestern.edu
 description: >- # this means to ignore newlines until "baseurl:"
-term_start_date: "2024-01-01"
+term_start_date: "2024-03-25"
 url: "https://bain-cs110.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-canvas_id: 206668
-canvas_url: https://canvas.northwestern.edu/courses/206668
+canvas_id: 208990
+canvas_url: https://canvas.northwestern.edu/courses/208990
 timezone: "America/Chicago"
 # Build settings
 markdown: kramdown
