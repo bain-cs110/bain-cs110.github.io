@@ -4,8 +4,8 @@ title: Writing Programs
 type: lecture
 draft: 1
 num: 2
-canvas_id: Friday-lecture-2-Writing-Programs-?
-canvas_title: Friday - Lecture 1 - Writing Programs?
+canvas_id: Friday-lecture-2-Writing-Programs
+canvas_title: Friday - Lecture 2 - Writing Programs
 description:
 due_date: 2024-03-29
 slides:

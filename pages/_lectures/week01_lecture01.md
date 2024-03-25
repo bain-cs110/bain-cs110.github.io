@@ -8,9 +8,9 @@ draft: 0
 canvas_id: tuesday-lecture-0-why-are-we-here-?
 canvas_title: Tuesday - Lecture 0 - Why are we here?
 due_date: 2024-03-26
-#slides:
-#   - url: 
-#     title: "What is Programming?" 
+slides:
+   - url: https://docs.google.com/presentation/d/1SbugyPj-AO1ridj1EEVUcUCUh0mgAzdnjdzgs17-Fg4/edit?usp=sharing
+     title: "Why are we here?" 
 #videos:
 #   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3f4a72cb-08bd-4c2d-b5e6-b0cf014c7076
 #     live: 1

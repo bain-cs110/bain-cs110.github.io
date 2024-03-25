@@ -5,7 +5,7 @@ abbreviation: Homework 0
 type: homework
 due_date: 2024-03-29
 ordering: 0
-draft: 1
+draft: 0
 points: 100
 canvas_id: 
 canvas_title: Homework 0
@@ -63,7 +63,7 @@ While we'd like for the Teams to be as stable as possible throughout the quarter
 
 ## Activity 2: Our First Program
 
-> Note: We will complete this and the following two activities during class on Friday.
+> Note: We will complete this and the following two activities during class on Friday but you are free to complete them yourself if you'd like.
 
 Navigate to the folder on your machine where Python was installed. For me, on a Mac, my IDLE was saved to Applications > Python 3.12 (or you can also search for it). For Windows users, it will likely be in a folder inside of Program Files (which you can also search for). It should also create a shortcut on your Desktop.
 
@@ -155,8 +155,6 @@ This means that you must _carefully_ read each assignment description and follow
 
 For this assignment, you will upload your `homework_0.py` file to the assignment on Canvas. DO NOT UPLOAD ANY OTHER FILES. Once you've submitted your file to Canvas, you're done!
 
-<a href="https://community.canvaslms.com/t5/Student-Guide/How-do-I-upload-a-file-as-an-assignment-submission-in-Canvas/ta-p/274" target="_blank">Need help submitting a file to Canvas? See this video.</a>
-
-> **Note**: You won't receive feedback from the autograder for about 15 minutes after you submit. Once it runs your submission, you'll see a comment with an "HTML" file attached on your submission. These files are openable in a web browser (e.g. Safari, Chrome, etc.) and show the results of the tests on your program. If you fail or receive an error on a test, you can use the report to diagnose the problem and resubmit.
+> **Note**: You won't receive feedback from the autograder for about 15 minutes after you submit (note: the autograder won't be turned on until after class on Wednesday). Once it runs your submission, you'll see a comment with an "HTML" file attached on your submission. These files are openable in a web browser (e.g. Safari, Chrome, etc.) and show the results of the tests on your program. If you fail or receive an error on a test, you can use the report to diagnose the problem and resubmit. <mark>In future homework assignments, there will be a limit to the number of submissions you can submit to Canvas. We will always use the most recent submission for your grade (that means its grade and its submission timestamp).</mark>
 
 {% include submission_details.md %}
