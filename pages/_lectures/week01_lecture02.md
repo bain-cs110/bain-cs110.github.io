@@ -11,6 +11,12 @@ due_date: 2024-03-27
 slides:
    - url: https://docs.google.com/presentation/d/1LvJqkSaK_5GGJe_cqu0b_A7ALitaIvv6zmoj4lFRRJ8/edit?usp=sharing
      title: "Hardware and Software"
+readings:
+   - title: "Ch1: Why Program"
+     author: "Charles Severance"
+     url: https://www.py4e.com/html3/01-intro
+     video_url: https://www.py4e.com/lessons/intro
+     source: "Python for Everybody"
 #videos:
 #   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3f4a72cb-08bd-4c2d-b5e6-b0cf014c7076
 #     live: 1

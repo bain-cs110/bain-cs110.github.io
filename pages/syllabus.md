@@ -38,7 +38,8 @@ permalink: /syllabus/
 </table>
 
 > Please note that this syllabus is subject to change prior to March 26, 2024.
-> <mark>Reminder</mark>: Tuesday, March 25th is a <a href="https://www.registrar.northwestern.edu/calendars/northwestern-monday.html">Northwestern Monday</a>!
+>
+> <mark>Reminder</mark>: Tuesday, March 26th is a <a href="https://www.registrar.northwestern.edu/calendars/northwestern-monday.html">Northwestern Monday</a>!
 
 ## About the Course
 CS 110 is meant as an introduction to the key ideas of computer programming and assumes no prior programming knowledge. In this course, we'll use the programming language Python with two goals: first, we want to give you a sense of the kinds of creative activities, both directed problem-solving and creative pursuits, that programming can support; and two, we want to introduce you to the fundamental constructs (and associated skills and techniques) of computer programming.
@@ -104,8 +105,8 @@ Your course grade is calculated as follows:
 Final grades are assigned on a fixed scale which is set by the registrar's office:
 
 {:.medium}
-| A  | 93 - 100   |
-| A- | 90 - 92.99 |
+| A  | 94 - 100   |
+| A- | 90 - 93.99 |
 | B+ | 87 - 89.99 |
 | B  | 84 - 86.99 |
 | B- | 80 - 83.99 |
@@ -122,12 +123,12 @@ Final grades are assigned on a fixed scale which is set by the registrar's offic
 
 There will be three cumulative assessments of your knowledge and practice of the course material administered during our assigned class time (50 minutes). There will be no Final Exam outside of these three quizzes. The tentative dates of these quizzes can be found on our Course Schedule.
 
-> **Note**: because this class is offered by the Computer Science department which is housed in the McCormick School of Engineering, we will still have class during Weinberg's Reading Week.
+> **Note**: because this class is offered by the Computer Science department which is housed in the McCormick School of Engineering, we will still have class during Weinberg's "Reading Period".
 
 ### Homework Grading
 Homework will be approximately weekly and is due at the Canvas specified date. You will submit your homework assignments on Canvas.
 
-We will still accept late homework up to 48 hours after the original due date, with a 10% deduction per 24 hour period.
+We will still accept late homework up to 48 hours after the original due date, with a 15% deduction per 24 hour period.
 
 We do not accept resubmissions of assignments. This means it is up to you to verify that:
 1. You have submitted the correct file.

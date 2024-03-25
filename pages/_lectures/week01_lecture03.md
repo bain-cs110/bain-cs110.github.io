@@ -22,11 +22,6 @@ readings:
      url: https://www.py4e.com/html3/01-intro
      video_url: https://www.py4e.com/lessons/intro
      source: "Python for Everybody"
-   - title: "Ch1: Why Program"
-     author: "Charles Severance"
-     url: https://www.py4e.com/html3/01-intro
-     video_url: https://www.py4e.com/lessons/intro
-     source: "Python for Everybody"
 ---
 
 Today we're going to spend more time practicing the actual action of programming. Writing a program is a pretty simple task. First, we figure out what sorts of actions or _commands_ we can use and then we chain them together!

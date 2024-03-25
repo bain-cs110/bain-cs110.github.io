@@ -7,7 +7,7 @@ due_date: 2024-03-29
 ordering: 0
 draft: 0
 points: 100
-canvas_id: 
+canvas_id: 208990
 canvas_title: Homework 0
 canvas_assignment_group: "Homework"
 canvas_points_possible: 100
@@ -49,9 +49,8 @@ A key part of this class is your Tutorial Team (up to 8 people; no exceptions) w
 There are several ways of finding a Tutorial Team in our class:
 
 1. **EVERYONE** is expected to fill out our Tutorial Team survey (linked below) regardless of whether or not you have Teammates in mind already.
-2. If you already have teammates in mind, go ahead and sign up for your group in Canvas. <a href="https://community.canvaslms.com/t5/Student-Guide/How-do-I-join-a-group-as-a-student/ta-p/468" target="_blank">Instructions are located here</a>. We may add students to your pre-formed team depending on the survey results.
-3. If you'd like to find teammates on your own, you can do so by replying in the `Looking For Tutorial Group?` post on edSTEM. If you find some people with similar interests, go ahead and sign up for the team on Canvas using the instructions above.
-4. If you'd like to be assigned to a Team, just fill out the Team Survey and we'll assign you a Team before the second Wednesday of class.
+2. If you already have teammates in mind, go ahead and sign up for your group in Canvas. <a href="https://community.canvaslms.com/t5/Student-Guide/How-do-I-join-a-group-as-a-student/ta-p/468" target="_blank">Instructions are located here</a>. Just pick a group and have each person interested sign-up for that group. We may add students to your pre-formed team depending on the survey results.
+3. If you'd like to be assigned to a Team, just fill out the Team Survey and we'll assign you a Team before the second Wednesday of class.
 
 > **Note**: If you have not signed up for a Team on Canvas by Friday evening at 11:59pm, we will use your Survey results to assign you to a team. You will not be able to self-register for teams after Friday.
 
