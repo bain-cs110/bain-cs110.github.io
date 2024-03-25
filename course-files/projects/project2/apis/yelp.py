@@ -187,7 +187,7 @@ def _generate_business_search_url(location:str, limit:int=10, term:str=None, cat
 
     return url
 
-def get_businesses(location:str, limit:int=10, search_term:str=None, categories:str=None, sort_by:str=None, price:str=None, open_now:str=None, attributes:list=None, simplify:bool=True):
+def get_businesses(location:str, limit:int=10, search_term:str=None, categories:str=None, sort_by:str=None, price:str=None, open_now:bool=None, attributes:list=None, simplify:bool=True):
     '''
     Searches for Yelp businesses based on various search criteria. 
     
@@ -201,7 +201,7 @@ def get_businesses(location:str, limit:int=10, search_term:str=None, categories:
                             rating option will be weighted by the number of reviews each
                             restaurant has.
         price (`str`):      How expensive 1, 2, 3, 4 or comma-delimited list, e.g.: 1,2
-        open_now (`str`):   Set to 'true' if you only want the open restaurants
+        open_now (`bool`):   Set to True if you only want the open restaurants
         attributes (`list`): A list of any one ore more of the following filters: `hot_and_new`, `reservation`, `gender_neutral_restrooms`, `open_to_all`, `wheelchair_accessible`
         simplify (`bool`):  Indicates whether you want to simplify the data that is returned. Non-simplified data
                                 will return a list of dictionaries.

@@ -74,10 +74,6 @@ Allow the user to discover artists who are similar to a given artist.
 
 Allow the user to find playlists based on a keyword search and show their contents or a link to them.
 
-#### [3 Points] Extra Credit: Generate an HTML file
-
-Generate an HTML file with the table of recommended tracks as well as some information about the artists (and tracks) that went into seeding the playlist. Consider embedding images of artists, albums, and/or audio players into the file.
-
 #### [3 Points] Extra Credit: Save a player to an HTML file
 
 Generate some Player HTML (either for a track, artist, or playlist) and output it to a file (you don't have to know how HTML works to make this happen – the key will be identifying which functions in the api you can use and then remembering how to write to a file!).

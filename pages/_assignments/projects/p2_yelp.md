@@ -79,10 +79,6 @@ Enhance your program by also giving the user the option of specifying only resta
 
 Enhance your program by also giving the user the option of specifying only restaurants which are “hot and new.” See the <a href="https://docs.developer.yelp.com/reference/v3_business_search" target="_blank">Yelp documentation (link updated)</a> for more info. (Look under the **attributes** argument)
 
-#### [3 Points] Extra Credit: Generate an HTML file
-
-Generate an HTML file with the table of recommended restaurants as well as some information about each one. Consider embedding images of the restaurants into the file.
-
 #### [6 Points] Incorporate another information source
 
 In addition to searching Yelp, try to integrate data from Spotify as well! Maybe generate a playlist that fits the theme of the restaurant!
