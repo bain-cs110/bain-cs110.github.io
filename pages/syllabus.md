@@ -8,7 +8,7 @@ permalink: /syllabus/
   <tbody>
       <tr>
           <th scope="row" style="text-align: left; font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;"><strong style="font-family: 'Akkurat Pro Regular';">Term</strong></th>
-          <td style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;">Winter 2024</td>
+          <td style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;">Spring 2024</td>
       </tr>
       <tr>
           <th scope="row" style="text-align: left; font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;"><strong style="font-family: 'Akkurat Pro Regular';">Course</strong></th>
@@ -28,7 +28,7 @@ permalink: /syllabus/
       </tr>
       <tr>
           <th scope="row" style="text-align: left; font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;"><strong style="font-family: 'Akkurat Pro Regular';">Lecture Location</strong></th>
-          <td style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;"><a style="text-decoration: none; color: #4e2a84; border-bottom: solid #934B66 2px;" href="https://www.mccormick.northwestern.edu/contact/tech-room-finder-map.php?id=L165&room-floor=1&room-id=1055&room-ingress=">Ryan Family (Tech) Auditorium</a></td>
+          <td style="font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;"><a style="text-decoration: none; color: #4e2a84; border-bottom: solid #934B66 2px;" href="https://maps.northwestern.edu/txt/facility/179">Lutkin Hall</a></td>
       </tr>
       <tr>
           <th scope="row" style="text-align: left; font-size: 0.9em; line-height: 1.5em; margin-top: 5px; vertical-align: top; font-family: 'Akkurat Pro Light'; border-bottom: dotted 1px #999; padding: 8px; min-width: 80px;"><strong style="font-family: 'Akkurat Pro Regular';">Required Materials</strong></th>
@@ -36,7 +36,9 @@ permalink: /syllabus/
       </tr>
   </tbody>
 </table>
-> Please note that this syllabus is subject to change prior to Jan 3, 2024.
+
+> Please note that this syllabus is subject to change prior to March 26, 2024.
+> <mark>Reminder</mark>: Tuesday, March 25th is a <a href="https://www.registrar.northwestern.edu/calendars/northwestern-monday.html">Northwestern Monday</a>!
 
 ## About the Course
 CS 110 is meant as an introduction to the key ideas of computer programming and assumes no prior programming knowledge. In this course, we'll use the programming language Python with two goals: first, we want to give you a sense of the kinds of creative activities, both directed problem-solving and creative pursuits, that programming can support; and two, we want to introduce you to the fundamental constructs (and associated skills and techniques) of computer programming.
@@ -142,7 +144,7 @@ You will generally receive your assignment grades on Canvas within a week of you
 
 These will be short quizzes for each module of the course that serve as a check of your attendance and/or asynchronous participation in the course. For those that complete the Mini-Quiz in class, you will receive full credit for your attendance and full participation. If you choose to complete the Mini-Quiz remotely, you will need to complete the Canvas version of the quiz within 60 hours of your scheduled class time.
 
-If you attend class but do not receive credit or complete a Pre-Recorded Lecture Mini-Quiz but don't receive credit, you can fill out this [Completion Grade Petition form](https://forms.gle/aSgMnrEmHjYZk5AA8).
+If you attend class but do not receive credit but don't receive credit, you can fill out this [Completion Grade Petition form](https://docs.google.com/forms/d/e/1FAIpQLSeg6_zwy254iPbFpeBXmxdFJDWC5ZN4tdDlfRH3S-0cEzlsyg/viewform?usp=sf_link).
 
 ### Tutorial Grading
 
@@ -156,7 +158,7 @@ This course is meant to a be a learning community which requires the dedicated p
 
 If you attend the Tutorial session in-person, work diligently, and make a legitimate attempt (up to the discretion of your Peer Mentor) at completing the assignment, you will receive full-credit. If you choose not to attend in-person, then your assignment will be reviewed for completion _and accuracy_ meaning you may nor may not receive full credit.
 
-If you attend a tutorial session but do not receive credit, you can fill out this [Completion Grade Petition form](https://forms.gle/aSgMnrEmHjYZk5AA8).
+If you attend a tutorial session but do not receive credit, you can fill out this [Completion Grade Petition form](https://docs.google.com/forms/d/e/1FAIpQLSeg6_zwy254iPbFpeBXmxdFJDWC5ZN4tdDlfRH3S-0cEzlsyg/viewform?usp=sf_link).
 
 <mark>We will not accept late tutorial submissions.</mark>
 
