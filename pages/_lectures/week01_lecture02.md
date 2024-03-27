@@ -17,11 +17,11 @@ readings:
      url: https://www.py4e.com/html3/01-intro
      video_url: https://www.py4e.com/lessons/intro
      source: "Python for Everybody"
-#videos:
-#   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3f4a72cb-08bd-4c2d-b5e6-b0cf014c7076
-#     live: 1
-#     title: "Live Lecture Recording"
-#     duration: "50:00"
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=eb2d9057-9b84-4b73-ba02-b12a015ad6d7
+     live: 1
+     title: "Live Lecture Recording"
+     duration: "50:00"
 ---
 
 Today we'll start with the basics:
