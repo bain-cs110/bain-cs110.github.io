@@ -14,22 +14,22 @@ Unfortunately, this is a multi-step process.
 
 First we need to ask Windows to show to us all hidden files and folders. First open a File Explorer window. Click on the <code>View</code> button, then click on <code>Show</code> and click on <code>Hidden item</code>. A checkbox will appear.
 
-<img style="width:50%;" a="Screenshot of show hidden items" src="{{site.url}}/assets/images/windows/windows-1.png">
+<img alt="Step 1 Screenshot" style="width:50%;" a="Screenshot of show hidden items" src="{{site.url}}/assets/images/windows/windows-1.png">
 
 ## Step 2. Modifying the Default App
 
 Now we need to open up the <code>Settings</code> application. Once there, click on the <code>Apps</code> menu, then click on <code>Default apps</code>.
 
-<img style="width:50%;" a="Screenshot of Settings app" src="{{site.url}}/assets/images/windows/windows-2.png">
+<img alt="Step 2 Screenshot" style="width:50%;" a="Screenshot of Settings app" src="{{site.url}}/assets/images/windows/windows-2.png">
 
-<img style="width:50%;" a="Screenshot of Apps tab" src="{{site.url}}/assets/images/windows/windows-3.png">
+<img alt="Step 3 Screenshot" style="width:50%;" a="Screenshot of Apps tab" src="{{site.url}}/assets/images/windows/windows-3.png">
 
-<img style="width:50%;" a="Screenshot of Default Apps tab" src="{{site.url}}/assets/images/windows/windows-4.png">
+<img alt="Step 4 Screenshot" style="width:50%;" a="Screenshot of Default Apps tab" src="{{site.url}}/assets/images/windows/windows-4.png">
 
 
 In the box that says "enter a file type or link type" type <code>.py</code> and select it from the resulting dropdown. Then click on the box right below. A popup window will appear. Scroll to the bottom of the window and select <code>Chose an app on your PC</code>.
 
-<img style="width:50%;" a="Screenshot of default app popup" src="{{site.url}}/assets/images/windows/windows-5.png">
+<img alt="Step 5 Screenshot" style="width:50%;" a="Screenshot of default app popup" src="{{site.url}}/assets/images/windows/windows-5.png">
 
 In the resulting window, you need to navigate to your user folder. 
 * Click on <code>This PC</code> in the left hand menu, then <code>Local Disk</code> (the <code>C:</code> drive).
