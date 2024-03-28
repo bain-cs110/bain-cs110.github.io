@@ -2,15 +2,15 @@
 layout: module
 title: Writing Programs
 type: lecture
-draft: 1
+draft: 0
 num: 2
 canvas_id: Friday-lecture-2-Writing-Programs
 canvas_title: Friday - Lecture 2 - Writing Programs
 description:
 due_date: 2024-03-29
 slides:
-   - url: 
-     title: "Python!"
+   - url: https://docs.google.com/presentation/d/13EGKP0kFB1oyuVzQrd8XzKQGCYrIYTXMfwzTlj12X1g/edit?usp=sharing
+     title: "Programming!"
 #videos:
 #   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=83a5bfc2-6719-45b2-9d12-b0cf014c70d2
 #     title: "Live Lecture Recording"
