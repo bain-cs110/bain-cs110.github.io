@@ -11,11 +11,11 @@ due_date: 2024-03-29
 slides:
    - url: https://docs.google.com/presentation/d/13EGKP0kFB1oyuVzQrd8XzKQGCYrIYTXMfwzTlj12X1g/edit?usp=sharing
      title: "Programming!"
-#videos:
-#   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=83a5bfc2-6719-45b2-9d12-b0cf014c70d2
-#     title: "Live Lecture Recording"
-#     duration: "51:00"
-#     live: 1
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=97b872e3-d05c-4e45-8c1d-b12a015ad6fa
+     title: "Live Lecture Recording"
+     duration: "51:00"
+     live: 1
 readings:
    - title: "Ch1: Intro to Computing"
      author: "Charles Severance"
