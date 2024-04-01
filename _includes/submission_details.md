@@ -7,8 +7,9 @@ Questions about submitting to Canvas?
 * [How to double check you've submitted successfully](https://community.canvaslms.com/t5/Student-Guide/How-do-I-know-when-my-assignment-has-been-submitted-in-a-course/ta-p/416678)
 * [Submission and Grading FAQ]({{site.canvas_url}}/pages/assignment-submission-+-grading-faq)
 * [How to view feedback on your submission](https://community.canvaslms.com/t5/Student-Guide/How-do-I-view-assignment-feedback-from-my-instructor-using/ta-p/474046)
+* [How do I resubmit an assignment (Canvas calls it a "new attempt")](https://community.canvaslms.com/t5/Student-Guide/How-do-I-upload-a-file-as-an-assignment-submission-for-a-course/ta-p/416664)
 
-Remember, **close IDLE before you submit** to ensure that you've saved your latest work.
+Remember, **close IDLE before you submit** to ensure that you've saved your latest work. Once you've successfully submitted you should receive feedback from the autograder in 30 or so minutes. If you fail one of the checks, you're welcome to resubmit (up to the Canvas resubmit limit for that assignment). If you're confused on how to fix one of the checks, then bring your submission and the test results to office hours!
 
 * * *
 

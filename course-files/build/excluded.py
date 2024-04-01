@@ -14,6 +14,8 @@ EXCLUDED = [
     'index.html',
     'index.md',
     'drafts',
+    'draft',
+    'archive',
     '_drafts',
     'cpd.db',
     'build',
