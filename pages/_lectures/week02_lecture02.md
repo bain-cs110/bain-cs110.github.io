@@ -13,6 +13,7 @@ canvas_id:
 canvas_title: Lecture 4 (Pre-Recorded) - Functions - Mini-Quiz 0
 lec_assignment: 1
 exercise_url: "lecture04.zip"
+draft: 0
 videos:
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=af6ee162-bcb6-47d6-acc6-b14500d22a75
      title: "What is a function?"
@@ -31,8 +32,7 @@ videos:
      title: "Syntax of Reporters"
      duration: "3:53"
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=94980fa4-2417-4840-adeb-b14500d23a7b
-     title: "Using the `input` Functio
-     n"
+     title: "Using the `input` Function"
      duration: "6:15"
 slides:
    - url: https://docs.google.com/presentation/d/1yvl0JdjP_HpJhQLjEWTMa3HkIvtr4vyibVwl64CMqOA/edit?usp=sharing

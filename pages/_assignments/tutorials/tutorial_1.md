@@ -6,7 +6,7 @@ abbreviation: Tutorial 1
 draft: 0
 points: 100
 num: 1
-canvas_id: 
+canvas_id: 1405289
 due_date: 2024-04-03
 canvas_title: "Tutorial 1"
 canvas_assignment_group: "Tutorial"
