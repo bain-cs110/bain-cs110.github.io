@@ -9,11 +9,11 @@ draft: 0
 canvas_title: Monday - Lecture 3 - Data Types, Operators, and Variables
 canvas_id: monday-lecture-3-data-types-operators-and-variables
 exercise_url: lecture03.zip
-#videos:
-#   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4b44002c-2f77-480a-a72b-b0cf014c70f9
-#     title: "Live Lecture Recording"
-#     live: 1
-#     duration: "51:00"
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2c89daaa-812d-4ff0-ae78-b12a015ad72a
+     title: "Live Lecture Recording"
+     live: 1
+     duration: "51:00"
 slides:
    - url: https://docs.google.com/presentation/d/1kD6uhyv4bK3dqWHjcUXd_HHrodWQoeH0leG2yWgBQi4/edit?usp=sharing
      title: Data Types, Operators, and Variables
