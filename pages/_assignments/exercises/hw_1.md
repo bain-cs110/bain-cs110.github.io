@@ -86,7 +86,7 @@ Next we'll focus on some data programming toward the bottom of the `hw01.py` fil
 
 #### 2. User input of `string`s
 
-Write a program to ask the user to enter their name. Make a message that says "hi" to them and <mark>store the entire message in a variable called <code>question_2</code> and then print it out.</mark>
+Write a program to ask the user to enter their name. Make a message that says "hi" to them and <mark>store the <b>entire</b> message in a variable called <code>question_2</code> and then print it out.</mark>
 
 For example, this is what you would see if you used my name (notice we use a `prompt`):
 
@@ -95,15 +95,15 @@ Enter a name:Connor  # prompt the user for a name (not necessarily Connor)
 Hi Connor!           # output a sentence that says hi (make sure there's a space)
 ```
 
-> Note: when your program runs, it should look exactly like the above with whatever name you input
+> Note: when your program runs, it should look exactly like the above with whatever name you input.
 
 #### 3. User input of numbers
 
-Write a program that asks the user for a distance in kilometers and converts it to miles. There are 0.62 miles in a kilometer. You only need to worry about whole number weight entries. <mark>Store _just_ the converted value in a variable called <code>question_3</code> and then print it out in a nice message like the below.</mark>
+Write a program that asks the user for a distance in kilometers and converts it to miles. There are 0.62 miles in a kilometer. You only need to worry about whole number weight entries. <mark>Store <b>just</b> the converted value in a variable called <code>question_3</code> and then print it out in a nice message like the below.</mark>
 
 ```python
-Enter weight in kg:5          # prompt the user for a weight in kg
-5 kilograms is 11.0 pounds.   # output the result
+Enter distance in km:5  # prompt the user for a distance in km
+5 kilometers is approximately 3.1 miles.   # output the result
 ```
 
 > Note: when your program runs, it should look exactly like the above with whatever weight you input. In some circumstances, you might get
@@ -111,7 +111,7 @@ Enter weight in kg:5          # prompt the user for a weight in kg
 
 #### 4. Calculate the length of an inputted string
 
-Write a program that asks the user to input a word and then tell the user how many letters are in that word. <mark>Store _just_ the number of letters of the inputted word in a variable called <code>question_4</code> and then print it out in a nice message like the below.</mark>
+Write a program that asks the user to input a word and then tell the user how many letters are in that word. <mark>Store <b>just</b> the number of letters of the inputted word in a variable called <code>question_4</code> and then print it out in a nice message like the below.</mark>
 
 For example:
 

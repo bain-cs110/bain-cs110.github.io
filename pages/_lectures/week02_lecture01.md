@@ -21,7 +21,7 @@ readings:
    - title: "Ch 4: Variables"
      author: "Charles Severance"
      url: https://www.py4e.com/html3/02-variables
-     video_url: https://www.py4e.com/lessons/variables
+     video_url: https://www.py4e.com/lessons/memory
      source: "Python for Everybody"
 ---
 Today we'll be talking about three important building blocks of programming:

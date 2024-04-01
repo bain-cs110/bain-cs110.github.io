@@ -9,7 +9,7 @@ canvas_points_possible: 10
 canvas_allowed_extensions: "py"
 canvas_submission_types: "external_tool"
 canvas_assignment_group: "Mini-Quiz"
-canvas_id: 
+canvas_id: 1405290
 canvas_title: Lecture 4 (Pre-Recorded) - Functions - Mini-Quiz 0
 lec_assignment: 1
 exercise_url: "lecture04.zip"
