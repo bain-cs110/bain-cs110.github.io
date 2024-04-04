@@ -48,6 +48,11 @@ show_schedule: 1
 <h3 style="padding-top:15px;" id="videos">{{num}}. Pre-Recorded Lecture Video(s), Mini-Quizzes, and Live Recordings</h3>
 {% assign num = num | plus: 1 %}
 
+{% assign today = site.time | date: '%s' %}
+{% assign dueDate = page.due_date | date: '%s' %}
+{% assign diffSeconds = today | minus: dueDate %}
+{% assign diffDays = diffSeconds | divided_by: 3600 | divided_by: 24 | plus: 1 %}
+
     <table class="medium module">
         <caption>Available Videos</caption>
         <thead>
@@ -56,7 +61,7 @@ show_schedule: 1
                 <th scope="col">Title</th>
                 <th scope="col">Type</th>
                 <th scope="col">Duration</th>
-            </tr>
+            </tr> 
         </thead>
         <tbody>
         {% assign vnum = 1 %}
@@ -78,7 +83,7 @@ show_schedule: 1
             {% endif %}
             <tr>
                 <td>
-                    {% if video.quiz %}
+                    {% if video.quiz%}
                     <a class="{{ className }}" style="padding-left: 8px; padding-right: 8px" >
                         {{label}}
                     </a>
@@ -89,7 +94,7 @@ show_schedule: 1
                     {% endif %}
                 </td>
                 <td>
-                    {{video.title}}
+                    {{video.title}} {% if video.quiz and diffDays < 1 %}(<b>Mini-Quiz - Use LOAD Button to Access!</b>) {% elsif video.quiz %} (<em>To review this video, click on the Panopto tab of Canvas and navigate to the appropriate lecture folder.</em>) {% endif %}
                 </td>
                 <td>
                     {{ type }}

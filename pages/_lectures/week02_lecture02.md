@@ -19,11 +19,11 @@ videos:
      title: "What is a function?"
      duration: "3:59"
    - url:
-     title: "Syntax of Calling Functions (<b>MINI-QUIZ 0 - USE LOAD BUTTON AT BOTTOM OF SCREEN</b>)"
-     duration: 6:56"
+     title: "Syntax of Calling Functions"
+     duration: "6:56"
      quiz: 1
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=98a91062-437c-4ea9-b895-b14500d22af6
-     title: "Using the `print` Function?"
+     title: "Using the print Function?"
      duration: "7:23"
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4836bd97-6dfa-4e80-94c1-b14500d22b29
      title: "Turtles!"
@@ -32,7 +32,7 @@ videos:
      title: "Syntax of Reporters"
      duration: "3:53"
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=94980fa4-2417-4840-adeb-b14500d23a7b
-     title: "Using the `input` Function"
+     title: "Using the input Function"
      duration: "6:15"
 slides:
    - url: https://docs.google.com/presentation/d/1yvl0JdjP_HpJhQLjEWTMa3HkIvtr4vyibVwl64CMqOA/edit?usp=sharing
