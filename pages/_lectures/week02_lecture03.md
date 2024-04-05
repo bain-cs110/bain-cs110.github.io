@@ -12,11 +12,11 @@ mini_quiz_title: Variables, Operators, and Using Functions
 exercise_url: "lecture05.zip"
 canvas_id: friday-lecture-5-abstraction
 canvas_title: "Friday - Lecture 5 - Abstraction"
-#videos:
-#   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1c47e667-7747-42b6-9267-b0cf014c713c
-#     title: "Lecture Recording"
-#     live: 1
-#     duration: "50:00"
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=40b2cab5-2092-42ab-8cc2-b12a015ad778
+     title: "Lecture Recording"
+     live: 1
+     duration: "50:00"
 slides:
    - url: https://docs.google.com/presentation/d/1NvmhfVCB2CxV0v0sp8Y1fFDgfxSKGrNgNCPKvFinNXU/edit?usp=sharing
      title: Programming Practice & Abstraction
