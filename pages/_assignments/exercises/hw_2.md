@@ -27,13 +27,13 @@ In this assignment, you are going to get some practice writing functions using a
 
 First, download the two homework files below and, like the tutorial, make sure they're in the same folder (reminder: _don't open the files in IDLE until you move them where you want them to be_):
 
-<a class="nu-button" href="{{site.url}}/course-files/homeworks/hw02_template.py" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/homeworks/homework2/hw02_template.py" target="_blank">
     Homework Starter File <i class="fas fa-download"></i>
 </a>
 
 <br>
 
-<a class="nu-button" href="{{site.url}}/course-files/homeworks/cs110_hw2.py" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/homeworks/homework2/cs110_hw2.py" target="_blank">
     Homework Helper File <i class="fas fa-download"></i>
 </a>
 

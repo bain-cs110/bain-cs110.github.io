@@ -30,6 +30,8 @@ You need to download and place BOTH of these files in the same folder. You will 
     Tutorial Template File <i class="fas fa-download"></i>
 </a>
 
+<br>
+
 <a download class="nu-button" href="{{site.url}}/course-files/tutorials/tutorial2/cs110_t2.py" target="_blank">
     Helper File <i class="fas fa-download"></i>
 </a>
@@ -39,7 +41,7 @@ Go ahead open the file in IDLE, take a look at it and then run it. You should se
 <img alt="rectangle function output" class="medium frame" src="{{site.url}}/assets/images/tutorial02/rectangle.png" />
 
 > **Note**: If you're on a Mac and are currently in Dark mode, you might see a dark background with white grid lines.
-> If you would like to change this...
+> If you would like to change this either:
 >
 > 1. <a href="https://support.apple.com/en-us/HT208976" target="_blank"> Use these instructions from Apple to switch to Light mode.</a>
 > 2. On line 3, change the value of the `background` input to `"black"`.
