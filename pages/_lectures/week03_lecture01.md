@@ -7,10 +7,10 @@ num: 6
 due_date: 2024-04-08
 canvas_id: monday-lecture-6-writing-functions
 canvas_title: Monday - Lecture 6 - Writing Functions
-#videos:
-#   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b17b6042-bfd7-4866-9b78-b0f8004b2094
-#     title: "Introduction"
-#     duration: ""
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=11c83653-2080-40b6-ad0c-b12a015ad79f
+     title: "Live Lecture Recording"
+     duration: "51:00"
 readings:
    - title: "Ch 4: Functions"
      author: "Charles Severance"
