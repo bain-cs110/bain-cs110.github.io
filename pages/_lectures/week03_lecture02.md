@@ -11,7 +11,7 @@ canvas_assignment_group: "Mini-Quiz"
 canvas_points_possible: 10
 canvas_allowed_extensions: "py"
 canvas_submission_types: "external_tool"
-canvas_id: 
+canvas_id: 1407638
 canvas_title: Lecture 7 (Pre-Recorded) - More Writing Functions and Graphics - Mini-Quiz 2
 exercise_url: "lecture07.zip"
 videos:

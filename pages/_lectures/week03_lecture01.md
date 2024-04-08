@@ -5,6 +5,8 @@ type: lecture
 draft: 0
 num: 6
 due_date: 2024-04-08
+canvas_id: lecture-6-writing-functions
+canvas_title: Lecture 6 - Writing Functions
 #videos:
 #   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b17b6042-bfd7-4866-9b78-b0f8004b2094
 #     title: "Introduction"

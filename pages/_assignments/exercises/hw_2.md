@@ -7,7 +7,7 @@ due_date: 2024-04-12
 ordering: 2
 draft: 0
 points: 100
-canvas_id: 
+canvas_id: 1407636
 canvas_title: Homework 2
 canvas_assignment_group: "Homework"
 canvas_points_possible: 100
@@ -30,7 +30,9 @@ First, download the two homework files below and, like the tutorial, make sure t
 <a class="nu-button" href="{{site.url}}/course-files/homeworks/hw02_template.py" target="_blank">
     Homework Starter File <i class="fas fa-download"></i>
 </a>
+
 <br>
+
 <a class="nu-button" href="{{site.url}}/course-files/homeworks/cs110_hw2.py" target="_blank">
     Homework Helper File <i class="fas fa-download"></i>
 </a>
