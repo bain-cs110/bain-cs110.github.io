@@ -90,9 +90,9 @@ It asks Python to create a rectangle shape with the following 4 required inputs:
 
 Next practice using this function by making the following shapes:
 
-* rectangle with its top-left coordinate at `(400, 400)` with width `100` and height `50` that's the default color (i.e. don't specify a color).
-* rectangle at `(200, 400)` with width `25` and height `100 + 100` that's `"olive drab"`
-* square at `(200, 500)` with width/height `20` that's `"cyan"`
+* rectangle with its top-left coordinate at `(100, 400)` with width `100` and height `50` that's the default color (i.e. don't specify a color).
+* rectangle at `(100, 400)` with width `25` and height `100 + 100` that's `"olive drab"`
+* square at `(100, 500)` with width/height `20` that's `"cyan"`
 
 <img alt="rectangle function calls" class="medium frame" src="{{site.url}}/assets/images/tutorial02/rectangles.png" />
 
@@ -149,15 +149,15 @@ square(200, 100, 100, color='blue')
 
 # dark green blocks
 square(200, 0, 100, color="#5B9279")
-square(200, 100, 100, color="#5B9279")
-square(200, 200, 100, color="#5B9279")
+square(200, 150, 100, color="#5B9279")
 square(200, 300, 100, color="#5B9279")
+square(200, 450, 100, color="#5B9279")
 
 # light green blocks
-square(300, 0, 50, color="#8FCB9B")
-square(300, 100, 50, color="#8FCB9B")
-square(300, 200, 50, color="#8FCB9B")
-square(300, 300, 50, color="#8FCB9B")
+square(325, 0, 50, color="#8FCB9B")
+square(325, 100, 50, color="#8FCB9B")
+square(325, 200, 50, color="#8FCB9B")
+square(325, 300, 50, color="#8FCB9B")
 ```
 
 <img alt="square function output" class="medium frame" src="{{site.url}}/assets/images/tutorial02/squares.png" />
@@ -184,7 +184,7 @@ The left-most square should be `"red"`, the second should be green, and the thir
 
 ## stack_of_squares
 
-Now use your `square` function to write a new function called `row_of_squares` that draws three squares on top of each other.
+Now use your `square` function to write a new function called `stack_of_squares` that draws three squares on top of each other.
 
 It needs to have the following inputs:
 
