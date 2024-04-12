@@ -40,11 +40,11 @@ Go ahead open the file in IDLE, take a look at it and then run it. You should se
 
 <img alt="rectangle function output" class="medium frame" src="{{site.url}}/assets/images/tutorial02/rectangle.png" />
 
-> **Note**: If you're on a Mac and are currently in Dark mode, you might see a dark background with white grid lines.
+> **Note**: If you're on a Mac and are currently in Dark mode, you might white grid line with greyish dots..
 > If you would like to change this either:
 >
 > 1. <a href="https://support.apple.com/en-us/HT208976" target="_blank"> Use these instructions from Apple to switch to Light mode.</a>
-> 2. On line 3, change the value of the `background` input to `"black"`.
+> 2. On line 2, change the value of the `background` input to <code>"black"</code> rather than <code>"white"</code>.
 
 * * *
 
@@ -209,8 +209,8 @@ Your job is to write a function which we'll call `picture_frame`. It will have t
 1. a y-coordinate for the top-left corner of the square
 1. the width (and also height) of the outer square (the "frame")
 1. the width (and also height) of the inner square (the "picture")
-1. **frame_color** _(str, optional)_: a name of color of the square, which defaults to blue: `"blue"`
-1. **pic_color** _(str, optional)_: a name of color of the square, which defaults to blue: `"yellow"`
+1. **frame_color** _(str, optional)_: a name of color of the square, which defaults to `"blue"`
+1. **pic_color** _(str, optional)_: a name of color of the square, which defaults to `"yellow"`
 
 > **Note:** That's a lot of inputs. If you'd like, you can add new lines (returns) after each comma, to make the function header a little more easy to read by spreading it out onto several lines instead of one long one.
 

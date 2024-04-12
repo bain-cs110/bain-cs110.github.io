@@ -56,9 +56,9 @@ Right now if you run `homework_02.py` you'll see a coordinate grid. Notice that 
 
 <details>
   <summary>On a Mac in Dark Mode?</summary>
-  If you're on a Mac and are currently in Dark mode, you might not see the grid lines. For some reason, Tkinter switches the colors white and black when your Mac is in dark mode. To fix this, you have two options:<br>
+  If you're on a Mac and are currently in Dark mode, you might white grid line with greyish dots. You can fix this by either:
   1. <a href="https://support.apple.com/en-us/HT208976" target="_blank"> Use these instructions from Apple to switch to Light mode.</a><br>
-  2. On line 5, change the value of the <em>background</em> input to <em>"black"</em>.
+  2. On line 2, change the value of the <em>background</em> input to <em>"black"</em> rather than <code>"white"</code>.
 </details>
 <br>
 
@@ -188,7 +188,5 @@ face(400, 400, 100)
 Note that while the image you see above will be produced with those function calls, your functions **must be able to produce their output at any input**. That is, for example, your `bullseye` function has to actually use the inputs given to it. We will test your functions with other inputs to make sure that those inputs are actually used in the function body. One example test might be to move the bullseyes to a different y-coordinate and see if that is reflected in your final output!
 
 <mark>Make sure to double check ALL function names, parameter names, and default values.</mark> Typos or not following the instructions will result in lost points.
-
-> **Note**: You will not receive feedback from the autograder on your assignment until AFTER the final due date (which is the "available until date on Canvas").
 
 {% include submission_details.md %}
