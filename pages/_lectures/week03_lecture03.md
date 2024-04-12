@@ -12,11 +12,11 @@ description: "(In-Class Mini-Quiz 3)"
 mini_quiz_id: quizzes/236066
 mini_quiz_num: 3
 mini_quiz_title: Writing Functions
-#videos:
-#   - url: <https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3df18c82-cd58-451c-9867-b0cf014c71bc>
-#     title: "Live Lecture Recording"
-#     duration: "51:00"
-#     live: 1
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=87a383ca-6e9a-428c-b833-b12a015ad7f0
+     title: "Live Lecture Recording"
+     duration: "51:00"
+     live: 1
 slides:
    - url: https://docs.google.com/presentation/d/1CJJi3uX7oDR5pbhuAkiB9mvJfTtjQrr9kL_g6CT0ITA/edit?usp=sharing
      title: "Writing Functions Practice"
