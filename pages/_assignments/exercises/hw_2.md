@@ -25,7 +25,7 @@ In this assignment, you are going to get some practice writing functions using a
 
 ## Getting Started
 
-First, download the two homework files below and, like the tutorial, make sure they're in the same folder (reminder: _don't open the files in IDLE until you move them where you want them to be_):
+First, download the two homework files below and, like the tutorial, make sure they're in the same folder:
 
 <a class="nu-button" href="{{site.url}}/course-files/homeworks/homework2/hw02_template.py" target="_blank">
     Homework Starter File <i class="fas fa-download"></i>
@@ -46,17 +46,19 @@ First, download the two homework files below and, like the tutorial, make sure t
 
 ### Your Tasks
 
-Open up `homework_02.py` and take a look at what's already existing in the file. Make sure to run it to see its output as it stands now. Your task for this homework is split up into 4 parts.
+Open up `hw02.py` (hopefully you've renamed it from <code>hw02_template.py</code>) and take a look at what's already existing in the file. Make sure to run it to see its output as it stands now. Your task for this homework is split up into 4 parts.
+
+> Note: Just like in the tutorial and lecture, do not edit (or even bother opening) <code>cs110_hw2.py</code> – the helper file.
 
 * * *
 
 ## Task 1. Practice
 
-Right now if you run `homework_02.py` you'll see a coordinate grid. Notice that there's one strange thing about it – <mark>the y-axis is flipped! As we go DOWN on the y-axis, the y-values INCREASE. As we go UP the y-axis, the y-value DECREASES.</mark> Keep this in mind as you're working.
+Right now if you run `hw02.py` you'll see a coordinate grid. Notice that there's one strange thing about it – <mark>the y-axis is flipped! As we go DOWN on the y-axis, the y-values INCREASE. As we go UP the y-axis, the y-value DECREASES.</mark> Keep this in mind as you're working.
 
 <details>
-  <summary>On a Mac in Dark Mode?</summary>
-  If you're on a Mac and are currently in Dark mode, you might white grid line with greyish dots. You can fix this by either:
+  <summary>On a Mac in Dark Mode - you might not see the grid!</summary>
+  If you're on a Mac and are currently in Dark mode, you might get white grid lines with greyish dots. You can fix this by either:
   1. <a href="https://support.apple.com/en-us/HT208976" target="_blank"> Use these instructions from Apple to switch to Light mode.</a><br>
   2. On line 2, change the value of the <em>background</em> input to <em>"black"</em> rather than <code>"white"</code>.
 </details>
@@ -187,6 +189,6 @@ face(400, 400, 100)
 
 Note that while the image you see above will be produced with those function calls, your functions **must be able to produce their output at any input**. That is, for example, your `bullseye` function has to actually use the inputs given to it. We will test your functions with other inputs to make sure that those inputs are actually used in the function body. One example test might be to move the bullseyes to a different y-coordinate and see if that is reflected in your final output!
 
-<mark>Make sure to double check ALL function names, parameter names, and default values.</mark> Typos or not following the instructions will result in lost points.
+<mark>Make sure to double check ALL function names, parameter names, and default values.</mark> Typos or not following the instructions will result in lost points. **You will only submit your <code>hw02.py</code> file – do not submit (or for that matter edit) the helper file.**
 
 {% include submission_details.md %}
