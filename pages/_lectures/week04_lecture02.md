@@ -7,6 +7,7 @@ num: 10
 due_date: 2024-04-17
 description: "(Mini-Quiz 4)"
 draft: 0
+lec_assignment: 1
 exercise_url: "lecture10.zip"
 canvas_assignment_group: "Mini-Quiz"
 canvas_points_possible: 10
