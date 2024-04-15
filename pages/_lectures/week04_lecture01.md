@@ -9,11 +9,11 @@ due_date: 2024-04-15
 canvas_id: "monday-lecture-9-reporters-+-modules"
 canvas_title: "Monday - Lecture 9 - Reporters + Modules"
 exercise_url: "lecture09.zip"
-#videos:
-#   - url: <https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5899f713-5b8c-479f-9514-b0cf014c71d1>
-#     title: "Live Lecture Recording"
-#     duration: "51:00"
-#     live: 1
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=695ed174-b3c8-4236-8ee6-b12a015ad81c
+     title: "Live Lecture Recording"
+     duration: "51:00"
+     live: 1
 readings:
    - title: "Ch20: Modules"
      author: "Heinold"
