@@ -8,7 +8,7 @@ points: 100
 num: 3
 due_date: 2024-04-17
 canvas_title: Tutorial 3
-canvas_id: 
+canvas_id: 1409417
 canvas_assignment_group: "Tutorial"
 canvas_points_possible: 100
 canvas_submission_types: "online_upload"
@@ -25,7 +25,7 @@ First, download the starter template and move it into your `cs110` folder.
 
 Then grab this <code>shapes</code> helper and move it into the same folder as your tutorial file. <mark>In order for this activity to work at all, these files must BOTH be in the same folder on your computer.<mark>
 
-<a class="nu-button" href="{{site.url}}/course-files/tutorials/tutorial3/tutorial3_shapes.py" target="_blank">
+<a class="nu-button" href="{{site.url}}/course-files/tutorials/tutorial3/cs110_t3_shapes.py" target="_blank">
     Tutorial Shapes Module <i class="fas fa-download"></i>
 </a>
 
