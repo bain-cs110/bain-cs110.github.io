@@ -3,7 +3,7 @@ layout: assignment-two-column
 title: Practice with Compound Shapes
 type: tutorial
 abbreviation: Tutorial 3
-draft: 1
+draft: 0
 points: 100
 num: 3
 due_date: 2024-04-17
