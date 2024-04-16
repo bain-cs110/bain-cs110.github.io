@@ -71,6 +71,11 @@ flower((750, 300), color="cyan")
 
 Make sure to test your function by writing some function calls. Remember, your function needs to use all of its inputs. (Hint: You'll need to use `overlay` and `rotate`)
 
+<details>
+<summary>Want some cooler colors to work with?</summary>
+<img style="width: 90%;" src="{{site.url}}/assets/images/tutorial3/colors.png" alt="Color names">
+</details>
+
 * * *
 
 ## Part 2: Design your creature
