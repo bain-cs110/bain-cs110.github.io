@@ -20,7 +20,7 @@ canvas_allowed_extensions: "py"
 > 1. More practice working with built-in functions
 > 1. Practice writing your own functions
 
-<img alt="An example creature" class="creature" src="{{site.url}}/assets/images/hw03/creature.png" /> In this assignment, you are going to write some functions to draw compound shapes of your own design/choosing using tkinter. At the end of this assignment, someone should be able to use your function to draw your creature: anywhere on the screen at any size or color. In other words, your function needs to honor the parameters that are passed into it. If you don't quite know what this means (it's a confusing concept for people just learning to program), make sure to ask questions!
+<img alt="An example creature" class="creature" src="{{site.url}}/assets/images/hw03/creature.png" /> In this assignment, you are going to write some functions to draw compound shapes of your own design/choosing. At the end of this assignment, someone should be able to use your function to draw your creature: anywhere on the screen at any size or color. In other words, your function needs to honor the parameters that are passed into it. If you don't quite know what this means (it's a confusing concept for people just learning to program), make sure to ask questions!
 
 <a class="nu-button" href="{{site.url}}/course-files/homeworks/hw3/hw3_template.py" target="_blank">
     Homework Starter File <i class="fas fa-download"></i>
@@ -82,12 +82,12 @@ Make sure to test your function by writing some function calls. Remember, your f
 
 On paper, sketch out some creature ideas (aim for using between 5-8 shapes). These can be different variations of the same creature or all different ones. You can just implement the head of your creature (similar to the bear at the top) or the whole thing — the choice is up to you. Here are some links to ideas:
 
-* <a href="https://www.youtube.com/watch?v=yh_A09CrT68" target="_blank">https://www.youtube.com/watch?v=yh_A09CrT68</a>
-* <a href="https://www.pinterest.com/pin/118782508901992203/" target="_blank">https://www.pinterest.com/pin/118782508901992203/</a>
+* <a href="https://www.youtube.com/watch?v=yh_A09CrT68" target="_blank">Some Sample Creatures on YouTube</a>
+* <a href="https://www.pinterest.com/pin/118782508901992203/" target="_blank">Some Sample Creatures on Pinterest</a>
 * <a href="https://stock.adobe.com/images/cute-simple-shape-monster-character-vector-flat-graphic-design-illustration-set/209183229" target="_blank">Simple monster designs</a>
-* <a href="https://goo.gl/hKewyL" target="_blank">https://goo.gl/hKewyL</a>
+* <a href="https://goo.gl/hKewyL" target="_blank">A google search!</a>
 
-After you've done some sketching on paper, _select the one_ that you would like to use for the assignment and draw the creature bigger on a different piece of paper — ideally graph paper — and label the points that will help you to program your creature. Remember, to think in terms of shapes that we already know how to make in TKinter: ovals, circles, bullseyes, squares/rectangles, and polygons! Just like we have with ovals, circles, squares, etc, you'll be responsible for writing a _function_ that creates your creature from a series of parameters (center coordinate, width, etc.).
+After you've done some sketching on paper, _select the one_ that you would like to use for the assignment and draw the creature bigger on a different piece of paper — ideally graph paper — and label the points that will help you to program your creature. Remember, to think in terms of shapes that we already know how to make using our basic shapes: ovals, circles, bullseyes, squares/rectangles, and polygons! Just like we have with ovals, circles, squares, etc, you'll be responsible for writing a _function_ that creates your creature from a series of parameters (center coordinate, width, etc.).
 
 {: .blockquote-no-margin}
 > **AGAIN:** Making a simple creature (e.g using 5-8 shapes) is totally fine. You don’t need to get too detailed unless you want to! And you can always enhance your creature at a later point in time.
@@ -101,7 +101,7 @@ Once you are satisfied with your animal concept, draw those shapes inside your `
 <details>
   <summary><b>Tips!</b></summary>
   <ol>
-  <li>You are free to use either method of compounding: math (HW2 or Mario) or layout functions (Tutorial 3 Part 1)</li>
+  <li>You are free to use either method of compounding: math (HW2) or layout functions (Tutorial 3 Part 2)</li>
   <li>Keep it simple (we recommend anywhere between 5 (minimum) to 8 shapes)! You can always add more functionality later.</li>
   <li>Make only one or two changes at a time and then test out those changes by running your file. This makes things easier to debug.</li>
 <li>Use the grid that gets drawn to help you figure out the "math" behind your design! If you find the grid annoying you can comment it out by searching for the function call to make_grid and adding a # at the beginning of the line.</li>

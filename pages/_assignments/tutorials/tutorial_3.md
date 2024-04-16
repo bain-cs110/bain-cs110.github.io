@@ -68,9 +68,9 @@ bains_fave_color = get_favorite_color(bains_favorite_things)
 print("Dr. Bain's favorite color is: " + bains_fave_color)
 ```
 
-You see both your favorite color printed AND my favorite color printed **and do not see <code>None</code> printed** (this would be a sign that your function is not actually a reporter).
+you see **both** your favorite color printed AND my favorite color printed **and do not see <code>None</code> printed** (this would be a sign that your function is not actually a reporter).
 
-**Activity 3.** Now write a functions called `multiply_favorite_numbers` that takes in **two inputs**, which are two favorite things lists like the above, and **returns** the product of the two favorite numbers. For instance, if you ran it like below:
+**Activity 3.** Now write a function called `multiply_favorite_numbers` that takes in **two inputs**, which are two favorite things lists like the above, and **returns** the product of the two favorite numbers. For instance, if you ran it like below:
 
 ```python
 print("The product of my our fave numbers is...") 
@@ -98,7 +98,7 @@ print("Rando class: " + rando_class(my_favorite_things))
 </details>
 
 <details>
-<summary>Did you get the same course everytime?</summary>
+<summary>Did you get the same course every time?</summary>
 <ul>
 <li>Any chance you did something like: <code>return choice(list_name[-1])</code>?</li>
 <li>If so, you're on the right track...but Python is a peculiar language. It's trying to be helpful but is instead doing something we can't actually see.</li>

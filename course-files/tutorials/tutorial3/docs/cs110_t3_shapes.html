@@ -395,46 +395,46 @@ cs110_t3_shapes    </h1>
 </span><span id="L-240"><a href="#L-240"><span class="linenos">240</span></a>
 </span><span id="L-241"><a href="#L-241"><span class="linenos">241</span></a>    <span class="k">return</span> <span class="n">arc</span><span class="p">(</span><span class="n">points</span><span class="o">=</span><span class="n">all_points</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">line_width</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 </span><span id="L-242"><a href="#L-242"><span class="linenos">242</span></a>
-</span><span id="L-243"><a href="#L-243"><span class="linenos">243</span></a><span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">x_shift</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y_shift</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+</span><span id="L-243"><a href="#L-243"><span class="linenos">243</span></a><span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">x_shift</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y_shift</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 </span><span id="L-244"><a href="#L-244"><span class="linenos">244</span></a>    <span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-245"><a href="#L-245"><span class="linenos">245</span></a><span class="sd">    Purpose: Move the x and y position of all shapes that have been tagged</span>
 </span><span id="L-246"><a href="#L-246"><span class="linenos">246</span></a><span class="sd">    with the tag argument</span>
 </span><span id="L-247"><a href="#L-247"><span class="linenos">247</span></a><span class="sd">    Args:</span>
-</span><span id="L-248"><a href="#L-248"><span class="linenos">248</span></a><span class="sd">        tag (`str`): the shape (or shapes) to move</span>
+</span><span id="L-248"><a href="#L-248"><span class="linenos">248</span></a><span class="sd">        shape (tag or id): the shape (or shapes) to move</span>
 </span><span id="L-249"><a href="#L-249"><span class="linenos">249</span></a><span class="sd">        x_shift (`int`; optional): amount to move in the x direction</span>
 </span><span id="L-250"><a href="#L-250"><span class="linenos">250</span></a><span class="sd">        y_shift (`int`; optional): amount to move in the y direction</span>
 </span><span id="L-251"><a href="#L-251"><span class="linenos">251</span></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="L-252"><a href="#L-252"><span class="linenos">252</span></a>    <span class="n">shape_ids</span> <span class="o">=</span> <span class="n">_a_canvas</span><span class="o">.</span><span class="n">find_withtag</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+</span><span id="L-252"><a href="#L-252"><span class="linenos">252</span></a>    <span class="n">shape_ids</span> <span class="o">=</span> <span class="n">_a_canvas</span><span class="o">.</span><span class="n">find_withtag</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span>
 </span><span id="L-253"><a href="#L-253"><span class="linenos">253</span></a>    <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="n">shape_ids</span><span class="p">:</span>
 </span><span id="L-254"><a href="#L-254"><span class="linenos">254</span></a>        <span class="n">_a_canvas</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span>
 </span><span id="L-255"><a href="#L-255"><span class="linenos">255</span></a>                        <span class="n">x_shift</span><span class="p">,</span>
 </span><span id="L-256"><a href="#L-256"><span class="linenos">256</span></a>                        <span class="n">y_shift</span><span class="p">)</span>
 </span><span id="L-257"><a href="#L-257"><span class="linenos">257</span></a>
-</span><span id="L-258"><a href="#L-258"><span class="linenos">258</span></a><span class="k">def</span> <span class="nf">put_in_front</span><span class="p">(</span><span class="n">tag</span><span class="p">):</span>
+</span><span id="L-258"><a href="#L-258"><span class="linenos">258</span></a><span class="k">def</span> <span class="nf">put_in_front</span><span class="p">(</span><span class="n">shape</span><span class="p">):</span>
 </span><span id="L-259"><a href="#L-259"><span class="linenos">259</span></a>    <span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-260"><a href="#L-260"><span class="linenos">260</span></a><span class="sd">    A function that &quot;raises&quot; a shape to the &quot;top&quot; of the screen.&quot;</span>
 </span><span id="L-261"><a href="#L-261"><span class="linenos">261</span></a>
 </span><span id="L-262"><a href="#L-262"><span class="linenos">262</span></a><span class="sd">    Args:</span>
-</span><span id="L-263"><a href="#L-263"><span class="linenos">263</span></a><span class="sd">        tag (`str`): The tag to raise.</span>
+</span><span id="L-263"><a href="#L-263"><span class="linenos">263</span></a><span class="sd">        shape (tag or id): The shape to raise.</span>
 </span><span id="L-264"><a href="#L-264"><span class="linenos">264</span></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="L-265"><a href="#L-265"><span class="linenos">265</span></a>    <span class="n">_a_canvas</span><span class="o">.</span><span class="n">tag_raise</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+</span><span id="L-265"><a href="#L-265"><span class="linenos">265</span></a>    <span class="n">_a_canvas</span><span class="o">.</span><span class="n">tag_raise</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span>
 </span><span id="L-266"><a href="#L-266"><span class="linenos">266</span></a>
-</span><span id="L-267"><a href="#L-267"><span class="linenos">267</span></a><span class="k">def</span> <span class="nf">put_in_back</span><span class="p">(</span><span class="n">tag</span><span class="p">):</span>
+</span><span id="L-267"><a href="#L-267"><span class="linenos">267</span></a><span class="k">def</span> <span class="nf">put_in_back</span><span class="p">(</span><span class="n">shape</span><span class="p">):</span>
 </span><span id="L-268"><a href="#L-268"><span class="linenos">268</span></a>    <span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-269"><a href="#L-269"><span class="linenos">269</span></a><span class="sd">    A function that &quot;lowers&quot; a shape to the &quot;bottom&quot; of the screen.&quot;</span>
 </span><span id="L-270"><a href="#L-270"><span class="linenos">270</span></a>
 </span><span id="L-271"><a href="#L-271"><span class="linenos">271</span></a><span class="sd">    Args:</span>
-</span><span id="L-272"><a href="#L-272"><span class="linenos">272</span></a><span class="sd">        tag (`str`): The tag to raise.</span>
+</span><span id="L-272"><a href="#L-272"><span class="linenos">272</span></a><span class="sd">        shape (tag or id): The shape to raise.</span>
 </span><span id="L-273"><a href="#L-273"><span class="linenos">273</span></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="L-274"><a href="#L-274"><span class="linenos">274</span></a>    <span class="n">_a_canvas</span><span class="o">.</span><span class="n">tag_lower</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+</span><span id="L-274"><a href="#L-274"><span class="linenos">274</span></a>    <span class="n">_a_canvas</span><span class="o">.</span><span class="n">tag_lower</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span>
 </span><span id="L-275"><a href="#L-275"><span class="linenos">275</span></a>
 </span><span id="L-276"><a href="#L-276"><span class="linenos">276</span></a><span class="k">def</span> <span class="nf">overlay</span><span class="p">(</span><span class="n">shape1</span><span class="p">,</span> <span class="n">shape2</span><span class="p">,</span> <span class="n">offset_x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">offset_y</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 </span><span id="L-277"><a href="#L-277"><span class="linenos">277</span></a>    <span class="sd">&quot;&quot;&quot;</span>
 </span><span id="L-278"><a href="#L-278"><span class="linenos">278</span></a><span class="sd">    A reporter function that overlays shape1 onto shape2. It does this by moving shape 1&#39;s center</span>
 </span><span id="L-279"><a href="#L-279"><span class="linenos">279</span></a><span class="sd">    to shape 2&#39;s center, and then applying any specified offset.</span>
 </span><span id="L-280"><a href="#L-280"><span class="linenos">280</span></a><span class="sd">    Args:</span>
-</span><span id="L-281"><a href="#L-281"><span class="linenos">281</span></a><span class="sd">        shape1 (`Shape` or Tag): The first shape to use.</span>
-</span><span id="L-282"><a href="#L-282"><span class="linenos">282</span></a><span class="sd">        shape2 (`Shape` or Tag): The second shape to use.</span>
+</span><span id="L-281"><a href="#L-281"><span class="linenos">281</span></a><span class="sd">        shape1 (tag or id): The first shape to use.</span>
+</span><span id="L-282"><a href="#L-282"><span class="linenos">282</span></a><span class="sd">        shape2 (tag or id): The second shape to use.</span>
 </span><span id="L-283"><a href="#L-283"><span class="linenos">283</span></a><span class="sd">        offset_x (`int`): How much to shift shape 2 in the x-direction after centering it.</span>
 </span><span id="L-284"><a href="#L-284"><span class="linenos">284</span></a><span class="sd">        offset_y (`int`): How much to shift shape 2 in the x-direction after centering it.</span>
 </span><span id="L-285"><a href="#L-285"><span class="linenos">285</span></a><span class="sd">        tag (`str`): The tag to assign to the shape.</span>
@@ -458,8 +458,8 @@ cs110_t3_shapes    </h1>
 </span><span id="L-303"><a href="#L-303"><span class="linenos">303</span></a><span class="sd">    A reporter function that underlays shape1 beneath shape2. It does this by moving shape 1&#39;s center</span>
 </span><span id="L-304"><a href="#L-304"><span class="linenos">304</span></a><span class="sd">    to shape 2&#39;s center, and then applying any specified offset.</span>
 </span><span id="L-305"><a href="#L-305"><span class="linenos">305</span></a><span class="sd">    Args:</span>
-</span><span id="L-306"><a href="#L-306"><span class="linenos">306</span></a><span class="sd">        shape1 (`Shape` or Tag): The first shape to use.</span>
-</span><span id="L-307"><a href="#L-307"><span class="linenos">307</span></a><span class="sd">        shape2 (`Shape` or Tag): The second shape to use.</span>
+</span><span id="L-306"><a href="#L-306"><span class="linenos">306</span></a><span class="sd">        shape1 (tag or id): The first shape to use.</span>
+</span><span id="L-307"><a href="#L-307"><span class="linenos">307</span></a><span class="sd">        shape2 (tag or id): The second shape to use.</span>
 </span><span id="L-308"><a href="#L-308"><span class="linenos">308</span></a><span class="sd">        offset_x (`int`): How much to shift shape 2 in the x-direction after centering it.</span>
 </span><span id="L-309"><a href="#L-309"><span class="linenos">309</span></a><span class="sd">        offset_y (`int`): How much to shift shape 2 in the x-direction after centering it.</span>
 </span><span id="L-310"><a href="#L-310"><span class="linenos">310</span></a>
@@ -484,8 +484,8 @@ cs110_t3_shapes    </h1>
 </span><span id="L-329"><a href="#L-329"><span class="linenos">329</span></a><span class="sd">    specified offset.</span>
 </span><span id="L-330"><a href="#L-330"><span class="linenos">330</span></a>
 </span><span id="L-331"><a href="#L-331"><span class="linenos">331</span></a><span class="sd">    Args:</span>
-</span><span id="L-332"><a href="#L-332"><span class="linenos">332</span></a><span class="sd">        shape1 (`Shape` or Tag): The first shape to use.</span>
-</span><span id="L-333"><a href="#L-333"><span class="linenos">333</span></a><span class="sd">        shape2 (`Shape` or Tag): The second shape to use.</span>
+</span><span id="L-332"><a href="#L-332"><span class="linenos">332</span></a><span class="sd">        shape1 (tag or id): The first shape to use.</span>
+</span><span id="L-333"><a href="#L-333"><span class="linenos">333</span></a><span class="sd">        shape2 (tag or id): The second shape to use.</span>
 </span><span id="L-334"><a href="#L-334"><span class="linenos">334</span></a><span class="sd">        offset_x (`int`): How much to shift shape 2 in the x-direction after moving it.</span>
 </span><span id="L-335"><a href="#L-335"><span class="linenos">335</span></a><span class="sd">        offset_y (`int`): How much to shift shape 2 in the x-direction after moving it.</span>
 </span><span id="L-336"><a href="#L-336"><span class="linenos">336</span></a>
@@ -508,8 +508,8 @@ cs110_t3_shapes    </h1>
 </span><span id="L-353"><a href="#L-353"><span class="linenos">353</span></a><span class="sd">    specified offset.</span>
 </span><span id="L-354"><a href="#L-354"><span class="linenos">354</span></a>
 </span><span id="L-355"><a href="#L-355"><span class="linenos">355</span></a><span class="sd">    Args:</span>
-</span><span id="L-356"><a href="#L-356"><span class="linenos">356</span></a><span class="sd">        shape1 (`Shape` or Tag): The first shape to use.</span>
-</span><span id="L-357"><a href="#L-357"><span class="linenos">357</span></a><span class="sd">        shape2 (`Shape` or Tag): The second shape to use.</span>
+</span><span id="L-356"><a href="#L-356"><span class="linenos">356</span></a><span class="sd">        shape1 (tag or id): The first shape to use.</span>
+</span><span id="L-357"><a href="#L-357"><span class="linenos">357</span></a><span class="sd">        shape2 (tag or id): The second shape to use.</span>
 </span><span id="L-358"><a href="#L-358"><span class="linenos">358</span></a><span class="sd">        offset_x (`int`): How much to shift shape 2 in the x-direction after moving it.</span>
 </span><span id="L-359"><a href="#L-359"><span class="linenos">359</span></a><span class="sd">        offset_y (`int`): How much to shift shape 2 in the x-direction after moving it.</span>
 </span><span id="L-360"><a href="#L-360"><span class="linenos">360</span></a>
@@ -532,8 +532,8 @@ cs110_t3_shapes    </h1>
 </span><span id="L-377"><a href="#L-377"><span class="linenos">377</span></a><span class="sd">    specified offset.</span>
 </span><span id="L-378"><a href="#L-378"><span class="linenos">378</span></a>
 </span><span id="L-379"><a href="#L-379"><span class="linenos">379</span></a><span class="sd">    Args:</span>
-</span><span id="L-380"><a href="#L-380"><span class="linenos">380</span></a><span class="sd">        shape1 (`Shape` or Tag): The first shape to use.</span>
-</span><span id="L-381"><a href="#L-381"><span class="linenos">381</span></a><span class="sd">        shape2 (`Shape` or Tag): The second shape to use.</span>
+</span><span id="L-380"><a href="#L-380"><span class="linenos">380</span></a><span class="sd">        shape1 (tag or id): The first shape to use.</span>
+</span><span id="L-381"><a href="#L-381"><span class="linenos">381</span></a><span class="sd">        shape2 (tag or id): The second shape to use.</span>
 </span><span id="L-382"><a href="#L-382"><span class="linenos">382</span></a><span class="sd">        offset_x (`int`): How much to shift shape 2 in the x-direction after moving it.</span>
 </span><span id="L-383"><a href="#L-383"><span class="linenos">383</span></a><span class="sd">        offset_y (`int`): How much to shift shape 2 in the x-direction after moving it.</span>
 </span><span id="L-384"><a href="#L-384"><span class="linenos">384</span></a>
@@ -553,7 +553,7 @@ cs110_t3_shapes    </h1>
 </span><span id="L-398"><a href="#L-398"><span class="linenos">398</span></a><span class="sd">    A function that deletes a shape from our screen.</span>
 </span><span id="L-399"><a href="#L-399"><span class="linenos">399</span></a>
 </span><span id="L-400"><a href="#L-400"><span class="linenos">400</span></a><span class="sd">    Args:</span>
-</span><span id="L-401"><a href="#L-401"><span class="linenos">401</span></a><span class="sd">        shape (`Shape` or Tag): The shape to delete.</span>
+</span><span id="L-401"><a href="#L-401"><span class="linenos">401</span></a><span class="sd">        shape (tag or id): The shape to delete.</span>
 </span><span id="L-402"><a href="#L-402"><span class="linenos">402</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="L-403"><a href="#L-403"><span class="linenos">403</span></a>    <span class="n">_a_canvas</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span>
 </span><span id="L-404"><a href="#L-404"><span class="linenos">404</span></a>
@@ -562,7 +562,7 @@ cs110_t3_shapes    </h1>
 </span><span id="L-407"><a href="#L-407"><span class="linenos">407</span></a><span class="sd">    A reporter function that perfectly copies a shape and returns that copy.</span>
 </span><span id="L-408"><a href="#L-408"><span class="linenos">408</span></a>
 </span><span id="L-409"><a href="#L-409"><span class="linenos">409</span></a><span class="sd">    Args:</span>
-</span><span id="L-410"><a href="#L-410"><span class="linenos">410</span></a><span class="sd">        shape (`Shape` or Tag): The shape to duplicate.</span>
+</span><span id="L-410"><a href="#L-410"><span class="linenos">410</span></a><span class="sd">        shape (tag or id): The shape to duplicate.</span>
 </span><span id="L-411"><a href="#L-411"><span class="linenos">411</span></a><span class="sd">        color (`str`): A new color to use with the duplicated shape.</span>
 </span><span id="L-412"><a href="#L-412"><span class="linenos">412</span></a>
 </span><span id="L-413"><a href="#L-413"><span class="linenos">413</span></a><span class="sd">    Returns:</span>
@@ -585,7 +585,7 @@ cs110_t3_shapes    </h1>
 </span><span id="L-430"><a href="#L-430"><span class="linenos">430</span></a><span class="sd">    axis, returning the tag or ID of the modified shape.</span>
 </span><span id="L-431"><a href="#L-431"><span class="linenos">431</span></a><span class="sd">        </span>
 </span><span id="L-432"><a href="#L-432"><span class="linenos">432</span></a><span class="sd">    Args:</span>
-</span><span id="L-433"><a href="#L-433"><span class="linenos">433</span></a><span class="sd">        shape (`Shape` or Tag): The shape in question.</span>
+</span><span id="L-433"><a href="#L-433"><span class="linenos">433</span></a><span class="sd">        shape (tag or id): The shape in question.</span>
 </span><span id="L-434"><a href="#L-434"><span class="linenos">434</span></a>
 </span><span id="L-435"><a href="#L-435"><span class="linenos">435</span></a><span class="sd">    Returns:</span>
 </span><span id="L-436"><a href="#L-436"><span class="linenos">436</span></a><span class="sd">        The modified shape.</span>
@@ -616,7 +616,7 @@ cs110_t3_shapes    </h1>
 </span><span id="L-461"><a href="#L-461"><span class="linenos">461</span></a><span class="sd">    points on the edge of the polygon.</span>
 </span><span id="L-462"><a href="#L-462"><span class="linenos">462</span></a>
 </span><span id="L-463"><a href="#L-463"><span class="linenos">463</span></a><span class="sd">    Args:</span>
-</span><span id="L-464"><a href="#L-464"><span class="linenos">464</span></a><span class="sd">        shape (`Shape` or Tag): The shape to rotate.</span>
+</span><span id="L-464"><a href="#L-464"><span class="linenos">464</span></a><span class="sd">        shape (tag or id): The shape to rotate.</span>
 </span><span id="L-465"><a href="#L-465"><span class="linenos">465</span></a><span class="sd">        degrees (`int`): The number of degrees to rotate the shape.</span>
 </span><span id="L-466"><a href="#L-466"><span class="linenos">466</span></a><span class="sd">        origin (`tuple`): An `(x,y)` coordinate about which to perform the rotation. Defaults to the center</span>
 </span><span id="L-467"><a href="#L-467"><span class="linenos">467</span></a><span class="sd">            of the given shape.</span>
@@ -659,15 +659,15 @@ cs110_t3_shapes    </h1>
 </span><span id="L-504"><a href="#L-504"><span class="linenos">504</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="L-505"><a href="#L-505"><span class="linenos">505</span></a>    <span class="k">return</span> <span class="n">sqrt</span><span class="p">(((</span><span class="n">point1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">point2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="p">((</span><span class="n">point1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">point2</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span>
 </span><span id="L-506"><a href="#L-506"><span class="linenos">506</span></a>
-</span><span id="L-507"><a href="#L-507"><span class="linenos">507</span></a><span class="k">def</span> <span class="nf">update_color</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
+</span><span id="L-507"><a href="#L-507"><span class="linenos">507</span></a><span class="k">def</span> <span class="nf">update_color</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
 </span><span id="L-508"><a href="#L-508"><span class="linenos">508</span></a>    <span class="sd">&#39;&#39;&#39;</span>
 </span><span id="L-509"><a href="#L-509"><span class="linenos">509</span></a><span class="sd">    Change the fill color of a tagged object.</span>
 </span><span id="L-510"><a href="#L-510"><span class="linenos">510</span></a>
 </span><span id="L-511"><a href="#L-511"><span class="linenos">511</span></a><span class="sd">    Args:</span>
-</span><span id="L-512"><a href="#L-512"><span class="linenos">512</span></a><span class="sd">        tag (`str`): The tag of the object to re-fill.</span>
+</span><span id="L-512"><a href="#L-512"><span class="linenos">512</span></a><span class="sd">        shape (tag or id): The tag of the object to re-fill.</span>
 </span><span id="L-513"><a href="#L-513"><span class="linenos">513</span></a><span class="sd">        color (`str`): A color name or hex code to re-fill with.</span>
 </span><span id="L-514"><a href="#L-514"><span class="linenos">514</span></a><span class="sd">    &#39;&#39;&#39;</span>
-</span><span id="L-515"><a href="#L-515"><span class="linenos">515</span></a>    <span class="n">ids</span> <span class="o">=</span> <span class="n">_a_canvas</span><span class="o">.</span><span class="n">find_withtag</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+</span><span id="L-515"><a href="#L-515"><span class="linenos">515</span></a>    <span class="n">ids</span> <span class="o">=</span> <span class="n">_a_canvas</span><span class="o">.</span><span class="n">find_withtag</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span>
 </span><span id="L-516"><a href="#L-516"><span class="linenos">516</span></a>    <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="n">ids</span><span class="p">:</span>
 </span><span id="L-517"><a href="#L-517"><span class="linenos">517</span></a>        <span class="n">_a_canvas</span><span class="o">.</span><span class="n">itemconfig</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
 </span><span id="L-518"><a href="#L-518"><span class="linenos">518</span></a>
@@ -699,7 +699,7 @@ cs110_t3_shapes    </h1>
 </span><span id="L-544"><a href="#L-544"><span class="linenos">544</span></a><span class="sd">    A reporter function calculates the a coordinate at the center of some shape.</span>
 </span><span id="L-545"><a href="#L-545"><span class="linenos">545</span></a><span class="sd">        </span>
 </span><span id="L-546"><a href="#L-546"><span class="linenos">546</span></a><span class="sd">    Args:</span>
-</span><span id="L-547"><a href="#L-547"><span class="linenos">547</span></a><span class="sd">        shape (`Shape` or Tag): The shape in question.</span>
+</span><span id="L-547"><a href="#L-547"><span class="linenos">547</span></a><span class="sd">        shape (tag or id): The shape in question.</span>
 </span><span id="L-548"><a href="#L-548"><span class="linenos">548</span></a>
 </span><span id="L-549"><a href="#L-549"><span class="linenos">549</span></a><span class="sd">    Returns:</span>
 </span><span id="L-550"><a href="#L-550"><span class="linenos">550</span></a><span class="sd">         A `tuple` representing center of the given shape.</span>
@@ -717,7 +717,7 @@ cs110_t3_shapes    </h1>
 </span><span id="L-562"><a href="#L-562"><span class="linenos">562</span></a><span class="sd">    A reporter function calculates the **minimum** y-value of a given shape (since the y-axis is flipped).</span>
 </span><span id="L-563"><a href="#L-563"><span class="linenos">563</span></a>
 </span><span id="L-564"><a href="#L-564"><span class="linenos">564</span></a><span class="sd">    Args:</span>
-</span><span id="L-565"><a href="#L-565"><span class="linenos">565</span></a><span class="sd">        shape (`Shape` or Tag): The shape in question.</span>
+</span><span id="L-565"><a href="#L-565"><span class="linenos">565</span></a><span class="sd">        shape (tag or id): The shape in question.</span>
 </span><span id="L-566"><a href="#L-566"><span class="linenos">566</span></a>
 </span><span id="L-567"><a href="#L-567"><span class="linenos">567</span></a><span class="sd">    Returns:</span>
 </span><span id="L-568"><a href="#L-568"><span class="linenos">568</span></a><span class="sd">         A `int` representing the minimum y-coordinate of the shape.</span>
@@ -731,7 +731,7 @@ cs110_t3_shapes    </h1>
 </span><span id="L-576"><a href="#L-576"><span class="linenos">576</span></a><span class="sd">    A reporter function calculates the **maximum** y-value of a given shape (since the y-axis is flipped).</span>
 </span><span id="L-577"><a href="#L-577"><span class="linenos">577</span></a><span class="sd">    </span>
 </span><span id="L-578"><a href="#L-578"><span class="linenos">578</span></a><span class="sd">    Args:</span>
-</span><span id="L-579"><a href="#L-579"><span class="linenos">579</span></a><span class="sd">        shape (`Shape` or Tag): The shape in question.</span>
+</span><span id="L-579"><a href="#L-579"><span class="linenos">579</span></a><span class="sd">        shape (tag or id): The shape in question.</span>
 </span><span id="L-580"><a href="#L-580"><span class="linenos">580</span></a>
 </span><span id="L-581"><a href="#L-581"><span class="linenos">581</span></a><span class="sd">    Returns:</span>
 </span><span id="L-582"><a href="#L-582"><span class="linenos">582</span></a><span class="sd">         A `int` representing the maximum y-coordinate of the shape.</span>
@@ -745,7 +745,7 @@ cs110_t3_shapes    </h1>
 </span><span id="L-590"><a href="#L-590"><span class="linenos">590</span></a><span class="sd">    A reporter function calculates the **minimum** x-value of a given shape.</span>
 </span><span id="L-591"><a href="#L-591"><span class="linenos">591</span></a><span class="sd">        </span>
 </span><span id="L-592"><a href="#L-592"><span class="linenos">592</span></a><span class="sd">    Args:</span>
-</span><span id="L-593"><a href="#L-593"><span class="linenos">593</span></a><span class="sd">        shape (`Shape` or Tag): The shape in question.</span>
+</span><span id="L-593"><a href="#L-593"><span class="linenos">593</span></a><span class="sd">        shape (tag or id): The shape in question.</span>
 </span><span id="L-594"><a href="#L-594"><span class="linenos">594</span></a>
 </span><span id="L-595"><a href="#L-595"><span class="linenos">595</span></a><span class="sd">    Returns:</span>
 </span><span id="L-596"><a href="#L-596"><span class="linenos">596</span></a><span class="sd">         A `int` representing the minimum x-coordinate of the shape.</span>
@@ -759,7 +759,7 @@ cs110_t3_shapes    </h1>
 </span><span id="L-604"><a href="#L-604"><span class="linenos">604</span></a><span class="sd">    A reporter function calculates the **maximum** x-value of a given shape.</span>
 </span><span id="L-605"><a href="#L-605"><span class="linenos">605</span></a><span class="sd">        </span>
 </span><span id="L-606"><a href="#L-606"><span class="linenos">606</span></a><span class="sd">    Args:</span>
-</span><span id="L-607"><a href="#L-607"><span class="linenos">607</span></a><span class="sd">        shape (`Shape` or Tag): The shape in question.</span>
+</span><span id="L-607"><a href="#L-607"><span class="linenos">607</span></a><span class="sd">        shape (tag or id): The shape in question.</span>
 </span><span id="L-608"><a href="#L-608"><span class="linenos">608</span></a>
 </span><span id="L-609"><a href="#L-609"><span class="linenos">609</span></a><span class="sd">    Returns:</span>
 </span><span id="L-610"><a href="#L-610"><span class="linenos">610</span></a><span class="sd">         A `int` representing the maximum x-coordinate of the shape.</span>
@@ -773,7 +773,7 @@ cs110_t3_shapes    </h1>
 </span><span id="L-618"><a href="#L-618"><span class="linenos">618</span></a><span class="sd">    A reporter function calculates the height of some given shape.</span>
 </span><span id="L-619"><a href="#L-619"><span class="linenos">619</span></a><span class="sd">        </span>
 </span><span id="L-620"><a href="#L-620"><span class="linenos">620</span></a><span class="sd">    Args:</span>
-</span><span id="L-621"><a href="#L-621"><span class="linenos">621</span></a><span class="sd">        shape (`Shape` or Tag): The shape in question.</span>
+</span><span id="L-621"><a href="#L-621"><span class="linenos">621</span></a><span class="sd">        shape (tag or id): The shape in question.</span>
 </span><span id="L-622"><a href="#L-622"><span class="linenos">622</span></a>
 </span><span id="L-623"><a href="#L-623"><span class="linenos">623</span></a><span class="sd">    Returns:</span>
 </span><span id="L-624"><a href="#L-624"><span class="linenos">624</span></a><span class="sd">         A `int` representing the height of the shape.</span>
@@ -787,7 +787,7 @@ cs110_t3_shapes    </h1>
 </span><span id="L-632"><a href="#L-632"><span class="linenos">632</span></a><span class="sd">    A reporter function calculates the width of some given shape.</span>
 </span><span id="L-633"><a href="#L-633"><span class="linenos">633</span></a><span class="sd">        </span>
 </span><span id="L-634"><a href="#L-634"><span class="linenos">634</span></a><span class="sd">    Args:</span>
-</span><span id="L-635"><a href="#L-635"><span class="linenos">635</span></a><span class="sd">        shape (`Shape` or Tag): The shape in question.</span>
+</span><span id="L-635"><a href="#L-635"><span class="linenos">635</span></a><span class="sd">        shape (tag or id): The shape in question.</span>
 </span><span id="L-636"><a href="#L-636"><span class="linenos">636</span></a>
 </span><span id="L-637"><a href="#L-637"><span class="linenos">637</span></a><span class="sd">    Returns:</span>
 </span><span id="L-638"><a href="#L-638"><span class="linenos">638</span></a><span class="sd">         An `int` representing width of the shape.</span>
@@ -873,15 +873,15 @@ cs110_t3_shapes    </h1>
 </span><span id="L-718"><a href="#L-718"><span class="linenos">718</span></a>
 </span><span id="L-719"><a href="#L-719"><span class="linenos">719</span></a>    <span class="k">return</span> <span class="n">color</span>
 </span><span id="L-720"><a href="#L-720"><span class="linenos">720</span></a>
-</span><span id="L-721"><a href="#L-721"><span class="linenos">721</span></a><span class="k">def</span> <span class="nf">does_tag_exist</span><span class="p">(</span><span class="n">tag</span><span class="p">):</span>
+</span><span id="L-721"><a href="#L-721"><span class="linenos">721</span></a><span class="k">def</span> <span class="nf">does_tag_exist</span><span class="p">(</span><span class="n">shape</span><span class="p">):</span>
 </span><span id="L-722"><a href="#L-722"><span class="linenos">722</span></a>    <span class="sd">&#39;&#39;&#39;</span>
 </span><span id="L-723"><a href="#L-723"><span class="linenos">723</span></a><span class="sd">    Returns `True` if a given tag exists otherwise returns `False`.</span>
 </span><span id="L-724"><a href="#L-724"><span class="linenos">724</span></a>
 </span><span id="L-725"><a href="#L-725"><span class="linenos">725</span></a><span class="sd">    Args:</span>
-</span><span id="L-726"><a href="#L-726"><span class="linenos">726</span></a><span class="sd">        `tag` (`str`): [Required] The tag of the object to lookup.</span>
+</span><span id="L-726"><a href="#L-726"><span class="linenos">726</span></a><span class="sd">        shape (tag or id): [Required] The tag of the object to lookup.</span>
 </span><span id="L-727"><a href="#L-727"><span class="linenos">727</span></a>
 </span><span id="L-728"><a href="#L-728"><span class="linenos">728</span></a><span class="sd">    &#39;&#39;&#39;</span>
-</span><span id="L-729"><a href="#L-729"><span class="linenos">729</span></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">_a_canvas</span><span class="o">.</span><span class="n">find_withtag</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+</span><span id="L-729"><a href="#L-729"><span class="linenos">729</span></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">_a_canvas</span><span class="o">.</span><span class="n">find_withtag</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span>
 </span><span id="L-730"><a href="#L-730"><span class="linenos">730</span></a>
 </span><span id="L-731"><a href="#L-731"><span class="linenos">731</span></a>    <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
 </span><span id="L-732"><a href="#L-732"><span class="linenos">732</span></a>        <span class="k">return</span> <span class="kc">True</span>
@@ -1488,22 +1488,22 @@ defaults to an empty list.</li>
 <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">move</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">tag</span>, </span><span class="param"><span class="n">x_shift</span><span class="o">=</span><span class="mi">0</span>, </span><span class="param"><span class="n">y_shift</span><span class="o">=</span><span class="mi">0</span></span>)</span>
+        <span class="name">move</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">shape</span>, </span><span class="param"><span class="n">x_shift</span><span class="o">=</span><span class="mi">0</span>, </span><span class="param"><span class="n">y_shift</span><span class="o">=</span><span class="mi">0</span></span>)</span>
 
                 <label class="view-source-button" for="move-view-source"><span>View Source</span></label>
 
     </div>
     <a class="headerlink" href="#move"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="move-244"><a href="#move-244"><span class="linenos">244</span></a><span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">x_shift</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y_shift</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="move-244"><a href="#move-244"><span class="linenos">244</span></a><span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">x_shift</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y_shift</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 </span><span id="move-245"><a href="#move-245"><span class="linenos">245</span></a>    <span class="sd">&quot;&quot;&quot;</span>
 </span><span id="move-246"><a href="#move-246"><span class="linenos">246</span></a><span class="sd">    Purpose: Move the x and y position of all shapes that have been tagged</span>
 </span><span id="move-247"><a href="#move-247"><span class="linenos">247</span></a><span class="sd">    with the tag argument</span>
 </span><span id="move-248"><a href="#move-248"><span class="linenos">248</span></a><span class="sd">    Args:</span>
-</span><span id="move-249"><a href="#move-249"><span class="linenos">249</span></a><span class="sd">        tag (`str`): the shape (or shapes) to move</span>
+</span><span id="move-249"><a href="#move-249"><span class="linenos">249</span></a><span class="sd">        shape (tag or id): the shape (or shapes) to move</span>
 </span><span id="move-250"><a href="#move-250"><span class="linenos">250</span></a><span class="sd">        x_shift (`int`; optional): amount to move in the x direction</span>
 </span><span id="move-251"><a href="#move-251"><span class="linenos">251</span></a><span class="sd">        y_shift (`int`; optional): amount to move in the y direction</span>
 </span><span id="move-252"><a href="#move-252"><span class="linenos">252</span></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="move-253"><a href="#move-253"><span class="linenos">253</span></a>    <span class="n">shape_ids</span> <span class="o">=</span> <span class="n">_a_canvas</span><span class="o">.</span><span class="n">find_withtag</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+</span><span id="move-253"><a href="#move-253"><span class="linenos">253</span></a>    <span class="n">shape_ids</span> <span class="o">=</span> <span class="n">_a_canvas</span><span class="o">.</span><span class="n">find_withtag</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span>
 </span><span id="move-254"><a href="#move-254"><span class="linenos">254</span></a>    <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="n">shape_ids</span><span class="p">:</span>
 </span><span id="move-255"><a href="#move-255"><span class="linenos">255</span></a>        <span class="n">_a_canvas</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span>
 </span><span id="move-256"><a href="#move-256"><span class="linenos">256</span></a>                        <span class="n">x_shift</span><span class="p">,</span>
@@ -1517,7 +1517,7 @@ with the tag argument</p>
 <h6 id="args">Args</h6>
 
 <ul>
-<li><strong>tag (<code>str</code>):</strong>  the shape (or shapes) to move</li>
+<li><strong>shape (tag or id):</strong>  the shape (or shapes) to move</li>
 <li><strong>x_shift (<code>int</code>; optional):</strong>  amount to move in the x direction</li>
 <li><strong>y_shift (<code>int</code>; optional):</strong>  amount to move in the y direction</li>
 </ul>
@@ -1530,20 +1530,20 @@ with the tag argument</p>
 <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">put_in_front</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">tag</span></span>)</span>
+        <span class="name">put_in_front</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">shape</span></span>)</span>
 
                 <label class="view-source-button" for="put_in_front-view-source"><span>View Source</span></label>
 
     </div>
     <a class="headerlink" href="#put_in_front"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="put_in_front-259"><a href="#put_in_front-259"><span class="linenos">259</span></a><span class="k">def</span> <span class="nf">put_in_front</span><span class="p">(</span><span class="n">tag</span><span class="p">):</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="put_in_front-259"><a href="#put_in_front-259"><span class="linenos">259</span></a><span class="k">def</span> <span class="nf">put_in_front</span><span class="p">(</span><span class="n">shape</span><span class="p">):</span>
 </span><span id="put_in_front-260"><a href="#put_in_front-260"><span class="linenos">260</span></a>    <span class="sd">&quot;&quot;&quot;</span>
 </span><span id="put_in_front-261"><a href="#put_in_front-261"><span class="linenos">261</span></a><span class="sd">    A function that &quot;raises&quot; a shape to the &quot;top&quot; of the screen.&quot;</span>
 </span><span id="put_in_front-262"><a href="#put_in_front-262"><span class="linenos">262</span></a>
 </span><span id="put_in_front-263"><a href="#put_in_front-263"><span class="linenos">263</span></a><span class="sd">    Args:</span>
-</span><span id="put_in_front-264"><a href="#put_in_front-264"><span class="linenos">264</span></a><span class="sd">        tag (`str`): The tag to raise.</span>
+</span><span id="put_in_front-264"><a href="#put_in_front-264"><span class="linenos">264</span></a><span class="sd">        shape (tag or id): The shape to raise.</span>
 </span><span id="put_in_front-265"><a href="#put_in_front-265"><span class="linenos">265</span></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="put_in_front-266"><a href="#put_in_front-266"><span class="linenos">266</span></a>    <span class="n">_a_canvas</span><span class="o">.</span><span class="n">tag_raise</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+</span><span id="put_in_front-266"><a href="#put_in_front-266"><span class="linenos">266</span></a>    <span class="n">_a_canvas</span><span class="o">.</span><span class="n">tag_raise</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -1552,7 +1552,7 @@ with the tag argument</p>
 <h6 id="args">Args</h6>
 
 <ul>
-<li><strong>tag (<code>str</code>):</strong>  The tag to raise.</li>
+<li><strong>shape (tag or id):</strong>  The shape to raise.</li>
 </ul>
 </div>
 
@@ -1563,20 +1563,20 @@ with the tag argument</p>
 <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">put_in_back</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">tag</span></span>)</span>
+        <span class="name">put_in_back</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">shape</span></span>)</span>
 
                 <label class="view-source-button" for="put_in_back-view-source"><span>View Source</span></label>
 
     </div>
     <a class="headerlink" href="#put_in_back"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="put_in_back-268"><a href="#put_in_back-268"><span class="linenos">268</span></a><span class="k">def</span> <span class="nf">put_in_back</span><span class="p">(</span><span class="n">tag</span><span class="p">):</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="put_in_back-268"><a href="#put_in_back-268"><span class="linenos">268</span></a><span class="k">def</span> <span class="nf">put_in_back</span><span class="p">(</span><span class="n">shape</span><span class="p">):</span>
 </span><span id="put_in_back-269"><a href="#put_in_back-269"><span class="linenos">269</span></a>    <span class="sd">&quot;&quot;&quot;</span>
 </span><span id="put_in_back-270"><a href="#put_in_back-270"><span class="linenos">270</span></a><span class="sd">    A function that &quot;lowers&quot; a shape to the &quot;bottom&quot; of the screen.&quot;</span>
 </span><span id="put_in_back-271"><a href="#put_in_back-271"><span class="linenos">271</span></a>
 </span><span id="put_in_back-272"><a href="#put_in_back-272"><span class="linenos">272</span></a><span class="sd">    Args:</span>
-</span><span id="put_in_back-273"><a href="#put_in_back-273"><span class="linenos">273</span></a><span class="sd">        tag (`str`): The tag to raise.</span>
+</span><span id="put_in_back-273"><a href="#put_in_back-273"><span class="linenos">273</span></a><span class="sd">        shape (tag or id): The shape to raise.</span>
 </span><span id="put_in_back-274"><a href="#put_in_back-274"><span class="linenos">274</span></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="put_in_back-275"><a href="#put_in_back-275"><span class="linenos">275</span></a>    <span class="n">_a_canvas</span><span class="o">.</span><span class="n">tag_lower</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+</span><span id="put_in_back-275"><a href="#put_in_back-275"><span class="linenos">275</span></a>    <span class="n">_a_canvas</span><span class="o">.</span><span class="n">tag_lower</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span>
 </span></pre></div>
 
 
@@ -1585,7 +1585,7 @@ with the tag argument</p>
 <h6 id="args">Args</h6>
 
 <ul>
-<li><strong>tag (<code>str</code>):</strong>  The tag to raise.</li>
+<li><strong>shape (tag or id):</strong>  The shape to raise.</li>
 </ul>
 </div>
 
@@ -1607,8 +1607,8 @@ with the tag argument</p>
 </span><span id="overlay-279"><a href="#overlay-279"><span class="linenos">279</span></a><span class="sd">    A reporter function that overlays shape1 onto shape2. It does this by moving shape 1&#39;s center</span>
 </span><span id="overlay-280"><a href="#overlay-280"><span class="linenos">280</span></a><span class="sd">    to shape 2&#39;s center, and then applying any specified offset.</span>
 </span><span id="overlay-281"><a href="#overlay-281"><span class="linenos">281</span></a><span class="sd">    Args:</span>
-</span><span id="overlay-282"><a href="#overlay-282"><span class="linenos">282</span></a><span class="sd">        shape1 (`Shape` or Tag): The first shape to use.</span>
-</span><span id="overlay-283"><a href="#overlay-283"><span class="linenos">283</span></a><span class="sd">        shape2 (`Shape` or Tag): The second shape to use.</span>
+</span><span id="overlay-282"><a href="#overlay-282"><span class="linenos">282</span></a><span class="sd">        shape1 (tag or id): The first shape to use.</span>
+</span><span id="overlay-283"><a href="#overlay-283"><span class="linenos">283</span></a><span class="sd">        shape2 (tag or id): The second shape to use.</span>
 </span><span id="overlay-284"><a href="#overlay-284"><span class="linenos">284</span></a><span class="sd">        offset_x (`int`): How much to shift shape 2 in the x-direction after centering it.</span>
 </span><span id="overlay-285"><a href="#overlay-285"><span class="linenos">285</span></a><span class="sd">        offset_y (`int`): How much to shift shape 2 in the x-direction after centering it.</span>
 </span><span id="overlay-286"><a href="#overlay-286"><span class="linenos">286</span></a><span class="sd">        tag (`str`): The tag to assign to the shape.</span>
@@ -1634,8 +1634,8 @@ to shape 2's center, and then applying any specified offset.</p>
 <h6 id="args">Args</h6>
 
 <ul>
-<li><strong>shape1 (<code>Shape</code> or Tag):</strong>  The first shape to use.</li>
-<li><strong>shape2 (<code>Shape</code> or Tag):</strong>  The second shape to use.</li>
+<li><strong>shape1 (tag or id):</strong>  The first shape to use.</li>
+<li><strong>shape2 (tag or id):</strong>  The second shape to use.</li>
 <li><strong>offset_x (<code>int</code>):</strong>  How much to shift shape 2 in the x-direction after centering it.</li>
 <li><strong>offset_y (<code>int</code>):</strong>  How much to shift shape 2 in the x-direction after centering it.</li>
 <li><strong>tag (<code>str</code>):</strong>  The tag to assign to the shape.</li>
@@ -1666,8 +1666,8 @@ to shape 2's center, and then applying any specified offset.</p>
 </span><span id="underlay-304"><a href="#underlay-304"><span class="linenos">304</span></a><span class="sd">    A reporter function that underlays shape1 beneath shape2. It does this by moving shape 1&#39;s center</span>
 </span><span id="underlay-305"><a href="#underlay-305"><span class="linenos">305</span></a><span class="sd">    to shape 2&#39;s center, and then applying any specified offset.</span>
 </span><span id="underlay-306"><a href="#underlay-306"><span class="linenos">306</span></a><span class="sd">    Args:</span>
-</span><span id="underlay-307"><a href="#underlay-307"><span class="linenos">307</span></a><span class="sd">        shape1 (`Shape` or Tag): The first shape to use.</span>
-</span><span id="underlay-308"><a href="#underlay-308"><span class="linenos">308</span></a><span class="sd">        shape2 (`Shape` or Tag): The second shape to use.</span>
+</span><span id="underlay-307"><a href="#underlay-307"><span class="linenos">307</span></a><span class="sd">        shape1 (tag or id): The first shape to use.</span>
+</span><span id="underlay-308"><a href="#underlay-308"><span class="linenos">308</span></a><span class="sd">        shape2 (tag or id): The second shape to use.</span>
 </span><span id="underlay-309"><a href="#underlay-309"><span class="linenos">309</span></a><span class="sd">        offset_x (`int`): How much to shift shape 2 in the x-direction after centering it.</span>
 </span><span id="underlay-310"><a href="#underlay-310"><span class="linenos">310</span></a><span class="sd">        offset_y (`int`): How much to shift shape 2 in the x-direction after centering it.</span>
 </span><span id="underlay-311"><a href="#underlay-311"><span class="linenos">311</span></a>
@@ -1692,8 +1692,8 @@ to shape 2's center, and then applying any specified offset.</p>
 <h6 id="args">Args</h6>
 
 <ul>
-<li><strong>shape1 (<code>Shape</code> or Tag):</strong>  The first shape to use.</li>
-<li><strong>shape2 (<code>Shape</code> or Tag):</strong>  The second shape to use.</li>
+<li><strong>shape1 (tag or id):</strong>  The first shape to use.</li>
+<li><strong>shape2 (tag or id):</strong>  The second shape to use.</li>
 <li><strong>offset_x (<code>int</code>):</strong>  How much to shift shape 2 in the x-direction after centering it.</li>
 <li><strong>offset_y (<code>int</code>):</strong>  How much to shift shape 2 in the x-direction after centering it.</li>
 </ul>
@@ -1725,8 +1725,8 @@ to shape 2's center, and then applying any specified offset.</p>
 </span><span id="above-330"><a href="#above-330"><span class="linenos">330</span></a><span class="sd">    specified offset.</span>
 </span><span id="above-331"><a href="#above-331"><span class="linenos">331</span></a>
 </span><span id="above-332"><a href="#above-332"><span class="linenos">332</span></a><span class="sd">    Args:</span>
-</span><span id="above-333"><a href="#above-333"><span class="linenos">333</span></a><span class="sd">        shape1 (`Shape` or Tag): The first shape to use.</span>
-</span><span id="above-334"><a href="#above-334"><span class="linenos">334</span></a><span class="sd">        shape2 (`Shape` or Tag): The second shape to use.</span>
+</span><span id="above-333"><a href="#above-333"><span class="linenos">333</span></a><span class="sd">        shape1 (tag or id): The first shape to use.</span>
+</span><span id="above-334"><a href="#above-334"><span class="linenos">334</span></a><span class="sd">        shape2 (tag or id): The second shape to use.</span>
 </span><span id="above-335"><a href="#above-335"><span class="linenos">335</span></a><span class="sd">        offset_x (`int`): How much to shift shape 2 in the x-direction after moving it.</span>
 </span><span id="above-336"><a href="#above-336"><span class="linenos">336</span></a><span class="sd">        offset_y (`int`): How much to shift shape 2 in the x-direction after moving it.</span>
 </span><span id="above-337"><a href="#above-337"><span class="linenos">337</span></a>
@@ -1750,8 +1750,8 @@ specified offset.</p>
 <h6 id="args">Args</h6>
 
 <ul>
-<li><strong>shape1 (<code>Shape</code> or Tag):</strong>  The first shape to use.</li>
-<li><strong>shape2 (<code>Shape</code> or Tag):</strong>  The second shape to use.</li>
+<li><strong>shape1 (tag or id):</strong>  The first shape to use.</li>
+<li><strong>shape2 (tag or id):</strong>  The second shape to use.</li>
 <li><strong>offset_x (<code>int</code>):</strong>  How much to shift shape 2 in the x-direction after moving it.</li>
 <li><strong>offset_y (<code>int</code>):</strong>  How much to shift shape 2 in the x-direction after moving it.</li>
 </ul>
@@ -1783,8 +1783,8 @@ specified offset.</p>
 </span><span id="beside-354"><a href="#beside-354"><span class="linenos">354</span></a><span class="sd">    specified offset.</span>
 </span><span id="beside-355"><a href="#beside-355"><span class="linenos">355</span></a>
 </span><span id="beside-356"><a href="#beside-356"><span class="linenos">356</span></a><span class="sd">    Args:</span>
-</span><span id="beside-357"><a href="#beside-357"><span class="linenos">357</span></a><span class="sd">        shape1 (`Shape` or Tag): The first shape to use.</span>
-</span><span id="beside-358"><a href="#beside-358"><span class="linenos">358</span></a><span class="sd">        shape2 (`Shape` or Tag): The second shape to use.</span>
+</span><span id="beside-357"><a href="#beside-357"><span class="linenos">357</span></a><span class="sd">        shape1 (tag or id): The first shape to use.</span>
+</span><span id="beside-358"><a href="#beside-358"><span class="linenos">358</span></a><span class="sd">        shape2 (tag or id): The second shape to use.</span>
 </span><span id="beside-359"><a href="#beside-359"><span class="linenos">359</span></a><span class="sd">        offset_x (`int`): How much to shift shape 2 in the x-direction after moving it.</span>
 </span><span id="beside-360"><a href="#beside-360"><span class="linenos">360</span></a><span class="sd">        offset_y (`int`): How much to shift shape 2 in the x-direction after moving it.</span>
 </span><span id="beside-361"><a href="#beside-361"><span class="linenos">361</span></a>
@@ -1808,8 +1808,8 @@ specified offset.</p>
 <h6 id="args">Args</h6>
 
 <ul>
-<li><strong>shape1 (<code>Shape</code> or Tag):</strong>  The first shape to use.</li>
-<li><strong>shape2 (<code>Shape</code> or Tag):</strong>  The second shape to use.</li>
+<li><strong>shape1 (tag or id):</strong>  The first shape to use.</li>
+<li><strong>shape2 (tag or id):</strong>  The second shape to use.</li>
 <li><strong>offset_x (<code>int</code>):</strong>  How much to shift shape 2 in the x-direction after moving it.</li>
 <li><strong>offset_y (<code>int</code>):</strong>  How much to shift shape 2 in the x-direction after moving it.</li>
 </ul>
@@ -1841,8 +1841,8 @@ specified offset.</p>
 </span><span id="below-378"><a href="#below-378"><span class="linenos">378</span></a><span class="sd">    specified offset.</span>
 </span><span id="below-379"><a href="#below-379"><span class="linenos">379</span></a>
 </span><span id="below-380"><a href="#below-380"><span class="linenos">380</span></a><span class="sd">    Args:</span>
-</span><span id="below-381"><a href="#below-381"><span class="linenos">381</span></a><span class="sd">        shape1 (`Shape` or Tag): The first shape to use.</span>
-</span><span id="below-382"><a href="#below-382"><span class="linenos">382</span></a><span class="sd">        shape2 (`Shape` or Tag): The second shape to use.</span>
+</span><span id="below-381"><a href="#below-381"><span class="linenos">381</span></a><span class="sd">        shape1 (tag or id): The first shape to use.</span>
+</span><span id="below-382"><a href="#below-382"><span class="linenos">382</span></a><span class="sd">        shape2 (tag or id): The second shape to use.</span>
 </span><span id="below-383"><a href="#below-383"><span class="linenos">383</span></a><span class="sd">        offset_x (`int`): How much to shift shape 2 in the x-direction after moving it.</span>
 </span><span id="below-384"><a href="#below-384"><span class="linenos">384</span></a><span class="sd">        offset_y (`int`): How much to shift shape 2 in the x-direction after moving it.</span>
 </span><span id="below-385"><a href="#below-385"><span class="linenos">385</span></a>
@@ -1866,8 +1866,8 @@ specified offset.</p>
 <h6 id="args">Args</h6>
 
 <ul>
-<li><strong>shape1 (<code>Shape</code> or Tag):</strong>  The first shape to use.</li>
-<li><strong>shape2 (<code>Shape</code> or Tag):</strong>  The second shape to use.</li>
+<li><strong>shape1 (tag or id):</strong>  The first shape to use.</li>
+<li><strong>shape2 (tag or id):</strong>  The second shape to use.</li>
 <li><strong>offset_x (<code>int</code>):</strong>  How much to shift shape 2 in the x-direction after moving it.</li>
 <li><strong>offset_y (<code>int</code>):</strong>  How much to shift shape 2 in the x-direction after moving it.</li>
 </ul>
@@ -1897,7 +1897,7 @@ specified offset.</p>
 </span><span id="delete-399"><a href="#delete-399"><span class="linenos">399</span></a><span class="sd">    A function that deletes a shape from our screen.</span>
 </span><span id="delete-400"><a href="#delete-400"><span class="linenos">400</span></a>
 </span><span id="delete-401"><a href="#delete-401"><span class="linenos">401</span></a><span class="sd">    Args:</span>
-</span><span id="delete-402"><a href="#delete-402"><span class="linenos">402</span></a><span class="sd">        shape (`Shape` or Tag): The shape to delete.</span>
+</span><span id="delete-402"><a href="#delete-402"><span class="linenos">402</span></a><span class="sd">        shape (tag or id): The shape to delete.</span>
 </span><span id="delete-403"><a href="#delete-403"><span class="linenos">403</span></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="delete-404"><a href="#delete-404"><span class="linenos">404</span></a>    <span class="n">_a_canvas</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span>
 </span></pre></div>
@@ -1908,7 +1908,7 @@ specified offset.</p>
 <h6 id="args">Args</h6>
 
 <ul>
-<li><strong>shape (<code>Shape</code> or Tag):</strong>  The shape to delete.</li>
+<li><strong>shape (tag or id):</strong>  The shape to delete.</li>
 </ul>
 </div>
 
@@ -1930,7 +1930,7 @@ specified offset.</p>
 </span><span id="duplicate-408"><a href="#duplicate-408"><span class="linenos">408</span></a><span class="sd">    A reporter function that perfectly copies a shape and returns that copy.</span>
 </span><span id="duplicate-409"><a href="#duplicate-409"><span class="linenos">409</span></a>
 </span><span id="duplicate-410"><a href="#duplicate-410"><span class="linenos">410</span></a><span class="sd">    Args:</span>
-</span><span id="duplicate-411"><a href="#duplicate-411"><span class="linenos">411</span></a><span class="sd">        shape (`Shape` or Tag): The shape to duplicate.</span>
+</span><span id="duplicate-411"><a href="#duplicate-411"><span class="linenos">411</span></a><span class="sd">        shape (tag or id): The shape to duplicate.</span>
 </span><span id="duplicate-412"><a href="#duplicate-412"><span class="linenos">412</span></a><span class="sd">        color (`str`): A new color to use with the duplicated shape.</span>
 </span><span id="duplicate-413"><a href="#duplicate-413"><span class="linenos">413</span></a>
 </span><span id="duplicate-414"><a href="#duplicate-414"><span class="linenos">414</span></a><span class="sd">    Returns:</span>
@@ -1954,7 +1954,7 @@ specified offset.</p>
 <h6 id="args">Args</h6>
 
 <ul>
-<li><strong>shape (<code>Shape</code> or Tag):</strong>  The shape to duplicate.</li>
+<li><strong>shape (tag or id):</strong>  The shape to duplicate.</li>
 <li><strong>color (<code>str</code>):</strong>  A new color to use with the duplicated shape.</li>
 </ul>
 
@@ -1984,7 +1984,7 @@ specified offset.</p>
 </span><span id="mirror-431"><a href="#mirror-431"><span class="linenos">431</span></a><span class="sd">    axis, returning the tag or ID of the modified shape.</span>
 </span><span id="mirror-432"><a href="#mirror-432"><span class="linenos">432</span></a><span class="sd">        </span>
 </span><span id="mirror-433"><a href="#mirror-433"><span class="linenos">433</span></a><span class="sd">    Args:</span>
-</span><span id="mirror-434"><a href="#mirror-434"><span class="linenos">434</span></a><span class="sd">        shape (`Shape` or Tag): The shape in question.</span>
+</span><span id="mirror-434"><a href="#mirror-434"><span class="linenos">434</span></a><span class="sd">        shape (tag or id): The shape in question.</span>
 </span><span id="mirror-435"><a href="#mirror-435"><span class="linenos">435</span></a>
 </span><span id="mirror-436"><a href="#mirror-436"><span class="linenos">436</span></a><span class="sd">    Returns:</span>
 </span><span id="mirror-437"><a href="#mirror-437"><span class="linenos">437</span></a><span class="sd">        The modified shape.</span>
@@ -2016,7 +2016,7 @@ axis, returning the tag or ID of the modified shape.</p>
 <h6 id="args">Args</h6>
 
 <ul>
-<li><strong>shape (<code>Shape</code> or Tag):</strong>  The shape in question.</li>
+<li><strong>shape (tag or id):</strong>  The shape in question.</li>
 </ul>
 
 <h6 id="returns">Returns</h6>
@@ -2046,7 +2046,7 @@ axis, returning the tag or ID of the modified shape.</p>
 </span><span id="rotate-462"><a href="#rotate-462"><span class="linenos">462</span></a><span class="sd">    points on the edge of the polygon.</span>
 </span><span id="rotate-463"><a href="#rotate-463"><span class="linenos">463</span></a>
 </span><span id="rotate-464"><a href="#rotate-464"><span class="linenos">464</span></a><span class="sd">    Args:</span>
-</span><span id="rotate-465"><a href="#rotate-465"><span class="linenos">465</span></a><span class="sd">        shape (`Shape` or Tag): The shape to rotate.</span>
+</span><span id="rotate-465"><a href="#rotate-465"><span class="linenos">465</span></a><span class="sd">        shape (tag or id): The shape to rotate.</span>
 </span><span id="rotate-466"><a href="#rotate-466"><span class="linenos">466</span></a><span class="sd">        degrees (`int`): The number of degrees to rotate the shape.</span>
 </span><span id="rotate-467"><a href="#rotate-467"><span class="linenos">467</span></a><span class="sd">        origin (`tuple`): An `(x,y)` coordinate about which to perform the rotation. Defaults to the center</span>
 </span><span id="rotate-468"><a href="#rotate-468"><span class="linenos">468</span></a><span class="sd">            of the given shape.</span>
@@ -2085,7 +2085,7 @@ points on the edge of the polygon.</p>
 <h6 id="args">Args</h6>
 
 <ul>
-<li><strong>shape (<code>Shape</code> or Tag):</strong>  The shape to rotate.</li>
+<li><strong>shape (tag or id):</strong>  The shape to rotate.</li>
 <li><strong>degrees (<code>int</code>):</strong>  The number of degrees to rotate the shape.</li>
 <li><strong>origin (<code>tuple</code>):</strong>  An <code>(x,y)</code> coordinate about which to perform the rotation. Defaults to the center
 of the given shape.</li>
@@ -2149,21 +2149,21 @@ of the given shape.</li>
 <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">update_color</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">tag</span>, </span><span class="param"><span class="n">color</span></span>)</span>
+        <span class="name">update_color</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">shape</span>, </span><span class="param"><span class="n">color</span></span>)</span>
 
                 <label class="view-source-button" for="update_color-view-source"><span>View Source</span></label>
 
     </div>
     <a class="headerlink" href="#update_color"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="update_color-508"><a href="#update_color-508"><span class="linenos">508</span></a><span class="k">def</span> <span class="nf">update_color</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="update_color-508"><a href="#update_color-508"><span class="linenos">508</span></a><span class="k">def</span> <span class="nf">update_color</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">color</span><span class="p">):</span>
 </span><span id="update_color-509"><a href="#update_color-509"><span class="linenos">509</span></a>    <span class="sd">&#39;&#39;&#39;</span>
 </span><span id="update_color-510"><a href="#update_color-510"><span class="linenos">510</span></a><span class="sd">    Change the fill color of a tagged object.</span>
 </span><span id="update_color-511"><a href="#update_color-511"><span class="linenos">511</span></a>
 </span><span id="update_color-512"><a href="#update_color-512"><span class="linenos">512</span></a><span class="sd">    Args:</span>
-</span><span id="update_color-513"><a href="#update_color-513"><span class="linenos">513</span></a><span class="sd">        tag (`str`): The tag of the object to re-fill.</span>
+</span><span id="update_color-513"><a href="#update_color-513"><span class="linenos">513</span></a><span class="sd">        shape (tag or id): The tag of the object to re-fill.</span>
 </span><span id="update_color-514"><a href="#update_color-514"><span class="linenos">514</span></a><span class="sd">        color (`str`): A color name or hex code to re-fill with.</span>
 </span><span id="update_color-515"><a href="#update_color-515"><span class="linenos">515</span></a><span class="sd">    &#39;&#39;&#39;</span>
-</span><span id="update_color-516"><a href="#update_color-516"><span class="linenos">516</span></a>    <span class="n">ids</span> <span class="o">=</span> <span class="n">_a_canvas</span><span class="o">.</span><span class="n">find_withtag</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+</span><span id="update_color-516"><a href="#update_color-516"><span class="linenos">516</span></a>    <span class="n">ids</span> <span class="o">=</span> <span class="n">_a_canvas</span><span class="o">.</span><span class="n">find_withtag</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span>
 </span><span id="update_color-517"><a href="#update_color-517"><span class="linenos">517</span></a>    <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="n">ids</span><span class="p">:</span>
 </span><span id="update_color-518"><a href="#update_color-518"><span class="linenos">518</span></a>        <span class="n">_a_canvas</span><span class="o">.</span><span class="n">itemconfig</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
 </span></pre></div>
@@ -2174,7 +2174,7 @@ of the given shape.</li>
 <h6 id="args">Args</h6>
 
 <ul>
-<li><strong>tag (<code>str</code>):</strong>  The tag of the object to re-fill.</li>
+<li><strong>shape (tag or id):</strong>  The tag of the object to re-fill.</li>
 <li><strong>color (<code>str</code>):</strong>  A color name or hex code to re-fill with.</li>
 </ul>
 </div>
@@ -2254,7 +2254,7 @@ perfectly between the two.</li>
 </span><span id="get_center-545"><a href="#get_center-545"><span class="linenos">545</span></a><span class="sd">    A reporter function calculates the a coordinate at the center of some shape.</span>
 </span><span id="get_center-546"><a href="#get_center-546"><span class="linenos">546</span></a><span class="sd">        </span>
 </span><span id="get_center-547"><a href="#get_center-547"><span class="linenos">547</span></a><span class="sd">    Args:</span>
-</span><span id="get_center-548"><a href="#get_center-548"><span class="linenos">548</span></a><span class="sd">        shape (`Shape` or Tag): The shape in question.</span>
+</span><span id="get_center-548"><a href="#get_center-548"><span class="linenos">548</span></a><span class="sd">        shape (tag or id): The shape in question.</span>
 </span><span id="get_center-549"><a href="#get_center-549"><span class="linenos">549</span></a>
 </span><span id="get_center-550"><a href="#get_center-550"><span class="linenos">550</span></a><span class="sd">    Returns:</span>
 </span><span id="get_center-551"><a href="#get_center-551"><span class="linenos">551</span></a><span class="sd">         A `tuple` representing center of the given shape.</span>
@@ -2273,7 +2273,7 @@ perfectly between the two.</li>
 <h6 id="args">Args</h6>
 
 <ul>
-<li><strong>shape (<code>Shape</code> or Tag):</strong>  The shape in question.</li>
+<li><strong>shape (tag or id):</strong>  The shape in question.</li>
 </ul>
 
 <h6 id="returns">Returns</h6>
@@ -2301,7 +2301,7 @@ perfectly between the two.</li>
 </span><span id="get_top-563"><a href="#get_top-563"><span class="linenos">563</span></a><span class="sd">    A reporter function calculates the **minimum** y-value of a given shape (since the y-axis is flipped).</span>
 </span><span id="get_top-564"><a href="#get_top-564"><span class="linenos">564</span></a>
 </span><span id="get_top-565"><a href="#get_top-565"><span class="linenos">565</span></a><span class="sd">    Args:</span>
-</span><span id="get_top-566"><a href="#get_top-566"><span class="linenos">566</span></a><span class="sd">        shape (`Shape` or Tag): The shape in question.</span>
+</span><span id="get_top-566"><a href="#get_top-566"><span class="linenos">566</span></a><span class="sd">        shape (tag or id): The shape in question.</span>
 </span><span id="get_top-567"><a href="#get_top-567"><span class="linenos">567</span></a>
 </span><span id="get_top-568"><a href="#get_top-568"><span class="linenos">568</span></a><span class="sd">    Returns:</span>
 </span><span id="get_top-569"><a href="#get_top-569"><span class="linenos">569</span></a><span class="sd">         A `int` representing the minimum y-coordinate of the shape.</span>
@@ -2316,7 +2316,7 @@ perfectly between the two.</li>
 <h6 id="args">Args</h6>
 
 <ul>
-<li><strong>shape (<code>Shape</code> or Tag):</strong>  The shape in question.</li>
+<li><strong>shape (tag or id):</strong>  The shape in question.</li>
 </ul>
 
 <h6 id="returns">Returns</h6>
@@ -2344,7 +2344,7 @@ perfectly between the two.</li>
 </span><span id="get_bottom-577"><a href="#get_bottom-577"><span class="linenos">577</span></a><span class="sd">    A reporter function calculates the **maximum** y-value of a given shape (since the y-axis is flipped).</span>
 </span><span id="get_bottom-578"><a href="#get_bottom-578"><span class="linenos">578</span></a><span class="sd">    </span>
 </span><span id="get_bottom-579"><a href="#get_bottom-579"><span class="linenos">579</span></a><span class="sd">    Args:</span>
-</span><span id="get_bottom-580"><a href="#get_bottom-580"><span class="linenos">580</span></a><span class="sd">        shape (`Shape` or Tag): The shape in question.</span>
+</span><span id="get_bottom-580"><a href="#get_bottom-580"><span class="linenos">580</span></a><span class="sd">        shape (tag or id): The shape in question.</span>
 </span><span id="get_bottom-581"><a href="#get_bottom-581"><span class="linenos">581</span></a>
 </span><span id="get_bottom-582"><a href="#get_bottom-582"><span class="linenos">582</span></a><span class="sd">    Returns:</span>
 </span><span id="get_bottom-583"><a href="#get_bottom-583"><span class="linenos">583</span></a><span class="sd">         A `int` representing the maximum y-coordinate of the shape.</span>
@@ -2359,7 +2359,7 @@ perfectly between the two.</li>
 <h6 id="args">Args</h6>
 
 <ul>
-<li><strong>shape (<code>Shape</code> or Tag):</strong>  The shape in question.</li>
+<li><strong>shape (tag or id):</strong>  The shape in question.</li>
 </ul>
 
 <h6 id="returns">Returns</h6>
@@ -2387,7 +2387,7 @@ perfectly between the two.</li>
 </span><span id="get_left-591"><a href="#get_left-591"><span class="linenos">591</span></a><span class="sd">    A reporter function calculates the **minimum** x-value of a given shape.</span>
 </span><span id="get_left-592"><a href="#get_left-592"><span class="linenos">592</span></a><span class="sd">        </span>
 </span><span id="get_left-593"><a href="#get_left-593"><span class="linenos">593</span></a><span class="sd">    Args:</span>
-</span><span id="get_left-594"><a href="#get_left-594"><span class="linenos">594</span></a><span class="sd">        shape (`Shape` or Tag): The shape in question.</span>
+</span><span id="get_left-594"><a href="#get_left-594"><span class="linenos">594</span></a><span class="sd">        shape (tag or id): The shape in question.</span>
 </span><span id="get_left-595"><a href="#get_left-595"><span class="linenos">595</span></a>
 </span><span id="get_left-596"><a href="#get_left-596"><span class="linenos">596</span></a><span class="sd">    Returns:</span>
 </span><span id="get_left-597"><a href="#get_left-597"><span class="linenos">597</span></a><span class="sd">         A `int` representing the minimum x-coordinate of the shape.</span>
@@ -2402,7 +2402,7 @@ perfectly between the two.</li>
 <h6 id="args">Args</h6>
 
 <ul>
-<li><strong>shape (<code>Shape</code> or Tag):</strong>  The shape in question.</li>
+<li><strong>shape (tag or id):</strong>  The shape in question.</li>
 </ul>
 
 <h6 id="returns">Returns</h6>
@@ -2430,7 +2430,7 @@ perfectly between the two.</li>
 </span><span id="get_right-605"><a href="#get_right-605"><span class="linenos">605</span></a><span class="sd">    A reporter function calculates the **maximum** x-value of a given shape.</span>
 </span><span id="get_right-606"><a href="#get_right-606"><span class="linenos">606</span></a><span class="sd">        </span>
 </span><span id="get_right-607"><a href="#get_right-607"><span class="linenos">607</span></a><span class="sd">    Args:</span>
-</span><span id="get_right-608"><a href="#get_right-608"><span class="linenos">608</span></a><span class="sd">        shape (`Shape` or Tag): The shape in question.</span>
+</span><span id="get_right-608"><a href="#get_right-608"><span class="linenos">608</span></a><span class="sd">        shape (tag or id): The shape in question.</span>
 </span><span id="get_right-609"><a href="#get_right-609"><span class="linenos">609</span></a>
 </span><span id="get_right-610"><a href="#get_right-610"><span class="linenos">610</span></a><span class="sd">    Returns:</span>
 </span><span id="get_right-611"><a href="#get_right-611"><span class="linenos">611</span></a><span class="sd">         A `int` representing the maximum x-coordinate of the shape.</span>
@@ -2445,7 +2445,7 @@ perfectly between the two.</li>
 <h6 id="args">Args</h6>
 
 <ul>
-<li><strong>shape (<code>Shape</code> or Tag):</strong>  The shape in question.</li>
+<li><strong>shape (tag or id):</strong>  The shape in question.</li>
 </ul>
 
 <h6 id="returns">Returns</h6>
@@ -2473,7 +2473,7 @@ perfectly between the two.</li>
 </span><span id="get_height-619"><a href="#get_height-619"><span class="linenos">619</span></a><span class="sd">    A reporter function calculates the height of some given shape.</span>
 </span><span id="get_height-620"><a href="#get_height-620"><span class="linenos">620</span></a><span class="sd">        </span>
 </span><span id="get_height-621"><a href="#get_height-621"><span class="linenos">621</span></a><span class="sd">    Args:</span>
-</span><span id="get_height-622"><a href="#get_height-622"><span class="linenos">622</span></a><span class="sd">        shape (`Shape` or Tag): The shape in question.</span>
+</span><span id="get_height-622"><a href="#get_height-622"><span class="linenos">622</span></a><span class="sd">        shape (tag or id): The shape in question.</span>
 </span><span id="get_height-623"><a href="#get_height-623"><span class="linenos">623</span></a>
 </span><span id="get_height-624"><a href="#get_height-624"><span class="linenos">624</span></a><span class="sd">    Returns:</span>
 </span><span id="get_height-625"><a href="#get_height-625"><span class="linenos">625</span></a><span class="sd">         A `int` representing the height of the shape.</span>
@@ -2488,7 +2488,7 @@ perfectly between the two.</li>
 <h6 id="args">Args</h6>
 
 <ul>
-<li><strong>shape (<code>Shape</code> or Tag):</strong>  The shape in question.</li>
+<li><strong>shape (tag or id):</strong>  The shape in question.</li>
 </ul>
 
 <h6 id="returns">Returns</h6>
@@ -2516,7 +2516,7 @@ perfectly between the two.</li>
 </span><span id="get_width-633"><a href="#get_width-633"><span class="linenos">633</span></a><span class="sd">    A reporter function calculates the width of some given shape.</span>
 </span><span id="get_width-634"><a href="#get_width-634"><span class="linenos">634</span></a><span class="sd">        </span>
 </span><span id="get_width-635"><a href="#get_width-635"><span class="linenos">635</span></a><span class="sd">    Args:</span>
-</span><span id="get_width-636"><a href="#get_width-636"><span class="linenos">636</span></a><span class="sd">        shape (`Shape` or Tag): The shape in question.</span>
+</span><span id="get_width-636"><a href="#get_width-636"><span class="linenos">636</span></a><span class="sd">        shape (tag or id): The shape in question.</span>
 </span><span id="get_width-637"><a href="#get_width-637"><span class="linenos">637</span></a>
 </span><span id="get_width-638"><a href="#get_width-638"><span class="linenos">638</span></a><span class="sd">    Returns:</span>
 </span><span id="get_width-639"><a href="#get_width-639"><span class="linenos">639</span></a><span class="sd">         An `int` representing width of the shape.</span>
@@ -2531,7 +2531,7 @@ perfectly between the two.</li>
 <h6 id="args">Args</h6>
 
 <ul>
-<li><strong>shape (<code>Shape</code> or Tag):</strong>  The shape in question.</li>
+<li><strong>shape (tag or id):</strong>  The shape in question.</li>
 </ul>
 
 <h6 id="returns">Returns</h6>
@@ -2603,21 +2603,21 @@ perfectly between the two.</li>
 <div class="attr function">
             
         <span class="def">def</span>
-        <span class="name">does_tag_exist</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">tag</span></span>)</span>
+        <span class="name">does_tag_exist</span><span class="signature pdoc-code condensed">(<span class="param"><span class="n">shape</span></span>)</span>
 
                 <label class="view-source-button" for="does_tag_exist-view-source"><span>View Source</span></label>
 
     </div>
     <a class="headerlink" href="#does_tag_exist"></a>
-            <div class="pdoc-code codehilite"><pre><span></span><span id="does_tag_exist-722"><a href="#does_tag_exist-722"><span class="linenos">722</span></a><span class="k">def</span> <span class="nf">does_tag_exist</span><span class="p">(</span><span class="n">tag</span><span class="p">):</span>
+            <div class="pdoc-code codehilite"><pre><span></span><span id="does_tag_exist-722"><a href="#does_tag_exist-722"><span class="linenos">722</span></a><span class="k">def</span> <span class="nf">does_tag_exist</span><span class="p">(</span><span class="n">shape</span><span class="p">):</span>
 </span><span id="does_tag_exist-723"><a href="#does_tag_exist-723"><span class="linenos">723</span></a>    <span class="sd">&#39;&#39;&#39;</span>
 </span><span id="does_tag_exist-724"><a href="#does_tag_exist-724"><span class="linenos">724</span></a><span class="sd">    Returns `True` if a given tag exists otherwise returns `False`.</span>
 </span><span id="does_tag_exist-725"><a href="#does_tag_exist-725"><span class="linenos">725</span></a>
 </span><span id="does_tag_exist-726"><a href="#does_tag_exist-726"><span class="linenos">726</span></a><span class="sd">    Args:</span>
-</span><span id="does_tag_exist-727"><a href="#does_tag_exist-727"><span class="linenos">727</span></a><span class="sd">        `tag` (`str`): [Required] The tag of the object to lookup.</span>
+</span><span id="does_tag_exist-727"><a href="#does_tag_exist-727"><span class="linenos">727</span></a><span class="sd">        shape (tag or id): [Required] The tag of the object to lookup.</span>
 </span><span id="does_tag_exist-728"><a href="#does_tag_exist-728"><span class="linenos">728</span></a>
 </span><span id="does_tag_exist-729"><a href="#does_tag_exist-729"><span class="linenos">729</span></a><span class="sd">    &#39;&#39;&#39;</span>
-</span><span id="does_tag_exist-730"><a href="#does_tag_exist-730"><span class="linenos">730</span></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">_a_canvas</span><span class="o">.</span><span class="n">find_withtag</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+</span><span id="does_tag_exist-730"><a href="#does_tag_exist-730"><span class="linenos">730</span></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">_a_canvas</span><span class="o">.</span><span class="n">find_withtag</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span>
 </span><span id="does_tag_exist-731"><a href="#does_tag_exist-731"><span class="linenos">731</span></a>
 </span><span id="does_tag_exist-732"><a href="#does_tag_exist-732"><span class="linenos">732</span></a>    <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
 </span><span id="does_tag_exist-733"><a href="#does_tag_exist-733"><span class="linenos">733</span></a>        <span class="k">return</span> <span class="kc">True</span>
@@ -2631,7 +2631,7 @@ perfectly between the two.</li>
 <h6 id="args">Args</h6>
 
 <ul>
-<li><strong><code>tag</code> (<code>str</code>):</strong>  [Required] The tag of the object to lookup.</li>
+<li><strong>shape (tag or id):</strong>  [Required] The tag of the object to lookup.</li>
 </ul>
 </div>
 

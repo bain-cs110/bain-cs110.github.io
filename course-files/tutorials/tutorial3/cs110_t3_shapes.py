@@ -240,46 +240,46 @@ def spiral(center=(0, 0), width=100, roughness=0.01, start=0, spirals=5, line_wi
 
     return arc(points=all_points, width=line_width, **kwargs)
 
-def move(tag, x_shift=0, y_shift=0):
+def move(shape, x_shift=0, y_shift=0):
     """
     Purpose: Move the x and y position of all shapes that have been tagged
     with the tag argument
     Args:
-        tag (`str`): the shape (or shapes) to move
+        shape (tag or id): the shape (or shapes) to move
         x_shift (`int`; optional): amount to move in the x direction
         y_shift (`int`; optional): amount to move in the y direction
     """
-    shape_ids = _a_canvas.find_withtag(tag)
+    shape_ids = _a_canvas.find_withtag(shape)
     for id in shape_ids:
         _a_canvas.move(id,
                         x_shift,
                         y_shift)
 
-def put_in_front(tag):
+def put_in_front(shape):
     """
     A function that "raises" a shape to the "top" of the screen."
 
     Args:
-        tag (`str`): The tag to raise.
+        shape (tag or id): The shape to raise.
     """
-    _a_canvas.tag_raise(tag)
+    _a_canvas.tag_raise(shape)
 
-def put_in_back(tag):
+def put_in_back(shape):
     """
     A function that "lowers" a shape to the "bottom" of the screen."
 
     Args:
-        tag (`str`): The tag to raise.
+        shape (tag or id): The shape to raise.
     """
-    _a_canvas.tag_lower(tag)
+    _a_canvas.tag_lower(shape)
 
 def overlay(shape1, shape2, offset_x=0, offset_y=0):
     """
     A reporter function that overlays shape1 onto shape2. It does this by moving shape 1's center
     to shape 2's center, and then applying any specified offset.
     Args:
-        shape1 (`Shape` or Tag): The first shape to use.
-        shape2 (`Shape` or Tag): The second shape to use.
+        shape1 (tag or id): The first shape to use.
+        shape2 (tag or id): The second shape to use.
         offset_x (`int`): How much to shift shape 2 in the x-direction after centering it.
         offset_y (`int`): How much to shift shape 2 in the x-direction after centering it.
         tag (`str`): The tag to assign to the shape.
@@ -303,8 +303,8 @@ def underlay(shape1, shape2, offset_x=0, offset_y=0):
     A reporter function that underlays shape1 beneath shape2. It does this by moving shape 1's center
     to shape 2's center, and then applying any specified offset.
     Args:
-        shape1 (`Shape` or Tag): The first shape to use.
-        shape2 (`Shape` or Tag): The second shape to use.
+        shape1 (tag or id): The first shape to use.
+        shape2 (tag or id): The second shape to use.
         offset_x (`int`): How much to shift shape 2 in the x-direction after centering it.
         offset_y (`int`): How much to shift shape 2 in the x-direction after centering it.
 
@@ -329,8 +329,8 @@ def above(shape1, shape2, offset_x=0, offset_y=0):
     specified offset.
 
     Args:
-        shape1 (`Shape` or Tag): The first shape to use.
-        shape2 (`Shape` or Tag): The second shape to use.
+        shape1 (tag or id): The first shape to use.
+        shape2 (tag or id): The second shape to use.
         offset_x (`int`): How much to shift shape 2 in the x-direction after moving it.
         offset_y (`int`): How much to shift shape 2 in the x-direction after moving it.
 
@@ -353,8 +353,8 @@ def beside(shape1, shape2, offset_x=0, offset_y=0):
     specified offset.
 
     Args:
-        shape1 (`Shape` or Tag): The first shape to use.
-        shape2 (`Shape` or Tag): The second shape to use.
+        shape1 (tag or id): The first shape to use.
+        shape2 (tag or id): The second shape to use.
         offset_x (`int`): How much to shift shape 2 in the x-direction after moving it.
         offset_y (`int`): How much to shift shape 2 in the x-direction after moving it.
 
@@ -377,8 +377,8 @@ def below(shape1, shape2, offset_x=0, offset_y=0):
     specified offset.
 
     Args:
-        shape1 (`Shape` or Tag): The first shape to use.
-        shape2 (`Shape` or Tag): The second shape to use.
+        shape1 (tag or id): The first shape to use.
+        shape2 (tag or id): The second shape to use.
         offset_x (`int`): How much to shift shape 2 in the x-direction after moving it.
         offset_y (`int`): How much to shift shape 2 in the x-direction after moving it.
 
@@ -398,7 +398,7 @@ def delete(shape):
     A function that deletes a shape from our screen.
 
     Args:
-        shape (`Shape` or Tag): The shape to delete.
+        shape (tag or id): The shape to delete.
     """
     _a_canvas.delete(shape)
 
@@ -407,7 +407,7 @@ def duplicate(shape, color=None):
     A reporter function that perfectly copies a shape and returns that copy.
 
     Args:
-        shape (`Shape` or Tag): The shape to duplicate.
+        shape (tag or id): The shape to duplicate.
         color (`str`): A new color to use with the duplicated shape.
 
     Returns:
@@ -430,7 +430,7 @@ def mirror(shape):
     axis, returning the tag or ID of the modified shape.
         
     Args:
-        shape (`Shape` or Tag): The shape in question.
+        shape (tag or id): The shape in question.
 
     Returns:
         The modified shape.
@@ -461,7 +461,7 @@ def rotate(shape, degrees=5, origin=None):
     points on the edge of the polygon.
 
     Args:
-        shape (`Shape` or Tag): The shape to rotate.
+        shape (tag or id): The shape to rotate.
         degrees (`int`): The number of degrees to rotate the shape.
         origin (`tuple`): An `(x,y)` coordinate about which to perform the rotation. Defaults to the center
             of the given shape.
@@ -504,15 +504,15 @@ def distance(point1, point2):
     """
     return sqrt(((point1[0] - point2[0]) ** 2) + ((point1[1] - point2[1]) ** 2))
 
-def update_color(tag, color):
+def update_color(shape, color):
     '''
     Change the fill color of a tagged object.
 
     Args:
-        tag (`str`): The tag of the object to re-fill.
+        shape (tag or id): The tag of the object to re-fill.
         color (`str`): A color name or hex code to re-fill with.
     '''
-    ids = _a_canvas.find_withtag(tag)
+    ids = _a_canvas.find_withtag(shape)
     for id in ids:
         _a_canvas.itemconfig(id, fill=color)
 
@@ -544,7 +544,7 @@ def get_center(shape):
     A reporter function calculates the a coordinate at the center of some shape.
         
     Args:
-        shape (`Shape` or Tag): The shape in question.
+        shape (tag or id): The shape in question.
 
     Returns:
          A `tuple` representing center of the given shape.
@@ -562,7 +562,7 @@ def get_top(shape):
     A reporter function calculates the **minimum** y-value of a given shape (since the y-axis is flipped).
 
     Args:
-        shape (`Shape` or Tag): The shape in question.
+        shape (tag or id): The shape in question.
 
     Returns:
          A `int` representing the minimum y-coordinate of the shape.
@@ -576,7 +576,7 @@ def get_bottom(shape):
     A reporter function calculates the **maximum** y-value of a given shape (since the y-axis is flipped).
     
     Args:
-        shape (`Shape` or Tag): The shape in question.
+        shape (tag or id): The shape in question.
 
     Returns:
          A `int` representing the maximum y-coordinate of the shape.
@@ -590,7 +590,7 @@ def get_left(shape):
     A reporter function calculates the **minimum** x-value of a given shape.
         
     Args:
-        shape (`Shape` or Tag): The shape in question.
+        shape (tag or id): The shape in question.
 
     Returns:
          A `int` representing the minimum x-coordinate of the shape.
@@ -604,7 +604,7 @@ def get_right(shape):
     A reporter function calculates the **maximum** x-value of a given shape.
         
     Args:
-        shape (`Shape` or Tag): The shape in question.
+        shape (tag or id): The shape in question.
 
     Returns:
          A `int` representing the maximum x-coordinate of the shape.
@@ -618,7 +618,7 @@ def get_height(shape):
     A reporter function calculates the height of some given shape.
         
     Args:
-        shape (`Shape` or Tag): The shape in question.
+        shape (tag or id): The shape in question.
 
     Returns:
          A `int` representing the height of the shape.
@@ -632,7 +632,7 @@ def get_width(shape):
     A reporter function calculates the width of some given shape.
         
     Args:
-        shape (`Shape` or Tag): The shape in question.
+        shape (tag or id): The shape in question.
 
     Returns:
          An `int` representing width of the shape.
@@ -718,15 +718,15 @@ def _interpolate_tuple(startcolor, goalcolor, frac):
 
     return color
 
-def does_tag_exist(tag):
+def does_tag_exist(shape):
     '''
     Returns `True` if a given tag exists otherwise returns `False`.
 
     Args:
-        `tag` (`str`): [Required] The tag of the object to lookup.
+        shape (tag or id): [Required] The tag of the object to lookup.
 
     '''
-    result = _a_canvas.find_withtag(tag)
+    result = _a_canvas.find_withtag(shape)
 
     if result:
         return True
