@@ -93,7 +93,7 @@ print("Rando class: " + rando_class(my_favorite_things))
 <li>First you'll need to import the appropriate function near the top of your program: <code>from module_name import function_name</code></li>
 <li>The module we want to use is called <code>random</code></li>
 <li>The function that randomly selects an element from a list is called <code>choice</code></li>
-<li><code>choice</code> is a reporter that takes a list as input and _returns_ a randomly chosen element from the list.</li>
+<li><code>choice</code> is a reporter that takes a sequence as input and _returns_ a randomly chosen element from the list.</li>
 </ul>
 </details>
 
@@ -140,6 +140,11 @@ Which includes a variety of dope shapes:
  
 Spend a few minutes calling each of these functions. If you were super comfortable with oval, circle, rectangle, and square, skip straight to triangle, polygon, and line. Make sure to experiment with different inputs to get a sense of what sorts of shapes each function can make. Tag team with your team mates and try unique inputs.
 
+<details>
+<summary>Want some cooler colors to work with?</summary>
+<img style="width: 90%;" src="{{site.url}}/assets/images/tutorial3/colors.png" alt="Color names">
+</details>
+
 * * *
 
 ## Task 2
@@ -157,10 +162,16 @@ Now, in HW 2 (and in Part 2 of this tutorial), we used a bit of math to draw sha
 Try out each of these functions with some of the shapes. Here's an example:
 
 ```python
+# First make a circle like we did last week
 circle1 = circle(center=(200, 200), radius=50, color="red")
+# Now make a square...but notice we don't need to specify a center!
 a_square = square(size=25, color="blue")
+# Now rotate the square to make it more like a diamond
 a_square = rotate(a_square, degrees=45)
+# Finally use overlay to position the diamond ON TOP of the circle 
 overlay(a_square, circle1)
+# notice, in this example we didn't have to ever think about the location of any shape
+# other than the first one we drew!
 ```
 
 * * *
