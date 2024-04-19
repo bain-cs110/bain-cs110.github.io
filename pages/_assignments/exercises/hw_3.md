@@ -92,6 +92,11 @@ After you've done some sketching on paper, _select the one_ that you would like 
 {: .blockquote-no-margin}
 > **AGAIN:** Making a simple creature (e.g using 5-8 shapes) is totally fine. You don’t need to get too detailed unless you want to! And you can always enhance your creature at a later point in time.
 
+<a class="nu-button" href="{{site.url}}/course-files/homeworks/hw3/docs/cs110_hw3_shapes.html" target="_blank">
+    Shapes Module Documentation <i class="fas fa-download"></i>
+</a>
+<br>
+
 * * *
 
 ## Part 3: Implement your creature using function calls
