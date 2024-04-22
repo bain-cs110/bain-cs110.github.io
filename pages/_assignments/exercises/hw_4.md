@@ -41,17 +41,11 @@ The peer review will be completed via Canvas. Here are the instructions on [how 
 </details>
 <br>
 
-You should download the other person's program and copy it into your Homework 3 folder (so that you can use the `hw3_shapes` module) in order to complete your review.
-
-<details>
-  <summary>Having trouble downloading your peer's submission?</summary>
-  A number of people reported not seeing a download button in the peer review (especially on Macs). To download your Peer's Submission, visit <b>your HW 4</b> assignment and view the feedback. Everyone should have a comment from Prof. Bain with an attached file that is the submission of your peer. If that's not the case, email Prof. Bain.
-</details>
-<br>
+You should download the other person's program and copy it into your Homework 3 folder (so that you can use the `hw3_shapes` module) in order to complete your review. To download your Peer's Submission, visit <b>your HW 4</b> assignment and view the feedback. Everyone should have a comment from Prof. Bain with an attached file that is the submission of your peer. If that's not the case, email Prof. Bain.
 
 <mark>Once you click submit you will not be able to edit your Peer Review so make sure to read all the instructions below FIRST and double check you've completed the review before hitting submit!</mark>
 
-Once your peer has reviewed your assignment, you can view their comments by [following the instructions here](https://community.canvaslms.com/t5/Student-Guide/Where-can-I-find-my-peers-feedback-for-peer-reviewed-assignments/ta-p/320).
+Once your peer has reviewed your assignment, you can view their comments by [following the instructions here](https://community.canvaslms.com/t5/Student-Guide/Where-can-I-find-my-peers-feedback-for-peer-reviewed-assignments/ta-p/320). You will also receive an "autograder report" with a more readable version of your peer's feedback (this will be run manually so it may not post for a day or so after you submit your rubric).
 
 <mark>Do not share your comments or your peer's submission with ANYONE other than with the original submitter via Canvas</mark>. Violating this policy is a serious NU Student Code of Conduct violation and will be reported to your Dean of Students.
 
