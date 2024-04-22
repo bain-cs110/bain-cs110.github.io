@@ -7,7 +7,7 @@ canvas_assignment_group: "Mini-Quiz"
 canvas_points_possible: 10
 canvas_allowed_extensions: "py"
 canvas_submission_types: "external_tool"
-canvas_id: 
+canvas_id: 1410980
 type: lecture
 draft: 0
 num: 13
