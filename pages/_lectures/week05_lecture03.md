@@ -41,4 +41,6 @@ readings:
      source: "Python for Everybody"
 ---
 
+> **Note**: <mark>reminder that there is no in-person meeting for today's class!</mark> Have a nice weekend! 
+
 <img alt="fork in the road" class="module-image" src="{{site.url}}/assets/images/lectures/fork.jpg" /> In this lesson, we're going to go over conditional logic, which will allow you to write programs that have different outcomes depending on the data, events, and/or user interactions that take place as your program executes. This is often referred to as your program's "state." Specifically we'll cover the beginnings of "conditionals" (if/else statements).
