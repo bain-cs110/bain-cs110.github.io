@@ -7,6 +7,11 @@ num: 14
 canvas_title: "Monday - Lecture 14 - Loops!"
 due_date: 2024-04-29
 exercise_url: "lecture14.zip"
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=99f979b2-0fb5-4c62-9492-b12a015ad8d8
+     title: "Live Lecture Recording"
+     duration: "51:00"
+     live: 1
 slides:
    - url: https://docs.google.com/presentation/d/1Z7SLIDb4Nm_IxbAvZR1LH380c47n8JPjKEE6cnmInF4/edit?usp=sharing
      title: Loops!
