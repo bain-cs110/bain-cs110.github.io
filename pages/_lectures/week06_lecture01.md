@@ -4,6 +4,7 @@ title: "More Control Flow - Loops!"
 type: lecture
 draft: 0
 num: 14
+canvas_title: "Monday - Lecture 14 - Loops!"
 due_date: 2024-04-29
 exercise_url: "lecture14.zip"
 slides:
