@@ -258,10 +258,10 @@ DEPENDENCIES
   github-pages
   jekyll-commonmark-ghpages
   minima (~> 2.5.1)
-  webrick (~> 1.7)
+  webrick
 
 RUBY VERSION
-   ruby 3.1.4p223
+   ruby 3.2.3p157
 
 BUNDLED WITH
-   2.3.22
+   2.5.9
