@@ -26,7 +26,7 @@ videos:
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=01983d35-c3e9-464d-9b7f-b161001c9abb
      title: "Intro"
      duration: "5:00"
-   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f1e854b3-c9f1-4bc6-8433-b161001c9a3d
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=90fdbed5-07c2-41a5-9429-b161001c9a65
      title: "Drawing Mario!"
      duration: "20:00"
    - url:
