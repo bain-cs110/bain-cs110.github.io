@@ -4,23 +4,45 @@ from math import sqrt, pi, radians, sin, cos
 
 __docformat__ = "google"
 
-the_canvas = None
+_a_canvas = None
 
-def move(tag, x_shift=0, y_shift=0):
+def rectangle(top_left=(0, 0), width=25, height=50, color="hotpink", outline="", tag="", **kwargs):
     """
-    Purpose: Move the x and y position of all shapes that have been tagged
-    with the tag argument
+    A reporter function that draws a rectangle.
     Args:
-        tag (`str`): the shape (or shapes) to move
-        x_shift (`int`; optional): amount to move in the x direction
-        y_shift (`int`; optional): amount to move in the y direction
-    """
-    shape_ids = the_canvas.find_withtag(tag)
-    for id in shape_ids:
-        the_canvas.move(id,
-                        x_shift,
-                        y_shift)
+        top_left (`tuple`): A coordinate representing the top left-hand corner of the shape.
+        width (`int`): How wide to draw the shape.
+        height (`int`): How tall to draw the shape.
+        color (`str`): What color to draw the shape.
+        outline (`str`): What color should the border of the shape be.
+        tag (`str`): The tag to assign to the shape.
 
+    Returns:
+         `Shape`: The rectangle that was created.
+    """      
+    point_0 = top_left
+    point_1 = (top_left[0] + width, top_left[1])
+    point_2 = (top_left[0] + width, top_left[1] + height)
+    point_3 = (top_left[0], top_left[1] + height)
+    return _a_canvas.create_polygon(
+        point_0, point_1, point_2, point_3, fill=color, tags=tag, **kwargs
+    )
+
+
+def square(top_left=(0, 0), size=25, color="hotpink", outline="", tag="", **kwargs):
+    """
+    A reporter function that draws a square.
+    Args:
+        top_left (`tuple`): A coordinate representing the top left-hand corner of the shape.
+        size (`int`): How big to draw the shape.
+        color (`str`): What color to draw the shape.
+        outline (`str`): What color should the border of the shape be.
+        tag (`str`): The tag to assign to the shape.
+
+    Returns:
+         `Shape`: The square that was created.
+    """
+    return rectangle(top_left=top_left, width=size, height=size, color=color, tag=tag, **kwargs)
 
 def cloud(center, color="white", tag=""):
     """
@@ -42,45 +64,7 @@ def cloud(center, color="white", tag=""):
                tag=tag)
     return tag
 
-
-def rectangle(top_left=(0, 0), width=25, height=50, color="hotpink", tag="", **kwargs):
-    """
-    A reporter function that draws a rectangle.
-    Args:
-        top_left (`tuple`): A coordinate representing the top left-hand corner of the shape.
-        width (`int`): How wide to draw the shape.
-        height (`int`): How tall to draw the shape.
-        color (`str`): What color to draw the shape.
-        tag (`str`): The tag to assign to the shape.
-
-    Returns:
-         `Shape`: The rectangle that was created.
-    """
-    point_0 = top_left
-    point_1 = (top_left[0] + width, top_left[1])
-    point_2 = (top_left[0] + width, top_left[1] + height)
-    point_3 = (top_left[0], top_left[1] + height)
-    return the_canvas.create_polygon(
-        point_0, point_1, point_2, point_3, fill=color, tags=tag, **kwargs
-    )
-
-
-def square(top_left=(0, 0), size=25, color="hotpink", tag="", **kwargs):
-    """
-    A reporter function that draws a square.
-    Args:
-        top_left (`tuple`): A coordinate representing the top left-hand corner of the shape.
-        size (`int`): How big to draw the shape.
-        color (`str`): What color to draw the shape.
-        tag (`str`): The tag to assign to the shape.
-
-    Returns:
-         `Shape`: The square that was created.
-    """
-    return rectangle(top_left=top_left, width=size, height=size, color=color, tag=tag, **kwargs)
-
-
-def oval(center=(0, 0), radius_x=25, radius_y=50, color="hotpink", tag="", **kwargs):
+def oval(center=(0, 0), radius_x=25, radius_y=50, color="hotpink", outline="", tag="", **kwargs):
     """
     A reporter function that draws an oval.
     Args:
@@ -88,6 +72,7 @@ def oval(center=(0, 0), radius_x=25, radius_y=50, color="hotpink", tag="", **kwa
         radius_x (`int`): Specifies the oval's radius on the x-axis.
         radius_y (`int`): Specifies the oval's radius on the y-axis.
         color (`str`): What color to draw the shape.
+        outline (`str`): What color should the border of the shape be.
         tag (`str`): The tag to assign to the shape.
 
     Returns:
@@ -113,16 +98,17 @@ def oval(center=(0, 0), radius_x=25, radius_y=50, color="hotpink", tag="", **kwa
         point_list.append(round(x + xc))
         point_list.append(round(y + yc))
 
-    return the_canvas.create_polygon(point_list, fill=color, tags=tag, **kwargs)
+    return _a_canvas.create_polygon(point_list, fill=color, tags=tag, **kwargs)
 
 
-def circle(center=(0, 0), radius=25, color="hotpink", tag="", **kwargs):
+def circle(center=(0, 0), radius=25, color="hotpink", outline="", tag="", **kwargs):
     """
     A reporter function that draws a circle.
     Args:
         center (`tuple`): A coordinate representing the center of the shape.
         radius (`int`): Specifies the circle's radius.
         color (`str`): What color to draw the shape.
+        outline (`str`): What color should the border of the shape be.
         tag (`str`): The tag to assign to the shape.
 
     Returns:
@@ -132,7 +118,7 @@ def circle(center=(0, 0), radius=25, color="hotpink", tag="", **kwargs):
 
 
 def triangle(
-    bottom_center=(0, 0), width=25, top_shift=0, height=0, color="hotpink", tag="", **kwargs
+    bottom_center=(0, 0), width=25, top_shift=0, height=0, color="hotpink", outline="", tag="", **kwargs
 ):
     """
     A reporter function that draws a triangle.
@@ -143,6 +129,7 @@ def triangle(
             the triangle from the bottom center.
         height (`int`): Specifies the triangle's height.
         color (`str`): What color to draw the shape.
+        outline (`str`): What color should the border of the shape be.
         tag (`str`): The tag to assign to the shape.
 
     Returns:
@@ -154,7 +141,7 @@ def triangle(
     point_1 = (bottom_center[0] + width / 2, bottom_center[1])
     point_2 = (bottom_center[0] + top_shift, bottom_center[1] - height)
 
-    return the_canvas.create_polygon(point_0, point_1, point_2, fill=color, tags=tag, **kwargs)
+    return _a_canvas.create_polygon(point_0, point_1, point_2, fill=color, tags=tag, **kwargs)
 
 
 def line(points=[], curvy=False, color="hotpink", tag="", **kwargs):
@@ -169,7 +156,7 @@ def line(points=[], curvy=False, color="hotpink", tag="", **kwargs):
     Returns:
         `Shape`: The line that was created.
     """
-    return the_canvas.create_line(points, fill=color, smooth=curvy, tags=tag, **kwargs)
+    return _a_canvas.create_line(points, fill=color, smooth=curvy, tags=tag, **kwargs)
 
 
 def arc(points=[], width=5, color="hotpink", line_steps=15, tag="", **kwargs):
@@ -183,8 +170,8 @@ def arc(points=[], width=5, color="hotpink", line_steps=15, tag="", **kwargs):
 
     Returns:
         `Shape`: The arc that was created.
-   """
-    the_canvas.create_line(
+    """
+    return _a_canvas.create_line(
         points,  
         width=width,
         fill=color,
@@ -195,7 +182,7 @@ def arc(points=[], width=5, color="hotpink", line_steps=15, tag="", **kwargs):
     )
 
 
-def star(center=(0, 0), radius=50, color="hotpink", outer_radius=75, points=5, tag="", **kwargs):
+def star(center=(0, 0), radius=50, color="hotpink", outer_radius=75, points=5, outline="", tag="", **kwargs):
     """
     A reporter function that draws a star.
     Args:
@@ -204,6 +191,7 @@ def star(center=(0, 0), radius=50, color="hotpink", outer_radius=75, points=5, t
         color (`str`): Specifies the color of the star.
         outer_radius (`int`): Specifies the radius of the outside part of the star.
         points (`int`): Specifies the number of points for the star.
+        outline (`str`): What color should the border of the shape be.
         tag (`str`): The tag to assign to the shape.
 
     Returns:
@@ -225,20 +213,54 @@ def star(center=(0, 0), radius=50, color="hotpink", outer_radius=75, points=5, t
         vertices.append(outer_point)
     return polygon(vertices, color=color, tag=tag, **kwargs)
 
-def polygon(points=[], color="hotpink", tag="", **kwargs):
+def polygon(points=[], color="hotpink", outline="", tag="", **kwargs):
     """
     A reporter function that draws a polygon given a list of points.
     Args:
         points (`list`): The points outlining the polygon; this should be a list of tuples (coordinates).
             defaults to an empty list.
+        outline (`str`): What color should the border of the shape be.
         color (`str`): What color to make the shape.
+        tag (`str`): The tag to assign to the shape.
 
     Returns:
         `Shape`: The polygon that was created.
    """
-    return the_canvas.create_polygon(points, fill=color, tags=tag, **kwargs)
+    return _a_canvas.create_polygon(points, fill=color, tags=tag, **kwargs)
 
-def text(top_left=(0,0), text="", font=("Purisa", 32), tag="", **kwargs):
+def _polar_to_cartesian(r, theta):
+    return int(r*cos(theta)), int(r*sin(theta))
+
+def spiral(center=(0, 0), width=100, roughness=0.01, start=0, spirals=5, line_width=1, tag="", **kwargs):
+    """
+    A reporter function that draws a spiral.
+    Args:
+        center (`tuple`): A coordinate representing the center of the shape.
+        width (`int`): Specifies the total width of the spiral.
+        roughness (`float`): Controls how spiral-y the shape is (lower is less spiral-y)
+        start (`int`): Where on the spiral to start drawing.
+        spirals (`int`): How many loops to draw.
+        line_width (`int`): How wide for the line to be drawn.
+        tag (`str`): The tag to assign to the shape.
+
+    Returns:
+         `Shape`: The spiral that was created.
+    """
+    theta = 0.0
+    r = start
+    all_points = []
+    prev_pos = _polar_to_cartesian(r, theta)
+    distance = width / 4 / pi / spirals 
+    all_points.append((prev_pos[0] + center[0], prev_pos[1] + center[1]))
+    while theta < 2 * spirals * pi:
+        theta += roughness
+        r = start + distance*theta
+        pos = _polar_to_cartesian(r, theta)
+        all_points.append((pos[0] + center[0], pos[1] + center[1]))
+
+    return arc(points=all_points, width=line_width, **kwargs)
+
+def text(top_left=(0,0), text="", font=("Purisa", 32), color="black", tag="", **kwargs):
     """
     A reporter function that draws text to the screen
     Args:
@@ -246,15 +268,51 @@ def text(top_left=(0,0), text="", font=("Purisa", 32), tag="", **kwargs):
         text (`str`): What text to draw.
         font (`tuple`): A tuple where the first element is a string for the font name and the second is an
            int with the font size.
+        color (`str`): What color should the text be.
         tag (`str`): The name to tag this thing with.
 
     Returns:
         `Shape`: The text that was created.
     """
-    return the_canvas.create_text(top_left,
+    return _a_canvas.create_text(top_left,
                                   text=text, 
                                   font=font,
+                                  fill=color,
                                   tags=tag, **kwargs)
+
+
+def move(tag, x=0, y=0):
+    """
+    Purpose: Move the x and y position of all shapes that have been tagged
+    with the tag argument
+    Args:
+        tag (`str`): the shape (or shapes) to move
+        x (`int`; optional): amount to move in the x direction
+        y (`int`; optional): amount to move in the y direction
+    """
+    shape_ids = _a_canvas.find_withtag(tag)
+    for id in shape_ids:
+        _a_canvas.move(id,
+                        x,
+                        y)
+
+def put_in_front(tag):
+    """
+    A function that "raises" a shape to the "top" of the screen."
+
+    Args:
+        tag (`str`): The tag to raise.
+    """
+    _a_canvas.tag_raise(tag)
+
+def put_in_back(tag):
+    """
+    A function that "lowers" a shape to the "bottom" of the screen."
+
+    Args:
+        tag (`str`): The tag to raise.
+    """
+    _a_canvas.tag_lower(tag)
 
 def overlay(shape1, shape2, offset_x=0, offset_y=0):
     """
@@ -272,12 +330,12 @@ def overlay(shape1, shape2, offset_x=0, offset_y=0):
    """
     center1 = get_center(shape1)
     center2 = get_center(shape2)
-    the_canvas.move(
+    _a_canvas.move(
         shape1,
         (center2[0] - center1[0]) + offset_x,
         (center2[1] - center1[1]) + offset_y,
     )
-    the_canvas.tag_raise(shape1, shape2)
+    _a_canvas.tag_raise(shape1, shape2)
     return shape1
 
 
@@ -296,12 +354,12 @@ def underlay(shape1, shape2, offset_x=0, offset_y=0):
    """
     center1 = get_center(shape1)
     center2 = get_center(shape2)
-    the_canvas.move(
+    _a_canvas.move(
         shape1,
         (center2[0] - center1[0]) + offset_x,
         (center2[1] - center1[1]) + offset_y,
     )
-    the_canvas.tag_lower(shape1, shape2)
+    _a_canvas.tag_lower(shape1, shape2)
     return shape1
 
 
@@ -321,7 +379,7 @@ def above(shape1, shape2, offset_x=0, offset_y=0):
         `Shape`: The modified shape1.  
     """
     overlay(shape1, shape2)
-    the_canvas.move(
+    _a_canvas.move(
         shape1,
         0 + offset_x,
         -1 * (get_height(shape2) + get_height(shape1)) / 2 + offset_y,
@@ -345,7 +403,7 @@ def beside(shape1, shape2, offset_x=0, offset_y=0):
         `Shape`: The modified shape1.  
     """
     overlay(shape1, shape2)
-    the_canvas.move(
+    _a_canvas.move(
         shape1,
         (get_width(shape2) + get_width(shape1)) / 2 + offset_x,
         0 + offset_y,
@@ -369,7 +427,7 @@ def below(shape1, shape2, offset_x=0, offset_y=0):
         `Shape`: The modified shape1.  
     """
     overlay(shape1, shape2)
-    the_canvas.move(
+    _a_canvas.move(
         shape1,
         0 + offset_x,
         (get_height(shape2) + get_height(shape1)) / 2 + offset_y,
@@ -383,7 +441,7 @@ def delete(shape):
     Args:
         shape (`Shape` or Tag): The shape to delete.
     """
-    the_canvas.delete(shape)
+    _a_canvas.delete(shape)
 
 def duplicate(shape, color=None):
     """
@@ -396,17 +454,16 @@ def duplicate(shape, color=None):
     Returns:
         `Shape`: The new duplicated shape.  
     """
-    shape_type = the_canvas.type(shape)
-    shape_config = the_canvas.itemconfig(shape)
-    shape_coords = the_canvas.coords(shape)
+    shape_type = _a_canvas.type(shape)
+    shape_config = _a_canvas.itemconfig(shape)
+    shape_coords = _a_canvas.coords(shape)
     the_copy = None
     if shape_type == "polygon":
         new_config = {key: shape_config[key][-1] for key in shape_config.keys()}
         if color != None:
             new_config["fill"] = color
-        the_copy = the_canvas.create_polygon(shape_coords, **new_config)
+        the_copy = _a_canvas.create_polygon(shape_coords, **new_config)
         return the_copy
-    
 
 def mirror(shape):
     """
@@ -420,10 +477,10 @@ def mirror(shape):
         The modified shape.
     """
     center = get_center(shape)[0]
-    shape_ids = the_canvas.find_withtag(shape)
+    shape_ids = _a_canvas.find_withtag(shape)
     for shape_id in shape_ids:
         flipped_coordinates = []
-        shape_coords = the_canvas.coords(shape_id)
+        shape_coords = _a_canvas.coords(shape_id)
         counter = 0
         for num in shape_coords:
             if counter % 2 == 0:
@@ -436,9 +493,7 @@ def mirror(shape):
             else:
                 flipped_coordinates.append(num)
             counter += 1
-        the_canvas.coords(shape_id, flipped_coordinates)
-
-
+        _a_canvas.coords(shape_id, flipped_coordinates)
 
 def rotate(shape, degrees=5, origin=None):
     """
@@ -461,19 +516,21 @@ def rotate(shape, degrees=5, origin=None):
     theta = radians(degrees)
     ox, oy = origin
 
-    coords = the_canvas.coords(shape)
-    # update coordinates:
-    for i in range(0, len(coords), 2):
-        px, py = coords[i], coords[i + 1]
-        qx = cos(theta) * (px - ox) - sin(theta) * (py - oy) + ox
-        qy = sin(theta) * (px - ox) + cos(theta) * (py - oy) + oy
-        coords[i] = qx
-        coords[i + 1] = qy
-    # set the coordinates:
-    the_canvas.coords(shape, coords)
+    all_shapes = _a_canvas.find_withtag(shape)
 
-    return shape
+    for a_shape in all_shapes:
+        coords = _a_canvas.coords(a_shape)
+        # update coordinates:
+        for i in range(0, len(coords), 2):
+            px, py = coords[i], coords[i + 1]
+            qx = cos(theta) * (px - ox) - sin(theta) * (py - oy) + ox
+            qy = sin(theta) * (px - ox) + cos(theta) * (py - oy) + oy
+            coords[i] = qx
+            coords[i + 1] = qy
+        # set the coordinates:
+        _a_canvas.coords(a_shape, coords)
 
+    return shape 
 
 def distance(point1, point2):
     """
@@ -496,10 +553,9 @@ def update_color(tag, color):
         tag (`str`): The tag of the object to re-fill.
         color (`str`): A color name or hex code to re-fill with.
     '''
-    ids = the_canvas.find_withtag(tag)
+    ids = _a_canvas.find_withtag(tag)
     for id in ids:
-        the_canvas.itemconfig(id, fill=color)
-
+        _a_canvas.itemconfig(id, fill=color)
 
 def interpolate_colors(color1, color2, frac):
     """
@@ -515,11 +571,11 @@ def interpolate_colors(color1, color2, frac):
          A color (as a hex `str`) to be used elsewhere
    """
     if "#" not in color1:
-        color1 = tuple((c // 256 for c in the_canvas.winfo_rgb(color1)))
+        color1 = tuple((c // 256 for c in _a_canvas.winfo_rgb(color1)))
     else:
         color1 = _tupelize_color(color1)
     if "#" not in color2:
-        color2 = tuple((c // 256 for c in the_canvas.winfo_rgb(color2)))
+        color2 = tuple((c // 256 for c in _a_canvas.winfo_rgb(color2)))
     else:
         color2 = _tupelize_color(color2)
     return _interpolate_tuple(color1, color2, frac)
@@ -534,7 +590,11 @@ def get_center(shape):
     Returns:
          A `tuple` representing center of the given shape.
     """
-    bbox = the_canvas.bbox(shape)
+    bbox = _safe_bbox(shape)
+
+    if bbox is None:
+        raise Exception(f"We couldn't find the shape with id/tag {shape}. Make sure it exists!")
+
     return (((bbox[2] + bbox[0]) / 2), ((bbox[1] + bbox[3]) / 2))
 
 
@@ -548,7 +608,7 @@ def get_top(shape):
     Returns:
          A `int` representing the minimum y-coordinate of the shape.
     """
-    bbox = the_canvas.bbox(shape)
+    bbox = _safe_bbox(shape)
     return bbox[1]
 
 
@@ -562,7 +622,7 @@ def get_bottom(shape):
     Returns:
          A `int` representing the maximum y-coordinate of the shape.
     """
-    bbox = the_canvas.bbox(shape)
+    bbox = _safe_bbox(shape)
     return bbox[3]
 
 
@@ -576,7 +636,7 @@ def get_left(shape):
     Returns:
          A `int` representing the minimum x-coordinate of the shape.
     """
-    bbox = the_canvas.bbox(shape)
+    bbox = _safe_bbox(shape)
     return bbox[0]
 
 
@@ -590,7 +650,7 @@ def get_right(shape):
     Returns:
          A `int` representing the maximum x-coordinate of the shape.
     """ 
-    bbox = the_canvas.bbox(shape)
+    bbox = _safe_bbox(shape)
     return bbox[2]
 
 
@@ -604,7 +664,7 @@ def get_height(shape):
     Returns:
          A `int` representing the height of the shape.
     """
-    bbox = the_canvas.bbox(shape)
+    bbox = _safe_bbox(shape)
     return bbox[3] - bbox[1] - 1
 
 
@@ -618,11 +678,10 @@ def get_width(shape):
     Returns:
          An `int` representing width of the shape.
     """
-    bbox = the_canvas.bbox(shape)
+    bbox = _safe_bbox(shape)
     return bbox[2] - bbox[0] - 1
 
-
-def make_grid(w, h):
+def make_grid(c, w, h):
     """
     Draws a grid on a screen with intervals of 100.
 
@@ -633,18 +692,18 @@ def make_grid(w, h):
     interval = 100
     # Creates all vertical lines at intervals of 100
     for i in range(0, w, interval):
-        the_canvas.create_line(i, 0, i, h, tag="grid_line")
+        _a_canvas.create_line(i, 0, i, h, tag="grid_line")
     # Creates all horizontal lines at intervals of 100
     for i in range(0, h, interval):
-        the_canvas.create_line(0, i, w, i, tag="grid_line")
+        _a_canvas.create_line(0, i, w, i, tag="grid_line")
     # Creates axis labels
     offset = 2
     for y in range(0, h, interval):
         for x in range(0, w, interval):
-            the_canvas.create_oval(
+            _a_canvas.create_oval(
                 x - offset, y - offset, x + offset, y + offset, fill="black"
             )
-            the_canvas.create_text(
+            _a_canvas.create_text(
                 x + offset,
                 y + offset,
                 text="({0}, {1})".format(x, y),
@@ -652,7 +711,14 @@ def make_grid(w, h):
                 font=("Purisa", 8),
             )
 
-
+def _safe_bbox(shape):
+    try:
+        bbox = _a_canvas.bbox(shape)
+        if bbox is None:
+            Exception(f"We couldn't find the shape with tag/id: {shape}. Make sure this shape exists!") 
+        return bbox
+    except:
+        raise Exception(f"We couldn't find the shape with tag/id: {shape}. Make sure this shape exists!") 
 
 def _tupelize_color(color):
     R = int(color[1:3], 16)
@@ -693,7 +759,6 @@ def _interpolate_tuple(startcolor, goalcolor, frac):
 
     return color
 
-
 def does_tag_exist(tag):
     '''
     Returns `True` if a given tag exists otherwise returns `False`.
@@ -702,13 +767,20 @@ def does_tag_exist(tag):
         `tag` (`str`): [Required] The tag of the object to lookup.
 
     '''
-    result = the_canvas.find_withtag(tag)
+    result = _a_canvas.find_withtag(tag)
 
     if result:
         return True
     else:
         return False
 
+def random_color():
+    '''
+    Returns a random color as a `string` to be used with `tkinter`.
+    It does not accept any inputs.
+    '''
+    r = lambda: randint(0,255)
+    return '#%02X%02X%02X' % (r(), r(), r())
 
 def make_car(top_left=(0, 0), size=100, color="#3D9970", tag=""):
     '''
@@ -763,7 +835,7 @@ def make_image(image_path, position=(200, 200), rotation=None,
     _cache.append(tkinter_image)  # workaround for known tkinter bug: http://effbot.org/pyfaq/why-do-my-tkinter-images-not-appear.htm
 
     # 3. draw image on canvas:
-    the_canvas.create_image(*position, image=tkinter_image, anchor=anchor, tags=tag, **kwargs)
+    _a_canvas.create_image(*position, image=tkinter_image, anchor=anchor, tags=tag, **kwargs)
 
 def get_tag_from_event(event):
     '''
@@ -776,9 +848,9 @@ def get_tag_from_event(event):
 
         x = event.x
         y = event.y
-        shape_id = the_canvas.find_closest(x, y) # get the top shape
+        shape_id = _a_canvas.find_closest(x, y) # get the top shape
         if shape_id:
-            tags = the_canvas.gettags(shape_id)
+            tags = _a_canvas.gettags(shape_id)
             if len(tags) > 0:
                 # print(tags)
                 return tags[0]
@@ -803,13 +875,27 @@ def setup_listener(event, handler_function):
         event (`str`): The magic string that represents this event in tkinter
         handler_function (`func`): The name (not a string though) of the function you want called when the event his heard.
     '''
-    the_canvas.bind(event, handler_function)
+    _a_canvas.bind(event, handler_function)
 
-def setup_shapes(some_canvas):
-    """
-    A static function that sets up the pop-up window. **DO NOT USE THIS FUNCTION**.
-    """
+from tkinter import Tk, Canvas
 
-    global the_canvas
-    the_canvas = some_canvas
-    the_canvas.focus_set()
+def setup_shapes(title, background="white", width=600, height=600, grid=False):
+    """
+    A static function that sets up the pop-up window. **DO NOT ADD CALLS TO THIS FUNCTION**.
+    
+    Args:
+        `title` (`str`): The title of the window to create.
+        `background` (`str`): Color to set the background.
+        `width` (`int`): How wide to make the pop-up window.
+        `height` (`int`): How tall to make the pop-up window.
+        `grid` (`bool`): Whether or not to draw the axes / grid.
+        
+    """
+    global _a_canvas
+    gui = Tk()
+    gui.title(title)
+    _a_canvas = Canvas(gui, background=background, width=width, height=height)
+    _a_canvas.pack()
+    if grid:
+        make_grid(_a_canvas, width, height)
+    return _a_canvas

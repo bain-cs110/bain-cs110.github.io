@@ -1,15 +1,8 @@
-from tkinter import Canvas, Tk
 from p1_utilities import *
 import time
-gui = Tk()
-gui.title('Tour of options...')
-
-# initialize canvas:
-the_canvas = Canvas(gui, width=1000, height=1000, background='white')
-the_canvas.pack()
-setup_shapes(the_canvas)
-ticks = 0
+_ignore = setup_shapes('Lecture 16', background="white", grid=True, width=600, height=600)
 ticks_per_second = None
+ticks = 0
 ########################## YOUR CODE BELOW THIS LINE ##############################
 
 def do_something(event):
@@ -35,7 +28,7 @@ def setup():
 def go():
     # Here's where you'll put everything you want to control your animations
     #   EXCEPT event listeners (look higher up)
-    move("test", x_shift=2, y_shift=-2)
+    move("test", x=2, y=-2)
 
 
 ######&&!*#################### YOUR CODE ABOVE THIS LINE ##############################
@@ -44,6 +37,6 @@ def go():
 setup()
 while True:
     go()
-    gui.update()
+    _ignore.update()
     time.sleep(1 / ticks_per_second)
     ticks = ticks + 1

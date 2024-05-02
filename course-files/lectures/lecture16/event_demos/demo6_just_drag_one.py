@@ -1,16 +1,11 @@
 from tkinter import Canvas, Tk
 from p1_utilities import *
-import random
 import time
-gui = Tk()
-gui.title('Tour of options...')
+from random import randint
 
-# initialize canvas:
-the_canvas = Canvas(gui, width=1000, height=1000, background='white')
-the_canvas.pack()
-setup_shapes(the_canvas)
-ticks = 0
+_ignore = setup_shapes('Lecture 16', background="white", grid=False, width=600, height=600)
 ticks_per_second = None
+ticks = 0
 ########################## YOUR CODE BELOW THIS LINE ##############################
 
 # need a global variable to store which item should be clicked:
@@ -24,8 +19,9 @@ def select_circle(event):
         active_tag = None
 
     # get new active tag:
-    active_tag = get_tag_from_event(event)
-    if active_tag:
+    selected_tag = get_tag_from_event(event)
+    if "circle" in selected_tag: # only move circles
+        active_tag = selected_tag
         update_color(active_tag, 'olivedrab')
 
 active_tag = ""
@@ -48,7 +44,7 @@ def move_circle(event):
     delta_y = -1 * (current_y - event.y)
 
     # move the shape:
-    move(active_tag, x_shift=delta_x, y_shift=delta_y)
+    move(active_tag, x=delta_x, y=delta_y)
 
 def setup():
     ## Setting some listeners!
@@ -61,12 +57,12 @@ def setup():
     setup_listener(MOUSE_CLICK, select_circle)
     setup_listener(MOUSE_DRAG, move_circle)
 
-    text((500, 500), text='Click or drag to create circles', font=("Purisa", 32))
+    text((300, 200), text='Click or drag to create circles', font=("Purisa", 32), tag="instructions")
         
     # Draw some circles!
     circle_counter = 0
     for i in range(50):
-        circle((random.randint(0, 1000), random.randint(0, 1000)), radius=random.randint(10, 20), tag="circle_"+str(circle_counter))
+        circle((randint(0, 1000), randint(0, 1000)), radius=randint(10, 20), tag="circle_"+str(circle_counter))
         circle_counter += 1
 
     # This is how many animations to attempt per second. If you want to slow down your
@@ -86,6 +82,6 @@ def go():
 setup()
 while True:
     go()
-    gui.update()
+    _ignore.update()
     time.sleep(1 / ticks_per_second)
     ticks = ticks + 1

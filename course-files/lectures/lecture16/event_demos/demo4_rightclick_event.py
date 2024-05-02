@@ -1,18 +1,12 @@
 from tkinter import Canvas, Tk
 from p1_utilities import *
-import random
 import time
-gui = Tk()
-gui.title('Tour of options...')
 
-# initialize canvas:
-the_canvas = Canvas(gui, width=1000, height=1000, background='white')
-the_canvas.pack()
-setup_shapes(the_canvas)
-ticks = 0
+_ignore = setup_shapes('Lecture 16', background="white", grid=False, width=600, height=600)
 ticks_per_second = None
+ticks = 0
 ########################## YOUR CODE BELOW THIS LINE ##############################
-\
+
 def click_handler(event):
     circle((event.x, event.y), 20, color='hotpink')
 
@@ -31,7 +25,7 @@ def setup():
     setup_listener('<Button-2>', right_click_handler)
     ## Right click not working on your computer? Change the magic string to '<Button-3>'!
 
-    text((500, 500), text='Click anywhere add a circle. Right click on a circle to delete!', font=("Purisa", 32))
+    text((200, 200), text='Click anywhere add a circle. Right click on a circle to delete!', font=("Purisa", 32))
 
     # This is how many animations to attempt per second. If you want to slow down your
     #   animations, just decrease this number! If you want to speed up...
@@ -51,6 +45,6 @@ def go():
 setup()
 while True:
     go()
-    gui.update()
+    _ignore.update()
     time.sleep(1 / ticks_per_second)
     ticks = ticks + 1

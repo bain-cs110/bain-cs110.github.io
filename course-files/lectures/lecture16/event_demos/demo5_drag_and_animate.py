@@ -1,25 +1,20 @@
 from tkinter import Canvas, Tk
 from p1_utilities import *
-import random
+from random import uniform
 import time
-gui = Tk()
-gui.title('Tour of options...')
 
-# initialize canvas:
-the_canvas = Canvas(gui, width=1000, height=1000, background='white')
-the_canvas.pack()
-setup_shapes(the_canvas)
-ticks = 0
+_ignore = setup_shapes('Lecture 16', background="white", grid=False, width=600, height=600)
 ticks_per_second = None
+ticks = 0
 ########################## YOUR CODE BELOW THIS LINE ##############################
 
 user_shapes = []
 def click_handler(event):
     tag = 'circle_' + str(len(user_shapes))
-    circle((event.x, event.y), random.uniform(10, 50), color="cyan", tag=tag)
+    circle((event.x, event.y), uniform(10, 50), color="cyan", tag=tag)
     # add our shape to a list called user_shapes by appending
     # a tuple with its tag and a randomly generated speed to travel at
-    user_shapes.append((tag, random.uniform(1, 5)))
+    user_shapes.append((tag, uniform(1, 5)))
 
 def setup():
     ## Setting some listeners!
@@ -29,7 +24,7 @@ def setup():
     setup_listener('<Button-1>', click_handler)
     setup_listener('<B1-Motion>', click_handler)
 
-    text((500, 500), text='Click or drag to create circles', font=("Purisa", 32))
+    text((300, 200), text='Click or drag to create circles', font=("Purisa", 32))
 
     # This is how many animations to attempt per second. If you want to slow down your
     #   animations, just decrease this number! If you want to speed up...
@@ -50,10 +45,10 @@ def go():
             # then calculate a new position at the "top" of the canvas
             reset_position = 1000 + get_height(shape_tag)
             # and move the shape with that tag to that "top" of the canvas
-            move(shape_tag, y_shift= -1 * reset_position)
+            move(shape_tag, y= -1 * reset_position)
 
         # regardless move the shape a little bit (determined by its speed)
-        move(shape_tag, x_shift=0, y_shift=-1 * shape_speed)
+        move(shape_tag, x=0, y=-1 * shape_speed)
 
 
 ######&&!*#################### YOUR CODE ABOVE THIS LINE ##############################
@@ -62,6 +57,6 @@ def go():
 setup()
 while True:
     go()
-    gui.update()
+    _ignore.update()
     time.sleep(1 / ticks_per_second)
     ticks = ticks + 1

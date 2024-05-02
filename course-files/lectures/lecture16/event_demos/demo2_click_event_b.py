@@ -1,31 +1,26 @@
 from tkinter import Canvas, Tk
 from p1_utilities import *
-import random
 import time
-gui = Tk()
-gui.title('Tour of options...')
+from random import uniform, choice
 
-# initialize canvas:
-the_canvas = Canvas(gui, width=1000, height=1000, background='white')
-the_canvas.pack()
-setup_shapes(the_canvas)
-ticks = 0
+_ignore = setup_shapes('Lecture 16', background="white", grid=False, width=600, height=600)
 ticks_per_second = None
+ticks = 0
 ########################## YOUR CODE BELOW THIS LINE ##############################
 
 square_counter = 0
 def make_square_from_click(event):
 
     # use the random module to pick a random number between 40 and 150
-    a_width = random.uniform(40, 150)
+    a_width = uniform(40, 150)
 
     # use the random module to pick a random color from a list of colors
-    a_color = random.choice(['black', 'yellow', 'blue', 'pink'])
+    a_color = choice(['black', 'yellow', 'blue', 'pink'])
 
     # Tell Python we're using the GLOBAL version of this variable
     global square_counter
     # generate a new tag for this shape based on how many there are on the screen
-    my_tag = "sqaure_" + str(square_counter)
+    my_tag = "square" + str(square_counter)
     square_counter += 1
 
     # create a creature at the place the person clicked with
@@ -39,7 +34,7 @@ def setup():
     # it hears one, do_something
     setup_listener('<Button-1>', make_square_from_click)
 
-    text((500, 500), text='Click anywhere add a square', font=("Purisa", 32))
+    text((200, 200), text='Click anywhere add a square', font=("Purisa", 32))
 
     # This is how many animations to attempt per second. If you want to slow down your
     #   animations, just decrease this number! If you want to speed up...
@@ -59,6 +54,6 @@ def go():
 setup()
 while True:
     go()
-    gui.update()
+    _ignore.update()
     time.sleep(1 / ticks_per_second)
     ticks = ticks + 1
