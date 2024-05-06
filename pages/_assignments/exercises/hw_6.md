@@ -6,7 +6,7 @@ type: homework
 due_date: 2024-05-10
 points: 100
 draft: 0
-canvas_id: 
+canvas_id: 1414498
 canvas_title: "Homework 6"
 canvas_assignment_group: "Homework"
 canvas_points_possible: 100
