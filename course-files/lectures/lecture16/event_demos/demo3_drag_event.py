@@ -1,4 +1,3 @@
-from tkinter import Canvas, Tk
 from p1_utilities import *
 import time
 

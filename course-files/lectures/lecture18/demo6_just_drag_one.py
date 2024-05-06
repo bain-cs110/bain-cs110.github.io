@@ -2,7 +2,7 @@ from p1_utilities import *
 import time
 from random import randint
 
-_ignore = setup_shapes('Lecture 16', background="white", grid=False, width=600, height=600)
+_ignore = setup_shapes('Lecture 18', background="white", grid=False, width=600, height=600)
 ticks_per_second = None
 ticks = 0
 ########################## YOUR CODE BELOW THIS LINE ##############################

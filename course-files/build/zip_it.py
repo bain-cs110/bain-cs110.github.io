@@ -26,7 +26,7 @@ def zipfolder(foldername, target_dir):
     zipobj = zipfile.ZipFile(zipname, 'w', zipfile.ZIP_DEFLATED)
 
     rootlen = len(target_dir) + 1
-    for base, dirs, files in os.walk(target_dir):
+    for base, dirs, files in os.walk(target_dir, followlinks=False):
         for file in files:
             full_path_to_file = os.path.join(base, file)
             if not exclude(full_path_to_file):

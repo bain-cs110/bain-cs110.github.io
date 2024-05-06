@@ -1,8 +1,8 @@
 from p1_utilities import *
-from random import uniform
+import random
 import time
 
-_ignore = setup_shapes('Lecture 16', background="white", grid=False, width=600, height=600)
+_ignore = setup_shapes('Lecture 17', background="white", grid=False, width=600, height=600)
 ticks_per_second = None
 ticks = 0
 ########################## YOUR CODE BELOW THIS LINE ##############################
@@ -10,10 +10,10 @@ ticks = 0
 user_shapes = []
 def click_handler(event):
     tag = 'circle_' + str(len(user_shapes))
-    circle((event.x, event.y), uniform(10, 50), color="cyan", tag=tag)
+    circle((event.x, event.y), random.uniform(10, 50), color="cyan", tag=tag)
     # add our shape to a list called user_shapes by appending
     # a tuple with its tag and a randomly generated speed to travel at
-    user_shapes.append((tag, uniform(1, 5)))
+    user_shapes.append((tag, random.uniform(1, 5)))
 
 def setup():
     ## Setting some listeners!
@@ -44,7 +44,7 @@ def go():
             # then calculate a new position at the "top" of the canvas
             reset_position = 1000 + get_height(shape_tag)
             # and move the shape with that tag to that "top" of the canvas
-            move(shape_tag, y= -1 * reset_position)
+            move(shape_tag, y = -1 * reset_position)
 
         # regardless move the shape a little bit (determined by its speed)
         move(shape_tag, x=0, y=-1 * shape_speed)

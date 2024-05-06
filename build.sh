@@ -15,7 +15,7 @@ pdoc --show-source --logo "https://bain-cs110.github.io/assets/images/cs110.png"
 pdoc --show-source --logo "https://bain-cs110.github.io/assets/images/cs110.png" course-files/homeworks/hw5/cs110_hw5 -o course-files/homeworks/hw5/docs
 
 # P1 Docs
-#pdoc --show-source --logo "https://bain-cs110.github.io/assets/images/cs110.png" course-files/projects/project01/p1_utilities -o course-files/projects/project01/docs
+pdoc --show-source --logo "https://bain-cs110.github.io/assets/images/cs110.png" course-files/projects/project1/p1_utilities -o course-files/projects/project1/docs
 
 # HW 6 Docs
 #pdoc --show-source --logo "https://bain-cs110.github.io/assets/images/cs110.png" course-files/homeworks/hw7/wordle.py -o course-files/homeworks/hw7/docs
