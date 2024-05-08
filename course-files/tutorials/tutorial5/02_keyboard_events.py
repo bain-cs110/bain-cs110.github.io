@@ -23,7 +23,6 @@ def move_mario(event):
 def setup():
     print("Setup time!")
     # helper function that draws a grid.
-    make_grid(600, 600)
 
     ## Listeners will go here!
     setup_listener('<Key>', move_mario)
@@ -47,6 +46,6 @@ def go():
 setup()
 while True:
     go()
-    gui.update()
+    _ignore.update()
     time.sleep(1 / ticks_per_second)
     ticks = ticks + 1

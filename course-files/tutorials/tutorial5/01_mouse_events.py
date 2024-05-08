@@ -14,7 +14,6 @@ def add_new_goomba(event):
 ##### Handler functions above here
 
 
-
 ## Anything that happens exactly once should go here!
 def setup():
     print("Setup time!")
@@ -24,6 +23,7 @@ def setup():
 
     ## Listeners will go here!
 
+    setup_listener(MOUSE_CLICK_MAGIC_STRING, add_new_goomba)
 
     ## listeners go above here
 
@@ -39,9 +39,10 @@ def setup():
     # This is how many animations to attempt per second. If you want to slow down your
     #   animations, just decrease this number! If you want to speed up...
     global ticks_per_second
-    ticks_per_second = 30
+    ticks_per_second = 10
 
 def go():
+    pass
     print("Animating!")
 
 ########################## YOUR CODE ABOVE THIS LINE ##############################
