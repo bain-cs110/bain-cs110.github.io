@@ -45,6 +45,8 @@ videos:
      quiz: 1
 ---
 
+> **Note**: While in the videos, the <code>move</code> function takes in inputs of <code>x_shift</code> and <code>y_shift</code>, keep in mind that OUR <code>move</code> function has inputs called <code>x</code> and <code>y</code>. The lecture files have been updated to show that as well!
+
 Today we'll continue our discussion of events with a review and the introduction of KEYBOARD events. The one other new concept we'll touch on is that of SCOPE or when and where we can access particular variables. `global` variables will give us the new power to keep track of things as we use events to interact with our canvas.
 
 > **Note**: It's possible that you get the gist of events and don't need to watch the video walkthroughs of every example. Great! Take a look at the example files and see what you can make of them. If something is confusing, then use the video as a scaffold for your understanding.
