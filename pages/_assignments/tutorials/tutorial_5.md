@@ -16,6 +16,9 @@ canvas_allowed_extensions: "py"
 ---
 
 > **Note**: If you downloaded the tutorial files prior to about 12:30pm Wed, May 8th, there's a bug in the `p1_utilities` file that causes some issues. You can download the versions at the below links with that bug fixed!
+>
+> <br>
+> Since we had some problems in the in-class tutorial, you can click <a href="https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e27f0e5e-783b-40b0-abbb-b16a017b053b">here for a video walkthrough of the Mouse Events section</a> and <a href="https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8c6671cc-260c-4e59-b599-b16a017b050e"> here for the a video walkthrough of the Keyboard Events section</a>.
 
 The goal of this tutorial is to get you more comfortable with event handlers. The demo files for Lecture 15 + 17 might be helpful in completing this exercise! Remember, we expect you to watch the pre-recorded lecture BEFORE completing the tutorial.
 
