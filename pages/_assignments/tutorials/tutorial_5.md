@@ -15,6 +15,11 @@ canvas_submission_types: "online_upload"
 canvas_allowed_extensions: "py"
 ---
 
+<mark>LINK TO NEW VERSION</mark>
+<a class="nu-button" href="{{site.url}}/course-files/tutorials/tutorial5_template.zip" target="_blank">
+    NEW VERSION DOWNLOAD <i class="fas fa-download"></i>
+</a>
+
 The goal of this tutorial is to get you more comfortable with event handlers. The demo files for Lecture 15 + 17 might be helpful in completing this exercise! Remember, we expect you to watch the pre-recorded lecture BEFORE completing the tutorial.
 
 * * *
