@@ -15,6 +15,8 @@ canvas_submission_types: "online_upload"
 canvas_allowed_extensions: "py"
 ---
 
+> **Note**: If you downloaded the tutorial files prior to about 12:30pm Wed, May 8th, there's a bug in the `p1_utilities` file that causes some issues. You can download the versions at the below links with that bug fixed!
+
 The goal of this tutorial is to get you more comfortable with event handlers. The demo files for Lecture 15 + 17 might be helpful in completing this exercise! Remember, we expect you to watch the pre-recorded lecture BEFORE completing the tutorial.
 
 * * *
