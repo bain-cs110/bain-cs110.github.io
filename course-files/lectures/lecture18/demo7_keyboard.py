@@ -21,16 +21,16 @@ def handle_keyboard(event):
 
     # if they press up on the keyboard
     if event.keysym == "Up":
-        move('circle', y_shift=-distance)
+        move('circle', y=-distance)
     # otherwise if they press down on the keyboard
     elif event.keysym == "Down":
-        move('circle', y_shift=distance)
+        move('circle', y=distance)
     # otherwise if they press left on the keyboard
     elif event.keysym == "Left":
-        move('circle', x_shift=-distance)
+        move('circle', x=-distance)
     # otherwise if they press right on the keyboard
     elif event.keysym == "Right":
-        move('circle', x_shift=distance)
+        move('circle', x=distance)
     else:
         print('Key sym:', event.keysym, 'not handled by this if/elif/else statement.')
 
