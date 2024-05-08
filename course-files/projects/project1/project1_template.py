@@ -7,7 +7,8 @@ ticks = 0
 ########################## YOUR CODE BELOW THIS LINE ##############################
 
 ### CREATURE FUNCTION SECTION (put your function defs here ) ##########################
-# Here's a delightful smiley face as an example (feel free to delete it)
+
+
 
 
 
@@ -15,8 +16,7 @@ ticks = 0
 
 
 ### LANDSCAPE OBJECT FUNCTION SECTION (put your function defs here ) ###################
-# Note: if you're going to use shapes that ALSO were part of your creature, no need
-# to copy those function definitions twice!
+
 
 
 
@@ -36,6 +36,9 @@ def click_handle(event):
     print("Drawing square..." + new_tag)
 
 
+def key_handle(event):
+    print("You pressed", event.keysym)
+
 ####################################################################################
 
 ## Initial Terrarium Setup Here ####################################################
@@ -47,6 +50,7 @@ def setup():
     
     ## Setting some listeners!
     setup_listener('<Button-1>', click_handle)
+    setup_listener('<Key>', key_handle)
     
     
     # This is how many animations to attempt per second. If you want to slow down your
