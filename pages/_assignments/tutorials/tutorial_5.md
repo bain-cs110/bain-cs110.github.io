@@ -53,8 +53,8 @@ And you'll need the Mario Module (also in the same folder):
 
 Open `01_mouse_events.py` (make sure it's in the same folder as the earlier files) and complete the following tasks:
 
-1. modify the `add_new_goomba` function so that it adds a new Goomba wherever the user clicks. Make the size of the Goomba random as its drawn. Optional: come up with a way of tracking how many Goomba have been created so that each Goomba can have a unique tag.
-2. When you're done, add the following line setup a listener that tells your program to listen for Mouse Clicks and everytime it hears a mouse click tell it to run the `add_new_goomba` function.
+1. First, add a call to <code>setup_listener</code> in the setup function that listens for clicks on the screen. When it hears clicks, it should call the <code>add_new_goomba</code> function which is defaults to just printing a message out when it is called. Once you've setup the listener, try running your program and seeing if anything gets printed in the interpreter window.
+2. Modify the `add_new_goomba` function so that it adds a new Goomba wherever the user clicks. Make the size of the Goomba random as its drawn. Optional: come up with a way of tracking how many Goomba have been created so that each Goomba can have a unique tag.
 3. Now run your program again, and notice that your `add_new_goomba` function is invoked when you click the screen.
 4. Now setup ANOTHER listener that listens for Motion Events and also calls the `add_new_goomba` function.
 5. Run it again and take over the world with either goombas, marios, hearts, and/or Franks.
