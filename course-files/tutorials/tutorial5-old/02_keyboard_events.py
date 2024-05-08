@@ -1,28 +1,34 @@
+from tkinter import Canvas, Tk
 from p1_utilities import *
-from mario_module import *
 import time
-
-_ignore = setup_shapes('Tutorial 5', background="white", grid=True, width=1000, height=800)
+gui = Tk()
+gui.title('Mouse Events')
+the_canvas = Canvas(gui, width=600, height=600)
+setup_shapes(the_canvas)
+the_canvas.pack()
+from mario_module import *
 ticks_per_second = None
 ticks = 0
 ########################## YOUR CODE BELOW THIS LINE ##############################
 
 ## Put your Handler Functions Here
+active_tag = None
 def select_mario(event):
-    tag = get_tag_from_event(event)
-    print(tag)
+    active_tag = get_tag_from_event(event)
+    print(active_tag, "selected!")
 
 def move_mario(event):
     print(event.keysym)
-    move('mario_0', x_shift=10, y_shift=0)
+    move('mario_0', x=10, y=0)
 ##### Handler functions above here
-
+##### Handler functions above here
 
 
 ## Anything that happens exactly once should go here!
 def setup():
     print("Setup time!")
     # helper function that draws a grid.
+    make_grid(600, 600)
 
     ## Listeners will go here!
     setup_listener('<Key>', move_mario)
@@ -46,6 +52,6 @@ def go():
 setup()
 while True:
     go()
-    _ignore.update()
+    gui.update()
     time.sleep(1 / ticks_per_second)
     ticks = ticks + 1

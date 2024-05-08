@@ -1,3 +1,4 @@
+from tkinter import Canvas
 from p1_utilities import *
 
 GOOMBA_COLORS = [None, "saddle brown", "black", "tan", "white"]
