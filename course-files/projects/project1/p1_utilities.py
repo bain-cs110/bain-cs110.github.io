@@ -559,10 +559,12 @@ def update_color(tag, color):
 
 def interpolate_colors(color1, color2, frac):
     """
-    A reporter function that generates a new color between two given colors.
+    A reporter function that generates a new color between two given colors. Can be used to make
+    gradients!
+    
     Args:
-        color1 (`str`): The path of the file to wrap
-        color2 (`str`): The path of the file to wrap
+        color1 (`str`): The "start" color
+        color2 (`str`): The "end" color
         frac (`float`): What fraction of each color to take. An input of 0 returns
             color1, an input of 1 returns color2, an input of 0.5 returns a color
             perfectly between the two.
@@ -582,7 +584,8 @@ def interpolate_colors(color1, color2, frac):
 
 def get_center(shape):
     """
-    A reporter function calculates the a coordinate at the center of some shape.
+    A reporter function calculates the center **coordinate** at the center of some shape.
+    Note that this is different from the other get functions as it returns a `tuple` instead of an `int`.
         
     Args:
         shape (`Shape` or Tag): The shape in question.
@@ -761,10 +764,10 @@ def _interpolate_tuple(startcolor, goalcolor, frac):
 
 def does_tag_exist(tag):
     '''
-    Returns `True` if a given tag exists otherwise returns `False`.
+    Returns `True` if a given tag exists on the screen otherwise returns `False`.
 
     Args:
-        `tag` (`str`): [Required] The tag of the object to lookup.
+        `tag` (`str`): The tag of the object to lookup.
 
     '''
     result = _a_canvas.find_withtag(tag)
@@ -803,10 +806,11 @@ _cache = []
 def make_image(image_path, position=(200, 200), rotation=None,
         scale=None, tag="", **kwargs):
     '''
-    Draws a given image on the screen. NOTE: Requires the `pillow` package to be installed.
+    Draws a given image on the screen. NOTE: Requires the `pillow` package to be installed - contact 
+    Prof. Bain or post on edSTEM if you'd like more details!
 
     Args:
-        image_path (`str`): [Required] Location of the image file on your computer.
+        image_path (`str`): Location of the image file on your computer.
         position (`tuple`): A coordinate at which to render the image.
         rotation (`int`): A number of degrees to rotate the given image.
         scale (`int`): A scaling factor to multiply the image size by.
@@ -872,7 +876,7 @@ def setup_listener(event, handler_function):
     Sets up a listener for a given event on our window.
     
     Args:
-        event (`str`): The magic string that represents this event in tkinter
+        event (`str`): The magic string that represents this event (determined by Python)
         handler_function (`func`): The name (not a string though) of the function you want called when the event his heard.
     '''
     _a_canvas.bind(event, handler_function)
@@ -881,7 +885,7 @@ from tkinter import Tk, Canvas
 
 def setup_shapes(title, background="white", width=600, height=600, grid=False):
     """
-    A static function that sets up the pop-up window. **DO NOT ADD CALLS TO THIS FUNCTION**.
+    A static function that sets up the pop-up window. **DO NOT ADD CALLS TO THIS FUNCTION IN YOUR PROGRAM**.
     
     Args:
         `title` (`str`): The title of the window to create.
