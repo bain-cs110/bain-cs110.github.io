@@ -15,11 +15,11 @@ mini_quiz_title: More Loops and Conditionals
 slides:
    - url: https://docs.google.com/presentation/d/15uZREApqtJI5nLoibb7Zy9aR4pJQzKUfa3VuP0B4sF0/edit?usp=sharing
      title: Processing Data with Loops
-#videos:
-#    - url: <https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=81c61044-603a-482d-884a-b0cf014c732a&start=660>
-#     title: "Live Lecture Recording"
-#     duration: "51:00"
-#     live: 1
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=12e95dc5-ff08-4af9-976d-b12a015ad955
+     title: "Live Lecture Recording"
+     duration: "51:00"
+     live: 1
 ---
 Today we'll refocus our efforts on using loops to do more complex things like create shapes, animate, and maybe even do some "data analysis" which we'll expand on in future weeks.
 
