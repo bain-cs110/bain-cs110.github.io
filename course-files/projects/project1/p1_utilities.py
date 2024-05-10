@@ -44,6 +44,29 @@ def square(top_left=(0, 0), size=25, color="hotpink", outline="", tag="", **kwar
     """
     return rectangle(top_left=top_left, width=size, height=size, color=color, tag=tag, **kwargs)
 
+
+def diamond(center=(0, 0), width=25, height=50, color="hotpink", outline="", tag="", **kwargs):
+    """
+    A reporter function that draws a rectangle.
+    Args:
+        center (`tuple`): A coordinate representing the center of the shape.
+        width (`int`): How wide to draw the shape.
+        height (`int`): How tall to draw the shape.
+        color (`str`): What color to draw the shape.
+        outline (`str`): What color should the border of the shape be.
+        tag (`str`): The tag to assign to the shape.
+
+    Returns:
+         `Shape`: The rectangle that was created.
+    """      
+    point_0 = (center[0] - width / 2, center[1])
+    point_1 = (center[0], center[1] - height / 2)
+    point_2 = (center[0] + width / 2, center[1])
+    point_3 = (center[0], center[1] + height / 2)
+    return _a_canvas.create_polygon(
+        point_0, point_1, point_2, point_3, fill=color, tags=tag, **kwargs
+    )
+
 def cloud(center, color="white", tag=""):
     """
     Reporter function that draws a cloud to the screen.

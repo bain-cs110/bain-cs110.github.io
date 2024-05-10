@@ -45,8 +45,6 @@ def key_handle(event):
 def setup():
     ## Put all your creature and landscape and other stuff that only needs to run
     #   once in this function!
-
-
     
     ## Setting some listeners!
     setup_listener('<Button-1>', click_handle)
