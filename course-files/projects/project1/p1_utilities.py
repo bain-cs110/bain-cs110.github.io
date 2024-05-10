@@ -57,7 +57,7 @@ def diamond(center=(0, 0), width=25, height=50, color="hotpink", outline="", tag
         tag (`str`): The tag to assign to the shape.
 
     Returns:
-         `Shape`: The rectangle that was created.
+         `Shape`: The shape that was created.
     """      
     point_0 = (center[0] - width / 2, center[1])
     point_1 = (center[0], center[1] - height / 2)
