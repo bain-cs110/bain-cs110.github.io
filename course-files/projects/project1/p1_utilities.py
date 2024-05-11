@@ -25,7 +25,7 @@ def rectangle(top_left=(0, 0), width=25, height=50, color="hotpink", outline="",
     point_2 = (top_left[0] + width, top_left[1] + height)
     point_3 = (top_left[0], top_left[1] + height)
     return _a_canvas.create_polygon(
-        point_0, point_1, point_2, point_3, fill=color, tags=tag, **kwargs
+        point_0, point_1, point_2, point_3, fill=color, tags=tag, outline=outline, **kwargs
     )
 
 
@@ -42,7 +42,7 @@ def square(top_left=(0, 0), size=25, color="hotpink", outline="", tag="", **kwar
     Returns:
          `Shape`: The square that was created.
     """
-    return rectangle(top_left=top_left, width=size, height=size, color=color, tag=tag, **kwargs)
+    return rectangle(top_left=top_left, width=size, height=size, color=color, tag=tag, outline=outline, **kwargs)
 
 
 def diamond(center=(0, 0), width=25, height=50, color="hotpink", outline="", tag="", **kwargs):
@@ -64,7 +64,7 @@ def diamond(center=(0, 0), width=25, height=50, color="hotpink", outline="", tag
     point_2 = (center[0] + width / 2, center[1])
     point_3 = (center[0], center[1] + height / 2)
     return _a_canvas.create_polygon(
-        point_0, point_1, point_2, point_3, fill=color, tags=tag, **kwargs
+        point_0, point_1, point_2, point_3, fill=color, tags=tag, outline=outline, **kwargs
     )
 
 def cloud(center, color="white", tag=""):
@@ -120,8 +120,8 @@ def oval(center=(0, 0), radius_x=25, radius_y=50, color="hotpink", outline="", t
         y = b * sin(theta)
         point_list.append(round(x + xc))
         point_list.append(round(y + yc))
-
-    return _a_canvas.create_polygon(point_list, fill=color, tags=tag, **kwargs)
+        
+    return _a_canvas.create_polygon(point_list, fill=color, tags=tag, outline=outline, **kwargs)
 
 
 def circle(center=(0, 0), radius=25, color="hotpink", outline="", tag="", **kwargs):
@@ -137,7 +137,7 @@ def circle(center=(0, 0), radius=25, color="hotpink", outline="", tag="", **kwar
     Returns:
          `Shape`: The circle that was created.
     """
-    return oval(center=center, radius_x=radius, radius_y=radius, color=color, tag=tag, **kwargs)
+    return oval(center=center, radius_x=radius, radius_y=radius, color=color, tag=tag, outline=outline, **kwargs)
 
 
 def triangle(
@@ -164,7 +164,7 @@ def triangle(
     point_1 = (bottom_center[0] + width / 2, bottom_center[1])
     point_2 = (bottom_center[0] + top_shift, bottom_center[1] - height)
 
-    return _a_canvas.create_polygon(point_0, point_1, point_2, fill=color, tags=tag, **kwargs)
+    return _a_canvas.create_polygon(point_0, point_1, point_2, fill=color, tags=tag, outline=outline, **kwargs)
 
 
 def line(points=[], curvy=False, color="hotpink", tag="", **kwargs):
@@ -234,7 +234,7 @@ def star(center=(0, 0), radius=50, color="hotpink", outer_radius=75, points=5, o
             + center[1],
         )
         vertices.append(outer_point)
-    return polygon(vertices, color=color, tag=tag, **kwargs)
+    return polygon(vertices, color=color, tag=tag, outline=outline, **kwargs)
 
 def polygon(points=[], color="hotpink", outline="", tag="", **kwargs):
     """
@@ -249,7 +249,7 @@ def polygon(points=[], color="hotpink", outline="", tag="", **kwargs):
     Returns:
         `Shape`: The polygon that was created.
    """
-    return _a_canvas.create_polygon(points, fill=color, tags=tag, **kwargs)
+    return _a_canvas.create_polygon(points, fill=color, tags=tag, outline=outline, **kwargs)
 
 def _polar_to_cartesian(r, theta):
     return int(r*cos(theta)), int(r*sin(theta))
