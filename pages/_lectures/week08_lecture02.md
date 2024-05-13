@@ -4,7 +4,7 @@ title: Quiz 2
 type: quizzes
 canvas_title: Wednesday - Quiz 2
 draft: 0
-canvas_id: wednesday-quiz-2
+canvas_id: wednesday-quiz-2-2
 num: 2
 due_date: 2024-05-15
 ---
