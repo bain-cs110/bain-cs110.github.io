@@ -20,7 +20,7 @@ Quiz 2 will cover all the content from the beginning of the class up to and incl
 * Practice Quiz available on Canvas
   * there's also tips on <a href="https://canvas.northwestern.edu/courses/208990/pages/using-practice-tests-to-study" target="_blank">how to use a Practice Quiz effectively</a>
   * there will be two versions: one that requires the Lockdown Browser (so you can test that you've got it setup correctly) and one that does not so you can take it and refer to other resources
-* We'll do additional review on Monday in-class (which will count as Mini-Quiz 11)
+* We'll do additional review on Monday in-class (which will count as a Mini-Quiz)
 
 * * *
 
