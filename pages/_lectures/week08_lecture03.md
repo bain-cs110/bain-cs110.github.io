@@ -5,7 +5,7 @@ type: lecture
 draft: 1
 num: 21
 due_date: 2024-05-17
-canvas_title: "Friday - Lecture 212 - Dictionaries"
+canvas_title: "Friday - Lecture 21 - Dictionaries"
 canvas_id: friday-lecture-21-dictionaries
 exercise_url: "lecture21.zip"
 #videos:
