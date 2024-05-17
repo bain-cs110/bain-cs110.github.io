@@ -398,14 +398,14 @@ def _get_outline(shape):
 
 def align(shape1, shape2, via="middle", offset_x = 0, offset_y = 0):
     """
-    A reporter function that aligns shape1 with shape2. It does this by moving shape 1's to align with
-    whatever property of shape2 is selected with the `via` input.
+    A reporter function that aligns `shape1` with `shape2`. It does this by moving `shape1` to align with
+    whatever property of `shape2` is selected with the `via` input.
     
     Args:
         shape1 (`Shape` or Tag): The first shape to use.
         shape2 (`Shape` or Tag): The second shape to use.
-        via (`str`): Has to be one of, the following options: "center" (horizontal center), 
-            "middle" (vertical center), "top", "bottom", "left", or "right
+        via (`str`): Has to be one of, the following options: `"center"` (horizontal center), 
+            `"middle"` (vertical center), `"top"`, `"bottom"`, `"left"`, or `"right"`
         offset_x (`int`): How much to shift in the x-axis after alignment
         offset_y (`int`): How much to shift in the y-axis after alignment
 

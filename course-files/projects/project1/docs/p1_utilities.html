@@ -583,14 +583,14 @@ p1_utilities    </h1>
 </span><span id="L-398"><a href="#L-398"><span class="linenos"> 398</span></a>
 </span><span id="L-399"><a href="#L-399"><span class="linenos"> 399</span></a><span class="k">def</span> <span class="nf">align</span><span class="p">(</span><span class="n">shape1</span><span class="p">,</span> <span class="n">shape2</span><span class="p">,</span> <span class="n">via</span><span class="o">=</span><span class="s2">&quot;middle&quot;</span><span class="p">,</span> <span class="n">offset_x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">offset_y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
 </span><span id="L-400"><a href="#L-400"><span class="linenos"> 400</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-</span><span id="L-401"><a href="#L-401"><span class="linenos"> 401</span></a><span class="sd">    A reporter function that aligns shape1 with shape2. It does this by moving shape 1&#39;s to align with</span>
-</span><span id="L-402"><a href="#L-402"><span class="linenos"> 402</span></a><span class="sd">    whatever property of shape2 is selected with the `via` input.</span>
+</span><span id="L-401"><a href="#L-401"><span class="linenos"> 401</span></a><span class="sd">    A reporter function that aligns `shape1` with `shape2`. It does this by moving `shape1` to align with</span>
+</span><span id="L-402"><a href="#L-402"><span class="linenos"> 402</span></a><span class="sd">    whatever property of `shape2` is selected with the `via` input.</span>
 </span><span id="L-403"><a href="#L-403"><span class="linenos"> 403</span></a><span class="sd">    </span>
 </span><span id="L-404"><a href="#L-404"><span class="linenos"> 404</span></a><span class="sd">    Args:</span>
 </span><span id="L-405"><a href="#L-405"><span class="linenos"> 405</span></a><span class="sd">        shape1 (`Shape` or Tag): The first shape to use.</span>
 </span><span id="L-406"><a href="#L-406"><span class="linenos"> 406</span></a><span class="sd">        shape2 (`Shape` or Tag): The second shape to use.</span>
-</span><span id="L-407"><a href="#L-407"><span class="linenos"> 407</span></a><span class="sd">        via (`str`): Has to be one of, the following options: &quot;center&quot; (horizontal center), </span>
-</span><span id="L-408"><a href="#L-408"><span class="linenos"> 408</span></a><span class="sd">            &quot;middle&quot; (vertical center), &quot;top&quot;, &quot;bottom&quot;, &quot;left&quot;, or &quot;right</span>
+</span><span id="L-407"><a href="#L-407"><span class="linenos"> 407</span></a><span class="sd">        via (`str`): Has to be one of, the following options: `&quot;center&quot;` (horizontal center), </span>
+</span><span id="L-408"><a href="#L-408"><span class="linenos"> 408</span></a><span class="sd">            `&quot;middle&quot;` (vertical center), `&quot;top&quot;`, `&quot;bottom&quot;`, `&quot;left&quot;`, or `&quot;right&quot;`</span>
 </span><span id="L-409"><a href="#L-409"><span class="linenos"> 409</span></a><span class="sd">        offset_x (`int`): How much to shift in the x-axis after alignment</span>
 </span><span id="L-410"><a href="#L-410"><span class="linenos"> 410</span></a><span class="sd">        offset_y (`int`): How much to shift in the y-axis after alignment</span>
 </span><span id="L-411"><a href="#L-411"><span class="linenos"> 411</span></a>
@@ -2175,14 +2175,14 @@ use either <code>"center"</code> (default), <code>"top_left"</code>, <code>"top_
     <a class="headerlink" href="#align"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="align-400"><a href="#align-400"><span class="linenos">400</span></a><span class="k">def</span> <span class="nf">align</span><span class="p">(</span><span class="n">shape1</span><span class="p">,</span> <span class="n">shape2</span><span class="p">,</span> <span class="n">via</span><span class="o">=</span><span class="s2">&quot;middle&quot;</span><span class="p">,</span> <span class="n">offset_x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">offset_y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
 </span><span id="align-401"><a href="#align-401"><span class="linenos">401</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-</span><span id="align-402"><a href="#align-402"><span class="linenos">402</span></a><span class="sd">    A reporter function that aligns shape1 with shape2. It does this by moving shape 1&#39;s to align with</span>
-</span><span id="align-403"><a href="#align-403"><span class="linenos">403</span></a><span class="sd">    whatever property of shape2 is selected with the `via` input.</span>
+</span><span id="align-402"><a href="#align-402"><span class="linenos">402</span></a><span class="sd">    A reporter function that aligns `shape1` with `shape2`. It does this by moving `shape1` to align with</span>
+</span><span id="align-403"><a href="#align-403"><span class="linenos">403</span></a><span class="sd">    whatever property of `shape2` is selected with the `via` input.</span>
 </span><span id="align-404"><a href="#align-404"><span class="linenos">404</span></a><span class="sd">    </span>
 </span><span id="align-405"><a href="#align-405"><span class="linenos">405</span></a><span class="sd">    Args:</span>
 </span><span id="align-406"><a href="#align-406"><span class="linenos">406</span></a><span class="sd">        shape1 (`Shape` or Tag): The first shape to use.</span>
 </span><span id="align-407"><a href="#align-407"><span class="linenos">407</span></a><span class="sd">        shape2 (`Shape` or Tag): The second shape to use.</span>
-</span><span id="align-408"><a href="#align-408"><span class="linenos">408</span></a><span class="sd">        via (`str`): Has to be one of, the following options: &quot;center&quot; (horizontal center), </span>
-</span><span id="align-409"><a href="#align-409"><span class="linenos">409</span></a><span class="sd">            &quot;middle&quot; (vertical center), &quot;top&quot;, &quot;bottom&quot;, &quot;left&quot;, or &quot;right</span>
+</span><span id="align-408"><a href="#align-408"><span class="linenos">408</span></a><span class="sd">        via (`str`): Has to be one of, the following options: `&quot;center&quot;` (horizontal center), </span>
+</span><span id="align-409"><a href="#align-409"><span class="linenos">409</span></a><span class="sd">            `&quot;middle&quot;` (vertical center), `&quot;top&quot;`, `&quot;bottom&quot;`, `&quot;left&quot;`, or `&quot;right&quot;`</span>
 </span><span id="align-410"><a href="#align-410"><span class="linenos">410</span></a><span class="sd">        offset_x (`int`): How much to shift in the x-axis after alignment</span>
 </span><span id="align-411"><a href="#align-411"><span class="linenos">411</span></a><span class="sd">        offset_y (`int`): How much to shift in the y-axis after alignment</span>
 </span><span id="align-412"><a href="#align-412"><span class="linenos">412</span></a>
@@ -2230,16 +2230,16 @@ use either <code>"center"</code> (default), <code>"top_left"</code>, <code>"top_
 </span></pre></div>
 
 
-            <div class="docstring"><p>A reporter function that aligns shape1 with shape2. It does this by moving shape 1's to align with
-whatever property of shape2 is selected with the <code>via</code> input.</p>
+            <div class="docstring"><p>A reporter function that aligns <code>shape1</code> with <code>shape2</code>. It does this by moving <code>shape1</code> to align with
+whatever property of <code>shape2</code> is selected with the <code>via</code> input.</p>
 
 <h6 id="arguments">Arguments:</h6>
 
 <ul>
 <li><strong>shape1 (<code>Shape</code> or Tag):</strong>  The first shape to use.</li>
 <li><strong>shape2 (<code>Shape</code> or Tag):</strong>  The second shape to use.</li>
-<li><strong>via (<code>str</code>):</strong>  Has to be one of, the following options: "center" (horizontal center), 
-"middle" (vertical center), "top", "bottom", "left", or "right</li>
+<li><strong>via (<code>str</code>):</strong>  Has to be one of, the following options: <code>"center"</code> (horizontal center), 
+<code>"middle"</code> (vertical center), <code>"top"</code>, <code>"bottom"</code>, <code>"left"</code>, or <code>"right"</code></li>
 <li><strong>offset_x (<code>int</code>):</strong>  How much to shift in the x-axis after alignment</li>
 <li><strong>offset_y (<code>int</code>):</strong>  How much to shift in the y-axis after alignment</li>
 </ul>
