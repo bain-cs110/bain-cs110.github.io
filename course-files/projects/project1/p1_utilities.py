@@ -281,7 +281,7 @@ def spiral(center=(0, 0), width=100, roughness=0.01, start=0, spirals=5, line_wi
         pos = _polar_to_cartesian(r, theta)
         all_points.append((pos[0] + center[0], pos[1] + center[1]))
 
-    return arc(points=all_points, width=line_width, **kwargs)
+    return arc(points=all_points, width=line_width, tag=tag, **kwargs)
 
 def text(top_left=(0,0), text="", font=("Purisa", 32), color="black", tag="", **kwargs):
     """
