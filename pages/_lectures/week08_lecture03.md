@@ -8,11 +8,11 @@ due_date: 2024-05-17
 canvas_title: "Friday - Lecture 21 - Dictionaries"
 canvas_id: friday-lecture-21-dictionaries
 exercise_url: "lecture21.zip"
-#videos:
-#   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=28e38a28-7ccd-4308-b1db-b0cf014c7374
-#     title: "Live Lecture Recording"
-#     duration: "50:00"
-#     live: 1
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=79666a91-2335-42da-9efa-b12a015ad9b3
+     title: "Live Lecture Recording"
+     duration: "50:00"
+     live: 1
 slides:
    - url: https://docs.google.com/presentation/d/18PXQUL1pc0a6ba4hbiA6EWiV19KbkBctN-3l449Vyl4/edit?usp=sharing
      title: Intro to Dictionaries
