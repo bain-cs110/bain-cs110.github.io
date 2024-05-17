@@ -303,21 +303,58 @@ def text(top_left=(0,0), text="", font=("Purisa", 32), color="black", tag="", **
                                   fill=color,
                                   tags=tag, **kwargs)
 
-
 def move(tag, x=0, y=0):
     """
-    Purpose: Move the x and y position of all shapes that have been tagged
-    with the tag argument
+    Shift the given tagged item by the specified amounts.
+    
     Args:
-        tag (`str`): the shape (or shapes) to move
-        x (`int`; optional): amount to move in the x direction
-        y (`int`; optional): amount to move in the y direction
+        tag (Shape or `str`): the shape (or shapes) to move
+        x (`int`): amount to move in the x direction
+        y (`int`): amount to move in the y direction
     """
     shape_ids = _a_canvas.find_withtag(tag)
     for id in shape_ids:
         _a_canvas.move(id,
                         x,
                         y)
+        
+def move_to(tag, to, anchor="center"):
+    """
+    Move the given tagged item to a particular `point` maintaining some `anchor`.
+    Note: this is NOT the same as the `move` function which moves an object by a specific amount.
+    
+    Args:
+        tag (Shape or `str`): the shape (or shapes) to move
+        to (`tuple`): the `(x, y)` coordinate to which you wish to move the tagged object
+        anchor (`str`): which point on the shape do you want to move toward the given tuple. You can
+            use either `"center"` (default), `"top_left"`, `"top_right"`, `"bottom_left"`, or `"bottom_right"`.
+    """
+    anchor_options = ["center", "top_left", "top_right", "bottom_left", "bottom_right"]
+    if anchor not in anchor_options:
+        raise ValueError("The anchor input must be one of " + str(anchor_options) + " but instead we found " + str(anchor))
+
+    outline = _get_outline(tag)
+    delta_x = 0
+    delta_y = 0
+    
+    if anchor == "top_left":
+        delta_x = to[0] - outline['left']
+        delta_y = to[1] - outline['top'] 
+    elif anchor == "top_right":
+        delta_x = to[0] - outline['right']
+        delta_y = to[1] - outline['top']
+    elif anchor == "bottom_right":
+        delta_x = to[0] - outline['right']
+        delta_y = to[1] - outline['bottom']
+    elif anchor == "bottom_left":
+        delta_x = to[0] - outline['left']
+        delta_y = to[1] - outline['bottom']
+    elif anchor == "center":
+        delta_x = to[0] - outline['center'][0]
+        delta_y = to[1] - outline['center'][1]
+    
+    _a_canvas.move(tag, delta_x, delta_y)
+
 
 def put_in_front(tag):
     """
@@ -336,6 +373,84 @@ def put_in_back(tag):
         tag (`str`): The tag to raise.
     """
     _a_canvas.tag_lower(tag)
+    
+    
+def _get_outline(shape):
+    """
+    A reporter function that takes in a shape and calls the various helper functions to generate
+    a sort of "summary" of that particular shape and returns it in the form of a dictionary.
+
+    Args:
+        shape (Shape or Tag): what shape to look up
+        
+    Returns:
+        a `Dictionary` with the various properties of the shape
+    """
+    
+    return {
+        "center": get_center(shape),
+        "left": get_left(shape),
+        "right": get_right(shape),
+        "top": get_top(shape),
+        "bottom": get_bottom(shape)
+    }
+    
+
+def align(shape1, shape2, via="middle", offset_x = 0, offset_y = 0):
+    """
+    A reporter function that aligns shape1 with shape2. It does this by moving shape 1's to align with
+    whatever property of shape2 is selected with the `via` input.
+    
+    Args:
+        shape1 (`Shape` or Tag): The first shape to use.
+        shape2 (`Shape` or Tag): The second shape to use.
+        via (`str`): Has to be one of, the following options: "center" (horizontal center), 
+            "middle" (vertical center), "top", "bottom", "left", or "right
+        offset_x (`int`): How much to shift in the x-axis after alignment
+        offset_y (`int`): How much to shift in the y-axis after alignment
+
+    Returns:
+        `Shape`: The modified shape1.
+    """
+    via_options = ["center", "middle", "top", "bottom", "left", "right"]
+    if via not in via_options:
+        raise ValueError("The via input must be one of " + str(via_options) + " but instead we found " + str(via))
+
+    outline1 = _get_outline(shape1)
+    outline2 = _get_outline(shape2)
+    
+    if via == "center":
+        _a_canvas.move(
+            shape1,
+            (outline2['center'][0] - outline1['center'][0]) + offset_x, offset_y)
+        
+    elif via == "middle":
+        _a_canvas.move(
+            shape1,
+            offset_x, (outline2['center'][1] - outline1['center'][1]) + offset_y)
+        
+    elif via == "top":
+        _a_canvas.move(
+            shape1,
+            offset_x, (outline2['top'] - outline1['top']) + offset_y)
+        
+    elif via == "bottom":
+        _a_canvas.move(
+            shape1,
+            offset_x, (outline2['bottom'] - outline1['bottom']) + offset_y)
+        
+    elif via == "left":
+        _a_canvas.move(
+            shape1,
+            (outline2['left'] - outline1['left']) + offset_x, offset_y)
+        
+    elif via == "right":
+        _a_canvas.move(
+            shape1,
+            (outline2['right'] - outline1['right']) + offset_x, offset_y)
+        
+    return shape1   
+
 
 def overlay(shape1, shape2, offset_x=0, offset_y=0):
     """

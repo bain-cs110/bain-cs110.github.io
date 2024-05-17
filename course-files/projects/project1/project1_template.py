@@ -1,7 +1,7 @@
 from p1_utilities import *
 import time
 
-_ignore = setup_shapes('Project 1', background="white", grid=False, width=800, height=800)
+_ignore = setup_shapes('Project 1', background="white", grid=True, width=800, height=800)
 ticks_per_second = None
 ticks = 0
 ########################## YOUR CODE BELOW THIS LINE ##############################
@@ -57,12 +57,12 @@ def setup():
 
 ####################################################################################
 
-bouncy_counter = 10
 ## ANIMATION GO FUNCTION HERE ####################################################
 def go():
     # Here's where you'll put everything you want to control your animations
     #   EXCEPT event listeners (look higher up)
-    print("Animating! ", ticks)  
+    #print("Animating! ", ticks)  
+    pass
 
 
 ######&&!*#################### YOUR CODE ABOVE THIS LINE ##############################
