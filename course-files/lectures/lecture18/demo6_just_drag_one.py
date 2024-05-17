@@ -6,59 +6,29 @@ _ignore = setup_shapes('Lecture 18', background="white", grid=False, width=600, 
 ticks_per_second = None
 ticks = 0
 ########################## YOUR CODE BELOW THIS LINE ##############################
-
-# need a global variable to store which item should be clicked:
-active_tag = None
-def select_circle(event):
-    global active_tag
-
-    # if something is already active, deactivate it:
-    if active_tag:
-        update_color(active_tag, 'hotpink')
-        active_tag = None
-
-    # get new active tag:
-    selected_tag = get_tag_from_event(event)
-    if "circle" in selected_tag: # only move circles
-        active_tag = selected_tag
-        update_color(active_tag, 'olivedrab')
-
-active_tag = ""
-
 def move_circle(event):
-    if not active_tag:
-        print('no tag selected')
-        return
+    selected_tag = get_tag_from_event(event)
+    
+    # check to see if this thing is a circle
+    if "circle" not in selected_tag:
+        selected_tag = None # If it's not a circle let's not mess with it
 
-    # calculate the current position of the current shape:
-    width = get_width(active_tag)
-    height = get_height(active_tag)
-    left = get_left(active_tag)
-    top = get_top(active_tag)
-    current_x = left + (width / 2)
-    current_y = top + (height / 2)
+    # as long as we have something selected, move it!
+    if selected_tag != None:
+        move_to(selected_tag, (event.x, event.y))
+        update_color(selected_tag, "yellow")
 
-    # calculate the delta of the current shape:
-    delta_x = -1 * (current_x - event.x)
-    delta_y = -1 * (current_y - event.y)
-
-    # move the shape:
-    move(active_tag, x=delta_x, y=delta_y)
-
+circle_counter = 0
 def setup():
     ## Setting some listeners!
-    # Notice first we define our function called do_something
-    # then we tell the canvas to listen for MOUSE_CLICKs and if
-    # it hears one, do_something
-    MOUSE_CLICK = '<Button-1>'
     MOUSE_DRAG = '<B1-Motion>'
-
-    setup_listener(MOUSE_CLICK, select_circle)
+    
     setup_listener(MOUSE_DRAG, move_circle)
 
-    text((300, 200), text='Click or drag to create circles', font=("Purisa", 32), tag="instructions")
-        
+    text((300, 200), text='Drag a circle around!', font=("Purisa", 32), tag="instructions")
+
     # Draw some circles!
+    global circle_counter
     circle_counter = 0
     for i in range(50):
         circle((randint(0, 1000), randint(0, 1000)), radius=randint(10, 20), tag="circle_"+str(circle_counter))

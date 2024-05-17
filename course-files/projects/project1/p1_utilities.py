@@ -1003,27 +1003,26 @@ def make_image(image_path, position=(200, 200), rotation=None,
     # 3. draw image on canvas:
     _a_canvas.create_image(*position, image=tkinter_image, anchor=anchor, tags=tag, **kwargs)
 
-def get_tag_from_event(event):
+def get_tag_from_event(event, precision=25):
     '''
     Tries to return a tag of an object at a given mouse-event.
 
     Args:
         event (`Event`): Must be a mouse event otherwise we'll give back an error.
+        precision (`int`): How precise in number of pixels does a user have to be to "select" an object
     '''
     try:
-
         x = event.x
         y = event.y
         shape_id = _a_canvas.find_closest(x, y) # get the top shape
-        if shape_id:
+        if shape_id and distance(get_center(shape_id), (x,y)) < precision:
             tags = _a_canvas.gettags(shape_id)
             if len(tags) > 0:
-                # print(tags)
                 return tags[0]
-        return None
+        return ""
+    
     except:
-        print('error: none found. maybe not a mouse event?')
-        return None
+        raise Exception("No tag found! Maybe you passed us an event that isn't a mouse event?")
 
 def random_color():
     '''
