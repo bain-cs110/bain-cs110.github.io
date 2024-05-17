@@ -1046,7 +1046,8 @@ from tkinter import Tk, Canvas
 
 def setup_shapes(title, background="white", width=600, height=600, grid=False):
     """
-    A static function that sets up the pop-up window. **DO NOT ADD CALLS TO THIS FUNCTION IN YOUR PROGRAM**.
+    A static function that sets up the pop-up window. **DO NOT ADD CALLS TO THIS FUNCTION IN YOUR PROGRAM**. However,
+    at the top of your program, you're more than welcome to edit the inputs given to the function.
     
     Args:
         `title` (`str`): The title of the window to create.

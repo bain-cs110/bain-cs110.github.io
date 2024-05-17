@@ -1231,25 +1231,26 @@ p1_utilities    </h1>
 </span><span id="L-1046"><a href="#L-1046"><span class="linenos">1046</span></a>
 </span><span id="L-1047"><a href="#L-1047"><span class="linenos">1047</span></a><span class="k">def</span> <span class="nf">setup_shapes</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 </span><span id="L-1048"><a href="#L-1048"><span class="linenos">1048</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-</span><span id="L-1049"><a href="#L-1049"><span class="linenos">1049</span></a><span class="sd">    A static function that sets up the pop-up window. **DO NOT ADD CALLS TO THIS FUNCTION IN YOUR PROGRAM**.</span>
-</span><span id="L-1050"><a href="#L-1050"><span class="linenos">1050</span></a><span class="sd">    </span>
-</span><span id="L-1051"><a href="#L-1051"><span class="linenos">1051</span></a><span class="sd">    Args:</span>
-</span><span id="L-1052"><a href="#L-1052"><span class="linenos">1052</span></a><span class="sd">        `title` (`str`): The title of the window to create.</span>
-</span><span id="L-1053"><a href="#L-1053"><span class="linenos">1053</span></a><span class="sd">        `background` (`str`): Color to set the background.</span>
-</span><span id="L-1054"><a href="#L-1054"><span class="linenos">1054</span></a><span class="sd">        `width` (`int`): How wide to make the pop-up window.</span>
-</span><span id="L-1055"><a href="#L-1055"><span class="linenos">1055</span></a><span class="sd">        `height` (`int`): How tall to make the pop-up window.</span>
-</span><span id="L-1056"><a href="#L-1056"><span class="linenos">1056</span></a><span class="sd">        `grid` (`bool`): Whether or not to draw the axes / grid.</span>
-</span><span id="L-1057"><a href="#L-1057"><span class="linenos">1057</span></a><span class="sd">        </span>
-</span><span id="L-1058"><a href="#L-1058"><span class="linenos">1058</span></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="L-1059"><a href="#L-1059"><span class="linenos">1059</span></a>    <span class="k">global</span> <span class="n">_a_canvas</span>
-</span><span id="L-1060"><a href="#L-1060"><span class="linenos">1060</span></a>    <span class="n">gui</span> <span class="o">=</span> <span class="n">Tk</span><span class="p">()</span>
-</span><span id="L-1061"><a href="#L-1061"><span class="linenos">1061</span></a>    <span class="n">gui</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
-</span><span id="L-1062"><a href="#L-1062"><span class="linenos">1062</span></a>    <span class="n">_a_canvas</span> <span class="o">=</span> <span class="n">Canvas</span><span class="p">(</span><span class="n">gui</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="n">background</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">)</span>
-</span><span id="L-1063"><a href="#L-1063"><span class="linenos">1063</span></a>    <span class="n">_a_canvas</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
-</span><span id="L-1064"><a href="#L-1064"><span class="linenos">1064</span></a>    <span class="k">if</span> <span class="n">grid</span><span class="p">:</span>
-</span><span id="L-1065"><a href="#L-1065"><span class="linenos">1065</span></a>        <span class="n">make_grid</span><span class="p">(</span><span class="n">_a_canvas</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
-</span><span id="L-1066"><a href="#L-1066"><span class="linenos">1066</span></a>    <span class="n">_a_canvas</span><span class="o">.</span><span class="n">focus_set</span><span class="p">()</span>
-</span><span id="L-1067"><a href="#L-1067"><span class="linenos">1067</span></a>    <span class="k">return</span> <span class="n">_a_canvas</span>
+</span><span id="L-1049"><a href="#L-1049"><span class="linenos">1049</span></a><span class="sd">    A static function that sets up the pop-up window. **DO NOT ADD CALLS TO THIS FUNCTION IN YOUR PROGRAM**. However,</span>
+</span><span id="L-1050"><a href="#L-1050"><span class="linenos">1050</span></a><span class="sd">    at the top of your program, you&#39;re more than welcome to edit the inputs given to the function.</span>
+</span><span id="L-1051"><a href="#L-1051"><span class="linenos">1051</span></a><span class="sd">    </span>
+</span><span id="L-1052"><a href="#L-1052"><span class="linenos">1052</span></a><span class="sd">    Args:</span>
+</span><span id="L-1053"><a href="#L-1053"><span class="linenos">1053</span></a><span class="sd">        `title` (`str`): The title of the window to create.</span>
+</span><span id="L-1054"><a href="#L-1054"><span class="linenos">1054</span></a><span class="sd">        `background` (`str`): Color to set the background.</span>
+</span><span id="L-1055"><a href="#L-1055"><span class="linenos">1055</span></a><span class="sd">        `width` (`int`): How wide to make the pop-up window.</span>
+</span><span id="L-1056"><a href="#L-1056"><span class="linenos">1056</span></a><span class="sd">        `height` (`int`): How tall to make the pop-up window.</span>
+</span><span id="L-1057"><a href="#L-1057"><span class="linenos">1057</span></a><span class="sd">        `grid` (`bool`): Whether or not to draw the axes / grid.</span>
+</span><span id="L-1058"><a href="#L-1058"><span class="linenos">1058</span></a><span class="sd">        </span>
+</span><span id="L-1059"><a href="#L-1059"><span class="linenos">1059</span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="L-1060"><a href="#L-1060"><span class="linenos">1060</span></a>    <span class="k">global</span> <span class="n">_a_canvas</span>
+</span><span id="L-1061"><a href="#L-1061"><span class="linenos">1061</span></a>    <span class="n">gui</span> <span class="o">=</span> <span class="n">Tk</span><span class="p">()</span>
+</span><span id="L-1062"><a href="#L-1062"><span class="linenos">1062</span></a>    <span class="n">gui</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+</span><span id="L-1063"><a href="#L-1063"><span class="linenos">1063</span></a>    <span class="n">_a_canvas</span> <span class="o">=</span> <span class="n">Canvas</span><span class="p">(</span><span class="n">gui</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="n">background</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">)</span>
+</span><span id="L-1064"><a href="#L-1064"><span class="linenos">1064</span></a>    <span class="n">_a_canvas</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+</span><span id="L-1065"><a href="#L-1065"><span class="linenos">1065</span></a>    <span class="k">if</span> <span class="n">grid</span><span class="p">:</span>
+</span><span id="L-1066"><a href="#L-1066"><span class="linenos">1066</span></a>        <span class="n">make_grid</span><span class="p">(</span><span class="n">_a_canvas</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+</span><span id="L-1067"><a href="#L-1067"><span class="linenos">1067</span></a>    <span class="n">_a_canvas</span><span class="o">.</span><span class="n">focus_set</span><span class="p">()</span>
+</span><span id="L-1068"><a href="#L-1068"><span class="linenos">1068</span></a>    <span class="k">return</span> <span class="n">_a_canvas</span>
 </span></pre></div>
 
 
@@ -3588,29 +3589,31 @@ Prof. Bain or post on edSTEM if you'd like more details!</p>
     <a class="headerlink" href="#setup_shapes"></a>
             <div class="pdoc-code codehilite"><pre><span></span><span id="setup_shapes-1048"><a href="#setup_shapes-1048"><span class="linenos">1048</span></a><span class="k">def</span> <span class="nf">setup_shapes</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 </span><span id="setup_shapes-1049"><a href="#setup_shapes-1049"><span class="linenos">1049</span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-</span><span id="setup_shapes-1050"><a href="#setup_shapes-1050"><span class="linenos">1050</span></a><span class="sd">    A static function that sets up the pop-up window. **DO NOT ADD CALLS TO THIS FUNCTION IN YOUR PROGRAM**.</span>
-</span><span id="setup_shapes-1051"><a href="#setup_shapes-1051"><span class="linenos">1051</span></a><span class="sd">    </span>
-</span><span id="setup_shapes-1052"><a href="#setup_shapes-1052"><span class="linenos">1052</span></a><span class="sd">    Args:</span>
-</span><span id="setup_shapes-1053"><a href="#setup_shapes-1053"><span class="linenos">1053</span></a><span class="sd">        `title` (`str`): The title of the window to create.</span>
-</span><span id="setup_shapes-1054"><a href="#setup_shapes-1054"><span class="linenos">1054</span></a><span class="sd">        `background` (`str`): Color to set the background.</span>
-</span><span id="setup_shapes-1055"><a href="#setup_shapes-1055"><span class="linenos">1055</span></a><span class="sd">        `width` (`int`): How wide to make the pop-up window.</span>
-</span><span id="setup_shapes-1056"><a href="#setup_shapes-1056"><span class="linenos">1056</span></a><span class="sd">        `height` (`int`): How tall to make the pop-up window.</span>
-</span><span id="setup_shapes-1057"><a href="#setup_shapes-1057"><span class="linenos">1057</span></a><span class="sd">        `grid` (`bool`): Whether or not to draw the axes / grid.</span>
-</span><span id="setup_shapes-1058"><a href="#setup_shapes-1058"><span class="linenos">1058</span></a><span class="sd">        </span>
-</span><span id="setup_shapes-1059"><a href="#setup_shapes-1059"><span class="linenos">1059</span></a><span class="sd">    &quot;&quot;&quot;</span>
-</span><span id="setup_shapes-1060"><a href="#setup_shapes-1060"><span class="linenos">1060</span></a>    <span class="k">global</span> <span class="n">_a_canvas</span>
-</span><span id="setup_shapes-1061"><a href="#setup_shapes-1061"><span class="linenos">1061</span></a>    <span class="n">gui</span> <span class="o">=</span> <span class="n">Tk</span><span class="p">()</span>
-</span><span id="setup_shapes-1062"><a href="#setup_shapes-1062"><span class="linenos">1062</span></a>    <span class="n">gui</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
-</span><span id="setup_shapes-1063"><a href="#setup_shapes-1063"><span class="linenos">1063</span></a>    <span class="n">_a_canvas</span> <span class="o">=</span> <span class="n">Canvas</span><span class="p">(</span><span class="n">gui</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="n">background</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">)</span>
-</span><span id="setup_shapes-1064"><a href="#setup_shapes-1064"><span class="linenos">1064</span></a>    <span class="n">_a_canvas</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
-</span><span id="setup_shapes-1065"><a href="#setup_shapes-1065"><span class="linenos">1065</span></a>    <span class="k">if</span> <span class="n">grid</span><span class="p">:</span>
-</span><span id="setup_shapes-1066"><a href="#setup_shapes-1066"><span class="linenos">1066</span></a>        <span class="n">make_grid</span><span class="p">(</span><span class="n">_a_canvas</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
-</span><span id="setup_shapes-1067"><a href="#setup_shapes-1067"><span class="linenos">1067</span></a>    <span class="n">_a_canvas</span><span class="o">.</span><span class="n">focus_set</span><span class="p">()</span>
-</span><span id="setup_shapes-1068"><a href="#setup_shapes-1068"><span class="linenos">1068</span></a>    <span class="k">return</span> <span class="n">_a_canvas</span>
+</span><span id="setup_shapes-1050"><a href="#setup_shapes-1050"><span class="linenos">1050</span></a><span class="sd">    A static function that sets up the pop-up window. **DO NOT ADD CALLS TO THIS FUNCTION IN YOUR PROGRAM**. However,</span>
+</span><span id="setup_shapes-1051"><a href="#setup_shapes-1051"><span class="linenos">1051</span></a><span class="sd">    at the top of your program, you&#39;re more than welcome to edit the inputs given to the function.</span>
+</span><span id="setup_shapes-1052"><a href="#setup_shapes-1052"><span class="linenos">1052</span></a><span class="sd">    </span>
+</span><span id="setup_shapes-1053"><a href="#setup_shapes-1053"><span class="linenos">1053</span></a><span class="sd">    Args:</span>
+</span><span id="setup_shapes-1054"><a href="#setup_shapes-1054"><span class="linenos">1054</span></a><span class="sd">        `title` (`str`): The title of the window to create.</span>
+</span><span id="setup_shapes-1055"><a href="#setup_shapes-1055"><span class="linenos">1055</span></a><span class="sd">        `background` (`str`): Color to set the background.</span>
+</span><span id="setup_shapes-1056"><a href="#setup_shapes-1056"><span class="linenos">1056</span></a><span class="sd">        `width` (`int`): How wide to make the pop-up window.</span>
+</span><span id="setup_shapes-1057"><a href="#setup_shapes-1057"><span class="linenos">1057</span></a><span class="sd">        `height` (`int`): How tall to make the pop-up window.</span>
+</span><span id="setup_shapes-1058"><a href="#setup_shapes-1058"><span class="linenos">1058</span></a><span class="sd">        `grid` (`bool`): Whether or not to draw the axes / grid.</span>
+</span><span id="setup_shapes-1059"><a href="#setup_shapes-1059"><span class="linenos">1059</span></a><span class="sd">        </span>
+</span><span id="setup_shapes-1060"><a href="#setup_shapes-1060"><span class="linenos">1060</span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="setup_shapes-1061"><a href="#setup_shapes-1061"><span class="linenos">1061</span></a>    <span class="k">global</span> <span class="n">_a_canvas</span>
+</span><span id="setup_shapes-1062"><a href="#setup_shapes-1062"><span class="linenos">1062</span></a>    <span class="n">gui</span> <span class="o">=</span> <span class="n">Tk</span><span class="p">()</span>
+</span><span id="setup_shapes-1063"><a href="#setup_shapes-1063"><span class="linenos">1063</span></a>    <span class="n">gui</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+</span><span id="setup_shapes-1064"><a href="#setup_shapes-1064"><span class="linenos">1064</span></a>    <span class="n">_a_canvas</span> <span class="o">=</span> <span class="n">Canvas</span><span class="p">(</span><span class="n">gui</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="n">background</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">)</span>
+</span><span id="setup_shapes-1065"><a href="#setup_shapes-1065"><span class="linenos">1065</span></a>    <span class="n">_a_canvas</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+</span><span id="setup_shapes-1066"><a href="#setup_shapes-1066"><span class="linenos">1066</span></a>    <span class="k">if</span> <span class="n">grid</span><span class="p">:</span>
+</span><span id="setup_shapes-1067"><a href="#setup_shapes-1067"><span class="linenos">1067</span></a>        <span class="n">make_grid</span><span class="p">(</span><span class="n">_a_canvas</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+</span><span id="setup_shapes-1068"><a href="#setup_shapes-1068"><span class="linenos">1068</span></a>    <span class="n">_a_canvas</span><span class="o">.</span><span class="n">focus_set</span><span class="p">()</span>
+</span><span id="setup_shapes-1069"><a href="#setup_shapes-1069"><span class="linenos">1069</span></a>    <span class="k">return</span> <span class="n">_a_canvas</span>
 </span></pre></div>
 
 
-            <div class="docstring"><p>A static function that sets up the pop-up window. <strong>DO NOT ADD CALLS TO THIS FUNCTION IN YOUR PROGRAM</strong>.</p>
+            <div class="docstring"><p>A static function that sets up the pop-up window. <strong>DO NOT ADD CALLS TO THIS FUNCTION IN YOUR PROGRAM</strong>. However,
+at the top of your program, you're more than welcome to edit the inputs given to the function.</p>
 
 <h6 id="arguments">Arguments:</h6>
 
