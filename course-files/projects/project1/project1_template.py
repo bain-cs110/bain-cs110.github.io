@@ -31,7 +31,7 @@ square_counter = 0
 def click_handle(event):
     global square_counter
     new_tag = "square_" + str(square_counter)
-    square(top_left=(event.x, event.y), size=100, color='pink', tag=new_tag)
+    square(top_left=(event.x, event.y), size=100, color="pink", tag=new_tag)
     square_counter = square_counter + 1
     print("Drawing square..." + new_tag)
 
@@ -50,7 +50,6 @@ def setup():
     setup_listener('<Button-1>', click_handle)
     setup_listener('<Key>', key_handle)
     
-    
     # This is how many animations to attempt per second. If you want to slow down your
     #   animations, just decrease this number! If you want to speed up...
     global ticks_per_second
@@ -58,11 +57,12 @@ def setup():
 
 ####################################################################################
 
+bouncy_counter = 10
 ## ANIMATION GO FUNCTION HERE ####################################################
 def go():
     # Here's where you'll put everything you want to control your animations
     #   EXCEPT event listeners (look higher up)
-    print("Animating! ", ticks)
+    print("Animating! ", ticks)  
 
 
 ######&&!*#################### YOUR CODE ABOVE THIS LINE ##############################

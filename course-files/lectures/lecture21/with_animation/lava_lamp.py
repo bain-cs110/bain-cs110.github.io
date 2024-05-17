@@ -54,7 +54,6 @@ def go():
     for shape in user_shapes:
 
         shape_tag = shape['tag'] # load the shape's tag
-        shape_speed = shape['direction'] * shape['speed'] # load the shape's speed
 
         # if one of our shapes reaches the bottom of the canvas
         if get_top(shape_tag) > 1000:

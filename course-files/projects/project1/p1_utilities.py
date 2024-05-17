@@ -605,6 +605,30 @@ def interpolate_colors(color1, color2, frac):
         color2 = _tupelize_color(color2)
     return _interpolate_tuple(color1, color2, frac)
 
+def get_colors(tag_or_tags):
+    """
+    A reporter function that returns all the colors associated with a tag or list of tags.
+
+    Args:
+        tag_or_tags (`str` or `List`): the tag or list of tags you'd like to find the colors of
+        
+    Returns:
+        A `List` containing all **unique** colors associated with that tag(s)
+    """
+    all_shapes = []
+    if not isinstance(tag_or_tags, list):
+        tag_or_tags = [tag_or_tags]
+    for tag in tag_or_tags:
+        all_shapes += _a_canvas.find_withtag(tag)
+        
+    all_colors = []
+    for shape in all_shapes:
+        color = _a_canvas.itemcget(shape, 'fill')
+        if color not in all_colors:
+            all_colors.append(color) 
+
+    return all_colors
+
 def get_center(shape):
     """
     A reporter function calculates the center **coordinate** at the center of some shape.
