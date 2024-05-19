@@ -17,9 +17,10 @@ pdoc --show-source --logo "https://bain-cs110.github.io/assets/images/cs110.png"
 # P1 Docs
 pdoc -t course-files/build/ --show-source --logo "https://bain-cs110.github.io/assets/images/cs110.png" course-files/projects/project1/p1_utilities -o course-files/projects/project1/docs
 
-# HW 6 Docs
+# HW 7 Docs
+# Only run this every once in a while...it has a problem with file paths
 #pdoc --show-source --logo "https://bain-cs110.github.io/assets/images/cs110.png" course-files/homeworks/hw7/wordle.py -o course-files/homeworks/hw7/docs
-#pdoc --show-source --logo "https://bain-cs110.github.io/assets/images/cs110.png" course-files/homeworks/hw7/hw7_utilities.py -o course-files/homeworks/hw7/docs
+#pdoc --show-source --logo "https://bain-cs110.github.io/assets/images/cs110.png" course-files/homeworks/hw7/cs110_hw7.py -o course-files/homeworks/hw7/docs
 
 # P2 Docs
 #pdoc --show-source --logo "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Yelp_Logo.svg/800px-Yelp_Logo.svg.png" course-files/projects/project2/apis/yelp -o course-files/projects/project2/docs
