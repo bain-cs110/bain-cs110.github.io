@@ -8,11 +8,11 @@ due_date: 2024-05-20
 canvas_title: "Monday - Lecture 22 - More Dictionaries"
 canvas_id: monday-lecture-22-more-dictionaries
 exercise_url: "lecture22.zip"
-#videos:
-#   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9d00896d-1a5c-4a5e-8bc2-b0cf014c738b
-#     title: "Live Lecture Recording"
-#     duration: "51:00"
-#     live: 1
+videos:
+   - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=75e49421-1cf3-4f54-831e-b12a015ad9cc
+     title: "Live Lecture Recording"
+     duration: "51:00"
+     live: 1
 slides:
    - url: https://docs.google.com/presentation/d/1F83dRUSKL52FbAJkJTd_BPqgmzsJhpNbnip6x6PZVBo/edit?usp=sharing
      title: "Dictionaries to Represent and Count"
