@@ -12,7 +12,7 @@ canvas_assignment_group: "Mini-Quiz"
 canvas_points_possible: 10
 canvas_allowed_extensions: "py"
 canvas_submission_types: "external_tool"
-canvas_id: 
+canvas_id: 1418268
 canvas_title: Lecture 23 (Pre-Recorded) - Error Handling and Using Files - Mini-Quiz 13
 videos:
    - url: https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=210006d9-b6b2-4ee7-9c3a-b175018118fe
