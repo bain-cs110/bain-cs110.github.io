@@ -16,25 +16,30 @@ def read_in_words(file_path, num_letters = 5):
         # Remove the end line character from each line we read
         word = line.strip('\n')
         
-        # TODO: Read the INPUTTED file and append words with the specified letters to the word_list entry
-        # (which is a list) of our game_data dictionary. Make sure to convert each of these words
-        # to UPPER CASE (Hint: you can convert a string to upper case by using upper() method:
+        # TODO: Convert the word to UPPER CASE
+        # (Hint: you can convert a string to upper case by using upper() method:
         # test_string = "hello"
         # upper_case = test_string.upper()
+        
+        ## TODO: Check to see if the word is 5 letters long
+        
+        ## TODO: If it's 5 letters long, then append it to our word_list **inside**
+        #        the game data dictionary
 
         ## WARNING: Don't print out every word! Your computer will freak out.
         ## This will show every 100th word just to help you see your work.
         ## You should remove this entirely once you've got everything working.
-        if words_processed % 100 == 0:
-            print(word)
+        #if words_processed % 100 == 0:
+        #    print(word)
             
         words_processed = words_processed + 1
 
-    # Print out the list of valid words for debugging
+
+    # TODO: Print out the list of valid words for debugging
     # print("A random word in our list:", random.choice(game_data['word_list']))
     # print("Number of valid words:", len(game_data['word_list']))
 
-    ## TODO
+    ## TODO: Pick a random word and store it in the 'solution' key of the game_data dictionary
     ## Pick a random word out of the list stored inside of game_data to serve as the solution
     ## Save that newly picked solution in the appropriate place in the game_data dictionary
 
