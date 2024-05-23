@@ -140,13 +140,6 @@ You'll need all of these downloaded but **you will only work in the `wordle.py` 
 
 > **Note**: Depending on your browser, you may need to right click on the wordlist button and select "Download linked file..." or "Save linked file as...". Make sure to save it as `eng_wordlist.txt`.
 
-<a class="nu-button" href="{{site.url}}/course-files/homeworks/hw7/common_words.txt" target="_blank" download>
-    More Common Words<i class="fas fa-download"></i>
-</a>
-
-> **Note**: The previous file contains ALL "words" (a lot). This one only contains COMMON words and can give you more "reasonable" Wordle puzzles. To use this one, change the call to the <code>read_in_words</code> function to point towards the new file name (I recommend <code>common_words.txt</code>).
-
-
 * * *
 
 ## What to Submit
