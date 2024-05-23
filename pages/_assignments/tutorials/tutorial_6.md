@@ -143,9 +143,10 @@ Once you've completed all of your to-dos, make sure to run your program and see 
 <br>
 <br>
 
-<a class="nu-button" href="{{site.url}}/course-files/tutorials/tutorial6/eng_wordlist.txt" target="_blank" download>
-    Word List File<i class="fas fa-download"></i>
+<a class="nu-button" href="{{site.url}}/course-files/homeworks/hw7/eng_wordlist.txt" download="eng_wordlist.txt">
+    Wordle Word List File<i class="fas fa-download"></i>
 </a>
+<br>
 
 > **Note**: Depending on your browser, you may need to right click on the wordlist button and select "Download linked file..." or "Save linked file as...". Make sure to save it as `eng_wordlist.txt`.
 

@@ -133,7 +133,7 @@ You'll need all of these downloaded but **you will only work in the `wordle.py` 
 <br>
 <br>
 
-<a class="nu-button" href="{{site.url}}/course-files/homeworks/hw7/eng_wordlist.txt" download="wordlist.txt">
+<a class="nu-button" href="{{site.url}}/course-files/homeworks/hw7/eng_wordlist.txt" download="eng_wordlist.txt">
     Wordle Word List File<i class="fas fa-download"></i>
 </a>
 <br>
