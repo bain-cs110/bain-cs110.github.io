@@ -7,7 +7,7 @@ num: 25
 description: "(Pre-Recorded Mini-Quiz)"
 due_date: 2024-05-29
 canvas_title: Lecture 25 (Pre-Recorded) - Getting Ready for P2 - Mini-Quiz 15
-canvas_id: 
+canvas_id: 1420193
 exercise_url: "lecture25.zip"
 lec_assignment: 1
 canvas_assignment_group: "Mini-Quiz"

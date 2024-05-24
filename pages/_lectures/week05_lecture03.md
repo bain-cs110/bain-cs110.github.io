@@ -1,7 +1,7 @@
 ---
 layout: module
 title: "Conditionals"
-canvas_title: "Lecture 13 (Recorded) - Intro to Control Flow - Mini-Quiz 7"
+canvas_title: "Lecture 13 (Asynchronous) - Intro to Control Flow - Mini-Quiz 7"
 lec_assignment: 1
 canvas_assignment_group: "Mini-Quiz"
 canvas_points_possible: 10

@@ -54,6 +54,7 @@ Given the user’s selected genres and artists:
 
 > **NOTE:** The `spotify.get_similar_tracks` function’s job is to get recommendations based on seed data. It has very specific requirements about what inputs it needs to work. Make sure to look at the spotify api documentation linked near the starter files.
 
+> **NOTE 2**: <code>spotify.get_similar_tracks</code> has a special argument called <code>practice</code> that defaults to True which means it gives you back "practice data" (aka random recommendations rather than real ones). <mark>Once you have gotten everything working, you can start getting real similar_tracks by changing this input to <code>False</code>. **Do not do this** until your program is 100% working (including the emailing part)</mark>. 
 
 ### Extra Credit Options (Up to 6 Points)
 
