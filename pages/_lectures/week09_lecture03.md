@@ -1,9 +1,25 @@
 ---
 layout: module
-title: "Documentation and APIs"
+title: "Programming in the Real World"
 description: "(In-Person Mini-Quiz)"
 type: lecture
-draft: 1
+draft: 0
 num: 24
 due_date: 2024-05-24
+canvas_id: friday-lecture-24-dictionaries-and-apis
+canvas_title: Friday - Lecture 24 - Dictionaries and APIs
+exercise_url: "lecture24.zip"
+mini_quiz_id: quizzes/236068
+mini_quiz_num: 14
+mini_quiz_title: Complex Dictionaries
+#videos:
+#   - url: <https://northwestern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=807db938-70ac-45b8-a872-b0cf014c73b9>
+#     title: "Live Lecture Recording"
+#     duration: "50:00"
+#     live: 1
+slides:
+   - url: https://docs.google.com/presentation/d/1-GE47HV8qGJazaY_nFvEldLNW7LDIYtbcRuEhSMEsss/edit?usp=sharing
+     title: "Dictionaries and APIs"
 ---
+
+Today we'll continue our work with dictionaries, but also expand our repertoire of skills to include getting info from the internet using API Endpoints to query data from servers like YouTube, Spotify, the CTA, and more.

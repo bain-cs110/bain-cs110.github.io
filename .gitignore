@@ -9,3 +9,4 @@ _site/
 **/draft/
 secret_tokens.py
 spotify_token.json
+spotify_cache.pkl

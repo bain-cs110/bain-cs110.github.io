@@ -3,7 +3,7 @@ layout: assignment-two-column
 title: Getting Started on P2
 type: tutorial
 abbreviation: Tutorial 7
-draft: 1
+draft: 0
 num: 7
 points: 100
 due_date: 2024-05-29
@@ -35,6 +35,10 @@ When you're done, complete one of the two options (either / or) listed below:
 * * *
 
 ## Option 1: Yelp Option
+
+<a class="nu-button" href="{{site.url}}/course-files/projects/project2/docs/apis/yelp.html" target="_blank">
+    Yelp Docs <i class="fas fa-download"></i>
+</a>
 
 Create a brand new file called `tutorial7.py` directly inside of your `project2` folder (the location matters). Your directory structure should look like this:
 
@@ -84,6 +88,10 @@ Next, go back to your `tutorial7.py` file and modify the get_businesses(...) fun
 * * *
 
 ## Option 2: Spotify Option
+
+<a class="nu-button" href="{{site.url}}/course-files/projects/project2/docs/apis/spotify.html" target="_blank">
+    Spotify Docs <i class="fas fa-download"></i>
+</a>
 
 Create a brand new file called `tutorial7.py` directly inside of your `project2` folder (the location matters). Your directory structure should look like this:
 
@@ -143,16 +151,23 @@ If you still have time, please experiment with some of the other built-in functi
 
 ## Using the GUI Library
 
+<a class="nu-button" href="{{site.url}}/course-files/projects/project2/docs/apis/gui.html" target="_blank">
+    GUI Docs <i class="fas fa-download"></i>
+</a>
+
 For the real project, we don't want to print stuff to the interpreter window. **Instead**, we want to use the GUI library to help us make a real app! Once you get comfortable with the above, open up either `restaurant_finder.py` or `music_finder.py` and take a look at the template.
 
-Adapt some of your work from the above exercises to fit the template. Replacing calls to the `print` function with calls to `gui.show_text` (which works exactly like print...but shows it on the app's GUI rather than in the interpreter window).
+Adapt some of your work from the above exercises to fit the template – moving your code into one of the "button" functions and replacing calls to the `print` function with calls to `gui.print` (which works exactly like print...but shows it on the app's GUI rather than in the interpreter window).
 
-Next, try out the `gui.popup_input` function (which works exactly like input...but uses a popup window to ask the user to type something in).
+Next, try out the `gui.input` function (which works exactly like input...but uses a popup window to ask the user to type something in).
+
+Finally, try out the `gui.popup` function which shows a popup window with a message in-case you want to give the user a warning or message outside of the window.
 
 Note: if you're completing this remotely, you can just submit a screenshot of the <mark>above exercises working in your GUI window RATHER than the Interpreter window (like in the demo vids for each project)</mark>.
+
 * * * 
 
-## Other General Reminders
+## Other Things to Practice
 
 Some other things that might be useful during project 2!
 
@@ -220,7 +235,7 @@ If you're in class you don't need to submit anything to Canvas. Instead, find on
 1. How was their solution different from yours (if at all)?
 1. Does their program run and generate the correct test images?
 
-Once you've each taken a look, take a second to debrief. Anything either of you found difficult? Easy? Fun? Mind-blowing? Once you've debriefed, **both of you should fill out this** <a href="https://docs.google.com/forms/d/e/1FAIpQLSctX_8gvtFFdvg_8q7lbzccSgpXFZ2AJiZaI7GbkekM8F8pbQ/viewform?usp=sf_link" target="_blank">attendance Google Form</a>. **NOTE: You will need the NetID of the person's whose code you reviewed.** You're free to go after you're finished once we open the attendance form, though we hope that you might consider sticking around and helping others in your group.
+Once you've each taken a look, take a second to debrief. Anything either of you found difficult? Easy? Fun? Mind-blowing? Once you've debriefed, **both of you should fill out this** <a href="https://docs.google.com/forms/d/e/1FAIpQLSfz1vAwwGuF1GZyhhdWylMMczF26e7xWBBx3kg3MxT-PTFC_A/viewform?usp=sf_link" target="_blank">attendance Google Form</a>. **NOTE: You will need the NetID of the person's whose code you reviewed.** You're free to go after you're finished once we open the attendance form, though we hope that you might consider sticking around and helping others in your group.
 
 ### If you're not in attendance
 

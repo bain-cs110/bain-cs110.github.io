@@ -27,6 +27,8 @@ EXCLUDED = [
     '_site',
     '.vscode',
     '.rkt~',
-    'secret_tokens.py'
+    'secret_tokens.py',
+    'spotify_token.json',
+    'spotify_cache.pkl'
     #'lecture24.*.csv'
 ]
