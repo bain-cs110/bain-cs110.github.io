@@ -47,9 +47,9 @@ Please write a program that accomplishes the following tasks. **DO NOT TRY TO DO
 
 1. Adapt your code from the tutorial to finish the implementation of the `read_in_words` function. Make sure that your function matches the documentation for the function!
 
-    * First it will read in all of the 5 letter words and add them to `game_data['word_list']`
+    * First it will read in all of the <code>num_letter</code> lettered words and add them to `game_data['word_list']`
     * Make sure to convert the words to **UPPER CASE** before adding them to the list
-    * Secondly, it'll pick a random 5 letter word and save it into `game_data['solution']`
+    * Secondly, it'll pick a random <code>num_letter</code> lettered letter word and save it into `game_data['solution']`
 
 1. Adapt your code from the tutorial to finish the implementation of the `generate_hint` function. Make sure that your function matches the documentation at the top of the function!
 1. Finish the `show_past_guess` function. It needs to go through each letter of the inputted `past_guess`, and
@@ -88,7 +88,7 @@ Before you submit, make sure you’ve tested that your program does the followin
 
 {:.checkbox-list}
 
-* Reads in a list of 5-letter words from any given file name
+* Reads in a list of <code>num_letter</code> lettered-letter words from any given file name
 * Does **not** print out anything to the Interpreter window except:
   * (Optional) print out the solution to the puzzle in the interpreter window
   * Only allows the user to enter 5 letter words
