@@ -228,14 +228,7 @@ def example_function(a_number):
 
 ### If you're in class
 
-If you're in class you don't need to submit anything to Canvas. Instead, find one other person in your group that is finished and peer review each other's work. Here are the things to check:
-
-1. Does their code look readable and neat?
-1. Can you understand what their code does by reading it?
-1. How was their solution different from yours (if at all)?
-1. Does their program run and generate the correct test images?
-
-Once you've each taken a look, take a second to debrief. Anything either of you found difficult? Easy? Fun? Mind-blowing? Once you've debriefed, **both of you should fill out this** <a href="https://docs.google.com/forms/d/e/1FAIpQLSfz1vAwwGuF1GZyhhdWylMMczF26e7xWBBx3kg3MxT-PTFC_A/viewform?usp=sf_link" target="_blank">attendance Google Form</a>. **NOTE: You will need the NetID of the person's whose code you reviewed.** You're free to go after you're finished once we open the attendance form, though we hope that you might consider sticking around and helping others in your group.
+Please follow the directions on the projector screen.
 
 ### If you're not in attendance
 
