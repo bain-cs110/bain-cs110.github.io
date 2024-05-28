@@ -94,6 +94,7 @@ def input(prompt=""):
         a `str` containing what the user typed in the pop-up window. If they didn't enter anything or if they clicked Cancel it will return `None`.
     '''
     dialog = customtkinter.CTkInputDialog(text=prompt, title="Input Popup")
+    dialog.wm_resizable(True, True)
     dialog.after(200, dialog.focus_force())
     text = dialog.get_input()
     if text == "":
