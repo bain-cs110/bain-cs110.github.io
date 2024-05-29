@@ -29,6 +29,7 @@ EXCLUDED = [
     '.rkt~',
     'secret_tokens.py',
     'spotify_token.json',
-    'spotify_cache.pkl'
+    'spotify_cache.pkl',
+    'auto_setup.py'
     #'lecture24.*.csv'
 ]
