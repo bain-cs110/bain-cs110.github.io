@@ -1,4 +1,4 @@
-from apis import spotify, twilio, gui
+from apis import yelp, twilio, gui
 import customtkinter
 
 def main_menu():

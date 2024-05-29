@@ -61,11 +61,9 @@ while True:
         user_input = input(
             "Enter the name of the package you want to update: ")
         print("Upgrading package:", user_input)
-
-        print("Running...", [python_path, '-m', 'pip',
-              'install', '--upgrade', user_input.strip()])
         
         if user_input != "certifi" or sys.platform != "darwin":
+            print("Running...", [python_path, '-m', 'pip', 'install', '--upgrade', user_input.strip()])
             result = subprocess.run(
                 [python_path, '-m', 'pip', 'install', '--upgrade', user_input.strip()], stdout=subprocess.PIPE)
         
@@ -78,7 +76,8 @@ while True:
             openssl_dir, openssl_cafile = os.path.split(
                 ssl.get_default_verify_paths().openssl_cafile)
 
-            result = subprocess.run([sys.executable,
+            print("Running...", [python_path, "-E", "-s", "-m", "pip", "install", "--upgrade", "certifi"])
+            result = subprocess.run([python_path,
                 "-E", "-s", "-m", "pip", "install", "--upgrade", "certifi"], stdout=subprocess.PIPE)
 
             import certifi
