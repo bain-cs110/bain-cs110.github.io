@@ -24,7 +24,7 @@ For option 2, you are going to use the Spotify API to create a music recommendat
 
 <iframe src="https://northwestern.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=a467ceb8-94c0-483f-9402-b17a0016f4fa&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="p2_spotify_demo" ></iframe>
 
-Note: this is only one way of implementing this program, and includes some extra credit features. Feel free to do it ***your way!***
+Note: this is only one way of implementing this program. Feel free to do it ***your way!***
 
 Please implement the following required features of your restaurant recommendation system (we encourage you to start with the `music_finder.py` template):
 
