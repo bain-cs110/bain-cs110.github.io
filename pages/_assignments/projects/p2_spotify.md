@@ -120,7 +120,7 @@ Allow the user to download an mp3 file of the song preview of at least one of th
                     <li>Allows user to search for artist</li>
                     <li>Allows user to select among artists returned from Spotify</li>
                     <li>Allows user to clear out selected artists and start over</li>
-                    <li>Displays the names of the user's selected artists via the GUI textbox</li>
+                    <li>Displays the names of the user's selected artists' <b>names</b> via the GUI textbox</li>
                 </ul>
             </td>
         </tr>
