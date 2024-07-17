@@ -1,0 +1,16 @@
+# A - None
+# B - String
+# C - Float
+# D - Boolean
+
+# A - Lexus
+# B - Honda
+# C - Tesla
+# D - Error
+
+
+# Person Variable
+# A - Strings
+# B - List
+# C - Numbers
+#D - Person

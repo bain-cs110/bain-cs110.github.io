@@ -1,0 +1,128 @@
+Q1: What's the value of x?
+
+A) 2
+B) 4
+C) error
+D) 8
+
+Q2: What's the value of y?
+
+A) error
+B) 5
+C) 8
+D) can't be simplified
+
+Q3: What's the value of z?
+
+A) can't be simplified
+B) 3
+C) 1
+D) 4
+
+
+Q4: What's the value of result_a?
+
+A) "a"
+B) 6
+C) ("a", 6)
+D) error
+
+Q5: What's the value of result_b?
+
+A) error
+B) (1, "b", 3)
+C) [0, 7]
+D) "b"
+
+
+Q6: What's the value of result_c?
+
+A) error
+B) (8, 9, 8)
+C) [0, 7]
+D) 0
+
+
+Q7: What's the value of x?
+
+A) error
+B) None
+C) 6
+D) 5
+
+Q8: What's the value of y?
+
+A) 3
+B) 5
+C) 2
+D) 1
+
+Q9: What's the value of z?
+
+A) 5
+B) 3
+C) 2
+D) 11
+
+
+Q10: What's the value of pineapple?
+
+A) None
+B) error
+C) prints pizza
+D) prints pineapple
+
+
+Q11: What's printed out?
+
+A) a list with commas and brackets
+B) a tuple with commas and parentheses
+C) an error
+D) a bunch of words with spaces in between
+
+
+Q12: What happens on line 7?
+
+A) error
+B) (10, 10) blue 50
+C) 10 10 brown 50
+D) 10 50 blue
+
+Q13: What happens on line 8?
+
+A) error
+B) (10, 10) purple 50
+C) (500, 500) purple 80
+D) (500, 500) orange 80
+
+
+Q14: What happens on line 9?
+A) (100, 130) blue 60
+B) error
+C) (100, 130) brown 20
+D) (100, 130) brown 60
+
+
+Q15: What happens on line 10?
+
+A) error
+B) (100, 100) 80 yellow
+C) (100, 100) yellow 80
+D) (100, 100)
+
+Q16: What happens on line 11?
+
+A) (354, 487) 5 10
+B) (354, 487) blue 10
+C) error
+D) (354, 487) red 10
+
+
+Q17: What happens on line 12?
+
+A) (100, 100) 10 blue
+B) (100, 100) blue 10
+C) an error
+D) universe explodes
+
+
